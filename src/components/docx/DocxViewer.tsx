@@ -91,7 +91,7 @@ export function DocxViewer({
       </div>
 
       {/* Document content */}
-      <div className="p-6 max-h-[70vh] overflow-y-auto font-serif text-base leading-relaxed whitespace-pre-wrap">
+      <div className="p-6 max-h-[70vh] overflow-y-auto font-serif text-base leading-relaxed whitespace-pre-wrap text-gray-900">
         {segments.map((segment, i) => {
           if (!segment.redaction) {
             return <span key={i}>{segment.text}</span>;
