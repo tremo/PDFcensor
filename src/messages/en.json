@@ -61,6 +61,44 @@
       "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
     }
   },
+  "comparison": {
+    "badge": "The Difference",
+    "title": "Other tools upload your files. We don't.",
+    "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
+    "otherTools": "Other Tools",
+    "yourDoc": "Your document",
+    "yourDocDesc": "PDF with sensitive data",
+    "theirServers": "Their servers",
+    "theirServersDesc": "Full file uploaded & stored",
+    "whoKnows": "Who knows?",
+    "whoKnowsDesc": "Retained for hours or indefinitely",
+    "yourBrowser": "Your browser",
+    "yourBrowserDesc": "Processed securely, never stored",
+    "redactedFile": "Redacted file",
+    "redactedFileDesc": "Created locally, download instantly",
+    "zeroRetention": "Zero storage. Zero retention.",
+    "footnote": "Only extracted text is sent for AI detection. Your files never leave your browser."
+  },
+  "security": {
+    "title": "True permanent redaction",
+    "subtitle": "Unlike basic PDF editors that just overlay black boxes, OfflineRedact creates a new document without the sensitive data. It's not hidden — it simply doesn't exist in the output.",
+    "noCopy": "Can't copy/paste",
+    "noCopyDesc": "Text is not in output",
+    "noTricks": "No Photoshop tricks",
+    "noTricksDesc": "Not hidden, gone",
+    "zeroRetention": "Zero retention",
+    "zeroRetentionDesc": "Documents processed and purged",
+    "encrypted": "AES-256 encrypted",
+    "encryptedDesc": "Bank-grade encryption"
+  },
+  "trust": {
+    "title": "Trusted by professionals who handle sensitive documents",
+    "legal": "Legal",
+    "healthcare": "Healthcare",
+    "realEstate": "Real Estate",
+    "finance": "Finance",
+    "government": "Government"
+  },
   "cta": {
     "title": "Ready to Protect Sensitive Data?",
     "subtitle": "Start redacting PDFs for free — no signup required.",

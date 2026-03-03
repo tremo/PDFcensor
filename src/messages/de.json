@@ -61,6 +61,44 @@
       "description": "Laden Sie Ihr dauerhaft geschwärztes PDF herunter. Der Originaltext ist unwiderruflich entfernt."
     }
   },
+  "comparison": {
+    "badge": "Der Unterschied",
+    "title": "Andere Tools laden Ihre Dateien hoch. Wir nicht.",
+    "subtitle": "Die meisten Schwärzungstools erfordern das Hochladen Ihres gesamten Dokuments auf ihre Server. OfflineRedact funktioniert anders.",
+    "otherTools": "Andere Tools",
+    "yourDoc": "Ihr Dokument",
+    "yourDocDesc": "PDF mit sensiblen Daten",
+    "theirServers": "Deren Server",
+    "theirServersDesc": "Vollständige Datei hochgeladen & gespeichert",
+    "whoKnows": "Wer weiß?",
+    "whoKnowsDesc": "Stunden- oder unbegrenzt gespeichert",
+    "yourBrowser": "Ihr Browser",
+    "yourBrowserDesc": "Sicher verarbeitet, nie gespeichert",
+    "redactedFile": "Geschwärzte Datei",
+    "redactedFileDesc": "Lokal erstellt, sofort herunterladen",
+    "zeroRetention": "Kein Speichern. Keine Aufbewahrung.",
+    "footnote": "Nur extrahierter Text wird für die KI-Erkennung gesendet. Ihre Dateien verlassen nie Ihren Browser."
+  },
+  "security": {
+    "title": "Echte permanente Schwärzung",
+    "subtitle": "Im Gegensatz zu einfachen PDF-Editoren, die nur schwarze Boxen überlagern, erstellt OfflineRedact ein neues Dokument ohne die sensiblen Daten. Es ist nicht versteckt — es existiert einfach nicht in der Ausgabe.",
+    "noCopy": "Kein Kopieren/Einfügen",
+    "noCopyDesc": "Text ist nicht in der Ausgabe",
+    "noTricks": "Keine Photoshop-Tricks",
+    "noTricksDesc": "Nicht versteckt, entfernt",
+    "zeroRetention": "Keine Aufbewahrung",
+    "zeroRetentionDesc": "Dokumente verarbeitet und gelöscht",
+    "encrypted": "AES-256 verschlüsselt",
+    "encryptedDesc": "Bankgrade Verschlüsselung"
+  },
+  "trust": {
+    "title": "Vertraut von Fachleuten, die mit sensiblen Dokumenten arbeiten",
+    "legal": "Recht",
+    "healthcare": "Gesundheit",
+    "realEstate": "Immobilien",
+    "finance": "Finanzen",
+    "government": "Behörden"
+  },
   "cta": {
     "title": "Bereit, sensible Daten zu schützen?",
     "subtitle": "Beginnen Sie kostenlos mit der PDF-Schwärzung — keine Registrierung erforderlich.",

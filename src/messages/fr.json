@@ -61,6 +61,44 @@
       "description": "Téléchargez votre PDF définitivement caviardé. Le texte original est irrévocablement supprimé."
     }
   },
+  "comparison": {
+    "badge": "La Différence",
+    "title": "Les autres outils téléchargent vos fichiers. Pas nous.",
+    "subtitle": "La plupart des outils de caviardage nécessitent le téléchargement de votre document entier sur leurs serveurs. OfflineRedact fonctionne différemment.",
+    "otherTools": "Autres Outils",
+    "yourDoc": "Votre document",
+    "yourDocDesc": "PDF avec données sensibles",
+    "theirServers": "Leurs serveurs",
+    "theirServersDesc": "Fichier complet téléchargé et stocké",
+    "whoKnows": "Qui sait ?",
+    "whoKnowsDesc": "Conservé pendant des heures ou indéfiniment",
+    "yourBrowser": "Votre navigateur",
+    "yourBrowserDesc": "Traité en toute sécurité, jamais stocké",
+    "redactedFile": "Fichier caviardé",
+    "redactedFileDesc": "Créé localement, téléchargement instantané",
+    "zeroRetention": "Zéro stockage. Zéro rétention.",
+    "footnote": "Seul le texte extrait est envoyé pour la détection IA. Vos fichiers ne quittent jamais votre navigateur."
+  },
+  "security": {
+    "title": "Vrai caviardage permanent",
+    "subtitle": "Contrairement aux éditeurs PDF basiques qui superposent simplement des boîtes noires, OfflineRedact crée un nouveau document sans les données sensibles. Ce n'est pas caché — cela n'existe simplement pas dans la sortie.",
+    "noCopy": "Impossible de copier/coller",
+    "noCopyDesc": "Le texte n'est pas dans la sortie",
+    "noTricks": "Pas de trucs Photoshop",
+    "noTricksDesc": "Pas caché, supprimé",
+    "zeroRetention": "Zéro rétention",
+    "zeroRetentionDesc": "Documents traités et purgés",
+    "encrypted": "Chiffrement AES-256",
+    "encryptedDesc": "Chiffrement de niveau bancaire"
+  },
+  "trust": {
+    "title": "Approuvé par les professionnels qui traitent des documents sensibles",
+    "legal": "Juridique",
+    "healthcare": "Santé",
+    "realEstate": "Immobilier",
+    "finance": "Finance",
+    "government": "Gouvernement"
+  },
   "cta": {
     "title": "Prêt à protéger les données sensibles ?",
     "subtitle": "Commencez à caviarder des PDF gratuitement — aucune inscription requise.",

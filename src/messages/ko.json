@@ -61,6 +61,44 @@
       "description": "영구적으로 삭제된 PDF를 다운로드하세요. 원본 텍스트는 복구 불가능하게 제거됩니다."
     }
   },
+  "comparison": {
+    "badge": "차이점",
+    "title": "다른 도구는 파일을 업로드합니다. 우리는 그렇지 않습니다.",
+    "subtitle": "대부분의 삭제 도구는 전체 문서를 서버에 업로드해야 합니다. OfflineRedact는 다르게 작동합니다.",
+    "otherTools": "다른 도구",
+    "yourDoc": "귀하의 문서",
+    "yourDocDesc": "민감한 데이터가 포함된 PDF",
+    "theirServers": "그들의 서버",
+    "theirServersDesc": "전체 파일 업로드 및 저장",
+    "whoKnows": "누가 알까요?",
+    "whoKnowsDesc": "몇 시간 또는 무기한 보관",
+    "yourBrowser": "귀하의 브라우저",
+    "yourBrowserDesc": "안전하게 처리, 저장되지 않음",
+    "redactedFile": "삭제된 파일",
+    "redactedFileDesc": "로컬에서 생성, 즉시 다운로드",
+    "zeroRetention": "제로 저장. 제로 보관.",
+    "footnote": "AI 감지를 위해 추출된 텍스트만 전송됩니다. 파일은 브라우저를 떠나지 않습니다."
+  },
+  "security": {
+    "title": "진정한 영구 삭제",
+    "subtitle": "단순히 검은 상자를 덧씌우는 기본 PDF 편집기와 달리, OfflineRedact는 민감한 데이터 없이 새 문서를 생성합니다. 숨겨진 것이 아니라 출력에 존재하지 않습니다.",
+    "noCopy": "복사/붙여넣기 불가",
+    "noCopyDesc": "텍스트가 출력에 없음",
+    "noTricks": "포토샵 트릭 없음",
+    "noTricksDesc": "숨겨진 것이 아닌, 제거됨",
+    "zeroRetention": "제로 보관",
+    "zeroRetentionDesc": "문서 처리 후 삭제",
+    "encrypted": "AES-256 암호화",
+    "encryptedDesc": "은행급 암호화"
+  },
+  "trust": {
+    "title": "민감한 문서를 다루는 전문가들이 신뢰합니다",
+    "legal": "법률",
+    "healthcare": "의료",
+    "realEstate": "부동산",
+    "finance": "금융",
+    "government": "정부"
+  },
   "cta": {
     "title": "민감한 데이터를 보호할 준비가 되셨나요?",
     "subtitle": "무료로 PDF 삭제를 시작하세요 — 가입이 필요 없습니다.",
