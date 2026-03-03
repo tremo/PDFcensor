@@ -280,8 +280,7 @@ export function DocxRedactionControls({
                           key={r.id}
                           className={cn(
                             "px-4 py-2 flex items-center gap-2 border-t border-border/50 hover:bg-muted/30 transition-colors cursor-pointer",
-                            selectedRedactionId === r.id &&
-                              "bg-blue-50 dark:bg-blue-950/30"
+                            selectedRedactionId === r.id && "bg-blue-50"
                           )}
                           onClick={() => onSelectRedaction(r.id)}
                         >

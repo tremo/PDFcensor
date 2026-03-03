@@ -18,24 +18,6 @@
   --radius: 0.625rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-background: #1a2332;
-    --color-foreground: #e2e8f0;
-    --color-muted: #243044;
-    --color-muted-foreground: #94a3b8;
-    --color-border: #2d4a6f;
-    --color-primary: #7db8f9;
-    --color-primary-foreground: #0f172a;
-    --color-secondary: #243044;
-    --color-secondary-foreground: #e2e8f0;
-    --color-accent: #5ce0cc;
-    --color-accent-foreground: #0f172a;
-    --color-destructive: #f87171;
-    --color-ring: #7db8f9;
-  }
-}
-
 @layer base {
   body {
     background-color: var(--color-background);
