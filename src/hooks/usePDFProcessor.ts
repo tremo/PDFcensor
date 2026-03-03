@@ -67,13 +67,37 @@ export function usePDFProcessor() {
           });
 
           if (matchingItems.length > 0) {
-            const minX = Math.min(...matchingItems.map((it) => it.x));
-            const minY = Math.min(...matchingItems.map((it) => it.y));
+            // Calculate clipped bounding boxes for each text item,
+            // only covering the portion that overlaps with the PII match
+            const clippedBoxes = matchingItems.map((item) => {
+              const itemStart = item.charOffset;
+              const itemEnd = itemStart + item.text.length;
+              const charCount = item.text.length;
+
+              // Determine the overlapping character range within this item
+              const overlapStart = Math.max(match.startIndex, itemStart) - itemStart;
+              const overlapEnd = Math.min(match.endIndex, itemEnd) - itemStart;
+
+              // Calculate proportional x offset and width based on character positions
+              const charWidth = charCount > 0 ? item.width / charCount : item.width;
+              const clipX = item.x + overlapStart * charWidth;
+              const clipWidth = (overlapEnd - overlapStart) * charWidth;
+
+              return {
+                x: clipX,
+                y: item.y,
+                width: clipWidth,
+                height: item.height,
+              };
+            });
+
+            const minX = Math.min(...clippedBoxes.map((b) => b.x));
+            const minY = Math.min(...clippedBoxes.map((b) => b.y));
             const maxX = Math.max(
-              ...matchingItems.map((it) => it.x + it.width)
+              ...clippedBoxes.map((b) => b.x + b.width)
             );
             const maxY = Math.max(
-              ...matchingItems.map((it) => it.y + it.height)
+              ...clippedBoxes.map((b) => b.y + b.height)
             );
 
             allRedactions.push({
