@@ -98,6 +98,8 @@
       "confirmed": "확인됨",
       "rejected": "거부됨",
       "rejectedItems": "거부된 항목",
+      "pendingItems": "검토 대기",
+      "pending": "대기 중",
       "restore": "복원",
       "comprehensive": "포괄적 (미국 + EU)",
       "confirmAll": "모두 확인",

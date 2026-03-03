@@ -98,6 +98,8 @@
       "confirmed": "onaylandı",
       "rejected": "reddedildi",
       "rejectedItems": "Reddedilen Öğeler",
+      "pendingItems": "İnceleme Bekliyor",
+      "pending": "bekliyor",
       "restore": "Geri Al",
       "comprehensive": "Kapsamlı (ABD + AB)",
       "confirmAll": "Tümünü Onayla",

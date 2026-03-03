@@ -85,7 +85,7 @@ export function usePDFProcessor() {
               height: maxY - minY + 4,
               text: match.value,
               piiType: match.type,
-              confirmed: true,
+              confirmed: false,
             });
           }
         }

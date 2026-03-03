@@ -98,6 +98,8 @@
       "confirmed": "已确认",
       "rejected": "已拒绝",
       "rejectedItems": "已拒绝的项目",
+      "pendingItems": "待审核",
+      "pending": "待定",
       "restore": "恢复",
       "comprehensive": "全面（美国 + 欧盟）",
       "confirmAll": "全部确认",

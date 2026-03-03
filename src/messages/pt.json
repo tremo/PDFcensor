@@ -98,6 +98,8 @@
       "confirmed": "confirmado",
       "rejected": "rejeitado",
       "rejectedItems": "Itens rejeitados",
+      "pendingItems": "Revisão pendente",
+      "pending": "pendente",
       "restore": "Restaurar",
       "comprehensive": "Abrangente (EUA + UE)",
       "confirmAll": "Confirmar tudo",

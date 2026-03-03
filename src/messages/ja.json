@@ -98,6 +98,8 @@
       "confirmed": "確認済み",
       "rejected": "却下済み",
       "rejectedItems": "却下された項目",
+      "pendingItems": "レビュー待ち",
+      "pending": "保留中",
       "restore": "復元",
       "comprehensive": "包括的（米国 + EU）",
       "confirmAll": "すべて確認",

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { renderPageToCanvas } from "@/lib/pdf/parser";
 import type { RedactionArea } from "@/types/pdf";
 import { cn } from "@/lib/utils";
-import { X, Check, XIcon } from "lucide-react";
+import { X, Check, Undo2 } from "lucide-react";
 
 interface PDFViewerProps {
   arrayBuffer: ArrayBuffer | null;
@@ -68,6 +68,9 @@ export function PDFViewer({
     x: number;
     y: number;
   } | null>(null);
+  const [hoveredRedactionId, setHoveredRedactionId] = useState<string | null>(
+    null
+  );
 
   // Render the page
   useEffect(() => {
@@ -97,9 +100,9 @@ export function PDFViewer({
     };
   }, [arrayBuffer, currentPage, scale]);
 
-  // Only show confirmed redactions on the PDF
+  // Show all redactions on current page (both approved and pending)
   const pageRedactions = redactions.filter(
-    (r) => r.pageIndex === currentPage - 1 && r.confirmed
+    (r) => r.pageIndex === currentPage - 1
   );
 
   const getRelativePos = useCallback(
@@ -308,6 +311,7 @@ export function PDFViewer({
       >
         {pageRedactions.map((r) => {
           const selected = isSelected(r.id);
+          const hovered = hoveredRedactionId === r.id;
           const w = r.width * scale;
           const h = r.height * scale;
 
@@ -316,7 +320,7 @@ export function PDFViewer({
               key={r.id}
               className={cn(
                 "absolute group",
-                selected && "z-10",
+                (selected || hovered) && "z-10",
                 interaction.type === "none" && !drawMode && "cursor-move"
               )}
               style={{
@@ -325,6 +329,10 @@ export function PDFViewer({
                 width: w,
                 height: h,
               }}
+              onMouseEnter={() => {
+                if (!drawMode) setHoveredRedactionId(r.id);
+              }}
+              onMouseLeave={() => setHoveredRedactionId(null)}
               onMouseDown={(e) => {
                 if (drawMode) return;
                 startMove(e, r);
@@ -335,59 +343,117 @@ export function PDFViewer({
                 onSelectRedaction(r.id);
               }}
             >
-              {/* Solid black fill - the actual censorship look */}
-              <div className="absolute inset-0 bg-black rounded-[1px]" />
+              {r.confirmed ? (
+                <>
+                  {/* Approved: solid black fill */}
+                  <div className="absolute inset-0 bg-black rounded-[1px]" />
+                  {/* Corner resize triangles */}
+                  {!drawMode && (
+                    <>
+                      <div
+                        className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
+                        style={{
+                          borderLeft: "6px solid transparent",
+                          borderBottom: "6px solid white",
+                        }}
+                      />
+                      <div
+                        className="absolute top-0 left-0 w-0 h-0 pointer-events-none opacity-60"
+                        style={{
+                          borderRight: "6px solid transparent",
+                          borderTop: "6px solid white",
+                        }}
+                      />
+                    </>
+                  )}
+                </>
+              ) : (
+                /* Pending review: transparent highlight showing text underneath */
+                <div
+                  className={cn(
+                    "absolute inset-0 rounded-[1px] border-2 transition-all duration-150",
+                    hovered || selected
+                      ? "bg-amber-400/35 border-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]"
+                      : "bg-amber-300/20 border-amber-400/70"
+                  )}
+                />
+              )}
 
-              {/* Selection border */}
+              {/* Selection ring */}
               {selected && (
                 <div className="absolute inset-0 ring-2 ring-blue-500 ring-offset-1 rounded-[1px]" />
               )}
 
-              {/* Corner resize triangles - always visible as subtle hint */}
-              {!drawMode && (
-                <>
-                  {/* Bottom-right corner triangle */}
-                  <div className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
-                    style={{
-                      borderLeft: "6px solid transparent",
-                      borderBottom: "6px solid white",
-                    }}
-                  />
-                  {/* Top-left corner triangle */}
-                  <div className="absolute top-0 left-0 w-0 h-0 pointer-events-none opacity-60"
-                    style={{
-                      borderRight: "6px solid transparent",
-                      borderTop: "6px solid white",
-                    }}
-                  />
-                </>
+              {/* Text tooltip on hover - helps identify overlapping items */}
+              {!drawMode && (hovered || selected) && r.text && (
+                <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+                  <span className="inline-block text-[10px] leading-tight bg-neutral-800 text-white px-1.5 py-0.5 rounded whitespace-nowrap max-w-[200px] truncate">
+                    {r.text}
+                  </span>
+                </div>
               )}
 
-              {/* Always-visible action buttons */}
+              {/* Action buttons - appear on hover */}
               {!drawMode && (
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 flex items-center gap-0.5 z-20">
-                  <button
-                    className="p-1 rounded shadow bg-red-500 text-white hover:bg-red-600 transition-colors"
-                    title="Reject"
-                    onMouseDown={(e) => e.stopPropagation()}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onToggleRedaction(r.id);
-                    }}
-                  >
-                    <XIcon className="w-3 h-3" />
-                  </button>
-                  <button
-                    className="p-1 rounded shadow bg-white/90 text-red-500 hover:bg-white transition-colors border border-red-200"
-                    title="Delete"
-                    onMouseDown={(e) => e.stopPropagation()}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRemoveRedaction(r.id);
-                    }}
-                  >
-                    <X className="w-3 h-3" />
-                  </button>
+                <div
+                  className={cn(
+                    "absolute -top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 z-20 transition-opacity duration-150",
+                    hovered || selected
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  )}
+                >
+                  {r.confirmed ? (
+                    <>
+                      <button
+                        className="p-1.5 rounded-md shadow-md bg-amber-500 text-white hover:bg-amber-600 hover:scale-110 active:scale-95 transition-all duration-150"
+                        title="Undo"
+                        onMouseDown={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleRedaction(r.id);
+                        }}
+                      >
+                        <Undo2 className="w-3 h-3" />
+                      </button>
+                      <button
+                        className="p-1.5 rounded-md shadow-md bg-red-500 text-white hover:bg-red-600 hover:scale-110 active:scale-95 transition-all duration-150"
+                        title="Delete"
+                        onMouseDown={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onRemoveRedaction(r.id);
+                        }}
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <button
+                        className="p-1.5 rounded-md shadow-md bg-green-500 text-white hover:bg-green-600 hover:scale-110 hover:shadow-lg active:scale-95 transition-all duration-150"
+                        title="Approve"
+                        onMouseDown={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleRedaction(r.id);
+                        }}
+                      >
+                        <Check className="w-3 h-3" />
+                      </button>
+                      <button
+                        className="p-1.5 rounded-md shadow-md bg-red-500 text-white hover:bg-red-600 hover:scale-110 hover:shadow-lg active:scale-95 transition-all duration-150"
+                        title="Reject"
+                        onMouseDown={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onRemoveRedaction(r.id);
+                        }}
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </>
+                  )}
                 </div>
               )}
 
