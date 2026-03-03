@@ -75,16 +75,18 @@ export default function RedactPage() {
           </div>
 
           {/* PDF Viewer */}
-          <div className="flex justify-center overflow-auto max-h-[75vh]">
-            <PDFViewer
-              arrayBuffer={document.arrayBuffer}
-              currentPage={currentPage}
-              totalPages={document.totalPages}
-              redactions={redactions}
-              scale={1.2}
-              onToggleRedaction={toggleRedaction}
-              onManualRedaction={addManualRedaction}
-            />
+          <div className="overflow-auto max-h-[80vh]">
+            <div className="flex justify-center min-w-fit">
+              <PDFViewer
+                arrayBuffer={document.arrayBuffer}
+                currentPage={currentPage}
+                totalPages={document.totalPages}
+                redactions={redactions}
+                scale={1.2}
+                onToggleRedaction={toggleRedaction}
+                onManualRedaction={addManualRedaction}
+              />
+            </div>
           </div>
 
           {/* Controls */}
