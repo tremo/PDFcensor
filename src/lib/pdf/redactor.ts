@@ -1,4 +1,4 @@
-import { PDFDocument, rgb, PDFPage, PDFName, PDFArray, PDFStream, PDFRawStream } from "pdf-lib";
+import { PDFDocument, rgb, PDFPage, PDFName, PDFArray, PDFStream, PDFRawStream, PDFDict } from "pdf-lib";
 import type { RedactionArea } from "@/types/pdf";
 import { deflate, inflate } from "pako";
 
@@ -196,15 +196,32 @@ async function removeTextFromContentStream(
 }
 
 /**
- * Clean PDF metadata.
+ * Clean PDF metadata: Info dictionary fields, dates, and XMP stream.
  */
 function cleanMetadata(pdfDoc: PDFDocument): void {
+  // Clear Info dictionary fields
   pdfDoc.setTitle("");
   pdfDoc.setAuthor("");
   pdfDoc.setSubject("");
   pdfDoc.setKeywords([]);
   pdfDoc.setProducer("OfflineRedact");
   pdfDoc.setCreator("OfflineRedact");
+
+  // Clear creation and modification dates
+  const epoch = new Date(0);
+  pdfDoc.setCreationDate(epoch);
+  pdfDoc.setModificationDate(epoch);
+
+  // Remove XMP metadata stream from the document catalog
+  // XMP can contain author, dates and other metadata independently of the Info dict
+  try {
+    const catalog = pdfDoc.catalog;
+    if (catalog.has(PDFName.of("Metadata"))) {
+      catalog.delete(PDFName.of("Metadata"));
+    }
+  } catch {
+    // If XMP removal fails, the Info dictionary is still cleaned
+  }
 }
 
 function escapeForPDF(text: string): string {
