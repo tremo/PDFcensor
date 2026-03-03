@@ -23,7 +23,6 @@ interface PDFViewerProps {
   onManualRedaction?: (
     area: Omit<RedactionArea, "id" | "piiType" | "text" | "confirmed">
   ) => void;
-  drawMode: boolean;
 }
 
 type InteractionMode =
@@ -56,7 +55,6 @@ export function PDFViewer({
   onRemoveRedaction,
   onUpdateRedaction,
   onManualRedaction,
-  drawMode,
 }: PDFViewerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -121,7 +119,7 @@ export function PDFViewer({
       if (e.button !== 0) return;
       const pos = getRelativePos(e);
 
-      if (drawMode && onManualRedaction) {
+      if (onManualRedaction) {
         setInteraction({ type: "drawing", startX: pos.x, startY: pos.y });
         setDrawCurrent(pos);
         onSelectRedaction(null);
@@ -130,7 +128,7 @@ export function PDFViewer({
 
       onSelectRedaction(null);
     },
-    [drawMode, onManualRedaction, getRelativePos, onSelectRedaction]
+    [onManualRedaction, getRelativePos, onSelectRedaction]
   );
 
   const handleMouseMove = useCallback(
@@ -198,21 +196,34 @@ export function PDFViewer({
   );
 
   const handleMouseUp = useCallback(() => {
-    if (interaction.type === "drawing" && drawCurrent) {
+    if (interaction.type === "drawing" && drawCurrent && onManualRedaction) {
       const startX = interaction.startX;
       const startY = interaction.startY;
-      const x = Math.min(startX, drawCurrent.x);
-      const y = Math.min(startY, drawCurrent.y);
       const width = Math.abs(drawCurrent.x - startX);
       const height = Math.abs(drawCurrent.y - startY);
 
-      if (width > 5 && height > 5 && onManualRedaction) {
+      if (width > 5 && height > 5) {
+        // Drag: create custom-sized redaction
+        const x = Math.min(startX, drawCurrent.x);
+        const y = Math.min(startY, drawCurrent.y);
         onManualRedaction({
           pageIndex: currentPage - 1,
           x,
           y,
           width,
           height,
+          isManual: true,
+        });
+      } else {
+        // Click: create default-sized redaction centered on click point
+        const defaultW = 100;
+        const defaultH = 24;
+        onManualRedaction({
+          pageIndex: currentPage - 1,
+          x: Math.max(0, startX - defaultW / 2),
+          y: Math.max(0, startY - defaultH / 2),
+          width: defaultW,
+          height: defaultH,
           isManual: true,
         });
       }
@@ -302,7 +313,7 @@ export function PDFViewer({
       {/* Redaction overlay */}
       <div
         ref={overlayRef}
-        className={cn("absolute inset-0", drawMode && "cursor-crosshair")}
+        className="absolute inset-0 cursor-crosshair"
         style={{ width: dimensions.width, height: dimensions.height }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -321,7 +332,7 @@ export function PDFViewer({
               className={cn(
                 "absolute group",
                 (selected || hovered) && "z-10",
-                interaction.type === "none" && !drawMode && "cursor-move"
+                interaction.type === "none" && "cursor-move"
               )}
               style={{
                 left: r.x * scale,
@@ -329,17 +340,11 @@ export function PDFViewer({
                 width: w,
                 height: h,
               }}
-              onMouseEnter={() => {
-                if (!drawMode) setHoveredRedactionId(r.id);
-              }}
+              onMouseEnter={() => setHoveredRedactionId(r.id)}
               onMouseLeave={() => setHoveredRedactionId(null)}
-              onMouseDown={(e) => {
-                if (drawMode) return;
-                startMove(e, r);
-              }}
+              onMouseDown={(e) => startMove(e, r)}
               onClick={(e) => {
                 e.stopPropagation();
-                if (drawMode) return;
                 onSelectRedaction(r.id);
               }}
             >
@@ -348,24 +353,20 @@ export function PDFViewer({
                   {/* Approved: solid black fill */}
                   <div className="absolute inset-0 bg-black rounded-[1px]" />
                   {/* Corner resize triangles */}
-                  {!drawMode && (
-                    <>
-                      <div
-                        className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
-                        style={{
-                          borderLeft: "6px solid transparent",
-                          borderBottom: "6px solid white",
-                        }}
-                      />
-                      <div
-                        className="absolute top-0 left-0 w-0 h-0 pointer-events-none opacity-60"
-                        style={{
-                          borderRight: "6px solid transparent",
-                          borderTop: "6px solid white",
-                        }}
-                      />
-                    </>
-                  )}
+                  <div
+                    className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
+                    style={{
+                      borderLeft: "6px solid transparent",
+                      borderBottom: "6px solid white",
+                    }}
+                  />
+                  <div
+                    className="absolute top-0 left-0 w-0 h-0 pointer-events-none opacity-60"
+                    style={{
+                      borderRight: "6px solid transparent",
+                      borderTop: "6px solid white",
+                    }}
+                  />
                 </>
               ) : (
                 /* Pending review: transparent highlight showing text underneath */
@@ -385,7 +386,7 @@ export function PDFViewer({
               )}
 
               {/* Text tooltip on hover - helps identify overlapping items */}
-              {!drawMode && (hovered || selected) && r.text && (
+              {(hovered || selected) && r.text && (
                 <div className="absolute -top-14 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
                   <span className="inline-block text-[10px] leading-tight bg-neutral-800 text-white px-1.5 py-0.5 rounded whitespace-nowrap max-w-[200px] truncate">
                     {r.text}
@@ -394,7 +395,7 @@ export function PDFViewer({
               )}
 
               {/* Action buttons - appear on hover */}
-              {!drawMode && (
+              {(
                 <div
                   className={cn(
                     "absolute -top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 z-20 transition-opacity duration-150",
@@ -459,7 +460,6 @@ export function PDFViewer({
 
               {/* Resize handles - visible when selected */}
               {selected &&
-                !drawMode &&
                 resizeHandles.map((handle) => {
                   const pos = getHandlePosition(handle, r);
                   return (

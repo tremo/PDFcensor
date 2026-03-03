@@ -172,6 +172,10 @@ export function usePDFProcessor() {
     async (isPro: boolean = false) => {
       if (!document) return;
 
+      // Auto-confirm all pending redactions before applying
+      const allConfirmed = redactions.map((r) => ({ ...r, confirmed: true }));
+      setRedactions(allConfirmed);
+
       setStatus("redacting");
       setProgress(0);
 
@@ -179,7 +183,7 @@ export function usePDFProcessor() {
         const pageHeights = document.pages.map((p) => p.height);
         let resultBytes = await redactPDF(
           document.arrayBuffer,
-          redactions,
+          allConfirmed,
           pageHeights,
           setProgress
         );

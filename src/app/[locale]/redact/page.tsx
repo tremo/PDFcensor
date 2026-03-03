@@ -33,7 +33,6 @@ export default function RedactPage() {
   const docx = useDocxProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
-  const [drawMode, setDrawMode] = useState(false);
 
   // Route file to the correct processor
   const handleFilesSelected = useCallback(
@@ -60,7 +59,6 @@ export default function RedactPage() {
     }
     setDocumentType("none");
     setSelectedRedactionId(null);
-    setDrawMode(false);
   }, [documentType, pdf, docx]);
 
   // Determine the active state based on document type
@@ -196,7 +194,6 @@ export default function RedactPage() {
                 onRemoveRedaction={pdf.removeRedaction}
                 onUpdateRedaction={pdf.updateRedaction}
                 onManualRedaction={pdf.addManualRedaction}
-                drawMode={drawMode}
               />
             </div>
           </div>
@@ -216,8 +213,6 @@ export default function RedactPage() {
               onReset={handleReset}
               hasDocument={!!pdf.document}
               hasRedactedPdf={!!pdf.redactedPdfBytes}
-              drawMode={drawMode}
-              onToggleDrawMode={() => setDrawMode((d) => !d)}
               onConfirmAll={pdf.confirmAll}
               onRejectAll={pdf.rejectAll}
               onToggleRedaction={pdf.toggleRedaction}
