@@ -39,6 +39,7 @@ export async function parsePDF(
       if ("str" in item && item.str) {
         const tx = item.transform;
         const fontSize = Math.sqrt(tx[0] * tx[0] + tx[1] * tx[1]);
+        const charOffset = fullText.length;
 
         textItems.push({
           text: item.str,
@@ -49,6 +50,7 @@ export async function parsePDF(
           pageIndex: i - 1,
           fontName: item.fontName,
           transform: tx,
+          charOffset,
         });
 
         fullText += item.str + (item.hasEOL ? "\n" : " ");

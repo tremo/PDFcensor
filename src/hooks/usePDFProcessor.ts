@@ -57,7 +57,7 @@ export function usePDFProcessor() {
 
         for (const match of result.matches) {
           const matchingItems = page.textItems.filter((item) => {
-            const itemStart = page.fullText.indexOf(item.text);
+            const itemStart = item.charOffset;
             const itemEnd = itemStart + item.text.length;
             return (
               (match.startIndex >= itemStart && match.startIndex < itemEnd) ||
