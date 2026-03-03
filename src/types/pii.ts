@@ -22,6 +22,7 @@ export interface PIIMatch {
 }
 
 export type RegulationType =
+  | "COMPREHENSIVE"
   | "KVKK"
   | "GDPR"
   | "HIPAA"

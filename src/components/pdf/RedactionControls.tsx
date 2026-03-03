@@ -4,8 +4,7 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { regulations } from "@/lib/pii/regulations";
-import type { RegulationType, PIIType } from "@/types/pii";
+import type { PIIType } from "@/types/pii";
 import type { ProcessingStatus, RedactionArea } from "@/types/pdf";
 import {
   ScanSearch,
@@ -19,10 +18,8 @@ import {
   Pencil,
   MousePointer,
   ChevronDown,
-  Eye,
-  EyeOff,
   Trash2,
-  Check,
+  Undo2,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -30,10 +27,6 @@ import { cn } from "@/lib/utils";
 interface RedactionControlsProps {
   status: ProcessingStatus;
   progress: number;
-  regulation: RegulationType;
-  onRegulationChange: (r: RegulationType) => void;
-  enabledTypes: PIIType[];
-  onToggleType: (type: PIIType) => void;
   redactions: RedactionArea[];
   currentPage: number;
   totalPages: number;
@@ -57,10 +50,6 @@ interface RedactionControlsProps {
 export function RedactionControls({
   status,
   progress,
-  regulation,
-  onRegulationChange,
-  enabledTypes,
-  onToggleType,
   redactions,
   currentPage,
   totalPages,
@@ -82,12 +71,16 @@ export function RedactionControls({
 }: RedactionControlsProps) {
   const t = useTranslations("redact.controls");
   const tp = useTranslations("redact.piiTypes");
-  const confirmedCount = redactions.filter((r) => r.confirmed).length;
-  const rejectedCount = redactions.length - confirmedCount;
+
+  const confirmedRedactions = redactions.filter((r) => r.confirmed);
+  const rejectedRedactions = redactions.filter((r) => !r.confirmed);
+  const confirmedCount = confirmedRedactions.length;
+  const rejectedCount = rejectedRedactions.length;
 
   const isProcessing = ["parsing", "scanning", "redacting"].includes(status);
 
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
+  const [showRejected, setShowRejected] = useState(false);
 
   const allPiiTypes: PIIType[] = [
     "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
@@ -99,12 +92,15 @@ export function RedactionControls({
     piiTypeLabels[type] = tp(type);
   }
 
-  // Group redactions by PII type for the current page
-  const pageRedactions = redactions.filter(
+  // Group CONFIRMED redactions by PII type for current page
+  const pageConfirmed = confirmedRedactions.filter(
+    (r) => r.pageIndex === currentPage - 1
+  );
+  const pageRejected = rejectedRedactions.filter(
     (r) => r.pageIndex === currentPage - 1
   );
 
-  const groupedRedactions = pageRedactions.reduce<
+  const groupedConfirmed = pageConfirmed.reduce<
     Record<string, RedactionArea[]>
   >((acc, r) => {
     const key = r.piiType;
@@ -122,73 +118,12 @@ export function RedactionControls({
           <p className="text-xs text-muted-foreground text-center">
             {status === "scanning" && t("scanning")}
             {status === "redacting" && t("redacting")}
-            {status === "parsing" && t("scanning")}
+            {status === "parsing" && t("parsing")}
           </p>
         </div>
       )}
 
-      {/* Regulation & PII types - collapsible before scan */}
-      {!hasRedactedPdf && (
-        <div className="bg-muted/30 rounded-xl border border-border overflow-hidden">
-          <div className="p-4 space-y-3">
-            <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground block">
-              {t("regulation")}
-            </label>
-            <select
-              value={regulation}
-              onChange={(e) =>
-                onRegulationChange(e.target.value as RegulationType)
-              }
-              disabled={isProcessing}
-              className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-            >
-              {Object.entries(regulations).map(([key, reg]) => (
-                <option key={key} value={key}>
-                  {reg.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="px-4 pb-4 space-y-2">
-            <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground block">
-              {t("piiTypes")}
-            </label>
-            <div className="flex flex-wrap gap-1.5">
-              {regulations[regulation].patterns.map((type) => (
-                <button
-                  key={type}
-                  onClick={() => onToggleType(type)}
-                  disabled={isProcessing}
-                  className={cn(
-                    "px-2 py-0.5 text-xs rounded-full border transition-all cursor-pointer",
-                    enabledTypes.includes(type)
-                      ? "bg-foreground text-background border-foreground"
-                      : "bg-background text-muted-foreground border-border hover:border-foreground/30"
-                  )}
-                >
-                  {piiTypeLabels[type] || type}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Scan / Main action */}
-      {hasDocument && !hasRedactedPdf && redactions.length === 0 && (
-        <Button
-          onClick={onScan}
-          className="w-full h-12 text-base"
-          variant="accent"
-          disabled={isProcessing}
-        >
-          <ScanSearch className="h-5 w-5" />
-          {t("scan")}
-        </Button>
-      )}
-
-      {/* Results summary + bulk actions */}
+      {/* Summary + bulk actions */}
       {redactions.length > 0 && !hasRedactedPdf && (
         <div className="bg-muted/30 rounded-xl border border-border overflow-hidden">
           {/* Summary bar */}
@@ -198,7 +133,7 @@ export function RedactionControls({
                 {t("found", { count: redactions.length })}
               </p>
               <p className="text-xs text-muted-foreground mt-0.5">
-                <span className="text-green-600 font-medium">{confirmedCount} {t("confirmed")}</span>
+                <span className="text-black font-medium">{confirmedCount} {t("censored")}</span>
                 {rejectedCount > 0 && (
                   <>
                     {" "}&middot;{" "}
@@ -210,7 +145,7 @@ export function RedactionControls({
             <div className="flex gap-1">
               <button
                 onClick={onConfirmAll}
-                className="p-1.5 rounded-lg bg-green-100 text-green-700 hover:bg-green-200 transition-colors"
+                className="p-1.5 rounded-lg bg-neutral-100 text-neutral-700 hover:bg-neutral-200 transition-colors"
                 title={t("confirmAll")}
               >
                 <CheckCheck className="w-4 h-4" />
@@ -225,15 +160,13 @@ export function RedactionControls({
             </div>
           </div>
 
-          {/* Redaction list grouped by type - scrollable */}
-          <div className="border-t border-border max-h-[340px] overflow-y-auto">
-            {Object.entries(groupedRedactions).map(([type, items]) => {
+          {/* Confirmed redactions grouped by type */}
+          <div className="border-t border-border max-h-[280px] overflow-y-auto">
+            {Object.entries(groupedConfirmed).map(([type, items]) => {
               const isExpanded = expandedGroup === type;
-              const confirmedInGroup = items.filter((r) => r.confirmed).length;
 
               return (
                 <div key={type} className="border-b border-border last:border-b-0">
-                  {/* Group header */}
                   <button
                     className="w-full px-4 py-2.5 flex items-center justify-between hover:bg-muted/50 transition-colors"
                     onClick={() =>
@@ -247,28 +180,16 @@ export function RedactionControls({
                           isExpanded && "rotate-180"
                         )}
                       />
+                      <div className="w-3 h-3 bg-black rounded-sm" />
                       <span className="text-sm font-medium">
                         {piiTypeLabels[type] || type}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">
-                        {confirmedInGroup}/{items.length}
-                      </span>
-                      <div
-                        className={cn(
-                          "w-2 h-2 rounded-full",
-                          confirmedInGroup === items.length
-                            ? "bg-green-500"
-                            : confirmedInGroup > 0
-                            ? "bg-yellow-500"
-                            : "bg-orange-400"
-                        )}
-                      />
-                    </div>
+                    <span className="text-xs text-muted-foreground bg-muted px-1.5 py-0.5 rounded">
+                      {items.length}
+                    </span>
                   </button>
 
-                  {/* Group items */}
                   {isExpanded && (
                     <div className="bg-background/50">
                       {items.map((r) => (
@@ -280,30 +201,20 @@ export function RedactionControls({
                           )}
                           onClick={() => onSelectRedaction(r.id)}
                         >
-                          <div className="flex-1 min-w-0">
-                            <p className="text-xs font-mono truncate">
-                              {r.text || t("manualArea")}
-                            </p>
-                          </div>
+                          <div className="w-2.5 h-2.5 bg-black rounded-sm flex-shrink-0" />
+                          <p className="flex-1 text-xs font-mono truncate min-w-0">
+                            {r.text || t("manualArea")}
+                          </p>
                           <div className="flex items-center gap-1 flex-shrink-0">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 onToggleRedaction(r.id);
                               }}
-                              className={cn(
-                                "p-1 rounded transition-colors",
-                                r.confirmed
-                                  ? "text-green-600 bg-green-100 hover:bg-green-200"
-                                  : "text-orange-500 bg-orange-100 hover:bg-orange-200"
-                              )}
-                              title={r.confirmed ? t("reject") : t("confirm")}
+                              className="p-1 rounded text-orange-500 hover:bg-orange-100 transition-colors"
+                              title={t("reject")}
                             >
-                              {r.confirmed ? (
-                                <Check className="w-3 h-3" />
-                              ) : (
-                                <X className="w-3 h-3" />
-                              )}
+                              <X className="w-3 h-3" />
                             </button>
                             <button
                               onClick={(e) => {
@@ -324,12 +235,65 @@ export function RedactionControls({
               );
             })}
 
-            {pageRedactions.length === 0 && redactions.length > 0 && (
+            {pageConfirmed.length === 0 && redactions.length > 0 && (
               <p className="text-xs text-muted-foreground text-center py-4">
                 {t("noResultsOnPage")}
               </p>
             )}
           </div>
+
+          {/* Rejected section - collapsible */}
+          {pageRejected.length > 0 && (
+            <div className="border-t border-border">
+              <button
+                className="w-full px-4 py-2.5 flex items-center justify-between hover:bg-orange-50 transition-colors"
+                onClick={() => setShowRejected(!showRejected)}
+              >
+                <div className="flex items-center gap-2">
+                  <ChevronDown
+                    className={cn(
+                      "w-3.5 h-3.5 text-orange-400 transition-transform",
+                      showRejected && "rotate-180"
+                    )}
+                  />
+                  <span className="text-sm font-medium text-orange-600">
+                    {t("rejectedItems")}
+                  </span>
+                </div>
+                <span className="text-xs text-orange-500 bg-orange-100 px-1.5 py-0.5 rounded">
+                  {pageRejected.length}
+                </span>
+              </button>
+
+              {showRejected && (
+                <div className="bg-orange-50/50">
+                  {pageRejected.map((r) => (
+                    <div
+                      key={r.id}
+                      className="px-4 py-2 flex items-center gap-2 border-t border-orange-100 hover:bg-orange-50 transition-colors"
+                    >
+                      <div className="w-2.5 h-2.5 border border-orange-300 rounded-sm flex-shrink-0 bg-orange-100" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs font-mono truncate text-muted-foreground line-through">
+                          {r.text || t("manualArea")}
+                        </p>
+                        <p className="text-[10px] text-orange-400">
+                          {piiTypeLabels[r.piiType] || r.piiType}
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => onToggleRedaction(r.id)}
+                        className="p-1 rounded text-green-600 hover:bg-green-100 transition-colors"
+                        title={t("restore")}
+                      >
+                        <Undo2 className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Re-scan button */}
           <div className="p-3 border-t border-border">
@@ -435,7 +399,7 @@ export function RedactionControls({
         )}
       </div>
 
-      {/* No results on page hint */}
+      {/* No results hint */}
       {redactions.length === 0 && status === "previewing" && (
         <p className="text-sm text-muted-foreground text-center py-2">
           {t("noResults")}

@@ -45,7 +45,9 @@ export default function RedactPage() {
   // Calculate redaction counts per page
   const redactionCounts: Record<number, number> = {};
   for (const r of redactions) {
-    redactionCounts[r.pageIndex] = (redactionCounts[r.pageIndex] || 0) + 1;
+    if (r.confirmed) {
+      redactionCounts[r.pageIndex] = (redactionCounts[r.pageIndex] || 0) + 1;
+    }
   }
 
   return (
@@ -60,13 +62,17 @@ export default function RedactPage() {
       )}
 
       {!document ? (
-        /* Upload state */
+        /* Upload state - regulation selection + dropzone */
         <div className="max-w-2xl mx-auto">
           <PDFDropzone
             onFilesSelected={handleFilesSelected}
-            isProcessing={status === "parsing"}
+            isProcessing={status === "parsing" || status === "scanning"}
             selectedFiles={files}
             onRemoveFile={removeFile}
+            regulation={regulation}
+            onRegulationChange={changeRegulation}
+            enabledTypes={enabledTypes}
+            onToggleType={toggleType}
           />
         </div>
       ) : (
@@ -102,15 +108,11 @@ export default function RedactPage() {
             </div>
           </div>
 
-          {/* Controls */}
+          {/* Controls sidebar */}
           <div>
             <RedactionControls
               status={status}
               progress={progress}
-              regulation={regulation}
-              onRegulationChange={changeRegulation}
-              enabledTypes={enabledTypes}
-              onToggleType={toggleType}
               redactions={redactions}
               currentPage={currentPage}
               totalPages={document.totalPages}

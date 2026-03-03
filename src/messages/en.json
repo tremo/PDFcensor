@@ -92,9 +92,14 @@
       "download": "Download Redacted PDF",
       "downloadAll": "Download All (ZIP)",
       "reset": "Start Over",
+      "parsing": "Parsing PDF...",
       "found": "Found {count} PII items",
+      "censored": "censored",
       "confirmed": "confirmed",
       "rejected": "rejected",
+      "rejectedItems": "Rejected Items",
+      "restore": "Restore",
+      "comprehensive": "Comprehensive (US + EU)",
       "confirmAll": "Confirm All",
       "rejectAll": "Reject All",
       "confirm": "Confirm",
@@ -105,7 +110,7 @@
       "drawing": "Draw Mode",
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
-      "noResultsOnPage": "No detections on this page.",
+      "noResultsOnPage": "No censored items on this page.",
       "page": "Page {current} of {total}"
     },
     "piiTypes": {
