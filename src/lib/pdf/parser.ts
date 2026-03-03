@@ -19,7 +19,7 @@ export async function parsePDF(
   const arrayBuffer = await file.arrayBuffer();
 
   const loadingTask = pdfjsLib.getDocument({
-    data: new Uint8Array(arrayBuffer),
+    data: new Uint8Array(arrayBuffer.slice(0)),
     useSystemFonts: true,
   });
 
@@ -85,7 +85,7 @@ export async function renderPageToCanvas(
   scale: number = 1.5
 ): Promise<{ width: number; height: number }> {
   const pdf = await pdfjsLib.getDocument({
-    data: new Uint8Array(arrayBuffer),
+    data: new Uint8Array(arrayBuffer.slice(0)),
   }).promise;
 
   const page = await pdf.getPage(pageNumber);
