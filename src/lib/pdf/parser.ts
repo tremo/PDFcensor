@@ -43,7 +43,7 @@ export async function parsePDF(
         textItems.push({
           text: item.str,
           x: tx[4],
-          y: viewport.height - tx[5], // Convert to top-left origin
+          y: viewport.height - tx[5] - fontSize, // Convert to top-left origin (baseline → top of text)
           width: item.width,
           height: fontSize,
           pageIndex: i - 1,
