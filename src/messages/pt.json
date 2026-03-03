@@ -61,6 +61,44 @@
       "description": "Baixe seu PDF permanentemente redatado. O texto original é removido de forma irrecuperável."
     }
   },
+  "comparison": {
+    "badge": "A Diferença",
+    "title": "Outras ferramentas enviam seus arquivos. Nós não.",
+    "subtitle": "A maioria das ferramentas de redação exige o envio do documento completo para seus servidores. O OfflineRedact funciona de forma diferente.",
+    "otherTools": "Outras Ferramentas",
+    "yourDoc": "Seu documento",
+    "yourDocDesc": "PDF com dados sensíveis",
+    "theirServers": "Servidores deles",
+    "theirServersDesc": "Arquivo completo enviado e armazenado",
+    "whoKnows": "Quem sabe?",
+    "whoKnowsDesc": "Retido por horas ou indefinidamente",
+    "yourBrowser": "Seu navegador",
+    "yourBrowserDesc": "Processado com segurança, nunca armazenado",
+    "redactedFile": "Arquivo editado",
+    "redactedFileDesc": "Criado localmente, download instantâneo",
+    "zeroRetention": "Zero armazenamento. Zero retenção.",
+    "footnote": "Apenas o texto extraído é enviado para detecção de IA. Seus arquivos nunca saem do seu navegador."
+  },
+  "security": {
+    "title": "Redação permanente real",
+    "subtitle": "Ao contrário de editores PDF básicos que apenas sobrepõem caixas pretas, o OfflineRedact cria um novo documento sem os dados sensíveis. Não está oculto — simplesmente não existe na saída.",
+    "noCopy": "Não é possível copiar/colar",
+    "noCopyDesc": "O texto não está na saída",
+    "noTricks": "Sem truques de Photoshop",
+    "noTricksDesc": "Não oculto, removido",
+    "zeroRetention": "Zero retenção",
+    "zeroRetentionDesc": "Documentos processados e eliminados",
+    "encrypted": "Criptografia AES-256",
+    "encryptedDesc": "Criptografia de nível bancário"
+  },
+  "trust": {
+    "title": "Confiado por profissionais que lidam com documentos sensíveis",
+    "legal": "Jurídico",
+    "healthcare": "Saúde",
+    "realEstate": "Imobiliário",
+    "finance": "Finanças",
+    "government": "Governo"
+  },
   "cta": {
     "title": "Pronto para Proteger Dados Sensíveis?",
     "subtitle": "Comece a redatar PDFs gratuitamente — sem necessidade de cadastro.",

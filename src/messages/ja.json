@@ -61,6 +61,44 @@
       "description": "完全に墨消しされたPDFをダウンロード。元のテキストは復元不可能な状態で削除されます。"
     }
   },
+  "comparison": {
+    "badge": "違い",
+    "title": "他のツールはファイルをアップロードします。私たちはしません。",
+    "subtitle": "ほとんどの墨消しツールは、ドキュメント全体をサーバーにアップロードする必要があります。OfflineRedactは異なる方法で動作します。",
+    "otherTools": "他のツール",
+    "yourDoc": "あなたのドキュメント",
+    "yourDocDesc": "機密データを含むPDF",
+    "theirServers": "彼らのサーバー",
+    "theirServersDesc": "ファイル全体がアップロード・保存される",
+    "whoKnows": "誰が知っている？",
+    "whoKnowsDesc": "数時間または無期限に保持される",
+    "yourBrowser": "あなたのブラウザ",
+    "yourBrowserDesc": "安全に処理、保存されない",
+    "redactedFile": "墨消し済みファイル",
+    "redactedFileDesc": "ローカルで作成、即座にダウンロード",
+    "zeroRetention": "ゼロストレージ。ゼロ保持。",
+    "footnote": "AI検出のために送信されるのは抽出されたテキストのみです。ファイルはブラウザから出ることはありません。"
+  },
+  "security": {
+    "title": "真の永続的墨消し",
+    "subtitle": "単に黒いボックスを重ねるだけの基本的なPDFエディタとは異なり、OfflineRedactは機密データなしの新しいドキュメントを作成します。隠されるのではなく、出力に存在しません。",
+    "noCopy": "コピー＆ペースト不可",
+    "noCopyDesc": "テキストは出力に含まれない",
+    "noTricks": "Photoshopのトリックなし",
+    "noTricksDesc": "隠されたのではなく、削除された",
+    "zeroRetention": "ゼロ保持",
+    "zeroRetentionDesc": "ドキュメントは処理後に削除",
+    "encrypted": "AES-256暗号化",
+    "encryptedDesc": "銀行レベルの暗号化"
+  },
+  "trust": {
+    "title": "機密文書を扱う専門家に信頼されています",
+    "legal": "法律",
+    "healthcare": "医療",
+    "realEstate": "不動産",
+    "finance": "金融",
+    "government": "政府"
+  },
   "cta": {
     "title": "機密データを保護する準備はできましたか？",
     "subtitle": "無料でPDFの墨消しを開始 — 登録不要。",

@@ -61,6 +61,44 @@
       "description": "下载您永久脱敏后的PDF。原始文本已被不可恢复地删除。"
     }
   },
+  "comparison": {
+    "badge": "区别",
+    "title": "其他工具上传您的文件。我们不会。",
+    "subtitle": "大多数脱敏工具需要将整个文档上传到其服务器。OfflineRedact的工作方式不同。",
+    "otherTools": "其他工具",
+    "yourDoc": "您的文档",
+    "yourDocDesc": "包含敏感数据的PDF",
+    "theirServers": "他们的服务器",
+    "theirServersDesc": "完整文件上传并存储",
+    "whoKnows": "谁知道呢？",
+    "whoKnowsDesc": "保留数小时或无限期",
+    "yourBrowser": "您的浏览器",
+    "yourBrowserDesc": "安全处理，从不存储",
+    "redactedFile": "脱敏文件",
+    "redactedFileDesc": "本地创建，即时下载",
+    "zeroRetention": "零存储。零保留。",
+    "footnote": "仅提取的文本被发送用于AI检测。您的文件永远不会离开浏览器。"
+  },
+  "security": {
+    "title": "真正的永久脱敏",
+    "subtitle": "与仅覆盖黑色方框的基本PDF编辑器不同，OfflineRedact创建一个没有敏感数据的新文档。它不是被隐藏——它在输出中根本不存在。",
+    "noCopy": "无法复制/粘贴",
+    "noCopyDesc": "文本不在输出中",
+    "noTricks": "没有Photoshop技巧",
+    "noTricksDesc": "不是隐藏，是删除",
+    "zeroRetention": "零保留",
+    "zeroRetentionDesc": "文档处理后清除",
+    "encrypted": "AES-256加密",
+    "encryptedDesc": "银行级加密"
+  },
+  "trust": {
+    "title": "受处理敏感文档的专业人士信赖",
+    "legal": "法律",
+    "healthcare": "医疗",
+    "realEstate": "房地产",
+    "finance": "金融",
+    "government": "政府"
+  },
   "cta": {
     "title": "准备好保护敏感数据了吗？",
     "subtitle": "免费开始PDF脱敏 — 无需注册。",

@@ -61,6 +61,44 @@
       "description": "Kalıcı olarak sansürlenmiş PDF'inizi indirin. Orijinal metin geri getirilemez şekilde silinmiştir."
     }
   },
+  "comparison": {
+    "badge": "Fark",
+    "title": "Diğer araçlar dosyalarınızı yükler. Biz yüklemeyiz.",
+    "subtitle": "Çoğu sansürleme aracı, belgenizin tamamını sunucularına yüklemenizi gerektirir. OfflineRedact farklı çalışır.",
+    "otherTools": "Diğer Araçlar",
+    "yourDoc": "Belgeniz",
+    "yourDocDesc": "Hassas veriler içeren PDF",
+    "theirServers": "Onların sunucuları",
+    "theirServersDesc": "Tam dosya yüklenir ve saklanır",
+    "whoKnows": "Kim bilir?",
+    "whoKnowsDesc": "Saatlerce veya süresiz olarak saklanır",
+    "yourBrowser": "Tarayıcınız",
+    "yourBrowserDesc": "Güvenle işlenir, asla saklanmaz",
+    "redactedFile": "Sansürlenmiş dosya",
+    "redactedFileDesc": "Yerel olarak oluşturulur, anında indirilir",
+    "zeroRetention": "Sıfır depolama. Sıfır saklama.",
+    "footnote": "Yalnızca çıkarılan metin AI tespiti için gönderilir. Dosyalarınız tarayıcınızdan asla çıkmaz."
+  },
+  "security": {
+    "title": "Gerçek kalıcı sansürleme",
+    "subtitle": "Sadece siyah kutular ekleyen basit PDF düzenleyicilerin aksine, OfflineRedact hassas veriler olmadan yeni bir belge oluşturur. Gizlenmez — çıktıda mevcut değildir.",
+    "noCopy": "Kopyala/yapıştır yapılamaz",
+    "noCopyDesc": "Metin çıktıda yok",
+    "noTricks": "Photoshop hileleri yok",
+    "noTricksDesc": "Gizlenmedi, silindi",
+    "zeroRetention": "Sıfır saklama",
+    "zeroRetentionDesc": "Belgeler işlenir ve temizlenir",
+    "encrypted": "AES-256 şifreli",
+    "encryptedDesc": "Banka düzeyinde şifreleme"
+  },
+  "trust": {
+    "title": "Hassas belgelerle çalışan profesyoneller tarafından güvenilir",
+    "legal": "Hukuk",
+    "healthcare": "Sağlık",
+    "realEstate": "Gayrimenkul",
+    "finance": "Finans",
+    "government": "Devlet"
+  },
   "cta": {
     "title": "Hassas Verileri Korumaya Hazır mısınız?",
     "subtitle": "PDF sansürlemeye ücretsiz başlayın — kayıt gerekmez.",
