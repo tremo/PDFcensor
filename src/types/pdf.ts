@@ -7,6 +7,8 @@ export interface PDFTextItem {
   pageIndex: number;
   fontName?: string;
   transform: number[];
+  /** Character offset of this item's text within the page's fullText string */
+  charOffset: number;
 }
 
 export interface PDFPageData {
