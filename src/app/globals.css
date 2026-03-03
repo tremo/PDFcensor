@@ -20,7 +20,7 @@
 
 @media (prefers-color-scheme: dark) {
   @theme {
-    --color-background: #0c1220;
+    --color-background: #111d2e;
     --color-foreground: #e2e8f0;
     --color-muted: #1e293b;
     --color-muted-foreground: #94a3b8;
