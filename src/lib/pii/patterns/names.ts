@@ -27,32 +27,99 @@ export function getNameDictionary(): Set<string> {
 }
 
 /**
+ * Turkish-aware lowercase conversion.
+ * JavaScript's toLowerCase() doesn't handle Turkish İ/I correctly:
+ *   - İ (U+0130) should become 'i', but JS may produce 'i' + combining dot
+ *   - I should become 'ı' in Turkish, but JS produces 'i'
+ */
+function turkishToLower(str: string): string {
+  let result = "";
+  for (const ch of str) {
+    if (ch === "\u0130") result += "i"; // İ → i
+    else if (ch === "I") result += "\u0131"; // I → ı
+    else result += ch.toLowerCase();
+  }
+  return result;
+}
+
+/**
+ * Check if a word exists in the dictionary, trying both standard
+ * and Turkish-aware lowercase conversions.
+ */
+function isInDictionary(word: string, dict: Set<string>): boolean {
+  return dict.has(word.toLowerCase()) || dict.has(turkishToLower(word));
+}
+
+/**
  * Detect person names using dictionary lookup.
- * Looks for capitalized words that match the name dictionary.
- * Groups consecutive name-matches into full names.
+ *
+ * KEY FIX: Uses Unicode-aware word boundaries (?<!\p{L}) / (?!\p{L})
+ * instead of \b, which only recognizes ASCII [a-zA-Z0-9_] as word
+ * characters. The old \b approach failed for names starting with
+ * Turkish characters like Ö, Ş, Ç, İ, Ğ, Ü — e.g., "Ömer" after a
+ * space was never detected because \b saw space(\W) → Ö(\W) as
+ * non-word→non-word and didn't trigger a boundary.
+ *
+ * Also adds detection for ALL CAPS names (e.g., "ÖMER MERT EKŞİOĞLU")
+ * which are common in legal documents.
  */
 export function detectNames(text: string, pageIndex: number): PIIMatch[] {
   const dict = getNameDictionary();
   if (dict.size === 0) return [];
 
   const matches: PIIMatch[] = [];
-  // Match sequences of capitalized words
-  const regex = /\b([A-ZÇĞİÖŞÜÂÎÛÊ][a-zçğıöşüâîûê]+(?:\s+[A-ZÇĞİÖŞÜÂÎÛÊ][a-zçğıöşüâîûê]+)*)\b/g;
+
+  // --- Title Case names (e.g., "Ömer Mert Ekşioğlu") ---
+  // (?<!\p{L}) = not preceded by a letter (Unicode-aware start boundary)
+  // [\p{Lu}]   = any Unicode uppercase letter (includes Ö, Ş, Ç, İ, Ğ, Ü)
+  // [\p{Ll}]+  = one or more Unicode lowercase letters
+  // (?!\p{L})  = not followed by a letter (Unicode-aware end boundary)
+  const titleCaseRegex =
+    /(?<!\p{L})([\p{Lu}][\p{Ll}]+(?:\s+[\p{Lu}][\p{Ll}]+)*)(?!\p{L})/gu;
   let match;
 
-  while ((match = regex.exec(text)) !== null) {
-    const words = match[1].split(/\s+/);
-    // Check if at least one word is in the dictionary
-    const hasNameMatch = words.some((w) => dict.has(w.toLowerCase()));
+  while ((match = titleCaseRegex.exec(text)) !== null) {
+    const fullMatch = match[1];
+    const words = fullMatch.split(/\s+/);
 
-    if (hasNameMatch && words.length >= 2) {
+    // Require at least 2 words, each at least 2 chars
+    if (words.length < 2 || words.some((w) => w.length < 2)) continue;
+
+    const hasNameMatch = words.some((w) => isInDictionary(w, dict));
+
+    if (hasNameMatch) {
       matches.push({
         type: "names",
-        value: match[1],
+        value: fullMatch,
         startIndex: match.index,
-        endIndex: match.index + match[1].length,
+        endIndex: match.index + fullMatch.length,
         pageIndex,
         confidence: 0.75,
+      });
+    }
+  }
+
+  // --- ALL CAPS names (e.g., "ÖMER MERT EKŞİOĞLU") ---
+  // Common in legal/official documents
+  const allCapsRegex =
+    /(?<!\p{L})([\p{Lu}]{2,}(?:\s+[\p{Lu}]{2,})*)(?!\p{L})/gu;
+
+  while ((match = allCapsRegex.exec(text)) !== null) {
+    const fullMatch = match[1];
+    const words = fullMatch.split(/\s+/);
+
+    if (words.length < 2) continue;
+
+    const hasNameMatch = words.some((w) => isInDictionary(w, dict));
+
+    if (hasNameMatch) {
+      matches.push({
+        type: "names",
+        value: fullMatch,
+        startIndex: match.index,
+        endIndex: match.index + fullMatch.length,
+        pageIndex,
+        confidence: 0.7,
       });
     }
   }

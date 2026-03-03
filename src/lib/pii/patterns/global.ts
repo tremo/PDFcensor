@@ -97,30 +97,57 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
 
 /**
  * Detect addresses (keyword-based)
+ *
+ * FIX: Uses (?!\p{L}) instead of trailing \b for keywords ending with
+ * periods (sok., cad., mah., etc.). The old \b failed because after "."
+ * followed by a space, both "." and " " are non-word chars → no boundary.
+ *
+ * Also snaps context boundaries to word edges to avoid cutting words
+ * in half, which caused partial-word fragments in redaction highlights.
  */
 export function detectAddress(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  // Match lines containing address keywords
+  // Use (?!\p{L}) as trailing boundary instead of \b,
+  // so keywords ending with "." are matched correctly before spaces
   const keywords =
-    /\b(?:sokak|sok\.|cadde|cad\.|mahalle|mah\.|bulvar|blv\.|street|st\.|avenue|ave\.|boulevard|blvd\.|road|rd\.|drive|dr\.|lane|ln\.|apt\.?|suite|ste\.?)\b/gi;
+    /\b(?:sokak|sok\.|cadde|cad\.|mahalle|mah\.|bulvar|blv\.|street|st\.|avenue|ave\.|boulevard|blvd\.|road|rd\.|drive|dr\.|lane|ln\.|apt\.?|suite|ste\.?)(?!\p{L})/giu;
   let match;
 
   while ((match = keywords.exec(text)) !== null) {
-    // Grab surrounding context (up to 80 chars before and after the keyword)
-    const start = Math.max(0, match.index - 40);
-    const end = Math.min(text.length, match.index + match[0].length + 40);
+    // Find line boundaries
     const lineStart = text.lastIndexOf("\n", match.index);
     const lineEnd = text.indexOf("\n", match.index);
-    const actualStart = Math.max(start, lineStart + 1);
-    const actualEnd = lineEnd === -1 ? end : Math.min(end, lineEnd);
-    const addressText = text.slice(actualStart, actualEnd).trim();
+    const actualLineStart = lineStart === -1 ? 0 : lineStart + 1;
+    const actualLineEnd = lineEnd === -1 ? text.length : lineEnd;
+
+    // Context window: up to 40 chars before and after keyword, within line
+    let start = Math.max(actualLineStart, match.index - 40);
+    let end = Math.min(actualLineEnd, match.index + match[0].length + 40);
+
+    // Snap start forward to word boundary (don't cut words in half)
+    if (start > actualLineStart && start < text.length && !/\s/.test(text[start])) {
+      const spacePos = text.indexOf(" ", start);
+      if (spacePos !== -1 && spacePos < match.index) {
+        start = spacePos + 1;
+      }
+    }
+
+    // Snap end backward to word boundary
+    if (end < actualLineEnd && end > 0 && /\p{L}/u.test(text[end] || "")) {
+      const spacePos = text.lastIndexOf(" ", end);
+      if (spacePos > match.index + match[0].length) {
+        end = spacePos;
+      }
+    }
+
+    const addressText = text.slice(start, end).trim();
 
     if (addressText.length > 10) {
       matches.push({
         type: "address",
         value: addressText,
-        startIndex: actualStart,
-        endIndex: actualEnd,
+        startIndex: start,
+        endIndex: end,
         pageIndex,
         confidence: 0.7,
       });
