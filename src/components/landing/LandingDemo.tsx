@@ -99,7 +99,7 @@ export default function LandingDemo() {
                 <svg className="demo-logo-icon" viewBox="0 0 48 48" fill="none">
                   <path
                     d="M6 8 Q24 2 42 8 L42 28 Q42 40 24 46 Q6 40 6 28 Z"
-                    fill="#2563eb"
+                    fill="#3b82f6"
                   />
                   <rect x="12" y="18" width="24" height="5" rx="1.5" fill="white" />
                   <rect x="12" y="26" width="17" height="5" rx="1.5" fill="white" />
