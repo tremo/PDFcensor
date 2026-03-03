@@ -66,11 +66,7 @@ export function RedactionControls({
 
   const piiTypeLabels: Record<string, string> = {};
   for (const type of allPiiTypes) {
-    try {
-      piiTypeLabels[type] = tp(type as never);
-    } catch {
-      piiTypeLabels[type] = type;
-    }
+    piiTypeLabels[type] = tp(type);
   }
 
   return (
