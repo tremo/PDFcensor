@@ -190,6 +190,27 @@ export function usePDFProcessor() {
     );
   }, []);
 
+  const removeRedaction = useCallback((id: string) => {
+    setRedactions((prev) => prev.filter((r) => r.id !== id));
+  }, []);
+
+  const updateRedaction = useCallback(
+    (id: string, updates: Partial<Pick<RedactionArea, "x" | "y" | "width" | "height">>) => {
+      setRedactions((prev) =>
+        prev.map((r) => (r.id === id ? { ...r, ...updates } : r))
+      );
+    },
+    []
+  );
+
+  const confirmAll = useCallback(() => {
+    setRedactions((prev) => prev.map((r) => ({ ...r, confirmed: true })));
+  }, []);
+
+  const rejectAll = useCallback(() => {
+    setRedactions((prev) => prev.map((r) => ({ ...r, confirmed: false })));
+  }, []);
+
   const addManualRedaction = useCallback(
     (area: Omit<RedactionArea, "id" | "piiType" | "text" | "confirmed">) => {
       setRedactions((prev) => [
@@ -250,6 +271,10 @@ export function usePDFProcessor() {
     applyRedaction,
     downloadRedactedPdf,
     toggleRedaction,
+    removeRedaction,
+    updateRedaction,
+    confirmAll,
+    rejectAll,
     addManualRedaction,
     changeRegulation,
     toggleType,

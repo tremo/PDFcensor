@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { PDFDropzone } from "@/components/pdf/PDFDropzone";
 import { PDFViewer } from "@/components/pdf/PDFViewer";
@@ -27,12 +28,19 @@ export default function RedactPage() {
     applyRedaction,
     downloadRedactedPdf,
     toggleRedaction,
+    removeRedaction,
+    updateRedaction,
+    confirmAll,
+    rejectAll,
     addManualRedaction,
     changeRegulation,
     toggleType,
     setCurrentPage,
     reset,
   } = usePDFProcessor();
+
+  const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
+  const [drawMode, setDrawMode] = useState(false);
 
   // Calculate redaction counts per page
   const redactionCounts: Record<number, number> = {};
@@ -63,7 +71,7 @@ export default function RedactPage() {
         </div>
       ) : (
         /* Processing state */
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_320px] gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
           {/* Page thumbnails */}
           <div className="hidden lg:block">
             <PDFPageThumbnails
@@ -83,8 +91,13 @@ export default function RedactPage() {
                 totalPages={document.totalPages}
                 redactions={redactions}
                 scale={1.2}
+                selectedRedactionId={selectedRedactionId}
+                onSelectRedaction={setSelectedRedactionId}
                 onToggleRedaction={toggleRedaction}
+                onRemoveRedaction={removeRedaction}
+                onUpdateRedaction={updateRedaction}
                 onManualRedaction={addManualRedaction}
+                drawMode={drawMode}
               />
             </div>
           </div>
@@ -108,6 +121,14 @@ export default function RedactPage() {
               onReset={reset}
               hasDocument={!!document}
               hasRedactedPdf={!!redactedPdfBytes}
+              drawMode={drawMode}
+              onToggleDrawMode={() => setDrawMode((d) => !d)}
+              onConfirmAll={confirmAll}
+              onRejectAll={rejectAll}
+              onToggleRedaction={toggleRedaction}
+              onRemoveRedaction={removeRedaction}
+              selectedRedactionId={selectedRedactionId}
+              onSelectRedaction={setSelectedRedactionId}
             />
           </div>
         </div>
