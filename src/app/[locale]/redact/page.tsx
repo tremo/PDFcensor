@@ -142,6 +142,8 @@ export default function RedactPage() {
               redactions={docx.redactions}
               selectedRedactionId={selectedRedactionId}
               onSelectRedaction={setSelectedRedactionId}
+              onToggleRedaction={docx.toggleRedaction}
+              onRemoveRedaction={docx.removeRedaction}
             />
           </div>
 
