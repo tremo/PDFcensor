@@ -82,8 +82,8 @@ export function PDFDropzone({
                 className={cn(
                   "px-3 py-1.5 text-sm rounded-lg border transition-all cursor-pointer",
                   regulation === key
-                    ? "bg-foreground text-background border-foreground font-medium"
-                    : "bg-background text-muted-foreground border-border hover:border-foreground/30"
+                    ? "bg-primary text-primary-foreground border-primary font-medium"
+                    : "bg-background text-muted-foreground border-border hover:border-primary/30"
                 )}
               >
                 {reg.name === "COMPREHENSIVE" ? tc("comprehensive") : reg.name}
@@ -105,8 +105,8 @@ export function PDFDropzone({
                 className={cn(
                   "px-2 py-0.5 text-xs rounded-full border transition-all cursor-pointer",
                   enabledTypes.includes(type)
-                    ? "bg-foreground text-background border-foreground"
-                    : "bg-background text-muted-foreground border-border hover:border-foreground/30"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background text-muted-foreground border-border hover:border-primary/30"
                 )}
               >
                 {tp(type)}

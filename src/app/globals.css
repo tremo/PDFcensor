@@ -2,7 +2,7 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-foreground: #1e293b;
+  --color-foreground: #334155;
   --color-muted: #f0f5ff;
   --color-muted-foreground: #64748b;
   --color-border: #dbeafe;
@@ -20,19 +20,19 @@
 
 @media (prefers-color-scheme: dark) {
   @theme {
-    --color-background: #0f172a;
+    --color-background: #1a2332;
     --color-foreground: #e2e8f0;
-    --color-muted: #1e293b;
+    --color-muted: #243044;
     --color-muted-foreground: #94a3b8;
-    --color-border: #1e3a5f;
-    --color-primary: #60a5fa;
-    --color-primary-foreground: #ffffff;
-    --color-secondary: #1e3a5f;
+    --color-border: #2d4a6f;
+    --color-primary: #7db8f9;
+    --color-primary-foreground: #0f172a;
+    --color-secondary: #243044;
     --color-secondary-foreground: #e2e8f0;
-    --color-accent: #2dd4bf;
-    --color-accent-foreground: #ffffff;
-    --color-destructive: #ef4444;
-    --color-ring: #60a5fa;
+    --color-accent: #5ce0cc;
+    --color-accent-foreground: #0f172a;
+    --color-destructive: #f87171;
+    --color-ring: #7db8f9;
   }
 }
 
@@ -92,7 +92,7 @@
 .demo-logo-text {
   font-size: 14px;
   font-weight: 700;
-  color: #1e293b;
+  color: #334155;
 }
 
 .demo-logo-text span {
@@ -186,7 +186,7 @@
 .demo-dropzone-title {
   font-size: 14px;
   font-weight: 600;
-  color: #1e293b;
+  color: #334155;
   margin-bottom: 4px;
 }
 
@@ -246,7 +246,7 @@
 .demo-feature-title {
   font-size: 11px;
   font-weight: 600;
-  color: #1e293b;
+  color: #334155;
   margin-bottom: 2px;
 }
 
@@ -360,7 +360,7 @@
 .demo-guidance-title {
   font-size: 12px;
   font-weight: 700;
-  color: #1e293b;
+  color: #334155;
 }
 
 .demo-guidance-close {
@@ -409,8 +409,8 @@
 }
 
 .demo-legend-box.redact {
-  background: #1f2937;
-  border: 1.5px solid #1f2937;
+  background: #374151;
+  border: 1.5px solid #374151;
 }
 
 /* Pay Stub Document */
@@ -458,7 +458,7 @@
 .ps-company {
   font-size: 14px;
   font-weight: 700;
-  color: #1e293b;
+  color: #334155;
   letter-spacing: 0.05em;
 }
 
@@ -509,7 +509,7 @@
 
 .ps-value {
   font-size: 12px;
-  color: #1e293b;
+  color: #334155;
   font-weight: 600;
 }
 
@@ -531,8 +531,8 @@
 }
 
 .ps-value.pii.confirmed {
-  background: #1f2937;
-  border-color: #1f2937;
+  background: #374151;
+  border-color: #374151;
 }
 
 .ps-value.pii.confirmed .pii-text {
@@ -607,19 +607,19 @@
   align-items: center;
   padding: 8px 0;
   margin: 8px 0;
-  border-top: 2px solid #1e293b;
+  border-top: 2px solid #334155;
 }
 
 .ps-net-label {
   font-size: 12px;
   font-weight: 700;
-  color: #1e293b;
+  color: #334155;
 }
 
 .ps-net-amount {
   font-size: 16px;
   font-weight: 800;
-  color: #1e293b;
+  color: #334155;
 }
 
 .ps-deposit {

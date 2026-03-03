@@ -271,52 +271,52 @@ export default function HomePage() {
       </section>
 
       {/* Security */}
-      <section className="py-12 md:py-16 bg-primary text-primary-foreground" id="security">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 border-y border-border" id="security">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="md:max-w-lg">
               <h2 className="text-2xl md:text-3xl font-bold mb-3">
                 {t("security.title")}
               </h2>
-              <p className="opacity-70">
+              <p className="text-muted-foreground">
                 {t("security.subtitle")}
               </p>
             </div>
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center gap-1.5">
-                <div className="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
-                  <Ban className="w-5 h-5 text-red-400" />
+                <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                  <Ban className="w-5 h-5 text-red-500" />
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{t("security.noCopy")}</div>
-                  <div className="text-xs opacity-60">{t("security.noCopyDesc")}</div>
+                  <div className="text-xs text-muted-foreground">{t("security.noCopyDesc")}</div>
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
-                  <Ban className="w-5 h-5 text-red-400" />
+                <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                  <Ban className="w-5 h-5 text-red-500" />
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{t("security.noTricks")}</div>
-                  <div className="text-xs opacity-60">{t("security.noTricksDesc")}</div>
+                  <div className="text-xs text-muted-foreground">{t("security.noTricksDesc")}</div>
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
                   <ShieldAlert className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{t("security.zeroRetention")}</div>
-                  <div className="text-xs opacity-60">{t("security.zeroRetentionDesc")}</div>
+                  <div className="text-xs text-muted-foreground">{t("security.zeroRetentionDesc")}</div>
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <Lock className="w-5 h-5 text-blue-400" />
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <Lock className="w-5 h-5 text-blue-500" />
                 </div>
                 <div>
                   <div className="font-semibold text-sm">{t("security.encrypted")}</div>
-                  <div className="text-xs opacity-60">{t("security.encryptedDesc")}</div>
+                  <div className="text-xs text-muted-foreground">{t("security.encryptedDesc")}</div>
                 </div>
               </div>
             </div>
@@ -351,12 +351,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 bg-primary text-primary-foreground">
+      <section className="py-20 sm:py-28 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t("cta.title")}
           </h2>
-          <p className="text-lg opacity-80 mb-8 max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
             {t("cta.subtitle")}
           </p>
           <Button asChild size="lg" variant="accent">
