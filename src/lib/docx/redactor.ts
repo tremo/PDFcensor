@@ -189,6 +189,9 @@ function redactParagraphElement(
  * Clean document metadata from core.xml
  */
 function cleanMetadata(xml: string): string {
+  // Redacted date placeholder (ISO 8601)
+  const redactedDate = "1970-01-01T00:00:00Z";
+
   return xml
     .replace(/<dc:creator>[^<]*<\/dc:creator>/g, "<dc:creator></dc:creator>")
     .replace(
@@ -202,7 +205,16 @@ function cleanMetadata(xml: string): string {
       "<dc:description></dc:description>"
     )
     .replace(/<cp:keywords>[^<]*<\/cp:keywords>/g, "<cp:keywords></cp:keywords>")
-    .replace(/<cp:category>[^<]*<\/cp:category>/g, "<cp:category></cp:category>");
+    .replace(/<cp:category>[^<]*<\/cp:category>/g, "<cp:category></cp:category>")
+    .replace(/<cp:revision>[^<]*<\/cp:revision>/g, "<cp:revision>1</cp:revision>")
+    .replace(
+      /<dcterms:created[^>]*>[^<]*<\/dcterms:created>/g,
+      `<dcterms:created xsi:type="dcterms:W3CDTF">${redactedDate}</dcterms:created>`
+    )
+    .replace(
+      /<dcterms:modified[^>]*>[^<]*<\/dcterms:modified>/g,
+      `<dcterms:modified xsi:type="dcterms:W3CDTF">${redactedDate}</dcterms:modified>`
+    );
 }
 
 /**
