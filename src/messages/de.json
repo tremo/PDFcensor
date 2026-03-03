@@ -113,11 +113,12 @@
     "tagline": "Dauerhafte PDF-Schwärzung — 100% in Ihrem Browser."
   },
   "redact": {
-    "title": "PDF-Schwärzungstool",
+    "title": "Dokument-Schwärzungstool",
+    "titleDocx": "Word-Dokument Schwärzungstool",
     "dropzone": {
-      "title": "PDF-Dateien hier ablegen",
+      "title": "Dateien hier ablegen",
       "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
-      "hint": "Unterstützt PDF-Dateien bis 50MB. Ihre Dateien verlassen nie Ihren Browser.",
+      "hint": "Unterstützt PDF- und Word-(.docx)-Dateien. Ihre Dateien verlassen niemals Ihren Browser.",
       "processing": "Verarbeitung..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Schwärzung anwenden",
       "redacting": "Schwärzen...",
       "download": "Geschwärztes PDF herunterladen",
+      "downloadDocx": "Geschwärztes Word-Dokument herunterladen",
       "downloadAll": "Alle herunterladen (ZIP)",
       "reset": "Neu beginnen",
       "parsing": "PDF wird analysiert...",
+      "parsingDocx": "Word-Dokument wird analysiert...",
       "found": "{count} PII-Elemente gefunden",
       "censored": "zensiert",
       "confirmed": "bestätigt",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "Keine zensierten Elemente auf dieser Seite.",
       "noResults": "Keine PII in diesem Dokument erkannt.",
       "page": "Seite {current} von {total}"
+    },
+    "docx": {
+      "pending": "Ausstehend",
+      "confirmed": "Bestätigt"
     },
     "piiTypes": {
       "ssn": "Sozialversicherungsnummer",

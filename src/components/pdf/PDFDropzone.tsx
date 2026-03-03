@@ -40,8 +40,12 @@ export function PDFDropzone({
       setIsDragOver(false);
       if (isProcessing) return;
 
+      const ACCEPTED_TYPES = [
+        "application/pdf",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ];
       const files = Array.from(e.dataTransfer.files).filter(
-        (f) => f.type === "application/pdf"
+        (f) => ACCEPTED_TYPES.includes(f.type) || f.name.endsWith(".docx")
       );
       if (files.length > 0) onFilesSelected(files);
     },
@@ -132,7 +136,7 @@ export function PDFDropzone({
         <input
           ref={inputRef}
           type="file"
-          accept="application/pdf"
+          accept="application/pdf,.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
           multiple
           onChange={handleChange}
           className="hidden"

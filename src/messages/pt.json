@@ -113,11 +113,12 @@
     "tagline": "Redação permanente de PDF — 100% no seu navegador."
   },
   "redact": {
-    "title": "Ferramenta de Redação de PDF",
+    "title": "Ferramenta de redação de documentos",
+    "titleDocx": "Ferramenta de redação de documentos Word",
     "dropzone": {
-      "title": "Solte os arquivos PDF aqui",
+      "title": "Solte os arquivos aqui",
       "subtitle": "ou clique para navegar nos seus arquivos",
-      "hint": "Suporta arquivos PDF de até 50MB. Seus arquivos nunca saem do seu navegador.",
+      "hint": "Suporta arquivos PDF e Word (.docx). Seus arquivos nunca saem do seu navegador.",
       "processing": "Processando..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Aplicar Redação",
       "redacting": "Redatando...",
       "download": "Baixar PDF Redatado",
+      "downloadDocx": "Baixar documento Word redigido",
       "downloadAll": "Baixar Todos (ZIP)",
       "reset": "Recomeçar",
       "parsing": "Analisando PDF...",
+      "parsingDocx": "Analisando documento Word...",
       "found": "{count} dados pessoais encontrados",
       "censored": "censurado",
       "confirmed": "confirmado",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "Nenhum item censurado nesta página.",
       "noResults": "Nenhum dado pessoal detectado neste documento.",
       "page": "Página {current} de {total}"
+    },
+    "docx": {
+      "pending": "Pendente",
+      "confirmed": "Confirmado"
     },
     "piiTypes": {
       "ssn": "CPF",

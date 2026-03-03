@@ -113,11 +113,12 @@
     "tagline": "Caviardage PDF permanent — 100% dans votre navigateur."
   },
   "redact": {
-    "title": "Outil de caviardage PDF",
+    "title": "Outil de caviardage de documents",
+    "titleDocx": "Outil de caviardage de documents Word",
     "dropzone": {
-      "title": "Déposez les fichiers PDF ici",
+      "title": "Déposez les fichiers ici",
       "subtitle": "ou cliquez pour parcourir vos fichiers",
-      "hint": "Prend en charge les fichiers PDF jusqu'à 50 Mo. Vos fichiers ne quittent jamais votre navigateur.",
+      "hint": "Prend en charge les fichiers PDF et Word (.docx). Vos fichiers ne quittent jamais votre navigateur.",
       "processing": "Traitement en cours..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Appliquer le caviardage",
       "redacting": "Caviardage en cours...",
       "download": "Télécharger le PDF caviardé",
+      "downloadDocx": "Télécharger le document Word caviardé",
       "downloadAll": "Tout télécharger (ZIP)",
       "reset": "Recommencer",
       "parsing": "Analyse du PDF...",
+      "parsingDocx": "Analyse du document Word...",
       "found": "{count} données personnelles trouvées",
       "censored": "censuré",
       "confirmed": "confirmé",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "Aucun élément censuré sur cette page.",
       "noResults": "Aucune donnée personnelle détectée dans ce document.",
       "page": "Page {current} sur {total}"
+    },
+    "docx": {
+      "pending": "En attente",
+      "confirmed": "Confirmé"
     },
     "piiTypes": {
       "ssn": "Numéro de sécurité sociale",

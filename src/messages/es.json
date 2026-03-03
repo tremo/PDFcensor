@@ -113,11 +113,12 @@
     "tagline": "Redacción permanente de PDF — 100% en su navegador."
   },
   "redact": {
-    "title": "Herramienta de redacción de PDF",
+    "title": "Herramienta de censura de documentos",
+    "titleDocx": "Herramienta de censura de documentos Word",
     "dropzone": {
-      "title": "Suelte archivos PDF aquí",
+      "title": "Suelta los archivos aquí",
       "subtitle": "o haga clic para explorar sus archivos",
-      "hint": "Soporta archivos PDF de hasta 50MB. Sus archivos nunca salen de su navegador.",
+      "hint": "Admite archivos PDF y Word (.docx). Tus archivos nunca salen de tu navegador.",
       "processing": "Procesando..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Aplicar redacción",
       "redacting": "Redactando...",
       "download": "Descargar PDF redactado",
+      "downloadDocx": "Descargar documento Word censurado",
       "downloadAll": "Descargar todo (ZIP)",
       "reset": "Empezar de nuevo",
       "parsing": "Analizando PDF...",
+      "parsingDocx": "Analizando documento Word...",
       "found": "{count} datos personales encontrados",
       "censored": "censurado",
       "confirmed": "confirmado",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "No hay elementos censurados en esta página.",
       "noResults": "No se detectaron datos personales en este documento.",
       "page": "Página {current} de {total}"
+    },
+    "docx": {
+      "pending": "Pendiente",
+      "confirmed": "Confirmado"
     },
     "piiTypes": {
       "ssn": "Número de seguro social",

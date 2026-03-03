@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "Ana Sayfa",
-    "redact": "PDF Sansürle",
+    "redact": "Belge Sansürle",
     "pricing": "Fiyatlandırma",
     "blog": "Blog"
   },
@@ -113,11 +113,12 @@
     "tagline": "Kalıcı PDF sansürleme — %100 tarayıcınızda."
   },
   "redact": {
-    "title": "PDF Sansürleme Aracı",
+    "title": "Belge Sansürleme Aracı",
+    "titleDocx": "Word Belgesi Sansürleme Aracı",
     "dropzone": {
-      "title": "PDF dosyalarını buraya bırakın",
+      "title": "Dosyaları buraya bırakın",
       "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
-      "hint": "50MB'a kadar PDF dosyalarını destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
+      "hint": "PDF ve Word (.docx) dosyalarını destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
       "processing": "İşleniyor..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Sansürü Uygula",
       "redacting": "Sansürleniyor...",
       "download": "Sansürlenmiş PDF'i İndir",
+      "downloadDocx": "Sansürlenmiş Word Belgesini İndir",
       "downloadAll": "Tümünü İndir (ZIP)",
       "reset": "Baştan Başla",
       "parsing": "PDF ayrıştırılıyor...",
+      "parsingDocx": "Word belgesi ayrıştırılıyor...",
       "found": "{count} kişisel veri bulundu",
       "censored": "sansürlendi",
       "confirmed": "onaylandı",
@@ -152,6 +155,10 @@
       "noResults": "Bu belgede kişisel veri tespit edilmedi.",
       "noResultsOnPage": "Bu sayfada sansürlenen öğe yok.",
       "page": "Sayfa {current} / {total}"
+    },
+    "docx": {
+      "pending": "Bekliyor",
+      "confirmed": "Onaylandı"
     },
     "piiTypes": {
       "ssn": "Sosyal Güvenlik Numarası",
