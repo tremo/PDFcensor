@@ -43,9 +43,18 @@ export function PDFDropzone({
       const ACCEPTED_TYPES = [
         "application/pdf",
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+        "image/gif",
+        "image/tiff",
       ];
+      const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff"];
       const files = Array.from(e.dataTransfer.files).filter(
-        (f) => ACCEPTED_TYPES.includes(f.type) || f.name.endsWith(".docx")
+        (f) =>
+          ACCEPTED_TYPES.includes(f.type) ||
+          f.name.endsWith(".docx") ||
+          IMAGE_EXTENSIONS.some((ext) => f.name.toLowerCase().endsWith(ext))
       );
       if (files.length > 0) onFilesSelected(files);
     },
@@ -136,7 +145,7 @@ export function PDFDropzone({
         <input
           ref={inputRef}
           type="file"
-          accept="application/pdf,.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          accept="application/pdf,.docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/jpeg,image/png,image/webp,image/gif,image/tiff,.jpg,.jpeg,.png,.webp,.gif,.tif,.tiff"
           multiple
           onChange={handleChange}
           className="hidden"
