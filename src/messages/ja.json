@@ -176,6 +176,42 @@
       "address": "住所"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "ここにドキュメントをドロップ",
+      "subtitle": "またはクリックして参照",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "AI検出",
+      "aiDetectionText": "マイナンバー、氏名、住所を自動検出。",
+      "stayPrivate": "ファイルはプライベートを維持",
+      "stayPrivateText": "検出にはテキストのみ送信。",
+      "visualReview": "視覚的レビュー",
+      "visualReviewText": "承認、拒否、または手動追加。"
+    },
+    "guidance": {
+      "title": "レビューと編集",
+      "clickBefore": "クリックして墨消しするか",
+      "clickMiddle": "",
+      "clickAfter": "で検出アイテムを却下。",
+      "drag": "空白にドラッグしてボックスを描画。",
+      "detected": "検出済み",
+      "willRedact": "墨消し予定"
+    },
+    "fab": {
+      "review": "レビュー",
+      "download": "ダウンロード"
+    },
+    "back": "戻る",
+    "analyzing": "分析中：",
+    "success": {
+      "title": "共有可能",
+      "text": "機密データを完全に削除しました。",
+      "subtitle": "ドキュメントの準備ができました。",
+      "badge": "墨消し成功"
+    }
+  },
   "pricing": {
     "title": "シンプルで透明な料金体系",
     "subtitle": "無料で開始、必要に応じてアップグレード",

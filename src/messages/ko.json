@@ -176,6 +176,42 @@
       "address": "주소"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "여기에 문서를 놓으세요",
+      "subtitle": "또는 클릭하여 찾아보기",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "AI 감지",
+      "aiDetectionText": "주민번호, 이름, 주소를 자동으로 찾습니다.",
+      "stayPrivate": "파일 비공개 유지",
+      "stayPrivateText": "감지를 위해 텍스트만 전송됩니다.",
+      "visualReview": "시각적 검토",
+      "visualReviewText": "승인, 거부 또는 수동 추가."
+    },
+    "guidance": {
+      "title": "검토 및 편집",
+      "clickBefore": "클릭하여 묵인하거나",
+      "clickMiddle": "",
+      "clickAfter": "으로 감지된 항목을 무시하세요.",
+      "drag": "빈 공간에 드래그하여 박스를 그리세요.",
+      "detected": "감지됨",
+      "willRedact": "묵인 예정"
+    },
+    "fab": {
+      "review": "검토",
+      "download": "다운로드"
+    },
+    "back": "뒤로",
+    "analyzing": "분석 중:",
+    "success": {
+      "title": "공유 가능",
+      "text": "민감한 데이터가 영구적으로 제거되었습니다.",
+      "subtitle": "문서가 준비되었습니다.",
+      "badge": "묵인 성공"
+    }
+  },
   "pricing": {
     "title": "간단하고 투명한 요금제",
     "subtitle": "무료로 시작하고, 필요할 때 업그레이드",

@@ -176,6 +176,42 @@
       "address": "Adresses"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Déposez votre document ici",
+      "subtitle": "ou cliquez pour parcourir",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "Détection IA",
+      "aiDetectionText": "Trouve SSN, noms, adresses automatiquement.",
+      "stayPrivate": "Fichiers restent privés",
+      "stayPrivateText": "Seul le texte est envoyé pour la détection.",
+      "visualReview": "Révision visuelle",
+      "visualReviewText": "Approuver, rejeter ou ajouter manuellement."
+    },
+    "guidance": {
+      "title": "Réviser & Modifier",
+      "clickBefore": "Cliquer pour biffer ou",
+      "clickMiddle": "",
+      "clickAfter": "pour ignorer les éléments détectés.",
+      "drag": "Glisser sur l'espace vide pour dessiner une zone.",
+      "detected": "Détecté",
+      "willRedact": "Sera biffé"
+    },
+    "fab": {
+      "review": "Réviser",
+      "download": "Télécharger"
+    },
+    "back": "Retour",
+    "analyzing": "Analyse par",
+    "success": {
+      "title": "Prêt à partager",
+      "text": "Données sensibles supprimées définitivement.",
+      "subtitle": "Votre document est prêt.",
+      "badge": "Biffure réussie"
+    }
+  },
   "pricing": {
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement, mettez à niveau quand vous en avez besoin",

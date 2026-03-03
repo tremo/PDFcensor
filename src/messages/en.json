@@ -176,6 +176,42 @@
       "address": "Addresses"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Drop your document here",
+      "subtitle": "or click to browse",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "AI Detection",
+      "aiDetectionText": "Finds SSNs, names, addresses automatically.",
+      "stayPrivate": "Files Stay Private",
+      "stayPrivateText": "Only text sent for detection.",
+      "visualReview": "Visual Review",
+      "visualReviewText": "Approve, reject, or add manually."
+    },
+    "guidance": {
+      "title": "Review & Edit",
+      "clickBefore": "Click",
+      "clickMiddle": "to redact or",
+      "clickAfter": "to dismiss detected items.",
+      "drag": "Drag on empty space to draw a box.",
+      "detected": "Detected",
+      "willRedact": "Will redact"
+    },
+    "fab": {
+      "review": "Review",
+      "download": "Download"
+    },
+    "back": "Back",
+    "analyzing": "Analyzing by",
+    "success": {
+      "title": "Safe to Share",
+      "text": "Sensitive data removed permanently.",
+      "subtitle": "Your document is ready.",
+      "badge": "Redaction Successful"
+    }
+  },
   "pricing": {
     "title": "Simple, Transparent Pricing",
     "subtitle": "Start free, upgrade when you need it",

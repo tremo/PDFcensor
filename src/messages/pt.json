@@ -176,6 +176,42 @@
       "address": "Endereços"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Solte seu documento aqui",
+      "subtitle": "ou clique para procurar",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "Detecção IA",
+      "aiDetectionText": "Encontra CPF, nomes, endereços automaticamente.",
+      "stayPrivate": "Arquivos permanecem privados",
+      "stayPrivateText": "Apenas texto é enviado para detecção.",
+      "visualReview": "Revisão visual",
+      "visualReviewText": "Aprovar, rejeitar ou adicionar manualmente."
+    },
+    "guidance": {
+      "title": "Revisar e Editar",
+      "clickBefore": "Clique para redigir ou",
+      "clickMiddle": "",
+      "clickAfter": "para dispensar itens detectados.",
+      "drag": "Arraste no espaço vazio para desenhar uma caixa.",
+      "detected": "Detectado",
+      "willRedact": "Será redigido"
+    },
+    "fab": {
+      "review": "Revisar",
+      "download": "Baixar"
+    },
+    "back": "Voltar",
+    "analyzing": "Analisando por",
+    "success": {
+      "title": "Pronto para compartilhar",
+      "text": "Dados sensíveis removidos permanentemente.",
+      "subtitle": "Seu documento está pronto.",
+      "badge": "Redação bem-sucedida"
+    }
+  },
   "pricing": {
     "title": "Preços Simples e Transparentes",
     "subtitle": "Comece grátis, faça upgrade quando precisar",
