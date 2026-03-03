@@ -82,11 +82,16 @@ export async function renderPageToCanvas(
   arrayBuffer: ArrayBuffer,
   pageNumber: number,
   canvas: HTMLCanvasElement,
-  scale: number = 1.5
+  scale: number = 1.5,
+  signal?: AbortSignal
 ): Promise<{ width: number; height: number }> {
+  if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
+
   const pdf = await pdfjsLib.getDocument({
     data: new Uint8Array(arrayBuffer.slice(0)),
   }).promise;
+
+  if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
 
   const page = await pdf.getPage(pageNumber);
   const viewport = page.getViewport({ scale });
@@ -95,7 +100,19 @@ export async function renderPageToCanvas(
   canvas.height = viewport.height;
 
   const context = canvas.getContext("2d")!;
-  await page.render({ canvasContext: context, viewport }).promise;
+  const renderTask = page.render({ canvasContext: context, viewport });
+
+  if (signal) {
+    const onAbort = () => renderTask.cancel();
+    signal.addEventListener("abort", onAbort, { once: true });
+    try {
+      await renderTask.promise;
+    } finally {
+      signal.removeEventListener("abort", onAbort);
+    }
+  } else {
+    await renderTask.promise;
+  }
 
   return { width: viewport.width, height: viewport.height };
 }
