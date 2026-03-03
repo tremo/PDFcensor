@@ -74,25 +74,106 @@ export function detectCreditCard(text: string, pageIndex: number): PIIMatch[] {
 }
 
 /**
- * Detect generic phone numbers (international format)
+ * Detect phone numbers across all countries and formats.
+ *
+ * Uses multiple regex patterns to cover international and local formats:
+ *  1. International with + prefix: +CC XXXXXXXXX (various groupings)
+ *  2. International dialing 00: 00CC XXXXXXXXX
+ *  3. Parenthesized area code: (0XXX) XXX-XXXX
+ *  4. Leading 0 + separator groups: 0XXX XXX XXXX
+ *  5. Label-prefixed: Tel: XXXXXXXXX, Phone: XXXXXXXXX
+ *
+ * All matches are validated for 7–15 digit count and filtered against
+ * date-like patterns to reduce false positives.
  */
 export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  const regex = /\+\d{1,3}[\s.-]?\(?\d{2,4}\)?[\s.-]?\d{3,4}[\s.-]?\d{3,4}\b/g;
-  let match;
+  const seen = new Set<string>();
 
-  while ((match = regex.exec(text)) !== null) {
-    matches.push({
-      type: "phone",
-      value: match[0],
-      startIndex: match.index,
-      endIndex: match.index + match[0].length,
-      pageIndex,
-      confidence: 0.8,
-    });
+  const structuralPatterns: [RegExp, number][] = [
+    // 1. International with + prefix (most reliable)
+    //    +1 234 567 8901, +44 20 7946 0958, +90 532 123 45 67
+    //    +33 1 23 45 67 89, +86-138-0013-8000, +49 (0)30 1234567
+    [
+      /\+\d{1,3}[\s.-]*\(?\d{1,5}\)?[\s.-]*\d{1,5}[\s.-]*\d{1,5}(?:[\s.-]*\d{1,5})?(?:[\s.-]*\d{1,5})?(?!\d)/g,
+      0.9,
+    ],
+    // 2. International dialing prefix 00
+    //    0044 20 7946 0958, 0090 532 123 45 67
+    [
+      /(?<!\d)00\d{2,3}[\s.-]*\(?\d{1,5}\)?[\s.-]*\d{1,5}[\s.-]*\d{1,5}(?:[\s.-]*\d{1,5})?(?!\d)/g,
+      0.85,
+    ],
+    // 3. Parenthesized area code (common worldwide)
+    //    (212) 555-1234, (0212) 555 12 34, (011) 98765-4321
+    [
+      /(?<!\d)\(0?\d{1,5}\)[\s.-]*\d{2,5}[\s.-]*\d{2,5}(?:[\s.-]*\d{1,5})?(?!\d)/g,
+      0.85,
+    ],
+    // 4. Leading 0 + separated digit groups (Europe, Asia, Middle East, Africa)
+    //    0212 444 1234, 0532-123-45-67, 020 7946 0958, 06 12 34 56 78
+    [
+      /(?<!\d)0\d{1,4}[\s.-]+\d{2,5}[\s.-]+\d{2,5}(?:[\s.-]+\d{1,5})?(?!\d)/g,
+      0.8,
+    ],
+  ];
+
+  for (const [pattern, confidence] of structuralPatterns) {
+    pattern.lastIndex = 0;
+    let m;
+    while ((m = pattern.exec(text)) !== null) {
+      addPhoneMatch(m[0], m.index, confidence);
+    }
+  }
+
+  // 5. Label-prefixed phone numbers (contextual detection)
+  //    Tel: 532 123 45 67, Phone: 555-123-4567, Fax: (212) 555-1234
+  //    Telefon: 0532 123 45 67, GSM: 532 123 45 67, 電話: 03-1234-5678
+  const labelRegex =
+    /(?:tel(?:efon|[eé]phone|[eé]fono|efone)?|phone|fax|gsm|mobile|mobil|cep|cell(?:ular)?|h[üu]cre|telefax)[\s.:\/]+(\+?[\d][\d\s.()\-]{5,18}\d)/gi;
+  labelRegex.lastIndex = 0;
+  let lm;
+  while ((lm = labelRegex.exec(text)) !== null) {
+    const numPart = lm[1];
+    const offset = lm[0].indexOf(numPart);
+    addPhoneMatch(numPart, lm.index + offset, 0.85);
   }
 
   return matches;
+
+  function addPhoneMatch(raw: string, index: number, confidence: number) {
+    const value = raw.trim();
+    const digits = value.replace(/\D/g, "");
+
+    // Phone numbers have 7–15 digits
+    if (digits.length < 7 || digits.length > 15) return;
+
+    // Skip date-like patterns (YYYY-MM-DD, DD-MM-YYYY)
+    if (isDateLike(value)) return;
+
+    const start = index + (raw.length - raw.trimStart().length);
+    const end = start + value.length;
+    const key = `${start}:${end}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    matches.push({
+      type: "phone",
+      value,
+      startIndex: start,
+      endIndex: end,
+      pageIndex,
+      confidence,
+    });
+  }
+}
+
+/** Check if string looks like a date rather than a phone number. */
+function isDateLike(str: string): boolean {
+  const s = str.trim();
+  if (/^\d{4}[.\/-]\d{1,2}[.\/-]\d{1,2}$/.test(s)) return true;
+  if (/^\d{1,2}[.\/-]\d{1,2}[.\/-]\d{4}$/.test(s)) return true;
+  return false;
 }
 
 /**
