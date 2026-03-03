@@ -115,6 +115,7 @@
   "redact": {
     "title": "Document Redaction Tool",
     "titleDocx": "Word Document Redaction Tool",
+    "titleBatch": "Batch Document Redaction",
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "Pending",
       "confirmed": "Confirmed"
+    },
+    "batch": {
+      "scanComplete": "Scan Complete",
+      "totalFindings": "{count} critical data items found",
+      "acrossFiles": "across {count} documents",
+      "downloadAllZip": "Redact All & Download ZIP",
+      "redactingAll": "Redacting all files...",
+      "downloaded": "Downloaded!",
+      "processingFile": "Processing file {current} of {total}...",
+      "fileBreakdown": "File Breakdown",
+      "pages": "pages",
+      "findingsInFile": "{count} items detected",
+      "noFindings": "No sensitive data found — clean!",
+      "review": "Review",
+      "totalFiles": "{count} files",
+      "filesWithFindings": "{count} with findings",
+      "filesWithErrors": "{count} errors",
+      "processing": "Scanning your documents...",
+      "backToSummary": "Back to Summary"
     },
     "piiTypes": {
       "ssn": "Social Security Number",

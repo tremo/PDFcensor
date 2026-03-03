@@ -8,10 +8,16 @@ import { PDFPageThumbnails } from "@/components/pdf/PDFPageThumbnails";
 import { RedactionControls } from "@/components/pdf/RedactionControls";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
+import { BatchSummary } from "@/components/pdf/BatchSummary";
 import { usePDFProcessor } from "@/hooks/usePDFProcessor";
 import { useDocxProcessor } from "@/hooks/useDocxProcessor";
+import { useBatchProcessor } from "@/hooks/useBatchProcessor";
+import { Progress } from "@/components/ui/progress";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type DocumentType = "none" | "pdf" | "docx";
+type FlowMode = "single" | "batch";
 
 function isDocxFile(file: File): boolean {
   return (
@@ -23,55 +29,71 @@ function isDocxFile(file: File): boolean {
 
 export default function RedactPage() {
   const t = useTranslations("redact");
+  const tb = useTranslations("redact.batch");
 
   const [documentType, setDocumentType] = useState<DocumentType>("none");
+  const [flowMode, setFlowMode] = useState<FlowMode>("single");
 
-  // PDF processor
+  // Single-file processors
   const pdf = usePDFProcessor();
-
-  // DOCX processor
   const docx = useDocxProcessor();
+
+  // Batch processor
+  const batch = useBatchProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
 
-  // Route file to the correct processor
+  // Route files to correct processor
   const handleFilesSelected = useCallback(
     (files: File[]) => {
       if (files.length === 0) return;
 
-      const file = files[0];
-      if (isDocxFile(file)) {
-        setDocumentType("docx");
-        docx.handleFilesSelected(files);
+      if (files.length > 1) {
+        // Multiple files → batch mode
+        setFlowMode("batch");
+        batch.handleFilesSelected(files);
       } else {
-        setDocumentType("pdf");
-        pdf.handleFilesSelected(files);
+        // Single file → existing flow
+        setFlowMode("single");
+        const file = files[0];
+        if (isDocxFile(file)) {
+          setDocumentType("docx");
+          docx.handleFilesSelected(files);
+        } else {
+          setDocumentType("pdf");
+          pdf.handleFilesSelected(files);
+        }
       }
     },
-    [pdf, docx]
+    [pdf, docx, batch]
   );
 
   const handleReset = useCallback(() => {
-    if (documentType === "docx") {
+    if (flowMode === "batch") {
+      batch.reset();
+    } else if (documentType === "docx") {
       docx.reset();
     } else {
       pdf.reset();
     }
     setDocumentType("none");
+    setFlowMode("single");
     setSelectedRedactionId(null);
-  }, [documentType, pdf, docx]);
+  }, [flowMode, documentType, pdf, docx, batch]);
 
-  // Determine the active state based on document type
+  // Determine the active state based on document type (single mode)
   const activeStatus = documentType === "docx" ? docx.status : pdf.status;
   const activeError = documentType === "docx" ? docx.error : pdf.error;
-  const activeFiles = documentType === "docx" ? docx.files : pdf.files;
-  const activeRegulation = documentType === "docx" ? docx.regulation : pdf.regulation;
-  const activeEnabledTypes = documentType === "docx" ? docx.enabledTypes : pdf.enabledTypes;
+  const activeFiles = flowMode === "batch" ? batch.files : (documentType === "docx" ? docx.files : pdf.files);
+  const activeRegulation = flowMode === "batch" ? batch.regulation : (documentType === "docx" ? docx.regulation : pdf.regulation);
+  const activeEnabledTypes = flowMode === "batch" ? batch.enabledTypes : (documentType === "docx" ? docx.enabledTypes : pdf.enabledTypes);
   const hasActiveDocument = documentType === "docx" ? !!docx.document : !!pdf.document;
 
   const activeRemoveFile = useCallback(
     (index: number) => {
-      if (documentType === "docx") {
+      if (flowMode === "batch") {
+        batch.removeFile(index);
+      } else if (documentType === "docx") {
         docx.removeFile(index);
         if (index === 0) {
           setDocumentType("none");
@@ -83,17 +105,21 @@ export default function RedactPage() {
         }
       }
     },
-    [documentType, pdf, docx]
+    [flowMode, documentType, pdf, docx, batch]
   );
 
-  const activeChangeRegulation = documentType === "docx"
-    ? docx.changeRegulation
-    : pdf.changeRegulation;
-  const activeToggleType = documentType === "docx"
-    ? docx.toggleType
-    : pdf.toggleType;
+  const activeChangeRegulation = flowMode === "batch"
+    ? batch.changeRegulation
+    : documentType === "docx"
+      ? docx.changeRegulation
+      : pdf.changeRegulation;
+  const activeToggleType = flowMode === "batch"
+    ? batch.toggleType
+    : documentType === "docx"
+      ? docx.toggleType
+      : pdf.toggleType;
 
-  // Calculate redaction counts per page (PDF only)
+  // Calculate redaction counts per page (PDF only, single mode)
   const redactionCounts: Record<number, number> = {};
   if (documentType === "pdf") {
     for (const r of pdf.redactions) {
@@ -101,27 +127,46 @@ export default function RedactPage() {
     }
   }
 
-  // Get the page title based on document type
+  // Get the page title based on mode
   const pageTitle =
-    documentType === "docx" ? t("titleDocx") : t("title");
+    flowMode === "batch"
+      ? t("titleBatch")
+      : documentType === "docx"
+        ? t("titleDocx")
+        : t("title");
+
+  // Determine if we're in upload phase
+  const isUploadPhase =
+    flowMode === "single"
+      ? !hasActiveDocument
+      : batch.status === "idle";
+
+  // Batch processing state
+  const isBatchProcessing = flowMode === "batch" && batch.status === "processing";
+  const isBatchSummary = flowMode === "batch" && (batch.status === "summary" || batch.status === "redacting-all" || batch.status === "done");
+  const isBatchReviewing = flowMode === "batch" && batch.status === "reviewing";
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-2xl font-bold mb-6">{pageTitle}</h1>
 
       {/* Error display */}
-      {activeError && (
+      {(activeError || batch.error) && (
         <div className="mb-6 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm">
-          {activeError}
+          {activeError || batch.error}
         </div>
       )}
 
-      {!hasActiveDocument ? (
+      {isUploadPhase ? (
         /* Upload state - regulation selection + dropzone */
         <div className="max-w-2xl mx-auto">
           <PDFDropzone
             onFilesSelected={handleFilesSelected}
-            isProcessing={activeStatus === "parsing" || activeStatus === "scanning" || activeStatus === "ocr-scanning"}
+            isProcessing={
+              activeStatus === "parsing" ||
+              activeStatus === "scanning" ||
+              activeStatus === "ocr-scanning"
+            }
             selectedFiles={activeFiles}
             onRemoveFile={activeRemoveFile}
             regulation={activeRegulation}
@@ -130,10 +175,107 @@ export default function RedactPage() {
             onToggleType={activeToggleType}
           />
         </div>
+      ) : isBatchProcessing ? (
+        /* Batch processing progress */
+        <div className="max-w-lg mx-auto space-y-6">
+          <div className="p-6 bg-muted/30 rounded-xl border border-border space-y-4 text-center">
+            <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-8 h-8 border-3 border-primary/30 border-t-primary rounded-full animate-spin" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold">{tb("processing")}</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                {tb("processingFile", {
+                  current: batch.currentFileIndex + 1,
+                  total: batch.totalFiles,
+                })}
+              </p>
+            </div>
+            <Progress value={batch.progress} />
+          </div>
+        </div>
+      ) : isBatchSummary ? (
+        /* Batch summary view */
+        <BatchSummary
+          summary={batch.getSummary()}
+          status={batch.status}
+          progress={batch.progress}
+          currentFileIndex={batch.currentFileIndex}
+          onReviewFile={batch.startReview}
+          onDownloadAll={batch.redactAllAndDownloadZip}
+          onReset={handleReset}
+        />
+      ) : isBatchReviewing && batch.reviewingIndex !== null ? (
+        /* Batch - reviewing individual file */
+        <div>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="mb-4 gap-1.5"
+            onClick={batch.backToSummary}
+          >
+            <ArrowLeft className="w-4 h-4" />
+            {tb("backToSummary")}
+          </Button>
+
+          {(() => {
+            const result = batch.fileResults[batch.reviewingIndex];
+            if (!result) return null;
+
+            if (result.type === "pdf" && result.pdfDocument) {
+              const reviewRedactionCounts: Record<number, number> = {};
+              for (const r of result.pdfRedactions) {
+                reviewRedactionCounts[r.pageIndex] =
+                  (reviewRedactionCounts[r.pageIndex] || 0) + 1;
+              }
+
+              return (
+                <BatchPDFReview
+                  result={result}
+                  redactionCounts={reviewRedactionCounts}
+                  selectedRedactionId={selectedRedactionId}
+                  onSelectRedaction={setSelectedRedactionId}
+                  onToggleRedaction={(id) =>
+                    batch.toggleFileRedaction(batch.reviewingIndex!, id)
+                  }
+                  onRemoveRedaction={(id) =>
+                    batch.removeFileRedaction(batch.reviewingIndex!, id)
+                  }
+                  onConfirmAll={() =>
+                    batch.confirmAllForFile(batch.reviewingIndex!)
+                  }
+                  onBack={batch.backToSummary}
+                />
+              );
+            }
+
+            // DOCX review (simplified text view)
+            if (result.type === "docx" && result.docxDocument) {
+              return (
+                <BatchDocxReview
+                  result={result}
+                  selectedRedactionId={selectedRedactionId}
+                  onSelectRedaction={setSelectedRedactionId}
+                  onToggleRedaction={(id) =>
+                    batch.toggleFileRedaction(batch.reviewingIndex!, id)
+                  }
+                  onRemoveRedaction={(id) =>
+                    batch.removeFileRedaction(batch.reviewingIndex!, id)
+                  }
+                  onConfirmAll={() =>
+                    batch.confirmAllForFile(batch.reviewingIndex!)
+                  }
+                  onBack={batch.backToSummary}
+                />
+              );
+            }
+
+            return null;
+          })()}
+        </div>
       ) : documentType === "docx" && docx.document ? (
-        /* DOCX Processing state */
+        /* DOCX Processing state (single) */
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6">
-          {/* DOCX Viewer */}
           <div className="overflow-auto max-h-[80vh]">
             <DocxViewer
               document={docx.document}
@@ -144,8 +286,6 @@ export default function RedactPage() {
               onRemoveRedaction={docx.removeRedaction}
             />
           </div>
-
-          {/* Controls sidebar */}
           <div>
             <DocxRedactionControls
               status={docx.status}
@@ -167,9 +307,8 @@ export default function RedactPage() {
           </div>
         </div>
       ) : pdf.document ? (
-        /* PDF Processing state */
+        /* PDF Processing state (single) */
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
-          {/* Page thumbnails */}
           <div className="hidden lg:block">
             <PDFPageThumbnails
               totalPages={pdf.document.totalPages}
@@ -178,8 +317,6 @@ export default function RedactPage() {
               redactionCounts={redactionCounts}
             />
           </div>
-
-          {/* PDF Viewer */}
           <div className="overflow-auto max-h-[80vh]">
             <div className="flex justify-center min-w-fit">
               <PDFViewer
@@ -197,8 +334,6 @@ export default function RedactPage() {
               />
             </div>
           </div>
-
-          {/* Controls sidebar */}
           <div>
             <RedactionControls
               status={pdf.status}
@@ -223,6 +358,338 @@ export default function RedactPage() {
           </div>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+/* ─── Batch review sub-components ─── */
+
+import type { BatchFileResult } from "@/hooks/useBatchProcessor";
+
+function BatchPDFReview({
+  result,
+  redactionCounts,
+  selectedRedactionId,
+  onSelectRedaction,
+  onToggleRedaction,
+  onRemoveRedaction,
+  onConfirmAll,
+  onBack,
+}: {
+  result: BatchFileResult;
+  redactionCounts: Record<number, number>;
+  selectedRedactionId: string | null;
+  onSelectRedaction: (id: string | null) => void;
+  onToggleRedaction: (id: string) => void;
+  onRemoveRedaction: (id: string) => void;
+  onConfirmAll: () => void;
+  onBack: () => void;
+}) {
+  const t = useTranslations("redact.controls");
+  const tb = useTranslations("redact.batch");
+  const tp = useTranslations("redact.piiTypes");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  if (!result.pdfDocument) return null;
+
+  const doc = result.pdfDocument;
+  const redactions = result.pdfRedactions;
+  const confirmedCount = redactions.filter((r) => r.confirmed).length;
+  const pendingCount = redactions.filter((r) => !r.confirmed).length;
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
+      <div className="hidden lg:block">
+        <PDFPageThumbnails
+          totalPages={doc.totalPages}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+          redactionCounts={redactionCounts}
+        />
+      </div>
+
+      <div className="overflow-auto max-h-[80vh]">
+        <div className="flex justify-center min-w-fit">
+          <PDFViewer
+            arrayBuffer={doc.arrayBuffer}
+            currentPage={currentPage}
+            totalPages={doc.totalPages}
+            redactions={redactions}
+            scale={1.2}
+            selectedRedactionId={selectedRedactionId}
+            onSelectRedaction={onSelectRedaction}
+            onToggleRedaction={onToggleRedaction}
+            onRemoveRedaction={onRemoveRedaction}
+            onUpdateRedaction={() => {}}
+            onManualRedaction={() => {}}
+          />
+        </div>
+      </div>
+
+      <div className="space-y-4">
+        {/* Summary */}
+        <div className="bg-muted/30 rounded-xl border border-border p-4">
+          <p className="text-sm font-semibold">
+            {t("found", { count: redactions.length })}
+          </p>
+          <p className="text-xs text-muted-foreground mt-0.5">
+            <span className="text-emerald-600 font-medium">
+              {confirmedCount} {t("censored")}
+            </span>
+            {pendingCount > 0 && (
+              <>
+                {" "}&middot;{" "}
+                <span className="text-amber-500 font-medium">
+                  {pendingCount} {t("pending")}
+                </span>
+              </>
+            )}
+          </p>
+          <div className="mt-3 flex gap-2">
+            <Button size="sm" variant="default" onClick={onConfirmAll}>
+              {t("confirmAll")}
+            </Button>
+            <Button size="sm" variant="outline" onClick={onBack}>
+              {tb("backToSummary")}
+            </Button>
+          </div>
+        </div>
+
+        {/* Redaction list */}
+        <div className="bg-muted/30 rounded-xl border border-border max-h-[50vh] overflow-y-auto">
+          {redactions.map((r) => (
+            <div
+              key={r.id}
+              className={`px-4 py-2.5 flex items-center gap-2 border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors cursor-pointer ${
+                selectedRedactionId === r.id ? "bg-blue-50" : ""
+              }`}
+              onClick={() => onSelectRedaction(r.id)}
+            >
+              <div
+                className={`w-2.5 h-2.5 rounded-sm flex-shrink-0 ${
+                  r.confirmed ? "bg-black" : "bg-amber-400/30 border border-amber-400"
+                }`}
+              />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-mono truncate">{r.text || t("manualArea")}</p>
+                <p className="text-[10px] text-muted-foreground">
+                  {tp(r.piiType as import("@/types/pii").PIIType)}
+                </p>
+              </div>
+              <div className="flex items-center gap-1 flex-shrink-0">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleRedaction(r.id);
+                  }}
+                  className={`p-1 rounded hover:scale-110 transition-all ${
+                    r.confirmed
+                      ? "text-amber-500 hover:bg-amber-100"
+                      : "text-green-600 hover:bg-green-100"
+                  }`}
+                >
+                  {r.confirmed ? "↩" : "✓"}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemoveRedaction(r.id);
+                  }}
+                  className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-100 hover:scale-110 transition-all text-xs"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BatchDocxReview({
+  result,
+  selectedRedactionId,
+  onSelectRedaction,
+  onToggleRedaction,
+  onRemoveRedaction,
+  onConfirmAll,
+  onBack,
+}: {
+  result: BatchFileResult;
+  selectedRedactionId: string | null;
+  onSelectRedaction: (id: string | null) => void;
+  onToggleRedaction: (id: string) => void;
+  onRemoveRedaction: (id: string) => void;
+  onConfirmAll: () => void;
+  onBack: () => void;
+}) {
+  const t = useTranslations("redact.controls");
+  const tp = useTranslations("redact.piiTypes");
+  const tb = useTranslations("redact.batch");
+
+  if (!result.docxDocument) return null;
+
+  const doc = result.docxDocument;
+  const redactions = result.docxRedactions;
+  const confirmedCount = redactions.filter((r) => r.confirmed).length;
+  const pendingCount = redactions.filter((r) => !r.confirmed).length;
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6">
+      {/* DOCX content with highlights */}
+      <div className="overflow-auto max-h-[80vh] bg-white rounded-xl border border-border p-6">
+        <DocxTextHighlighter
+          fullText={doc.fullText}
+          redactions={redactions}
+          selectedRedactionId={selectedRedactionId}
+          onSelectRedaction={onSelectRedaction}
+          onToggleRedaction={onToggleRedaction}
+        />
+      </div>
+
+      <div className="space-y-4">
+        <div className="bg-muted/30 rounded-xl border border-border p-4">
+          <p className="text-sm font-semibold">
+            {t("found", { count: redactions.length })}
+          </p>
+          <p className="text-xs text-muted-foreground mt-0.5">
+            <span className="text-emerald-600 font-medium">
+              {confirmedCount} {t("censored")}
+            </span>
+            {pendingCount > 0 && (
+              <>
+                {" "}&middot;{" "}
+                <span className="text-amber-500 font-medium">
+                  {pendingCount} {t("pending")}
+                </span>
+              </>
+            )}
+          </p>
+          <div className="mt-3 flex gap-2">
+            <Button size="sm" variant="default" onClick={onConfirmAll}>
+              {t("confirmAll")}
+            </Button>
+            <Button size="sm" variant="outline" onClick={onBack}>
+              {tb("backToSummary")}
+            </Button>
+          </div>
+        </div>
+
+        {/* Redaction list */}
+        <div className="bg-muted/30 rounded-xl border border-border max-h-[50vh] overflow-y-auto">
+          {redactions.map((r) => (
+            <div
+              key={r.id}
+              className={`px-4 py-2.5 flex items-center gap-2 border-b border-border last:border-b-0 hover:bg-muted/50 transition-colors cursor-pointer ${
+                selectedRedactionId === r.id ? "bg-blue-50" : ""
+              }`}
+              onClick={() => onSelectRedaction(r.id)}
+            >
+              <div
+                className={`w-2.5 h-2.5 rounded-sm flex-shrink-0 ${
+                  r.confirmed ? "bg-black" : "bg-amber-400/30 border border-amber-400"
+                }`}
+              />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-mono truncate">{r.match.value}</p>
+                <p className="text-[10px] text-muted-foreground">
+                  {tp(r.match.type as import("@/types/pii").PIIType)}
+                </p>
+              </div>
+              <div className="flex items-center gap-1 flex-shrink-0">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleRedaction(r.id);
+                  }}
+                  className={`p-1 rounded hover:scale-110 transition-all ${
+                    r.confirmed
+                      ? "text-amber-500 hover:bg-amber-100"
+                      : "text-green-600 hover:bg-green-100"
+                  }`}
+                >
+                  {r.confirmed ? "↩" : "✓"}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemoveRedaction(r.id);
+                  }}
+                  className="p-1 rounded text-red-400 hover:text-red-600 hover:bg-red-100 hover:scale-110 transition-all text-xs"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* Simple DOCX text highlighter for batch review */
+function DocxTextHighlighter({
+  fullText,
+  redactions,
+  selectedRedactionId,
+  onSelectRedaction,
+  onToggleRedaction,
+}: {
+  fullText: string;
+  redactions: { id: string; match: import("@/types/pii").PIIMatch; confirmed: boolean }[];
+  selectedRedactionId: string | null;
+  onSelectRedaction: (id: string | null) => void;
+  onToggleRedaction: (id: string) => void;
+}) {
+  // Build segments: plain text + highlighted matches
+  const sorted = [...redactions].sort(
+    (a, b) => a.match.startIndex - b.match.startIndex
+  );
+
+  const segments: React.ReactNode[] = [];
+  let lastIndex = 0;
+
+  for (const r of sorted) {
+    if (r.match.startIndex > lastIndex) {
+      segments.push(
+        <span key={`text-${lastIndex}`}>
+          {fullText.slice(lastIndex, r.match.startIndex)}
+        </span>
+      );
+    }
+    segments.push(
+      <span
+        key={r.id}
+        className={`px-0.5 rounded cursor-pointer transition-all ${
+          r.confirmed
+            ? "bg-black text-white"
+            : selectedRedactionId === r.id
+              ? "bg-amber-300 ring-2 ring-amber-400"
+              : "bg-amber-200 hover:bg-amber-300"
+        }`}
+        onClick={() => {
+          onSelectRedaction(r.id);
+          onToggleRedaction(r.id);
+        }}
+      >
+        {r.match.value}
+      </span>
+    );
+    lastIndex = r.match.endIndex;
+  }
+
+  if (lastIndex < fullText.length) {
+    segments.push(
+      <span key={`text-${lastIndex}`}>{fullText.slice(lastIndex)}</span>
+    );
+  }
+
+  return (
+    <div className="text-sm leading-relaxed whitespace-pre-wrap font-serif">
+      {segments}
     </div>
   );
 }

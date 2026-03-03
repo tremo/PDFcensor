@@ -115,6 +115,7 @@
   "redact": {
     "title": "문서 검열 도구",
     "titleDocx": "Word 문서 검열 도구",
+    "titleBatch": "일괄 문서 검열",
     "dropzone": {
       "title": "여기에 파일을 놓으세요",
       "subtitle": "또는 클릭하여 파일을 선택하세요",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "대기 중",
       "confirmed": "확인됨"
+    },
+    "batch": {
+      "scanComplete": "스캔 완료",
+      "totalFindings": "{count}개의 중요 데이터 발견",
+      "acrossFiles": "{count}개 문서에서",
+      "downloadAllZip": "모두 검열 & ZIP 다운로드",
+      "redactingAll": "모든 파일 검열 중...",
+      "downloaded": "다운로드 완료!",
+      "processingFile": "{total}개 중 {current}번째 파일 처리 중...",
+      "fileBreakdown": "파일 상세",
+      "pages": "페이지",
+      "findingsInFile": "{count}개 항목 감지",
+      "noFindings": "민감한 데이터가 없습니다 — 깨끗합니다!",
+      "review": "검토",
+      "totalFiles": "{count}개 파일",
+      "filesWithFindings": "{count}개 발견",
+      "filesWithErrors": "{count}개 오류",
+      "processing": "문서를 스캔하고 있습니다...",
+      "backToSummary": "요약으로 돌아가기"
     },
     "piiTypes": {
       "ssn": "주민등록번호",

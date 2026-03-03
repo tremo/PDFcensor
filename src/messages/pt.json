@@ -115,6 +115,7 @@
   "redact": {
     "title": "Ferramenta de redação de documentos",
     "titleDocx": "Ferramenta de redação de documentos Word",
+    "titleBatch": "Redação em lote de documentos",
     "dropzone": {
       "title": "Solte os arquivos aqui",
       "subtitle": "ou clique para navegar nos seus arquivos",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "Pendente",
       "confirmed": "Confirmado"
+    },
+    "batch": {
+      "scanComplete": "Varredura concluída",
+      "totalFindings": "{count} dados críticos encontrados",
+      "acrossFiles": "em {count} documentos",
+      "downloadAllZip": "Redigir tudo e baixar ZIP",
+      "redactingAll": "Redigindo todos os arquivos...",
+      "downloaded": "Baixado!",
+      "processingFile": "Processando arquivo {current} de {total}...",
+      "fileBreakdown": "Detalhes dos arquivos",
+      "pages": "páginas",
+      "findingsInFile": "{count} itens detectados",
+      "noFindings": "Nenhum dado sensível encontrado — limpo!",
+      "review": "Revisar",
+      "totalFiles": "{count} arquivos",
+      "filesWithFindings": "{count} com resultados",
+      "filesWithErrors": "{count} erros",
+      "processing": "Escaneando seus documentos...",
+      "backToSummary": "Voltar ao resumo"
     },
     "piiTypes": {
       "ssn": "CPF",

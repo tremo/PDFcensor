@@ -115,6 +115,7 @@
   "redact": {
     "title": "Belge Sansürleme Aracı",
     "titleDocx": "Word Belgesi Sansürleme Aracı",
+    "titleBatch": "Toplu Belge Sansürleme",
     "dropzone": {
       "title": "Dosyaları buraya bırakın",
       "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "Bekliyor",
       "confirmed": "Onaylandı"
+    },
+    "batch": {
+      "scanComplete": "Tarama Tamamlandı",
+      "totalFindings": "{count} kritik veri bulundu",
+      "acrossFiles": "{count} belgede",
+      "downloadAllZip": "Tümünü Sansürle ve ZIP İndir",
+      "redactingAll": "Tüm dosyalar sansürleniyor...",
+      "downloaded": "İndirildi!",
+      "processingFile": "{total} dosyadan {current}. işleniyor...",
+      "fileBreakdown": "Dosya Detayları",
+      "pages": "sayfa",
+      "findingsInFile": "{count} öğe tespit edildi",
+      "noFindings": "Hassas veri bulunamadı — temiz!",
+      "review": "İncele",
+      "totalFiles": "{count} dosya",
+      "filesWithFindings": "{count} bulgulu",
+      "filesWithErrors": "{count} hata",
+      "processing": "Belgeleriniz taranıyor...",
+      "backToSummary": "Özete Dön"
     },
     "piiTypes": {
       "ssn": "Sosyal Güvenlik Numarası",

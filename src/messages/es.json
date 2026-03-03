@@ -115,6 +115,7 @@
   "redact": {
     "title": "Herramienta de censura de documentos",
     "titleDocx": "Herramienta de censura de documentos Word",
+    "titleBatch": "Censura de documentos por lotes",
     "dropzone": {
       "title": "Suelta los archivos aquí",
       "subtitle": "o haga clic para explorar sus archivos",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "Pendiente",
       "confirmed": "Confirmado"
+    },
+    "batch": {
+      "scanComplete": "Escaneo completado",
+      "totalFindings": "{count} datos críticos encontrados",
+      "acrossFiles": "en {count} documentos",
+      "downloadAllZip": "Censurar todo y descargar ZIP",
+      "redactingAll": "Censurando todos los archivos...",
+      "downloaded": "¡Descargado!",
+      "processingFile": "Procesando archivo {current} de {total}...",
+      "fileBreakdown": "Desglose de archivos",
+      "pages": "páginas",
+      "findingsInFile": "{count} elementos detectados",
+      "noFindings": "No se encontraron datos sensibles — ¡limpio!",
+      "review": "Revisar",
+      "totalFiles": "{count} archivos",
+      "filesWithFindings": "{count} con hallazgos",
+      "filesWithErrors": "{count} errores",
+      "processing": "Escaneando sus documentos...",
+      "backToSummary": "Volver al resumen"
     },
     "piiTypes": {
       "ssn": "Número de seguro social",

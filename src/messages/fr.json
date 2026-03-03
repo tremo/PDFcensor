@@ -115,6 +115,7 @@
   "redact": {
     "title": "Outil de caviardage de documents",
     "titleDocx": "Outil de caviardage de documents Word",
+    "titleBatch": "Caviardage par lots",
     "dropzone": {
       "title": "Déposez les fichiers ici",
       "subtitle": "ou cliquez pour parcourir vos fichiers",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "En attente",
       "confirmed": "Confirmé"
+    },
+    "batch": {
+      "scanComplete": "Analyse terminée",
+      "totalFindings": "{count} données critiques trouvées",
+      "acrossFiles": "dans {count} documents",
+      "downloadAllZip": "Tout caviarder et télécharger en ZIP",
+      "redactingAll": "Caviardage de tous les fichiers...",
+      "downloaded": "Téléchargé !",
+      "processingFile": "Traitement du fichier {current} sur {total}...",
+      "fileBreakdown": "Détails des fichiers",
+      "pages": "pages",
+      "findingsInFile": "{count} éléments détectés",
+      "noFindings": "Aucune donnée sensible trouvée — propre !",
+      "review": "Examiner",
+      "totalFiles": "{count} fichiers",
+      "filesWithFindings": "{count} avec résultats",
+      "filesWithErrors": "{count} erreurs",
+      "processing": "Analyse de vos documents...",
+      "backToSummary": "Retour au résumé"
     },
     "piiTypes": {
       "ssn": "Numéro de sécurité sociale",

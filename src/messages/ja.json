@@ -115,6 +115,7 @@
   "redact": {
     "title": "ドキュメント墨消しツール",
     "titleDocx": "Word文書墨消しツール",
+    "titleBatch": "一括ドキュメント墨消し",
     "dropzone": {
       "title": "ファイルをここにドロップ",
       "subtitle": "またはクリックしてファイルを選択",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "保留中",
       "confirmed": "確認済み"
+    },
+    "batch": {
+      "scanComplete": "スキャン完了",
+      "totalFindings": "{count}件の重要データが見つかりました",
+      "acrossFiles": "{count}件のドキュメント内",
+      "downloadAllZip": "すべて墨消し＆ZIPダウンロード",
+      "redactingAll": "すべてのファイルを墨消し中...",
+      "downloaded": "ダウンロード完了！",
+      "processingFile": "{total}件中{current}件目を処理中...",
+      "fileBreakdown": "ファイル詳細",
+      "pages": "ページ",
+      "findingsInFile": "{count}件検出",
+      "noFindings": "機密データは見つかりませんでした — クリーン！",
+      "review": "確認",
+      "totalFiles": "{count}ファイル",
+      "filesWithFindings": "{count}件に検出あり",
+      "filesWithErrors": "{count}件エラー",
+      "processing": "ドキュメントをスキャン中...",
+      "backToSummary": "概要に戻る"
     },
     "piiTypes": {
       "ssn": "マイナンバー",
