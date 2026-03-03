@@ -45,9 +45,7 @@ export default function RedactPage() {
   // Calculate redaction counts per page
   const redactionCounts: Record<number, number> = {};
   for (const r of redactions) {
-    if (r.confirmed) {
-      redactionCounts[r.pageIndex] = (redactionCounts[r.pageIndex] || 0) + 1;
-    }
+    redactionCounts[r.pageIndex] = (redactionCounts[r.pageIndex] || 0) + 1;
   }
 
   return (
