@@ -117,11 +117,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-950/30 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
                     <Cloud className="w-6 h-6 text-red-500" />
                   </div>
                   <div>
-                    <div className="font-semibold text-red-600 dark:text-red-400">{t("comparison.theirServers")}</div>
+                    <div className="font-semibold text-red-600">{t("comparison.theirServers")}</div>
                     <div className="text-sm text-muted-foreground">{t("comparison.theirServersDesc")}</div>
                   </div>
                 </div>
