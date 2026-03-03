@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Check, X, Undo2 } from "lucide-react";
 import type { DocxDocumentData } from "@/lib/docx/parser";
 import type { DocxRedactionItem } from "@/hooks/useDocxProcessor";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,8 @@ interface DocxViewerProps {
   redactions: DocxRedactionItem[];
   selectedRedactionId: string | null;
   onSelectRedaction: (id: string | null) => void;
+  onToggleRedaction: (id: string) => void;
+  onRemoveRedaction: (id: string) => void;
 }
 
 interface TextSegment {
@@ -23,8 +26,11 @@ export function DocxViewer({
   redactions,
   selectedRedactionId,
   onSelectRedaction,
+  onToggleRedaction,
+  onRemoveRedaction,
 }: DocxViewerProps) {
   const t = useTranslations("redact.docx");
+  const [hoveredRedactionId, setHoveredRedactionId] = useState<string | null>(null);
 
   // Build segments of text with highlighted redactions
   const segments = useMemo(() => {
@@ -99,20 +105,56 @@ export function DocxViewer({
 
           const r = segment.redaction;
           const isSelected = selectedRedactionId === r.id;
+          const isHovered = hoveredRedactionId === r.id;
+          const showButtons = isHovered || isSelected;
 
           if (r.confirmed) {
             // Confirmed: show asterisks with black background
             return (
               <span
                 key={i}
-                className={cn(
-                  "bg-black text-white px-0.5 rounded-sm cursor-pointer font-mono text-sm transition-all",
-                  isSelected && "ring-2 ring-blue-500 ring-offset-1"
-                )}
-                onClick={() => onSelectRedaction(r.id)}
-                title={`${r.match.type}: ${r.match.value}`}
+                className="relative inline-block group"
+                onMouseEnter={() => setHoveredRedactionId(r.id)}
+                onMouseLeave={() => setHoveredRedactionId(null)}
               >
-                {"*".repeat(r.match.value.length)}
+                <span
+                  className={cn(
+                    "bg-black text-white px-0.5 rounded-sm cursor-pointer font-mono text-sm transition-all",
+                    isSelected && "ring-2 ring-blue-500 ring-offset-1"
+                  )}
+                  onClick={() => onSelectRedaction(r.id)}
+                  title={`${r.match.type}: ${r.match.value}`}
+                >
+                  {"*".repeat(r.match.value.length)}
+                </span>
+                {/* Action buttons */}
+                <span
+                  className={cn(
+                    "absolute -top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 z-20 transition-opacity duration-150",
+                    showButtons ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                  )}
+                >
+                  <button
+                    className="p-1.5 rounded-md shadow-md bg-amber-500 text-white hover:bg-amber-600 hover:scale-110 active:scale-95 transition-all duration-150"
+                    title="Undo"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onToggleRedaction(r.id);
+                    }}
+                  >
+                    <Undo2 className="w-3 h-3" />
+                  </button>
+                  <button
+                    className="p-1.5 rounded-md shadow-md bg-red-500 text-white hover:bg-red-600 hover:scale-110 active:scale-95 transition-all duration-150"
+                    title="Delete"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRemoveRedaction(r.id);
+                    }}
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </span>
               </span>
             );
           }
@@ -121,16 +163,50 @@ export function DocxViewer({
           return (
             <span
               key={i}
-              className={cn(
-                "bg-amber-200/50 border-b-2 border-amber-400 cursor-pointer transition-all",
-                isSelected
-                  ? "bg-amber-300/70 ring-2 ring-blue-500 ring-offset-1 rounded-sm"
-                  : "hover:bg-amber-300/50"
-              )}
-              onClick={() => onSelectRedaction(r.id)}
-              title={`${r.match.type}: ${r.match.value}`}
+              className="relative inline-block group"
+              onMouseEnter={() => setHoveredRedactionId(r.id)}
+              onMouseLeave={() => setHoveredRedactionId(null)}
             >
-              {segment.text}
+              <span
+                className={cn(
+                  "bg-amber-200/50 border-b-2 border-amber-400 cursor-pointer transition-all",
+                  isSelected
+                    ? "bg-amber-300/70 ring-2 ring-blue-500 ring-offset-1 rounded-sm"
+                    : "hover:bg-amber-300/50"
+                )}
+                onClick={() => onSelectRedaction(r.id)}
+                title={`${r.match.type}: ${r.match.value}`}
+              >
+                {segment.text}
+              </span>
+              {/* Action buttons */}
+              <span
+                className={cn(
+                  "absolute -top-8 left-1/2 -translate-x-1/2 flex items-center gap-1 z-20 transition-opacity duration-150",
+                  showButtons ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                )}
+              >
+                <button
+                  className="p-1.5 rounded-md shadow-md bg-green-500 text-white hover:bg-green-600 hover:scale-110 hover:shadow-lg active:scale-95 transition-all duration-150"
+                  title="Approve"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleRedaction(r.id);
+                  }}
+                >
+                  <Check className="w-3 h-3" />
+                </button>
+                <button
+                  className="p-1.5 rounded-md shadow-md bg-red-500 text-white hover:bg-red-600 hover:scale-110 hover:shadow-lg active:scale-95 transition-all duration-150"
+                  title="Reject"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemoveRedaction(r.id);
+                  }}
+                >
+                  <X className="w-3 h-3" />
+                </button>
+              </span>
             </span>
           );
         })}
