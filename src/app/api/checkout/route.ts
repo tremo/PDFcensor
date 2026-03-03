@@ -14,7 +14,7 @@ export async function POST(request: Request) {
           price_data: {
             currency: "usd",
             product_data: {
-              name: "PDFcensor Pro — Lifetime License",
+              name: "OfflineRedact Pro — Lifetime License",
               description:
                 "Remove watermarks, batch processing, and priority support. One-time payment.",
             },

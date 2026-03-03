@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — Automatische PII-Schwärzung für PDF-Dokumente",
+    "title": "OfflineRedact — Automatische PII-Schwärzung für PDF-Dokumente",
     "description": "Entfernen Sie personenbezogene Daten dauerhaft aus PDFs. DSGVO-konform. 100% clientseitig — Ihre Dateien verlassen nie Ihren Browser."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "Vertraut von Anwaltskanzleien, Gesundheitseinrichtungen und Behörden"
   },
   "features": {
-    "title": "Warum PDFcensor?",
+    "title": "Warum OfflineRedact?",
     "subtitle": "PDF-Schwärzung auf Unternehmensniveau, die vollständig in Ihrem Browser läuft",
     "trueRedaction": {
       "title": "Echte Schwärzung",

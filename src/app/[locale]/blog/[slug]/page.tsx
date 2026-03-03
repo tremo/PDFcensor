@@ -8,9 +8,9 @@ const blogContent: Record<string, { title: string; content: string[] }> = {
     content: [
       "Healthcare organizations handle vast amounts of Protected Health Information (PHI) daily. When sharing documents externally — for legal proceedings, research, or inter-organizational communication — proper redaction is not just best practice, it's a legal requirement under HIPAA.",
       "HIPAA's Privacy Rule requires that covered entities and their business associates protect all individually identifiable health information. This includes names, dates, Social Security numbers, medical record numbers, and 14 other categories of identifiers.",
-      "Simple visual redaction — drawing black boxes over sensitive text — is NOT sufficient for HIPAA compliance. The underlying text data must be permanently removed from the document. PDFcensor performs true redaction by removing the actual text data from PDF content streams, not just covering it visually.",
+      "Simple visual redaction — drawing black boxes over sensitive text — is NOT sufficient for HIPAA compliance. The underlying text data must be permanently removed from the document. OfflineRedact performs true redaction by removing the actual text data from PDF content streams, not just covering it visually.",
       "Key steps for HIPAA-compliant redaction: (1) Identify all PHI in the document using automated detection, (2) Review and confirm detected items, (3) Apply true redaction that removes text data, (4) Clean document metadata, (5) Verify the redacted document before sharing.",
-      "With PDFcensor, all processing happens in your browser — your documents never leave your device. This eliminates the risk of PHI exposure during the redaction process itself, a critical consideration for HIPAA compliance.",
+      "With OfflineRedact, all processing happens in your browser — your documents never leave your device. This eliminates the risk of PHI exposure during the redaction process itself, a critical consideration for HIPAA compliance.",
     ],
   },
   "ediscovery-document-redaction": {
@@ -19,7 +19,7 @@ const blogContent: Record<string, { title: string; content: string[] }> = {
       "In legal proceedings, the eDiscovery process often requires producing large volumes of documents. Many of these documents contain privileged information, trade secrets, or personal data that must be redacted before production.",
       "Redaction in eDiscovery serves multiple purposes: protecting attorney-client privilege, shielding confidential business information, and complying with privacy regulations like GDPR and CCPA that may apply even in litigation contexts.",
       "Common mistakes in eDiscovery redaction include: using highlighter tools instead of true redaction, forgetting to remove metadata, inconsistent redaction across document sets, and failing to redact embedded images or form fields.",
-      "PDFcensor supports batch processing — upload multiple PDFs and process them all with consistent redaction rules. This is essential for eDiscovery workflows where hundreds or thousands of documents need uniform treatment.",
+      "OfflineRedact supports batch processing — upload multiple PDFs and process them all with consistent redaction rules. This is essential for eDiscovery workflows where hundreds or thousands of documents need uniform treatment.",
       "Best practices: (1) Define redaction categories upfront, (2) Use automated detection to ensure consistency, (3) Always verify with a second reviewer, (4) Maintain a redaction log, (5) Clean metadata from all produced documents.",
     ],
   },
@@ -29,7 +29,7 @@ const blogContent: Record<string, { title: string; content: string[] }> = {
       "The General Data Protection Regulation (GDPR) requires organizations to protect personal data of EU residents. PDF documents often contain personal data that must be properly handled — whether for data subject access requests, data sharing agreements, or document retention policies.",
       "Under GDPR, personal data includes any information relating to an identified or identifiable person: names, email addresses, phone numbers, IP addresses, financial information, and more. PDF documents frequently contain multiple categories of personal data.",
       "When responding to data subject access requests (DSARs), organizations may need to provide copies of documents while redacting third-party personal data. This requires careful identification and permanent removal of other individuals' data.",
-      "PDFcensor's multi-regulation support includes a GDPR profile that automatically detects common European personal data patterns: names, email addresses, phone numbers, IBAN numbers, and postal addresses. The tool supports all EU languages.",
+      "OfflineRedact's multi-regulation support includes a GDPR profile that automatically detects common European personal data patterns: names, email addresses, phone numbers, IBAN numbers, and postal addresses. The tool supports all EU languages.",
       "Key GDPR considerations for PDF redaction: (1) Ensure redaction is irreversible — text must be permanently removed, (2) Clean document metadata that may contain personal data, (3) Maintain records of redaction activities, (4) Apply the principle of data minimization.",
     ],
   },
@@ -79,7 +79,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
 
       <div className="mt-12 p-6 bg-accent/5 border border-accent/20 rounded-xl text-center">
         <h3 className="text-lg font-semibold mb-2">
-          Ready to try PDFcensor?
+          Ready to try OfflineRedact?
         </h3>
         <p className="text-sm text-muted-foreground mb-4">
           Start redacting sensitive data from your PDFs — free, no signup required.

@@ -15,10 +15,10 @@ export function getWebApplicationSchema(locale: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "PDFcensor",
+    name: "OfflineRedact",
     description:
       "Permanently redact personal data from PDF documents. 100% client-side processing.",
-    url: `https://pdfcensor.com/${locale}`,
+    url: `https://offlineredact.com/${locale}`,
     applicationCategory: "SecurityApplication",
     operatingSystem: "Any",
     offers: {
@@ -35,10 +35,10 @@ export function getWebApplicationSchema(locale: string) {
       "Metadata cleaning",
       "Batch processing",
     ],
-    screenshot: "https://pdfcensor.com/og-image.png",
+    screenshot: "https://offlineredact.com/og-image.png",
     softwareHelp: {
       "@type": "CreativeWork",
-      url: `https://pdfcensor.com/${locale}/blog`,
+      url: `https://offlineredact.com/${locale}/blog`,
     },
   };
 }
@@ -47,9 +47,9 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "PDFcensor",
-    url: "https://pdfcensor.com",
-    logo: "https://pdfcensor.com/favicon.ico",
+    name: "OfflineRedact",
+    url: "https://offlineredact.com",
+    logo: "https://offlineredact.com/favicon.ico",
     sameAs: [],
   };
 }

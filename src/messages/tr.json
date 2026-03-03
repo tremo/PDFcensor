@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — PDF Belgelerinden Otomatik Kişisel Veri Sansürleme",
+    "title": "OfflineRedact — PDF Belgelerinden Otomatik Kişisel Veri Sansürleme",
     "description": "PDF dosyalarından kişisel verileri kalıcı olarak silin. KVKK, GDPR, HIPAA uyumlu. %100 tarayıcı tarafında — dosyalarınız asla cihazınızdan çıkmaz."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "Hukuk büroları, sağlık kuruluşları ve devlet kurumları tarafından tercih ediliyor"
   },
   "features": {
-    "title": "Neden PDFcensor?",
+    "title": "Neden OfflineRedact?",
     "subtitle": "Tamamen tarayıcınızda çalışan kurumsal düzeyde PDF sansürleme",
     "trueRedaction": {
       "title": "Gerçek Sansürleme",

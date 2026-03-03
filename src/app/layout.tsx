@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PDFcensor",
+  title: "OfflineRedact",
   description: "Permanently redact PII from PDF documents — 100% client-side",
 };
 
