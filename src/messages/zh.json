@@ -115,6 +115,7 @@
   "redact": {
     "title": "文档脱敏工具",
     "titleDocx": "Word文档脱敏工具",
+    "titleBatch": "批量文档脱敏",
     "dropzone": {
       "title": "将文件拖放到此处",
       "subtitle": "或点击浏览您的文件",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "待处理",
       "confirmed": "已确认"
+    },
+    "batch": {
+      "scanComplete": "扫描完成",
+      "totalFindings": "发现{count}项关键数据",
+      "acrossFiles": "在{count}个文档中",
+      "downloadAllZip": "全部脱敏并下载ZIP",
+      "redactingAll": "正在脱敏所有文件...",
+      "downloaded": "已下载！",
+      "processingFile": "正在处理第{current}个文件，共{total}个...",
+      "fileBreakdown": "文件详情",
+      "pages": "页",
+      "findingsInFile": "检测到{count}项",
+      "noFindings": "未发现敏感数据 — 安全！",
+      "review": "查看",
+      "totalFiles": "{count}个文件",
+      "filesWithFindings": "{count}个有发现",
+      "filesWithErrors": "{count}个错误",
+      "processing": "正在扫描您的文档...",
+      "backToSummary": "返回概览"
     },
     "piiTypes": {
       "ssn": "身份证号",

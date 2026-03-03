@@ -115,6 +115,7 @@
   "redact": {
     "title": "Dokument-Schwärzungstool",
     "titleDocx": "Word-Dokument Schwärzungstool",
+    "titleBatch": "Stapelverarbeitung von Dokumenten",
     "dropzone": {
       "title": "Dateien hier ablegen",
       "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
@@ -160,6 +161,25 @@
     "docx": {
       "pending": "Ausstehend",
       "confirmed": "Bestätigt"
+    },
+    "batch": {
+      "scanComplete": "Scan abgeschlossen",
+      "totalFindings": "{count} kritische Daten gefunden",
+      "acrossFiles": "in {count} Dokumenten",
+      "downloadAllZip": "Alle schwärzen & ZIP herunterladen",
+      "redactingAll": "Alle Dateien werden geschwärzt...",
+      "downloaded": "Heruntergeladen!",
+      "processingFile": "Datei {current} von {total} wird verarbeitet...",
+      "fileBreakdown": "Dateiübersicht",
+      "pages": "Seiten",
+      "findingsInFile": "{count} Elemente erkannt",
+      "noFindings": "Keine sensiblen Daten gefunden — sauber!",
+      "review": "Überprüfen",
+      "totalFiles": "{count} Dateien",
+      "filesWithFindings": "{count} mit Funden",
+      "filesWithErrors": "{count} Fehler",
+      "processing": "Ihre Dokumente werden gescannt...",
+      "backToSummary": "Zurück zur Übersicht"
     },
     "piiTypes": {
       "ssn": "Sozialversicherungsnummer",
