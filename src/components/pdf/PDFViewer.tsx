@@ -30,13 +30,26 @@ export function PDFViewer({
   const [drawStart, setDrawStart] = useState<{ x: number; y: number } | null>(null);
   const [drawCurrent, setDrawCurrent] = useState<{ x: number; y: number } | null>(null);
 
-  // Render the page
+  // Render the page (cancel any in-flight render when deps change)
   useEffect(() => {
     if (!arrayBuffer || !canvasRef.current) return;
 
-    renderPageToCanvas(arrayBuffer, currentPage, canvasRef.current, scale).then(
-      (dims) => setDimensions(dims)
-    );
+    const abortController = new AbortController();
+
+    renderPageToCanvas(arrayBuffer, currentPage, canvasRef.current, scale, abortController.signal)
+      .then((dims) => setDimensions(dims))
+      .catch((err) => {
+        // Ignore expected cancellation errors
+        if (
+          err?.name === "RenderingCancelledException" ||
+          err?.name === "AbortError"
+        ) return;
+        console.error("PDF render error:", err);
+      });
+
+    return () => {
+      abortController.abort();
+    };
   }, [arrayBuffer, currentPage, scale]);
 
   const pageRedactions = redactions.filter(
