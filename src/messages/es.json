@@ -102,6 +102,8 @@
       "itin": "ITIN",
       "email": "Correo electrónico",
       "phone": "Número de teléfono",
+      "trPhone": "Número de teléfono turco",
+      "usPhone": "Número de teléfono de EE.UU.",
       "iban": "IBAN",
       "creditCard": "Tarjeta de crédito",
       "passport": "Número de pasaporte",

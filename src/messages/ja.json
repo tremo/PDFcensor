@@ -102,6 +102,8 @@
       "itin": "ITIN",
       "email": "メールアドレス",
       "phone": "電話番号",
+      "trPhone": "トルコの電話番号",
+      "usPhone": "米国の電話番号",
       "iban": "IBAN",
       "creditCard": "クレジットカード",
       "passport": "パスポート番号",
