@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — PDF文書の個人情報自動墨消し",
+    "description": "PDFから個人データを完全に削除。HIPAA、GDPR、KVKK準拠。100%クライアントサイド処理 — ファイルがブラウザから外に出ることはありません。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "redact": "PDF墨消し",
+    "pricing": "料金",
+    "blog": "ブログ"
+  },
+  "hero": {
+    "badge": "100%クライアントサイド — ファイルがブラウザから外に出ることはありません",
+    "title": "PDF文書から個人情報を完全に墨消し",
+    "subtitle": "マイナンバー、氏名、メールアドレス、電話番号、IBANなどの個人データを自動検出し、PDFファイルから完全に削除します。HIPAA、GDPR、KVKK準拠。",
+    "cta": "無料で墨消しを開始",
+    "ctaSecondary": "料金を見る",
+    "trustedBy": "法律事務所、医療機関、政府機関に信頼されています"
+  },
+  "features": {
+    "title": "なぜPDFcensor？",
+    "subtitle": "ブラウザ上で完全に動作するエンタープライズグレードのPDF墨消し",
+    "trueRedaction": {
+      "title": "本物の墨消し",
+      "description": "単純な黒塗りとは異なり、PDFから実際のテキストデータを削除します。墨消しされた内容は選択、コピー、復元ができません。"
+    },
+    "clientSide": {
+      "title": "100%クライアントサイド",
+      "description": "ファイルがデバイスから外に出ることはありません。すべての処理はブラウザ内で行われます — アップロードなし、サーバーなし、データ漏洩なし。"
+    },
+    "autoDetect": {
+      "title": "個人情報の自動検出",
+      "description": "マイナンバー、氏名、メールアドレス、電話番号、IBAN、クレジットカード番号などを、検証機能付きのスマートパターンマッチングで自動検出します。"
+    },
+    "regulations": {
+      "title": "複数規制への対応",
+      "description": "HIPAA、GDPR、KVKK、CCPA、LGPDなどのプロファイルを内蔵。お客様の所在地に基づいて適切なプロファイルを自動選択します。"
+    },
+    "batch": {
+      "title": "一括処理",
+      "description": "複数のPDFを一度にアップロード。すべてを順次処理し、単一のZIPファイルとしてダウンロードできます。"
+    },
+    "metadata": {
+      "title": "メタデータの削除",
+      "description": "著者、タイトル、作成日、ソフトウェア情報など、機密情報を明かす可能性のある隠れたメタデータを削除します。"
+    }
+  },
+  "howItWorks": {
+    "title": "使い方",
+    "subtitle": "3つの簡単なステップで機密情報を完全に墨消し",
+    "step1": {
+      "title": "アップロード",
+      "description": "PDFファイルをドラッグ＆ドロップするか、クリックして選択します。複数ファイルに対応。"
+    },
+    "step2": {
+      "title": "確認",
+      "description": "自動検出された個人情報がハイライトされます。適用前に墨消しの追加、削除、調整が可能です。"
+    },
+    "step3": {
+      "title": "ダウンロード",
+      "description": "完全に墨消しされたPDFをダウンロード。元のテキストは復元不可能な状態で削除されます。"
+    }
+  },
+  "cta": {
+    "title": "機密データを保護する準備はできましたか？",
+    "subtitle": "無料でPDFの墨消しを開始 — 登録不要。",
+    "button": "今すぐ墨消しを開始"
+  },
+  "footer": {
+    "product": "製品",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "rights": "All rights reserved.",
+    "tagline": "PDFの完全な墨消し — 100%ブラウザ内で処理。"
+  },
+  "redact": {
+    "title": "PDF墨消しツール",
+    "dropzone": {
+      "title": "PDFファイルをここにドロップ",
+      "subtitle": "またはクリックしてファイルを選択",
+      "hint": "50MBまでのPDFファイルに対応。ファイルがブラウザから外に出ることはありません。",
+      "processing": "処理中..."
+    },
+    "controls": {
+      "regulation": "規制プロファイル",
+      "piiTypes": "検出する個人情報の種類",
+      "scan": "個人情報をスキャン",
+      "scanning": "スキャン中...",
+      "redact": "墨消しを適用",
+      "redacting": "墨消し中...",
+      "download": "墨消し済みPDFをダウンロード",
+      "downloadAll": "すべてダウンロード（ZIP）",
+      "reset": "やり直す",
+      "found": "{count}件の個人情報が見つかりました",
+      "noResults": "この文書で個人情報は検出されませんでした。",
+      "page": "ページ {current} / {total}"
+    },
+    "piiTypes": {
+      "ssn": "マイナンバー",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "iban": "IBAN",
+      "creditCard": "クレジットカード",
+      "passport": "パスポート番号",
+      "names": "人名",
+      "address": "住所"
+    }
+  },
+  "pricing": {
+    "title": "シンプルで透明な料金体系",
+    "subtitle": "無料で開始、必要に応じてアップグレード",
+    "free": {
+      "title": "無料",
+      "price": "¥0",
+      "period": "永久無料",
+      "description": "たまに使う方に最適",
+      "features": [
+        "無制限のPDF墨消し",
+        "すべての個人情報検出パターン",
+        "すべての規制プロファイル",
+        "メタデータの削除",
+        "出力に小さな透かしが入ります"
+      ],
+      "cta": "無料で始める"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "¥4,500",
+      "period": "買い切り",
+      "description": "クリーンな出力が必要なプロフェッショナル向け",
+      "features": [
+        "無料プランのすべての機能",
+        "透かしなし",
+        "一括処理（ZIPダウンロード）",
+        "優先サポート",
+        "永久ライセンス"
+      ],
+      "cta": "Proライセンスを取得"
+    }
+  }
+}

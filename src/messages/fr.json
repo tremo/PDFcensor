@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — Caviardage automatique des données personnelles dans les PDF",
+    "description": "Supprimez définitivement les données personnelles des PDF. Conforme au RGPD, HIPAA. 100% côté client — vos fichiers ne quittent jamais votre navigateur."
+  },
+  "nav": {
+    "home": "Accueil",
+    "redact": "Caviarder un PDF",
+    "pricing": "Tarifs",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% Côté client — Vos fichiers ne quittent jamais votre navigateur",
+    "title": "Caviardez définitivement les données personnelles des PDF",
+    "subtitle": "Détectez et supprimez automatiquement les données personnelles — SSN, noms, e-mails, numéros de téléphone, IBAN — de vos fichiers PDF. Conforme au RGPD, HIPAA et KVKK.",
+    "cta": "Commencer gratuitement",
+    "ctaSecondary": "Voir les tarifs",
+    "trustedBy": "Utilisé par des cabinets d'avocats, des établissements de santé et des organismes gouvernementaux"
+  },
+  "features": {
+    "title": "Pourquoi PDFcensor ?",
+    "subtitle": "Caviardage PDF de niveau entreprise qui fonctionne entièrement dans votre navigateur",
+    "trueRedaction": {
+      "title": "Vrai caviardage",
+      "description": "Contrairement aux simples boîtes noires, nous supprimons les données textuelles réelles du PDF. Le contenu caviardé ne peut être sélectionné, copié ou récupéré."
+    },
+    "clientSide": {
+      "title": "100% Côté client",
+      "description": "Vos fichiers ne quittent jamais votre appareil. Tout le traitement se fait dans votre navigateur — pas de téléchargement, pas de serveur, pas de fuite de données."
+    },
+    "autoDetect": {
+      "title": "Détection automatique",
+      "description": "Trouve automatiquement les SSN, noms, e-mails, numéros de téléphone, IBAN, cartes de crédit et plus grâce à la correspondance intelligente de motifs avec validation."
+    },
+    "regulations": {
+      "title": "Multi-réglementations",
+      "description": "Profils intégrés pour RGPD, HIPAA, KVKK, CCPA, LGPD et plus. Sélectionne automatiquement le bon profil selon votre localisation."
+    },
+    "batch": {
+      "title": "Traitement par lots",
+      "description": "Téléchargez plusieurs PDF à la fois. Traitez-les tous séquentiellement et téléchargez-les en un seul fichier ZIP."
+    },
+    "metadata": {
+      "title": "Nettoyage des métadonnées",
+      "description": "Supprime les métadonnées cachées — auteur, titre, date de création, infos logiciel — qui pourraient révéler des informations sensibles."
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Trois étapes simples pour caviarder définitivement les informations sensibles",
+    "step1": {
+      "title": "Télécharger",
+      "description": "Glissez-déposez vos fichiers PDF ou cliquez pour parcourir. Prend en charge plusieurs fichiers."
+    },
+    "step2": {
+      "title": "Vérifier",
+      "description": "Les données personnelles détectées automatiquement sont mises en évidence. Ajoutez, supprimez ou ajustez les caviardages."
+    },
+    "step3": {
+      "title": "Télécharger",
+      "description": "Téléchargez votre PDF définitivement caviardé. Le texte original est irrévocablement supprimé."
+    }
+  },
+  "cta": {
+    "title": "Prêt à protéger les données sensibles ?",
+    "subtitle": "Commencez à caviarder des PDF gratuitement — aucune inscription requise.",
+    "button": "Commencer maintenant"
+  },
+  "footer": {
+    "product": "Produit",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "rights": "Tous droits réservés.",
+    "tagline": "Caviardage PDF permanent — 100% dans votre navigateur."
+  },
+  "redact": {
+    "title": "Outil de caviardage PDF",
+    "dropzone": {
+      "title": "Déposez les fichiers PDF ici",
+      "subtitle": "ou cliquez pour parcourir vos fichiers",
+      "hint": "Prend en charge les fichiers PDF jusqu'à 50 Mo. Vos fichiers ne quittent jamais votre navigateur.",
+      "processing": "Traitement en cours..."
+    },
+    "controls": {
+      "regulation": "Profil réglementaire",
+      "piiTypes": "Types de données à détecter",
+      "scan": "Scanner les données",
+      "scanning": "Analyse en cours...",
+      "redact": "Appliquer le caviardage",
+      "redacting": "Caviardage en cours...",
+      "download": "Télécharger le PDF caviardé",
+      "downloadAll": "Tout télécharger (ZIP)",
+      "reset": "Recommencer",
+      "found": "{count} éléments détectés",
+      "noResults": "Aucune donnée personnelle détectée dans ce document.",
+      "page": "Page {current} sur {total}"
+    },
+    "piiTypes": {
+      "ssn": "Numéro de sécurité sociale",
+      "tcKimlik": "N° TC Kimlik",
+      "itin": "ITIN",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "iban": "IBAN",
+      "creditCard": "Carte de crédit",
+      "passport": "Numéro de passeport",
+      "names": "Noms de personnes",
+      "address": "Adresses"
+    }
+  },
+  "pricing": {
+    "title": "Des tarifs simples et transparents",
+    "subtitle": "Commencez gratuitement, mettez à niveau quand vous en avez besoin",
+    "free": {
+      "title": "Gratuit",
+      "price": "0€",
+      "period": "pour toujours",
+      "description": "Parfait pour une utilisation occasionnelle",
+      "features": [
+        "Caviardage PDF illimité",
+        "Tous les motifs de détection",
+        "Tous les profils réglementaires",
+        "Nettoyage des métadonnées",
+        "Petit filigrane sur la sortie"
+      ],
+      "cta": "Commencer gratuitement"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "27€",
+      "period": "paiement unique",
+      "description": "Pour les professionnels qui ont besoin d'une sortie propre",
+      "features": [
+        "Tout dans Gratuit",
+        "Pas de filigrane",
+        "Traitement par lots (téléchargement ZIP)",
+        "Support prioritaire",
+        "Licence à vie"
+      ],
+      "cta": "Obtenir la licence Pro"
+    }
+  }
+}

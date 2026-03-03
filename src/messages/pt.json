@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — Redação Automática de Dados Pessoais em Documentos PDF",
+    "description": "Remova permanentemente dados pessoais de PDFs. Em conformidade com HIPAA, GDPR e KVKK. 100% no navegador — seus arquivos nunca saem do seu dispositivo."
+  },
+  "nav": {
+    "home": "Início",
+    "redact": "Redatar PDF",
+    "pricing": "Preços",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% no Navegador — Seus arquivos nunca saem do seu dispositivo",
+    "title": "Redação Permanente de Dados Pessoais em Documentos PDF",
+    "subtitle": "Detecte e remova automaticamente dados pessoais — CPF, nomes, e-mails, telefones, IBAN — dos seus arquivos PDF. Em conformidade com HIPAA, GDPR e KVKK.",
+    "cta": "Comece a Redatar — Grátis",
+    "ctaSecondary": "Ver Preços",
+    "trustedBy": "Utilizado por escritórios de advocacia, profissionais de saúde e órgãos governamentais"
+  },
+  "features": {
+    "title": "Por que o PDFcensor?",
+    "subtitle": "Redação de PDF de nível empresarial que funciona inteiramente no seu navegador",
+    "trueRedaction": {
+      "title": "Redação Verdadeira",
+      "description": "Diferente de simples caixas pretas, nós removemos os dados de texto reais do PDF. O conteúdo redatado não pode ser selecionado, copiado ou recuperado."
+    },
+    "clientSide": {
+      "title": "100% no Navegador",
+      "description": "Seus arquivos nunca saem do seu dispositivo. Todo o processamento acontece no seu navegador — sem uploads, sem servidores, sem vazamento de dados."
+    },
+    "autoDetect": {
+      "title": "Detecção Automática de Dados Pessoais",
+      "description": "Encontra automaticamente CPF, nomes, e-mails, telefones, IBAN, cartões de crédito e mais usando correspondência inteligente de padrões com validação."
+    },
+    "regulations": {
+      "title": "Suporte a Múltiplas Regulamentações",
+      "description": "Perfis integrados para HIPAA, GDPR, KVKK, CCPA, LGPD e mais. Seleciona automaticamente o perfil correto com base na sua localização."
+    },
+    "batch": {
+      "title": "Processamento em Lote",
+      "description": "Envie múltiplos PDFs de uma vez. Processe todos sequencialmente e baixe como um único arquivo ZIP."
+    },
+    "metadata": {
+      "title": "Limpeza de Metadados",
+      "description": "Remove metadados ocultos — autor, título, data de criação, informações de software — que podem revelar informações sensíveis."
+    }
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Três passos simples para redatar permanentemente informações sensíveis",
+    "step1": {
+      "title": "Enviar",
+      "description": "Arraste e solte seus arquivos PDF ou clique para navegar. Suporta múltiplos arquivos."
+    },
+    "step2": {
+      "title": "Revisar",
+      "description": "Os dados pessoais detectados automaticamente são destacados. Adicione, remova ou ajuste as redações antes de aplicar."
+    },
+    "step3": {
+      "title": "Baixar",
+      "description": "Baixe seu PDF permanentemente redatado. O texto original é removido de forma irrecuperável."
+    }
+  },
+  "cta": {
+    "title": "Pronto para Proteger Dados Sensíveis?",
+    "subtitle": "Comece a redatar PDFs gratuitamente — sem necessidade de cadastro.",
+    "button": "Comece a Redatar Agora"
+  },
+  "footer": {
+    "product": "Produto",
+    "legal": "Jurídico",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "rights": "Todos os direitos reservados.",
+    "tagline": "Redação permanente de PDF — 100% no seu navegador."
+  },
+  "redact": {
+    "title": "Ferramenta de Redação de PDF",
+    "dropzone": {
+      "title": "Solte os arquivos PDF aqui",
+      "subtitle": "ou clique para navegar nos seus arquivos",
+      "hint": "Suporta arquivos PDF de até 50MB. Seus arquivos nunca saem do seu navegador.",
+      "processing": "Processando..."
+    },
+    "controls": {
+      "regulation": "Perfil de Regulamentação",
+      "piiTypes": "Tipos de Dados Pessoais a Detectar",
+      "scan": "Buscar Dados Pessoais",
+      "scanning": "Buscando...",
+      "redact": "Aplicar Redação",
+      "redacting": "Redatando...",
+      "download": "Baixar PDF Redatado",
+      "downloadAll": "Baixar Todos (ZIP)",
+      "reset": "Recomeçar",
+      "found": "{count} itens de dados pessoais encontrados",
+      "noResults": "Nenhum dado pessoal detectado neste documento.",
+      "page": "Página {current} de {total}"
+    },
+    "piiTypes": {
+      "ssn": "CPF",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "Endereço de E-mail",
+      "phone": "Número de Telefone",
+      "iban": "IBAN",
+      "creditCard": "Cartão de Crédito",
+      "passport": "Número de Passaporte",
+      "names": "Nomes de Pessoas",
+      "address": "Endereços"
+    }
+  },
+  "pricing": {
+    "title": "Preços Simples e Transparentes",
+    "subtitle": "Comece grátis, faça upgrade quando precisar",
+    "free": {
+      "title": "Grátis",
+      "price": "R$0",
+      "period": "para sempre",
+      "description": "Perfeito para uso ocasional",
+      "features": [
+        "Redação ilimitada de PDF",
+        "Todos os padrões de detecção de dados pessoais",
+        "Todos os perfis de regulamentação",
+        "Limpeza de metadados",
+        "Pequena marca d'água na saída"
+      ],
+      "cta": "Começar Grátis"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "R$149",
+      "period": "pagamento único",
+      "description": "Para profissionais que precisam de saída limpa",
+      "features": [
+        "Tudo do plano Grátis",
+        "Sem marca d'água",
+        "Processamento em lote (download ZIP)",
+        "Suporte prioritário",
+        "Licença vitalícia"
+      ],
+      "cta": "Obter Licença Pro"
+    }
+  }
+}

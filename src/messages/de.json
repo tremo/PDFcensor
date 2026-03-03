@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — Automatische PII-Schwärzung für PDF-Dokumente",
+    "description": "Entfernen Sie personenbezogene Daten dauerhaft aus PDFs. DSGVO-konform. 100% clientseitig — Ihre Dateien verlassen nie Ihren Browser."
+  },
+  "nav": {
+    "home": "Startseite",
+    "redact": "PDF schwärzen",
+    "pricing": "Preise",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% Clientseitig — Ihre Dateien verlassen nie Ihren Browser",
+    "title": "Personenbezogene Daten dauerhaft aus PDF-Dokumenten schwärzen",
+    "subtitle": "Erkennen und entfernen Sie automatisch personenbezogene Daten — SSN, Namen, E-Mails, Telefonnummern, IBAN — aus Ihren PDF-Dateien. DSGVO, HIPAA und KVKK konform.",
+    "cta": "Kostenlos schwärzen",
+    "ctaSecondary": "Preise ansehen",
+    "trustedBy": "Vertraut von Anwaltskanzleien, Gesundheitseinrichtungen und Behörden"
+  },
+  "features": {
+    "title": "Warum PDFcensor?",
+    "subtitle": "PDF-Schwärzung auf Unternehmensniveau, die vollständig in Ihrem Browser läuft",
+    "trueRedaction": {
+      "title": "Echte Schwärzung",
+      "description": "Im Gegensatz zu einfachen schwarzen Kästchen entfernen wir die tatsächlichen Textdaten aus dem PDF. Der geschwärzte Inhalt kann nicht ausgewählt, kopiert oder wiederhergestellt werden."
+    },
+    "clientSide": {
+      "title": "100% Clientseitig",
+      "description": "Ihre Dateien verlassen nie Ihr Gerät. Die gesamte Verarbeitung erfolgt in Ihrem Browser — keine Uploads, keine Server, keine Datenlecks."
+    },
+    "autoDetect": {
+      "title": "Automatische PII-Erkennung",
+      "description": "Findet automatisch SSN, Namen, E-Mails, Telefonnummern, IBAN, Kreditkarten und mehr durch intelligente Mustererkennung mit Validierung."
+    },
+    "regulations": {
+      "title": "Multi-Regulierungs-Unterstützung",
+      "description": "Eingebaute Profile für DSGVO, HIPAA, KVKK, CCPA, LGPD und mehr. Wählt automatisch das richtige Profil basierend auf Ihrem Standort."
+    },
+    "batch": {
+      "title": "Stapelverarbeitung",
+      "description": "Laden Sie mehrere PDFs gleichzeitig hoch. Verarbeiten Sie alle nacheinander und laden Sie sie als einzelne ZIP-Datei herunter."
+    },
+    "metadata": {
+      "title": "Metadaten-Bereinigung",
+      "description": "Entfernt versteckte Metadaten — Autor, Titel, Erstellungsdatum, Software-Informationen — die sensible Informationen preisgeben könnten."
+    }
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Drei einfache Schritte zum dauerhaften Schwärzen sensibler Informationen",
+    "step1": {
+      "title": "Hochladen",
+      "description": "Ziehen Sie Ihre PDF-Dateien per Drag & Drop oder klicken Sie zum Durchsuchen. Unterstützt mehrere Dateien."
+    },
+    "step2": {
+      "title": "Überprüfen",
+      "description": "Automatisch erkannte PII wird hervorgehoben. Fügen Sie Schwärzungen hinzu, entfernen oder passen Sie sie an."
+    },
+    "step3": {
+      "title": "Herunterladen",
+      "description": "Laden Sie Ihr dauerhaft geschwärztes PDF herunter. Der Originaltext ist unwiderruflich entfernt."
+    }
+  },
+  "cta": {
+    "title": "Bereit, sensible Daten zu schützen?",
+    "subtitle": "Beginnen Sie kostenlos mit der PDF-Schwärzung — keine Registrierung erforderlich.",
+    "button": "Jetzt mit dem Schwärzen beginnen"
+  },
+  "footer": {
+    "product": "Produkt",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "rights": "Alle Rechte vorbehalten.",
+    "tagline": "Dauerhafte PDF-Schwärzung — 100% in Ihrem Browser."
+  },
+  "redact": {
+    "title": "PDF-Schwärzungstool",
+    "dropzone": {
+      "title": "PDF-Dateien hier ablegen",
+      "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
+      "hint": "Unterstützt PDF-Dateien bis 50MB. Ihre Dateien verlassen nie Ihren Browser.",
+      "processing": "Verarbeitung..."
+    },
+    "controls": {
+      "regulation": "Regulierungsprofil",
+      "piiTypes": "Zu erkennende PII-Typen",
+      "scan": "Nach PII scannen",
+      "scanning": "Scannen...",
+      "redact": "Schwärzung anwenden",
+      "redacting": "Schwärzen...",
+      "download": "Geschwärztes PDF herunterladen",
+      "downloadAll": "Alle herunterladen (ZIP)",
+      "reset": "Neu beginnen",
+      "found": "{count} PII-Elemente gefunden",
+      "noResults": "Keine PII in diesem Dokument erkannt.",
+      "page": "Seite {current} von {total}"
+    },
+    "piiTypes": {
+      "ssn": "Sozialversicherungsnummer",
+      "tcKimlik": "TC-Kimlik-Nr.",
+      "itin": "ITIN",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "iban": "IBAN",
+      "creditCard": "Kreditkarte",
+      "passport": "Reisepassnummer",
+      "names": "Personennamen",
+      "address": "Adressen"
+    }
+  },
+  "pricing": {
+    "title": "Einfache, transparente Preise",
+    "subtitle": "Starten Sie kostenlos, upgraden Sie bei Bedarf",
+    "free": {
+      "title": "Kostenlos",
+      "price": "€0",
+      "period": "für immer",
+      "description": "Perfekt für gelegentliche Nutzung",
+      "features": [
+        "Unbegrenzte PDF-Schwärzung",
+        "Alle PII-Erkennungsmuster",
+        "Alle Regulierungsprofile",
+        "Metadaten-Bereinigung",
+        "Kleines Wasserzeichen auf der Ausgabe"
+      ],
+      "cta": "Kostenlos starten"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "€27",
+      "period": "Einmalzahlung",
+      "description": "Für Profis, die saubere Ausgabe benötigen",
+      "features": [
+        "Alles in Kostenlos",
+        "Kein Wasserzeichen",
+        "Stapelverarbeitung (ZIP-Download)",
+        "Prioritäts-Support",
+        "Lebenslange Lizenz"
+      ],
+      "cta": "Pro-Lizenz erwerben"
+    }
+  }
+}

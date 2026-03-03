@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — PDF Belgelerinden Otomatik Kişisel Veri Sansürleme",
+    "description": "PDF dosyalarından kişisel verileri kalıcı olarak silin. KVKK, GDPR, HIPAA uyumlu. %100 tarayıcı tarafında — dosyalarınız asla cihazınızdan çıkmaz."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "redact": "PDF Sansürle",
+    "pricing": "Fiyatlandırma",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "%100 Tarayıcı Tarafında — Dosyalarınız asla cihazınızdan çıkmaz",
+    "title": "PDF Belgelerinden Kişisel Verileri Kalıcı Olarak Sansürleyin",
+    "subtitle": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN gibi kişisel verileri otomatik tespit edin ve kalıcı olarak silin. KVKK, GDPR ve HIPAA uyumlu.",
+    "cta": "Ücretsiz Sansürlemeye Başla",
+    "ctaSecondary": "Fiyatları Gör",
+    "trustedBy": "Hukuk büroları, sağlık kuruluşları ve devlet kurumları tarafından tercih ediliyor"
+  },
+  "features": {
+    "title": "Neden PDFcensor?",
+    "subtitle": "Tamamen tarayıcınızda çalışan kurumsal düzeyde PDF sansürleme",
+    "trueRedaction": {
+      "title": "Gerçek Sansürleme",
+      "description": "Basit siyah kutulardan farklı olarak, gerçek metin verisini PDF'den kaldırıyoruz. Sansürlenen içerik seçilemez, kopyalanamaz veya geri getirilemez."
+    },
+    "clientSide": {
+      "title": "%100 Tarayıcı Tarafında",
+      "description": "Dosyalarınız asla cihazınızdan ayrılmaz. Tüm işlemler tarayıcınızda gerçekleşir — yükleme yok, sunucu yok, veri sızıntısı yok."
+    },
+    "autoDetect": {
+      "title": "Otomatik PII Tespiti",
+      "description": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN, kredi kartı ve daha fazlasını doğrulama ile akıllı kalıp eşleştirme kullanarak otomatik bulur."
+    },
+    "regulations": {
+      "title": "Çoklu Regülasyon Desteği",
+      "description": "KVKK, GDPR, HIPAA, CCPA, LGPD ve daha fazlası için yerleşik profiller. Konumunuza göre doğru profili otomatik seçer."
+    },
+    "batch": {
+      "title": "Toplu İşleme",
+      "description": "Birden fazla PDF'i aynı anda yükleyin. Hepsini sırayla işleyin ve tek bir ZIP dosyası olarak indirin."
+    },
+    "metadata": {
+      "title": "Metadata Temizleme",
+      "description": "Hassas bilgileri açığa çıkarabilecek gizli metadata'yı — yazar, başlık, oluşturma tarihi, yazılım bilgisi — kaldırır."
+    }
+  },
+  "howItWorks": {
+    "title": "Nasıl Çalışır?",
+    "subtitle": "Hassas bilgileri kalıcı olarak sansürlemek için üç basit adım",
+    "step1": {
+      "title": "Yükle",
+      "description": "PDF dosyalarınızı sürükleyip bırakın veya gözatmak için tıklayın. Birden fazla dosya desteklenir."
+    },
+    "step2": {
+      "title": "İncele",
+      "description": "Otomatik tespit edilen kişisel veriler vurgulanır. Uygulamadan önce sansürlemeleri ekleyin, kaldırın veya düzenleyin."
+    },
+    "step3": {
+      "title": "İndir",
+      "description": "Kalıcı olarak sansürlenmiş PDF'inizi indirin. Orijinal metin geri getirilemez şekilde silinmiştir."
+    }
+  },
+  "cta": {
+    "title": "Hassas Verileri Korumaya Hazır mısınız?",
+    "subtitle": "PDF sansürlemeye ücretsiz başlayın — kayıt gerekmez.",
+    "button": "Şimdi Sansürlemeye Başla"
+  },
+  "footer": {
+    "product": "Ürün",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "rights": "Tüm hakları saklıdır.",
+    "tagline": "Kalıcı PDF sansürleme — %100 tarayıcınızda."
+  },
+  "redact": {
+    "title": "PDF Sansürleme Aracı",
+    "dropzone": {
+      "title": "PDF dosyalarını buraya bırakın",
+      "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
+      "hint": "50MB'a kadar PDF dosyalarını destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
+      "processing": "İşleniyor..."
+    },
+    "controls": {
+      "regulation": "Regülasyon Profili",
+      "piiTypes": "Tespit Edilecek PII Türleri",
+      "scan": "PII Tara",
+      "scanning": "Taranıyor...",
+      "redact": "Sansürü Uygula",
+      "redacting": "Sansürleniyor...",
+      "download": "Sansürlenmiş PDF'i İndir",
+      "downloadAll": "Tümünü İndir (ZIP)",
+      "reset": "Baştan Başla",
+      "found": "{count} kişisel veri bulundu",
+      "noResults": "Bu belgede kişisel veri tespit edilmedi.",
+      "page": "Sayfa {current} / {total}"
+    },
+    "piiTypes": {
+      "ssn": "Sosyal Güvenlik Numarası",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "iban": "IBAN",
+      "creditCard": "Kredi Kartı",
+      "passport": "Pasaport Numarası",
+      "names": "Kişi Adları",
+      "address": "Adresler"
+    }
+  },
+  "pricing": {
+    "title": "Basit, Şeffaf Fiyatlandırma",
+    "subtitle": "Ücretsiz başlayın, ihtiyacınız olduğunda yükseltin",
+    "free": {
+      "title": "Ücretsiz",
+      "price": "₺0",
+      "period": "sonsuza kadar",
+      "description": "Ara sıra kullanım için ideal",
+      "features": [
+        "Sınırsız PDF sansürleme",
+        "Tüm PII tespit kalıpları",
+        "Tüm regülasyon profilleri",
+        "Metadata temizleme",
+        "Çıktıda küçük filigran"
+      ],
+      "cta": "Ücretsiz Başla"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "₺899",
+      "period": "tek seferlik ödeme",
+      "description": "Temiz çıktıya ihtiyaç duyan profesyoneller için",
+      "features": [
+        "Ücretsiz'deki her şey",
+        "Filigran yok",
+        "Toplu işleme (ZIP indirme)",
+        "Öncelikli destek",
+        "Ömür boyu lisans"
+      ],
+      "cta": "Pro Lisansı Al"
+    }
+  }
+}

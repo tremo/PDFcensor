@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — Automatic PII Redaction for PDF Documents",
+    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+  },
+  "nav": {
+    "home": "Home",
+    "redact": "Redact PDF",
+    "pricing": "Pricing",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% Client-Side — Your files never leave your browser",
+    "title": "Permanently Redact PII from PDF Documents",
+    "subtitle": "Automatically detect and permanently remove personal data — SSN, names, emails, phone numbers, IBAN — from your PDF files. HIPAA, GDPR, and KVKK compliant.",
+    "cta": "Start Redacting — Free",
+    "ctaSecondary": "See Pricing",
+    "trustedBy": "Trusted by legal firms, healthcare providers, and government agencies"
+  },
+  "features": {
+    "title": "Why PDFcensor?",
+    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "trueRedaction": {
+      "title": "True Redaction",
+      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+    },
+    "clientSide": {
+      "title": "100% Client-Side",
+      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+    },
+    "autoDetect": {
+      "title": "Auto-Detect PII",
+      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using smart pattern matching with validation."
+    },
+    "regulations": {
+      "title": "Multi-Regulation Support",
+      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+    },
+    "batch": {
+      "title": "Batch Processing",
+      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+    },
+    "metadata": {
+      "title": "Metadata Cleaning",
+      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "step1": {
+      "title": "Upload",
+      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+    },
+    "step2": {
+      "title": "Review",
+      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+    },
+    "step3": {
+      "title": "Download",
+      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+    }
+  },
+  "cta": {
+    "title": "Ready to Protect Sensitive Data?",
+    "subtitle": "Start redacting PDFs for free — no signup required.",
+    "button": "Start Redacting Now"
+  },
+  "footer": {
+    "product": "Product",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved.",
+    "tagline": "Permanent PDF redaction — 100% in your browser."
+  },
+  "redact": {
+    "title": "PDF Redaction Tool",
+    "dropzone": {
+      "title": "Drop PDF files here",
+      "subtitle": "or click to browse your files",
+      "hint": "Supports PDF files up to 50MB. Your files never leave your browser.",
+      "processing": "Processing..."
+    },
+    "controls": {
+      "regulation": "Regulation Profile",
+      "piiTypes": "PII Types to Detect",
+      "scan": "Scan for PII",
+      "scanning": "Scanning...",
+      "redact": "Apply Redaction",
+      "redacting": "Redacting...",
+      "download": "Download Redacted PDF",
+      "downloadAll": "Download All (ZIP)",
+      "reset": "Start Over",
+      "found": "Found {count} PII items",
+      "noResults": "No PII detected in this document.",
+      "page": "Page {current} of {total}"
+    },
+    "piiTypes": {
+      "ssn": "Social Security Number",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "iban": "IBAN",
+      "creditCard": "Credit Card",
+      "passport": "Passport Number",
+      "names": "Person Names",
+      "address": "Addresses"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, upgrade when you need it",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Perfect for occasional use",
+      "features": [
+        "Unlimited PDF redaction",
+        "All PII detection patterns",
+        "All regulation profiles",
+        "Metadata cleaning",
+        "Small watermark on output"
+      ],
+      "cta": "Start Free"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$29",
+      "period": "one-time payment",
+      "description": "For professionals who need clean output",
+      "features": [
+        "Everything in Free",
+        "No watermark",
+        "Batch processing (ZIP download)",
+        "Priority support",
+        "Lifetime license"
+      ],
+      "cta": "Get Pro License"
+    }
+  }
+}

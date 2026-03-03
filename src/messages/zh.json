@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "PDFcensor — PDF文档个人信息自动脱敏",
+    "description": "从PDF中永久删除个人数据。符合HIPAA、GDPR、KVKK规范。100%客户端处理 — 文件从不离开您的浏览器。"
+  },
+  "nav": {
+    "home": "首页",
+    "redact": "PDF脱敏",
+    "pricing": "定价",
+    "blog": "博客"
+  },
+  "hero": {
+    "badge": "100%客户端处理 — 文件从不离开您的浏览器",
+    "title": "从PDF文档中永久删除个人身份信息",
+    "subtitle": "自动检测并永久删除身份证号、姓名、电子邮件、电话号码、IBAN等个人数据。符合HIPAA、GDPR和KVKK规范。",
+    "cta": "免费开始脱敏",
+    "ctaSecondary": "查看定价",
+    "trustedBy": "受到律师事务所、医疗机构和政府部门的信赖"
+  },
+  "features": {
+    "title": "为什么选择PDFcensor？",
+    "subtitle": "完全在浏览器中运行的企业级PDF脱敏工具",
+    "trueRedaction": {
+      "title": "真正的脱敏",
+      "description": "与简单的黑色遮盖不同，我们从PDF中删除实际的文本数据。脱敏内容无法被选择、复制或恢复。"
+    },
+    "clientSide": {
+      "title": "100%客户端处理",
+      "description": "文件从不离开您的设备。所有处理都在浏览器中进行 — 无需上传、无需服务器、无数据泄露风险。"
+    },
+    "autoDetect": {
+      "title": "自动检测个人信息",
+      "description": "使用带有验证功能的智能模式匹配，自动识别身份证号、姓名、电子邮件、电话号码、IBAN、信用卡号等。"
+    },
+    "regulations": {
+      "title": "多法规支持",
+      "description": "内置HIPAA、GDPR、KVKK、CCPA、LGPD等配置文件。根据您的位置自动选择正确的配置文件。"
+    },
+    "batch": {
+      "title": "批量处理",
+      "description": "一次上传多个PDF。按顺序处理所有文件，并以单个ZIP文件下载。"
+    },
+    "metadata": {
+      "title": "元数据清理",
+      "description": "删除可能泄露敏感信息的隐藏元数据 — 作者、标题、创建日期、软件信息等。"
+    }
+  },
+  "howItWorks": {
+    "title": "使用方法",
+    "subtitle": "三个简单步骤永久删除敏感信息",
+    "step1": {
+      "title": "上传",
+      "description": "拖放您的PDF文件或点击浏览。支持多个文件。"
+    },
+    "step2": {
+      "title": "审核",
+      "description": "自动检测到的个人信息会被高亮显示。在应用之前可以添加、删除或调整脱敏项。"
+    },
+    "step3": {
+      "title": "下载",
+      "description": "下载您永久脱敏后的PDF。原始文本已被不可恢复地删除。"
+    }
+  },
+  "cta": {
+    "title": "准备好保护敏感数据了吗？",
+    "subtitle": "免费开始PDF脱敏 — 无需注册。",
+    "button": "立即开始脱敏"
+  },
+  "footer": {
+    "product": "产品",
+    "legal": "法律信息",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "rights": "All rights reserved.",
+    "tagline": "永久PDF脱敏 — 100%在浏览器中处理。"
+  },
+  "redact": {
+    "title": "PDF脱敏工具",
+    "dropzone": {
+      "title": "将PDF文件拖放到这里",
+      "subtitle": "或点击浏览您的文件",
+      "hint": "支持最大50MB的PDF文件。您的文件从不离开浏览器。",
+      "processing": "处理中..."
+    },
+    "controls": {
+      "regulation": "法规配置",
+      "piiTypes": "要检测的个人信息类型",
+      "scan": "扫描个人信息",
+      "scanning": "扫描中...",
+      "redact": "应用脱敏",
+      "redacting": "脱敏中...",
+      "download": "下载脱敏后的PDF",
+      "downloadAll": "全部下载（ZIP）",
+      "reset": "重新开始",
+      "found": "发现 {count} 条个人信息",
+      "noResults": "未在此文档中检测到个人信息。",
+      "page": "第 {current} 页，共 {total} 页"
+    },
+    "piiTypes": {
+      "ssn": "身份证号",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "电子邮件地址",
+      "phone": "电话号码",
+      "iban": "IBAN",
+      "creditCard": "信用卡",
+      "passport": "护照号码",
+      "names": "人名",
+      "address": "地址"
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "免费开始，按需升级",
+    "free": {
+      "title": "免费版",
+      "price": "¥0",
+      "period": "永久免费",
+      "description": "适合偶尔使用",
+      "features": [
+        "无限PDF脱敏",
+        "所有个人信息检测模式",
+        "所有法规配置文件",
+        "元数据清理",
+        "输出带有小水印"
+      ],
+      "cta": "免费开始"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "¥199",
+      "period": "一次性付款",
+      "description": "适合需要干净输出的专业人士",
+      "features": [
+        "免费版的所有功能",
+        "无水印",
+        "批量处理（ZIP下载）",
+        "优先支持",
+        "终身许可"
+      ],
+      "cta": "获取Pro许可证"
+    }
+  }
+}
