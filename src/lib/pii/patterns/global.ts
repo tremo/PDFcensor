@@ -96,31 +96,176 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
 }
 
 /**
- * Detect addresses (keyword-based)
+ * Address keywords for all EU languages + Turkish + English.
+ *
+ * Full words: unambiguous address terms (sokak, street, straße, rue, etc.)
+ * Abbreviations: shortened forms with periods (sok., str., ul., etc.)
+ *
+ * Built as arrays for maintainability, compiled to regex at module load.
+ */
+/** Keywords that appear as separate words — need leading (?<!\p{L}) */
+const ADDRESS_STANDALONE = [
+  // Turkish
+  "sokak", "cadde", "mahalle", "bulvar",
+  // English
+  "street", "avenue", "boulevard", "road", "drive", "lane", "suite",
+  // French
+  "rue", "allée", "impasse", "chemin",
+  // Spanish
+  "calle", "avenida", "plaza", "paseo", "camino",
+  // Italian
+  "viale", "piazza", "vicolo",
+  // Portuguese
+  "rua", "praça", "travessa",
+  // Dutch
+  "straat", "laan", "gracht", "plein",
+  // Polish
+  "ulica", "aleja", "plac", "osiedle",
+  // Czech/Slovak
+  "náměstí", "třída", "námestie",
+  // Hungarian
+  "utca", "körút", "fasor",
+  // Romanian
+  "strada", "bulevardul", "piața", "aleea", "calea",
+  // Croatian/Slovenian
+  "avenija", "cesta",
+  // Lithuanian
+  "gatvė", "alėja", "aikštė",
+  // Latvian
+  "iela", "bulvāris", "laukums",
+  // Irish
+  "sráid", "bóthar",
+  // Maltese
+  "triq", "pjazza",
+  // Greek
+  "οδός", "λεωφόρος", "πλατεία",
+  // Bulgarian
+  "улица", "булевард", "площад",
+];
+
+/**
+ * Keywords that appear as SUFFIXES in compound words.
+ * These languages glue the street type to the street name:
+ *   German: Friedrich+straße, Schloss+gasse, Alexander+platz
+ *   Swedish: Kungs+gatan, Drottning+vägen, Stor+torget
+ *   Danish: Kongens+gade, Nørre+stræde
+ *   Finnish: Kalevan+katu, Hämeen+polku
+ *   Estonian: Toom+tänav, Pärnu+puiestee
+ * No leading boundary — they legitimately appear mid-word.
+ */
+const ADDRESS_SUFFIX = [
+  // German
+  "straße", "gasse", "platz", "allee",
+  // Swedish
+  "gatan", "vägen", "torget", "stigen",
+  // Danish
+  "gade", "plads", "stræde",
+  // Finnish
+  "katu", "polku", "kuja",
+  // Estonian
+  "tänav", "puiestee",
+];
+
+/** Abbreviation patterns (contain regex special chars like \.) */
+const ADDRESS_ABBR_PATTERNS = [
+  // Turkish
+  "sok\\.", "cad\\.", "mah\\.", "blv\\.",
+  // English
+  "st\\.", "ave\\.", "blvd\\.", "rd\\.", "dr\\.", "ln\\.", "apt\\.?", "ste\\.?",
+  // German
+  "str\\.",
+  // Spanish
+  "avda\\.",
+  // Polish
+  "ul\\.", "al\\.", "os\\.",
+  // Czech/Slovak
+  "nám\\.",
+  // Hungarian
+  "krt\\.",
+  // Romanian
+  "bd\\.",
+  // Bulgarian
+  "ул\\.", "бул\\.", "пл\\.",
+];
+
+function escapeForRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * Build the combined address keyword regex at module load time.
+ *
+ * Structure: (standalone_with_leading_boundary | suffix_without_leading) + trailing_boundary
+ *   Standalone: (?<!\p{L})(?:sokak|rue|ulica|...)  — must be a separate word
+ *   Suffix:     (?:straße|gatan|katu|...)           — can be end of compound word
+ *   Abbr:       (?<!\p{L})(?:sok\.|str\.|ul\.|...)  — must be a separate word
+ *   All share:  (?!\p{L}) trailing boundary
+ */
+const standalonePattern = ADDRESS_STANDALONE.map(escapeForRegex).join("|");
+const suffixPattern = ADDRESS_SUFFIX.map(escapeForRegex).join("|");
+const abbrPattern = ADDRESS_ABBR_PATTERNS.join("|");
+
+const ADDRESS_REGEX = new RegExp(
+  `(?:(?<!\\p{L})(?:${standalonePattern}|${abbrPattern})|(?:${suffixPattern}))(?!\\p{L})`,
+  "giu"
+);
+
+/**
+ * Detect addresses (keyword-based) across all EU languages.
+ *
+ * Supports two keyword modes:
+ * - Standalone: "Rue de la Paix", "Kossuth utca 5" — keyword is a separate word
+ * - Compound suffix: "Friedrichstraße 43", "Kungsgatan 44" — keyword is glued
+ *   to the street name (German, Swedish, Danish, Finnish, Estonian)
+ *
+ * Uses (?<!\p{L}) / (?!\p{L}) Unicode-aware boundaries instead of \b:
+ * - Leading \b failed for keywords starting with non-ASCII chars
+ *   (e.g., Hungarian "körút", Greek "οδός", Czech "náměstí")
+ * - Trailing \b failed after periods (sok., str., ul.)
+ *
+ * Snaps context boundaries to word edges to avoid cutting words in half.
  */
 export function detectAddress(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  // Match lines containing address keywords
-  const keywords =
-    /\b(?:sokak|sok\.|cadde|cad\.|mahalle|mah\.|bulvar|blv\.|street|st\.|avenue|ave\.|boulevard|blvd\.|road|rd\.|drive|dr\.|lane|ln\.|apt\.?|suite|ste\.?)\b/gi;
+  // Reset lastIndex since we reuse the module-level regex
+  ADDRESS_REGEX.lastIndex = 0;
   let match;
 
-  while ((match = keywords.exec(text)) !== null) {
-    // Grab surrounding context (up to 80 chars before and after the keyword)
-    const start = Math.max(0, match.index - 40);
-    const end = Math.min(text.length, match.index + match[0].length + 40);
+  while ((match = ADDRESS_REGEX.exec(text)) !== null) {
+    // Find line boundaries
     const lineStart = text.lastIndexOf("\n", match.index);
     const lineEnd = text.indexOf("\n", match.index);
-    const actualStart = Math.max(start, lineStart + 1);
-    const actualEnd = lineEnd === -1 ? end : Math.min(end, lineEnd);
-    const addressText = text.slice(actualStart, actualEnd).trim();
+    const actualLineStart = lineStart === -1 ? 0 : lineStart + 1;
+    const actualLineEnd = lineEnd === -1 ? text.length : lineEnd;
+
+    // Context window: up to 40 chars before and after keyword, within line
+    let start = Math.max(actualLineStart, match.index - 40);
+    let end = Math.min(actualLineEnd, match.index + match[0].length + 40);
+
+    // Snap start forward to word boundary (don't cut words in half)
+    if (start > actualLineStart && start < text.length && !/\s/.test(text[start])) {
+      const spacePos = text.indexOf(" ", start);
+      if (spacePos !== -1 && spacePos < match.index) {
+        start = spacePos + 1;
+      }
+    }
+
+    // Snap end backward to word boundary
+    if (end < actualLineEnd && end > 0 && /\p{L}/u.test(text[end] || "")) {
+      const spacePos = text.lastIndexOf(" ", end);
+      if (spacePos > match.index + match[0].length) {
+        end = spacePos;
+      }
+    }
+
+    const addressText = text.slice(start, end).trim();
 
     if (addressText.length > 10) {
       matches.push({
         type: "address",
         value: addressText,
-        startIndex: actualStart,
-        endIndex: actualEnd,
+        startIndex: start,
+        endIndex: end,
         pageIndex,
         confidence: 0.7,
       });

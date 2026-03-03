@@ -7,9 +7,9 @@ import type { RegulationType, PIIType, PIIMatch } from "@/types/pii";
 import { parseDocx } from "@/lib/docx/parser";
 import type { DocxDocumentData } from "@/lib/docx/parser";
 import { detectPII } from "@/lib/pii/detector";
-import { loadNameDictionary } from "@/lib/pii/patterns/names";
+import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { redactDocx } from "@/lib/docx/redactor";
-import { getDefaultRegulation, getRegulationPatterns } from "@/lib/pii/regulations";
+import { getDefaultRegulation, getRegulationPatterns, getRegulationLocales } from "@/lib/pii/regulations";
 import type { Locale } from "@/lib/i18n/config";
 
 export interface DocxRedactionItem {
@@ -41,12 +41,13 @@ export function useDocxProcessor() {
   const [error, setError] = useState<string | null>(null);
 
   const scanDocument = useCallback(
-    async (doc: DocxDocumentData, types: PIIType[]) => {
+    async (doc: DocxDocumentData, types: PIIType[], reg: RegulationType) => {
       setStatus("scanning");
       setProgress(0);
 
       try {
-        await loadNameDictionary(locale);
+        const locales = getRegulationLocales(reg, locale);
+        await loadNameDictionaries(locales);
 
         const result = detectPII(doc.fullText, 0, types);
         setProgress(100);
@@ -79,7 +80,7 @@ export function useDocxProcessor() {
 
           const doc = await parseDocx(newFiles[0], setProgress);
           setDocument(doc);
-          await scanDocument(doc, enabledTypes);
+          await scanDocument(doc, enabledTypes, regulation);
         } catch (e) {
           setError(
             e instanceof Error ? e.message : "Failed to parse document"
@@ -88,7 +89,7 @@ export function useDocxProcessor() {
         }
       }
     },
-    [document, enabledTypes, scanDocument]
+    [document, enabledTypes, regulation, scanDocument]
   );
 
   const removeFile = useCallback(
@@ -106,8 +107,8 @@ export function useDocxProcessor() {
 
   const scan = useCallback(async () => {
     if (!document) return;
-    await scanDocument(document, enabledTypes);
-  }, [document, enabledTypes, scanDocument]);
+    await scanDocument(document, enabledTypes, regulation);
+  }, [document, enabledTypes, regulation, scanDocument]);
 
   const applyRedaction = useCallback(async () => {
     if (!document) return;

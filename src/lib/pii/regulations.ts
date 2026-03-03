@@ -94,3 +94,54 @@ export function getDefaultRegulation(locale: Locale): RegulationType {
 export function getRegulationPatterns(regulation: RegulationType): PIIType[] {
   return regulations[regulation]?.patterns || regulations.CUSTOM.patterns;
 }
+
+/**
+ * All 24 official EU language locales.
+ * Used for GDPR to load name dictionaries for every EU member state language.
+ */
+const EU_LOCALES = [
+  "bg", "hr", "cs", "da", "nl", "en", "et", "fi", "fr", "de",
+  "el", "hu", "ga", "it", "lv", "lt", "mt", "pl", "pt", "ro",
+  "sk", "sl", "es", "sv",
+];
+
+/**
+ * Get the locales whose name dictionaries should be loaded for a given
+ * regulation + UI locale combination.
+ *
+ * For GDPR → all 24 EU languages (a French PDF processed in English UI
+ *   still needs French names detected).
+ * For KVKK → Turkish.
+ * For COMPREHENSIVE / CUSTOM → all available (EU + TR + UI locale).
+ * For region-specific (HIPAA, CCPA) → English + Spanish (US demographics).
+ * Always includes the current UI locale as a fallback.
+ */
+export function getRegulationLocales(
+  regulation: RegulationType,
+  uiLocale: string
+): string[] {
+  const unique = (arr: string[]) => [...new Set(arr)];
+
+  switch (regulation) {
+    case "GDPR":
+      return unique([...EU_LOCALES, uiLocale]);
+    case "KVKK":
+      return unique(["tr", uiLocale]);
+    case "HIPAA":
+    case "CCPA":
+      return unique(["en", "es", uiLocale]);
+    case "LGPD":
+      return unique(["pt", uiLocale]);
+    case "PIPA":
+      return unique(["ko", "en", uiLocale]);
+    case "APPI":
+      return unique(["ja", "en", uiLocale]);
+    case "PIPL":
+      return unique(["zh", "en", uiLocale]);
+    case "COMPREHENSIVE":
+    case "CUSTOM":
+      return unique([...EU_LOCALES, "tr", uiLocale]);
+    default:
+      return [uiLocale];
+  }
+}
