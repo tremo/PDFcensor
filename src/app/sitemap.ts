@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n/config";
 
-const baseUrl = "https://pdfcensor.com";
+const baseUrl = "https://offlineredact.com";
 
 const pages = ["", "/redact", "/pricing", "/privacy", "/terms"];
 

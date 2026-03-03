@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://pdfcensor.com/sitemap.xml",
+    sitemap: "https://offlineredact.com/sitemap.xml",
   };
 }

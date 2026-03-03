@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — Redacción automática de datos personales en PDF",
+    "title": "OfflineRedact — Redacción automática de datos personales en PDF",
     "description": "Elimine permanentemente datos personales de PDFs. Compatible con RGPD, HIPAA. 100% del lado del cliente — sus archivos nunca salen de su navegador."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "Utilizado por bufetes de abogados, instituciones de salud y agencias gubernamentales"
   },
   "features": {
-    "title": "¿Por qué PDFcensor?",
+    "title": "¿Por qué OfflineRedact?",
     "subtitle": "Redacción de PDF de nivel empresarial que funciona completamente en su navegador",
     "trueRedaction": {
       "title": "Redacción verdadera",

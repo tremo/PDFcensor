@@ -16,7 +16,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 font-bold text-lg mb-3">
               <Shield className="h-5 w-5 text-accent" />
-              <span>PDFcensor</span>
+              <span>OfflineRedact</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm">
               {t("tagline")}
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} PDFcensor. {t("rights")}
+          &copy; {new Date().getFullYear()} OfflineRedact. {t("rights")}
         </div>
       </div>
     </footer>

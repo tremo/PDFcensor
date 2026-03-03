@@ -32,7 +32,7 @@ function SuccessContent() {
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-muted-foreground text-center">
-            Thank you for purchasing PDFcensor Pro. Your license key is below.
+            Thank you for purchasing OfflineRedact Pro. Your license key is below.
           </p>
 
           {licenseKey && (

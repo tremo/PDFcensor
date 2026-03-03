@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — Caviardage automatique des données personnelles dans les PDF",
+    "title": "OfflineRedact — Caviardage automatique des données personnelles dans les PDF",
     "description": "Supprimez définitivement les données personnelles des PDF. Conforme au RGPD, HIPAA. 100% côté client — vos fichiers ne quittent jamais votre navigateur."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "Utilisé par des cabinets d'avocats, des établissements de santé et des organismes gouvernementaux"
   },
   "features": {
-    "title": "Pourquoi PDFcensor ?",
+    "title": "Pourquoi OfflineRedact ?",
     "subtitle": "Caviardage PDF de niveau entreprise qui fonctionne entièrement dans votre navigateur",
     "trueRedaction": {
       "title": "Vrai caviardage",

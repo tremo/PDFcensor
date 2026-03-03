@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — Automatic PII Redaction for PDF Documents",
+    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
     "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "Trusted by legal firms, healthcare providers, and government agencies"
   },
   "features": {
-    "title": "Why PDFcensor?",
+    "title": "Why OfflineRedact?",
     "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
     "trueRedaction": {
       "title": "True Redaction",

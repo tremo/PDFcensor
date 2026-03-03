@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg">
             <Shield className="h-6 w-6 text-accent" />
-            <span>PDFcensor</span>
+            <span>OfflineRedact</span>
           </Link>
 
           {/* Desktop nav */}

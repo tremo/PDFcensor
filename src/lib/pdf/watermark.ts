@@ -6,7 +6,7 @@ import { PDFDocument, rgb, StandardFonts, degrees } from "pdf-lib";
  */
 export async function addWatermark(
   pdfBytes: Uint8Array,
-  text: string = "PDFcensor Free — pdfcensor.com"
+  text: string = "OfflineRedact Free — offlineredact.com"
 ): Promise<Uint8Array> {
   const pdfDoc = await PDFDocument.load(pdfBytes);
   const font = await pdfDoc.embedFont(StandardFonts.HelveticaOblique);

@@ -7,7 +7,7 @@ export default function PrivacyPage() {
 
         <h2 className="text-xl font-semibold mt-8">1. Introduction</h2>
         <p>
-          PDFcensor (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) is committed to protecting your privacy.
+          OfflineRedact (&ldquo;we&rdquo;, &ldquo;our&rdquo;, &ldquo;us&rdquo;) is committed to protecting your privacy.
           This policy explains how we handle information when you use our PDF redaction tool.
         </p>
 
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         </p>
 
         <h2 className="text-xl font-semibold mt-8">7. Contact</h2>
-        <p>For privacy-related inquiries, contact us at privacy@pdfcensor.com.</p>
+        <p>For privacy-related inquiries, contact us at privacy@offlineredact.com.</p>
       </div>
     </div>
   );

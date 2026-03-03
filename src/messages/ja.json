@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — PDF文書の個人情報自動墨消し",
+    "title": "OfflineRedact — PDF文書の個人情報自動墨消し",
     "description": "PDFから個人データを完全に削除。HIPAA、GDPR、KVKK準拠。100%クライアントサイド処理 — ファイルがブラウザから外に出ることはありません。"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "法律事務所、医療機関、政府機関に信頼されています"
   },
   "features": {
-    "title": "なぜPDFcensor？",
+    "title": "なぜOfflineRedact？",
     "subtitle": "ブラウザ上で完全に動作するエンタープライズグレードのPDF墨消し",
     "trueRedaction": {
       "title": "本物の墨消し",

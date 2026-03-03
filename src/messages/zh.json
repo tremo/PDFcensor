@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — PDF文档个人信息自动脱敏",
+    "title": "OfflineRedact — PDF文档个人信息自动脱敏",
     "description": "从PDF中永久删除个人数据。符合HIPAA、GDPR、KVKK规范。100%客户端处理 — 文件从不离开您的浏览器。"
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "受到律师事务所、医疗机构和政府部门的信赖"
   },
   "features": {
-    "title": "为什么选择PDFcensor？",
+    "title": "为什么选择OfflineRedact？",
     "subtitle": "完全在浏览器中运行的企业级PDF脱敏工具",
     "trueRedaction": {
       "title": "真正的脱敏",

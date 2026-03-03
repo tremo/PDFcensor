@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "PDFcensor — PDF 문서 개인정보 자동 삭제",
+    "title": "OfflineRedact — PDF 문서 개인정보 자동 삭제",
     "description": "PDF에서 개인 데이터를 영구적으로 제거합니다. HIPAA, GDPR, KVKK 준수. 100% 클라이언트 측 처리 — 파일이 브라우저를 벗어나지 않습니다."
   },
   "nav": {
@@ -18,7 +18,7 @@
     "trustedBy": "법률 사무소, 의료 기관 및 정부 기관이 신뢰합니다"
   },
   "features": {
-    "title": "왜 PDFcensor인가?",
+    "title": "왜 OfflineRedact인가?",
     "subtitle": "브라우저에서 완전히 실행되는 엔터프라이즈급 PDF 편집",
     "trueRedaction": {
       "title": "진정한 삭제",

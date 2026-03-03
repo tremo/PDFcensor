@@ -203,8 +203,8 @@ function cleanMetadata(pdfDoc: PDFDocument): void {
   pdfDoc.setAuthor("");
   pdfDoc.setSubject("");
   pdfDoc.setKeywords([]);
-  pdfDoc.setProducer("PDFcensor");
-  pdfDoc.setCreator("PDFcensor");
+  pdfDoc.setProducer("OfflineRedact");
+  pdfDoc.setCreator("OfflineRedact");
 }
 
 function escapeForPDF(text: string): string {

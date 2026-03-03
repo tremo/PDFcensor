@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const LICENSE_KEY = "pdfcensor_license";
+const LICENSE_KEY = "offlineredact_license";
 
 interface LicenseState {
   isPro: boolean;

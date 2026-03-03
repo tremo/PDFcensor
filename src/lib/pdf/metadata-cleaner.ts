@@ -15,8 +15,8 @@ export async function cleanPDFMetadata(
   pdfDoc.setAuthor("");
   pdfDoc.setSubject("");
   pdfDoc.setKeywords([]);
-  pdfDoc.setProducer("PDFcensor");
-  pdfDoc.setCreator("PDFcensor");
+  pdfDoc.setProducer("OfflineRedact");
+  pdfDoc.setCreator("OfflineRedact");
 
   return pdfDoc.save();
 }
