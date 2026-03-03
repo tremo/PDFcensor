@@ -28,12 +28,14 @@ export function detectTCKimlik(text: string, pageIndex: number): PIIMatch[] {
 }
 
 /**
- * Detect Turkish phone numbers
- * Formats: +90 5XX XXX XX XX, 0 5XX XXX XX XX, etc.
+ * Detect Turkish phone numbers (mobile + landline)
+ * Mobile:   +90 5XX XXX XX XX, 05XX XXX XX XX
+ * Landline: +90 2XX XXX XX XX, 0212 XXX XX XX, +90 (312) XXX XX XX
+ * Area codes: 2XX (European), 3XX (Central/Asian), 4XX (various), 5XX (mobile)
  */
 export function detectTRPhone(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  const regex = /(?:\+90|0)\s?[5]\d{2}\s?\d{3}\s?\d{2}\s?\d{2}\b/g;
+  const regex = /(?<!\d)(?:\+90[\s.-]*|0[\s.-]?)\(?[2-5]\d{2}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}(?!\d)/g;
   let match;
 
   while ((match = regex.exec(text)) !== null) {
