@@ -8,12 +8,49 @@ type DemoPhase =
   | "docAppear"
   | "analyzing"
   | "piiReveal"
+  | "confirmName"
   | "confirmSSN"
+  | "confirmAddress"
   | "confirmRouting"
   | "confirmAccount"
   | "preview"
   | "success"
   | "reset";
+
+function CheckIcon({ size = 10 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
+
+function XIcon({ size = 9 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
 
 export default function LandingDemo() {
   const [phase, setPhase] = useState<DemoPhase>("idle");
@@ -23,12 +60,14 @@ export default function LandingDemo() {
       { phase: "fileDrop", delay: 2000 },
       { phase: "docAppear", delay: 1200 },
       { phase: "analyzing", delay: 2200 },
-      { phase: "piiReveal", delay: 1800 },
-      { phase: "confirmSSN", delay: 1200 },
-      { phase: "confirmRouting", delay: 800 },
-      { phase: "confirmAccount", delay: 800 },
+      { phase: "piiReveal", delay: 1500 },
+      { phase: "confirmName", delay: 800 },
+      { phase: "confirmSSN", delay: 800 },
+      { phase: "confirmAddress", delay: 800 },
+      { phase: "confirmRouting", delay: 700 },
+      { phase: "confirmAccount", delay: 700 },
       { phase: "preview", delay: 1500 },
-      { phase: "success", delay: 3000 },
+      { phase: "success", delay: 5000 },
       { phase: "reset", delay: 800 },
       { phase: "idle", delay: 1000 },
     ];
@@ -53,7 +92,7 @@ export default function LandingDemo() {
     const interval = setInterval(() => {
       cleanup();
       cleanup = runDemo();
-    }, 17000);
+    }, 19000);
     return () => {
       cleanup();
       clearInterval(interval);
@@ -64,12 +103,27 @@ export default function LandingDemo() {
   const showAnalyzing = phase === "analyzing";
   const showPII =
     phase === "piiReveal" ||
+    phase === "confirmName" ||
     phase === "confirmSSN" ||
+    phase === "confirmAddress" ||
+    phase === "confirmRouting" ||
+    phase === "confirmAccount" ||
+    phase === "preview";
+  const nameConfirmed =
+    phase === "confirmName" ||
+    phase === "confirmSSN" ||
+    phase === "confirmAddress" ||
     phase === "confirmRouting" ||
     phase === "confirmAccount" ||
     phase === "preview";
   const ssnConfirmed =
     phase === "confirmSSN" ||
+    phase === "confirmAddress" ||
+    phase === "confirmRouting" ||
+    phase === "confirmAccount" ||
+    phase === "preview";
+  const addressConfirmed =
+    phase === "confirmAddress" ||
     phase === "confirmRouting" ||
     phase === "confirmAccount" ||
     phase === "preview";
@@ -105,13 +159,16 @@ export default function LandingDemo() {
                   <rect x="12" y="26" width="17" height="5" rx="1.5" fill="white" />
                 </svg>
                 <div className="demo-logo-text">
-                  Safe<span>Redact</span>
+                  Offline<span>Redact</span>
                 </div>
               </div>
               <div className="demo-header-right">
-                <span className="demo-plan-badge">Pro</span>
-                <span className="demo-usage">47 docs left</span>
-                <div className="demo-avatar">P</div>
+                <div className="demo-avatar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -136,7 +193,7 @@ export default function LandingDemo() {
                   </div>
                   <div className="demo-dropzone-title">Drop your document here</div>
                   <div className="demo-dropzone-subtitle">or click to browse</div>
-                  <div className="demo-dropzone-formats">PDF, JPG, PNG</div>
+                  <div className="demo-dropzone-formats">PDF, DOCX</div>
                 </div>
                 <div className="demo-feature-cards">
                   <div className="demo-feature-card">
@@ -206,8 +263,15 @@ export default function LandingDemo() {
                     <button className="demo-guidance-close">&times;</button>
                   </div>
                   <div className="demo-guidance-text">
-                    Click <span className="green">&check;</span> to redact or &times; to
-                    dismiss detected items.
+                    Click{" "}
+                    <span className="demo-guidance-check-icon">
+                      <CheckIcon size={8} />
+                    </span>{" "}
+                    to redact or{" "}
+                    <span className="demo-guidance-x-icon">
+                      <XIcon size={7} />
+                    </span>{" "}
+                    to dismiss detected items.
                     <br />
                     Drag on empty space to draw a box.
                   </div>
@@ -235,7 +299,17 @@ export default function LandingDemo() {
                 <div className="ps-employee-row">
                   <div className="ps-info">
                     <div className="ps-label">Employee</div>
-                    <div className="ps-value">Jane Doe</div>
+                    <div
+                      className={`ps-value pii ${showPII ? "revealed" : ""} ${nameConfirmed ? "confirmed" : ""}`}
+                    >
+                      <span className="pii-text">Jane Doe</span>
+                      {showPII && !nameConfirmed && (
+                        <div className="pii-actions">
+                          <div className="pii-btn confirm"><CheckIcon /></div>
+                          <div className="pii-btn reject"><XIcon /></div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <div className="ps-info">
                     <div className="ps-label">SSN</div>
@@ -245,11 +319,26 @@ export default function LandingDemo() {
                       <span className="pii-text">000-12-3456</span>
                       {showPII && !ssnConfirmed && (
                         <div className="pii-actions">
-                          <div className="pii-btn confirm">&check;</div>
-                          <div className="pii-btn reject">&times;</div>
+                          <div className="pii-btn confirm"><CheckIcon /></div>
+                          <div className="pii-btn reject"><XIcon /></div>
                         </div>
                       )}
                     </div>
+                  </div>
+                </div>
+
+                <div className="ps-employee-address">
+                  <div className="ps-label">Address</div>
+                  <div
+                    className={`ps-value pii ${showPII ? "revealed" : ""} ${addressConfirmed ? "confirmed" : ""}`}
+                  >
+                    <span className="pii-text">742 Elm St, Springfield, IL 62704</span>
+                    {showPII && !addressConfirmed && (
+                      <div className="pii-actions">
+                        <div className="pii-btn confirm"><CheckIcon /></div>
+                        <div className="pii-btn reject"><XIcon /></div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -317,8 +406,8 @@ export default function LandingDemo() {
                         <span className="pii-text">021000021</span>
                         {showPII && !routingConfirmed && (
                           <div className="pii-actions">
-                            <div className="pii-btn confirm">&check;</div>
-                            <div className="pii-btn reject">&times;</div>
+                            <div className="pii-btn confirm"><CheckIcon /></div>
+                            <div className="pii-btn reject"><XIcon /></div>
                           </div>
                         )}
                       </div>
@@ -331,8 +420,8 @@ export default function LandingDemo() {
                         <span className="pii-text">****4567</span>
                         {showPII && !accountConfirmed && (
                           <div className="pii-actions">
-                            <div className="pii-btn confirm">&check;</div>
-                            <div className="pii-btn reject">&times;</div>
+                            <div className="pii-btn confirm"><CheckIcon /></div>
+                            <div className="pii-btn reject"><XIcon /></div>
                           </div>
                         )}
                       </div>
@@ -368,7 +457,7 @@ export default function LandingDemo() {
                 <div className="demo-analyzing">
                   <div className="demo-analyzing-spinner" />
                   <div className="demo-analyzing-text">
-                    Analyzing by <span>SafeRedact AI</span>
+                    Analyzing by <span>OfflineRedact</span>
                   </div>
                 </div>
               )}
