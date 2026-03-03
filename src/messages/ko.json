@@ -113,11 +113,12 @@
     "tagline": "영구적인 PDF 편집 — 100% 브라우저에서 처리."
   },
   "redact": {
-    "title": "PDF 편집 도구",
+    "title": "문서 검열 도구",
+    "titleDocx": "Word 문서 검열 도구",
     "dropzone": {
-      "title": "PDF 파일을 여기에 놓으세요",
+      "title": "여기에 파일을 놓으세요",
       "subtitle": "또는 클릭하여 파일을 선택하세요",
-      "hint": "50MB까지의 PDF 파일을 지원합니다. 파일이 브라우저를 벗어나지 않습니다.",
+      "hint": "PDF 및 Word(.docx) 파일을 지원합니다. 파일은 브라우저를 벗어나지 않습니다.",
       "processing": "처리 중..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "삭제 적용",
       "redacting": "삭제 중...",
       "download": "편집된 PDF 다운로드",
+      "downloadDocx": "검열된 Word 문서 다운로드",
       "downloadAll": "모두 다운로드 (ZIP)",
       "reset": "처음부터 다시",
       "parsing": "PDF 분석 중...",
+      "parsingDocx": "Word 문서 분석 중...",
       "found": "{count}개의 개인정보가 발견되었습니다",
       "censored": "검열됨",
       "confirmed": "확인됨",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "이 페이지에 검열된 항목이 없습니다.",
       "noResults": "이 문서에서 개인정보가 감지되지 않았습니다.",
       "page": "페이지 {current} / {total}"
+    },
+    "docx": {
+      "pending": "대기 중",
+      "confirmed": "확인됨"
     },
     "piiTypes": {
       "ssn": "주민등록번호",

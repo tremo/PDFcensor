@@ -113,11 +113,12 @@
     "tagline": "永久PDF脱敏 — 100%在浏览器中处理。"
   },
   "redact": {
-    "title": "PDF脱敏工具",
+    "title": "文档脱敏工具",
+    "titleDocx": "Word文档脱敏工具",
     "dropzone": {
-      "title": "将PDF文件拖放到这里",
+      "title": "将文件拖放到此处",
       "subtitle": "或点击浏览您的文件",
-      "hint": "支持最大50MB的PDF文件。您的文件从不离开浏览器。",
+      "hint": "支持PDF和Word（.docx）文件。您的文件永远不会离开浏览器。",
       "processing": "处理中..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "应用脱敏",
       "redacting": "脱敏中...",
       "download": "下载脱敏后的PDF",
+      "downloadDocx": "下载脱敏后的Word文档",
       "downloadAll": "全部下载（ZIP）",
       "reset": "重新开始",
       "parsing": "正在解析PDF...",
+      "parsingDocx": "正在解析Word文档...",
       "found": "发现{count}项个人信息",
       "censored": "已遮盖",
       "confirmed": "已确认",
@@ -152,6 +155,10 @@
       "noResultsOnPage": "此页面没有已遮盖的项目。",
       "noResults": "未在此文档中检测到个人信息。",
       "page": "第 {current} 页，共 {total} 页"
+    },
+    "docx": {
+      "pending": "待处理",
+      "confirmed": "已确认"
     },
     "piiTypes": {
       "ssn": "身份证号",

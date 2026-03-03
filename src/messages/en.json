@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "Home",
-    "redact": "Redact PDF",
+    "redact": "Redact Documents",
     "pricing": "Pricing",
     "blog": "Blog"
   },
@@ -113,11 +113,12 @@
     "tagline": "Permanent PDF redaction — 100% in your browser."
   },
   "redact": {
-    "title": "PDF Redaction Tool",
+    "title": "Document Redaction Tool",
+    "titleDocx": "Word Document Redaction Tool",
     "dropzone": {
-      "title": "Drop PDF files here",
+      "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF files up to 50MB. Your files never leave your browser.",
+      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
       "processing": "Processing..."
     },
     "controls": {
@@ -128,9 +129,11 @@
       "redact": "Apply Redaction",
       "redacting": "Redacting...",
       "download": "Download Redacted PDF",
+      "downloadDocx": "Download Redacted Word Document",
       "downloadAll": "Download All (ZIP)",
       "reset": "Start Over",
       "parsing": "Parsing PDF...",
+      "parsingDocx": "Parsing Word document...",
       "found": "Found {count} PII items",
       "censored": "censored",
       "confirmed": "confirmed",
@@ -152,6 +155,10 @@
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
       "page": "Page {current} of {total}"
+    },
+    "docx": {
+      "pending": "Pending",
+      "confirmed": "Confirmed"
     },
     "piiTypes": {
       "ssn": "Social Security Number",
