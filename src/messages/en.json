@@ -126,6 +126,7 @@
       "piiTypes": "PII Types to Detect",
       "scan": "Scan for PII",
       "scanning": "Scanning...",
+      "ocrScanning": "OCR scanning images...",
       "redact": "Apply Redaction",
       "redacting": "Redacting...",
       "download": "Download Redacted PDF",

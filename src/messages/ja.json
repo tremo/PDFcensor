@@ -126,6 +126,7 @@
       "piiTypes": "検出する個人情報の種類",
       "scan": "個人情報をスキャン",
       "scanning": "スキャン中...",
+      "ocrScanning": "画像のOCRスキャン中...",
       "redact": "墨消しを適用",
       "redacting": "墨消し中...",
       "download": "墨消し済みPDFをダウンロード",

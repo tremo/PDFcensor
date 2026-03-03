@@ -126,6 +126,7 @@
       "piiTypes": "Types de données à détecter",
       "scan": "Scanner les données",
       "scanning": "Analyse en cours...",
+      "ocrScanning": "Analyse OCR des images...",
       "redact": "Appliquer le caviardage",
       "redacting": "Caviardage en cours...",
       "download": "Télécharger le PDF caviardé",

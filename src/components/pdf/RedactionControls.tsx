@@ -78,7 +78,7 @@ export function RedactionControls({
   const confirmedCount = confirmedRedactions.length;
   const rejectedCount = rejectedRedactions.length;
 
-  const isProcessing = ["parsing", "scanning", "redacting"].includes(status);
+  const isProcessing = ["parsing", "scanning", "ocr-scanning", "redacting"].includes(status);
 
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
 
@@ -126,6 +126,7 @@ export function RedactionControls({
           <Progress value={progress} />
           <p className="text-xs text-muted-foreground text-center">
             {status === "scanning" && t("scanning")}
+            {status === "ocr-scanning" && t("ocrScanning")}
             {status === "redacting" && t("redacting")}
             {status === "parsing" && t("parsing")}
           </p>

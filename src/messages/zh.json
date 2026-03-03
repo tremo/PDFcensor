@@ -126,6 +126,7 @@
       "piiTypes": "要检测的个人信息类型",
       "scan": "扫描个人信息",
       "scanning": "扫描中...",
+      "ocrScanning": "正在OCR扫描图片...",
       "redact": "应用脱敏",
       "redacting": "脱敏中...",
       "download": "下载脱敏后的PDF",

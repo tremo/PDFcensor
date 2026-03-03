@@ -126,6 +126,7 @@
       "piiTypes": "Tipos de datos a detectar",
       "scan": "Escanear datos",
       "scanning": "Escaneando...",
+      "ocrScanning": "Escaneando imágenes con OCR...",
       "redact": "Aplicar redacción",
       "redacting": "Redactando...",
       "download": "Descargar PDF redactado",

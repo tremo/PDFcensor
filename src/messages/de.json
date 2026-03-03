@@ -126,6 +126,7 @@
       "piiTypes": "Zu erkennende PII-Typen",
       "scan": "Nach PII scannen",
       "scanning": "Scannen...",
+      "ocrScanning": "OCR-Scan von Bildern...",
       "redact": "Schwärzung anwenden",
       "redacting": "Schwärzen...",
       "download": "Geschwärztes PDF herunterladen",

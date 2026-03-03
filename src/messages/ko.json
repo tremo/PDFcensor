@@ -126,6 +126,7 @@
       "piiTypes": "감지할 개인정보 유형",
       "scan": "개인정보 스캔",
       "scanning": "스캔 중...",
+      "ocrScanning": "이미지 OCR 스캔 중...",
       "redact": "삭제 적용",
       "redacting": "삭제 중...",
       "download": "편집된 PDF 다운로드",

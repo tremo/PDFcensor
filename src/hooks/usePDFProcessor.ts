@@ -10,6 +10,7 @@ import type {
 import type { RegulationType, PIIType } from "@/types/pii";
 import { parsePDF } from "@/lib/pdf/parser";
 import { detectPII } from "@/lib/pii/detector";
+import { detectOCRPII } from "@/lib/pdf/ocr";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { redactPDF } from "@/lib/pdf/redactor";
 import { addWatermark } from "@/lib/pdf/watermark";
@@ -116,6 +117,24 @@ export function usePDFProcessor() {
         }
 
         setProgress(Math.round(((i + 1) / doc.pages.length) * 100));
+      }
+
+      // Phase 2: OCR-based scanning for text inside images
+      setStatus("ocr-scanning");
+      setProgress(0);
+
+      try {
+        const ocrRedactions = await detectOCRPII(
+          doc,
+          types,
+          allRedactions,
+          locale,
+          setProgress
+        );
+        allRedactions.push(...ocrRedactions);
+      } catch (ocrErr) {
+        // OCR failure is non-fatal — text-based results are still valid
+        console.warn("OCR scanning failed:", ocrErr);
       }
 
       setRedactions(allRedactions);
