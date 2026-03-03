@@ -126,6 +126,7 @@
       "piiTypes": "Tespit Edilecek PII Türleri",
       "scan": "PII Tara",
       "scanning": "Taranıyor...",
+      "ocrScanning": "Görsellerde OCR taranıyor...",
       "redact": "Sansürü Uygula",
       "redacting": "Sansürleniyor...",
       "download": "Sansürlenmiş PDF'i İndir",

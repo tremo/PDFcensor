@@ -121,7 +121,7 @@ export default function RedactPage() {
         <div className="max-w-2xl mx-auto">
           <PDFDropzone
             onFilesSelected={handleFilesSelected}
-            isProcessing={activeStatus === "parsing" || activeStatus === "scanning"}
+            isProcessing={activeStatus === "parsing" || activeStatus === "scanning" || activeStatus === "ocr-scanning"}
             selectedFiles={activeFiles}
             onRemoveFile={activeRemoveFile}
             regulation={activeRegulation}

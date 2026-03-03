@@ -45,6 +45,7 @@ export type ProcessingStatus =
   | "loading"
   | "parsing"
   | "scanning"
+  | "ocr-scanning"
   | "previewing"
   | "redacting"
   | "done"

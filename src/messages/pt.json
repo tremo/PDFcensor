@@ -126,6 +126,7 @@
       "piiTypes": "Tipos de Dados Pessoais a Detectar",
       "scan": "Buscar Dados Pessoais",
       "scanning": "Buscando...",
+      "ocrScanning": "Escaneando imagens com OCR...",
       "redact": "Aplicar Redação",
       "redacting": "Redatando...",
       "download": "Baixar PDF Redatado",
