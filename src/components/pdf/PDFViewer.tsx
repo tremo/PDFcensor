@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { renderPageToCanvas } from "@/lib/pdf/parser";
 import type { RedactionArea } from "@/types/pdf";
 import { cn } from "@/lib/utils";
-import { X, Move, Check, XIcon } from "lucide-react";
+import { X, Check, XIcon } from "lucide-react";
 
 interface PDFViewerProps {
   arrayBuffer: ArrayBuffer | null;
@@ -97,8 +97,9 @@ export function PDFViewer({
     };
   }, [arrayBuffer, currentPage, scale]);
 
+  // Only show confirmed redactions on the PDF
   const pageRedactions = redactions.filter(
-    (r) => r.pageIndex === currentPage - 1
+    (r) => r.pageIndex === currentPage - 1 && r.confirmed
   );
 
   const getRelativePos = useCallback(
@@ -114,7 +115,6 @@ export function PDFViewer({
 
   const handleMouseDown = useCallback(
     (e: React.MouseEvent) => {
-      // Only left click
       if (e.button !== 0) return;
       const pos = getRelativePos(e);
 
@@ -125,7 +125,6 @@ export function PDFViewer({
         return;
       }
 
-      // If clicking on empty area, deselect
       onSelectRedaction(null);
     },
     [drawMode, onManualRedaction, getRelativePos, onSelectRedaction]
@@ -142,8 +141,6 @@ export function PDFViewer({
       }
 
       if (interaction.type === "moving") {
-        const r = redactions.find((r) => r.id === interaction.id);
-        if (!r) return;
         onUpdateRedaction(interaction.id, {
           x: Math.max(0, pos.x - interaction.offsetX),
           y: Math.max(0, pos.y - interaction.offsetY),
@@ -177,7 +174,6 @@ export function PDFViewer({
           newH = origH + dy;
         }
 
-        // Enforce minimum size
         if (newW < MIN_SIZE) {
           if (handle.includes("w")) newX = origX + origW - MIN_SIZE;
           newW = MIN_SIZE;
@@ -195,7 +191,7 @@ export function PDFViewer({
         });
       }
     },
-    [interaction, getRelativePos, onUpdateRedaction, redactions]
+    [interaction, getRelativePos, onUpdateRedaction]
   );
 
   const handleMouseUp = useCallback(() => {
@@ -303,136 +299,129 @@ export function PDFViewer({
       {/* Redaction overlay */}
       <div
         ref={overlayRef}
-        className={cn(
-          "absolute inset-0",
-          drawMode && "cursor-crosshair"
-        )}
+        className={cn("absolute inset-0", drawMode && "cursor-crosshair")}
         style={{ width: dimensions.width, height: dimensions.height }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        {pageRedactions.map((r) => (
-          <div
-            key={r.id}
-            className={cn(
-              "absolute border-2 group",
-              r.confirmed
-                ? "bg-red-500/30 border-red-500"
-                : "bg-yellow-400/20 border-yellow-400 border-dashed",
-              isSelected(r.id) && "ring-2 ring-blue-500 ring-offset-1",
-              interaction.type === "none" && !drawMode && "cursor-move"
-            )}
-            style={{
-              left: r.x * scale,
-              top: r.y * scale,
-              width: r.width * scale,
-              height: r.height * scale,
-            }}
-            onMouseDown={(e) => {
-              if (drawMode) return;
-              startMove(e, r);
-            }}
-            onClick={(e) => {
-              e.stopPropagation();
-              if (drawMode) return;
-              onSelectRedaction(r.id);
-            }}
-          >
-            {/* Inline action buttons - visible on hover or selection */}
-            {!drawMode && (
-              <div
-                className={cn(
-                  "absolute -top-8 left-0 flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity z-10",
-                  isSelected(r.id) && "opacity-100"
-                )}
-              >
-                <button
-                  className={cn(
-                    "p-1 rounded shadow-sm border text-xs",
-                    r.confirmed
-                      ? "bg-green-600 text-white border-green-700"
-                      : "bg-white text-green-600 border-green-300 hover:bg-green-50"
-                  )}
-                  title={r.confirmed ? "Confirmed" : "Confirm"}
-                  onMouseDown={(e) => e.stopPropagation()}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (!r.confirmed) onToggleRedaction(r.id);
-                  }}
-                >
-                  <Check className="w-3 h-3" />
-                </button>
-                <button
-                  className={cn(
-                    "p-1 rounded shadow-sm border text-xs",
-                    !r.confirmed
-                      ? "bg-orange-500 text-white border-orange-600"
-                      : "bg-white text-orange-500 border-orange-300 hover:bg-orange-50"
-                  )}
-                  title={!r.confirmed ? "Rejected" : "Reject"}
-                  onMouseDown={(e) => e.stopPropagation()}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (r.confirmed) onToggleRedaction(r.id);
-                  }}
-                >
-                  <XIcon className="w-3 h-3" />
-                </button>
-                <button
-                  className="p-1 rounded shadow-sm bg-white text-red-500 border border-red-300 hover:bg-red-50 text-xs"
-                  title="Delete"
-                  onMouseDown={(e) => e.stopPropagation()}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onRemoveRedaction(r.id);
-                  }}
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </div>
-            )}
+        {pageRedactions.map((r) => {
+          const selected = isSelected(r.id);
+          const w = r.width * scale;
+          const h = r.height * scale;
 
-            {/* PII type label inside box */}
-            {r.width * scale > 40 && r.height * scale > 16 && (
-              <span className="absolute inset-0 flex items-center justify-center text-[10px] font-medium text-black/60 pointer-events-none select-none truncate px-1">
-                {r.piiType !== "manual" ? r.piiType : ""}
-              </span>
-            )}
+          return (
+            <div
+              key={r.id}
+              className={cn(
+                "absolute group",
+                selected && "z-10",
+                interaction.type === "none" && !drawMode && "cursor-move"
+              )}
+              style={{
+                left: r.x * scale,
+                top: r.y * scale,
+                width: w,
+                height: h,
+              }}
+              onMouseDown={(e) => {
+                if (drawMode) return;
+                startMove(e, r);
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (drawMode) return;
+                onSelectRedaction(r.id);
+              }}
+            >
+              {/* Solid black fill - the actual censorship look */}
+              <div className="absolute inset-0 bg-black rounded-[1px]" />
 
-            {/* Resize handles - visible when selected */}
-            {isSelected(r.id) &&
-              !drawMode &&
-              resizeHandles.map((handle) => {
-                const pos = getHandlePosition(handle, r);
-                return (
-                  <div
-                    key={handle}
-                    className="absolute bg-blue-500 border border-white rounded-sm z-20"
+              {/* Selection border */}
+              {selected && (
+                <div className="absolute inset-0 ring-2 ring-blue-500 ring-offset-1 rounded-[1px]" />
+              )}
+
+              {/* Corner resize triangles - always visible as subtle hint */}
+              {!drawMode && (
+                <>
+                  {/* Bottom-right corner triangle */}
+                  <div className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
                     style={{
-                      width: HANDLE_SIZE,
-                      height: HANDLE_SIZE,
-                      left: pos.left,
-                      top: pos.top,
-                      cursor: getHandleCursor(handle),
+                      borderLeft: "6px solid transparent",
+                      borderBottom: "6px solid white",
                     }}
-                    onMouseDown={(e) => startResize(e, r, handle)}
                   />
-                );
-              })}
-          </div>
-        ))}
+                  {/* Top-left corner triangle */}
+                  <div className="absolute top-0 left-0 w-0 h-0 pointer-events-none opacity-60"
+                    style={{
+                      borderRight: "6px solid transparent",
+                      borderTop: "6px solid white",
+                    }}
+                  />
+                </>
+              )}
+
+              {/* Always-visible action buttons */}
+              {!drawMode && (
+                <div className="absolute -top-7 left-1/2 -translate-x-1/2 flex items-center gap-0.5 z-20">
+                  <button
+                    className="p-1 rounded shadow bg-red-500 text-white hover:bg-red-600 transition-colors"
+                    title="Reject"
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onToggleRedaction(r.id);
+                    }}
+                  >
+                    <XIcon className="w-3 h-3" />
+                  </button>
+                  <button
+                    className="p-1 rounded shadow bg-white/90 text-red-500 hover:bg-white transition-colors border border-red-200"
+                    title="Delete"
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRemoveRedaction(r.id);
+                    }}
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+              )}
+
+              {/* Resize handles - visible when selected */}
+              {selected &&
+                !drawMode &&
+                resizeHandles.map((handle) => {
+                  const pos = getHandlePosition(handle, r);
+                  return (
+                    <div
+                      key={handle}
+                      className="absolute bg-blue-500 border border-white rounded-sm z-20"
+                      style={{
+                        width: HANDLE_SIZE,
+                        height: HANDLE_SIZE,
+                        left: pos.left,
+                        top: pos.top,
+                        cursor: getHandleCursor(handle),
+                      }}
+                      onMouseDown={(e) => startResize(e, r, handle)}
+                    />
+                  );
+                })}
+            </div>
+          );
+        })}
 
         {/* Drawing preview rectangle */}
         {interaction.type === "drawing" && drawCurrent && (
           <div
             className="absolute border-2 border-blue-500 bg-blue-500/20 pointer-events-none"
             style={{
-              left:
-                Math.min(interaction.startX, drawCurrent.x) * scale,
-              top:
-                Math.min(interaction.startY, drawCurrent.y) * scale,
+              left: Math.min(interaction.startX, drawCurrent.x) * scale,
+              top: Math.min(interaction.startY, drawCurrent.y) * scale,
               width:
                 Math.abs(drawCurrent.x - interaction.startX) * scale,
               height:

@@ -2,6 +2,15 @@ import type { RegulationProfile, RegulationType, PIIType } from "@/types/pii";
 import type { Locale } from "@/lib/i18n/config";
 
 export const regulations: Record<RegulationType, RegulationProfile> = {
+  COMPREHENSIVE: {
+    name: "COMPREHENSIVE",
+    country: "ALL",
+    patterns: [
+      "ssn", "itin", "tcKimlik", "email", "phone", "trPhone", "usPhone",
+      "iban", "creditCard", "passport", "names", "address",
+    ],
+    description: "Comprehensive — US + EU + TR (Recommended)",
+  },
   KVKK: {
     name: "KVKK",
     country: "TR",
@@ -66,17 +75,17 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
  */
 export function getDefaultRegulation(locale: Locale): RegulationType {
   const mapping: Record<string, RegulationType> = {
-    tr: "KVKK",
-    en: "HIPAA",
-    de: "GDPR",
-    fr: "GDPR",
-    es: "GDPR",
-    pt: "LGPD",
-    ja: "APPI",
-    ko: "PIPA",
-    zh: "PIPL",
+    tr: "COMPREHENSIVE",
+    en: "COMPREHENSIVE",
+    de: "COMPREHENSIVE",
+    fr: "COMPREHENSIVE",
+    es: "COMPREHENSIVE",
+    pt: "COMPREHENSIVE",
+    ja: "COMPREHENSIVE",
+    ko: "COMPREHENSIVE",
+    zh: "COMPREHENSIVE",
   };
-  return mapping[locale] || "GDPR";
+  return mapping[locale] || "COMPREHENSIVE";
 }
 
 /**

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { useLocale } from "next-intl";
 import type {
   PDFDocumentData,
@@ -39,61 +39,23 @@ export function usePDFProcessor() {
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const handleFilesSelected = useCallback(
-    async (newFiles: File[]) => {
-      setFiles((prev) => [...prev, ...newFiles]);
+  // Track pending auto-scan
+  const pendingAutoScan = useRef(false);
 
-      if (!document && newFiles.length > 0) {
-        try {
-          setStatus("parsing");
-          setProgress(0);
-          setError(null);
-
-          const doc = await parsePDF(newFiles[0], setProgress);
-          setDocument(doc);
-          setCurrentPage(1);
-          setStatus("previewing");
-        } catch (e) {
-          setError(e instanceof Error ? e.message : "Failed to parse PDF");
-          setStatus("error");
-        }
-      }
-    },
-    [document]
-  );
-
-  const removeFile = useCallback(
-    (index: number) => {
-      setFiles((prev) => prev.filter((_, i) => i !== index));
-      if (index === 0 && document) {
-        setDocument(null);
-        setRedactions([]);
-        setRedactedPdfBytes(null);
-        setStatus("idle");
-      }
-    },
-    [document]
-  );
-
-  const scan = useCallback(async () => {
-    if (!document) return;
-
+  const scanDocument = useCallback(async (doc: PDFDocumentData, types: PIIType[]) => {
     setStatus("scanning");
     setProgress(0);
 
     try {
-      // Load name dictionary
       await loadNameDictionary(locale);
 
       const allRedactions: RedactionArea[] = [];
 
-      for (let i = 0; i < document.pages.length; i++) {
-        const page = document.pages[i];
-        const result = detectPII(page.fullText, page.pageIndex, enabledTypes);
+      for (let i = 0; i < doc.pages.length; i++) {
+        const page = doc.pages[i];
+        const result = detectPII(page.fullText, page.pageIndex, types);
 
-        // Map PII matches to redaction areas using text item positions
         for (const match of result.matches) {
-          // Find the text items that contain this match
           const matchingItems = page.textItems.filter((item) => {
             const itemStart = page.fullText.indexOf(item.text);
             const itemEnd = itemStart + item.text.length;
@@ -128,7 +90,7 @@ export function usePDFProcessor() {
           }
         }
 
-        setProgress(Math.round(((i + 1) / document.pages.length) * 100));
+        setProgress(Math.round(((i + 1) / doc.pages.length) * 100));
       }
 
       setRedactions(allRedactions);
@@ -137,7 +99,49 @@ export function usePDFProcessor() {
       setError(e instanceof Error ? e.message : "PII detection failed");
       setStatus("error");
     }
-  }, [document, enabledTypes, locale]);
+  }, [locale]);
+
+  const handleFilesSelected = useCallback(
+    async (newFiles: File[]) => {
+      setFiles((prev) => [...prev, ...newFiles]);
+
+      if (!document && newFiles.length > 0) {
+        try {
+          setStatus("parsing");
+          setProgress(0);
+          setError(null);
+
+          const doc = await parsePDF(newFiles[0], setProgress);
+          setDocument(doc);
+          setCurrentPage(1);
+          // Auto-scan immediately after parsing
+          await scanDocument(doc, enabledTypes);
+        } catch (e) {
+          setError(e instanceof Error ? e.message : "Failed to parse PDF");
+          setStatus("error");
+        }
+      }
+    },
+    [document, enabledTypes, scanDocument]
+  );
+
+  const removeFile = useCallback(
+    (index: number) => {
+      setFiles((prev) => prev.filter((_, i) => i !== index));
+      if (index === 0 && document) {
+        setDocument(null);
+        setRedactions([]);
+        setRedactedPdfBytes(null);
+        setStatus("idle");
+      }
+    },
+    [document]
+  );
+
+  const scan = useCallback(async () => {
+    if (!document) return;
+    await scanDocument(document, enabledTypes);
+  }, [document, enabledTypes, scanDocument]);
 
   const applyRedaction = useCallback(
     async (isPro: boolean = false) => {

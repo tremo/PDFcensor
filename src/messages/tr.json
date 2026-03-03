@@ -92,9 +92,14 @@
       "download": "Sansürlenmiş PDF'i İndir",
       "downloadAll": "Tümünü İndir (ZIP)",
       "reset": "Baştan Başla",
+      "parsing": "PDF ayrıştırılıyor...",
       "found": "{count} kişisel veri bulundu",
+      "censored": "sansürlendi",
       "confirmed": "onaylandı",
       "rejected": "reddedildi",
+      "rejectedItems": "Reddedilen Öğeler",
+      "restore": "Geri Al",
+      "comprehensive": "Kapsamlı (ABD + AB)",
       "confirmAll": "Tümünü Onayla",
       "rejectAll": "Tümünü Reddet",
       "confirm": "Onayla",
@@ -105,7 +110,7 @@
       "drawing": "Çizim Modu",
       "select": "Seçim Modu",
       "noResults": "Bu belgede kişisel veri tespit edilmedi.",
-      "noResultsOnPage": "Bu sayfada tespit yok.",
+      "noResultsOnPage": "Bu sayfada sansürlenen öğe yok.",
       "page": "Sayfa {current} / {total}"
     },
     "piiTypes": {

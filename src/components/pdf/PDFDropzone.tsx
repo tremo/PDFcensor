@@ -4,12 +4,18 @@ import { useCallback, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Upload, FileText, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { regulations } from "@/lib/pii/regulations";
+import type { RegulationType, PIIType } from "@/types/pii";
 
 interface PDFDropzoneProps {
   onFilesSelected: (files: File[]) => void;
   isProcessing: boolean;
   selectedFiles: File[];
   onRemoveFile: (index: number) => void;
+  regulation: RegulationType;
+  onRegulationChange: (r: RegulationType) => void;
+  enabledTypes: PIIType[];
+  onToggleType: (type: PIIType) => void;
 }
 
 export function PDFDropzone({
@@ -17,8 +23,14 @@ export function PDFDropzone({
   isProcessing,
   selectedFiles,
   onRemoveFile,
+  regulation,
+  onRegulationChange,
+  enabledTypes,
+  onToggleType,
 }: PDFDropzoneProps) {
   const t = useTranslations("redact.dropzone");
+  const tp = useTranslations("redact.piiTypes");
+  const tc = useTranslations("redact.controls");
   const [isDragOver, setIsDragOver] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -45,8 +57,62 @@ export function PDFDropzone({
     [onFilesSelected]
   );
 
+  const allPiiTypes: PIIType[] = [
+    "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
+    "usPhone", "iban", "creditCard", "passport", "names", "address",
+  ];
+
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
+      {/* Regulation selector */}
+      <div className="bg-muted/30 rounded-xl border border-border p-5 space-y-4">
+        <div className="space-y-2">
+          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground block">
+            {tc("regulation")}
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(regulations).map(([key, reg]) => (
+              <button
+                key={key}
+                onClick={() => onRegulationChange(key as RegulationType)}
+                className={cn(
+                  "px-3 py-1.5 text-sm rounded-lg border transition-all cursor-pointer",
+                  regulation === key
+                    ? "bg-foreground text-background border-foreground font-medium"
+                    : "bg-background text-muted-foreground border-border hover:border-foreground/30"
+                )}
+              >
+                {reg.name === "COMPREHENSIVE" ? tc("comprehensive") : reg.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* PII type chips */}
+        <div className="space-y-2">
+          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground block">
+            {tc("piiTypes")}
+          </label>
+          <div className="flex flex-wrap gap-1.5">
+            {allPiiTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => onToggleType(type)}
+                className={cn(
+                  "px-2 py-0.5 text-xs rounded-full border transition-all cursor-pointer",
+                  enabledTypes.includes(type)
+                    ? "bg-foreground text-background border-foreground"
+                    : "bg-background text-muted-foreground border-border hover:border-foreground/30"
+                )}
+              >
+                {tp(type)}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Drop area */}
       <div
         onDragOver={(e) => {
           e.preventDefault();
