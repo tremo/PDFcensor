@@ -1,22 +1,54 @@
 import type { PIIMatch } from "@/types/pii";
 
 let nameDictionary: Set<string> | null = null;
+let loadedLocales: string[] = [];
 
 /**
- * Load name dictionary from a JSON file.
- * The JSON should be an array of strings.
+ * Load name dictionary from a JSON file (single locale).
+ * Kept for backwards compatibility.
  */
 export async function loadNameDictionary(locale: string): Promise<void> {
-  try {
-    const response = await fetch(`/dictionaries/names-${locale}.json`);
-    if (response.ok) {
-      const names: string[] = await response.json();
-      nameDictionary = new Set(names.map((n) => n.toLowerCase()));
-    }
-  } catch {
-    // Dictionary not available for this locale
-    nameDictionary = new Set();
+  return loadNameDictionaries([locale]);
+}
+
+/**
+ * Load and merge name dictionaries from multiple locales.
+ * For GDPR, this loads all EU language dictionaries so names from
+ * any EU member state language can be detected in a single scan.
+ */
+export async function loadNameDictionaries(locales: string[]): Promise<void> {
+  // Skip reload if same locales are already loaded
+  const sortedNew = [...locales].sort().join(",");
+  const sortedOld = [...loadedLocales].sort().join(",");
+  if (sortedNew === sortedOld && nameDictionary && nameDictionary.size > 0) {
+    return;
   }
+
+  const allNames: string[] = [];
+
+  const results = await Promise.allSettled(
+    locales.map(async (locale) => {
+      try {
+        const response = await fetch(`/dictionaries/names-${locale}.json`);
+        if (response.ok) {
+          const names: string[] = await response.json();
+          return names;
+        }
+      } catch {
+        // Dictionary not available for this locale
+      }
+      return [];
+    })
+  );
+
+  for (const result of results) {
+    if (result.status === "fulfilled" && result.value.length > 0) {
+      allNames.push(...result.value);
+    }
+  }
+
+  nameDictionary = new Set(allNames.map((n) => n.toLowerCase()));
+  loadedLocales = locales;
 }
 
 /**
