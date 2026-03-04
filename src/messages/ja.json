@@ -91,6 +91,10 @@
     "encrypted": "AES-256暗号化",
     "encryptedDesc": "銀行レベルの暗号化"
   },
+  "compliance": {
+    "title": "グローバルコンプライアンスに対応",
+    "subtitle": "OfflineRedactは、世界中の20以上の規制と基準におけるデータ保護要件の遵守を支援します。"
+  },
   "trust": {
     "title": "機密文書を扱う専門家に信頼されています",
     "legal": "法律",

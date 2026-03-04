@@ -26,6 +26,8 @@ import {
   Home,
   DollarSign,
   Building2,
+  Globe,
+  FileCheck,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -44,6 +46,29 @@ export default function HomePage() {
     { icon: Upload, num: "01", key: "step1" },
     { icon: Eye, num: "02", key: "step2" },
     { icon: Download, num: "03", key: "step3" },
+  ];
+
+  const standards = [
+    { name: "GDPR", region: "Europe", icon: Globe },
+    { name: "UK GDPR", region: "United Kingdom", icon: Globe },
+    { name: "KVKK", region: "Türkiye", icon: ShieldCheck },
+    { name: "PDPL", region: "Saudi Arabia", icon: Lock },
+    { name: "HIPAA", region: "US Healthcare", icon: ShieldCheck },
+    { name: "CCPA", region: "California", icon: Globe },
+    { name: "PIPEDA", region: "Canada", icon: Globe },
+    { name: "GLBA", region: "US Finance", icon: Lock },
+    { name: "FERPA", region: "US Education", icon: FileCheck },
+    { name: "NYDFS", region: "New York Finance", icon: ShieldCheck },
+    { name: "PDPA", region: "Singapore", icon: ShieldCheck },
+    { name: "APPI", region: "Japan", icon: Globe },
+    { name: "Privacy Act", region: "Australia", icon: ShieldCheck },
+    { name: "DPDPA", region: "India", icon: Globe },
+    { name: "LGPD", region: "Brazil", icon: Globe },
+    { name: "POPIA", region: "South Africa", icon: Globe },
+    { name: "SOC 2", region: "Cloud Security", icon: Lock },
+    { name: "PCI DSS", region: "Global Payments", icon: Lock },
+    { name: "ISO 27001", region: "Info Security", icon: FileCheck },
+    { name: "NIST", region: "Cybersecurity", icon: ShieldCheck },
   ];
 
   return (
@@ -320,6 +345,40 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Standards */}
+      <section className="py-16 md:py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              {t("compliance.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("compliance.subtitle")}
+            </p>
+          </div>
+        </div>
+        <div className="relative">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+          <div className="flex animate-marquee gap-4">
+            {[...standards, ...standards].map(({ name, region, icon: Icon }, i) => (
+              <div
+                key={`${name}-${i}`}
+                className="flex items-center gap-3 px-5 py-3 rounded-xl border border-border bg-background hover:border-accent/50 hover:shadow-md transition-all duration-200 shrink-0"
+              >
+                <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                  <Icon className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm whitespace-nowrap">{name}</div>
+                  <div className="text-xs text-muted-foreground whitespace-nowrap">{region}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
