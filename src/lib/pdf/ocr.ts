@@ -1,4 +1,6 @@
 import Tesseract from "tesseract.js";
+import * as pdfjsLib from "pdfjs-dist";
+import type { PDFDocumentProxy } from "pdfjs-dist";
 import type { PDFDocumentData } from "@/types/pdf";
 import type { PIIType } from "@/types/pii";
 import type { RedactionArea } from "@/types/pdf";
@@ -43,7 +45,7 @@ function getOCRLanguages(locale: string): string {
  * Returns word-level bounding boxes in PDF coordinate space (scale=1.0, top-left origin).
  */
 async function ocrPage(
-  arrayBuffer: ArrayBuffer,
+  pdf: PDFDocumentProxy,
   pageNumber: number,
   lang: string,
   scheduler: Tesseract.Scheduler
@@ -51,7 +53,7 @@ async function ocrPage(
   // Create an offscreen canvas for OCR rendering
   const canvas = globalThis.document.createElement("canvas");
 
-  await renderPageToCanvas(arrayBuffer, pageNumber, canvas, OCR_SCALE);
+  await renderPageToCanvas(pdf, pageNumber, canvas, OCR_SCALE);
 
   // Run OCR on the rendered canvas
   const { data } = await scheduler.addJob("recognize", canvas);
@@ -145,6 +147,11 @@ export async function detectOCRPII(
   const lang = getOCRLanguages(locale);
   const ocrRedactions: RedactionArea[] = [];
 
+  // Parse PDF once for all pages instead of re-parsing per page
+  const pdf = await pdfjsLib.getDocument({
+    data: new Uint8Array(doc.arrayBuffer),
+  }).promise;
+
   // Create a Tesseract scheduler with 1 worker for sequential processing
   const scheduler = Tesseract.createScheduler();
   const worker = await Tesseract.createWorker(lang, undefined, {
@@ -157,9 +164,9 @@ export async function detectOCRPII(
       const page = doc.pages[i];
       const pageIndex = page.pageIndex;
 
-      // Run OCR on this page
+      // Run OCR on this page using pre-loaded PDF document
       const { words, fullText } = await ocrPage(
-        doc.arrayBuffer,
+        pdf,
         i + 1,
         lang,
         scheduler
@@ -233,6 +240,7 @@ export async function detectOCRPII(
     }
   } finally {
     await scheduler.terminate();
+    pdf.destroy();
   }
 
   return ocrRedactions;

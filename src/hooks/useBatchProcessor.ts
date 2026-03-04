@@ -291,6 +291,10 @@ export function useBatchProcessor() {
             "_redacted.pdf"
           );
           zip.file(outputName, redactedBytes);
+
+          // Release heavy data after adding to zip to reduce memory
+          result.pdfDocument.arrayBuffer = new ArrayBuffer(0);
+          result.pdfDocument.pages = [];
         } else if (result.type === "docx" && result.docxDocument) {
           const confirmedMatches = result.docxRedactions.map((r) => r.match);
           const redactedBytes = await redactDocx(
@@ -305,6 +309,9 @@ export function useBatchProcessor() {
             "_redacted.docx"
           );
           zip.file(outputName, redactedBytes);
+
+          // Release heavy data after adding to zip to reduce memory
+          result.docxDocument.arrayBuffer = new ArrayBuffer(0);
         }
 
         setProgress(Math.round(((i + 1) / total) * 100));
@@ -319,6 +326,16 @@ export function useBatchProcessor() {
       a.click();
       window.document.body.removeChild(a);
       URL.revokeObjectURL(url);
+
+      // Release all remaining heavy data after download
+      setFileResults((prev) =>
+        prev.map((r) => ({
+          ...r,
+          pdfDocument: undefined,
+          docxDocument: undefined,
+          redactedBytes: null,
+        }))
+      );
 
       setStatus("done");
     } catch (e) {
