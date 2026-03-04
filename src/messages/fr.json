@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "Détection automatique",
-      "description": "Trouve automatiquement les SSN, noms, e-mails, numéros de téléphone, IBAN, cartes de crédit et plus grâce à la correspondance intelligente de motifs avec validation."
+      "description": "Trouve automatiquement les SSN, noms, e-mails, numéros de téléphone, IBAN, cartes de crédit et plus grâce à la correspondance de motifs avec règles de validation intégrées."
     },
     "regulations": {
       "title": "Multi-réglementations",
@@ -77,7 +77,7 @@
     "redactedFile": "Fichier caviardé",
     "redactedFileDesc": "Créé localement, téléchargement instantané",
     "zeroRetention": "Zéro stockage. Zéro rétention.",
-    "footnote": "Seul le texte extrait est envoyé pour la détection IA. Vos fichiers ne quittent jamais votre navigateur."
+    "footnote": "Toute la détection s'exécute localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
   },
   "security": {
     "title": "Vrai caviardage permanent",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "Détection IA",
-      "aiDetectionText": "Trouve SSN, noms, adresses automatiquement.",
+      "autoDetection": "Détection Automatique",
+      "autoDetectionText": "Trouve SSN, noms, adresses par correspondance de motifs.",
       "stayPrivate": "Fichiers restent privés",
-      "stayPrivateText": "Seul le texte est envoyé pour la détection.",
+      "stayPrivateText": "Tout s'exécute dans votre navigateur.",
       "visualReview": "Révision visuelle",
       "visualReviewText": "Approuver, rejeter ou ajouter manuellement."
     },

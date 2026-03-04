@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "Otomatik PII Tespiti",
-      "description": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN, kredi kartı ve daha fazlasını doğrulama ile akıllı kalıp eşleştirme kullanarak otomatik bulur."
+      "description": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN, kredi kartı ve daha fazlasını yerleşik doğrulama kurallarıyla kalıp eşleştirme kullanarak otomatik bulur."
     },
     "regulations": {
       "title": "Çoklu Regülasyon Desteği",
@@ -77,7 +77,7 @@
     "redactedFile": "Sansürlenmiş dosya",
     "redactedFileDesc": "Yerel olarak oluşturulur, anında indirilir",
     "zeroRetention": "Sıfır depolama. Sıfır saklama.",
-    "footnote": "Yalnızca çıkarılan metin AI tespiti için gönderilir. Dosyalarınız tarayıcınızdan asla çıkmaz."
+    "footnote": "Tüm tespit işlemi tarayıcınızda yerel olarak çalışır. Dosyalarınız cihazınızdan asla çıkmaz."
   },
   "security": {
     "title": "Gerçek kalıcı sansürleme",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "AI Tespiti",
-      "aiDetectionText": "TC Kimlik, isim, adresleri otomatik bulur.",
+      "autoDetection": "Otomatik Tespit",
+      "autoDetectionText": "TC Kimlik, isim, adresleri kalıp eşleştirme ile bulur.",
       "stayPrivate": "Dosyalar Gizli Kalır",
-      "stayPrivateText": "Tespit için yalnızca metin gönderilir.",
+      "stayPrivateText": "Her şey tarayıcınızda çalışır.",
       "visualReview": "Görsel İnceleme",
       "visualReviewText": "Onayla, reddet veya manuel ekle."
     },

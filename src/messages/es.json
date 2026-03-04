@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "Detección automática",
-      "description": "Encuentra automáticamente SSN, nombres, correos, teléfonos, IBAN, tarjetas de crédito y más usando coincidencia inteligente de patrones con validación."
+      "description": "Encuentra automáticamente SSN, nombres, correos, teléfonos, IBAN, tarjetas de crédito y más usando coincidencia de patrones con reglas de validación integradas."
     },
     "regulations": {
       "title": "Soporte multi-regulación",
@@ -77,7 +77,7 @@
     "redactedFile": "Archivo redactado",
     "redactedFileDesc": "Creado localmente, descarga instantánea",
     "zeroRetention": "Cero almacenamiento. Cero retención.",
-    "footnote": "Solo el texto extraído se envía para detección de IA. Tus archivos nunca salen de tu navegador."
+    "footnote": "Toda la detección se ejecuta localmente en su navegador. Sus archivos nunca salen de su dispositivo."
   },
   "security": {
     "title": "Redacción permanente real",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "Detección IA",
-      "aiDetectionText": "Encuentra SSN, nombres, direcciones automáticamente.",
+      "autoDetection": "Detección Automática",
+      "autoDetectionText": "Encuentra SSN, nombres, direcciones con coincidencia de patrones.",
       "stayPrivate": "Archivos permanecen privados",
-      "stayPrivateText": "Solo se envía texto para la detección.",
+      "stayPrivateText": "Todo se ejecuta en su navegador.",
       "visualReview": "Revisión visual",
       "visualReviewText": "Aprobar, rechazar o agregar manualmente."
     },

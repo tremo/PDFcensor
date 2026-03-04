@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "Detecção Automática de Dados Pessoais",
-      "description": "Encontra automaticamente CPF, nomes, e-mails, telefones, IBAN, cartões de crédito e mais usando correspondência inteligente de padrões com validação."
+      "description": "Encontra automaticamente CPF, nomes, e-mails, telefones, IBAN, cartões de crédito e mais usando correspondência de padrões com regras de validação integradas."
     },
     "regulations": {
       "title": "Suporte a Múltiplas Regulamentações",
@@ -77,7 +77,7 @@
     "redactedFile": "Arquivo editado",
     "redactedFileDesc": "Criado localmente, download instantâneo",
     "zeroRetention": "Zero armazenamento. Zero retenção.",
-    "footnote": "Apenas o texto extraído é enviado para detecção de IA. Seus arquivos nunca saem do seu navegador."
+    "footnote": "Toda a detecção é executada localmente no seu navegador. Seus arquivos nunca saem do seu dispositivo."
   },
   "security": {
     "title": "Redação permanente real",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "Detecção IA",
-      "aiDetectionText": "Encontra CPF, nomes, endereços automaticamente.",
+      "autoDetection": "Detecção Automática",
+      "autoDetectionText": "Encontra CPF, nomes, endereços com correspondência de padrões.",
       "stayPrivate": "Arquivos permanecem privados",
-      "stayPrivateText": "Apenas texto é enviado para detecção.",
+      "stayPrivateText": "Tudo é executado no seu navegador.",
       "visualReview": "Revisão visual",
       "visualReviewText": "Aprovar, rejeitar ou adicionar manualmente."
     },
