@@ -91,6 +91,10 @@
     "encrypted": "AES-256 şifreli",
     "encryptedDesc": "Banka düzeyinde şifreleme"
   },
+  "compliance": {
+    "title": "Küresel Uyumluluk İçin Tasarlandı",
+    "subtitle": "OfflineRedact, dünya genelinde 20'den fazla düzenleme ve standarda uyum sağlamanıza yardımcı olur."
+  },
   "trust": {
     "title": "Hassas belgelerle çalışan profesyoneller tarafından güvenilir",
     "legal": "Hukuk",

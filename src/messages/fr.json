@@ -91,6 +91,10 @@
     "encrypted": "Chiffrement AES-256",
     "encryptedDesc": "Chiffrement de niveau bancaire"
   },
+  "compliance": {
+    "title": "Conçu pour la Conformité Mondiale",
+    "subtitle": "OfflineRedact vous aide à respecter les exigences de protection des données dans plus de 20 réglementations et normes à travers le monde."
+  },
   "trust": {
     "title": "Approuvé par les professionnels qui traitent des documents sensibles",
     "legal": "Juridique",

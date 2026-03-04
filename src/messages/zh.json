@@ -91,6 +91,10 @@
     "encrypted": "AES-256加密",
     "encryptedDesc": "银行级加密"
   },
+  "compliance": {
+    "title": "为全球合规而设计",
+    "subtitle": "OfflineRedact帮助您满足全球20多项法规和标准的数据保护要求。"
+  },
   "trust": {
     "title": "受处理敏感文档的专业人士信赖",
     "legal": "法律",
