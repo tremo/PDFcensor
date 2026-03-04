@@ -20,7 +20,7 @@ export async function parsePDF(
   const arrayBuffer = await file.arrayBuffer();
 
   const loadingTask = pdfjsLib.getDocument({
-    data: new Uint8Array(arrayBuffer),
+    data: new Uint8Array(arrayBuffer.slice(0)),
     useSystemFonts: true,
   });
 
