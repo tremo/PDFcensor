@@ -9,14 +9,16 @@ import { RedactionControls } from "@/components/pdf/RedactionControls";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
 import { BatchSummary } from "@/components/pdf/BatchSummary";
+import { ImageViewer } from "@/components/image/ImageViewer";
 import { usePDFProcessor } from "@/hooks/usePDFProcessor";
 import { useDocxProcessor } from "@/hooks/useDocxProcessor";
 import { useBatchProcessor } from "@/hooks/useBatchProcessor";
+import { useImageProcessor } from "@/hooks/useImageProcessor";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-type DocumentType = "none" | "pdf" | "docx";
+type DocumentType = "none" | "pdf" | "docx" | "image";
 type FlowMode = "single" | "batch";
 
 function isDocxFile(file: File): boolean {
@@ -24,6 +26,22 @@ function isDocxFile(file: File): boolean {
     file.type ===
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
     file.name.endsWith(".docx")
+  );
+}
+
+const IMAGE_MIME_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/gif",
+  "image/tiff",
+];
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff"];
+
+function isImageFile(file: File): boolean {
+  return (
+    IMAGE_MIME_TYPES.includes(file.type) ||
+    IMAGE_EXTENSIONS.some((ext) => file.name.toLowerCase().endsWith(ext))
   );
 }
 
@@ -37,6 +55,7 @@ export default function RedactPage() {
   // Single-file processors
   const pdf = usePDFProcessor();
   const docx = useDocxProcessor();
+  const img = useImageProcessor();
 
   // Batch processor
   const batch = useBatchProcessor();
@@ -53,19 +72,22 @@ export default function RedactPage() {
         setFlowMode("batch");
         batch.handleFilesSelected(files);
       } else {
-        // Single file → existing flow
+        // Single file → single mode
         setFlowMode("single");
         const file = files[0];
         if (isDocxFile(file)) {
           setDocumentType("docx");
           docx.handleFilesSelected(files);
+        } else if (isImageFile(file)) {
+          setDocumentType("image");
+          img.handleFilesSelected(files);
         } else {
           setDocumentType("pdf");
           pdf.handleFilesSelected(files);
         }
       }
     },
-    [pdf, docx, batch]
+    [pdf, docx, img, batch]
   );
 
   const handleReset = useCallback(() => {
@@ -73,21 +95,30 @@ export default function RedactPage() {
       batch.reset();
     } else if (documentType === "docx") {
       docx.reset();
+    } else if (documentType === "image") {
+      img.reset();
     } else {
       pdf.reset();
     }
     setDocumentType("none");
     setFlowMode("single");
     setSelectedRedactionId(null);
-  }, [flowMode, documentType, pdf, docx, batch]);
+  }, [flowMode, documentType, pdf, docx, img, batch]);
 
   // Determine the active state based on document type (single mode)
-  const activeStatus = documentType === "docx" ? docx.status : pdf.status;
-  const activeError = documentType === "docx" ? docx.error : pdf.error;
-  const activeFiles = flowMode === "batch" ? batch.files : (documentType === "docx" ? docx.files : pdf.files);
-  const activeRegulation = flowMode === "batch" ? batch.regulation : (documentType === "docx" ? docx.regulation : pdf.regulation);
-  const activeEnabledTypes = flowMode === "batch" ? batch.enabledTypes : (documentType === "docx" ? docx.enabledTypes : pdf.enabledTypes);
-  const hasActiveDocument = documentType === "docx" ? !!docx.document : !!pdf.document;
+  const activeStatus =
+    flowMode === "batch"
+      ? "idle"
+      : documentType === "docx"
+      ? docx.status
+      : documentType === "image"
+      ? img.status
+      : pdf.status;
+  const activeError = documentType === "docx" ? docx.error : documentType === "image" ? img.error : pdf.error;
+  const activeFiles = flowMode === "batch" ? batch.files : (documentType === "docx" ? docx.files : documentType === "image" ? img.files : pdf.files);
+  const activeRegulation = flowMode === "batch" ? batch.regulation : (documentType === "docx" ? docx.regulation : documentType === "image" ? img.regulation : pdf.regulation);
+  const activeEnabledTypes = flowMode === "batch" ? batch.enabledTypes : (documentType === "docx" ? docx.enabledTypes : documentType === "image" ? img.enabledTypes : pdf.enabledTypes);
+  const hasActiveDocument = documentType === "docx" ? !!docx.document : documentType === "image" ? !!img.document : !!pdf.document;
 
   const activeRemoveFile = useCallback(
     (index: number) => {
@@ -95,29 +126,32 @@ export default function RedactPage() {
         batch.removeFile(index);
       } else if (documentType === "docx") {
         docx.removeFile(index);
-        if (index === 0) {
-          setDocumentType("none");
-        }
+        if (index === 0) setDocumentType("none");
+      } else if (documentType === "image") {
+        img.removeFile(index);
+        if (index === 0) setDocumentType("none");
       } else {
         pdf.removeFile(index);
-        if (index === 0) {
-          setDocumentType("none");
-        }
+        if (index === 0) setDocumentType("none");
       }
     },
-    [flowMode, documentType, pdf, docx, batch]
+    [flowMode, documentType, pdf, docx, img, batch]
   );
 
   const activeChangeRegulation = flowMode === "batch"
     ? batch.changeRegulation
     : documentType === "docx"
       ? docx.changeRegulation
-      : pdf.changeRegulation;
+      : documentType === "image"
+        ? img.changeRegulation
+        : pdf.changeRegulation;
   const activeToggleType = flowMode === "batch"
     ? batch.toggleType
     : documentType === "docx"
       ? docx.toggleType
-      : pdf.toggleType;
+      : documentType === "image"
+        ? img.toggleType
+        : pdf.toggleType;
 
   // Calculate redaction counts per page (PDF only, single mode)
   const redactionCounts: Record<number, number> = {};
@@ -301,6 +335,43 @@ export default function RedactPage() {
               onRejectAll={docx.rejectAll}
               onToggleRedaction={docx.toggleRedaction}
               onRemoveRedaction={docx.removeRedaction}
+              selectedRedactionId={selectedRedactionId}
+              onSelectRedaction={setSelectedRedactionId}
+            />
+          </div>
+        </div>
+      ) : documentType === "image" && img.document ? (
+        /* Image Processing state (single) */
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6">
+          <div className="overflow-auto max-h-[80vh] flex justify-center">
+            <ImageViewer
+              document={img.document}
+              redactions={img.redactions}
+              selectedRedactionId={selectedRedactionId}
+              onSelectRedaction={setSelectedRedactionId}
+              onToggleRedaction={img.toggleRedaction}
+              onRemoveRedaction={img.removeRedaction}
+              onManualRedaction={img.addManualRedaction}
+            />
+          </div>
+          <div>
+            <RedactionControls
+              status={img.status}
+              progress={img.progress}
+              redactions={img.redactions}
+              currentPage={1}
+              totalPages={1}
+              onPageChange={() => {}}
+              onScan={img.scan}
+              onRedact={img.applyRedaction}
+              onDownload={img.downloadRedacted}
+              onReset={handleReset}
+              hasDocument={!!img.document}
+              hasRedactedPdf={!!img.redactedBlobUrl}
+              onConfirmAll={img.confirmAll}
+              onRejectAll={img.rejectAll}
+              onToggleRedaction={img.toggleRedaction}
+              onRemoveRedaction={img.removeRedaction}
               selectedRedactionId={selectedRedactionId}
               onSelectRedaction={setSelectedRedactionId}
             />
