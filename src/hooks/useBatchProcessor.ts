@@ -296,7 +296,9 @@ export function useBatchProcessor() {
           result.pdfDocument.arrayBuffer = new ArrayBuffer(0);
           result.pdfDocument.pages = [];
         } else if (result.type === "docx" && result.docxDocument) {
-          const confirmedMatches = result.docxRedactions.map((r) => r.match);
+          const confirmedMatches = result.docxRedactions
+            .filter((r) => r.confirmed)
+            .map((r) => r.match);
           const redactedBytes = await redactDocx(
             result.docxDocument.arrayBuffer,
             confirmedMatches,

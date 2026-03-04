@@ -38,7 +38,7 @@ export async function redactDocx(
     if (!xmlFile) continue;
 
     const xmlContent = await xmlFile.async("string");
-    const redactedXml = redactXmlContent(xmlContent, redactionRanges);
+    const redactedXml = redactXmlContentAdvanced(xmlContent, redactionRanges);
     zip.file(xmlPath, redactedXml);
 
     processed++;
@@ -96,6 +96,7 @@ interface RedactionRange {
 /**
  * Redact text within DOCX XML content.
  * Replaces text in <w:t> elements that matches PII values with asterisks.
+ * Only modifies content inside <w:t>...</w:t> tags to avoid corrupting XML structure.
  */
 function redactXmlContent(
   xml: string,
@@ -116,15 +117,17 @@ function redactXmlContent(
 
   let result = xml;
 
-  // Process each <w:t> element and replace matching text
+  // Replace only within <w:t>...</w:t> elements to avoid corrupting XML attributes/structure
   for (const value of sortedValues) {
     const asterisks = replacements.get(value)!;
-    // Escape special XML/regex characters in the value for safe regex matching
     const escaped = escapeRegex(value);
-    // Replace within <w:t> element content
-    // The text might be split across multiple <w:t> elements in a run,
-    // but for simple cases, direct replacement works
-    result = result.replace(new RegExp(escaped, "g"), escapeXml(asterisks));
+    result = result.replace(
+      /(<w:t(?:\s[^>]*)?>)([^<]*?)(<\/w:t>)/g,
+      (_, open, content, close) => {
+        const newContent = content.replace(new RegExp(escaped, "g"), escapeXml(asterisks));
+        return open + newContent + close;
+      }
+    );
   }
 
   return result;
@@ -173,11 +176,14 @@ function redactParagraphElement(
   let result = pXml;
   for (const range of ranges) {
     if (fullParagraphText.includes(range.value)) {
-      // Simple case: value is within a single <w:t> element
+      // Replace only within <w:t> element content to avoid corrupting XML structure
       const escaped = escapeRegex(range.value);
       result = result.replace(
-        new RegExp(escaped, "g"),
-        escapeXml(range.asterisks)
+        /(<w:t(?:\s[^>]*)?>)([^<]*?)(<\/w:t>)/g,
+        (_, open, content, close) => {
+          const newContent = content.replace(new RegExp(escaped, "g"), escapeXml(range.asterisks));
+          return open + newContent + close;
+        }
       );
     }
   }

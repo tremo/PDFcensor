@@ -77,7 +77,7 @@ function extractParagraphs(xml: string): DocxParagraph[] {
     let tMatch;
 
     while ((tMatch = tRegex.exec(pContent)) !== null) {
-      textParts.push(tMatch[1]);
+      textParts.push(decodeXmlEntities(tMatch[1]));
     }
 
     const text = textParts.join("");
@@ -85,12 +85,20 @@ function extractParagraphs(xml: string): DocxParagraph[] {
     if (text.length > 0) {
       paragraphs.push({ text, charOffset });
       charOffset += text.length + 1; // +1 for \n separator
-    } else {
-      charOffset += 1; // empty paragraph still counts as \n
     }
+    // Empty paragraphs are excluded from fullText, so don't advance charOffset
   }
 
   return paragraphs;
+}
+
+function decodeXmlEntities(str: string): string {
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
 }
 
 /**
