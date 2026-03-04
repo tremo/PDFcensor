@@ -204,8 +204,8 @@ export default function LandingDemo() {
                         <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <div className="demo-feature-title">{t("features.aiDetection")}</div>
-                    <div className="demo-feature-text">{t("features.aiDetectionText")}</div>
+                    <div className="demo-feature-title">{t("features.autoDetection")}</div>
+                    <div className="demo-feature-text">{t("features.autoDetectionText")}</div>
                   </div>
                   <div className="demo-feature-card">
                     <div className="demo-feature-icon green">

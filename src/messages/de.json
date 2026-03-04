@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "Automatische PII-Erkennung",
-      "description": "Findet automatisch SSN, Namen, E-Mails, Telefonnummern, IBAN, Kreditkarten und mehr durch intelligente Mustererkennung mit Validierung."
+      "description": "Findet automatisch SSN, Namen, E-Mails, Telefonnummern, IBAN, Kreditkarten und mehr durch Mustererkennung mit integrierten Validierungsregeln."
     },
     "regulations": {
       "title": "Multi-Regulierungs-Unterstützung",
@@ -77,7 +77,7 @@
     "redactedFile": "Geschwärzte Datei",
     "redactedFileDesc": "Lokal erstellt, sofort herunterladen",
     "zeroRetention": "Kein Speichern. Keine Aufbewahrung.",
-    "footnote": "Nur extrahierter Text wird für die KI-Erkennung gesendet. Ihre Dateien verlassen nie Ihren Browser."
+    "footnote": "Die gesamte Erkennung läuft lokal in Ihrem Browser. Ihre Dateien verlassen nie Ihr Gerät."
   },
   "security": {
     "title": "Echte permanente Schwärzung",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "KI-Erkennung",
-      "aiDetectionText": "Findet SSN, Namen, Adressen automatisch.",
+      "autoDetection": "Auto-Erkennung",
+      "autoDetectionText": "Findet SSN, Namen, Adressen mit Mustererkennung.",
       "stayPrivate": "Dateien bleiben privat",
-      "stayPrivateText": "Nur Text wird zur Erkennung gesendet.",
+      "stayPrivateText": "Alles läuft in Ihrem Browser.",
       "visualReview": "Visuelle Überprüfung",
       "visualReviewText": "Bestätigen, ablehnen oder manuell hinzufügen."
     },

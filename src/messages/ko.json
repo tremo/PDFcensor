@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "개인정보 자동 감지",
-      "description": "주민등록번호, 이름, 이메일, 전화번호, IBAN, 신용카드 번호 등을 검증 기능이 포함된 스마트 패턴 매칭으로 자동 감지합니다."
+      "description": "주민등록번호, 이름, 이메일, 전화번호, IBAN, 신용카드 번호 등을 검증 규칙이 내장된 패턴 매칭으로 자동 감지합니다."
     },
     "regulations": {
       "title": "다중 규정 지원",
@@ -77,7 +77,7 @@
     "redactedFile": "삭제된 파일",
     "redactedFileDesc": "로컬에서 생성, 즉시 다운로드",
     "zeroRetention": "제로 저장. 제로 보관.",
-    "footnote": "AI 감지를 위해 추출된 텍스트만 전송됩니다. 파일은 브라우저를 떠나지 않습니다."
+    "footnote": "모든 감지는 브라우저에서 로컬로 실행됩니다. 파일은 기기를 떠나지 않습니다."
   },
   "security": {
     "title": "진정한 영구 삭제",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "AI 감지",
-      "aiDetectionText": "주민번호, 이름, 주소를 자동으로 찾습니다.",
+      "autoDetection": "자동 감지",
+      "autoDetectionText": "주민번호, 이름, 주소를 패턴 매칭으로 찾습니다.",
       "stayPrivate": "파일 비공개 유지",
-      "stayPrivateText": "감지를 위해 텍스트만 전송됩니다.",
+      "stayPrivateText": "모든 것이 브라우저에서 실행됩니다.",
       "visualReview": "시각적 검토",
       "visualReviewText": "승인, 거부 또는 수동 추가."
     },

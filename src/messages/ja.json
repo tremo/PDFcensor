@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "個人情報の自動検出",
-      "description": "マイナンバー、氏名、メールアドレス、電話番号、IBAN、クレジットカード番号などを、検証機能付きのスマートパターンマッチングで自動検出します。"
+      "description": "マイナンバー、氏名、メールアドレス、電話番号、IBAN、クレジットカード番号などを、検証ルール付きのパターンマッチングで自動検出します。"
     },
     "regulations": {
       "title": "複数規制への対応",
@@ -77,7 +77,7 @@
     "redactedFile": "墨消し済みファイル",
     "redactedFileDesc": "ローカルで作成、即座にダウンロード",
     "zeroRetention": "ゼロストレージ。ゼロ保持。",
-    "footnote": "AI検出のために送信されるのは抽出されたテキストのみです。ファイルはブラウザから出ることはありません。"
+    "footnote": "すべての検出はブラウザ内でローカルに実行されます。ファイルがデバイスから出ることはありません。"
   },
   "security": {
     "title": "真の永続的墨消し",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "AI検出",
-      "aiDetectionText": "マイナンバー、氏名、住所を自動検出。",
+      "autoDetection": "自動検出",
+      "autoDetectionText": "マイナンバー、氏名、住所をパターンマッチングで検出。",
       "stayPrivate": "ファイルはプライベートを維持",
-      "stayPrivateText": "検出にはテキストのみ送信。",
+      "stayPrivateText": "すべてブラウザ内で実行されます。",
       "visualReview": "視覚的レビュー",
       "visualReviewText": "承認、拒否、または手動追加。"
     },

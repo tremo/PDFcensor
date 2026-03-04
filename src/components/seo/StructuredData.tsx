@@ -27,7 +27,7 @@ export function getWebApplicationSchema(locale: string) {
       priceCurrency: "USD",
     },
     featureList: [
-      "Automatic PII detection",
+      "Rule-based PII detection",
       "True text redaction",
       "Client-side processing",
       "HIPAA compliant",

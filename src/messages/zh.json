@@ -30,7 +30,7 @@
     },
     "autoDetect": {
       "title": "自动检测个人信息",
-      "description": "使用带有验证功能的智能模式匹配，自动识别身份证号、姓名、电子邮件、电话号码、IBAN、信用卡号等。"
+      "description": "使用带有内置验证规则的模式匹配，自动识别身份证号、姓名、电子邮件、电话号码、IBAN、信用卡号等。"
     },
     "regulations": {
       "title": "多法规支持",
@@ -77,7 +77,7 @@
     "redactedFile": "脱敏文件",
     "redactedFileDesc": "本地创建，即时下载",
     "zeroRetention": "零存储。零保留。",
-    "footnote": "仅提取的文本被发送用于AI检测。您的文件永远不会离开浏览器。"
+    "footnote": "所有检测均在浏览器中本地运行。您的文件永远不会离开您的设备。"
   },
   "security": {
     "title": "真正的永久脱敏",
@@ -203,10 +203,10 @@
       "formats": "PDF, DOCX"
     },
     "features": {
-      "aiDetection": "AI检测",
-      "aiDetectionText": "自动查找身份证号、姓名、地址。",
+      "autoDetection": "自动检测",
+      "autoDetectionText": "通过模式匹配查找身份证号、姓名、地址。",
       "stayPrivate": "文件保持私密",
-      "stayPrivateText": "仅发送文本用于检测。",
+      "stayPrivateText": "一切在浏览器中运行。",
       "visualReview": "可视化审查",
       "visualReviewText": "批准、拒绝或手动添加。"
     },
