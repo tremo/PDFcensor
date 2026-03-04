@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/lib/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { AuthButton } from "@/components/auth/AuthButton";
 import { Shield, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -44,6 +45,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <AuthButton />
             <LanguageSwitcher />
             <button
               className="md:hidden p-2 hover:bg-muted rounded-lg cursor-pointer"

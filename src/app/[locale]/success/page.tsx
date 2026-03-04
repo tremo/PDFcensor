@@ -1,70 +1,68 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { CheckCircle, Copy, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Crown, User } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
-import { useState, Suspense } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { Suspense } from "react";
 
 function SuccessContent() {
-  const searchParams = useSearchParams();
-  const sessionId = searchParams.get("session_id");
-  const [copied, setCopied] = useState(false);
-
-  // In production, you'd fetch the license key from the session
-  const licenseKey = sessionId ? `demo-${sessionId?.slice(0, 8)}` : null;
-
-  const handleCopy = () => {
-    if (licenseKey) {
-      navigator.clipboard.writeText(licenseKey);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
+  const t = useTranslations("auth");
+  const { user } = useAuth();
 
   return (
     <div className="mx-auto max-w-lg px-4 py-16 sm:py-24">
       <Card>
         <CardHeader className="text-center">
           <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-          <CardTitle className="text-2xl">Payment Successful!</CardTitle>
+          <CardTitle className="text-2xl">{t("paymentSuccess")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-muted-foreground text-center">
-            Thank you for purchasing OfflineRedact Pro. Your license key is below.
+            {t("paymentSuccessDescription")}
           </p>
 
-          {licenseKey && (
-            <div className="flex items-center gap-2 p-3 bg-muted rounded-lg">
-              <code className="flex-1 text-sm font-mono break-all">
-                {licenseKey}
-              </code>
-              <button
-                onClick={handleCopy}
-                className="p-2 hover:bg-background rounded cursor-pointer"
-              >
-                <Copy className="h-4 w-4" />
-              </button>
+          {/* Pro status indicator */}
+          <div className="flex items-center justify-center gap-2 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+            <Crown className="h-5 w-5 text-amber-600" />
+            <span className="font-semibold text-amber-800">{t("proActivated")}</span>
+          </div>
+
+          {user ? (
+            <p className="text-sm text-muted-foreground text-center">
+              {t("proLinkedToAccount", { email: user.email || "" })}
+            </p>
+          ) : (
+            <div className="space-y-3">
+              <p className="text-sm text-muted-foreground text-center">
+                {t("loginToActivate")}
+              </p>
+              <Button asChild className="w-full" variant="outline">
+                <Link href="/login">
+                  <User className="h-4 w-4" />
+                  {t("login")}
+                </Link>
+              </Button>
             </div>
           )}
 
-          {copied && (
-            <p className="text-sm text-green-600 text-center">
-              Copied to clipboard!
-            </p>
-          )}
-
-          <p className="text-sm text-muted-foreground text-center">
-            Save this key! Enter it in the redaction tool to remove watermarks.
-          </p>
-
-          <Button asChild className="w-full" variant="accent">
-            <Link href="/redact">
-              Start Redacting
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex gap-3">
+            {user && (
+              <Button asChild className="flex-1" variant="outline">
+                <Link href="/account">
+                  {t("account")}
+                </Link>
+              </Button>
+            )}
+            <Button asChild className={user ? "flex-1" : "w-full"} variant="accent">
+              <Link href="/redact">
+                {t("goToRedact")}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </CardContent>
       </Card>
     </div>

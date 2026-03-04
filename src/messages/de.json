@@ -263,5 +263,38 @@
       ],
       "cta": "Pro-Lizenz erwerben"
     }
+  },
+  "auth": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "account": "Konto",
+    "loginTitle": "Willkommen bei OfflineRedact",
+    "loginSubtitle": "Melden Sie sich an, um Ihre Lizenz zu verwalten und auf Pro-Funktionen zuzugreifen",
+    "googleLogin": "Mit Google fortfahren",
+    "magicLink": "Magic Link",
+    "magicLinkDescription": "Wir senden Ihnen einen Anmeldelink per E-Mail",
+    "magicLinkSent": "Wir haben Ihnen einen Magic Link gesendet. Überprüfen Sie Ihren Posteingang.",
+    "checkEmail": "Überprüfen Sie Ihre E-Mail",
+    "email": "E-Mail",
+    "emailPlaceholder": "sie@beispiel.de",
+    "password": "Passwort",
+    "passwordPlaceholder": "Min. 6 Zeichen",
+    "loginButton": "Anmelden",
+    "registerButton": "Konto erstellen",
+    "confirmEmail": "Überprüfen Sie Ihre E-Mail für einen Bestätigungslink",
+    "or": "oder",
+    "back": "Zurück",
+    "proPlan": "Pro — Lebenslange Lizenz",
+    "proDescription": "Alle Funktionen freigeschaltet, keine Wasserzeichen, Stapelverarbeitung aktiviert",
+    "freePlan": "Kostenloser Plan",
+    "freeDescription": "Grundlegende Schwärzung mit Wasserzeichen",
+    "upgradeToPro": "Auf Pro upgraden",
+    "goToRedact": "Schwärzung starten",
+    "paymentSuccess": "Zahlung erfolgreich!",
+    "paymentSuccessDescription": "Vielen Dank für den Kauf von OfflineRedact Pro. Ihr Konto wurde aktualisiert.",
+    "proActivated": "Pro-Lizenz aktiviert",
+    "proLinkedToAccount": "Pro-Funktionen sind mit {email} verknüpft",
+    "loginToActivate": "Melden Sie sich an, um Pro-Funktionen mit Ihrem Konto zu verknüpfen"
   }
 }
