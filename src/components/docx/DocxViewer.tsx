@@ -51,6 +51,9 @@ export function DocxViewer({
       const start = redaction.match.startIndex;
       const end = redaction.match.endIndex;
 
+      // Skip overlapping redactions (start is before the end of the previous one)
+      if (start < lastIndex) continue;
+
       // Add text before this redaction
       if (start > lastIndex) {
         result.push({ text: fullText.slice(lastIndex, start) });
@@ -123,7 +126,7 @@ export function DocxViewer({
                     isSelected && "ring-2 ring-blue-500 ring-offset-1"
                   )}
                   onClick={() => onSelectRedaction(r.id)}
-                  title={`${r.match.type}: ${r.match.value}`}
+                  title={r.match.type}
                 >
                   {"*".repeat(r.match.value.length)}
                 </span>
@@ -175,7 +178,7 @@ export function DocxViewer({
                     : "hover:bg-amber-300/50"
                 )}
                 onClick={() => onSelectRedaction(r.id)}
-                title={`${r.match.type}: ${r.match.value}`}
+                title={r.match.type}
               >
                 {segment.text}
               </span>

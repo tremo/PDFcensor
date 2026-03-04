@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -46,17 +47,7 @@ export default async function BlogPost({ params }: { params: Promise<Params> }) 
   const post = blogContent[slug];
 
   if (!post) {
-    return (
-      <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold mb-4">Post not found</h1>
-        <Button asChild variant="outline">
-          <Link href="/blog">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Blog
-          </Link>
-        </Button>
-      </div>
-    );
+    notFound();
   }
 
   return (

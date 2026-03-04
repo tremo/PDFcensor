@@ -67,6 +67,36 @@ async function saveLicenseToRedis(licenseData: { key: string; email: string; cre
   await redis.set(`license:${licenseData.key}`, JSON.stringify(licenseData));
 }
 
+async function checkSessionProcessed(sessionId: string): Promise<boolean> {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return false;
+
+  try {
+    const { Redis } = await import("@upstash/redis");
+    const redis = new Redis({ url, token });
+    const exists = await redis.exists(`processed_session:${sessionId}`);
+    return exists === 1;
+  } catch {
+    return false;
+  }
+}
+
+async function markSessionProcessed(sessionId: string): Promise<void> {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) return;
+
+  try {
+    const { Redis } = await import("@upstash/redis");
+    const redis = new Redis({ url, token });
+    // Expire after 30 days (Stripe retries don't last that long)
+    await redis.set(`processed_session:${sessionId}`, "1", { ex: 60 * 60 * 24 * 30 });
+  } catch {
+    // Non-fatal: worst case is a duplicate license, which is recoverable
+  }
+}
+
 export async function POST(request: Request) {
   const body = await request.text();
   const headersList = await headers();
@@ -90,8 +120,15 @@ export async function POST(request: Request) {
 
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
+      const sessionId = session.id;
       const email = session.customer_details?.email || "";
       const userId = session.metadata?.userId;
+
+      // Idempotency: skip if this session was already processed
+      const alreadyProcessed = await checkSessionProcessed(sessionId);
+      if (alreadyProcessed) {
+        return NextResponse.json({ received: true });
+      }
 
       const licenseData = createLicenseData(email);
 
@@ -100,6 +137,9 @@ export async function POST(request: Request) {
       if (!savedToSupabase) {
         await saveLicenseToRedis(licenseData);
       }
+
+      // Mark session as processed to prevent duplicate license creation on retries
+      await markSessionProcessed(sessionId);
     }
 
     return NextResponse.json({ received: true });
