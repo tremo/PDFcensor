@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import type { PIIType } from "@/types/pii";
@@ -22,6 +22,11 @@ import {
   Check,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const ALL_PII_TYPES: PIIType[] = [
+  "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
+  "usPhone", "iban", "creditCard", "passport", "names", "address",
+];
 
 interface RedactionControlsProps {
   status: ProcessingStatus;
@@ -67,8 +72,14 @@ export function RedactionControls({
   const t = useTranslations("redact.controls");
   const tp = useTranslations("redact.piiTypes");
 
-  const confirmedRedactions = redactions.filter((r) => r.confirmed);
-  const rejectedRedactions = redactions.filter((r) => !r.confirmed);
+  const confirmedRedactions = useMemo(
+    () => redactions.filter((r) => r.confirmed),
+    [redactions]
+  );
+  const rejectedRedactions = useMemo(
+    () => redactions.filter((r) => !r.confirmed),
+    [redactions]
+  );
   const confirmedCount = confirmedRedactions.length;
   const rejectedCount = rejectedRedactions.length;
 
@@ -76,41 +87,45 @@ export function RedactionControls({
 
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
 
-  const allPiiTypes: PIIType[] = [
-    "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
-    "usPhone", "iban", "creditCard", "passport", "names", "address",
-  ];
-
-  const piiTypeLabels: Record<string, string> = {};
-  for (const type of allPiiTypes) {
-    piiTypeLabels[type] = tp(type);
-  }
+  const piiTypeLabels = useMemo(() => {
+    const labels: Record<string, string> = {};
+    for (const type of ALL_PII_TYPES) {
+      labels[type] = tp(type);
+    }
+    return labels;
+  }, [tp]);
 
   // Group CONFIRMED redactions by PII type for current page
-  const pageConfirmed = confirmedRedactions.filter(
-    (r) => r.pageIndex === currentPage - 1
+  const pageConfirmed = useMemo(
+    () => confirmedRedactions.filter((r) => r.pageIndex === currentPage - 1),
+    [confirmedRedactions, currentPage]
   );
-  const pageRejected = rejectedRedactions.filter(
-    (r) => r.pageIndex === currentPage - 1
+  const pageRejected = useMemo(
+    () => rejectedRedactions.filter((r) => r.pageIndex === currentPage - 1),
+    [rejectedRedactions, currentPage]
   );
 
-  const groupedConfirmed = pageConfirmed.reduce<
-    Record<string, RedactionArea[]>
-  >((acc, r) => {
-    const key = r.piiType;
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(r);
-    return acc;
-  }, {});
+  const groupedConfirmed = useMemo(
+    () =>
+      pageConfirmed.reduce<Record<string, RedactionArea[]>>((acc, r) => {
+        const key = r.piiType;
+        if (!acc[key]) acc[key] = [];
+        acc[key].push(r);
+        return acc;
+      }, {}),
+    [pageConfirmed]
+  );
 
-  const groupedPending = pageRejected.reduce<
-    Record<string, RedactionArea[]>
-  >((acc, r) => {
-    const key = r.piiType;
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(r);
-    return acc;
-  }, {});
+  const groupedPending = useMemo(
+    () =>
+      pageRejected.reduce<Record<string, RedactionArea[]>>((acc, r) => {
+        const key = r.piiType;
+        if (!acc[key]) acc[key] = [];
+        acc[key].push(r);
+        return acc;
+      }, {}),
+    [pageRejected]
+  );
 
   return (
     <div className="space-y-4">

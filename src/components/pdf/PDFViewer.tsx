@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import { renderPageToCanvas } from "@/lib/pdf/parser";
 import type { RedactionArea } from "@/types/pdf";
 import { cn } from "@/lib/utils";
@@ -43,6 +43,17 @@ type InteractionMode =
 
 const HANDLE_SIZE = 8;
 const MIN_SIZE = 10;
+const RESIZE_HANDLES = ["nw", "ne", "sw", "se"] as const;
+const HANDLE_CURSOR_MAP: Record<string, string> = {
+  nw: "nw-resize",
+  ne: "ne-resize",
+  sw: "sw-resize",
+  se: "se-resize",
+};
+
+function getHandleCursor(handle: string): string {
+  return HANDLE_CURSOR_MAP[handle] || "pointer";
+}
 
 export function PDFViewer({
   arrayBuffer,
@@ -99,8 +110,9 @@ export function PDFViewer({
   }, [arrayBuffer, currentPage, scale]);
 
   // Show all redactions on current page (both approved and pending)
-  const pageRedactions = redactions.filter(
-    (r) => r.pageIndex === currentPage - 1
+  const pageRedactions = useMemo(
+    () => redactions.filter((r) => r.pageIndex === currentPage - 1),
+    [redactions, currentPage]
   );
 
   const getRelativePos = useCallback(
@@ -271,18 +283,6 @@ export function PDFViewer({
   if (!arrayBuffer) return null;
 
   const isSelected = (id: string) => selectedRedactionId === id;
-
-  const resizeHandles = ["nw", "ne", "sw", "se"];
-
-  const getHandleCursor = (handle: string) => {
-    const map: Record<string, string> = {
-      nw: "nw-resize",
-      ne: "ne-resize",
-      sw: "sw-resize",
-      se: "se-resize",
-    };
-    return map[handle] || "pointer";
-  };
 
   const getHandlePosition = (
     handle: string,
@@ -460,7 +460,7 @@ export function PDFViewer({
 
               {/* Resize handles - visible when selected */}
               {selected &&
-                resizeHandles.map((handle) => {
+                RESIZE_HANDLES.map((handle) => {
                   const pos = getHandlePosition(handle, r);
                   return (
                     <div

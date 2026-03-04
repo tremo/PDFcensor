@@ -1,5 +1,6 @@
 import type { PDFDocumentData, PDFPageData, PDFTextItem } from "@/types/pdf";
 import * as pdfjsLib from "pdfjs-dist";
+import type { PDFDocumentProxy } from "pdfjs-dist";
 
 // Set up the worker
 if (typeof window !== "undefined") {
@@ -19,7 +20,7 @@ export async function parsePDF(
   const arrayBuffer = await file.arrayBuffer();
 
   const loadingTask = pdfjsLib.getDocument({
-    data: new Uint8Array(arrayBuffer.slice(0)),
+    data: new Uint8Array(arrayBuffer),
     useSystemFonts: true,
   });
 
@@ -81,7 +82,7 @@ export async function parsePDF(
  * Render a PDF page to a canvas at the given scale.
  */
 export async function renderPageToCanvas(
-  arrayBuffer: ArrayBuffer,
+  source: ArrayBuffer | PDFDocumentProxy,
   pageNumber: number,
   canvas: HTMLCanvasElement,
   scale: number = 1.5,
@@ -89,9 +90,9 @@ export async function renderPageToCanvas(
 ): Promise<{ width: number; height: number }> {
   if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
 
-  const pdf = await pdfjsLib.getDocument({
-    data: new Uint8Array(arrayBuffer.slice(0)),
-  }).promise;
+  const pdf = source instanceof ArrayBuffer
+    ? await pdfjsLib.getDocument({ data: new Uint8Array(source) }).promise
+    : source;
 
   if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
 
