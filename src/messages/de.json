@@ -196,6 +196,42 @@
       "address": "Adressen"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Dokument hier ablegen",
+      "subtitle": "oder klicken zum Durchsuchen",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "KI-Erkennung",
+      "aiDetectionText": "Findet SSN, Namen, Adressen automatisch.",
+      "stayPrivate": "Dateien bleiben privat",
+      "stayPrivateText": "Nur Text wird zur Erkennung gesendet.",
+      "visualReview": "Visuelle Überprüfung",
+      "visualReviewText": "Bestätigen, ablehnen oder manuell hinzufügen."
+    },
+    "guidance": {
+      "title": "Überprüfen & Bearbeiten",
+      "clickBefore": "Klicken zum Schwärzen",
+      "clickMiddle": "oder",
+      "clickAfter": "zum Verwerfen erkannter Elemente.",
+      "drag": "Auf leere Fläche ziehen, um einen Bereich zu zeichnen.",
+      "detected": "Erkannt",
+      "willRedact": "Wird geschwärzt"
+    },
+    "fab": {
+      "review": "Überprüfen",
+      "download": "Herunterladen"
+    },
+    "back": "Zurück",
+    "analyzing": "Analysiert von",
+    "success": {
+      "title": "Sicher zum Teilen",
+      "text": "Sensible Daten dauerhaft entfernt.",
+      "subtitle": "Ihr Dokument ist bereit.",
+      "badge": "Schwärzung erfolgreich"
+    }
+  },
   "pricing": {
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos, upgraden Sie bei Bedarf",

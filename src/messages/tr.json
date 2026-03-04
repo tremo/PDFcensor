@@ -196,6 +196,42 @@
       "address": "Adresler"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Belgenizi buraya bırakın",
+      "subtitle": "veya gözatmak için tıklayın",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "AI Tespiti",
+      "aiDetectionText": "TC Kimlik, isim, adresleri otomatik bulur.",
+      "stayPrivate": "Dosyalar Gizli Kalır",
+      "stayPrivateText": "Tespit için yalnızca metin gönderilir.",
+      "visualReview": "Görsel İnceleme",
+      "visualReviewText": "Onayla, reddet veya manuel ekle."
+    },
+    "guidance": {
+      "title": "İncele ve Düzenle",
+      "clickBefore": "Sansürlemek için",
+      "clickMiddle": "tıklayın ya da",
+      "clickAfter": "ile yoksayın.",
+      "drag": "Kutu çizmek için boş alana sürükleyin.",
+      "detected": "Tespit edildi",
+      "willRedact": "Sansürlenecek"
+    },
+    "fab": {
+      "review": "İncele",
+      "download": "İndir"
+    },
+    "back": "Geri",
+    "analyzing": "Analiz ediliyor:",
+    "success": {
+      "title": "Paylaşıma Hazır",
+      "text": "Hassas veriler kalıcı olarak silindi.",
+      "subtitle": "Belgeniz hazır.",
+      "badge": "Sansürleme Başarılı"
+    }
+  },
   "pricing": {
     "title": "Basit, Şeffaf Fiyatlandırma",
     "subtitle": "Ücretsiz başlayın, ihtiyacınız olduğunda yükseltin",

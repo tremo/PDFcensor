@@ -196,6 +196,42 @@
       "address": "地址"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "将文档拖放至此",
+      "subtitle": "或点击浏览",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "AI检测",
+      "aiDetectionText": "自动查找身份证号、姓名、地址。",
+      "stayPrivate": "文件保持私密",
+      "stayPrivateText": "仅发送文本用于检测。",
+      "visualReview": "可视化审查",
+      "visualReviewText": "批准、拒绝或手动添加。"
+    },
+    "guidance": {
+      "title": "审查与编辑",
+      "clickBefore": "点击涂改或",
+      "clickMiddle": "",
+      "clickAfter": "忽略检测到的项目。",
+      "drag": "在空白处拖动以绘制框。",
+      "detected": "已检测",
+      "willRedact": "将涂改"
+    },
+    "fab": {
+      "review": "审查",
+      "download": "下载"
+    },
+    "back": "返回",
+    "analyzing": "正在分析：",
+    "success": {
+      "title": "可以分享",
+      "text": "敏感数据已永久删除。",
+      "subtitle": "您的文档已准备好。",
+      "badge": "涂改成功"
+    }
+  },
   "pricing": {
     "title": "简单透明的定价",
     "subtitle": "免费开始，按需升级",

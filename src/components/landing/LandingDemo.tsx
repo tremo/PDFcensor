@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 type DemoPhase =
   | "idle"
@@ -53,6 +54,7 @@ function XIcon({ size = 9 }: { size?: number }) {
 }
 
 export default function LandingDemo() {
+  const t = useTranslations("landing");
   const [phase, setPhase] = useState<DemoPhase>("idle");
 
   const runDemo = useCallback(() => {
@@ -138,7 +140,7 @@ export default function LandingDemo() {
   const showBottomBar = showDoc && !showSuccess;
   const showFab = showDoc && !showAnalyzing && !showSuccess;
 
-  const fabText = phase === "preview" ? "Download" : "Review";
+  const fabText = phase === "preview" ? t("fab.download") : t("fab.review");
   const fabClass = phase === "preview" ? "download" : "review";
 
   return (
@@ -191,9 +193,9 @@ export default function LandingDemo() {
                       <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                     </svg>
                   </div>
-                  <div className="demo-dropzone-title">Drop your document here</div>
-                  <div className="demo-dropzone-subtitle">or click to browse</div>
-                  <div className="demo-dropzone-formats">PDF, DOCX</div>
+                  <div className="demo-dropzone-title">{t("dropzone.title")}</div>
+                  <div className="demo-dropzone-subtitle">{t("dropzone.subtitle")}</div>
+                  <div className="demo-dropzone-formats">{t("dropzone.formats")}</div>
                 </div>
                 <div className="demo-feature-cards">
                   <div className="demo-feature-card">
@@ -202,8 +204,8 @@ export default function LandingDemo() {
                         <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <div className="demo-feature-title">AI Detection</div>
-                    <div className="demo-feature-text">Finds SSNs, names, addresses automatically.</div>
+                    <div className="demo-feature-title">{t("features.aiDetection")}</div>
+                    <div className="demo-feature-text">{t("features.aiDetectionText")}</div>
                   </div>
                   <div className="demo-feature-card">
                     <div className="demo-feature-icon green">
@@ -211,8 +213,8 @@ export default function LandingDemo() {
                         <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                       </svg>
                     </div>
-                    <div className="demo-feature-title">Files Stay Private</div>
-                    <div className="demo-feature-text">Only text sent for detection.</div>
+                    <div className="demo-feature-title">{t("features.stayPrivate")}</div>
+                    <div className="demo-feature-text">{t("features.stayPrivateText")}</div>
                   </div>
                   <div className="demo-feature-card">
                     <div className="demo-feature-icon purple">
@@ -221,8 +223,8 @@ export default function LandingDemo() {
                         <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                       </svg>
                     </div>
-                    <div className="demo-feature-title">Visual Review</div>
-                    <div className="demo-feature-text">Approve, reject, or add manually.</div>
+                    <div className="demo-feature-title">{t("features.visualReview")}</div>
+                    <div className="demo-feature-text">{t("features.visualReviewText")}</div>
                   </div>
                 </div>
               </div>
@@ -259,30 +261,30 @@ export default function LandingDemo() {
               {showGuidance && (
                 <div className="demo-guidance">
                   <div className="demo-guidance-header">
-                    <span className="demo-guidance-title">Review &amp; Edit</span>
+                    <span className="demo-guidance-title">{t("guidance.title")}</span>
                     <button className="demo-guidance-close">&times;</button>
                   </div>
                   <div className="demo-guidance-text">
-                    Click{" "}
+                    {t("guidance.clickBefore")}{" "}
                     <span className="demo-guidance-check-icon">
                       <CheckIcon size={8} />
                     </span>{" "}
-                    to redact or{" "}
+                    {t("guidance.clickMiddle")}{" "}
                     <span className="demo-guidance-x-icon">
                       <XIcon size={7} />
                     </span>{" "}
-                    to dismiss detected items.
+                    {t("guidance.clickAfter")}
                     <br />
-                    Drag on empty space to draw a box.
+                    {t("guidance.drag")}
                   </div>
                   <div className="demo-guidance-legend">
                     <div className="demo-legend-item">
                       <div className="demo-legend-box detected" />
-                      <span>Detected</span>
+                      <span>{t("guidance.detected")}</span>
                     </div>
                     <div className="demo-legend-item">
                       <div className="demo-legend-box redact" />
-                      <span>Will redact</span>
+                      <span>{t("guidance.willRedact")}</span>
                     </div>
                   </div>
                 </div>
@@ -446,7 +448,7 @@ export default function LandingDemo() {
                     <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                       <path d="M19 12H5M12 19l-7-7 7-7" />
                     </svg>
-                    Back
+                    {t("back")}
                   </span>
                   <span className="demo-filename">paystub_jane_doe_dec2025.pdf</span>
                 </div>
@@ -457,7 +459,7 @@ export default function LandingDemo() {
                 <div className="demo-analyzing">
                   <div className="demo-analyzing-spinner" />
                   <div className="demo-analyzing-text">
-                    Analyzing by <span>OfflineRedact</span>
+                    {t("analyzing")} <span>OfflineRedact</span>
                   </div>
                 </div>
               )}
@@ -471,17 +473,17 @@ export default function LandingDemo() {
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </div>
-                    <div className="demo-success-title">Safe to Share</div>
+                    <div className="demo-success-title">{t("success.title")}</div>
                     <div className="demo-success-text">
-                      Sensitive data removed permanently.
+                      {t("success.text")}
                       <br />
-                      Your document is ready.
+                      {t("success.subtitle")}
                     </div>
                     <div className="demo-success-badge">
                       <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                         <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
-                      Redaction Successful
+                      {t("success.badge")}
                     </div>
                   </div>
                 </div>

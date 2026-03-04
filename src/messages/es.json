@@ -196,6 +196,42 @@
       "address": "Direcciones"
     }
   },
+  "landing": {
+    "dropzone": {
+      "title": "Suelta tu documento aquí",
+      "subtitle": "o haz clic para explorar",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "aiDetection": "Detección IA",
+      "aiDetectionText": "Encuentra SSN, nombres, direcciones automáticamente.",
+      "stayPrivate": "Archivos permanecen privados",
+      "stayPrivateText": "Solo se envía texto para la detección.",
+      "visualReview": "Revisión visual",
+      "visualReviewText": "Aprobar, rechazar o agregar manualmente."
+    },
+    "guidance": {
+      "title": "Revisar y Editar",
+      "clickBefore": "Clic para censurar o",
+      "clickMiddle": "",
+      "clickAfter": "para descartar elementos detectados.",
+      "drag": "Arrastra en espacio vacío para dibujar un cuadro.",
+      "detected": "Detectado",
+      "willRedact": "Se censurará"
+    },
+    "fab": {
+      "review": "Revisar",
+      "download": "Descargar"
+    },
+    "back": "Atrás",
+    "analyzing": "Analizando por",
+    "success": {
+      "title": "Listo para compartir",
+      "text": "Datos sensibles eliminados permanentemente.",
+      "subtitle": "Su documento está listo.",
+      "badge": "Censura exitosa"
+    }
+  },
   "pricing": {
     "title": "Precios simples y transparentes",
     "subtitle": "Comience gratis, actualice cuando lo necesite",
