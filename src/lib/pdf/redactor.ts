@@ -133,37 +133,54 @@ async function removeTextFromContentStream(
           `\\(${escapeRegExp(escaped)}\\)\\s*Tj`,
           "g"
         );
-        if (tjRegex.test(content)) {
-          content = content.replace(tjRegex, "() Tj");
+        const replaced = content.replace(tjRegex, "() Tj");
+        if (replaced !== content) {
+          content = replaced;
           modified = true;
         }
 
         // Match within TJ arrays: [(text) ...] TJ
-        // We need to replace the text within TJ array entries
-        const partialRegex = new RegExp(escapeRegExp(escaped), "g");
+        // Collect all matches first, then replace in reverse order
+        // to avoid corrupting regex lastIndex during iteration
         const tjArrayRegex = /\[([^\]]*)\]\s*TJ/g;
+        const replacements: { index: number; length: number; replacement: string }[] = [];
         let arrayMatch;
 
         while ((arrayMatch = tjArrayRegex.exec(content)) !== null) {
           const arrayContent = arrayMatch[1];
-          if (partialRegex.test(arrayContent)) {
+          // Use regex without g flag for existence check
+          if (new RegExp(escapeRegExp(escaped)).test(arrayContent)) {
             const newArrayContent = arrayContent.replace(
               new RegExp(`\\(([^)]*${escapeRegExp(escaped)}[^)]*)\\)`, "g"),
               "()"
             );
             if (newArrayContent !== arrayContent) {
-              content =
-                content.slice(0, arrayMatch.index) +
-                "[" + newArrayContent + "] TJ" +
-                content.slice(arrayMatch.index + arrayMatch[0].length);
-              modified = true;
+              replacements.push({
+                index: arrayMatch.index,
+                length: arrayMatch[0].length,
+                replacement: "[" + newArrayContent + "] TJ",
+              });
             }
           }
+        }
+
+        // Apply replacements in reverse order to preserve indices
+        for (let j = replacements.length - 1; j >= 0; j--) {
+          const r = replacements[j];
+          content =
+            content.slice(0, r.index) +
+            r.replacement +
+            content.slice(r.index + r.length);
+          modified = true;
         }
       }
 
       if (modified) {
-        const newBytes = new TextEncoder().encode(content);
+        // Re-encode as Latin-1 to match the original decode (line 125)
+        const newBytes = new Uint8Array(content.length);
+        for (let j = 0; j < content.length; j++) {
+          newBytes[j] = content.charCodeAt(j) & 0xFF;
+        }
         const compressed = deflate(newBytes);
         const newStream = node.context.stream(compressed, {
           Length: compressed.length,
