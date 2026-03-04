@@ -263,5 +263,38 @@
       ],
       "cta": "Proライセンスを取得"
     }
+  },
+  "auth": {
+    "login": "ログイン",
+    "register": "登録",
+    "logout": "ログアウト",
+    "account": "アカウント",
+    "loginTitle": "OfflineRedactへようこそ",
+    "loginSubtitle": "ライセンスを管理し、Pro機能にアクセスするにはサインインしてください",
+    "googleLogin": "Googleで続行",
+    "magicLink": "マジックリンク",
+    "magicLinkDescription": "メールにログインリンクをお送りします",
+    "magicLinkSent": "マジックリンクをメールに送信しました。受信トレイを確認してください。",
+    "checkEmail": "メールを確認してください",
+    "email": "メール",
+    "emailPlaceholder": "example@email.com",
+    "password": "パスワード",
+    "passwordPlaceholder": "6文字以上",
+    "loginButton": "サインイン",
+    "registerButton": "アカウント作成",
+    "confirmEmail": "確認リンクのメールを確認してください",
+    "or": "または",
+    "back": "戻る",
+    "proPlan": "Pro — 永久ライセンス",
+    "proDescription": "すべての機能がアンロック、透かしなし、バッチ処理有効",
+    "freePlan": "無料プラン",
+    "freeDescription": "透かし付きの基本的な墨消し",
+    "upgradeToPro": "Proにアップグレード",
+    "goToRedact": "墨消しを開始",
+    "paymentSuccess": "支払い成功！",
+    "paymentSuccessDescription": "OfflineRedact Proをご購入いただきありがとうございます。アカウントがアップグレードされました。",
+    "proActivated": "Proライセンスが有効化されました",
+    "proLinkedToAccount": "Pro機能は{email}にリンクされています",
+    "loginToActivate": "Pro機能をアカウントにリンクするにはサインインしてください"
   }
 }

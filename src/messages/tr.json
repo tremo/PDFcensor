@@ -263,5 +263,38 @@
       ],
       "cta": "Pro Lisansı Al"
     }
+  },
+  "auth": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "account": "Hesabım",
+    "loginTitle": "OfflineRedact'e Hoş Geldiniz",
+    "loginSubtitle": "Lisansınızı yönetmek ve Pro özelliklere erişmek için giriş yapın",
+    "googleLogin": "Google ile Devam Et",
+    "magicLink": "Sihirli Bağlantı",
+    "magicLinkDescription": "E-postanıza bir giriş bağlantısı göndereceğiz",
+    "magicLinkSent": "E-postanıza bir sihirli bağlantı gönderdik. Gelen kutunuzu kontrol edin ve bağlantıya tıklayın.",
+    "checkEmail": "E-postanızı kontrol edin",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@email.com",
+    "password": "Şifre",
+    "passwordPlaceholder": "Min. 6 karakter",
+    "loginButton": "Giriş Yap",
+    "registerButton": "Hesap Oluştur",
+    "confirmEmail": "Onay bağlantısı için e-postanızı kontrol edin",
+    "or": "veya",
+    "back": "Geri",
+    "proPlan": "Pro — Ömür Boyu Lisans",
+    "proDescription": "Tüm özellikler açık, filigran yok, toplu işleme aktif",
+    "freePlan": "Ücretsiz Plan",
+    "freeDescription": "Filigranli temel sansürleme",
+    "upgradeToPro": "Pro'ya Yükselt",
+    "goToRedact": "Sansürlemeye Başla",
+    "paymentSuccess": "Ödeme Başarılı!",
+    "paymentSuccessDescription": "OfflineRedact Pro satın aldığınız için teşekkürler. Hesabınız yükseltildi.",
+    "proActivated": "Pro Lisans Aktifleştirildi",
+    "proLinkedToAccount": "Pro özellikler {email} hesabına bağlandı",
+    "loginToActivate": "Pro özellikleri hesabınıza bağlamak için giriş yapın"
   }
 }

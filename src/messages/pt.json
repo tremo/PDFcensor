@@ -263,5 +263,38 @@
       ],
       "cta": "Obter Licença Pro"
     }
+  },
+  "auth": {
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "account": "Conta",
+    "loginTitle": "Bem-vindo ao OfflineRedact",
+    "loginSubtitle": "Faça login para gerenciar sua licença e acessar recursos Pro",
+    "googleLogin": "Continuar com Google",
+    "magicLink": "Link mágico",
+    "magicLinkDescription": "Enviaremos um link de login para seu e-mail",
+    "magicLinkSent": "Enviamos um link mágico para seu e-mail. Verifique sua caixa de entrada.",
+    "checkEmail": "Verifique seu e-mail",
+    "email": "E-mail",
+    "emailPlaceholder": "voce@exemplo.com",
+    "password": "Senha",
+    "passwordPlaceholder": "Mín. 6 caracteres",
+    "loginButton": "Entrar",
+    "registerButton": "Criar conta",
+    "confirmEmail": "Verifique seu e-mail para um link de confirmação",
+    "or": "ou",
+    "back": "Voltar",
+    "proPlan": "Pro — Licença vitalícia",
+    "proDescription": "Todos os recursos desbloqueados, sem marcas d'água, processamento em lote habilitado",
+    "freePlan": "Plano gratuito",
+    "freeDescription": "Redação básica com marcas d'água",
+    "upgradeToPro": "Atualizar para Pro",
+    "goToRedact": "Começar a redação",
+    "paymentSuccess": "Pagamento bem-sucedido!",
+    "paymentSuccessDescription": "Obrigado por comprar o OfflineRedact Pro. Sua conta foi atualizada.",
+    "proActivated": "Licença Pro ativada",
+    "proLinkedToAccount": "Os recursos Pro estão vinculados a {email}",
+    "loginToActivate": "Faça login para vincular os recursos Pro à sua conta"
   }
 }

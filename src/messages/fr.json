@@ -263,5 +263,38 @@
       ],
       "cta": "Obtenir la licence Pro"
     }
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion",
+    "account": "Compte",
+    "loginTitle": "Bienvenue sur OfflineRedact",
+    "loginSubtitle": "Connectez-vous pour gérer votre licence et accéder aux fonctionnalités Pro",
+    "googleLogin": "Continuer avec Google",
+    "magicLink": "Lien magique",
+    "magicLinkDescription": "Nous vous enverrons un lien de connexion par e-mail",
+    "magicLinkSent": "Nous vous avons envoyé un lien magique. Vérifiez votre boîte de réception.",
+    "checkEmail": "Vérifiez votre e-mail",
+    "email": "E-mail",
+    "emailPlaceholder": "vous@exemple.fr",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Min. 6 caractères",
+    "loginButton": "Se connecter",
+    "registerButton": "Créer un compte",
+    "confirmEmail": "Vérifiez votre e-mail pour un lien de confirmation",
+    "or": "ou",
+    "back": "Retour",
+    "proPlan": "Pro — Licence à vie",
+    "proDescription": "Toutes les fonctionnalités débloquées, sans filigrane, traitement par lots activé",
+    "freePlan": "Plan gratuit",
+    "freeDescription": "Caviardage basique avec filigrane",
+    "upgradeToPro": "Passer à Pro",
+    "goToRedact": "Commencer le caviardage",
+    "paymentSuccess": "Paiement réussi !",
+    "paymentSuccessDescription": "Merci d'avoir acheté OfflineRedact Pro. Votre compte a été mis à jour.",
+    "proActivated": "Licence Pro activée",
+    "proLinkedToAccount": "Les fonctionnalités Pro sont liées à {email}",
+    "loginToActivate": "Connectez-vous pour lier les fonctionnalités Pro à votre compte"
   }
 }

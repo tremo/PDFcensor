@@ -263,5 +263,38 @@
       ],
       "cta": "Get Pro License"
     }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "account": "Account",
+    "loginTitle": "Welcome to OfflineRedact",
+    "loginSubtitle": "Sign in to manage your license and access Pro features",
+    "googleLogin": "Continue with Google",
+    "magicLink": "Magic Link",
+    "magicLinkDescription": "We'll send you a login link to your email",
+    "magicLinkSent": "We've sent a magic link to your email. Check your inbox and click the link to sign in.",
+    "checkEmail": "Check your email",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "Min. 6 characters",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "confirmEmail": "Check your email for a confirmation link",
+    "or": "or",
+    "back": "Back",
+    "proPlan": "Pro — Lifetime License",
+    "proDescription": "All features unlocked, no watermarks, batch processing enabled",
+    "freePlan": "Free Plan",
+    "freeDescription": "Basic redaction with watermarks",
+    "upgradeToPro": "Upgrade to Pro",
+    "goToRedact": "Start Redacting",
+    "paymentSuccess": "Payment Successful!",
+    "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
+    "proActivated": "Pro License Activated",
+    "proLinkedToAccount": "Pro features are linked to {email}",
+    "loginToActivate": "Sign in to link Pro features to your account"
   }
 }

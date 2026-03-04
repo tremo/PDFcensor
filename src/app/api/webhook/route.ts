@@ -3,8 +3,57 @@ import { headers } from "next/headers";
 import { getStripeServer } from "@/lib/stripe/client";
 import { createLicenseData } from "@/lib/stripe/license";
 
-// Upstash Redis - optional (gracefully handle if not configured)
-async function saveLicense(licenseData: { key: string; email: string; created: string; expires: string | null; active: boolean }) {
+// Save license to Supabase and activate Pro status
+async function saveLicenseToSupabase(
+  licenseData: { key: string; email: string; created: string; expires: string | null; active: boolean },
+  userId?: string
+) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!supabaseUrl || !serviceKey) {
+    console.warn("Supabase not configured, falling back to Redis");
+    return false;
+  }
+
+  const { createClient } = await import("@supabase/supabase-js");
+  const supabase = createClient(supabaseUrl, serviceKey);
+
+  // Find user by userId from metadata, or by email
+  let resolvedUserId = userId;
+  if (!resolvedUserId && licenseData.email) {
+    const { data: profiles } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("email", licenseData.email)
+      .limit(1);
+    if (profiles && profiles.length > 0) {
+      resolvedUserId = profiles[0].id;
+    }
+  }
+
+  // Insert license
+  await supabase.from("licenses").insert({
+    key: licenseData.key,
+    email: licenseData.email,
+    user_id: resolvedUserId || null,
+    active: licenseData.active,
+    expires_at: licenseData.expires,
+  });
+
+  // Update profile to Pro
+  if (resolvedUserId) {
+    await supabase
+      .from("profiles")
+      .update({ is_pro: true, updated_at: new Date().toISOString() })
+      .eq("id", resolvedUserId);
+  }
+
+  return true;
+}
+
+// Upstash Redis fallback
+async function saveLicenseToRedis(licenseData: { key: string; email: string; created: string; expires: string | null; active: boolean }) {
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
@@ -42,11 +91,15 @@ export async function POST(request: Request) {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
       const email = session.customer_details?.email || "";
+      const userId = session.metadata?.userId;
 
       const licenseData = createLicenseData(email);
-      await saveLicense(licenseData);
 
-      console.log("License created:", licenseData.key, "for", email);
+      // Save to Supabase first, fall back to Redis
+      const savedToSupabase = await saveLicenseToSupabase(licenseData, userId);
+      if (!savedToSupabase) {
+        await saveLicenseToRedis(licenseData);
+      }
     }
 
     return NextResponse.json({ received: true });

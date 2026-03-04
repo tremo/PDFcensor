@@ -263,5 +263,38 @@
       ],
       "cta": "获取Pro许可证"
     }
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "account": "账户",
+    "loginTitle": "欢迎来到 OfflineRedact",
+    "loginSubtitle": "登录以管理您的许可证并访问 Pro 功能",
+    "googleLogin": "使用 Google 继续",
+    "magicLink": "魔法链接",
+    "magicLinkDescription": "我们将向您的邮箱发送登录链接",
+    "magicLinkSent": "我们已向您的邮箱发送了魔法链接。请检查收件箱。",
+    "checkEmail": "检查您的邮箱",
+    "email": "邮箱",
+    "emailPlaceholder": "example@email.com",
+    "password": "密码",
+    "passwordPlaceholder": "至少6个字符",
+    "loginButton": "登录",
+    "registerButton": "创建账户",
+    "confirmEmail": "请检查邮箱中的确认链接",
+    "or": "或",
+    "back": "返回",
+    "proPlan": "Pro — 终身许可证",
+    "proDescription": "所有功能已解锁，无水印，批量处理已启用",
+    "freePlan": "免费计划",
+    "freeDescription": "带水印的基本编辑",
+    "upgradeToPro": "升级到 Pro",
+    "goToRedact": "开始编辑",
+    "paymentSuccess": "支付成功！",
+    "paymentSuccessDescription": "感谢您购买 OfflineRedact Pro。您的账户已升级。",
+    "proActivated": "Pro 许可证已激活",
+    "proLinkedToAccount": "Pro 功能已关联到 {email}",
+    "loginToActivate": "登录以将 Pro 功能关联到您的账户"
   }
 }

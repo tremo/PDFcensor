@@ -1,11 +1,16 @@
 import { NextResponse } from "next/server";
 import { getStripeServer } from "@/lib/stripe/client";
+import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
   try {
     const { locale = "en" } = await request.json();
     const stripe = getStripeServer();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+
+    // Get current user from Supabase session
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -26,8 +31,10 @@ export async function POST(request: Request) {
       mode: "payment",
       success_url: `${appUrl}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}/${locale}/pricing`,
+      ...(user?.email && { customer_email: user.email }),
       metadata: {
         locale,
+        ...(user?.id && { userId: user.id }),
       },
     });
 
