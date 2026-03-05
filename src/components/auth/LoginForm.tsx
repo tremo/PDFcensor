@@ -20,6 +20,14 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
 
   const supabase = createClient();
 
+  if (!supabase) {
+    return (
+      <div className="text-center text-sm text-destructive">
+        {t("authUnavailable")}
+      </div>
+    );
+  }
+
   const getRedirectUrl = () => {
     const origin = window.location.origin;
     const locale = window.location.pathname.split("/")[1] || "en";
