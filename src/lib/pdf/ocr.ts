@@ -5,7 +5,7 @@ import type { PDFDocumentData } from "@/types/pdf";
 import type { PIIType } from "@/types/pii";
 import type { RedactionArea } from "@/types/pdf";
 import { detectPII } from "@/lib/pii/detector";
-import { renderPageToCanvas } from "./parser";
+import { renderPageToCanvas, getDocumentArrayBuffer } from "./parser";
 
 /** OCR word with bounding box in PDF coordinate space */
 interface OCRWord {
@@ -148,8 +148,9 @@ export async function detectOCRPII(
   const ocrRedactions: RedactionArea[] = [];
 
   // Parse PDF once for all pages instead of re-parsing per page
+  const arrayBuffer = await getDocumentArrayBuffer(doc);
   const pdf = await pdfjsLib.getDocument({
-    data: new Uint8Array(doc.arrayBuffer),
+    data: new Uint8Array(arrayBuffer),
   }).promise;
 
   // Create a Tesseract scheduler with 1 worker for sequential processing

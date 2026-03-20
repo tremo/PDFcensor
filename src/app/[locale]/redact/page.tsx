@@ -391,7 +391,7 @@ export default function RedactPage() {
           <div className="overflow-auto max-h-[80vh]">
             <div className="flex justify-center min-w-fit">
               <PDFViewer
-                arrayBuffer={pdf.document.arrayBuffer}
+                file={pdf.document.file}
                 currentPage={pdf.currentPage}
                 totalPages={pdf.document.totalPages}
                 redactions={pdf.redactions}
@@ -482,7 +482,7 @@ function BatchPDFReview({
       <div className="overflow-auto max-h-[80vh]">
         <div className="flex justify-center min-w-fit">
           <PDFViewer
-            arrayBuffer={doc.arrayBuffer}
+            file={doc.file}
             currentPage={currentPage}
             totalPages={doc.totalPages}
             redactions={redactions}
