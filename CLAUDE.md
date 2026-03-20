@@ -49,13 +49,14 @@ middleware.ts # Next.js middleware
 
 - [x] ~~TC Kimlik negatif modülo~~ — `tc-kimlik.ts:16` — `((x % 10) + 10) % 10` ile düzeltildi
 - [x] ~~PDF content stream regex mutasyonu + Latin-1/UTF-8 encoding~~ — `pdf/redactor.ts` — Ters sıralı replace + Latin-1 re-encode
+- [x] ~~Görsel-sadece redaksiyon sessiz fallback~~ — `pdf/redactor.ts` — Hedefli kaldırma başarısız olunca `stripAllTextFromPage()` tüm BT..ET bloklarını siliyor
+- [x] ~~Lisans doğrulama bypass~~ — `license/validate/route.ts` — Redis yoksa 503 döndürüyor (UUID kabul kaldırıldı)
+- [x] ~~Lisans anahtarı müşteriye ulaşmıyor~~ — Anonim ödeme kapatıldı, checkout auth zorunlu, Pro `profiles.is_pro` üzerinden çalışıyor (ayrı key sistemi gereksizdi)
 
 ### KRİTİK — Güvenlik / Veri Kaybı
 
-- [ ] **Lisans doğrulama bypass** — `src/app/api/license/validate/route.ts:17-21` — Redis yoksa herhangi UUID v4 kabul ediliyor, `NODE_ENV` kontrolü yok
-- [ ] **Checkout locale injection (Open Redirect)** — `src/app/api/checkout/route.ts:6,27-28` — `locale` doğrulanmadan Stripe URL'lerine ekleniyor
+- [ ] **Checkout locale injection (Open Redirect)** — `src/app/api/checkout/route.ts:32` — `locale` doğrulanmadan Stripe URL'lerine ekleniyor
 - [ ] **StructuredData XSS** — `src/components/seo/StructuredData.tsx:9` — `dangerouslySetInnerHTML` ile `</script>` injection riski
-- [ ] **Görsel-sadece redaksiyon sessiz fallback** — `src/lib/pdf/redactor.ts:209-211` — Content stream başarısız olunca metin çıkarılabilir kalıyor
 
 ### ÖNEMLİ — Fonksiyonel Hatalar
 
@@ -64,7 +65,7 @@ middleware.ts # Next.js middleware
 - [ ] **DOCX XML entity decode eksik** — `src/lib/docx/parser.ts:80` — `&amp;`, `&lt;` decode edilmiyor
 - [ ] **`redactXmlContentAdvanced` hiç çağrılmıyor** — `src/lib/docx/redactor.ts:41,137` — Cross-run PII redaksiyonu çalışmıyor
 - [ ] **Lisans anahtarı müşteriye ulaşmıyor** — `src/app/[locale]/success/page.tsx:16` — Sahte `demo-` key gösteriliyor
-- [ ] **Webhook idempotency kontrolü yok** — `src/app/api/webhook/route.ts:42-49` — Retry'da duplike lisans oluşuyor
+- [x] ~~Webhook idempotency kontrolü yok~~ — Zaten `checkSessionProcessed`/`markSessionProcessed` ile Redis'te mevcut (30 gün TTL)
 - [ ] **`useTranslations` server component'te** — `src/app/[locale]/page.tsx:1` — `"use client"` veya `getTranslations` gerekli
 - [ ] **Blog 404 yerine 200 dönüyor** — `src/app/[locale]/blog/[slug]/page.tsx:48-59` — `notFound()` çağrılmıyor
 - [ ] **Batch DOCX confirmed durumunu yok sayıyor** — `src/hooks/useBatchProcessor.ts:274-295` — Kullanıcının reject'leri dikkate alınmıyor
@@ -102,5 +103,6 @@ middleware.ts # Next.js middleware
 - [ ] **Duplike cleanMetadata** — `redactor.ts` vs `metadata-cleaner.ts`
 - [ ] **RedactionControls / DocxRedactionControls %90 aynı** — Ortak component çıkarılabilir
 - [ ] **Dead code: pendingAutoScan ref** — Hiç kullanılmıyor
+- [ ] **Dead code: `useLicense` hook + `/api/license/validate`** — Hiçbir component tarafından kullanılmıyor, Pro kontrolü `AuthProvider.is_pro` ile yapılıyor
 - [ ] **IBAN regex çok kısıtlayıcı** — `src/lib/pii/patterns/global.ts:32` — 15-16 char IBAN'lar kaçırılıyor
 - [ ] **İsim tespiti false positive** — `src/lib/pii/patterns/names.ts` — ALL CAPS kelimeler isim sanılıyor
