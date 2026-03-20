@@ -102,7 +102,9 @@ export async function getDocumentArrayBuffer(
   if (doc.arrayBuffer && doc.arrayBuffer.byteLength > 0) {
     return doc.arrayBuffer;
   }
-  return doc.file.arrayBuffer();
+  const buffer = await doc.file.arrayBuffer();
+  doc.arrayBuffer = buffer;
+  return buffer;
 }
 
 /**

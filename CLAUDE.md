@@ -75,13 +75,13 @@ middleware.ts # Next.js middleware
 ### PERFORMANS
 
 - [ ] **OCR: PDF her sayfa için yeniden parse** — `src/lib/pdf/ocr.ts:54`, `parser.ts:92` — 100 sayfa = 100x parse
-- [ ] **ArrayBuffer.slice(0) gereksiz kopyalama** — `src/lib/pdf/parser.ts:23,93` — Her çağrıda tam PDF kopyalanıyor
-- [ ] **Batch tüm dosyaları bellekte tutuyor** — `src/hooks/useBatchProcessor.ts` — 10×50MB = ~1GB+
+- [x] ~~ArrayBuffer.slice(0) gereksiz kopyalama~~ — `parser.ts` — `getDocumentArrayBuffer`/`getDocxArrayBuffer` lazy load + cache
+- [x] ~~Batch tüm dosyaları bellekte tutuyor~~ — `useBatchProcessor.ts` — PII sonrası ağır veri serbest, redaksiyon File ref'ten lazy re-load
 - [ ] **Eksik memoization** — `PDFViewer.tsx`, `RedactionControls.tsx` — pageRedactions, allPiiTypes her render'da hesaplanıyor
 
 ### UI/UX
 
-- [ ] **Dosya boyutu limiti yok** — `src/components/pdf/PDFDropzone.tsx` — Sınırsız dosya kabul ediliyor
+- [x] ~~Dosya boyutu limiti yok~~ — Bellek optimizasyonu ile çözüldü (lazy load + scan sonrası release); limit konmadı, büyük dosyalar destekleniyor
 - [ ] **LanguageSwitcher mousedown/click race** — `src/components/layout/LanguageSwitcher.tsx:16-24,46` — Dropdown seçim yapılamadan kapanıyor
 - [ ] **PDFViewer overlayRef non-null assertion** — `src/components/pdf/PDFViewer.tsx:108` — Ref null iken crash
 - [ ] **Redact butonu yanlış sayı gösteriyor** — `src/components/RedactionControls.tsx:388-391` — confirmedCount yerine toplam gösteriliyor
