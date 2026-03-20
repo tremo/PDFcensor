@@ -29,7 +29,7 @@ export function detectEmail(text: string, pageIndex: number): PIIMatch[] {
  */
 export function detectIBAN(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  const regex = /\b([A-Z]{2}\d{2}\s?[A-Z0-9]{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?[A-Z0-9]{0,4})\b/g;
+  const regex = /\b([A-Z]{2}\d{2}\s?[A-Z0-9]{4}(?:\s?[A-Z0-9]{1,4}){2,7})\b/g;
   let match;
 
   while ((match = regex.exec(text)) !== null) {
