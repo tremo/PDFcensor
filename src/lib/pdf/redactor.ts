@@ -1,4 +1,4 @@
-import { PDFDocument, rgb, PDFPage, PDFName, PDFArray, PDFStream, PDFRawStream, PDFDict } from "pdf-lib";
+import { PDFDocument, rgb, PDFPage, PDFName, PDFArray, PDFStream, PDFRawStream } from "pdf-lib";
 import type { RedactionArea } from "@/types/pdf";
 import { deflate, inflate } from "pako";
 
@@ -35,7 +35,11 @@ export async function redactPDF(
   for (let i = 0; i < pages.length; i++) {
     const pageRedactions = redactionsByPage.get(i);
     if (pageRedactions && pageRedactions.length > 0) {
-      await removeTextFromContentStream(pages[i], pageRedactions);
+      const success = await removeTextFromContentStream(pages[i], pageRedactions);
+      if (!success) {
+        // Targeted removal failed — strip ALL text from this page so no PII leaks
+        stripAllTextFromPage(pages[i]);
+      }
     }
     currentStep++;
     onProgress?.(Math.round((currentStep / totalSteps) * 100));
@@ -80,18 +84,18 @@ export async function redactPDF(
 async function removeTextFromContentStream(
   page: PDFPage,
   redactions: RedactionArea[]
-): Promise<void> {
+): Promise<boolean> {
   const textsToRemove = new Set(
     redactions.map((r) => r.text).filter((t) => t.length > 0)
   );
 
-  if (textsToRemove.size === 0) return;
+  if (textsToRemove.size === 0) return true;
 
   try {
     const node = page.node;
     const contentsRef = node.get(PDFName.of("Contents"));
 
-    if (!contentsRef) return;
+    if (!contentsRef) return true;
 
     const contentsObj = node.context.lookup(contentsRef);
 
@@ -206,9 +210,78 @@ async function removeTextFromContentStream(
         }
       }
     }
+    return true;
   } catch (e) {
-    // If content stream manipulation fails, visual redaction still works
-    console.warn("Content stream manipulation failed for a page:", e);
+    console.warn("Content stream text removal failed for a page:", e);
+    return false;
+  }
+}
+
+/**
+ * Fallback: strip ALL text-rendering operators from every content stream on the page.
+ * This is a nuclear option — the page will have no selectable/copyable text at all,
+ * but the visual redaction rectangles still render, so the page remains viewable.
+ *
+ * Text operators removed: Tj, TJ, ', "
+ * We also remove BT...ET blocks entirely to prevent stale text state.
+ */
+function stripAllTextFromPage(page: PDFPage): void {
+  const node = page.node;
+  const contentsRef = node.get(PDFName.of("Contents"));
+  if (!contentsRef) return;
+
+  const contentsObj = node.context.lookup(contentsRef);
+
+  let streams: { stream: PDFStream; ref?: unknown }[] = [];
+  if (contentsObj instanceof PDFArray) {
+    for (let i = 0; i < contentsObj.size(); i++) {
+      const ref = contentsObj.get(i);
+      const obj = node.context.lookup(ref!);
+      if (obj instanceof PDFRawStream || obj instanceof PDFStream) {
+        streams.push({ stream: obj as PDFStream, ref });
+      }
+    }
+  } else if (contentsObj instanceof PDFRawStream || contentsObj instanceof PDFStream) {
+    streams.push({ stream: contentsObj as PDFStream });
+  }
+
+  for (const { stream, ref } of streams) {
+    let streamBytes: Uint8Array;
+    if (stream instanceof PDFRawStream) {
+      const encoded = stream.getContents();
+      try {
+        streamBytes = inflate(encoded);
+      } catch {
+        streamBytes = encoded;
+      }
+    } else {
+      streamBytes = stream.getContents();
+    }
+
+    const content = new TextDecoder("latin1").decode(streamBytes);
+
+    // Remove all BT...ET text blocks (the entire text object)
+    const stripped = content.replace(/\bBT\b[\s\S]*?\bET\b/g, "");
+
+    // Re-encode as Latin-1
+    const newBytes = new Uint8Array(stripped.length);
+    for (let j = 0; j < stripped.length; j++) {
+      newBytes[j] = stripped.charCodeAt(j) & 0xFF;
+    }
+    const compressed = deflate(newBytes);
+    const newStream = node.context.stream(compressed, {
+      Length: compressed.length,
+      Filter: "FlateDecode",
+    });
+
+    if (ref) {
+      node.context.assign(
+        ref as unknown as import("pdf-lib").PDFRef,
+        newStream
+      );
+    } else {
+      node.set(PDFName.of("Contents"), node.context.register(newStream));
+    }
   }
 }
 
