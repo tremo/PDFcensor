@@ -4,7 +4,7 @@ import { useState, useCallback, useRef } from "react";
 import { useLocale } from "next-intl";
 import type { PDFDocumentData, RedactionArea } from "@/types/pdf";
 import type { RegulationType, PIIType } from "@/types/pii";
-import { parsePDF } from "@/lib/pdf/parser";
+import { parsePDF, releasePageTextData, getDocumentArrayBuffer } from "@/lib/pdf/parser";
 import { detectPII } from "@/lib/pii/detector";
 import { detectOCRPII } from "@/lib/pdf/ocr";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
@@ -207,6 +207,9 @@ export function useBatchProcessor() {
             } catch {
               // OCR failure is non-fatal
             }
+
+            // Release heavy text data after scanning to free memory
+            releasePageTextData(doc);
           }
         } catch (e) {
           result.error =
@@ -278,8 +281,10 @@ export function useBatchProcessor() {
             confirmed: true,
           }));
           const pageHeights = result.pdfDocument.pages.map((p) => p.height);
+          // Load ArrayBuffer on demand from File
+          const arrayBuffer = await getDocumentArrayBuffer(result.pdfDocument);
           let redactedBytes = await redactPDF(
-            result.pdfDocument.arrayBuffer,
+            arrayBuffer,
             confirmed,
             pageHeights,
             () => {}
@@ -293,7 +298,7 @@ export function useBatchProcessor() {
           zip.file(outputName, redactedBytes);
 
           // Release heavy data after adding to zip to reduce memory
-          result.pdfDocument.arrayBuffer = new ArrayBuffer(0);
+          result.pdfDocument.arrayBuffer = null;
           result.pdfDocument.pages = [];
         } else if (result.type === "docx" && result.docxDocument) {
           const confirmedMatches = result.docxRedactions

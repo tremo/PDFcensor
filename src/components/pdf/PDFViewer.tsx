@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback, useMemo } from "react";
-import { renderPageToCanvas } from "@/lib/pdf/parser";
+import { renderPageToCanvas, openPDFProxy } from "@/lib/pdf/parser";
+import type { PDFDocumentProxy } from "pdfjs-dist";
 import type { RedactionArea } from "@/types/pdf";
 import { cn } from "@/lib/utils";
 import { X, Check, Undo2 } from "lucide-react";
 
 interface PDFViewerProps {
-  arrayBuffer: ArrayBuffer | null;
+  /** File reference for lazy PDF loading — preferred over arrayBuffer */
+  file?: File | null;
+  /** @deprecated Use `file` prop instead. Kept for backward compatibility. */
+  arrayBuffer?: ArrayBuffer | null;
   currentPage: number;
   totalPages: number;
   redactions: RedactionArea[];
@@ -56,6 +60,7 @@ function getHandleCursor(handle: string): string {
 }
 
 export function PDFViewer({
+  file,
   arrayBuffer,
   currentPage,
   redactions,
@@ -81,33 +86,67 @@ export function PDFViewer({
     null
   );
 
-  // Render the page
+  // Cache PDFDocumentProxy so we don't re-parse the PDF on every page change
+  const pdfProxyRef = useRef<PDFDocumentProxy | null>(null);
+  const pdfFileRef = useRef<File | null>(null);
+
+  // Clean up cached proxy on unmount
   useEffect(() => {
-    if (!arrayBuffer || !canvasRef.current) return;
+    return () => {
+      pdfProxyRef.current?.destroy();
+      pdfProxyRef.current = null;
+    };
+  }, []);
+
+  // Render the page using cached PDFDocumentProxy (from File) or fallback to ArrayBuffer
+  useEffect(() => {
+    if (!canvasRef.current) return;
+    if (!file && !arrayBuffer) return;
 
     const abortController = new AbortController();
 
-    renderPageToCanvas(
-      arrayBuffer,
-      currentPage,
-      canvasRef.current,
-      scale,
-      abortController.signal
-    )
-      .then((dims) => setDimensions(dims))
-      .catch((err) => {
-        if (
-          err?.name === "RenderingCancelledException" ||
-          err?.name === "AbortError"
-        )
-          return;
-        console.error("PDF render error:", err);
-      });
+    const render = async () => {
+      if (abortController.signal.aborted) return;
+
+      let source: PDFDocumentProxy | ArrayBuffer;
+
+      if (file) {
+        // Use cached proxy if same file, otherwise create new one
+        if (pdfFileRef.current !== file) {
+          pdfProxyRef.current?.destroy();
+          pdfProxyRef.current = await openPDFProxy(file);
+          pdfFileRef.current = file;
+        }
+        source = pdfProxyRef.current!;
+      } else {
+        source = arrayBuffer!;
+      }
+
+      if (abortController.signal.aborted) return;
+
+      const dims = await renderPageToCanvas(
+        source,
+        currentPage,
+        canvasRef.current!,
+        scale,
+        abortController.signal
+      );
+      setDimensions(dims);
+    };
+
+    render().catch((err) => {
+      if (
+        err?.name === "RenderingCancelledException" ||
+        err?.name === "AbortError"
+      )
+        return;
+      console.error("PDF render error:", err);
+    });
 
     return () => {
       abortController.abort();
     };
-  }, [arrayBuffer, currentPage, scale]);
+  }, [file, arrayBuffer, currentPage, scale]);
 
   // Show all redactions on current page (both approved and pending)
   const pageRedactions = useMemo(
@@ -280,7 +319,7 @@ export function PDFViewer({
     [getRelativePos]
   );
 
-  if (!arrayBuffer) return null;
+  if (!file && !arrayBuffer) return null;
 
   const isSelected = (id: string) => selectedRedactionId === id;
 

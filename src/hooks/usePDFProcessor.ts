@@ -8,7 +8,7 @@ import type {
   ProcessingStatus,
 } from "@/types/pdf";
 import type { RegulationType, PIIType } from "@/types/pii";
-import { parsePDF } from "@/lib/pdf/parser";
+import { parsePDF, releasePageTextData, reparsePages, getDocumentArrayBuffer } from "@/lib/pdf/parser";
 import { detectPII } from "@/lib/pii/detector";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { redactPDF } from "@/lib/pdf/redactor";
@@ -50,7 +50,15 @@ export function usePDFProcessor() {
       const locales = getRegulationLocales(reg, locale);
       await loadNameDictionaries(locales);
 
+      // If text data was previously released, re-parse pages
+      const needsReparse = doc.pages.length > 0 && doc.pages[0].textItems.length === 0 && doc.pages[0].fullText === "";
+      if (needsReparse) {
+        await reparsePages(doc, (p) => setProgress(Math.round(p * 0.3))); // 0-30% for re-parse
+      }
+
       const allRedactions: RedactionArea[] = [];
+      const progressBase = needsReparse ? 30 : 0;
+      const progressRange = 100 - progressBase;
 
       for (let i = 0; i < doc.pages.length; i++) {
         const page = doc.pages[i];
@@ -115,8 +123,13 @@ export function usePDFProcessor() {
           }
         }
 
-        setProgress(Math.round(((i + 1) / doc.pages.length) * 100));
+        setProgress(progressBase + Math.round(((i + 1) / doc.pages.length) * progressRange));
       }
+
+      // Release textItems and fullText to free memory — they're no longer needed
+      // since bounding boxes are already computed in RedactionArea objects.
+      // If the user re-scans, reparsePages() will reload them.
+      releasePageTextData(doc);
 
       setRedactions(allRedactions);
       setStatus("previewing");
@@ -180,9 +193,11 @@ export function usePDFProcessor() {
       setProgress(0);
 
       try {
+        // Load ArrayBuffer on demand from File
+        const arrayBuffer = await getDocumentArrayBuffer(document);
         const pageHeights = document.pages.map((p) => p.height);
         let resultBytes = await redactPDF(
-          document.arrayBuffer,
+          arrayBuffer,
           allConfirmed,
           pageHeights,
           setProgress

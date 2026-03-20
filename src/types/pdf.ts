@@ -24,7 +24,13 @@ export interface PDFDocumentData {
   totalPages: number;
   pages: PDFPageData[];
   fileSize: number;
-  arrayBuffer: ArrayBuffer;
+  /** Original File reference for lazy ArrayBuffer loading */
+  file: File;
+  /**
+   * Cached ArrayBuffer — only loaded on demand via getDocumentArrayBuffer().
+   * After redaction, set to null to free memory.
+   */
+  arrayBuffer: ArrayBuffer | null;
 }
 
 export interface RedactionArea {
