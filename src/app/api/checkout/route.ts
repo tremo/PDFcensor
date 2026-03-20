@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { getStripeServer } from "@/lib/stripe/client";
 import { createClient } from "@/lib/supabase/server";
+import { locales } from "@/lib/i18n/config";
 
 export async function POST(request: Request) {
   try {
-    const { locale = "en" } = await request.json();
+    const { locale: rawLocale = "en" } = await request.json();
+    const locale = locales.includes(rawLocale) ? rawLocale : "en";
     const stripe = getStripeServer();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
