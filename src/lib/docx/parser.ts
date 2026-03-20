@@ -12,6 +12,8 @@ export interface DocxDocumentData {
   paragraphs: DocxParagraph[];
   fullText: string;
   arrayBuffer: ArrayBuffer;
+  /** Original File reference for lazy ArrayBuffer reloading */
+  file: File;
 }
 
 /**
@@ -53,6 +55,7 @@ export async function parseDocx(
     paragraphs,
     fullText,
     arrayBuffer,
+    file,
   };
 }
 
@@ -99,6 +102,28 @@ function decodeXmlEntities(str: string): string {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&apos;/g, "'");
+}
+
+/**
+ * Get ArrayBuffer from a DocxDocumentData, reloading from File if released.
+ */
+export async function getDocxArrayBuffer(
+  doc: DocxDocumentData
+): Promise<ArrayBuffer> {
+  if (doc.arrayBuffer && doc.arrayBuffer.byteLength > 0) {
+    return doc.arrayBuffer;
+  }
+  const buffer = await doc.file.arrayBuffer();
+  doc.arrayBuffer = buffer;
+  return buffer;
+}
+
+/**
+ * Release heavy data from a DocxDocumentData to free memory.
+ * Keeps paragraphs/fullText (lightweight) and File reference for lazy reload.
+ */
+export function releaseDocxHeavyData(doc: DocxDocumentData): void {
+  doc.arrayBuffer = new ArrayBuffer(0);
 }
 
 /**

@@ -10,7 +10,7 @@ import { detectOCRPII } from "@/lib/pdf/ocr";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { redactPDF } from "@/lib/pdf/redactor";
 import { addWatermark } from "@/lib/pdf/watermark";
-import { parseDocx } from "@/lib/docx/parser";
+import { parseDocx, getDocxArrayBuffer, releaseDocxHeavyData } from "@/lib/docx/parser";
 import type { DocxDocumentData } from "@/lib/docx/parser";
 import { redactDocx } from "@/lib/docx/redactor";
 import type { PIIMatch } from "@/types/pii";
@@ -32,6 +32,10 @@ export interface BatchFileResult {
   type: "pdf" | "docx";
   pdfDocument?: PDFDocumentData;
   docxDocument?: DocxDocumentData;
+  /** Cached page heights for PDF redaction (survives memory release) */
+  pdfPageHeights?: number[];
+  /** Cached DOCX fullText for redaction (survives memory release) */
+  docxFullText?: string;
   pdfRedactions: RedactionArea[];
   docxRedactions: { id: string; match: PIIMatch; confirmed: boolean }[];
   redactedBytes: Uint8Array | null;
@@ -122,6 +126,10 @@ export function useBatchProcessor() {
               match: m,
               confirmed: false,
             }));
+
+            // Cache fullText for redaction, then release heavy ArrayBuffer
+            result.docxFullText = doc.fullText;
+            releaseDocxHeavyData(doc);
           } else {
             // Parse PDF
             const doc = await parsePDF(file, () => {});
@@ -208,8 +216,10 @@ export function useBatchProcessor() {
               // OCR failure is non-fatal
             }
 
-            // Release heavy text data after scanning to free memory
+            // Cache page heights for redaction, then release heavy data
+            result.pdfPageHeights = doc.pages.map((p) => p.height);
             releasePageTextData(doc);
+            doc.arrayBuffer = null;
           }
         } catch (e) {
           result.error =
@@ -274,15 +284,28 @@ export function useBatchProcessor() {
         const result = fileResults[i];
         setCurrentFileIndex(i);
 
-        if (result.type === "pdf" && result.pdfDocument) {
+        if (result.type === "pdf") {
           // Auto-confirm all
           const confirmed = result.pdfRedactions.map((r) => ({
             ...r,
             confirmed: true,
           }));
-          const pageHeights = result.pdfDocument.pages.map((p) => p.height);
-          // Load ArrayBuffer on demand from File
-          const arrayBuffer = await getDocumentArrayBuffer(result.pdfDocument);
+
+          // Use cached page heights, or reload from File if needed
+          let pageHeights = result.pdfPageHeights;
+          if (!pageHeights && result.pdfDocument) {
+            pageHeights = result.pdfDocument.pages.map((p) => p.height);
+          }
+          if (!pageHeights) {
+            setProgress(Math.round(((i + 1) / total) * 100));
+            continue;
+          }
+
+          // Load ArrayBuffer lazily from File reference
+          const arrayBuffer = result.pdfDocument
+            ? await getDocumentArrayBuffer(result.pdfDocument)
+            : await result.file.arrayBuffer();
+
           let redactedBytes = await redactPDF(
             arrayBuffer,
             confirmed,
@@ -297,17 +320,29 @@ export function useBatchProcessor() {
           );
           zip.file(outputName, redactedBytes);
 
-          // Release heavy data after adding to zip to reduce memory
-          result.pdfDocument.arrayBuffer = null;
-          result.pdfDocument.pages = [];
-        } else if (result.type === "docx" && result.docxDocument) {
+          // Release heavy data after adding to zip
+          if (result.pdfDocument) {
+            result.pdfDocument.arrayBuffer = null;
+            result.pdfDocument.pages = [];
+          }
+        } else if (result.type === "docx") {
           const confirmedMatches = result.docxRedactions
             .filter((r) => r.confirmed)
             .map((r) => r.match);
+
+          // Load ArrayBuffer lazily from File reference
+          const arrayBuffer = result.docxDocument
+            ? await getDocxArrayBuffer(result.docxDocument)
+            : await result.file.arrayBuffer();
+
+          const fullText = result.docxFullText
+            ?? result.docxDocument?.fullText
+            ?? "";
+
           const redactedBytes = await redactDocx(
-            result.docxDocument.arrayBuffer,
+            arrayBuffer,
             confirmedMatches,
-            result.docxDocument.fullText,
+            fullText,
             () => {}
           );
 
@@ -317,8 +352,10 @@ export function useBatchProcessor() {
           );
           zip.file(outputName, redactedBytes);
 
-          // Release heavy data after adding to zip to reduce memory
-          result.docxDocument.arrayBuffer = new ArrayBuffer(0);
+          // Release heavy data after adding to zip
+          if (result.docxDocument) {
+            releaseDocxHeavyData(result.docxDocument);
+          }
         }
 
         setProgress(Math.round(((i + 1) / total) * 100));
