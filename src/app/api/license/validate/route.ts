@@ -15,10 +15,10 @@ export async function POST(request: Request) {
     const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
     if (!url || !token) {
-      // For development: accept any well-formed UUID
-      const uuidRegex =
-        /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-      return NextResponse.json({ valid: uuidRegex.test(key) });
+      return NextResponse.json(
+        { valid: false, error: "License service unavailable" },
+        { status: 503 }
+      );
     }
 
     const { Redis } = await import("@upstash/redis");
