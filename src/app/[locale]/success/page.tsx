@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Crown, User } from "lucide-react";
+import { CheckCircle, ArrowRight, Crown } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import { Suspense } from "react";
@@ -30,33 +30,17 @@ function SuccessContent() {
             <span className="font-semibold text-amber-800">{t("proActivated")}</span>
           </div>
 
-          {user ? (
-            <p className="text-sm text-muted-foreground text-center">
-              {t("proLinkedToAccount", { email: user.email || "" })}
-            </p>
-          ) : (
-            <div className="space-y-3">
-              <p className="text-sm text-muted-foreground text-center">
-                {t("loginToActivate")}
-              </p>
-              <Button asChild className="w-full" variant="outline">
-                <Link href="/login">
-                  <User className="h-4 w-4" />
-                  {t("login")}
-                </Link>
-              </Button>
-            </div>
-          )}
+          <p className="text-sm text-muted-foreground text-center">
+            {t("proLinkedToAccount", { email: user?.email || "" })}
+          </p>
 
           <div className="flex gap-3">
-            {user && (
-              <Button asChild className="flex-1" variant="outline">
-                <Link href="/account">
-                  {t("account")}
-                </Link>
-              </Button>
-            )}
-            <Button asChild className={user ? "flex-1" : "w-full"} variant="accent">
+            <Button asChild className="flex-1" variant="outline">
+              <Link href="/account">
+                {t("account")}
+              </Link>
+            </Button>
+            <Button asChild className="flex-1" variant="accent">
               <Link href="/redact">
                 {t("goToRedact")}
                 <ArrowRight className="h-4 w-4" />
