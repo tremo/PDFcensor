@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "title": "OfflineRedact — Automatická redakce osobních údajů v PDF dokumentech",
+    "description": "Trvale odstraňte osobní údaje z PDF. V souladu s HIPAA, GDPR, KVKK. 100% na straně klienta — vaše soubory nikdy neopustí váš prohlížeč."
+  },
+  "nav": {
+    "home": "Domů",
+    "redact": "Redigovat dokumenty",
+    "pricing": "Ceník",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% na straně klienta — Vaše soubory nikdy neopustí váš prohlížeč",
+    "title": "Trvale redigujte osobní údaje v PDF dokumentech",
+    "subtitle": "Automaticky detekujte a trvale odstraňte osobní údaje — rodná čísla, jména, e-maily, telefonní čísla, IBAN — z vašich PDF souborů. V souladu s HIPAA, GDPR a KVKK.",
+    "cta": "Začít redigovat — Zdarma",
+    "ctaSecondary": "Zobrazit ceník",
+    "trustedBy": "Důvěřují nám právní firmy, poskytovatelé zdravotní péče a vládní agentury"
+  },
+  "features": {
+    "title": "Proč OfflineRedact?",
+    "subtitle": "Profesionální redakce PDF, která běží kompletně ve vašem prohlížeči",
+    "trueRedaction": {
+      "title": "Skutečná redakce",
+      "description": "Na rozdíl od jednoduchých černých obdélníků odstraňujeme skutečná textová data z PDF. Redigovaný obsah nelze vybrat, zkopírovat ani obnovit."
+    },
+    "clientSide": {
+      "title": "100% na straně klienta",
+      "description": "Vaše soubory nikdy neopustí vaše zařízení. Veškeré zpracování probíhá ve vašem prohlížeči — žádné nahrávání, žádné servery, žádné úniky dat."
+    },
+    "autoDetect": {
+      "title": "Automatická detekce PII",
+      "description": "Automaticky vyhledá rodná čísla, jména, e-maily, telefonní čísla, IBAN, platební karty a další pomocí porovnávání vzorů s vestavěnými validačními pravidly."
+    },
+    "regulations": {
+      "title": "Podpora více regulací",
+      "description": "Vestavěné profily pro HIPAA, GDPR, KVKK, CCPA, LGPD a další. Automaticky vybere správný profil na základě vaší polohy."
+    },
+    "batch": {
+      "title": "Dávkové zpracování",
+      "description": "Nahrajte více PDF najednou. Zpracujte je všechny postupně a stáhněte jako jeden ZIP soubor."
+    },
+    "metadata": {
+      "title": "Čištění metadat",
+      "description": "Odstraňuje skrytá metadata — autor, název, datum vytvoření, informace o softwaru — která by mohla odhalit citlivé informace."
+    }
+  },
+  "howItWorks": {
+    "title": "Jak to funguje",
+    "subtitle": "Tři jednoduché kroky k trvalé redakci citlivých informací",
+    "step1": {
+      "title": "Nahrát",
+      "description": "Přetáhněte své PDF soubory nebo klikněte pro procházení. Podporuje více souborů."
+    },
+    "step2": {
+      "title": "Zkontrolovat",
+      "description": "Automaticky detekované PII jsou zvýrazněny. Před použitím přidejte, odstraňte nebo upravte redakce."
+    },
+    "step3": {
+      "title": "Stáhnout",
+      "description": "Stáhněte si trvale redigované PDF. Původní text je nevratně odstraněn."
+    }
+  },
+  "comparison": {
+    "badge": "Rozdíl",
+    "title": "Ostatní nástroje nahrávají vaše soubory. My ne.",
+    "subtitle": "Většina nástrojů pro redakci vyžaduje nahrání celého dokumentu na jejich servery. OfflineRedact funguje jinak.",
+    "otherTools": "Ostatní nástroje",
+    "yourDoc": "Váš dokument",
+    "yourDocDesc": "PDF s citlivými údaji",
+    "theirServers": "Jejich servery",
+    "theirServersDesc": "Celý soubor nahrán a uložen",
+    "whoKnows": "Kdo ví?",
+    "whoKnowsDesc": "Uchováno hodiny nebo neomezeně",
+    "yourBrowser": "Váš prohlížeč",
+    "yourBrowserDesc": "Zpracováno bezpečně, nikdy neuloženo",
+    "redactedFile": "Redigovaný soubor",
+    "redactedFileDesc": "Vytvořen lokálně, okamžité stažení",
+    "zeroRetention": "Žádné úložiště. Žádné uchovávání.",
+    "footnote": "Veškerá detekce běží lokálně ve vašem prohlížeči. Vaše soubory nikdy neopustí vaše zařízení."
+  },
+  "security": {
+    "title": "Skutečná trvalá redakce",
+    "subtitle": "Na rozdíl od základních PDF editorů, které pouze překrývají černé obdélníky, OfflineRedact vytváří nový dokument bez citlivých dat. Nejsou skrytá — jednoduše neexistují ve výstupu.",
+    "noCopy": "Nelze kopírovat/vložit",
+    "noCopyDesc": "Text není ve výstupu",
+    "noTricks": "Žádné triky s Photoshopem",
+    "noTricksDesc": "Ne skryté, pryč",
+    "zeroRetention": "Žádné uchovávání",
+    "zeroRetentionDesc": "Dokumenty zpracovány a vymazány",
+    "encrypted": "AES-256 šifrování",
+    "encryptedDesc": "Bankovní úroveň šifrování"
+  },
+  "compliance": {
+    "title": "Vytvořeno pro globální soulad",
+    "subtitle": "OfflineRedact vám pomáhá splnit požadavky na ochranu dat v rámci 20+ regulací a standardů po celém světě."
+  },
+  "trust": {
+    "title": "Důvěřují nám profesionálové, kteří pracují s citlivými dokumenty",
+    "legal": "Právo",
+    "healthcare": "Zdravotnictví",
+    "realEstate": "Reality",
+    "finance": "Finance",
+    "government": "Veřejná správa"
+  },
+  "cta": {
+    "title": "Připraveni chránit citlivá data?",
+    "subtitle": "Začněte redigovat PDF zdarma — bez registrace.",
+    "button": "Začít redigovat"
+  },
+  "footer": {
+    "product": "Produkt",
+    "legal": "Právní informace",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky služby",
+    "rights": "Všechna práva vyhrazena.",
+    "tagline": "Trvalá redakce PDF — 100% ve vašem prohlížeči."
+  },
+  "redact": {
+    "title": "Nástroj pro redakci dokumentů",
+    "titleDocx": "Nástroj pro redakci Word dokumentů",
+    "titleBatch": "Dávková redakce dokumentů",
+    "dropzone": {
+      "title": "Přetáhněte soubory sem",
+      "subtitle": "nebo klikněte pro procházení souborů",
+      "hint": "Podporuje PDF a Word (.docx) soubory. Vaše soubory nikdy neopustí váš prohlížeč.",
+      "processing": "Zpracování..."
+    },
+    "controls": {
+      "regulation": "Regulační profil",
+      "piiTypes": "Typy PII k detekci",
+      "scan": "Vyhledat PII",
+      "scanning": "Vyhledávání...",
+      "ocrScanning": "OCR skenování obrázků...",
+      "redact": "Použít redakci",
+      "redacting": "Redigování...",
+      "download": "Stáhnout redigované PDF",
+      "downloadDocx": "Stáhnout redigovaný Word dokument",
+      "downloadAll": "Stáhnout vše (ZIP)",
+      "reset": "Začít znovu",
+      "parsing": "Analýza PDF...",
+      "parsingDocx": "Analýza Word dokumentu...",
+      "found": "Nalezeno {count} PII položek",
+      "censored": "cenzurováno",
+      "confirmed": "potvrzeno",
+      "rejected": "zamítnuto",
+      "rejectedItems": "Zamítnuté položky",
+      "pendingItems": "Čekající na kontrolu",
+      "pending": "čekající",
+      "restore": "Obnovit",
+      "comprehensive": "Komplexní (US + EU)",
+      "confirmAll": "Potvrdit vše",
+      "rejectAll": "Zamítnout vše",
+      "confirm": "Potvrdit",
+      "reject": "Zamítnout",
+      "delete": "Smazat",
+      "rescan": "Znovu naskenovat dokument",
+      "manualArea": "Ruční redakce",
+      "drawing": "Režim kreslení",
+      "select": "Režim výběru",
+      "noResults": "V tomto dokumentu nebyly detekovány žádné PII.",
+      "noResultsOnPage": "Na této stránce nejsou žádné cenzurované položky.",
+      "page": "Stránka {current} z {total}"
+    },
+    "docx": {
+      "pending": "Čekající",
+      "confirmed": "Potvrzeno"
+    },
+    "batch": {
+      "scanComplete": "Skenování dokončeno",
+      "totalFindings": "Nalezeno {count} kritických datových položek",
+      "acrossFiles": "v {count} dokumentech",
+      "downloadAllZip": "Redigovat vše a stáhnout ZIP",
+      "redactingAll": "Redigování všech souborů...",
+      "downloaded": "Staženo!",
+      "processingFile": "Zpracování souboru {current} z {total}...",
+      "fileBreakdown": "Přehled souborů",
+      "pages": "stránky",
+      "findingsInFile": "Detekováno {count} položek",
+      "noFindings": "Žádné citlivé údaje nenalezeny — čisté!",
+      "review": "Zkontrolovat",
+      "totalFiles": "{count} souborů",
+      "filesWithFindings": "{count} s nálezy",
+      "filesWithErrors": "{count} chyb",
+      "processing": "Skenování vašich dokumentů...",
+      "backToSummary": "Zpět na přehled"
+    },
+    "piiTypes": {
+      "ssn": "Číslo sociálního pojištění",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "E-mailová adresa",
+      "phone": "Telefonní číslo",
+      "trPhone": "Turecké telefonní číslo",
+      "usPhone": "Americké telefonní číslo",
+      "iban": "IBAN",
+      "creditCard": "Platební karta",
+      "passport": "Číslo pasu",
+      "names": "Jména osob",
+      "address": "Adresy"
+    }
+  },
+  "landing": {
+    "dropzone": {
+      "title": "Přetáhněte dokument sem",
+      "subtitle": "nebo klikněte pro procházení",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "autoDetection": "Automatická detekce",
+      "autoDetectionText": "Najde rodná čísla, jména, adresy pomocí porovnávání vzorů.",
+      "stayPrivate": "Soubory zůstávají soukromé",
+      "stayPrivateText": "Vše běží ve vašem prohlížeči.",
+      "visualReview": "Vizuální kontrola",
+      "visualReviewText": "Schvalte, zamítněte nebo přidejte ručně."
+    },
+    "guidance": {
+      "title": "Zkontrolovat a upravit",
+      "clickBefore": "Klikněte",
+      "clickMiddle": "pro redakci nebo",
+      "clickAfter": "pro zamítnutí detekovaných položek.",
+      "drag": "Přetáhněte na prázdné místo pro nakreslení obdélníku.",
+      "detected": "Detekováno",
+      "willRedact": "Bude redigováno"
+    },
+    "fab": {
+      "review": "Zkontrolovat",
+      "download": "Stáhnout"
+    },
+    "back": "Zpět",
+    "analyzing": "Analyzuje se pomocí",
+    "success": {
+      "title": "Bezpečné ke sdílení",
+      "text": "Citlivá data trvale odstraněna.",
+      "subtitle": "Váš dokument je připraven.",
+      "badge": "Redakce úspěšná"
+    }
+  },
+  "pricing": {
+    "title": "Jednoduchý a transparentní ceník",
+    "subtitle": "Začněte zdarma, upgradujte když potřebujete",
+    "free": {
+      "title": "Zdarma",
+      "price": "$0",
+      "period": "navždy",
+      "description": "Ideální pro příležitostné použití",
+      "features": [
+        "Neomezená redakce PDF",
+        "Všechny vzory detekce PII",
+        "Všechny regulační profily",
+        "Čištění metadat",
+        "Malý vodoznak na výstupu"
+      ],
+      "cta": "Začít zdarma"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$29",
+      "period": "jednorázová platba",
+      "description": "Pro profesionály, kteří potřebují čistý výstup",
+      "features": [
+        "Vše v plánu Zdarma",
+        "Bez vodoznaku",
+        "Dávkové zpracování (stažení ZIP)",
+        "Prioritní podpora",
+        "Doživotní licence"
+      ],
+      "cta": "Získat Pro licenci"
+    }
+  },
+  "auth": {
+    "login": "Přihlášení",
+    "register": "Registrace",
+    "logout": "Odhlášení",
+    "account": "Účet",
+    "loginTitle": "Vítejte v OfflineRedact",
+    "loginSubtitle": "Přihlaste se pro správu licence a přístup k Pro funkcím",
+    "googleLogin": "Pokračovat s Google",
+    "magicLink": "Magic Link",
+    "magicLinkDescription": "Pošleme vám přihlašovací odkaz na e-mail",
+    "magicLinkSent": "Poslali jsme vám magic link na e-mail. Zkontrolujte doručenou poštu a klikněte na odkaz pro přihlášení.",
+    "checkEmail": "Zkontrolujte e-mail",
+    "email": "E-mail",
+    "emailPlaceholder": "vas@priklad.cz",
+    "password": "Heslo",
+    "passwordPlaceholder": "Min. 6 znaků",
+    "loginButton": "Přihlásit se",
+    "registerButton": "Vytvořit účet",
+    "confirmEmail": "Zkontrolujte e-mail pro potvrzovací odkaz",
+    "or": "nebo",
+    "back": "Zpět",
+    "proPlan": "Pro — Doživotní licence",
+    "proDescription": "Všechny funkce odemčeny, bez vodoznaků, dávkové zpracování povoleno",
+    "freePlan": "Plán Zdarma",
+    "freeDescription": "Základní redakce s vodoznaky",
+    "upgradeToPro": "Upgradovat na Pro",
+    "goToRedact": "Začít redigovat",
+    "paymentSuccess": "Platba úspěšná!",
+    "paymentSuccessDescription": "Děkujeme za zakoupení OfflineRedact Pro. Váš účet byl upgradován.",
+    "proActivated": "Pro licence aktivována",
+    "proLinkedToAccount": "Pro funkce jsou propojeny s {email}",
+    "loginToActivate": "Přihlaste se pro propojení Pro funkcí s vaším účtem"
+  }
+}

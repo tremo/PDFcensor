@@ -3,8 +3,14 @@ import createIntlMiddleware from "next-intl/middleware";
 import { defineRouting } from "next-intl/routing";
 import { updateSession } from "@/lib/supabase/middleware";
 
+const allLocales = [
+  "en", "tr", "de", "fr", "es", "pt", "ja", "ko", "zh",
+  "bg", "cs", "da", "el", "et", "fi", "ga", "hr", "hu",
+  "it", "lt", "lv", "mt", "nl", "pl", "ro", "sk", "sl", "sv",
+] as const;
+
 const routing = defineRouting({
-  locales: ["en", "tr", "de", "fr", "es", "pt", "ja", "ko", "zh"],
+  locales: [...allLocales],
   defaultLocale: "en",
   localeDetection: true,
 });
@@ -14,14 +20,22 @@ const intlMiddleware = createIntlMiddleware(routing);
 // Routes that require authentication
 const protectedPaths = ["/account"];
 
+const localeSet = new Set<string>(allLocales);
+
 function getPathWithoutLocale(pathname: string): string {
-  const localePattern = /^\/(en|tr|de|fr|es|pt|ja|ko|zh)(\/|$)/;
-  return pathname.replace(localePattern, "/");
+  const segments = pathname.split("/");
+  if (segments.length > 1 && localeSet.has(segments[1])) {
+    return "/" + segments.slice(2).join("/") || "/";
+  }
+  return pathname;
 }
 
 function getLocaleFromPath(pathname: string): string {
-  const match = pathname.match(/^\/(en|tr|de|fr|es|pt|ja|ko|zh)(\/|$)/);
-  return match ? match[1] : "en";
+  const segments = pathname.split("/");
+  if (segments.length > 1 && localeSet.has(segments[1])) {
+    return segments[1];
+  }
+  return "en";
 }
 
 export async function middleware(request: NextRequest) {
@@ -52,6 +66,7 @@ export async function middleware(request: NextRequest) {
   return intlResponse;
 }
 
+const localePattern = allLocales.join("|");
 export const config = {
-  matcher: ["/", "/(tr|en|de|fr|es|pt|ja|ko|zh)/:path*"],
+  matcher: ["/", `/(${localePattern})/:path*`],
 };

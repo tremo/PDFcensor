@@ -1,0 +1,48 @@
+{
+  "metadata": { "title": "OfflineRedact — Αυτόματη Απαλοιφή Προσωπικών Δεδομένων από PDF", "description": "Αφαιρέστε μόνιμα προσωπικά δεδομένα από PDF. Συμμόρφωση με HIPAA, GDPR, KVKK. 100% στον πελάτη — τα αρχεία σας δεν φεύγουν ποτέ από τον browser σας." },
+  "nav": { "home": "Αρχική", "redact": "Απαλοιφή εγγράφων", "pricing": "Τιμές", "blog": "Blog" },
+  "hero": { "badge": "100% στον πελάτη — Τα αρχεία σας δεν φεύγουν ποτέ από τον browser σας", "title": "Μόνιμη απαλοιφή PII από έγγραφα PDF", "subtitle": "Αυτόματη ανίχνευση και μόνιμη αφαίρεση προσωπικών δεδομένων — ΑΜΚΑ, ονόματα, email, τηλέφωνα, IBAN — από τα PDF αρχεία σας. Συμμόρφωση με HIPAA, GDPR και KVKK.", "cta": "Ξεκινήστε — Δωρεάν", "ctaSecondary": "Δείτε τιμές", "trustedBy": "Εμπιστεύονται δικηγορικά γραφεία, πάροχοι υγείας και κυβερνητικές υπηρεσίες" },
+  "features": { "title": "Γιατί OfflineRedact;", "subtitle": "Επαγγελματική απαλοιφή PDF που εκτελείται εξ ολοκλήρου στον browser σας", "trueRedaction": { "title": "Πραγματική απαλοιφή", "description": "Αφαιρούμε τα πραγματικά δεδομένα κειμένου από το PDF. Το απαλειφθέν περιεχόμενο δεν μπορεί να επιλεγεί, αντιγραφεί ή ανακτηθεί." }, "clientSide": { "title": "100% στον πελάτη", "description": "Τα αρχεία σας δεν φεύγουν ποτέ από τη συσκευή σας. Όλη η επεξεργασία γίνεται στον browser σας." }, "autoDetect": { "title": "Αυτόματη ανίχνευση PII", "description": "Βρίσκει αυτόματα ΑΜΚΑ, ονόματα, email, τηλέφωνα, IBAN, πιστωτικές κάρτες με αναγνώριση μοτίβων." }, "regulations": { "title": "Υποστήριξη κανονισμών", "description": "Ενσωματωμένα προφίλ για HIPAA, GDPR, KVKK, CCPA, LGPD και άλλα." }, "batch": { "title": "Μαζική επεξεργασία", "description": "Ανεβάστε πολλά PDF ταυτόχρονα. Κατεβάστε ως ένα αρχείο ZIP." }, "metadata": { "title": "Καθαρισμός μεταδεδομένων", "description": "Αφαιρεί κρυφά μεταδεδομένα — συγγραφέας, τίτλος, ημερομηνία δημιουργίας." } },
+  "howItWorks": { "title": "Πώς λειτουργεί", "subtitle": "Τρία απλά βήματα για μόνιμη απαλοιφή ευαίσθητων πληροφοριών", "step1": { "title": "Μεταφόρτωση", "description": "Σύρετε και αφήστε τα PDF αρχεία σας ή κάντε κλικ για περιήγηση." }, "step2": { "title": "Έλεγχος", "description": "Τα αυτόματα ανιχνευμένα PII επισημαίνονται. Προσθέστε, αφαιρέστε ή προσαρμόστε τις απαλοιφές." }, "step3": { "title": "Λήψη", "description": "Κατεβάστε το μόνιμα απαλειφθέν PDF σας." } },
+  "comparison": { "badge": "Η διαφορά", "title": "Άλλα εργαλεία ανεβάζουν τα αρχεία σας. Εμείς όχι.", "subtitle": "Τα περισσότερα εργαλεία απαιτούν μεταφόρτωση στους διακομιστές τους. Το OfflineRedact λειτουργεί διαφορετικά.", "otherTools": "Άλλα εργαλεία", "yourDoc": "Το έγγραφό σας", "yourDocDesc": "PDF με ευαίσθητα δεδομένα", "theirServers": "Οι διακομιστές τους", "theirServersDesc": "Πλήρες αρχείο ανεβασμένο", "whoKnows": "Ποιος ξέρει;", "whoKnowsDesc": "Διατηρούνται επ' αόριστον", "yourBrowser": "Ο browser σας", "yourBrowserDesc": "Επεξεργασμένα με ασφάλεια", "redactedFile": "Απαλειφθέν αρχείο", "redactedFileDesc": "Δημιουργήθηκε τοπικά", "zeroRetention": "Μηδενική αποθήκευση. Μηδενική διατήρηση.", "footnote": "Όλη η ανίχνευση εκτελείται τοπικά στον browser σας." },
+  "security": { "title": "Πραγματική μόνιμη απαλοιφή", "subtitle": "Το OfflineRedact δημιουργεί ένα νέο έγγραφο χωρίς τα ευαίσθητα δεδομένα. Δεν είναι κρυμμένα — απλά δεν υπάρχουν στην έξοδο.", "noCopy": "Δεν γίνεται αντιγραφή", "noCopyDesc": "Το κείμενο δεν είναι στην έξοδο", "noTricks": "Κανένα κόλπο", "noTricksDesc": "Εξαφανίστηκε", "zeroRetention": "Μηδενική διατήρηση", "zeroRetentionDesc": "Έγγραφα διαγραμμένα", "encrypted": "AES-256 κρυπτογράφηση", "encryptedDesc": "Τραπεζικού επιπέδου" },
+  "compliance": { "title": "Σχεδιασμένο για παγκόσμια συμμόρφωση", "subtitle": "Το OfflineRedact σας βοηθά να πληροίτε τις απαιτήσεις προστασίας δεδομένων σε 20+ κανονισμούς παγκοσμίως." },
+  "trust": { "title": "Εμπιστεύονται επαγγελματίες που χειρίζονται ευαίσθητα έγγραφα", "legal": "Νομικά", "healthcare": "Υγεία", "realEstate": "Ακίνητα", "finance": "Χρηματοοικονομικά", "government": "Κυβέρνηση" },
+  "cta": { "title": "Έτοιμοι να προστατέψετε ευαίσθητα δεδομένα;", "subtitle": "Ξεκινήστε δωρεάν — χωρίς εγγραφή.", "button": "Ξεκινήστε τώρα" },
+  "footer": { "product": "Προϊόν", "legal": "Νομικά", "privacy": "Πολιτική απορρήτου", "terms": "Όροι χρήσης", "rights": "Με επιφύλαξη παντός δικαιώματος.", "tagline": "Μόνιμη απαλοιφή PDF — 100% στον browser σας." },
+  "redact": {
+    "title": "Εργαλείο απαλοιφής εγγράφων", "titleDocx": "Εργαλείο απαλοιφής Word", "titleBatch": "Μαζική απαλοιφή εγγράφων",
+    "dropzone": { "title": "Αφήστε αρχεία εδώ", "subtitle": "ή κάντε κλικ για περιήγηση", "hint": "Υποστηρίζει PDF και Word (.docx). Τα αρχεία σας δεν φεύγουν ποτέ από τον browser σας.", "processing": "Επεξεργασία..." },
+    "controls": { "regulation": "Προφίλ κανονισμού", "piiTypes": "Τύποι PII", "scan": "Σάρωση για PII", "scanning": "Σάρωση...", "ocrScanning": "OCR σάρωση...", "redact": "Εφαρμογή απαλοιφής", "redacting": "Απαλοιφή...", "download": "Λήψη PDF", "downloadDocx": "Λήψη Word", "downloadAll": "Λήψη όλων (ZIP)", "reset": "Από την αρχή", "parsing": "Ανάλυση PDF...", "parsingDocx": "Ανάλυση Word...", "found": "Βρέθηκαν {count} στοιχεία PII", "censored": "λογοκρίθηκε", "confirmed": "επιβεβαιώθηκε", "rejected": "απορρίφθηκε", "rejectedItems": "Απορριφθέντα", "pendingItems": "Εκκρεμής έλεγχος", "pending": "εκκρεμές", "restore": "Επαναφορά", "comprehensive": "Ολοκληρωμένο (US + EU)", "confirmAll": "Επιβεβαίωση όλων", "rejectAll": "Απόρριψη όλων", "confirm": "Επιβεβαίωση", "reject": "Απόρριψη", "delete": "Διαγραφή", "rescan": "Επανασάρωση", "manualArea": "Χειροκίνητη απαλοιφή", "drawing": "Σχεδίαση", "select": "Επιλογή", "noResults": "Δεν ανιχνεύθηκαν PII.", "noResultsOnPage": "Δεν υπάρχουν στοιχεία σε αυτή τη σελίδα.", "page": "Σελίδα {current} από {total}" },
+    "docx": { "pending": "Εκκρεμές", "confirmed": "Επιβεβαιωμένο" },
+    "batch": { "scanComplete": "Σάρωση ολοκληρώθηκε", "totalFindings": "{count} κρίσιμα στοιχεία", "acrossFiles": "σε {count} έγγραφα", "downloadAllZip": "Απαλοιφή όλων & ZIP", "redactingAll": "Απαλοιφή...", "downloaded": "Κατεβασμένο!", "processingFile": "Αρχείο {current} από {total}...", "fileBreakdown": "Ανάλυση αρχείων", "pages": "σελίδες", "findingsInFile": "{count} στοιχεία", "noFindings": "Καθαρό!", "review": "Έλεγχος", "totalFiles": "{count} αρχεία", "filesWithFindings": "{count} με ευρήματα", "filesWithErrors": "{count} σφάλματα", "processing": "Σάρωση εγγράφων...", "backToSummary": "Πίσω στη σύνοψη" },
+    "piiTypes": { "ssn": "Αριθμός κοινωνικής ασφάλισης", "tcKimlik": "TC Kimlik No", "itin": "ITIN", "email": "Email", "phone": "Τηλέφωνο", "trPhone": "Τουρκικό τηλέφωνο", "usPhone": "Αμερικανικό τηλέφωνο", "iban": "IBAN", "creditCard": "Πιστωτική κάρτα", "passport": "Διαβατήριο", "names": "Ονόματα", "address": "Διευθύνσεις" }
+  },
+  "landing": {
+    "dropzone": { "title": "Αφήστε το έγγραφο εδώ", "subtitle": "ή κάντε κλικ", "formats": "PDF, DOCX" },
+    "features": { "autoDetection": "Αυτόματη ανίχνευση", "autoDetectionText": "Βρίσκει ΑΜΚΑ, ονόματα, διευθύνσεις.", "stayPrivate": "Ιδιωτικά αρχεία", "stayPrivateText": "Όλα στον browser σας.", "visualReview": "Οπτικός έλεγχος", "visualReviewText": "Εγκρίνετε, απορρίψτε ή προσθέστε." },
+    "guidance": { "title": "Έλεγχος", "clickBefore": "Κλικ", "clickMiddle": "για απαλοιφή ή", "clickAfter": "για απόρριψη.", "drag": "Σύρετε σε κενό χώρο.", "detected": "Ανιχνεύθηκε", "willRedact": "Θα απαλειφθεί" },
+    "fab": { "review": "Έλεγχος", "download": "Λήψη" },
+    "back": "Πίσω", "analyzing": "Ανάλυση από",
+    "success": { "title": "Ασφαλές", "text": "Ευαίσθητα δεδομένα αφαιρέθηκαν.", "subtitle": "Το έγγραφο είναι έτοιμο.", "badge": "Επιτυχής απαλοιφή" }
+  },
+  "pricing": {
+    "title": "Απλές, διαφανείς τιμές", "subtitle": "Ξεκινήστε δωρεάν, αναβαθμίστε όταν χρειαστεί",
+    "free": { "title": "Δωρεάν", "price": "$0", "period": "για πάντα", "description": "Για περιστασιακή χρήση", "features": ["Απεριόριστη απαλοιφή PDF", "Όλα τα μοτίβα PII", "Όλα τα προφίλ κανονισμών", "Καθαρισμός μεταδεδομένων", "Μικρό υδατόσημο"], "cta": "Ξεκινήστε δωρεάν" },
+    "pro": { "title": "Pro", "price": "$29", "period": "εφάπαξ πληρωμή", "description": "Για επαγγελματίες", "features": ["Όλα του Δωρεάν", "Χωρίς υδατόσημο", "Μαζική επεξεργασία (ZIP)", "Προτεραιότητα υποστήριξης", "Εφ' όρου ζωής άδεια"], "cta": "Αποκτήστε Pro" }
+  },
+  "auth": {
+    "login": "Σύνδεση", "register": "Εγγραφή", "logout": "Αποσύνδεση", "account": "Λογαριασμός",
+    "loginTitle": "Καλώς ήρθατε στο OfflineRedact", "loginSubtitle": "Συνδεθείτε για διαχείριση άδειας και πρόσβαση σε Pro",
+    "googleLogin": "Συνέχεια με Google", "magicLink": "Magic Link", "magicLinkDescription": "Θα σας στείλουμε σύνδεσμο σύνδεσης",
+    "magicLinkSent": "Σας στείλαμε magic link. Ελέγξτε τα εισερχόμενα.", "checkEmail": "Ελέγξτε το email",
+    "email": "Email", "emailPlaceholder": "εσείς@παράδειγμα.gr", "password": "Κωδικός", "passwordPlaceholder": "Ελάχ. 6 χαρακτήρες",
+    "loginButton": "Σύνδεση", "registerButton": "Δημιουργία λογαριασμού", "confirmEmail": "Ελέγξτε email για επιβεβαίωση",
+    "or": "ή", "back": "Πίσω", "proPlan": "Pro — Εφ' όρου ζωής", "proDescription": "Όλα ξεκλειδωμένα, χωρίς υδατόσημα",
+    "freePlan": "Δωρεάν πλάνο", "freeDescription": "Βασική απαλοιφή με υδατόσημα",
+    "upgradeToPro": "Αναβάθμιση σε Pro", "goToRedact": "Ξεκινήστε",
+    "paymentSuccess": "Πληρωμή επιτυχής!", "paymentSuccessDescription": "Ευχαριστούμε για την αγορά OfflineRedact Pro.",
+    "proActivated": "Άδεια Pro ενεργοποιήθηκε", "proLinkedToAccount": "Pro συνδέεται με {email}",
+    "loginToActivate": "Συνδεθείτε για σύνδεση Pro"
+  }
+}
