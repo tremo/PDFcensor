@@ -255,17 +255,17 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "price": "$4.99",
+      "period": "month",
+      "description": "For professionals who process multiple documents",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Priority support",
-        "Lifetime license"
+        "Cancel anytime"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro — $4.99/mo"
     }
   },
   "auth": {

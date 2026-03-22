@@ -34,16 +34,17 @@ export async function POST(request: Request) {
           price_data: {
             currency: "usd",
             product_data: {
-              name: "OfflineRedact Pro — Lifetime License",
+              name: "OfflineRedact Pro",
               description:
-                "Remove watermarks, batch processing, and priority support. One-time payment.",
+                "No watermark, batch processing (ZIP download), and priority support. Cancel anytime.",
             },
-            unit_amount: 2900, // $29.00
+            unit_amount: 499, // $4.99
+            recurring: { interval: "month" },
           },
           quantity: 1,
         },
       ],
-      mode: "payment",
+      mode: "subscription",
       success_url: `${appUrl}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}/${locale}/pricing`,
       customer_email: user.email!,

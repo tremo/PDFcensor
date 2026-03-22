@@ -255,17 +255,17 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "₺899",
-      "period": "tek seferlik ödeme",
-      "description": "Temiz çıktıya ihtiyaç duyan profesyoneller için",
+      "price": "$4.99",
+      "period": "ay",
+      "description": "Toplu belge işleyen profesyoneller için",
       "features": [
         "Ücretsiz'deki her şey",
         "Filigran yok",
         "Toplu işleme (ZIP indirme)",
         "Öncelikli destek",
-        "Ömür boyu lisans"
+        "İstediğinde iptal et"
       ],
-      "cta": "Pro Lisansı Al"
+      "cta": "Pro'ya Geç — $4.99/ay"
     }
   },
   "auth": {

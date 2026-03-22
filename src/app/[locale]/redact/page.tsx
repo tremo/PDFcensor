@@ -14,9 +14,12 @@ import { usePDFProcessor } from "@/hooks/usePDFProcessor";
 import { useDocxProcessor } from "@/hooks/useDocxProcessor";
 import { useBatchProcessor } from "@/hooks/useBatchProcessor";
 import { useImageProcessor } from "@/hooks/useImageProcessor";
+import { useAuth } from "@/components/auth/AuthProvider";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/lib/i18n/navigation";
+import { useLocale } from "next-intl";
 
 type DocumentType = "none" | "pdf" | "docx" | "image";
 type FlowMode = "single" | "batch";
@@ -48,9 +51,12 @@ function isImageFile(file: File): boolean {
 export default function RedactPage() {
   const t = useTranslations("redact");
   const tb = useTranslations("redact.batch");
+  const locale = useLocale();
+  const { isPro } = useAuth();
 
   const [documentType, setDocumentType] = useState<DocumentType>("none");
   const [flowMode, setFlowMode] = useState<FlowMode>("single");
+  const [showBatchGate, setShowBatchGate] = useState(false);
 
   // Single-file processors
   const pdf = usePDFProcessor();
@@ -68,7 +74,12 @@ export default function RedactPage() {
       if (files.length === 0) return;
 
       if (files.length > 1) {
-        // Multiple files → batch mode
+        // Multiple files → batch mode (Pro only)
+        if (!isPro) {
+          setShowBatchGate(true);
+          return;
+        }
+        setShowBatchGate(false);
         setFlowMode("batch");
         batch.handleFilesSelected(files);
       } else {
@@ -89,6 +100,10 @@ export default function RedactPage() {
     },
     [pdf, docx, img, batch]
   );
+
+  const handleDismissBatchGate = useCallback(() => {
+    setShowBatchGate(false);
+  }, []);
 
   const handleReset = useCallback(() => {
     if (flowMode === "batch") {
@@ -188,6 +203,25 @@ export default function RedactPage() {
       {(activeError || batch.error) && (
         <div className="mb-6 p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm">
           {activeError || batch.error}
+        </div>
+      )}
+
+      {/* Batch Pro gate */}
+      {showBatchGate && (
+        <div className="mb-6 max-w-lg mx-auto p-6 rounded-xl border border-accent bg-accent/5 text-center space-y-3">
+          <div className="text-2xl">⚡</div>
+          <h2 className="text-lg font-semibold">Batch Processing is a Pro Feature</h2>
+          <p className="text-sm text-muted-foreground">
+            Upgrade to Pro to scan and redact multiple files at once and download them as a ZIP. Just $4.99/month, cancel anytime.
+          </p>
+          <div className="flex gap-3 justify-center pt-1">
+            <Button asChild variant="accent">
+              <Link href={`/${locale}/pricing`}>Upgrade to Pro — $4.99/mo</Link>
+            </Button>
+            <Button variant="outline" onClick={handleDismissBatchGate}>
+              Cancel
+            </Button>
+          </div>
         </div>
       )}
 
