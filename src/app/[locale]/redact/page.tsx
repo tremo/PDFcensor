@@ -212,11 +212,11 @@ export default function RedactPage() {
           <div className="text-2xl">⚡</div>
           <h2 className="text-lg font-semibold">Batch Processing is a Pro Feature</h2>
           <p className="text-sm text-muted-foreground">
-            Upgrade to Pro to scan and redact multiple files at once and download them as a ZIP. Just $4.99/month, cancel anytime.
+            Upgrade to Pro to scan and redact multiple files at once and download them as a ZIP. Just $6.99/month, cancel anytime.
           </p>
           <div className="flex gap-3 justify-center pt-1">
             <Button asChild variant="accent">
-              <Link href={`/${locale}/pricing`}>Upgrade to Pro — $4.99/mo</Link>
+              <Link href={`/${locale}/pricing`}>Upgrade to Pro — $6.99/mo</Link>
             </Button>
             <Button variant="outline" onClick={handleDismissBatchGate}>
               Cancel

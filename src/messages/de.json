@@ -255,7 +255,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$4.99",
+      "price": "$6.99",
       "period": "Monat",
       "description": "Für Profis, die mehrere Dokumente verarbeiten",
       "features": [
@@ -265,7 +265,7 @@
         "Prioritäts-Support",
         "Jederzeit kündigen"
       ],
-      "cta": "Pro holen — $4.99/Mo"
+      "cta": "Pro holen — $6.99/Mo"
     }
   },
   "auth": {

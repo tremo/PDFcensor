@@ -255,7 +255,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$4.99",
+      "price": "$6.99",
       "period": "mês",
       "description": "Para profissionais que processam múltiplos documentos",
       "features": [
@@ -265,7 +265,7 @@
         "Suporte prioritário",
         "Cancele quando quiser"
       ],
-      "cta": "Obter Pro — $4.99/mês"
+      "cta": "Obter Pro — $6.99/mês"
     }
   },
   "auth": {

@@ -38,7 +38,7 @@ export async function POST(request: Request) {
               description:
                 "No watermark, batch processing (ZIP download), and priority support. Cancel anytime.",
             },
-            unit_amount: 499, // $4.99
+            unit_amount: 699, // $6.99
             recurring: { interval: "month" },
           },
           quantity: 1,

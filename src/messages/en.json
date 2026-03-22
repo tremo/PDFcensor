@@ -255,7 +255,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$4.99",
+      "price": "$6.99",
       "period": "month",
       "description": "For professionals who process multiple documents",
       "features": [
@@ -265,7 +265,7 @@
         "Priority support",
         "Cancel anytime"
       ],
-      "cta": "Get Pro — $4.99/mo"
+      "cta": "Get Pro — $6.99/mo"
     }
   },
   "auth": {
