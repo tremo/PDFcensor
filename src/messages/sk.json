@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
+    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+  },
+  "nav": {
+    "home": "Domov",
+    "redact": "Redigovať dokumenty",
+    "pricing": "Cenník",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "100% na strane klienta — Vaše súbory nikdy neopustia váš prehliadač",
+    "title": "Trvalo odstráňte osobné údaje z PDF dokumentov",
+    "subtitle": "Automaticky zistite a trvalo odstráňte osobné údaje — rodné čísla, mená, e-maily, telefónne čísla, IBAN — z vašich PDF súborov. V súlade s HIPAA, GDPR a KVKK.",
+    "cta": "Začať — Zadarmo",
+    "ctaSecondary": "Pozrieť cenník",
+    "trustedBy": "Dôverujú nám právnické firmy, poskytovatelia zdravotnej starostlivosti a vládne agentúry"
+  },
+  "features": {
+    "title": "Why OfflineRedact?",
+    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "trueRedaction": {
+      "title": "True Redaction",
+      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+    },
+    "clientSide": {
+      "title": "100% Client-Side",
+      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+    },
+    "autoDetect": {
+      "title": "Auto-Detect PII",
+      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+    },
+    "regulations": {
+      "title": "Multi-Regulation Support",
+      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+    },
+    "batch": {
+      "title": "Batch Processing",
+      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+    },
+    "metadata": {
+      "title": "Metadata Cleaning",
+      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "step1": {
+      "title": "Upload",
+      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+    },
+    "step2": {
+      "title": "Review",
+      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+    },
+    "step3": {
+      "title": "Download",
+      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+    }
+  },
+  "comparison": {
+    "badge": "The Difference",
+    "title": "Other tools upload your files. We don't.",
+    "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
+    "otherTools": "Other Tools",
+    "yourDoc": "Your document",
+    "yourDocDesc": "PDF with sensitive data",
+    "theirServers": "Their servers",
+    "theirServersDesc": "Full file uploaded & stored",
+    "whoKnows": "Who knows?",
+    "whoKnowsDesc": "Retained for hours or indefinitely",
+    "yourBrowser": "Your browser",
+    "yourBrowserDesc": "Processed securely, never stored",
+    "redactedFile": "Redacted file",
+    "redactedFileDesc": "Created locally, download instantly",
+    "zeroRetention": "Zero storage. Zero retention.",
+    "footnote": "All detection runs locally in your browser. Your files never leave your device."
+  },
+  "security": {
+    "title": "True permanent redaction",
+    "subtitle": "Unlike basic PDF editors that just overlay black boxes, OfflineRedact creates a new document without the sensitive data. It's not hidden — it simply doesn't exist in the output.",
+    "noCopy": "Can't copy/paste",
+    "noCopyDesc": "Text is not in output",
+    "noTricks": "No Photoshop tricks",
+    "noTricksDesc": "Not hidden, gone",
+    "zeroRetention": "Zero retention",
+    "zeroRetentionDesc": "Documents processed and purged",
+    "encrypted": "AES-256 encrypted",
+    "encryptedDesc": "Bank-grade encryption"
+  },
+  "compliance": {
+    "title": "Built for Global Compliance",
+    "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
+  },
+  "trust": {
+    "title": "Trusted by professionals who handle sensitive documents",
+    "legal": "Legal",
+    "healthcare": "Healthcare",
+    "realEstate": "Real Estate",
+    "finance": "Finance",
+    "government": "Government"
+  },
+  "cta": {
+    "title": "Pripravení chrániť citlivé údaje?",
+    "subtitle": "Začnite redigovať PDF zadarmo — bez registrácie.",
+    "button": "Začať teraz"
+  },
+  "footer": {
+    "product": "Produkt",
+    "legal": "Právne informácie",
+    "privacy": "Zásady ochrany osobných údajov",
+    "terms": "Podmienky služby",
+    "rights": "Všetky práva vyhradené.",
+    "tagline": "Trvalá redakcia PDF — 100% vo vašom prehliadači."
+  },
+  "redact": {
+    "title": "Document Redaction Tool",
+    "titleDocx": "Word Document Redaction Tool",
+    "titleBatch": "Batch Document Redaction",
+    "dropzone": {
+      "title": "Drop files here",
+      "subtitle": "or click to browse your files",
+      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "processing": "Processing..."
+    },
+    "controls": {
+      "regulation": "Regulation Profile",
+      "piiTypes": "PII Types to Detect",
+      "scan": "Scan for PII",
+      "scanning": "Scanning...",
+      "ocrScanning": "OCR scanning images...",
+      "redact": "Apply Redaction",
+      "redacting": "Redacting...",
+      "download": "Download Redacted PDF",
+      "downloadDocx": "Download Redacted Word Document",
+      "downloadAll": "Download All (ZIP)",
+      "reset": "Start Over",
+      "parsing": "Parsing PDF...",
+      "parsingDocx": "Parsing Word document...",
+      "found": "Found {count} PII items",
+      "censored": "censored",
+      "confirmed": "confirmed",
+      "rejected": "rejected",
+      "rejectedItems": "Rejected Items",
+      "pendingItems": "Pending Review",
+      "pending": "pending",
+      "restore": "Restore",
+      "comprehensive": "Comprehensive (US + EU)",
+      "confirmAll": "Confirm All",
+      "rejectAll": "Reject All",
+      "confirm": "Confirm",
+      "reject": "Reject",
+      "delete": "Delete",
+      "rescan": "Re-scan document",
+      "manualArea": "Manual redaction",
+      "drawing": "Draw Mode",
+      "select": "Select Mode",
+      "noResults": "No PII detected in this document.",
+      "noResultsOnPage": "No censored items on this page.",
+      "page": "Page {current} of {total}"
+    },
+    "docx": {
+      "pending": "Pending",
+      "confirmed": "Confirmed"
+    },
+    "batch": {
+      "scanComplete": "Scan Complete",
+      "totalFindings": "{count} critical data items found",
+      "acrossFiles": "across {count} documents",
+      "downloadAllZip": "Redact All & Download ZIP",
+      "redactingAll": "Redacting all files...",
+      "downloaded": "Downloaded!",
+      "processingFile": "Processing file {current} of {total}...",
+      "fileBreakdown": "File Breakdown",
+      "pages": "pages",
+      "findingsInFile": "{count} items detected",
+      "noFindings": "No sensitive data found — clean!",
+      "review": "Review",
+      "totalFiles": "{count} files",
+      "filesWithFindings": "{count} with findings",
+      "filesWithErrors": "{count} errors",
+      "processing": "Scanning your documents...",
+      "backToSummary": "Back to Summary"
+    },
+    "piiTypes": {
+      "ssn": "Social Security Number",
+      "tcKimlik": "TC Kimlik No",
+      "itin": "ITIN",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "trPhone": "Turkish Phone Number",
+      "usPhone": "US Phone Number",
+      "iban": "IBAN",
+      "creditCard": "Credit Card",
+      "passport": "Passport Number",
+      "names": "Person Names",
+      "address": "Addresses"
+    }
+  },
+  "landing": {
+    "dropzone": {
+      "title": "Drop your document here",
+      "subtitle": "or click to browse",
+      "formats": "PDF, DOCX"
+    },
+    "features": {
+      "autoDetection": "Auto-Detection",
+      "autoDetectionText": "Finds SSNs, names, addresses with pattern matching.",
+      "stayPrivate": "Files Stay Private",
+      "stayPrivateText": "Everything runs in your browser.",
+      "visualReview": "Visual Review",
+      "visualReviewText": "Approve, reject, or add manually."
+    },
+    "guidance": {
+      "title": "Review & Edit",
+      "clickBefore": "Click",
+      "clickMiddle": "to redact or",
+      "clickAfter": "to dismiss detected items.",
+      "drag": "Drag on empty space to draw a box.",
+      "detected": "Detected",
+      "willRedact": "Will redact"
+    },
+    "fab": {
+      "review": "Review",
+      "download": "Download"
+    },
+    "back": "Back",
+    "analyzing": "Analyzing by",
+    "success": {
+      "title": "Safe to Share",
+      "text": "Sensitive data removed permanently.",
+      "subtitle": "Your document is ready.",
+      "badge": "Redaction Successful"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, upgrade when you need it",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "period": "forever",
+      "description": "Perfect for occasional use",
+      "features": [
+        "Unlimited PDF redaction",
+        "All PII detection patterns",
+        "All regulation profiles",
+        "Metadata cleaning",
+        "Small watermark on output"
+      ],
+      "cta": "Start Free"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$29",
+      "period": "one-time payment",
+      "description": "For professionals who need clean output",
+      "features": [
+        "Everything in Free",
+        "No watermark",
+        "Batch processing (ZIP download)",
+        "Priority support",
+        "Lifetime license"
+      ],
+      "cta": "Get Pro License"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "account": "Account",
+    "loginTitle": "Welcome to OfflineRedact",
+    "loginSubtitle": "Sign in to manage your license and access Pro features",
+    "googleLogin": "Continue with Google",
+    "magicLink": "Magic Link",
+    "magicLinkDescription": "We'll send you a login link to your email",
+    "magicLinkSent": "We've sent a magic link to your email. Check your inbox and click the link to sign in.",
+    "checkEmail": "Check your email",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "Min. 6 characters",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "confirmEmail": "Check your email for a confirmation link",
+    "or": "or",
+    "back": "Back",
+    "proPlan": "Pro — Lifetime License",
+    "proDescription": "All features unlocked, no watermarks, batch processing enabled",
+    "freePlan": "Free Plan",
+    "freeDescription": "Basic redaction with watermarks",
+    "upgradeToPro": "Upgrade to Pro",
+    "goToRedact": "Start Redacting",
+    "paymentSuccess": "Payment Successful!",
+    "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
+    "proActivated": "Pro License Activated",
+    "proLinkedToAccount": "Pro features are linked to {email}",
+    "loginToActivate": "Sign in to link Pro features to your account"
+  }
+}

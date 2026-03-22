@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "OfflineRedact — Automatisk redigering af personoplysninger i PDF-dokumenter",
+    "description": "Fjern permanent persondata fra PDF'er. HIPAA, GDPR, KVKK-kompatibel. 100% klientside — dine filer forlader aldrig din browser."
+  },
+  "nav": { "home": "Hjem", "redact": "Rediger dokumenter", "pricing": "Priser", "blog": "Blog" },
+  "hero": {
+    "badge": "100% klientside — Dine filer forlader aldrig din browser",
+    "title": "Rediger permanent personoplysninger fra PDF-dokumenter",
+    "subtitle": "Registrer og fjern automatisk persondata — CPR-numre, navne, e-mails, telefonnumre, IBAN — fra dine PDF-filer. HIPAA, GDPR og KVKK-kompatibel.",
+    "cta": "Start redigering — Gratis", "ctaSecondary": "Se priser",
+    "trustedBy": "Brugt af advokatfirmaer, sundhedsudbydere og offentlige myndigheder"
+  },
+  "features": {
+    "title": "Hvorfor OfflineRedact?", "subtitle": "Professionel PDF-redigering der kører helt i din browser",
+    "trueRedaction": { "title": "Ægte redigering", "description": "I modsætning til simple sorte bokse fjerner vi de faktiske tekstdata fra PDF'en. Det redigerede indhold kan ikke vælges, kopieres eller gendannes." },
+    "clientSide": { "title": "100% klientside", "description": "Dine filer forlader aldrig din enhed. Al behandling sker i din browser — ingen uploads, ingen servere, ingen datalæk." },
+    "autoDetect": { "title": "Automatisk PII-registrering", "description": "Finder automatisk CPR-numre, navne, e-mails, telefonnumre, IBAN, kreditkort og mere ved hjælp af mønstergenkendelse." },
+    "regulations": { "title": "Understøttelse af flere regulativer", "description": "Indbyggede profiler for HIPAA, GDPR, KVKK, CCPA, LGPD og mere. Vælger automatisk den rigtige profil." },
+    "batch": { "title": "Batchbehandling", "description": "Upload flere PDF'er på én gang. Behandl dem alle og download som en enkelt ZIP-fil." },
+    "metadata": { "title": "Metadatarensning", "description": "Fjerner skjulte metadata — forfatter, titel, oprettelsesdato — der kunne afsløre følsomme oplysninger." }
+  },
+  "howItWorks": {
+    "title": "Sådan fungerer det", "subtitle": "Tre simple trin til permanent redigering af følsomme oplysninger",
+    "step1": { "title": "Upload", "description": "Træk og slip dine PDF-filer eller klik for at gennemse. Understøtter flere filer." },
+    "step2": { "title": "Gennemgå", "description": "Automatisk registrerede PII er fremhævet. Tilføj, fjern eller juster redigeringer." },
+    "step3": { "title": "Download", "description": "Download dit permanent redigerede PDF. Den originale tekst er uigenkaldeligt fjernet." }
+  },
+  "comparison": {
+    "badge": "Forskellen", "title": "Andre værktøjer uploader dine filer. Det gør vi ikke.",
+    "subtitle": "De fleste redigeringsværktøjer kræver upload af hele dit dokument til deres servere. OfflineRedact fungerer anderledes.",
+    "otherTools": "Andre værktøjer", "yourDoc": "Dit dokument", "yourDocDesc": "PDF med følsomme data",
+    "theirServers": "Deres servere", "theirServersDesc": "Fuld fil uploadet og gemt",
+    "whoKnows": "Hvem ved?", "whoKnowsDesc": "Opbevaret i timer eller på ubestemt tid",
+    "yourBrowser": "Din browser", "yourBrowserDesc": "Behandlet sikkert, aldrig gemt",
+    "redactedFile": "Redigeret fil", "redactedFileDesc": "Oprettet lokalt, download med det samme",
+    "zeroRetention": "Ingen lagring. Ingen opbevaring.",
+    "footnote": "Al registrering kører lokalt i din browser. Dine filer forlader aldrig din enhed."
+  },
+  "security": {
+    "title": "Ægte permanent redigering",
+    "subtitle": "I modsætning til basale PDF-editorer der bare lægger sorte bokse over, opretter OfflineRedact et nyt dokument uden de følsomme data.",
+    "noCopy": "Kan ikke kopieres", "noCopyDesc": "Tekst er ikke i output",
+    "noTricks": "Ingen Photoshop-tricks", "noTricksDesc": "Ikke skjult, væk",
+    "zeroRetention": "Ingen opbevaring", "zeroRetentionDesc": "Dokumenter behandlet og slettet",
+    "encrypted": "AES-256 krypteret", "encryptedDesc": "Kryptering på bankniveau"
+  },
+  "compliance": { "title": "Bygget til global overholdelse", "subtitle": "OfflineRedact hjælper dig med at opfylde databeskyttelseskrav på tværs af 20+ regulativer og standarder." },
+  "trust": { "title": "Brugt af professionelle der håndterer følsomme dokumenter", "legal": "Jura", "healthcare": "Sundhed", "realEstate": "Ejendom", "finance": "Finans", "government": "Offentlig" },
+  "cta": { "title": "Klar til at beskytte følsomme data?", "subtitle": "Start redigering af PDF'er gratis — ingen tilmelding.", "button": "Start redigering nu" },
+  "footer": { "product": "Produkt", "legal": "Juridisk", "privacy": "Privatlivspolitik", "terms": "Servicevilkår", "rights": "Alle rettigheder forbeholdes.", "tagline": "Permanent PDF-redigering — 100% i din browser." },
+  "redact": {
+    "title": "Dokumentredigeringsværktøj", "titleDocx": "Word-dokumentredigeringsværktøj", "titleBatch": "Batch-dokumentredigering",
+    "dropzone": { "title": "Slip filer her", "subtitle": "eller klik for at gennemse dine filer", "hint": "Understøtter PDF og Word (.docx) filer. Dine filer forlader aldrig din browser.", "processing": "Behandler..." },
+    "controls": {
+      "regulation": "Regulativprofil", "piiTypes": "PII-typer at registrere", "scan": "Scan for PII", "scanning": "Scanner...",
+      "ocrScanning": "OCR scanner billeder...", "redact": "Anvend redigering", "redacting": "Redigerer...",
+      "download": "Download redigeret PDF", "downloadDocx": "Download redigeret Word-dokument", "downloadAll": "Download alle (ZIP)",
+      "reset": "Start forfra", "parsing": "Analyserer PDF...", "parsingDocx": "Analyserer Word-dokument...",
+      "found": "Fundet {count} PII-elementer", "censored": "censureret", "confirmed": "bekræftet", "rejected": "afvist",
+      "rejectedItems": "Afviste elementer", "pendingItems": "Afventer gennemgang", "pending": "afventende", "restore": "Gendan",
+      "comprehensive": "Omfattende (US + EU)", "confirmAll": "Bekræft alle", "rejectAll": "Afvis alle",
+      "confirm": "Bekræft", "reject": "Afvis", "delete": "Slet", "rescan": "Genscan dokument",
+      "manualArea": "Manuel redigering", "drawing": "Tegnetilstand", "select": "Vælgetilstand",
+      "noResults": "Ingen PII registreret i dette dokument.", "noResultsOnPage": "Ingen censurerede elementer på denne side.",
+      "page": "Side {current} af {total}"
+    },
+    "docx": { "pending": "Afventende", "confirmed": "Bekræftet" },
+    "batch": {
+      "scanComplete": "Scanning fuldført", "totalFindings": "{count} kritiske dataelementer fundet",
+      "acrossFiles": "på tværs af {count} dokumenter", "downloadAllZip": "Rediger alle og download ZIP",
+      "redactingAll": "Redigerer alle filer...", "downloaded": "Downloadet!",
+      "processingFile": "Behandler fil {current} af {total}...", "fileBreakdown": "Filoversigt",
+      "pages": "sider", "findingsInFile": "{count} elementer registreret", "noFindings": "Ingen følsomme data fundet — rent!",
+      "review": "Gennemgå", "totalFiles": "{count} filer", "filesWithFindings": "{count} med fund",
+      "filesWithErrors": "{count} fejl", "processing": "Scanner dine dokumenter...", "backToSummary": "Tilbage til oversigt"
+    },
+    "piiTypes": {
+      "ssn": "CPR-nummer", "tcKimlik": "TC Kimlik No", "itin": "ITIN", "email": "E-mailadresse",
+      "phone": "Telefonnummer", "trPhone": "Tyrkisk telefonnummer", "usPhone": "Amerikansk telefonnummer",
+      "iban": "IBAN", "creditCard": "Kreditkort", "passport": "Pasnummer", "names": "Personnavne", "address": "Adresser"
+    }
+  },
+  "landing": {
+    "dropzone": { "title": "Slip dit dokument her", "subtitle": "eller klik for at gennemse", "formats": "PDF, DOCX" },
+    "features": {
+      "autoDetection": "Automatisk registrering", "autoDetectionText": "Finder CPR-numre, navne, adresser med mønstergenkendelse.",
+      "stayPrivate": "Filer forbliver private", "stayPrivateText": "Alt kører i din browser.",
+      "visualReview": "Visuel gennemgang", "visualReviewText": "Godkend, afvis eller tilføj manuelt."
+    },
+    "guidance": {
+      "title": "Gennemgå og rediger", "clickBefore": "Klik", "clickMiddle": "for at redigere eller",
+      "clickAfter": "for at afvise registrerede elementer.", "drag": "Træk på tomt område for at tegne en boks.",
+      "detected": "Registreret", "willRedact": "Vil redigere"
+    },
+    "fab": { "review": "Gennemgå", "download": "Download" },
+    "back": "Tilbage", "analyzing": "Analyserer med",
+    "success": { "title": "Sikkert at dele", "text": "Følsomme data fjernet permanent.", "subtitle": "Dit dokument er klar.", "badge": "Redigering gennemført" }
+  },
+  "pricing": {
+    "title": "Enkle, gennemsigtige priser", "subtitle": "Start gratis, opgrader når du har brug for det",
+    "free": { "title": "Gratis", "price": "$0", "period": "for altid", "description": "Perfekt til lejlighedsvis brug",
+      "features": ["Ubegrænset PDF-redigering", "Alle PII-registreringsmønstre", "Alle regulativprofiler", "Metadatarensning", "Lille vandmærke på output"], "cta": "Start gratis" },
+    "pro": { "title": "Pro", "price": "$29", "period": "engangsbetaling", "description": "For professionelle der har brug for rent output",
+      "features": ["Alt i Gratis", "Intet vandmærke", "Batchbehandling (ZIP-download)", "Prioriteret support", "Livstidslicens"], "cta": "Få Pro-licens" }
+  },
+  "auth": {
+    "login": "Log ind", "register": "Registrer", "logout": "Log ud", "account": "Konto",
+    "loginTitle": "Velkommen til OfflineRedact", "loginSubtitle": "Log ind for at administrere din licens og få adgang til Pro-funktioner",
+    "googleLogin": "Fortsæt med Google", "magicLink": "Magic Link", "magicLinkDescription": "Vi sender dig et login-link til din e-mail",
+    "magicLinkSent": "Vi har sendt et magic link til din e-mail. Tjek din indbakke og klik på linket for at logge ind.",
+    "checkEmail": "Tjek din e-mail", "email": "E-mail", "emailPlaceholder": "dig@eksempel.dk",
+    "password": "Adgangskode", "passwordPlaceholder": "Min. 6 tegn", "loginButton": "Log ind", "registerButton": "Opret konto",
+    "confirmEmail": "Tjek din e-mail for et bekræftelseslink", "or": "eller", "back": "Tilbage",
+    "proPlan": "Pro — Livstidslicens", "proDescription": "Alle funktioner låst op, ingen vandmærker, batchbehandling aktiveret",
+    "freePlan": "Gratis plan", "freeDescription": "Grundlæggende redigering med vandmærker",
+    "upgradeToPro": "Opgrader til Pro", "goToRedact": "Start redigering",
+    "paymentSuccess": "Betaling gennemført!", "paymentSuccessDescription": "Tak for dit køb af OfflineRedact Pro. Din konto er blevet opgraderet.",
+    "proActivated": "Pro-licens aktiveret", "proLinkedToAccount": "Pro-funktioner er knyttet til {email}",
+    "loginToActivate": "Log ind for at knytte Pro-funktioner til din konto"
+  }
+}

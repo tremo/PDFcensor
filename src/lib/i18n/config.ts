@@ -1,4 +1,9 @@
-export const locales = ["en", "tr", "de", "fr", "es", "pt", "ja", "ko", "zh"] as const;
+export const locales = [
+  "en", "tr", "de", "fr", "es", "pt", "ja", "ko", "zh",
+  // EU languages
+  "bg", "cs", "da", "el", "et", "fi", "ga", "hr", "hu",
+  "it", "lt", "lv", "mt", "nl", "pl", "ro", "sk", "sl", "sv",
+] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 
@@ -12,6 +17,25 @@ export const localeNames: Record<Locale, string> = {
   ja: "日本語",
   ko: "한국어",
   zh: "中文",
+  bg: "Български",
+  cs: "Čeština",
+  da: "Dansk",
+  el: "Ελληνικά",
+  et: "Eesti",
+  fi: "Suomi",
+  ga: "Gaeilge",
+  hr: "Hrvatski",
+  hu: "Magyar",
+  it: "Italiano",
+  lt: "Lietuvių",
+  lv: "Latviešu",
+  mt: "Malti",
+  nl: "Nederlands",
+  pl: "Polski",
+  ro: "Română",
+  sk: "Slovenčina",
+  sl: "Slovenščina",
+  sv: "Svenska",
 };
 
 export const localeFlags: Record<Locale, string> = {
@@ -24,4 +48,23 @@ export const localeFlags: Record<Locale, string> = {
   ja: "🇯🇵",
   ko: "🇰🇷",
   zh: "🇨🇳",
+  bg: "🇧🇬",
+  cs: "🇨🇿",
+  da: "🇩🇰",
+  el: "🇬🇷",
+  et: "🇪🇪",
+  fi: "🇫🇮",
+  ga: "🇮🇪",
+  hr: "🇭🇷",
+  hu: "🇭🇺",
+  it: "🇮🇹",
+  lt: "🇱🇹",
+  lv: "🇱🇻",
+  mt: "🇲🇹",
+  nl: "🇳🇱",
+  pl: "🇵🇱",
+  ro: "🇷🇴",
+  sk: "🇸🇰",
+  sl: "🇸🇮",
+  sv: "🇸🇪",
 };
