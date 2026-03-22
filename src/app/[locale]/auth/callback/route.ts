@@ -13,6 +13,9 @@ export async function GET(request: Request) {
 
   if (code) {
     const supabase = await createClient();
+    if (!supabase) {
+      return NextResponse.redirect(new URL(`/${locale}/login`, origin));
+    }
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
       const redirectUrl = redirect || `/${locale}/redact`;
