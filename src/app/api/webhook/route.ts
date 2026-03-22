@@ -12,7 +12,7 @@ async function saveLicenseToSupabase(
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!supabaseUrl || !serviceKey) {
-    console.warn("Supabase not configured, falling back to Redis");
+    console.error("Supabase not configured, license not persisted");
     return false;
   }
 
@@ -32,14 +32,22 @@ async function saveLicenseToSupabase(
     }
   }
 
-  // Insert license
-  await supabase.from("licenses").insert({
-    key: licenseData.key,
-    email: licenseData.email,
-    user_id: resolvedUserId || null,
-    active: licenseData.active,
-    expires_at: licenseData.expires,
-  });
+  // Insert license (use upsert on key to prevent duplicates)
+  const { error: licenseError } = await supabase.from("licenses").upsert(
+    {
+      key: licenseData.key,
+      email: licenseData.email,
+      user_id: resolvedUserId || null,
+      active: licenseData.active,
+      expires_at: licenseData.expires,
+    },
+    { onConflict: "key" }
+  );
+
+  if (licenseError) {
+    console.error("Failed to save license:", licenseError.message);
+    return false;
+  }
 
   // Update profile to Pro
   if (resolvedUserId) {
@@ -52,48 +60,23 @@ async function saveLicenseToSupabase(
   return true;
 }
 
-// Upstash Redis fallback
-async function saveLicenseToRedis(licenseData: { key: string; email: string; created: string; expires: string | null; active: boolean }) {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-
-  if (!url || !token) {
-    console.warn("Upstash Redis not configured, license not persisted");
-    return;
-  }
-
-  const { Redis } = await import("@upstash/redis");
-  const redis = new Redis({ url, token });
-  await redis.set(`license:${licenseData.key}`, JSON.stringify(licenseData));
-}
-
+// Check if a Stripe session was already processed (idempotency via Supabase)
 async function checkSessionProcessed(sessionId: string): Promise<boolean> {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return false;
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return false;
 
   try {
-    const { Redis } = await import("@upstash/redis");
-    const redis = new Redis({ url, token });
-    const exists = await redis.exists(`processed_session:${sessionId}`);
-    return exists === 1;
+    const { createClient } = await import("@supabase/supabase-js");
+    const supabase = createClient(supabaseUrl, serviceKey);
+    const { data } = await supabase
+      .from("licenses")
+      .select("id")
+      .eq("key", `session:${sessionId}`)
+      .limit(1);
+    return (data && data.length > 0) || false;
   } catch {
     return false;
-  }
-}
-
-async function markSessionProcessed(sessionId: string): Promise<void> {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
-  if (!url || !token) return;
-
-  try {
-    const { Redis } = await import("@upstash/redis");
-    const redis = new Redis({ url, token });
-    // Expire after 30 days (Stripe retries don't last that long)
-    await redis.set(`processed_session:${sessionId}`, "1", { ex: 60 * 60 * 24 * 30 });
-  } catch {
-    // Non-fatal: worst case is a duplicate license, which is recoverable
   }
 }
 
@@ -124,7 +107,7 @@ export async function POST(request: Request) {
       const email = session.customer_details?.email || "";
       const userId = session.metadata?.userId;
 
-      // Idempotency: skip if this session was already processed
+      // Idempotency: check if license already exists for this session
       const alreadyProcessed = await checkSessionProcessed(sessionId);
       if (alreadyProcessed) {
         return NextResponse.json({ received: true });
@@ -132,14 +115,8 @@ export async function POST(request: Request) {
 
       const licenseData = createLicenseData(email);
 
-      // Save to Supabase first, fall back to Redis
-      const savedToSupabase = await saveLicenseToSupabase(licenseData, userId);
-      if (!savedToSupabase) {
-        await saveLicenseToRedis(licenseData);
-      }
-
-      // Mark session as processed to prevent duplicate license creation on retries
-      await markSessionProcessed(sessionId);
+      // Save to Supabase (upsert prevents duplicates)
+      await saveLicenseToSupabase(licenseData, userId);
     }
 
     if (
