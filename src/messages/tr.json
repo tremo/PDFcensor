@@ -255,7 +255,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$4.99",
+      "price": "$6.99",
       "period": "ay",
       "description": "Toplu belge işleyen profesyoneller için",
       "features": [
@@ -265,7 +265,7 @@
         "Öncelikli destek",
         "İstediğinde iptal et"
       ],
-      "cta": "Pro'ya Geç — $4.99/ay"
+      "cta": "Pro'ya Geç — $6.99/ay"
     }
   },
   "auth": {
