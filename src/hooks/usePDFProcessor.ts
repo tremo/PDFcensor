@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { useLocale } from "next-intl";
 import type {
   PDFDocumentData,
@@ -38,9 +38,6 @@ export function usePDFProcessor() {
   );
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState<string | null>(null);
-
-  // Track pending auto-scan
-  const pendingAutoScan = useRef(false);
 
   const scanDocument = useCallback(async (doc: PDFDocumentData, types: PIIType[], reg: RegulationType) => {
     setStatus("scanning");
