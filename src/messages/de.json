@@ -255,17 +255,17 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€27",
-      "period": "Einmalzahlung",
-      "description": "Für Profis, die saubere Ausgabe benötigen",
+      "price": "$4.99",
+      "period": "Monat",
+      "description": "Für Profis, die mehrere Dokumente verarbeiten",
       "features": [
         "Alles in Kostenlos",
         "Kein Wasserzeichen",
         "Stapelverarbeitung (ZIP-Download)",
         "Prioritäts-Support",
-        "Lebenslange Lizenz"
+        "Jederzeit kündigen"
       ],
-      "cta": "Pro-Lizenz erwerben"
+      "cta": "Pro holen — $4.99/Mo"
     }
   },
   "auth": {

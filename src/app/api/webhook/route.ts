@@ -142,6 +142,48 @@ export async function POST(request: Request) {
       await markSessionProcessed(sessionId);
     }
 
+    if (
+      event.type === "customer.subscription.deleted" ||
+      event.type === "invoice.payment_failed"
+    ) {
+      const obj = event.data.object as { customer_email?: string; customer?: string };
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+      if (supabaseUrl && serviceKey) {
+        const stripe = getStripeServer();
+        let email = obj.customer_email;
+
+        // Fetch customer email from Stripe if not directly available
+        if (!email && obj.customer) {
+          try {
+            const customer = await stripe.customers.retrieve(obj.customer as string);
+            if (!("deleted" in customer)) email = customer.email ?? undefined;
+          } catch {
+            // non-fatal
+          }
+        }
+
+        if (email) {
+          const { createClient } = await import("@supabase/supabase-js");
+          const supabase = createClient(supabaseUrl, serviceKey);
+
+          const { data: profiles } = await supabase
+            .from("profiles")
+            .select("id")
+            .eq("email", email)
+            .limit(1);
+
+          if (profiles && profiles.length > 0) {
+            await supabase
+              .from("profiles")
+              .update({ is_pro: false, updated_at: new Date().toISOString() })
+              .eq("id", profiles[0].id);
+          }
+        }
+      }
+    }
+
     return NextResponse.json({ received: true });
   } catch (error) {
     console.error("Webhook error:", error);

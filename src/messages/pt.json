@@ -255,17 +255,17 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "R$149",
-      "period": "pagamento único",
-      "description": "Para profissionais que precisam de saída limpa",
+      "price": "$4.99",
+      "period": "mês",
+      "description": "Para profissionais que processam múltiplos documentos",
       "features": [
         "Tudo do plano Grátis",
         "Sem marca d'água",
-        "Processamento em lote (download ZIP)",
+        "Processamento em lote (ZIP)",
         "Suporte prioritário",
-        "Licença vitalícia"
+        "Cancele quando quiser"
       ],
-      "cta": "Obter Licença Pro"
+      "cta": "Obter Pro — $4.99/mês"
     }
   },
   "auth": {

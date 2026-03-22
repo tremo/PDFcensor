@@ -255,17 +255,17 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "27€",
-      "period": "paiement unique",
-      "description": "Pour les professionnels qui ont besoin d'une sortie propre",
+      "price": "$4.99",
+      "period": "mois",
+      "description": "Pour les professionnels qui traitent plusieurs documents",
       "features": [
         "Tout dans Gratuit",
         "Pas de filigrane",
-        "Traitement par lots (téléchargement ZIP)",
+        "Traitement par lots (ZIP)",
         "Support prioritaire",
-        "Licence à vie"
+        "Annulez à tout moment"
       ],
-      "cta": "Obtenir la licence Pro"
+      "cta": "Passer à Pro — $4.99/mois"
     }
   },
   "auth": {
