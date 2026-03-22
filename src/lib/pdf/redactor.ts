@@ -232,7 +232,7 @@ function stripAllTextFromPage(page: PDFPage): void {
 
   const contentsObj = node.context.lookup(contentsRef);
 
-  let streams: { stream: PDFStream; ref?: unknown }[] = [];
+  const streams: { stream: PDFStream; ref?: unknown }[] = [];
   if (contentsObj instanceof PDFArray) {
     for (let i = 0; i < contentsObj.size(); i++) {
       const ref = contentsObj.get(i);
