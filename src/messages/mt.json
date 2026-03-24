@@ -308,5 +308,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Politika tal-Privatezza",
+    "lastUpdated": "Aġġornata l-aħħar: Marzu 2026",
+    "intro": {
+      "heading": "1. Introduzzjoni",
+      "text": "OfflineRedact (\"aħna\", \"tagħna\") hija impenjata li tipproteġi l-privatezza tiegħek. Din il-politika tispjega kif nittrattaw l-informazzjoni meta tuża l-għodda tagħna ta' redazzjoni ta' PDF."
+    },
+    "noFileUploads": {
+      "heading": "2. L-Ebda Tlugħ ta' Fajls",
+      "text": "{strong}Il-fajls PDF tiegħek qatt ma jitilqu mill-apparat tiegħek.{/strong} Il-proċessar kollu tal-PDF, inkluż l-estrazzjoni tat-test, id-detezzjoni ta' PII, u r-redazzjoni, isir kollu fil-browser tal-web tiegħek. Aħna ma ntellgħux, ma naħżnux, ma nipproċessaw u ma għandniex aċċess għad-dokumenti tiegħek fuq xi server."
+    },
+    "infoCollect": {
+      "heading": "3. Informazzjoni li Niġbru",
+      "text": "Niġbru biss l-informazzjoni minima meħtieġa għas-servizz tagħna:",
+      "items": ["Indirizz tal-email (biss jekk tixtri liċenzja Pro, permezz ta' Stripe)", "Informazzjoni tal-ħlas (ipproċessata minn Stripe; aħna qatt ma naraw id-dettalji tal-karta tiegħek)", "Analitika bażika (views tal-paġni, użu tal-karatteristiċi — l-ebda data personali)"]
+    },
+    "cookies": {
+      "heading": "4. Cookies",
+      "text": "Nużaw biss cookies essenzjali: preferenza tal-lingwa u ħażna taċ-ċavetta tal-liċenzja (f'localStorage). Ma nużawx cookies ta' traċċar."
+    },
+    "thirdParty": {
+      "heading": "5. Servizzi ta' Partijiet Terzi",
+      "items": ["{strong}Stripe{/strong} — Proċessar tal-ħlas. Ara l-politika tal-privatezza ta' Stripe.", "{strong}Vercel{/strong} — Hosting. Ara l-politika tal-privatezza ta' Vercel."]
+    },
+    "dataRetention": {
+      "heading": "6. Żamma tad-Data",
+      "text": "Iċ-ċwievet tal-liċenzja huma maħżuna għat-tul tal-liċenzja tiegħek. Aħna ma naħżnu l-ebda kontenut ta' PDF jew data personali estratta mid-dokumenti."
+    },
+    "contact": {
+      "heading": "7. Kuntatt",
+      "text": "Għal mistoqsijiet relatati mal-privatezza, ikkuntattjana fuq privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Termini tas-Servizz",
+    "lastUpdated": "Aġġornata l-aħħar: Marzu 2026",
+    "acceptance": {
+      "heading": "1. Aċċettazzjoni tat-Termini",
+      "text": "Bl-użu ta' OfflineRedact, inti taqbel ma' dawn it-Termini tas-Servizz. Jekk ma taqbilx, tużax is-servizz."
+    },
+    "serviceDesc": {
+      "heading": "2. Deskrizzjoni tas-Servizz",
+      "text": "OfflineRedact hija għodda ta' redazzjoni ta' PDF fuq il-klijent li tidentifika u tneħħi informazzjoni personali identifikabbli (PII) mid-dokumenti PDF. Il-proċessar kollu jsir fil-browser tal-web tiegħek."
+    },
+    "noGuarantee": {
+      "heading": "3. L-Ebda Garanzija",
+      "text": "Filwaqt li nagħmlu ħilitna għall-preċiżjoni, OfflineRedact ma tiggarantix detezzjoni 100% tal-PII kollu. L-utenti huma responsabbli li jirrevedew ir-riżultati tar-redazzjoni qabel ma jaqsmu jew jippubblikaw dokumenti. Dejjem ivverifika li l-informazzjoni sensittiva kollha ġiet irredattata kif suppost."
+    },
+    "license": {
+      "heading": "4. Liċenzja",
+      "text": "Livell b'xejn: Tista' tuża OfflineRedact b'xejn b'watermark fuq l-output. Liċenzja Pro: Ħlas ta' darba jagħtik liċenzja għal dejjem biex tuża OfflineRedact mingħajr watermarks."
+    },
+    "refundPolicy": {
+      "heading": "5. Politika ta' Rifużjoni",
+      "text": "Noffru garanzija ta' flus lura fi żmien 30 jum. Ikkuntattjana fuq support@offlineredact.com għal talbiet ta' rifużjoni."
+    },
+    "liability": {
+      "heading": "6. Limitazzjoni ta' Responsabbiltà",
+      "text": "OfflineRedact hija pprovduta \"kif inhi\" mingħajr garanziji. Aħna m'aħniex responsabbli għal xi danni li jirriżultaw mill-użu jew l-inkapaċità li tuża s-servizz, inkluż iżda mhux limitat għal redazzjoni mhux kompleta ta' data sensittiva."
+    },
+    "contact": {
+      "heading": "7. Kuntatt",
+      "text": "Għal mistoqsijiet dwar dawn it-termini, ikkuntattjana fuq legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Lura għall-Blog",
+    "cta": {
+      "title": "Lest tipprova OfflineRedact?",
+      "subtitle": "Ibda tirredatta data sensittiva mill-PDFs tiegħek — b'xejn, mingħajr reġistrazzjoni.",
+      "button": "Ibda Tirredatta"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "Redazzjoni ta' PDF Konformi ma' HIPAA: Gwida Kompleta",
+        "excerpt": "Tgħallem kif tirredatta kif suppost informazzjoni tas-saħħa protetta (PHI) mid-dokumenti PDF biex iżżomm il-konformità ma' HIPAA.",
+        "date": "2026-02-15",
+        "content": ["Organizzazzjonijiet tas-saħħa jimmaniġġjaw ammonti kbar ta' Informazzjoni tas-Saħħa Protetta (PHI) kuljum. Meta jaqsmu dokumenti esternament — għal proċedimenti legali, riċerka, jew komunikazzjoni bejn l-organizzazzjonijiet — redazzjoni xierqa mhijiex biss prattika tajba, hija rekwiżit legali taħt HIPAA.", "Ir-Regola tal-Privatezza ta' HIPAA tirrikjedi li entitajiet koperti u l-assoċjati kummerċjali tagħhom jipproteġu l-informazzjoni kollha tas-saħħa identifikabbli individwalment. Dan jinkludi ismijiet, dati, numri tas-Sigurtà Soċjali, numri ta' rekords mediċi, u 14-il kategorija oħra ta' identifikaturi.", "Redazzjoni viżwali sempliċi — li tpinġi kaxxi suwed fuq test sensittiv — MHIJIEX biżżejjed għall-konformità ma' HIPAA. Id-data tat-test sottostanti trid titneħħa permanentement mid-dokument. OfflineRedact twettaq redazzjoni vera billi tneħħi d-data attwali tat-test mill-flussi tal-kontenut tal-PDF, mhux biss tkopriha viżwalment.", "Passi ewlenin għal redazzjoni konformi ma' HIPAA: (1) Identifika l-PHI kollu fid-dokument bl-użu ta' detezzjoni awtomatika, (2) Irrevedi u kkonferma l-oġġetti identifikati, (3) Applika redazzjoni vera li tneħħi d-data tat-test, (4) Naddaf il-metadata tad-dokument, (5) Ivverifika d-dokument irredattat qabel ma taqsmu.", "B'OfflineRedact, il-proċessar kollu jsir fil-browser tiegħek — id-dokumenti tiegħek qatt ma jitilqu mill-apparat tiegħek. Dan jelimina r-riskju ta' esponiment tal-PHI waqt il-proċess tar-redazzjoni nnifsu, konsiderazzjoni kritika għall-konformità ma' HIPAA."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Prattiki Tajbin għar-Redazzjoni ta' Dokumenti fl-eDiscovery",
+        "excerpt": "Gwida essenzjali għall-professjonisti legali dwar ir-redazzjoni ta' informazzjoni sensittiva waqt il-proċess tal-eDiscovery.",
+        "date": "2026-02-10",
+        "content": ["Fi proċedimenti legali, il-proċess tal-eDiscovery spiss jirrikjedi l-produzzjoni ta' volumi kbar ta' dokumenti. Ħafna minn dawn id-dokumenti fihom informazzjoni privileġġjata, sigrieti kummerċjali, jew data personali li trid tiġi rredattata qabel il-produzzjoni.", "Ir-redazzjoni fl-eDiscovery sservi diversi skopijiet: tipproteġi l-privileġġ bejn l-avukat u l-klijent, tipproteġi informazzjoni kummerċjali kunfidenzjali, u tikkonforma ma' regolamenti tal-privatezza bħal GDPR u CCPA li jistgħu japplikaw anke f'kuntest ta' litigazzjoni.", "Żbalji komuni fir-redazzjoni tal-eDiscovery jinkludu: l-użu ta' għodod ta' evidenzjar minflok redazzjoni vera, li tinsa tneħħi l-metadata, redazzjoni inkonsistenti fis-settijiet ta' dokumenti, u nuqqas ta' redazzjoni ta' stampi inkorporati jew oqsma ta' formoli.", "OfflineRedact tappoġġja l-ipproċessar f'lottijiet — ittella' diversi PDFs u pproċessahom kollha b'regoli ta' redazzjoni konsistenti. Dan huwa essenzjali għall-flussi tax-xogħol tal-eDiscovery fejn mijiet jew eluf ta' dokumenti jeħtieġu trattament uniformi.", "Prattiki tajbin: (1) Iddefinixxi kategoriji ta' redazzjoni minn qabel, (2) Uża detezzjoni awtomatika biex tiżgura konsistenza, (3) Dejjem ivverifika ma' reviżur ieħor, (4) Żomm reġistru tar-redazzjonijiet, (5) Naddaf il-metadata mid-dokumenti kollha prodotti."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "Konformità GDPR tal-PDF: Protezzjoni tad-Data Personali fid-Dokumenti",
+        "excerpt": "Kif tiżgura li d-dokumenti PDF tiegħek jikkonformaw mar-rekwiżiti tal-protezzjoni tad-data tal-GDPR permezz ta' redazzjoni xierqa.",
+        "date": "2026-02-05",
+        "content": ["Ir-Regolament Ġenerali dwar il-Protezzjoni tad-Data (GDPR) jirrikjedi li l-organizzazzjonijiet jipproteġu d-data personali tar-residenti tal-UE. Dokumenti PDF spiss ikun fihom data personali li trid tiġi mmaniġġjata kif suppost — kemm għal talbiet ta' aċċess mis-suġġetti tad-data, ftehimiet ta' qsim tad-data, jew politiki ta' żamma tad-dokumenti.", "Taħt il-GDPR, data personali tinkludi kwalunkwe informazzjoni relatata ma' persuna identifikata jew identifikabbli: ismijiet, indirizzi tal-email, numri tat-telefon, indirizzi IP, informazzjoni finanzjarja, u aktar. Dokumenti PDF frekwentement ikun fihom diversi kategoriji ta' data personali.", "Meta tirrispondi għal talbiet ta' aċċess mis-suġġetti tad-data (DSARs), l-organizzazzjonijiet jista' jkollhom jipprovdu kopji ta' dokumenti filwaqt li jirredattaw id-data personali ta' partijiet terzi. Dan jirrikjedi identifikazzjoni bir-reqqa u tneħħija permanenti tad-data ta' individwi oħra.", "L-appoġġ ta' OfflineRedact għal diversi regolamenti jinkludi profil GDPR li awtomatikament jidentifika mudelli komuni ta' data personali Ewropea: ismijiet, indirizzi tal-email, numri tat-telefon, numri IBAN, u indirizzi postali. L-għodda tappoġġja l-lingwi kollha tal-UE.", "Konsiderazzjonijiet ewlenin tal-GDPR għar-redazzjoni tal-PDF: (1) Iżgura li r-redazzjoni hija irriversibbli — it-test irid jitneħħa permanentement, (2) Naddaf il-metadata tad-dokument li tista' tkun fiha data personali, (3) Żomm rekords tal-attivitajiet ta' redazzjoni, (4) Applika l-prinċipju tal-minimizzazzjoni tad-data."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Il-paġna ma nstabitx.",
+    "goHome": "Mur id-Dar"
   }
 }

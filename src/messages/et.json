@@ -308,5 +308,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Privaatsuspoliitika",
+    "lastUpdated": "Viimati uuendatud: märts 2026",
+    "intro": {
+      "heading": "1. Sissejuhatus",
+      "text": "OfflineRedact („meie”, „meie oma”, „meid”) on pühendunud teie privaatsuse kaitsmisele. See poliitika selgitab, kuidas me käsitleme teavet, kui kasutate meie PDF-redigeerimistööriista."
+    },
+    "noFileUploads": {
+      "heading": "2. Failide mitteüleslaadimine",
+      "text": "{strong}Teie PDF-failid ei lahku kunagi teie seadmest.{/strong} Kogu PDF-töötlus, sealhulgas teksti eraldamine, isikuandmete tuvastamine ja redigeerimine, toimub täielikult teie veebibrauseris. Me ei laadi üles, ei salvesta, ei töötle ega oma juurdepääsu teie dokumentidele ühelgi serveris."
+    },
+    "infoCollect": {
+      "heading": "3. Teave, mida me kogume",
+      "text": "Me kogume minimaalset teavet, mis on meie teenuse jaoks vajalik:",
+      "items": ["E-posti aadress (ainult Pro litsentsi ostmisel Stripe'i kaudu)", "Makseandmed (töödeldakse Stripe'i poolt; me ei näe kunagi teie kaardi andmeid)", "Põhianalüütika (lehevaatamised, funktsioonide kasutamine — ilma isikuandmeteta)"]
+    },
+    "cookies": {
+      "heading": "4. Küpsised",
+      "text": "Me kasutame ainult olulisi küpsiseid: keele-eelistuse ja litsentsivõtme salvestamine (localStorage'is). Me ei kasuta jälgimisküpsiseid."
+    },
+    "thirdParty": {
+      "heading": "5. Kolmandate osapoolte teenused",
+      "items": ["{strong}Stripe{/strong} — Maksetöötlus. Vaadake Stripe'i privaatsuspoliitikat.", "{strong}Vercel{/strong} — Hostimine. Vaadake Verceli privaatsuspoliitikat."]
+    },
+    "dataRetention": {
+      "heading": "6. Andmete säilitamine",
+      "text": "Litsentsivõtmeid säilitatakse teie litsentsi kehtivuse ajal. Me ei salvesta ühtegi PDF-sisu ega dokumentidest eraldatud isikuandmeid."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Privaatsusega seotud päringute korral võtke meiega ühendust aadressil privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Teenuse tingimused",
+    "lastUpdated": "Viimati uuendatud: märts 2026",
+    "acceptance": {
+      "heading": "1. Tingimuste aktsepteerimine",
+      "text": "OfflineRedact'i kasutamisega nõustute nende teenuse tingimustega. Kui te ei nõustu, ärge kasutage teenust."
+    },
+    "serviceDesc": {
+      "heading": "2. Teenuse kirjeldus",
+      "text": "OfflineRedact on kliendipoolne PDF-redigeerimistööriist, mis tuvastab ja eemaldab isiku tuvastamist võimaldava teabe (PII) PDF-dokumentidest. Kogu töötlus toimub teie veebibrauseris."
+    },
+    "noGuarantee": {
+      "heading": "3. Garantii puudumine",
+      "text": "Kuigi me püüdleme täpsuse poole, ei garanteeri OfflineRedact kõigi isikuandmete 100% tuvastamist. Kasutajad vastutavad redigeerimistulemuste ülevaatamise eest enne dokumentide jagamist või avaldamist. Veenduge alati, et kogu tundlik teave on korrektselt redigeeritud."
+    },
+    "license": {
+      "heading": "4. Litsents",
+      "text": "Tasuta tase: Võite kasutada OfflineRedact'i tasuta, väljundil on vesimärk. Pro litsents: Ühekordne makse annab teile eluaegse litsentsi OfflineRedact'i kasutamiseks ilma vesimärkideta."
+    },
+    "refundPolicy": {
+      "heading": "5. Tagasimaksepoliitika",
+      "text": "Pakume 30-päevast rahulolugarantiid. Tagasimaksetaotluste korral võtke meiega ühendust aadressil support@offlineredact.com."
+    },
+    "liability": {
+      "heading": "6. Vastutuse piiramine",
+      "text": "OfflineRedact'i pakutakse „nagu on” ilma garantiideta. Me ei vastuta kahjude eest, mis tulenevad teenuse kasutamisest või suutmatusest seda kasutada, sealhulgas, kuid mitte ainult, tundlike andmete mittetäielikust redigeerimisest."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Nende tingimustega seotud küsimuste korral võtke meiega ühendust aadressil legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blogi",
+    "backToBlog": "Tagasi blogisse",
+    "cta": {
+      "title": "Valmis proovima OfflineRedact'i?",
+      "subtitle": "Alustage oma PDF-idest tundlike andmete redigeerimist — tasuta, registreerimist pole vaja.",
+      "button": "Alustage redigeerimist"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA-le vastav PDF-redigeerimine: täielik juhend",
+        "excerpt": "Õppige, kuidas korrektselt redigeerida kaitstud terviseteavet (PHI) PDF-dokumentidest, et tagada HIPAA nõuetele vastavus.",
+        "date": "2026-02-15",
+        "content": ["Tervishoiuorganisatsioonid käsitlevad igapäevaselt suuri koguseid kaitstud terviseteavet (PHI). Dokumentide väljastamisel — juriidiliste menetluste, teadusuuringute või organisatsioonidevahelise suhtluse jaoks — on korrektne redigeerimine mitte ainult hea tava, vaid HIPAA seadusest tulenev nõue.", "HIPAA privaatsusreegel nõuab, et kaetud üksused ja nende äripartnerid kaitseksid kogu isiku tuvastamist võimaldavat terviseteavet. See hõlmab nimesid, kuupäevi, sotsiaalkindlustuse numbreid, meditsiiniliste dokumentide numbreid ja 14 muud identifikaatorite kategooriat.", "Lihtne visuaalne redigeerimine — mustade kastide joonistamine tundliku teksti peale — EI OLE piisav HIPAA nõuetele vastavuse jaoks. Alusandmed peavad olema dokumendist jäädavalt eemaldatud. OfflineRedact teostab tõelist redigeerimist, eemaldades tegelikud tekstiandmed PDF-sisu voogudest, mitte lihtsalt kattes neid visuaalselt.", "HIPAA-le vastava redigeerimise põhietapid: (1) Tuvastage dokumendist kogu PHI, kasutades automaatset tuvastamist, (2) Vaadake üle ja kinnitage tuvastatud üksused, (3) Rakendage tõelist redigeerimist, mis eemaldab tekstiandmed, (4) Puhastage dokumendi metaandmed, (5) Kontrollige redigeeritud dokumenti enne jagamist.", "OfflineRedact'iga toimub kogu töötlus teie brauseris — teie dokumendid ei lahku kunagi teie seadmest. See kõrvaldab PHI paljastamise ohu redigeerimisprotsessi enda käigus, mis on HIPAA nõuetele vastavuse jaoks kriitilise tähtsusega."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery dokumendi redigeerimise parimad tavad",
+        "excerpt": "Oluline juhend juristidele tundliku teabe redigeerimiseks eDiscovery protsessi käigus.",
+        "date": "2026-02-10",
+        "content": ["Juriidilistes menetlustes nõuab eDiscovery protsess sageli suurte dokumentide koguste esitamist. Paljud neist dokumentidest sisaldavad privilegeeritud teavet, ärisaladusi või isikuandmeid, mis tuleb enne esitamist redigeerida.", "Redigeerimine eDiscovery's teenib mitut eesmärki: advokaadi-kliendi privileegi kaitsmine, konfidentsiaalse äriteabe varjamine ja privaatsusregulatsioonide, nagu GDPR ja CCPA, järgimine, mis võivad kehtida ka kohtumenetluse kontekstis.", "Levinud vead eDiscovery redigeerimisel hõlmavad: esiletõstutööriistade kasutamist tõelise redigeerimise asemel, metaandmete eemaldamise unustamist, ebajärjekindlat redigeerimist dokumendikomplektides ning manustatud piltide või vormiväljate redigeerimata jätmist.", "OfflineRedact toetab pakktöötlust — laadige üles mitu PDF-i ja töödelge neid kõiki ühtsete redigeerimisreeglitega. See on oluline eDiscovery töövoogude jaoks, kus sadu või tuhandeid dokumente tuleb ühetaoliselt käsitleda.", "Parimad tavad: (1) Määratlege redigeerimiskategooriad eelnevalt, (2) Kasutage automaatset tuvastamist järjepidevuse tagamiseks, (3) Laske alati teisel ülevaatajal kontrollida, (4) Pidage redigeerimislogi, (5) Puhastage kõigi esitatud dokumentide metaandmed."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF-vastavus: isikuandmete kaitsmine dokumentides",
+        "excerpt": "Kuidas tagada, et teie PDF-dokumendid vastavad GDPR andmekaitsenõuetele korrektse redigeerimise kaudu.",
+        "date": "2026-02-05",
+        "content": ["Isikuandmete kaitse üldmäärus (GDPR) nõuab organisatsioonidelt EL-i elanike isikuandmete kaitsmist. PDF-dokumendid sisaldavad sageli isikuandmeid, mida tuleb korrektselt käsitleda — olgu see andmesubjekti juurdepääsutaotluste, andmete jagamise lepingute või dokumentide säilitamise poliitikate jaoks.", "GDPR kohaselt hõlmavad isikuandmed igasugust teavet tuvastatud või tuvastatava isiku kohta: nimed, e-posti aadressid, telefoninumbrid, IP-aadressid, finantsteave ja palju muud. PDF-dokumendid sisaldavad sageli mitut isikuandmete kategooriat.", "Andmesubjekti juurdepääsutaotlustele (DSAR) vastamisel peavad organisatsioonid võib-olla esitama dokumentide koopiaid, redigeerides samal ajal kolmandate isikute isikuandmeid. See nõuab teiste isikute andmete hoolikat tuvastamist ja jäädavat eemaldamist.", "OfflineRedact'i mitmemääruseline tugi sisaldab GDPR-profiili, mis tuvastab automaatselt levinud Euroopa isikuandmete mustreid: nimed, e-posti aadressid, telefoninumbrid, IBAN-numbrid ja postiaadressid. Tööriist toetab kõiki EL-i keeli.", "Peamised GDPR kaalutlused PDF-redigeerimisel: (1) Veenduge, et redigeerimine on pöördumatu — tekst peab olema jäädavalt eemaldatud, (2) Puhastage dokumendi metaandmed, mis võivad sisaldada isikuandmeid, (3) Pidage arvestust redigeerimistegevuste kohta, (4) Rakendage andmete minimeerimise põhimõtet."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Lehte ei leitud.",
+    "goHome": "Avalehele"
   }
 }

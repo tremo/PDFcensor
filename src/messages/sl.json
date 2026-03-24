@@ -308,5 +308,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Politika zasebnosti",
+    "lastUpdated": "Nazadnje posodobljeno: Marec 2026",
+    "intro": {
+      "heading": "1. Uvod",
+      "text": "OfflineRedact (\"mi\", \"naš\", \"nas\") se zavezuje k varovanju vaše zasebnosti. Ta politika pojasnjuje, kako ravnamo z informacijami, ko uporabljate naše orodje za redakcijo PDF."
+    },
+    "noFileUploads": {
+      "heading": "2. Brez nalaganja datotek",
+      "text": "{strong}Vaše PDF datoteke nikoli ne zapustijo vaše naprave.{/strong} Celotna obdelava PDF, vključno z ekstrakcijo besedila, zaznavo PII in redakcijo, poteka v celoti v vašem spletnem brskalniku. Vaših dokumentov ne nalagamo, ne shranjujemo, ne obdelujemo in nimamo dostopa do njih na nobenem strežniku."
+    },
+    "infoCollect": {
+      "heading": "3. Informacije, ki jih zbiramo",
+      "text": "Zbiramo le minimalne informacije, potrebne za našo storitev:",
+      "items": ["E-poštni naslov (le če kupite licenco Pro prek Stripe)", "Plačilne informacije (obdeluje Stripe; nikoli ne vidimo podatkov vaše kartice)", "Osnovna analitika (ogledi strani, uporaba funkcij — brez osebnih podatkov)"]
+    },
+    "cookies": {
+      "heading": "4. Piškotki",
+      "text": "Uporabljamo le bistvene piškotke: nastavitev jezika in shranjevanje licenčnega ključa (v localStorage). Ne uporabljamo sledilnih piškotkov."
+    },
+    "thirdParty": {
+      "heading": "5. Storitve tretjih oseb",
+      "items": ["{strong}Stripe{/strong} — Obdelava plačil. Glejte politiko zasebnosti Stripe.", "{strong}Vercel{/strong} — Gostovanje. Glejte politiko zasebnosti Vercel."]
+    },
+    "dataRetention": {
+      "heading": "6. Hramba podatkov",
+      "text": "Licenčni ključi so shranjeni za čas trajanja vaše licence. Ne shranjujemo nobene vsebine PDF ali osebnih podatkov, pridobljenih iz dokumentov."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Za vprašanja v zvezi z zasebnostjo nas kontaktirajte na privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Pogoji storitve",
+    "lastUpdated": "Nazadnje posodobljeno: Marec 2026",
+    "acceptance": {
+      "heading": "1. Sprejem pogojev",
+      "text": "Z uporabo OfflineRedact se strinjate s temi Pogoji storitve. Če se ne strinjate, storitve ne uporabljajte."
+    },
+    "serviceDesc": {
+      "heading": "2. Opis storitve",
+      "text": "OfflineRedact je orodje za redakcijo PDF na strani odjemalca, ki zaznava in odstranjuje osebne identifikacijske podatke (PII) iz PDF dokumentov. Celotna obdelava poteka v vašem spletnem brskalniku."
+    },
+    "noGuarantee": {
+      "heading": "3. Brez jamstva",
+      "text": "Čeprav si prizadevamo za natančnost, OfflineRedact ne jamči 100% zaznave vseh PII. Uporabniki so odgovorni za pregled rezultatov redakcije pred deljenjem ali objavo dokumentov. Vedno preverite, da so bili vsi občutljivi podatki pravilno redigirani."
+    },
+    "license": {
+      "heading": "4. Licenca",
+      "text": "Brezplačna raven: OfflineRedact lahko uporabljate brezplačno z vodnim žigom na izhodu. Licenca Pro: Enkratno plačilo vam podeli doživljenjsko licenco za uporabo OfflineRedact brez vodnih žigov."
+    },
+    "refundPolicy": {
+      "heading": "5. Politika vračila",
+      "text": "Ponujamo 30-dnevno garancijo vračila denarja. Za zahtevke za vračilo nas kontaktirajte na support@offlineredact.com."
+    },
+    "liability": {
+      "heading": "6. Omejitev odgovornosti",
+      "text": "OfflineRedact je zagotovljen \"tak kot je\" brez jamstev. Nismo odgovorni za nobeno škodo, ki izhaja iz uporabe ali nezmožnosti uporabe storitve, vključno z, a ne omejeno na, nepopolno redakcijo občutljivih podatkov."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Za vprašanja o teh pogojih nas kontaktirajte na legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Nazaj na blog",
+    "cta": {
+      "title": "Pripravljeni preizkusiti OfflineRedact?",
+      "subtitle": "Začnite redakcijo občutljivih podatkov iz vaših PDF — brezplačno, brez registracije.",
+      "button": "Začnite z redakcijo"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "Redakcija PDF v skladu s HIPAA: Popoln vodnik",
+        "excerpt": "Naučite se, kako pravilno redigirati zaščitene zdravstvene podatke (PHI) iz PDF dokumentov za ohranjanje skladnosti s HIPAA.",
+        "date": "2026-02-15",
+        "content": ["Zdravstvene organizacije dnevno obdelujejo ogromne količine zaščitenih zdravstvenih podatkov (PHI). Ko delijo dokumente navzven — za pravne postopke, raziskave ali medorganizacijsko komunikacijo — pravilna redakcija ni le dobra praksa, temveč zakonska zahteva po HIPAA.", "Pravilo o zasebnosti HIPAA zahteva, da pokriti subjekti in njihovi poslovni partnerji zaščitijo vse individualno prepoznavne zdravstvene podatke. To vključuje imena, datume, številke socialnega zavarovanja, številke zdravstvenih kartotek in 14 drugih kategorij identifikatorjev.", "Preprosta vizualna redakcija — risanje črnih okvirjev čez občutljivo besedilo — NI zadostna za skladnost s HIPAA. Osnovni besedilni podatki morajo biti trajno odstranjeni iz dokumenta. OfflineRedact izvaja pravo redakcijo z odstranitvijo dejanskih besedilnih podatkov iz vsebinskih tokov PDF, ne le z vizualnim prekrivanjem.", "Ključni koraki za redakcijo v skladu s HIPAA: (1) Identificirajte vse PHI v dokumentu z uporabo samodejne zaznave, (2) Preglejte in potrdite zaznane elemente, (3) Uporabite pravo redakcijo, ki odstrani besedilne podatke, (4) Očistite metapodatke dokumenta, (5) Preverite redigirani dokument pred deljenjem.", "Z OfflineRedact celotna obdelava poteka v vašem brskalniku — vaši dokumenti nikoli ne zapustijo vaše naprave. To odpravlja tveganje izpostavljenosti PHI med samim postopkom redakcije, kar je ključen vidik za skladnost s HIPAA."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Najboljše prakse redakcije dokumentov v eDiscovery",
+        "excerpt": "Bistveni vodnik za pravne strokovnjake o redakciji občutljivih informacij med postopkom eDiscovery.",
+        "date": "2026-02-10",
+        "content": ["V pravnih postopkih proces eDiscovery pogosto zahteva pripravo velikih količin dokumentov. Mnogi od teh dokumentov vsebujejo privilegirane informacije, poslovne skrivnosti ali osebne podatke, ki morajo biti redigirani pred predložitvijo.", "Redakcija v eDiscovery služi več namenom: zaščiti privilegija med odvetnikom in stranko, zaščiti zaupnih poslovnih informacij in skladnosti z regulativami zasebnosti, kot sta GDPR in CCPA, ki se lahko uporabljata tudi v kontekstu sodnih sporov.", "Pogoste napake pri redakciji v eDiscovery vključujejo: uporabo orodij za označevanje namesto prave redakcije, pozabljanje na odstranitev metapodatkov, nedosledna redakcija v zbirkah dokumentov in neuspešna redakcija vdelanih slik ali polj obrazcev.", "OfflineRedact podpira paketno obdelavo — naložite več PDF-jev in jih vse obdelajte z doslednimi pravili redakcije. To je bistveno za delovne tokove eDiscovery, kjer na stotine ali tisoče dokumentov potrebuje enotno obravnavo.", "Najboljše prakse: (1) Vnaprej opredelite kategorije redakcije, (2) Uporabite samodejno zaznavo za zagotovitev doslednosti, (3) Vedno preverite z drugim pregledovalcem, (4) Vzdržujte dnevnik redakcij, (5) Očistite metapodatke iz vseh predloženih dokumentov."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "Skladnost PDF z GDPR: Zaščita osebnih podatkov v dokumentih",
+        "excerpt": "Kako zagotoviti, da vaši PDF dokumenti izpolnjujejo zahteve varstva podatkov GDPR s pravilno redakcijo.",
+        "date": "2026-02-05",
+        "content": ["Splošna uredba o varstvu podatkov (GDPR) od organizacij zahteva zaščito osebnih podatkov prebivalcev EU. PDF dokumenti pogosto vsebujejo osebne podatke, ki morajo biti pravilno obravnavani — bodisi za zahteve za dostop posameznikov, sporazume o izmenjavi podatkov ali politike hrambe dokumentov.", "Po GDPR osebni podatki vključujejo vse informacije, ki se nanašajo na identificirano ali prepoznavno osebo: imena, e-poštne naslove, telefonske številke, IP naslove, finančne informacije in drugo. PDF dokumenti pogosto vsebujejo več kategorij osebnih podatkov.", "Ko odgovarjate na zahteve za dostop posameznikov (DSAR), bodo organizacije morda morale zagotoviti kopije dokumentov, hkrati pa redigirati osebne podatke tretjih oseb. To zahteva skrbno identifikacijo in trajno odstranitev podatkov drugih posameznikov.", "Podpora OfflineRedact za več regulativ vključuje profil GDPR, ki samodejno zaznava pogoste vzorce evropskih osebnih podatkov: imena, e-poštne naslove, telefonske številke, številke IBAN in poštne naslove. Orodje podpira vse jezike EU.", "Ključni vidiki GDPR za redakcijo PDF: (1) Zagotovite, da je redakcija nepreklicna — besedilo mora biti trajno odstranjeno, (2) Očistite metapodatke dokumenta, ki lahko vsebujejo osebne podatke, (3) Vzdržujte evidence dejavnosti redakcije, (4) Uporabite načelo minimizacije podatkov."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Stran ni bila najdena.",
+    "goHome": "Na domov"
   }
 }
