@@ -61,11 +61,11 @@ const blogPosts = [
   },
 ];
 
-const blogDates: Record<string, string> = {
-  "hipaa-compliant-pdf-redaction": "2026-02-15",
-  "ediscovery-document-redaction": "2026-02-10",
-  "gdpr-pdf-compliance": "2026-02-05",
-};
+const blogSlugs = blogPosts.map((post) => post.slug);
+
+const blogDates: Record<string, string> = Object.fromEntries(
+  blogPosts.map((post) => [post.slug, post.date])
+);
 
 export default async function BlogPage() {
   const t = await getTranslations("blog");
