@@ -160,7 +160,17 @@
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
-      "page": "Page {current} of {total}"
+      "page": "Page {current} of {total}",
+      "customKeywords": "Custom Keywords",
+      "customKeywordsHint": "Add words or phrases to censor (e.g. project name, company name)",
+      "addKeyword": "Add",
+      "keywordPlaceholder": "Type a word or phrase...",
+      "keywordAdded": "custom keyword",
+      "scanKeywords": "Scan for Keywords",
+      "drawModeOn": "Drawing Mode: ON",
+      "drawModeOff": "Drawing Mode: OFF",
+      "drawModeHint": "Click and drag on the document to draw a redaction box",
+      "selectModeHint": "Click on redactions to select, move, or resize them"
     },
     "docx": {
       "pending": "Pending",
@@ -197,7 +207,8 @@
       "creditCard": "Credit Card",
       "passport": "Passport Number",
       "names": "Person Names",
-      "address": "Addresses"
+      "address": "Addresses",
+      "customKeyword": "Custom Keyword"
     }
   },
   "landing": {

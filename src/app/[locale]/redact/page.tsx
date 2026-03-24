@@ -6,6 +6,8 @@ import { PDFDropzone } from "@/components/pdf/PDFDropzone";
 import { PDFViewer } from "@/components/pdf/PDFViewer";
 import { PDFPageThumbnails } from "@/components/pdf/PDFPageThumbnails";
 import { RedactionControls } from "@/components/pdf/RedactionControls";
+import { CustomKeywordPanel } from "@/components/pdf/CustomKeywordPanel";
+import { DrawModeToolbar } from "@/components/pdf/DrawModeToolbar";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
 import { BatchSummary } from "@/components/pdf/BatchSummary";
@@ -67,6 +69,7 @@ export default function RedactPage() {
   const batch = useBatchProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
+  const [drawMode, setDrawMode] = useState(false);
 
   // Route files to correct processor
   const handleFilesSelected = useCallback(
@@ -118,6 +121,7 @@ export default function RedactPage() {
     setDocumentType("none");
     setFlowMode("single");
     setSelectedRedactionId(null);
+    setDrawMode(false);
   }, [flowMode, documentType, pdf, docx, img, batch]);
 
   // Determine the active state based on document type (single mode)
@@ -241,6 +245,9 @@ export default function RedactPage() {
             onRegulationChange={activeChangeRegulation}
             enabledTypes={activeEnabledTypes}
             onToggleType={activeToggleType}
+            customKeywords={documentType === "pdf" || documentType === "none" ? pdf.customKeywords : undefined}
+            onAddCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.addCustomKeyword : undefined}
+            onRemoveCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.removeCustomKeyword : undefined}
           />
         </div>
       ) : isBatchProcessing ? (
@@ -413,53 +420,76 @@ export default function RedactPage() {
         </div>
       ) : pdf.document ? (
         /* PDF Processing state (single) */
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
-          <div className="hidden lg:block">
-            <PDFPageThumbnails
-              totalPages={pdf.document.totalPages}
-              currentPage={pdf.currentPage}
-              onPageChange={pdf.setCurrentPage}
-              redactionCounts={redactionCounts}
+        <div className="space-y-3">
+          {/* Draw mode toolbar */}
+          <div className="bg-muted/30 rounded-xl border border-border px-4 py-2.5">
+            <DrawModeToolbar
+              isDrawMode={drawMode}
+              onToggle={() => setDrawMode((prev) => !prev)}
             />
           </div>
-          <div className="overflow-auto max-h-[80vh]">
-            <div className="flex justify-center min-w-fit">
-              <PDFViewer
-                file={pdf.document.file}
-                currentPage={pdf.currentPage}
+          <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
+            <div className="hidden lg:block">
+              <PDFPageThumbnails
                 totalPages={pdf.document.totalPages}
-                redactions={pdf.redactions}
-                scale={1.2}
-                selectedRedactionId={selectedRedactionId}
-                onSelectRedaction={setSelectedRedactionId}
-                onToggleRedaction={pdf.toggleRedaction}
-                onRemoveRedaction={pdf.removeRedaction}
-                onUpdateRedaction={pdf.updateRedaction}
-                onManualRedaction={pdf.addManualRedaction}
+                currentPage={pdf.currentPage}
+                onPageChange={pdf.setCurrentPage}
+                redactionCounts={redactionCounts}
               />
             </div>
-          </div>
-          <div>
-            <RedactionControls
-              status={pdf.status}
-              progress={pdf.progress}
-              redactions={pdf.redactions}
-              currentPage={pdf.currentPage}
-              totalPages={pdf.document.totalPages}
-              onPageChange={pdf.setCurrentPage}
-              onScan={pdf.scan}
-              onRedact={() => pdf.applyRedaction(false)}
-              onDownload={pdf.downloadRedactedPdf}
-              onReset={handleReset}
-              hasDocument={!!pdf.document}
-              hasRedactedPdf={!!pdf.redactedPdfBytes}
-              onConfirmAll={pdf.confirmAll}
-              onRejectAll={pdf.rejectAll}
-              onToggleRedaction={pdf.toggleRedaction}
-              onRemoveRedaction={pdf.removeRedaction}
-              selectedRedactionId={selectedRedactionId}
-              onSelectRedaction={setSelectedRedactionId}
-            />
+            <div className="overflow-auto max-h-[80vh]">
+              <div className="flex justify-center min-w-fit">
+                <PDFViewer
+                  file={pdf.document.file}
+                  currentPage={pdf.currentPage}
+                  totalPages={pdf.document.totalPages}
+                  redactions={pdf.redactions}
+                  scale={1.2}
+                  selectedRedactionId={selectedRedactionId}
+                  onSelectRedaction={setSelectedRedactionId}
+                  onToggleRedaction={pdf.toggleRedaction}
+                  onRemoveRedaction={pdf.removeRedaction}
+                  onUpdateRedaction={pdf.updateRedaction}
+                  onManualRedaction={drawMode ? pdf.addManualRedaction : undefined}
+                />
+              </div>
+            </div>
+            <div className="space-y-4">
+              {/* Custom keyword panel - in editing sidebar */}
+              <CustomKeywordPanel
+                keywords={pdf.customKeywords}
+                onAddKeyword={pdf.addCustomKeyword}
+                onRemoveKeyword={pdf.removeCustomKeyword}
+                onScan={pdf.scan}
+                hasDocument={true}
+                isProcessing={[
+                  "parsing",
+                  "scanning",
+                  "ocr-scanning",
+                  "redacting",
+                ].includes(pdf.status)}
+              />
+              <RedactionControls
+                status={pdf.status}
+                progress={pdf.progress}
+                redactions={pdf.redactions}
+                currentPage={pdf.currentPage}
+                totalPages={pdf.document.totalPages}
+                onPageChange={pdf.setCurrentPage}
+                onScan={pdf.scan}
+                onRedact={() => pdf.applyRedaction(false)}
+                onDownload={pdf.downloadRedactedPdf}
+                onReset={handleReset}
+                hasDocument={!!pdf.document}
+                hasRedactedPdf={!!pdf.redactedPdfBytes}
+                onConfirmAll={pdf.confirmAll}
+                onRejectAll={pdf.rejectAll}
+                onToggleRedaction={pdf.toggleRedaction}
+                onRemoveRedaction={pdf.removeRedaction}
+                selectedRedactionId={selectedRedactionId}
+                onSelectRedaction={setSelectedRedactionId}
+              />
+            </div>
           </div>
         </div>
       ) : null}

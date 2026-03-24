@@ -6,6 +6,7 @@ import { Upload, FileText, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { regulations } from "@/lib/pii/regulations";
 import type { RegulationType, PIIType } from "@/types/pii";
+import { CustomKeywordPanel } from "./CustomKeywordPanel";
 
 interface PDFDropzoneProps {
   onFilesSelected: (files: File[]) => void;
@@ -16,6 +17,9 @@ interface PDFDropzoneProps {
   onRegulationChange: (r: RegulationType) => void;
   enabledTypes: PIIType[];
   onToggleType: (type: PIIType) => void;
+  customKeywords?: string[];
+  onAddCustomKeyword?: (keyword: string) => void;
+  onRemoveCustomKeyword?: (keyword: string) => void;
 }
 
 export function PDFDropzone({
@@ -27,6 +31,9 @@ export function PDFDropzone({
   onRegulationChange,
   enabledTypes,
   onToggleType,
+  customKeywords = [],
+  onAddCustomKeyword,
+  onRemoveCustomKeyword,
 }: PDFDropzoneProps) {
   const t = useTranslations("redact.dropzone");
   const tp = useTranslations("redact.piiTypes");
@@ -123,6 +130,18 @@ export function PDFDropzone({
             ))}
           </div>
         </div>
+
+        {/* Custom keywords */}
+        {onAddCustomKeyword && onRemoveCustomKeyword && (
+          <CustomKeywordPanel
+            keywords={customKeywords}
+            onAddKeyword={onAddCustomKeyword}
+            onRemoveKeyword={onRemoveCustomKeyword}
+            onScan={() => {}}
+            hasDocument={false}
+            isProcessing={isProcessing}
+          />
+        )}
       </div>
 
       {/* Drop area */}
