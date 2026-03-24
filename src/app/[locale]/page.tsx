@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -30,8 +30,8 @@ import {
   FileCheck,
 } from "lucide-react";
 
-export default function HomePage() {
-  const t = useTranslations();
+export default async function HomePage() {
+  const t = await getTranslations();
 
   const features = [
     { icon: ShieldCheck, key: "trueRedaction" },
