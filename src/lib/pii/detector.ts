@@ -7,6 +7,7 @@ import {
   detectCreditCard,
   detectPhone,
   detectAddress,
+  detectDateOfBirth,
 } from "./patterns/global";
 import { detectNames } from "./patterns/names";
 
@@ -25,6 +26,7 @@ const detectorMap: Record<PIIType, DetectorFn> = {
   phone: detectPhone,
   address: detectAddress,
   names: detectNames,
+  dateOfBirth: detectDateOfBirth,
 };
 
 /**
