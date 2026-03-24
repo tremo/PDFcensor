@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "lastUpdated": "Viimeksi päivitetty: maaliskuu 2026",
+    "intro": {
+      "heading": "1. Johdanto",
+      "text": "OfflineRedact (\u201cme\u201d, \u201cmeidän\u201d) on sitoutunut suojaamaan yksityisyyttäsi. Tämä käytäntö selittää, miten käsittelemme tietoja, kun käytät PDF-muokkaustyökaluamme."
+    },
+    "noFileUploads": {
+      "heading": "2. Ei tiedostojen latausta",
+      "text": "{strong}PDF-tiedostosi eivät koskaan poistu laitteeltasi.{/strong} Kaikki PDF-käsittely, mukaan lukien tekstin poiminta, henkilötietojen tunnistus ja muokkaus, tapahtuu kokonaan selaimessasi. Emme lataa, tallenna, käsittele tai pääse käsiksi asiakirjoihisi millään palvelimella."
+    },
+    "infoCollect": {
+      "heading": "3. Keräämämme tiedot",
+      "text": "Keräämme vain palvelumme kannalta välttämättömät tiedot:",
+      "items": ["Sähköpostiosoite (vain jos ostat Pro-lisenssin Stripen kautta)", "Maksutiedot (käsittelee Stripe; emme koskaan näe korttitietojasi)", "Perusanalytiikka (sivunäkymät, ominaisuuksien käyttö — ei henkilötietoja)"]
+    },
+    "cookies": {
+      "heading": "4. Evästeet",
+      "text": "Käytämme vain välttämättömiä evästeitä: kieliasetuksen ja lisenssiavaimen tallennukseen (localStoragessa). Emme käytä seurantaevästeitä."
+    },
+    "thirdParty": {
+      "heading": "5. Kolmannen osapuolen palvelut",
+      "items": ["{strong}Stripe{/strong} — Maksunkäsittely. Katso Stripen tietosuojakäytäntö.", "{strong}Vercel{/strong} — Hosting. Katso Vercelin tietosuojakäytäntö."]
+    },
+    "dataRetention": {
+      "heading": "6. Tietojen säilytys",
+      "text": "Lisenssiavaimet säilytetään lisenssisi voimassaoloajan. Emme tallenna mitään PDF-sisältöä tai asiakirjoista poimittuja henkilötietoja."
+    },
+    "contact": {
+      "heading": "7. Yhteystiedot",
+      "text": "Tietosuojaan liittyvissä kysymyksissä ota yhteyttä osoitteeseen privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "lastUpdated": "Viimeksi päivitetty: maaliskuu 2026",
+    "acceptance": {
+      "heading": "1. Ehtojen hyväksyminen",
+      "text": "Käyttämällä OfflineRedactia hyväksyt nämä käyttöehdot. Jos et hyväksy, älä käytä palvelua."
+    },
+    "serviceDesc": {
+      "heading": "2. Palvelun kuvaus",
+      "text": "OfflineRedact on asiakaspuolen PDF-muokkaustyökalu, joka tunnistaa ja poistaa henkilökohtaisesti tunnistettavat tiedot (PII) PDF-asiakirjoista. Kaikki käsittely tapahtuu selaimessasi."
+    },
+    "noGuarantee": {
+      "heading": "3. Ei takuuta",
+      "text": "Vaikka pyrimme tarkkuuteen, OfflineRedact ei takaa kaikkien henkilötietojen 100% tunnistamista. Käyttäjät ovat vastuussa muokkaustulosten tarkistamisesta ennen asiakirjojen jakamista tai julkaisemista. Varmista aina, että kaikki arkaluonteiset tiedot on muokattu asianmukaisesti."
+    },
+    "license": {
+      "heading": "4. Lisenssi",
+      "text": "Ilmainen taso: Voit käyttää OfflineRedactia ilmaiseksi vesileimalla tulosteessa. Pro-lisenssi: Kertamaksu antaa sinulle elinikäisen lisenssin käyttää OfflineRedactia ilman vesileimoja."
+    },
+    "refundPolicy": {
+      "heading": "5. Palautuskäytäntö",
+      "text": "Tarjoamme 30 päivän rahat takaisin -takuun. Ota yhteyttä osoitteeseen support@offlineredact.com palautuspyynnöissä."
+    },
+    "liability": {
+      "heading": "6. Vastuunrajoitus",
+      "text": "OfflineRedact tarjotaan \u201csellaisenaan\u201d ilman takuita. Emme ole vastuussa vahingoista, jotka johtuvat palvelun käytöstä tai käyttökyvyttömyydestä, mukaan lukien mutta ei rajoittuen arkaluonteisten tietojen puutteelliseen muokkaukseen."
+    },
+    "contact": {
+      "heading": "7. Yhteystiedot",
+      "text": "Näitä ehtoja koskevissa kysymyksissä ota yhteyttä osoitteeseen legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blogi",
+    "backToBlog": "Takaisin blogiin",
+    "cta": {
+      "title": "Valmis kokeilemaan OfflineRedactia?",
+      "subtitle": "Aloita arkaluonteisten tietojen muokkaus PDF-tiedostoistasi — ilmaiseksi, ei rekisteröitymistä.",
+      "button": "Aloita muokkaus"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA-yhteensopiva PDF-muokkaus: Täydellinen opas",
+        "excerpt": "Opi muokkaamaan suojattuja terveystietoja (PHI) PDF-asiakirjoista oikein HIPAA-vaatimustenmukaisuuden ylläpitämiseksi.",
+        "date": "2026-02-15",
+        "content": ["Terveydenhuollon organisaatiot käsittelevät päivittäin valtavia määriä suojattuja terveystietoja (PHI). Kun asiakirjoja jaetaan ulkopuolisille — oikeudenkäyntejä, tutkimusta tai organisaatioiden välistä viestintää varten — asianmukainen muokkaus ei ole vain parasta käytäntöä, vaan se on HIPAA:n mukainen lakisääteinen vaatimus.", "HIPAA:n yksityisyyssääntö edellyttää, että kattamat tahot ja niiden liiketoimintakumppanit suojaavat kaikki yksilöllisesti tunnistettavat terveystiedot. Tähän kuuluvat nimet, päivämäärät, henkilötunnukset, potilasrekisterinumerot ja 14 muuta tunnistekategoriaa.", "Yksinkertainen visuaalinen muokkaus — mustien laatikoiden piirtäminen arkaluonteisen tekstin päälle — EI riitä HIPAA-vaatimustenmukaisuuteen. Taustalla oleva tekstidata on poistettava pysyvästi asiakirjasta. OfflineRedact suorittaa aidon muokkauksen poistamalla todelliset tekstidatat PDF-sisältövirroista, ei vain peittämällä niitä visuaalisesti.", "HIPAA-yhteensopivan muokkauksen keskeiset vaiheet: (1) Tunnista kaikki PHI asiakirjasta automaattisen tunnistuksen avulla, (2) Tarkista ja vahvista tunnistetut kohteet, (3) Suorita aito muokkaus, joka poistaa tekstidatan, (4) Puhdista asiakirjan metatiedot, (5) Varmista muokattu asiakirja ennen jakamista.", "OfflineRedactilla kaikki käsittely tapahtuu selaimessasi — asiakirjasi eivät koskaan poistu laitteeltasi. Tämä eliminoi PHI-altistumisriskin itse muokkausprosessin aikana, mikä on kriittinen näkökohta HIPAA-vaatimustenmukaisuudessa."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery-asiakirjojen muokkauksen parhaat käytännöt",
+        "excerpt": "Olennainen opas lakiammattilaisille arkaluonteisten tietojen muokkaamiseen eDiscovery-prosessissa.",
+        "date": "2026-02-10",
+        "content": ["Oikeudenkäynneissä eDiscovery-prosessi vaatii usein suurten asiakirjamäärien tuottamista. Monet näistä asiakirjoista sisältävät etuoikeutettuja tietoja, liikesalaisuuksia tai henkilötietoja, jotka on muokattava ennen tuottamista.", "eDiscovery-muokkaus palvelee useita tarkoituksia: asianajaja-asiakas-salassapitovelvollisuuden suojaaminen, luottamuksellisten liiketoimintatietojen suojaaminen ja tietosuojasäädösten, kuten GDPR:n ja CCPA:n, noudattaminen, jotka voivat päteä myös oikeudenkäynneissä.", "Yleisiä virheitä eDiscovery-muokkauksessa ovat: korostustyökalujen käyttö aidon muokkauksen sijaan, metatietojen poistamisen unohtaminen, epäjohdonmukainen muokkaus asiakirjakokonaisuuksissa ja upotettujen kuvien tai lomakekenttien muokkaamatta jättäminen.", "OfflineRedact tukee eräkäsittelyä — lataa useita PDF-tiedostoja ja käsittele ne kaikki yhtenäisillä muokkaussäännöillä. Tämä on olennaista eDiscovery-työnkuluissa, joissa satoja tai tuhansia asiakirjoja on käsiteltävä yhdenmukaisesti.", "Parhaat käytännöt: (1) Määritä muokkauskategoriat etukäteen, (2) Käytä automaattista tunnistusta johdonmukaisuuden varmistamiseksi, (3) Vahvista aina toisen tarkastajan kanssa, (4) Ylläpidä muokkauspäiväkirjaa, (5) Puhdista metatiedot kaikista tuotetuista asiakirjoista."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF-vaatimustenmukaisuus: Henkilötietojen suojaaminen asiakirjoissa",
+        "excerpt": "Miten varmistat, että PDF-asiakirjasi täyttävät GDPR:n tietosuojavaatimukset asianmukaisen muokkauksen avulla.",
+        "date": "2026-02-05",
+        "content": ["Yleinen tietosuoja-asetus (GDPR) edellyttää organisaatioilta EU-kansalaisten henkilötietojen suojaamista. PDF-asiakirjat sisältävät usein henkilötietoja, jotka on käsiteltävä asianmukaisesti — olipa kyse rekisteröidyn oikeuksien mukaisista pyynnöistä, tietojenjakosopimuksista tai asiakirjojen säilytyskäytännöistä.", "GDPR:n mukaan henkilötiedot sisältävät kaiken tunnistettuun tai tunnistettavissa olevaan henkilöön liittyvän tiedon: nimet, sähköpostiosoitteet, puhelinnumerot, IP-osoitteet, taloudelliset tiedot ja muut. PDF-asiakirjat sisältävät usein useita henkilötietokategorioita.", "Rekisteröidyn oikeuksien mukaisia pyyntöjä (DSAR) käsiteltäessä organisaatioiden voi olla tarpeen toimittaa kopioita asiakirjoista samalla muokaten kolmansien osapuolten henkilötietoja. Tämä vaatii huolellista tunnistamista ja muiden henkilöiden tietojen pysyvää poistamista.", "OfflineRedactin monisäädöstuki sisältää GDPR-profiilin, joka tunnistaa automaattisesti yleisiä eurooppalaisia henkilötietomalleja: nimet, sähköpostiosoitteet, puhelinnumerot, IBAN-numerot ja postiosoitteet. Työkalu tukee kaikkia EU-kieliä.", "Keskeiset GDPR-näkökohdat PDF-muokkauksessa: (1) Varmista, että muokkaus on peruuttamaton — teksti on poistettava pysyvästi, (2) Puhdista asiakirjan metatiedot, jotka voivat sisältää henkilötietoja, (3) Ylläpidä muokkaustoimien kirjanpitoa, (4) Sovella tietojen minimoinnin periaatetta."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Sivua ei löytynyt.",
+    "goHome": "Siirry etusivulle"
   }
 }

@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: mars 2026",
+    "intro": {
+      "heading": "1. Introduktion",
+      "text": "OfflineRedact (\u201cvi\u201d, \u201cvår\u201d, \u201coss\u201d) är engagerade i att skydda din integritet. Denna policy förklarar hur vi hanterar information när du använder vårt PDF-redigeringsverktyg."
+    },
+    "noFileUploads": {
+      "heading": "2. Inga filuppladdningar",
+      "text": "{strong}Dina PDF-filer lämnar aldrig din enhet.{/strong} All PDF-bearbetning, inklusive textextraktion, PII-detektering och redigering, sker helt i din webbläsare. Vi laddar inte upp, lagrar, bearbetar eller har tillgång till dina dokument på någon server."
+    },
+    "infoCollect": {
+      "heading": "3. Information vi samlar in",
+      "text": "Vi samlar in minimal information som är nödvändig för vår tjänst:",
+      "items": ["E-postadress (endast om du köper en Pro-licens, via Stripe)", "Betalningsinformation (hanteras av Stripe; vi ser aldrig dina kortuppgifter)", "Grundläggande analys (sidvisningar, funktionsanvändning — inga personuppgifter)"]
+    },
+    "cookies": {
+      "heading": "4. Cookies",
+      "text": "Vi använder endast nödvändiga cookies: språkinställning och licensnyckellagring (i localStorage). Vi använder inga spårningscookies."
+    },
+    "thirdParty": {
+      "heading": "5. Tredjepartstjänster",
+      "items": ["{strong}Stripe{/strong} — Betalningshantering. Se Stripes integritetspolicy.", "{strong}Vercel{/strong} — Hosting. Se Vercels integritetspolicy."]
+    },
+    "dataRetention": {
+      "heading": "6. Datalagring",
+      "text": "Licensnycklar lagras under licensens varaktighet. Vi lagrar inget PDF-innehåll eller personuppgifter som extraherats från dokument."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "För integritetsrelaterade frågor, kontakta oss på privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Tjänstevillkor",
+    "lastUpdated": "Senast uppdaterad: mars 2026",
+    "acceptance": {
+      "heading": "1. Godkännande av villkor",
+      "text": "Genom att använda OfflineRedact godkänner du dessa tjänstevillkor. Om du inte godkänner, använd inte tjänsten."
+    },
+    "serviceDesc": {
+      "heading": "2. Tjänstebeskrivning",
+      "text": "OfflineRedact är ett klientsidigt PDF-redigeringsverktyg som upptäcker och tar bort personligt identifierbar information (PII) från PDF-dokument. All bearbetning sker i din webbläsare."
+    },
+    "noGuarantee": {
+      "heading": "3. Ingen garanti",
+      "text": "Även om vi strävar efter noggrannhet garanterar OfflineRedact inte 100% detektering av all PII. Användare ansvarar för att granska redigeringsresultaten innan de delar eller publicerar dokument. Verifiera alltid att all känslig information har redigerats korrekt."
+    },
+    "license": {
+      "heading": "4. Licens",
+      "text": "Gratisversion: Du kan använda OfflineRedact gratis med en vattenstämpel på utdata. Pro-licens: En engångsbetalning ger dig en livstidslicens att använda OfflineRedact utan vattenstämplar."
+    },
+    "refundPolicy": {
+      "heading": "5. Återbetalningspolicy",
+      "text": "Vi erbjuder en 30-dagars pengarna-tillbaka-garanti. Kontakta oss på support@offlineredact.com för återbetalningsförfrågningar."
+    },
+    "liability": {
+      "heading": "6. Ansvarsbegränsning",
+      "text": "OfflineRedact tillhandahålls \u201csom det är\u201d utan garantier. Vi ansvarar inte för skador som uppstår till följd av användning eller oförmåga att använda tjänsten, inklusive men inte begränsat till ofullständig redigering av känsliga uppgifter."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "För frågor om dessa villkor, kontakta oss på legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blogg",
+    "backToBlog": "Tillbaka till bloggen",
+    "cta": {
+      "title": "Redo att prova OfflineRedact?",
+      "subtitle": "Börja redigera känsliga uppgifter från dina PDF-filer — gratis, ingen registrering krävs.",
+      "button": "Börja redigera"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA-kompatibel PDF-redigering: En komplett guide",
+        "excerpt": "Lär dig hur du korrekt redigerar skyddad hälsoinformation (PHI) från PDF-dokument för att upprätthålla HIPAA-efterlevnad.",
+        "date": "2026-02-15",
+        "content": ["Hälso- och sjukvårdsorganisationer hanterar stora mängder skyddad hälsoinformation (PHI) dagligen. När dokument delas externt — för rättsliga förfaranden, forskning eller kommunikation mellan organisationer — är korrekt redigering inte bara bästa praxis, det är ett juridiskt krav enligt HIPAA.", "HIPAAs sekretessregel kräver att berörda enheter och deras affärspartners skyddar all individuellt identifierbar hälsoinformation. Detta inkluderar namn, datum, personnummer, medicinska journalnummer och 14 andra kategorier av identifierare.", "Enkel visuell redigering — att rita svarta rutor över känslig text — är INTE tillräckligt för HIPAA-efterlevnad. Den underliggande textdatan måste permanent tas bort från dokumentet. OfflineRedact utför äkta redigering genom att ta bort den faktiska textdatan från PDF-innehållsströmmar, inte bara visuellt täcka den.", "Viktiga steg för HIPAA-kompatibel redigering: (1) Identifiera all PHI i dokumentet med automatisk detektering, (2) Granska och bekräfta upptäckta objekt, (3) Tillämpa äkta redigering som tar bort textdata, (4) Rensa dokumentmetadata, (5) Verifiera det redigerade dokumentet innan delning.", "Med OfflineRedact sker all bearbetning i din webbläsare — dina dokument lämnar aldrig din enhet. Detta eliminerar risken för PHI-exponering under själva redigeringsprocessen, ett kritiskt övervägande för HIPAA-efterlevnad."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Bästa praxis för eDiscovery-dokumentredigering",
+        "excerpt": "Viktig guide för jurister om redigering av känslig information under eDiscovery-processen.",
+        "date": "2026-02-10",
+        "content": ["I rättsliga förfaranden kräver eDiscovery-processen ofta att stora volymer av dokument produceras. Många av dessa dokument innehåller privilegierad information, affärshemligheter eller personuppgifter som måste redigeras före produktion.", "Redigering i eDiscovery tjänar flera syften: skydda advokat-klient-privilegiet, skydda konfidentiell affärsinformation och efterleva integritetsregler som GDPR och CCPA som kan gälla även i rättstvister.", "Vanliga misstag vid eDiscovery-redigering inkluderar: att använda markeringsverktyg istället för äkta redigering, glömma att ta bort metadata, inkonsekvent redigering över dokumentuppsättningar och att inte redigera inbäddade bilder eller formulärfält.", "OfflineRedact stöder batchbearbetning — ladda upp flera PDF-filer och bearbeta dem alla med konsekventa redigeringsregler. Detta är avgörande för eDiscovery-arbetsflöden där hundratals eller tusentals dokument behöver enhetlig behandling.", "Bästa praxis: (1) Definiera redigeringskategorier i förväg, (2) Använd automatisk detektering för att säkerställa konsekvens, (3) Verifiera alltid med en andra granskare, (4) Upprätthåll en redigeringslogg, (5) Rensa metadata från alla producerade dokument."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF-efterlevnad: Skydda personuppgifter i dokument",
+        "excerpt": "Hur du säkerställer att dina PDF-dokument uppfyller GDPR:s dataskyddskrav genom korrekt redigering.",
+        "date": "2026-02-05",
+        "content": ["Den allmänna dataskyddsförordningen (GDPR) kräver att organisationer skyddar personuppgifter för EU-medborgare. PDF-dokument innehåller ofta personuppgifter som måste hanteras korrekt — oavsett om det gäller begäranden om registrerades rättigheter, avtal om datadelning eller policyer för dokumentlagring.", "Enligt GDPR inkluderar personuppgifter all information som rör en identifierad eller identifierbar person: namn, e-postadresser, telefonnummer, IP-adresser, finansiell information och mer. PDF-dokument innehåller ofta flera kategorier av personuppgifter.", "Vid svar på begäranden om registrerades rättigheter (DSAR) kan organisationer behöva tillhandahålla kopior av dokument samtidigt som tredje parts personuppgifter redigeras. Detta kräver noggrann identifiering och permanent borttagning av andra individers uppgifter.", "OfflineRedacts stöd för flera regelverk inkluderar en GDPR-profil som automatiskt upptäcker vanliga europeiska personuppgiftsmönster: namn, e-postadresser, telefonnummer, IBAN-nummer och postadresser. Verktyget stöder alla EU-språk.", "Viktiga GDPR-överväganden för PDF-redigering: (1) Säkerställ att redigeringen är oåterkallelig — text måste permanent tas bort, (2) Rensa dokumentmetadata som kan innehålla personuppgifter, (3) Upprätthåll register över redigeringsaktiviteter, (4) Tillämpa principen om dataminimering."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Sidan hittades inte.",
+    "goHome": "Gå till startsidan"
   }
 }
