@@ -300,5 +300,129 @@
     "proActivated": "Pro Lisans Aktifleştirildi",
     "proLinkedToAccount": "Pro özellikler {email} hesabına bağlandı",
     "loginToActivate": "Pro özellikleri hesabınıza bağlamak için giriş yapın"
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "intro": {
+      "heading": "1. Giriş",
+      "text": "OfflineRedact (\u201cbiz\u201d, \u201cbizim\u201d) gizliliğinizi korumaya kararlıdır. Bu politika, PDF sansürleme aracımızı kullanırken bilgileri nasıl işlediğimizi açıklar."
+    },
+    "noFileUploads": {
+      "heading": "2. Dosya Yüklemesi Yok",
+      "text": "{strong}PDF dosyalarınız asla cihazınızdan çıkmaz.{/strong} Metin çıkarma, kişisel veri tespiti ve sansürleme dahil tüm PDF işleme tamamen web tarayıcınızda gerçekleşir. Belgelerinizi herhangi bir sunucuya yüklemez, saklamaz, işlemez veya bunlara erişmeyiz."
+    },
+    "infoCollect": {
+      "heading": "3. Topladığımız Bilgiler",
+      "text": "Hizmetimiz için gerekli olan minimum düzeyde bilgi topluyoruz:",
+      "items": [
+        "E-posta adresi (yalnızca Stripe üzerinden Pro lisans satın alırsanız)",
+        "Ödeme bilgileri (Stripe tarafından işlenir; kart bilgilerinizi asla görmeyiz)",
+        "Temel analitik (sayfa görüntüleme, özellik kullanımı — kişisel veri içermez)"
+      ]
+    },
+    "cookies": {
+      "heading": "4. Çerezler",
+      "text": "Yalnızca zorunlu çerezler kullanıyoruz: dil tercihi ve lisans anahtarı saklama (localStorage'da). İzleme çerezleri kullanmıyoruz."
+    },
+    "thirdParty": {
+      "heading": "5. Üçüncü Taraf Hizmetler",
+      "items": [
+        "{strong}Stripe{/strong} — Ödeme işleme. Stripe gizlilik politikasına bakınız.",
+        "{strong}Vercel{/strong} — Barındırma. Vercel gizlilik politikasına bakınız."
+      ]
+    },
+    "dataRetention": {
+      "heading": "6. Veri Saklama",
+      "text": "Lisans anahtarları, lisansınızın süresi boyunca saklanır. Belgelerden çıkarılan herhangi bir PDF içeriğini veya kişisel veriyi saklamayız."
+    },
+    "contact": {
+      "heading": "7. İletişim",
+      "text": "Gizlilikle ilgili sorularınız için privacy@offlineredact.com adresinden bize ulaşabilirsiniz."
+    }
+  },
+  "terms": {
+    "title": "Kullanım Koşulları",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "acceptance": {
+      "heading": "1. Koşulların Kabulü",
+      "text": "OfflineRedact'i kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız hizmeti kullanmayın."
+    },
+    "serviceDesc": {
+      "heading": "2. Hizmet Açıklaması",
+      "text": "OfflineRedact, PDF belgelerindeki kişisel tanımlayıcı bilgileri (PII) tespit eden ve kaldıran, tarayıcı taraflı bir PDF sansürleme aracıdır. Tüm işlemler web tarayıcınızda gerçekleşir."
+    },
+    "noGuarantee": {
+      "heading": "3. Garanti Yok",
+      "text": "Doğruluk için çaba göstersek de OfflineRedact tüm kişisel verilerin %100 tespit edileceğini garanti etmez. Kullanıcılar, belgeleri paylaşmadan veya yayınlamadan önce sansürleme sonuçlarını gözden geçirmekle yükümlüdür. Tüm hassas bilgilerin doğru şekilde sansürlendiğini her zaman doğrulayın."
+    },
+    "license": {
+      "heading": "4. Lisans",
+      "text": "Ücretsiz katman: OfflineRedact'i çıktıda filigran ile ücretsiz kullanabilirsiniz. Pro lisans: Tek seferlik ödeme ile OfflineRedact'i filigransız kullanmak için ömür boyu lisans alırsınız."
+    },
+    "refundPolicy": {
+      "heading": "5. İade Politikası",
+      "text": "30 günlük para iade garantisi sunuyoruz. İade talepleri için support@offlineredact.com adresinden bizimle iletişime geçin."
+    },
+    "liability": {
+      "heading": "6. Sorumluluk Sınırlaması",
+      "text": "OfflineRedact herhangi bir garanti olmaksızın \u201colduğu gibi\u201d sunulmaktadır. Hizmetin kullanımından veya kullanılamamasından kaynaklanan hiçbir zarardan, hassas verilerin eksik sansürlenmesi dahil ancak bununla sınırlı olmaksızın, sorumlu değiliz."
+    },
+    "contact": {
+      "heading": "7. İletişim",
+      "text": "Bu koşullarla ilgili sorularınız için legal@offlineredact.com adresinden bize ulaşabilirsiniz."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Blog'a Dön",
+    "cta": {
+      "title": "OfflineRedact'i denemeye hazır mısınız?",
+      "subtitle": "PDF'lerinizdeki hassas verileri sansürlemeye başlayın — ücretsiz, kayıt gerekmez.",
+      "button": "Sansürlemeye Başla"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA Uyumlu PDF Sansürleme: Kapsamlı Kılavuz",
+        "excerpt": "HIPAA uyumluluğunu sağlamak için PDF belgelerindeki korunan sağlık bilgilerini (PHI) nasıl doğru şekilde sansürleyeceğinizi öğrenin.",
+        "date": "2026-02-15",
+        "content": [
+          "Sağlık kuruluşları her gün büyük miktarda Korunan Sağlık Bilgisi (PHI) ile çalışır. Belgeleri dışarıya paylaşırken — hukuki işlemler, araştırmalar veya kurumlar arası iletişim için — doğru sansürleme yalnızca en iyi uygulama değil, HIPAA kapsamında yasal bir zorunluluktur.",
+          "HIPAA Gizlilik Kuralı, kapsam dahilindeki kuruluşların ve iş ortaklarının bireysel olarak tanımlanabilir tüm sağlık bilgilerini korumasını gerektirir. Bu; isimler, tarihler, Sosyal Güvenlik numaraları, tıbbi kayıt numaraları ve 14 diğer tanımlayıcı kategoriyi kapsar.",
+          "Basit görsel sansürleme — hassas metnin üzerine siyah kutular çizmek — HIPAA uyumluluğu için YETERLİ DEĞİLDİR. Alttaki metin verileri belgeden kalıcı olarak kaldırılmalıdır. OfflineRedact, metni yalnızca görsel olarak örtmek yerine PDF içerik akışlarından gerçek metin verisini kaldırarak gerçek sansürleme yapar.",
+          "HIPAA uyumlu sansürleme için temel adımlar: (1) Otomatik tespit kullanarak belgedeki tüm PHI'yi belirleyin, (2) Tespit edilen öğeleri gözden geçirip onaylayın, (3) Metin verisini kaldıran gerçek sansürleme uygulayın, (4) Belge meta verilerini temizleyin, (5) Paylaşmadan önce sansürlenmiş belgeyi doğrulayın.",
+          "OfflineRedact ile tüm işlemler tarayıcınızda gerçekleşir — belgeleriniz asla cihazınızdan çıkmaz. Bu, sansürleme işlemi sırasında PHI ifşa riskini ortadan kaldırır; HIPAA uyumluluğu için kritik bir husustur."
+        ]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery Belge Sansürleme En İyi Uygulamaları",
+        "excerpt": "Hukuk profesyonelleri için eDiscovery sürecinde hassas bilgilerin sansürlenmesine yönelik temel kılavuz.",
+        "date": "2026-02-10",
+        "content": [
+          "Hukuki süreçlerde eDiscovery süreci genellikle büyük hacimde belge sunulmasını gerektirir. Bu belgelerin birçoğu, sunumdan önce sansürlenmesi gereken ayrıcalıklı bilgiler, ticari sırlar veya kişisel veriler içerir.",
+          "eDiscovery'de sansürleme birden fazla amaca hizmet eder: avukat-müvekkil ayrıcalığını korumak, gizli iş bilgilerini korumak ve dava bağlamında bile geçerli olabilecek GDPR ve CCPA gibi gizlilik düzenlemelerine uymak.",
+          "eDiscovery sansürlemesinde yaygın hatalar şunlardır: gerçek sansürleme yerine vurgulayıcı araçlar kullanmak, meta verileri kaldırmayı unutmak, belge setleri arasında tutarsız sansürleme ve gömülü görselleri veya form alanlarını sansürlememek.",
+          "OfflineRedact toplu işlemeyi destekler — birden fazla PDF yükleyin ve hepsini tutarlı sansürleme kurallarıyla işleyin. Bu, yüzlerce veya binlerce belgenin tek tip işlenmesi gereken eDiscovery iş akışları için gereklidir.",
+          "En iyi uygulamalar: (1) Sansürleme kategorilerini önceden tanımlayın, (2) Tutarlılığı sağlamak için otomatik tespit kullanın, (3) Her zaman ikinci bir gözden geçirici ile doğrulayın, (4) Sansürleme kaydı tutun, (5) Sunulan tüm belgelerden meta verileri temizleyin."
+        ]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF Uyumluluğu: Belgelerde Kişisel Verilerin Korunması",
+        "excerpt": "Uygun sansürleme yoluyla PDF belgelerinizin GDPR veri koruma gereksinimlerine uyumunu nasıl sağlayacağınızı öğrenin.",
+        "date": "2026-02-05",
+        "content": [
+          "Genel Veri Koruma Yönetmeliği (GDPR), kuruluşların AB vatandaşlarının kişisel verilerini korumasını gerektirir. PDF belgeleri genellikle düzgün işlenmesi gereken kişisel veriler içerir — ister ilgili kişi erişim talepleri, ister veri paylaşım anlaşmaları veya belge saklama politikaları için.",
+          "GDPR kapsamında kişisel veriler, tanımlanmış veya tanımlanabilir bir kişiyle ilgili tüm bilgileri kapsar: isimler, e-posta adresleri, telefon numaraları, IP adresleri, finansal bilgiler ve daha fazlası. PDF belgeleri sıklıkla birden fazla kişisel veri kategorisi içerir.",
+          "İlgili kişi erişim taleplerine (DSAR) yanıt verirken, kuruluşların üçüncü taraf kişisel verilerini sansürleyerek belge kopyaları sunması gerekebilir. Bu, diğer bireylerin verilerinin dikkatli bir şekilde belirlenmesini ve kalıcı olarak kaldırılmasını gerektirir.",
+          "OfflineRedact'in çoklu düzenleme desteği, yaygın Avrupa kişisel veri kalıplarını otomatik olarak tespit eden bir GDPR profili içerir: isimler, e-posta adresleri, telefon numaraları, IBAN numaraları ve posta adresleri. Araç tüm AB dillerini destekler.",
+          "PDF sansürleme için temel GDPR hususları: (1) Sansürlemenin geri döndürülemez olduğundan emin olun — metin kalıcı olarak kaldırılmalıdır, (2) Kişisel veri içerebilecek belge meta verilerini temizleyin, (3) Sansürleme faaliyetlerinin kaydını tutun, (4) Veri minimizasyonu ilkesini uygulayın."
+        ]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Sayfa bulunamadı.",
+    "goHome": "Ana Sayfaya Dön"
   }
 }
