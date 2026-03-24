@@ -160,7 +160,17 @@
       "select": "Auswahlmodus",
       "noResultsOnPage": "Keine zensierten Elemente auf dieser Seite.",
       "noResults": "Keine PII in diesem Dokument erkannt.",
-      "page": "Seite {current} von {total}"
+      "page": "Seite {current} von {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "Ausstehend",
@@ -197,7 +207,8 @@
       "creditCard": "Kreditkarte",
       "passport": "Reisepassnummer",
       "names": "Personennamen",
-      "address": "Adressen"
+      "address": "Adressen",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {
@@ -314,7 +325,7 @@
     "lastUpdated": "Zuletzt aktualisiert: März 2026",
     "intro": {
       "heading": "1. Einleitung",
-      "text": "OfflineRedact (\u201Ewir\u201C, \u201Eunser\u201C, \u201Euns\u201C) verpflichtet sich zum Schutz Ihrer Privatsphäre. Diese Richtlinie erläutert, wie wir mit Informationen umgehen, wenn Sie unser PDF-Schwärzungstool verwenden."
+      "text": "OfflineRedact („wir“, „unser“, „uns“) verpflichtet sich zum Schutz Ihrer Privatsphäre. Diese Richtlinie erläutert, wie wir mit Informationen umgehen, wenn Sie unser PDF-Schwärzungstool verwenden."
     },
     "noFileUploads": {
       "heading": "2. Kein Datei-Upload",
@@ -323,7 +334,11 @@
     "infoCollect": {
       "heading": "3. Von uns erhobene Daten",
       "text": "Wir erheben nur die für unseren Dienst notwendigen Mindestinformationen:",
-      "items": ["E-Mail-Adresse (nur bei Erwerb einer Pro-Lizenz, über Stripe)", "Zahlungsinformationen (werden von Stripe verarbeitet; wir sehen Ihre Kartendaten niemals)", "Grundlegende Analysen (Seitenaufrufe, Funktionsnutzung — keine personenbezogenen Daten)"]
+      "items": [
+        "E-Mail-Adresse (nur bei Erwerb einer Pro-Lizenz, über Stripe)",
+        "Zahlungsinformationen (werden von Stripe verarbeitet; wir sehen Ihre Kartendaten niemals)",
+        "Grundlegende Analysen (Seitenaufrufe, Funktionsnutzung — keine personenbezogenen Daten)"
+      ]
     },
     "cookies": {
       "heading": "4. Cookies",
@@ -331,7 +346,10 @@
     },
     "thirdParty": {
       "heading": "5. Drittanbieter-Dienste",
-      "items": ["{strong}Stripe{/strong} — Zahlungsabwicklung. Siehe Stripes Datenschutzrichtlinie.", "{strong}Vercel{/strong} — Hosting. Siehe Vercels Datenschutzrichtlinie."]
+      "items": [
+        "{strong}Stripe{/strong} — Zahlungsabwicklung. Siehe Stripes Datenschutzrichtlinie.",
+        "{strong}Vercel{/strong} — Hosting. Siehe Vercels Datenschutzrichtlinie."
+      ]
     },
     "dataRetention": {
       "heading": "6. Datenaufbewahrung",
@@ -367,7 +385,7 @@
     },
     "liability": {
       "heading": "6. Haftungsbeschränkung",
-      "text": "OfflineRedact wird \u201Ewie besehen\u201C ohne Gewährleistung bereitgestellt. Wir haften nicht für Schäden, die aus der Nutzung oder der Unfähigkeit zur Nutzung des Dienstes entstehen, einschließlich, aber nicht beschränkt auf unvollständige Schwärzung sensibler Daten."
+      "text": "OfflineRedact wird „wie besehen“ ohne Gewährleistung bereitgestellt. Wir haften nicht für Schäden, die aus der Nutzung oder der Unfähigkeit zur Nutzung des Dienstes entstehen, einschließlich, aber nicht beschränkt auf unvollständige Schwärzung sensibler Daten."
     },
     "contact": {
       "heading": "7. Kontakt",
@@ -387,19 +405,37 @@
         "title": "HIPAA-konforme PDF-Schwärzung: Ein vollständiger Leitfaden",
         "excerpt": "Erfahren Sie, wie Sie geschützte Gesundheitsinformationen (PHI) in PDF-Dokumenten ordnungsgemäß schwärzen, um die HIPAA-Konformität zu gewährleisten.",
         "date": "2026-02-15",
-        "content": ["Gesundheitsorganisationen verarbeiten täglich große Mengen an geschützten Gesundheitsinformationen (PHI). Beim externen Austausch von Dokumenten — für Gerichtsverfahren, Forschung oder organisationsübergreifende Kommunikation — ist eine ordnungsgemäße Schwärzung nicht nur bewährte Praxis, sondern eine gesetzliche Anforderung unter HIPAA.", "Die HIPAA-Datenschutzregel verlangt, dass betroffene Einrichtungen und ihre Geschäftspartner alle individuell identifizierbaren Gesundheitsinformationen schützen. Dazu gehören Namen, Daten, Sozialversicherungsnummern, Krankenaktennummern und 14 weitere Kategorien von Identifikatoren.", "Einfache visuelle Schwärzung — das Zeichnen schwarzer Kästchen über sensiblen Text — ist für die HIPAA-Konformität NICHT ausreichend. Die zugrunde liegenden Textdaten müssen dauerhaft aus dem Dokument entfernt werden. OfflineRedact führt eine echte Schwärzung durch, indem die tatsächlichen Textdaten aus den PDF-Inhaltsströmen entfernt werden, nicht nur visuell überdeckt.", "Wichtige Schritte für HIPAA-konforme Schwärzung: (1) Alle PHI im Dokument mithilfe automatischer Erkennung identifizieren, (2) Erkannte Elemente überprüfen und bestätigen, (3) Echte Schwärzung anwenden, die Textdaten entfernt, (4) Dokumentmetadaten bereinigen, (5) Das geschwärzte Dokument vor dem Teilen verifizieren.", "Mit OfflineRedact erfolgt die gesamte Verarbeitung in Ihrem Browser — Ihre Dokumente verlassen niemals Ihr Gerät. Dies eliminiert das Risiko einer PHI-Offenlegung während des Schwärzungsprozesses selbst, eine entscheidende Überlegung für die HIPAA-Konformität."]
+        "content": [
+          "Gesundheitsorganisationen verarbeiten täglich große Mengen an geschützten Gesundheitsinformationen (PHI). Beim externen Austausch von Dokumenten — für Gerichtsverfahren, Forschung oder organisationsübergreifende Kommunikation — ist eine ordnungsgemäße Schwärzung nicht nur bewährte Praxis, sondern eine gesetzliche Anforderung unter HIPAA.",
+          "Die HIPAA-Datenschutzregel verlangt, dass betroffene Einrichtungen und ihre Geschäftspartner alle individuell identifizierbaren Gesundheitsinformationen schützen. Dazu gehören Namen, Daten, Sozialversicherungsnummern, Krankenaktennummern und 14 weitere Kategorien von Identifikatoren.",
+          "Einfache visuelle Schwärzung — das Zeichnen schwarzer Kästchen über sensiblen Text — ist für die HIPAA-Konformität NICHT ausreichend. Die zugrunde liegenden Textdaten müssen dauerhaft aus dem Dokument entfernt werden. OfflineRedact führt eine echte Schwärzung durch, indem die tatsächlichen Textdaten aus den PDF-Inhaltsströmen entfernt werden, nicht nur visuell überdeckt.",
+          "Wichtige Schritte für HIPAA-konforme Schwärzung: (1) Alle PHI im Dokument mithilfe automatischer Erkennung identifizieren, (2) Erkannte Elemente überprüfen und bestätigen, (3) Echte Schwärzung anwenden, die Textdaten entfernt, (4) Dokumentmetadaten bereinigen, (5) Das geschwärzte Dokument vor dem Teilen verifizieren.",
+          "Mit OfflineRedact erfolgt die gesamte Verarbeitung in Ihrem Browser — Ihre Dokumente verlassen niemals Ihr Gerät. Dies eliminiert das Risiko einer PHI-Offenlegung während des Schwärzungsprozesses selbst, eine entscheidende Überlegung für die HIPAA-Konformität."
+        ]
       },
       "ediscovery-document-redaction": {
         "title": "Best Practices für die eDiscovery-Dokumentenschwärzung",
         "excerpt": "Unverzichtbarer Leitfaden für Juristen zur Schwärzung sensibler Informationen im eDiscovery-Prozess.",
         "date": "2026-02-10",
-        "content": ["In Gerichtsverfahren erfordert der eDiscovery-Prozess häufig die Vorlage großer Dokumentenmengen. Viele dieser Dokumente enthalten privilegierte Informationen, Geschäftsgeheimnisse oder personenbezogene Daten, die vor der Vorlage geschwärzt werden müssen.", "Die Schwärzung bei eDiscovery dient mehreren Zwecken: Schutz des Anwaltsgeheimnisses, Abschirmung vertraulicher Geschäftsinformationen und Einhaltung von Datenschutzvorschriften wie DSGVO und CCPA, die auch im Rahmen von Rechtsstreitigkeiten gelten können.", "Häufige Fehler bei der eDiscovery-Schwärzung sind: Verwendung von Textmarkern statt echter Schwärzung, Vergessen der Metadatenentfernung, inkonsistente Schwärzung über Dokumentensätze hinweg und fehlende Schwärzung eingebetteter Bilder oder Formularfelder.", "OfflineRedact unterstützt Stapelverarbeitung — laden Sie mehrere PDFs hoch und verarbeiten Sie alle mit einheitlichen Schwärzungsregeln. Dies ist unverzichtbar für eDiscovery-Workflows, bei denen Hunderte oder Tausende von Dokumenten einheitlich behandelt werden müssen.", "Best Practices: (1) Schwärzungskategorien im Voraus definieren, (2) Automatische Erkennung für Konsistenz verwenden, (3) Immer mit einem zweiten Prüfer verifizieren, (4) Ein Schwärzungsprotokoll führen, (5) Metadaten aus allen vorgelegten Dokumenten bereinigen."]
+        "content": [
+          "In Gerichtsverfahren erfordert der eDiscovery-Prozess häufig die Vorlage großer Dokumentenmengen. Viele dieser Dokumente enthalten privilegierte Informationen, Geschäftsgeheimnisse oder personenbezogene Daten, die vor der Vorlage geschwärzt werden müssen.",
+          "Die Schwärzung bei eDiscovery dient mehreren Zwecken: Schutz des Anwaltsgeheimnisses, Abschirmung vertraulicher Geschäftsinformationen und Einhaltung von Datenschutzvorschriften wie DSGVO und CCPA, die auch im Rahmen von Rechtsstreitigkeiten gelten können.",
+          "Häufige Fehler bei der eDiscovery-Schwärzung sind: Verwendung von Textmarkern statt echter Schwärzung, Vergessen der Metadatenentfernung, inkonsistente Schwärzung über Dokumentensätze hinweg und fehlende Schwärzung eingebetteter Bilder oder Formularfelder.",
+          "OfflineRedact unterstützt Stapelverarbeitung — laden Sie mehrere PDFs hoch und verarbeiten Sie alle mit einheitlichen Schwärzungsregeln. Dies ist unverzichtbar für eDiscovery-Workflows, bei denen Hunderte oder Tausende von Dokumenten einheitlich behandelt werden müssen.",
+          "Best Practices: (1) Schwärzungskategorien im Voraus definieren, (2) Automatische Erkennung für Konsistenz verwenden, (3) Immer mit einem zweiten Prüfer verifizieren, (4) Ein Schwärzungsprotokoll führen, (5) Metadaten aus allen vorgelegten Dokumenten bereinigen."
+        ]
       },
       "gdpr-pdf-compliance": {
         "title": "DSGVO-PDF-Konformität: Schutz personenbezogener Daten in Dokumenten",
         "excerpt": "So stellen Sie sicher, dass Ihre PDF-Dokumente den DSGVO-Datenschutzanforderungen durch ordnungsgemäße Schwärzung entsprechen.",
         "date": "2026-02-05",
-        "content": ["Die Datenschutz-Grundverordnung (DSGVO) verlangt von Organisationen, personenbezogene Daten von EU-Bürgern zu schützen. PDF-Dokumente enthalten häufig personenbezogene Daten, die ordnungsgemäß behandelt werden müssen — sei es für Auskunftsersuchen betroffener Personen, Datenfreigabevereinbarungen oder Aufbewahrungsrichtlinien für Dokumente.", "Unter der DSGVO umfassen personenbezogene Daten alle Informationen, die sich auf eine identifizierte oder identifizierbare Person beziehen: Namen, E-Mail-Adressen, Telefonnummern, IP-Adressen, Finanzinformationen und mehr. PDF-Dokumente enthalten häufig mehrere Kategorien personenbezogener Daten.", "Bei der Beantwortung von Auskunftsersuchen betroffener Personen (DSARs) müssen Organisationen möglicherweise Kopien von Dokumenten bereitstellen und dabei personenbezogene Daten Dritter schwärzen. Dies erfordert eine sorgfältige Identifizierung und dauerhafte Entfernung der Daten anderer Personen.", "Die Multi-Regulierungs-Unterstützung von OfflineRedact umfasst ein DSGVO-Profil, das automatisch gängige europäische Muster personenbezogener Daten erkennt: Namen, E-Mail-Adressen, Telefonnummern, IBAN-Nummern und Postanschriften. Das Tool unterstützt alle EU-Sprachen.", "Wichtige DSGVO-Überlegungen zur PDF-Schwärzung: (1) Sicherstellen, dass die Schwärzung irreversibel ist — Text muss dauerhaft entfernt werden, (2) Dokumentmetadaten bereinigen, die personenbezogene Daten enthalten können, (3) Aufzeichnungen über Schwärzungsaktivitäten führen, (4) Den Grundsatz der Datenminimierung anwenden."]
+        "content": [
+          "Die Datenschutz-Grundverordnung (DSGVO) verlangt von Organisationen, personenbezogene Daten von EU-Bürgern zu schützen. PDF-Dokumente enthalten häufig personenbezogene Daten, die ordnungsgemäß behandelt werden müssen — sei es für Auskunftsersuchen betroffener Personen, Datenfreigabevereinbarungen oder Aufbewahrungsrichtlinien für Dokumente.",
+          "Unter der DSGVO umfassen personenbezogene Daten alle Informationen, die sich auf eine identifizierte oder identifizierbare Person beziehen: Namen, E-Mail-Adressen, Telefonnummern, IP-Adressen, Finanzinformationen und mehr. PDF-Dokumente enthalten häufig mehrere Kategorien personenbezogener Daten.",
+          "Bei der Beantwortung von Auskunftsersuchen betroffener Personen (DSARs) müssen Organisationen möglicherweise Kopien von Dokumenten bereitstellen und dabei personenbezogene Daten Dritter schwärzen. Dies erfordert eine sorgfältige Identifizierung und dauerhafte Entfernung der Daten anderer Personen.",
+          "Die Multi-Regulierungs-Unterstützung von OfflineRedact umfasst ein DSGVO-Profil, das automatisch gängige europäische Muster personenbezogener Daten erkennt: Namen, E-Mail-Adressen, Telefonnummern, IBAN-Nummern und Postanschriften. Das Tool unterstützt alle EU-Sprachen.",
+          "Wichtige DSGVO-Überlegungen zur PDF-Schwärzung: (1) Sicherstellen, dass die Schwärzung irreversibel ist — Text muss dauerhaft entfernt werden, (2) Dokumentmetadaten bereinigen, die personenbezogene Daten enthalten können, (3) Aufzeichnungen über Schwärzungsaktivitäten führen, (4) Den Grundsatz der Datenminimierung anwenden."
+        ]
       }
     }
   },

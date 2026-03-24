@@ -160,7 +160,17 @@
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
-      "page": "Page {current} of {total}"
+      "page": "Page {current} of {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "Pending",
@@ -197,7 +207,8 @@
       "creditCard": "Credit Card",
       "passport": "Passport Number",
       "names": "Person Names",
-      "address": "Addresses"
+      "address": "Addresses",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {
@@ -314,7 +325,7 @@
     "lastUpdated": "Pēdējo reizi atjaunināts: 2026. gada marts",
     "intro": {
       "heading": "1. Ievads",
-      "text": "OfflineRedact (\u201cmēs\u201d, \u201cmūsu\u201d, \u201cmus\u201d) ir apņēmusies aizsargāt jūsu privātumu. Šī politika skaidro, kā mēs apstrādājam informāciju, kad jūs izmantojat mūsu PDF rediģēšanas rīku."
+      "text": "OfflineRedact (“mēs”, “mūsu”, “mus”) ir apņēmusies aizsargāt jūsu privātumu. Šī politika skaidro, kā mēs apstrādājam informāciju, kad jūs izmantojat mūsu PDF rediģēšanas rīku."
     },
     "noFileUploads": {
       "heading": "2. Nav failu augšupielādes",
@@ -323,7 +334,11 @@
     "infoCollect": {
       "heading": "3. Mūsu apkopotā informācija",
       "text": "Mēs apkopojam tikai minimālu informāciju, kas nepieciešama mūsu pakalpojumam:",
-      "items": ["E-pasta adrese (tikai tad, ja iegādājaties Pro licenci caur Stripe)", "Maksājumu informācija (apstrādā Stripe; mēs nekad neredzam jūsu kartes datus)", "Pamata analītika (lapu skatījumi, funkciju izmantošana — bez personas datiem)"]
+      "items": [
+        "E-pasta adrese (tikai tad, ja iegādājaties Pro licenci caur Stripe)",
+        "Maksājumu informācija (apstrādā Stripe; mēs nekad neredzam jūsu kartes datus)",
+        "Pamata analītika (lapu skatījumi, funkciju izmantošana — bez personas datiem)"
+      ]
     },
     "cookies": {
       "heading": "4. Sīkdatnes",
@@ -331,7 +346,10 @@
     },
     "thirdParty": {
       "heading": "5. Trešo pušu pakalpojumi",
-      "items": ["{strong}Stripe{/strong} — Maksājumu apstrāde. Skatiet Stripe privātuma politiku.", "{strong}Vercel{/strong} — Mitināšana. Skatiet Vercel privātuma politiku."]
+      "items": [
+        "{strong}Stripe{/strong} — Maksājumu apstrāde. Skatiet Stripe privātuma politiku.",
+        "{strong}Vercel{/strong} — Mitināšana. Skatiet Vercel privātuma politiku."
+      ]
     },
     "dataRetention": {
       "heading": "6. Datu glabāšana",
@@ -367,7 +385,7 @@
     },
     "liability": {
       "heading": "6. Atbildības ierobežojums",
-      "text": "OfflineRedact tiek nodrošināts \u201ctāds, kāds ir\u201d bez garantijām. Mēs neesam atbildīgi par jebkādiem zaudējumiem, kas radušies no pakalpojuma izmantošanas vai nespējas to izmantot, ieskaitot, bet neaprobežojoties ar nepilnīgu sensitīvu datu rediģēšanu."
+      "text": "OfflineRedact tiek nodrošināts “tāds, kāds ir” bez garantijām. Mēs neesam atbildīgi par jebkādiem zaudējumiem, kas radušies no pakalpojuma izmantošanas vai nespējas to izmantot, ieskaitot, bet neaprobežojoties ar nepilnīgu sensitīvu datu rediģēšanu."
     },
     "contact": {
       "heading": "7. Kontakti",
@@ -387,19 +405,37 @@
         "title": "HIPAA atbilstošs PDF rediģēšana: Pilnīgs ceļvedis",
         "excerpt": "Uzziniet, kā pareizi rediģēt aizsargātu veselības informāciju (PHI) no PDF dokumentiem, lai nodrošinātu HIPAA atbilstību.",
         "date": "2026-02-15",
-        "content": ["Veselības aprūpes organizācijas ikdienā apstrādā milzīgus daudzumus aizsargātas veselības informācijas (PHI). Kad dokumenti tiek kopīgoti ārējām pusēm — tiesvedībai, pētniecībai vai starporganizāciju saziņai — pareiza rediģēšana nav tikai labākā prakse, bet gan juridiska prasība saskaņā ar HIPAA.", "HIPAA Privātuma noteikums prasa, lai aptvertās iestādes un to biznesa partneri aizsargātu visu individuāli identificējamo veselības informāciju. Tas ietver vārdus, datumus, sociālās apdrošināšanas numurus, medicīnisko ierakstu numurus un 14 citas identifikatoru kategorijas.", "Vienkārša vizuālā rediģēšana — melnu lodziņu zīmēšana pār sensitīvu tekstu — NAV pietiekama HIPAA atbilstībai. Pamatā esošie teksta dati ir neatgriezeniski jānoņem no dokumenta. OfflineRedact veic patiesu rediģēšanu, noņemot faktiskos teksta datus no PDF satura plūsmām, nevis tikai vizuāli tos nosedzot.", "Galvenie soļi HIPAA atbilstošai rediģēšanai: (1) Identificējiet visu PHI dokumentā, izmantojot automātisku atklāšanu, (2) Pārskatiet un apstipriniet atklātos elementus, (3) Piemērojiet patiesu rediģēšanu, kas noņem teksta datus, (4) Iztīriet dokumenta metadatus, (5) Pārbaudiet rediģēto dokumentu pirms kopīgošanas.", "Ar OfflineRedact visa apstrāde notiek jūsu pārlūkā — jūsu dokumenti nekad neatstāj jūsu ierīci. Tas novērš PHI atklāšanas risku rediģēšanas procesa laikā, kas ir kritisks apsvērums HIPAA atbilstībai."]
+        "content": [
+          "Veselības aprūpes organizācijas ikdienā apstrādā milzīgus daudzumus aizsargātas veselības informācijas (PHI). Kad dokumenti tiek kopīgoti ārējām pusēm — tiesvedībai, pētniecībai vai starporganizāciju saziņai — pareiza rediģēšana nav tikai labākā prakse, bet gan juridiska prasība saskaņā ar HIPAA.",
+          "HIPAA Privātuma noteikums prasa, lai aptvertās iestādes un to biznesa partneri aizsargātu visu individuāli identificējamo veselības informāciju. Tas ietver vārdus, datumus, sociālās apdrošināšanas numurus, medicīnisko ierakstu numurus un 14 citas identifikatoru kategorijas.",
+          "Vienkārša vizuālā rediģēšana — melnu lodziņu zīmēšana pār sensitīvu tekstu — NAV pietiekama HIPAA atbilstībai. Pamatā esošie teksta dati ir neatgriezeniski jānoņem no dokumenta. OfflineRedact veic patiesu rediģēšanu, noņemot faktiskos teksta datus no PDF satura plūsmām, nevis tikai vizuāli tos nosedzot.",
+          "Galvenie soļi HIPAA atbilstošai rediģēšanai: (1) Identificējiet visu PHI dokumentā, izmantojot automātisku atklāšanu, (2) Pārskatiet un apstipriniet atklātos elementus, (3) Piemērojiet patiesu rediģēšanu, kas noņem teksta datus, (4) Iztīriet dokumenta metadatus, (5) Pārbaudiet rediģēto dokumentu pirms kopīgošanas.",
+          "Ar OfflineRedact visa apstrāde notiek jūsu pārlūkā — jūsu dokumenti nekad neatstāj jūsu ierīci. Tas novērš PHI atklāšanas risku rediģēšanas procesa laikā, kas ir kritisks apsvērums HIPAA atbilstībai."
+        ]
       },
       "ediscovery-document-redaction": {
         "title": "eDiscovery dokumentu rediģēšanas labākās prakses",
         "excerpt": "Būtisks ceļvedis juridiskajiem speciālistiem par sensitīvas informācijas rediģēšanu eDiscovery procesa laikā.",
         "date": "2026-02-10",
-        "content": ["Tiesvedībā eDiscovery process bieži prasa uzrādīt lielus dokumentu apjomus. Daudzi no šiem dokumentiem satur privileģētu informāciju, komercnoslēpumus vai personas datus, kas jārediģē pirms uzrādīšanas.", "Rediģēšana eDiscovery procesā kalpo vairākiem mērķiem: advokāta-klienta konfidencialitātes aizsardzība, konfidenciālas biznesa informācijas aizsardzība un privātuma noteikumu, piemēram, GDPR un CCPA, ievērošana, kas var būt piemērojami pat tiesvedības kontekstā.", "Biežākās eDiscovery rediģēšanas kļūdas ietver: marķieru rīku izmantošanu patiesās rediģēšanas vietā, metadatu noņemšanas aizmirstību, nekonsekventa rediģēšana dokumentu kopās un nespēju rediģēt iegultos attēlus vai veidlapu laukus.", "OfflineRedact atbalsta pakešu apstrādi — augšupielādējiet vairākus PDF failus un apstrādājiet tos visus ar konsekventiem rediģēšanas noteikumiem. Tas ir būtiski eDiscovery darbplūsmām, kur simtiem vai tūkstošiem dokumentu nepieciešama vienota apstrāde.", "Labākās prakses: (1) Iepriekš definējiet rediģēšanas kategorijas, (2) Izmantojiet automātisku atklāšanu konsekvences nodrošināšanai, (3) Vienmēr pārbaudiet ar otru recenzentu, (4) Uzturiet rediģēšanas žurnālu, (5) Iztīriet visu uzrādāmo dokumentu metadatus."]
+        "content": [
+          "Tiesvedībā eDiscovery process bieži prasa uzrādīt lielus dokumentu apjomus. Daudzi no šiem dokumentiem satur privileģētu informāciju, komercnoslēpumus vai personas datus, kas jārediģē pirms uzrādīšanas.",
+          "Rediģēšana eDiscovery procesā kalpo vairākiem mērķiem: advokāta-klienta konfidencialitātes aizsardzība, konfidenciālas biznesa informācijas aizsardzība un privātuma noteikumu, piemēram, GDPR un CCPA, ievērošana, kas var būt piemērojami pat tiesvedības kontekstā.",
+          "Biežākās eDiscovery rediģēšanas kļūdas ietver: marķieru rīku izmantošanu patiesās rediģēšanas vietā, metadatu noņemšanas aizmirstību, nekonsekventa rediģēšana dokumentu kopās un nespēju rediģēt iegultos attēlus vai veidlapu laukus.",
+          "OfflineRedact atbalsta pakešu apstrādi — augšupielādējiet vairākus PDF failus un apstrādājiet tos visus ar konsekventiem rediģēšanas noteikumiem. Tas ir būtiski eDiscovery darbplūsmām, kur simtiem vai tūkstošiem dokumentu nepieciešama vienota apstrāde.",
+          "Labākās prakses: (1) Iepriekš definējiet rediģēšanas kategorijas, (2) Izmantojiet automātisku atklāšanu konsekvences nodrošināšanai, (3) Vienmēr pārbaudiet ar otru recenzentu, (4) Uzturiet rediģēšanas žurnālu, (5) Iztīriet visu uzrādāmo dokumentu metadatus."
+        ]
       },
       "gdpr-pdf-compliance": {
         "title": "GDPR PDF atbilstība: Personas datu aizsardzība dokumentos",
         "excerpt": "Kā nodrošināt, lai jūsu PDF dokumenti atbilstu GDPR datu aizsardzības prasībām ar pareizu rediģēšanu.",
         "date": "2026-02-05",
-        "content": ["Vispārīgā datu aizsardzības regula (GDPR) prasa organizācijām aizsargāt ES iedzīvotāju personas datus. PDF dokumentos bieži ir personas dati, kas jāapstrādā pareizi — vai tā būtu datu subjekta piekļuves pieprasījumi, datu kopīgošanas līgumi vai dokumentu saglabāšanas politikas.", "Saskaņā ar GDPR personas dati ietver jebkuru informāciju, kas attiecas uz identificētu vai identificējamu personu: vārdus, e-pasta adreses, tālruņu numurus, IP adreses, finanšu informāciju un citu. PDF dokumentos bieži ir vairāku kategoriju personas dati.", "Atbildot uz datu subjekta piekļuves pieprasījumiem (DSAR), organizācijām var būt nepieciešams sniegt dokumentu kopijas, vienlaikus rediģējot trešo pušu personas datus. Tam nepieciešama rūpīga citu personu datu identificēšana un galīga noņemšana.", "OfflineRedact vairāku regulu atbalsta funkcija ietver GDPR profilu, kas automātiski atklāj biežākos Eiropas personas datu modeļus: vārdus, e-pasta adreses, tālruņu numurus, IBAN numurus un pasta adreses. Rīks atbalsta visas ES valodas.", "Galvenie GDPR apsvērumi PDF rediģēšanai: (1) Nodrošiniet, ka rediģēšana ir neatgriezeniska — teksts ir jānoņem neatgriezeniski, (2) Iztīriet dokumenta metadatus, kas var saturēt personas datus, (3) Uzturiet rediģēšanas darbību uzskaiti, (4) Piemērojiet datu minimizēšanas principu."]
+        "content": [
+          "Vispārīgā datu aizsardzības regula (GDPR) prasa organizācijām aizsargāt ES iedzīvotāju personas datus. PDF dokumentos bieži ir personas dati, kas jāapstrādā pareizi — vai tā būtu datu subjekta piekļuves pieprasījumi, datu kopīgošanas līgumi vai dokumentu saglabāšanas politikas.",
+          "Saskaņā ar GDPR personas dati ietver jebkuru informāciju, kas attiecas uz identificētu vai identificējamu personu: vārdus, e-pasta adreses, tālruņu numurus, IP adreses, finanšu informāciju un citu. PDF dokumentos bieži ir vairāku kategoriju personas dati.",
+          "Atbildot uz datu subjekta piekļuves pieprasījumiem (DSAR), organizācijām var būt nepieciešams sniegt dokumentu kopijas, vienlaikus rediģējot trešo pušu personas datus. Tam nepieciešama rūpīga citu personu datu identificēšana un galīga noņemšana.",
+          "OfflineRedact vairāku regulu atbalsta funkcija ietver GDPR profilu, kas automātiski atklāj biežākos Eiropas personas datu modeļus: vārdus, e-pasta adreses, tālruņu numurus, IBAN numurus un pasta adreses. Rīks atbalsta visas ES valodas.",
+          "Galvenie GDPR apsvērumi PDF rediģēšanai: (1) Nodrošiniet, ka rediģēšana ir neatgriezeniska — teksts ir jānoņem neatgriezeniski, (2) Iztīriet dokumenta metadatus, kas var saturēt personas datus, (3) Uzturiet rediģēšanas darbību uzskaiti, (4) Piemērojiet datu minimizēšanas principu."
+        ]
       }
     }
   },

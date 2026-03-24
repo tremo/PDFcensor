@@ -160,7 +160,17 @@
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
-      "page": "Page {current} of {total}"
+      "page": "Page {current} of {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "Pending",
@@ -197,7 +207,8 @@
       "creditCard": "Credit Card",
       "passport": "Passport Number",
       "names": "Person Names",
-      "address": "Addresses"
+      "address": "Addresses",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {
@@ -323,7 +334,11 @@
     "infoCollect": {
       "heading": "3. Informacje, które zbieramy",
       "text": "Zbieramy minimalną ilość informacji niezbędnych do świadczenia naszej usługi:",
-      "items": ["Adres e-mail (tylko jeśli zakupisz licencję Pro, przez Stripe)", "Informacje o płatności (przetwarzane przez Stripe; nigdy nie widzimy danych Twojej karty)", "Podstawowe analizy (odsłony stron, wykorzystanie funkcji — bez danych osobowych)"]
+      "items": [
+        "Adres e-mail (tylko jeśli zakupisz licencję Pro, przez Stripe)",
+        "Informacje o płatności (przetwarzane przez Stripe; nigdy nie widzimy danych Twojej karty)",
+        "Podstawowe analizy (odsłony stron, wykorzystanie funkcji — bez danych osobowych)"
+      ]
     },
     "cookies": {
       "heading": "4. Pliki cookie",
@@ -331,7 +346,10 @@
     },
     "thirdParty": {
       "heading": "5. Usługi firm trzecich",
-      "items": ["{strong}Stripe{/strong} — Przetwarzanie płatności. Zobacz politykę prywatności Stripe.", "{strong}Vercel{/strong} — Hosting. Zobacz politykę prywatności Vercel."]
+      "items": [
+        "{strong}Stripe{/strong} — Przetwarzanie płatności. Zobacz politykę prywatności Stripe.",
+        "{strong}Vercel{/strong} — Hosting. Zobacz politykę prywatności Vercel."
+      ]
     },
     "dataRetention": {
       "heading": "6. Przechowywanie danych",
@@ -387,19 +405,37 @@
         "title": "Redakcja PDF zgodna z HIPAA: kompletny przewodnik",
         "excerpt": "Dowiedz się, jak prawidłowo redagować chronione informacje zdrowotne (PHI) z dokumentów PDF, aby zachować zgodność z HIPAA.",
         "date": "2026-02-15",
-        "content": ["Organizacje opieki zdrowotnej codziennie przetwarzają ogromne ilości Chronionych Informacji Zdrowotnych (PHI). Podczas udostępniania dokumentów na zewnątrz — w postępowaniach prawnych, badaniach naukowych lub komunikacji międzyorganizacyjnej — prawidłowa redakcja to nie tylko najlepsza praktyka, ale wymóg prawny wynikający z HIPAA.", "Zasada Prywatności HIPAA wymaga, aby podmioty objęte regulacją i ich partnerzy biznesowi chronili wszystkie indywidualnie identyfikowalne informacje zdrowotne. Obejmuje to imiona i nazwiska, daty, numery ubezpieczenia społecznego, numery dokumentacji medycznej i 14 innych kategorii identyfikatorów.", "Prosta redakcja wizualna — rysowanie czarnych prostokątów na wrażliwym tekście — NIE jest wystarczająca dla zgodności z HIPAA. Dane tekstowe muszą zostać trwale usunięte z dokumentu. OfflineRedact wykonuje prawdziwą redakcję, usuwając faktyczne dane tekstowe ze strumieni zawartości PDF, a nie tylko wizualnie je zakrywając.", "Kluczowe kroki dla redakcji zgodnej z HIPAA: (1) Zidentyfikuj wszystkie PHI w dokumencie za pomocą automatycznego wykrywania, (2) Przejrzyj i potwierdź wykryte elementy, (3) Zastosuj prawdziwą redakcję usuwającą dane tekstowe, (4) Oczyść metadane dokumentu, (5) Zweryfikuj zredagowany dokument przed udostępnieniem.", "Dzięki OfflineRedact całe przetwarzanie odbywa się w Twojej przeglądarce — Twoje dokumenty nigdy nie opuszczają urządzenia. Eliminuje to ryzyko ujawnienia PHI podczas samego procesu redakcji, co jest kluczowym aspektem zgodności z HIPAA."]
+        "content": [
+          "Organizacje opieki zdrowotnej codziennie przetwarzają ogromne ilości Chronionych Informacji Zdrowotnych (PHI). Podczas udostępniania dokumentów na zewnątrz — w postępowaniach prawnych, badaniach naukowych lub komunikacji międzyorganizacyjnej — prawidłowa redakcja to nie tylko najlepsza praktyka, ale wymóg prawny wynikający z HIPAA.",
+          "Zasada Prywatności HIPAA wymaga, aby podmioty objęte regulacją i ich partnerzy biznesowi chronili wszystkie indywidualnie identyfikowalne informacje zdrowotne. Obejmuje to imiona i nazwiska, daty, numery ubezpieczenia społecznego, numery dokumentacji medycznej i 14 innych kategorii identyfikatorów.",
+          "Prosta redakcja wizualna — rysowanie czarnych prostokątów na wrażliwym tekście — NIE jest wystarczająca dla zgodności z HIPAA. Dane tekstowe muszą zostać trwale usunięte z dokumentu. OfflineRedact wykonuje prawdziwą redakcję, usuwając faktyczne dane tekstowe ze strumieni zawartości PDF, a nie tylko wizualnie je zakrywając.",
+          "Kluczowe kroki dla redakcji zgodnej z HIPAA: (1) Zidentyfikuj wszystkie PHI w dokumencie za pomocą automatycznego wykrywania, (2) Przejrzyj i potwierdź wykryte elementy, (3) Zastosuj prawdziwą redakcję usuwającą dane tekstowe, (4) Oczyść metadane dokumentu, (5) Zweryfikuj zredagowany dokument przed udostępnieniem.",
+          "Dzięki OfflineRedact całe przetwarzanie odbywa się w Twojej przeglądarce — Twoje dokumenty nigdy nie opuszczają urządzenia. Eliminuje to ryzyko ujawnienia PHI podczas samego procesu redakcji, co jest kluczowym aspektem zgodności z HIPAA."
+        ]
       },
       "ediscovery-document-redaction": {
         "title": "Najlepsze praktyki redakcji dokumentów w eDiscovery",
         "excerpt": "Niezbędny przewodnik dla prawników dotyczący redagowania wrażliwych informacji podczas procesu eDiscovery.",
         "date": "2026-02-10",
-        "content": ["W postępowaniach prawnych proces eDiscovery często wymaga dostarczenia dużych ilości dokumentów. Wiele z nich zawiera informacje objęte tajemnicą zawodową, tajemnice handlowe lub dane osobowe, które muszą zostać zredagowane przed przekazaniem.", "Redakcja w eDiscovery służy wielu celom: ochronie tajemnicy adwokackiej, zabezpieczeniu poufnych informacji biznesowych oraz zapewnieniu zgodności z regulacjami dotyczącymi prywatności, takimi jak GDPR i CCPA, które mogą mieć zastosowanie nawet w kontekście postępowania sądowego.", "Częste błędy w redakcji eDiscovery to: używanie narzędzi do zaznaczania zamiast prawdziwej redakcji, zapominanie o usunięciu metadanych, niespójna redakcja w zestawach dokumentów oraz brak redakcji osadzonych obrazów lub pól formularzy.", "OfflineRedact obsługuje przetwarzanie wsadowe — prześlij wiele plików PDF i przetwórz je wszystkie z jednolitymi regułami redakcji. Jest to niezbędne w procesach eDiscovery, gdzie setki lub tysiące dokumentów wymagają jednolitego traktowania.", "Najlepsze praktyki: (1) Zdefiniuj kategorie redakcji z wyprzedzeniem, (2) Użyj automatycznego wykrywania, aby zapewnić spójność, (3) Zawsze weryfikuj z drugim recenzentem, (4) Prowadź rejestr redakcji, (5) Oczyść metadane ze wszystkich dostarczanych dokumentów."]
+        "content": [
+          "W postępowaniach prawnych proces eDiscovery często wymaga dostarczenia dużych ilości dokumentów. Wiele z nich zawiera informacje objęte tajemnicą zawodową, tajemnice handlowe lub dane osobowe, które muszą zostać zredagowane przed przekazaniem.",
+          "Redakcja w eDiscovery służy wielu celom: ochronie tajemnicy adwokackiej, zabezpieczeniu poufnych informacji biznesowych oraz zapewnieniu zgodności z regulacjami dotyczącymi prywatności, takimi jak GDPR i CCPA, które mogą mieć zastosowanie nawet w kontekście postępowania sądowego.",
+          "Częste błędy w redakcji eDiscovery to: używanie narzędzi do zaznaczania zamiast prawdziwej redakcji, zapominanie o usunięciu metadanych, niespójna redakcja w zestawach dokumentów oraz brak redakcji osadzonych obrazów lub pól formularzy.",
+          "OfflineRedact obsługuje przetwarzanie wsadowe — prześlij wiele plików PDF i przetwórz je wszystkie z jednolitymi regułami redakcji. Jest to niezbędne w procesach eDiscovery, gdzie setki lub tysiące dokumentów wymagają jednolitego traktowania.",
+          "Najlepsze praktyki: (1) Zdefiniuj kategorie redakcji z wyprzedzeniem, (2) Użyj automatycznego wykrywania, aby zapewnić spójność, (3) Zawsze weryfikuj z drugim recenzentem, (4) Prowadź rejestr redakcji, (5) Oczyść metadane ze wszystkich dostarczanych dokumentów."
+        ]
       },
       "gdpr-pdf-compliance": {
         "title": "Zgodność PDF z GDPR: ochrona danych osobowych w dokumentach",
         "excerpt": "Jak zapewnić zgodność dokumentów PDF z wymogami ochrony danych GDPR poprzez prawidłową redakcję.",
         "date": "2026-02-05",
-        "content": ["Ogólne Rozporządzenie o Ochronie Danych (GDPR) wymaga od organizacji ochrony danych osobowych mieszkańców UE. Dokumenty PDF często zawierają dane osobowe, które muszą być odpowiednio przetwarzane — czy to w związku z żądaniami dostępu osób, których dane dotyczą, umowami o udostępnianie danych, czy polityką przechowywania dokumentów.", "Zgodnie z GDPR dane osobowe obejmują wszelkie informacje dotyczące zidentyfikowanej lub możliwej do zidentyfikowania osoby: imiona i nazwiska, adresy e-mail, numery telefonów, adresy IP, informacje finansowe i inne. Dokumenty PDF często zawierają wiele kategorii danych osobowych.", "Odpowiadając na żądania dostępu osób, których dane dotyczą (DSAR), organizacje mogą potrzebować dostarczyć kopie dokumentów z zredagowanymi danymi osobowymi osób trzecich. Wymaga to starannej identyfikacji i trwałego usunięcia danych innych osób.", "Obsługa wielu regulacji w OfflineRedact obejmuje profil GDPR, który automatycznie wykrywa typowe europejskie wzorce danych osobowych: imiona i nazwiska, adresy e-mail, numery telefonów, numery IBAN i adresy pocztowe. Narzędzie obsługuje wszystkie języki UE.", "Kluczowe aspekty GDPR dotyczące redakcji PDF: (1) Upewnij się, że redakcja jest nieodwracalna — tekst musi zostać trwale usunięty, (2) Oczyść metadane dokumentu, które mogą zawierać dane osobowe, (3) Prowadź rejestry działań redakcyjnych, (4) Stosuj zasadę minimalizacji danych."]
+        "content": [
+          "Ogólne Rozporządzenie o Ochronie Danych (GDPR) wymaga od organizacji ochrony danych osobowych mieszkańców UE. Dokumenty PDF często zawierają dane osobowe, które muszą być odpowiednio przetwarzane — czy to w związku z żądaniami dostępu osób, których dane dotyczą, umowami o udostępnianie danych, czy polityką przechowywania dokumentów.",
+          "Zgodnie z GDPR dane osobowe obejmują wszelkie informacje dotyczące zidentyfikowanej lub możliwej do zidentyfikowania osoby: imiona i nazwiska, adresy e-mail, numery telefonów, adresy IP, informacje finansowe i inne. Dokumenty PDF często zawierają wiele kategorii danych osobowych.",
+          "Odpowiadając na żądania dostępu osób, których dane dotyczą (DSAR), organizacje mogą potrzebować dostarczyć kopie dokumentów z zredagowanymi danymi osobowymi osób trzecich. Wymaga to starannej identyfikacji i trwałego usunięcia danych innych osób.",
+          "Obsługa wielu regulacji w OfflineRedact obejmuje profil GDPR, który automatycznie wykrywa typowe europejskie wzorce danych osobowych: imiona i nazwiska, adresy e-mail, numery telefonów, numery IBAN i adresy pocztowe. Narzędzie obsługuje wszystkie języki UE.",
+          "Kluczowe aspekty GDPR dotyczące redakcji PDF: (1) Upewnij się, że redakcja jest nieodwracalna — tekst musi zostać trwale usunięty, (2) Oczyść metadane dokumentu, które mogą zawierać dane osobowe, (3) Prowadź rejestry działań redakcyjnych, (4) Stosuj zasadę minimalizacji danych."
+        ]
       }
     }
   },

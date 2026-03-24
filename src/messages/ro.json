@@ -160,7 +160,17 @@
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
-      "page": "Page {current} of {total}"
+      "page": "Page {current} of {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "Pending",
@@ -197,7 +207,8 @@
       "creditCard": "Credit Card",
       "passport": "Passport Number",
       "names": "Person Names",
-      "address": "Addresses"
+      "address": "Addresses",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {
@@ -314,7 +325,7 @@
     "lastUpdated": "Ultima actualizare: Martie 2026",
     "intro": {
       "heading": "1. Introducere",
-      "text": "OfflineRedact (\u201enoi\u201d, \u201eal nostru\u201d) se angajează să vă protejeze confidențialitatea. Această politică explică modul în care gestionăm informațiile atunci când utilizați instrumentul nostru de redactare PDF."
+      "text": "OfflineRedact („noi”, „al nostru”) se angajează să vă protejeze confidențialitatea. Această politică explică modul în care gestionăm informațiile atunci când utilizați instrumentul nostru de redactare PDF."
     },
     "noFileUploads": {
       "heading": "2. Fără încărcări de fișiere",
@@ -323,7 +334,11 @@
     "infoCollect": {
       "heading": "3. Informațiile pe care le colectăm",
       "text": "Colectăm informații minime necesare pentru serviciul nostru:",
-      "items": ["Adresa de email (doar dacă achiziționați o licență Pro, prin Stripe)", "Informații de plată (procesate de Stripe; nu vedem niciodată detaliile cardului dvs.)", "Analiză de bază (vizualizări de pagini, utilizarea funcțiilor — fără date personale)"]
+      "items": [
+        "Adresa de email (doar dacă achiziționați o licență Pro, prin Stripe)",
+        "Informații de plată (procesate de Stripe; nu vedem niciodată detaliile cardului dvs.)",
+        "Analiză de bază (vizualizări de pagini, utilizarea funcțiilor — fără date personale)"
+      ]
     },
     "cookies": {
       "heading": "4. Cookie-uri",
@@ -331,7 +346,10 @@
     },
     "thirdParty": {
       "heading": "5. Servicii terțe",
-      "items": ["{strong}Stripe{/strong} — Procesarea plăților. Consultați politica de confidențialitate Stripe.", "{strong}Vercel{/strong} — Găzduire. Consultați politica de confidențialitate Vercel."]
+      "items": [
+        "{strong}Stripe{/strong} — Procesarea plăților. Consultați politica de confidențialitate Stripe.",
+        "{strong}Vercel{/strong} — Găzduire. Consultați politica de confidențialitate Vercel."
+      ]
     },
     "dataRetention": {
       "heading": "6. Păstrarea datelor",
@@ -367,7 +385,7 @@
     },
     "liability": {
       "heading": "6. Limitarea răspunderii",
-      "text": "OfflineRedact este furnizat \u201eca atare\u201d fără garanții. Nu suntem responsabili pentru niciun prejudiciu rezultat din utilizarea sau imposibilitatea de a utiliza serviciul, inclusiv, dar fără a se limita la, redactarea incompletă a datelor sensibile."
+      "text": "OfflineRedact este furnizat „ca atare” fără garanții. Nu suntem responsabili pentru niciun prejudiciu rezultat din utilizarea sau imposibilitatea de a utiliza serviciul, inclusiv, dar fără a se limita la, redactarea incompletă a datelor sensibile."
     },
     "contact": {
       "heading": "7. Contact",
@@ -387,19 +405,37 @@
         "title": "Redactare PDF conformă cu HIPAA: Ghid complet",
         "excerpt": "Aflați cum să redactați corect informațiile de sănătate protejate (PHI) din documentele PDF pentru a menține conformitatea cu HIPAA.",
         "date": "2026-02-15",
-        "content": ["Organizațiile din domeniul sănătății gestionează zilnic cantități mari de Informații de Sănătate Protejate (PHI). Atunci când partajează documente extern — pentru proceduri juridice, cercetare sau comunicare inter-organizațională — redactarea corespunzătoare nu este doar o bună practică, ci o cerință legală conform HIPAA.", "Regulamentul de Confidențialitate HIPAA impune ca entitățile acoperite și asociații lor de afaceri să protejeze toate informațiile de sănătate identificabile individual. Aceasta include nume, date, numere de asigurare socială, numere de dosare medicale și alte 14 categorii de identificatori.", "Redactarea vizuală simplă — desenarea de casete negre peste textul sensibil — NU este suficientă pentru conformitatea cu HIPAA. Datele text subiacente trebuie eliminate permanent din document. OfflineRedact efectuează o redactare reală prin eliminarea datelor text efective din fluxurile de conținut ale PDF-ului, nu doar acoperindu-le vizual.", "Pași cheie pentru redactarea conformă cu HIPAA: (1) Identificați toate PHI din document folosind detectarea automată, (2) Verificați și confirmați elementele detectate, (3) Aplicați redactarea reală care elimină datele text, (4) Curățați metadatele documentului, (5) Verificați documentul redactat înainte de partajare.", "Cu OfflineRedact, întreaga procesare are loc în browserul dvs. — documentele dvs. nu părăsesc niciodată dispozitivul. Aceasta elimină riscul expunerii PHI în timpul procesului de redactare în sine, o considerație critică pentru conformitatea cu HIPAA."]
+        "content": [
+          "Organizațiile din domeniul sănătății gestionează zilnic cantități mari de Informații de Sănătate Protejate (PHI). Atunci când partajează documente extern — pentru proceduri juridice, cercetare sau comunicare inter-organizațională — redactarea corespunzătoare nu este doar o bună practică, ci o cerință legală conform HIPAA.",
+          "Regulamentul de Confidențialitate HIPAA impune ca entitățile acoperite și asociații lor de afaceri să protejeze toate informațiile de sănătate identificabile individual. Aceasta include nume, date, numere de asigurare socială, numere de dosare medicale și alte 14 categorii de identificatori.",
+          "Redactarea vizuală simplă — desenarea de casete negre peste textul sensibil — NU este suficientă pentru conformitatea cu HIPAA. Datele text subiacente trebuie eliminate permanent din document. OfflineRedact efectuează o redactare reală prin eliminarea datelor text efective din fluxurile de conținut ale PDF-ului, nu doar acoperindu-le vizual.",
+          "Pași cheie pentru redactarea conformă cu HIPAA: (1) Identificați toate PHI din document folosind detectarea automată, (2) Verificați și confirmați elementele detectate, (3) Aplicați redactarea reală care elimină datele text, (4) Curățați metadatele documentului, (5) Verificați documentul redactat înainte de partajare.",
+          "Cu OfflineRedact, întreaga procesare are loc în browserul dvs. — documentele dvs. nu părăsesc niciodată dispozitivul. Aceasta elimină riscul expunerii PHI în timpul procesului de redactare în sine, o considerație critică pentru conformitatea cu HIPAA."
+        ]
       },
       "ediscovery-document-redaction": {
         "title": "Cele mai bune practici pentru redactarea documentelor în eDiscovery",
         "excerpt": "Ghid esențial pentru profesioniștii din domeniul juridic privind redactarea informațiilor sensibile în procesul de eDiscovery.",
         "date": "2026-02-10",
-        "content": ["În procedurile juridice, procesul de eDiscovery necesită adesea producerea unor volume mari de documente. Multe dintre aceste documente conțin informații privilegiate, secrete comerciale sau date personale care trebuie redactate înainte de producere.", "Redactarea în eDiscovery servește mai multor scopuri: protejarea privilegiului avocat-client, protejarea informațiilor comerciale confidențiale și conformitatea cu reglementările de confidențialitate precum GDPR și CCPA care se pot aplica chiar și în contexte de litigiu.", "Greșeli comune în redactarea eDiscovery includ: utilizarea instrumentelor de evidențiere în loc de redactarea reală, uitarea de a elimina metadatele, redactarea inconsistentă în seturile de documente și neaplicarea redactării pe imaginile încorporate sau câmpurile de formular.", "OfflineRedact suportă procesarea în lot — încărcați mai multe PDF-uri și procesați-le pe toate cu reguli de redactare consistente. Acest lucru este esențial pentru fluxurile de lucru eDiscovery unde sute sau mii de documente necesită tratament uniform.", "Cele mai bune practici: (1) Definiți categoriile de redactare în avans, (2) Folosiți detectarea automată pentru a asigura consistența, (3) Verificați întotdeauna cu un al doilea revizor, (4) Mențineți un jurnal de redactare, (5) Curățați metadatele din toate documentele produse."]
+        "content": [
+          "În procedurile juridice, procesul de eDiscovery necesită adesea producerea unor volume mari de documente. Multe dintre aceste documente conțin informații privilegiate, secrete comerciale sau date personale care trebuie redactate înainte de producere.",
+          "Redactarea în eDiscovery servește mai multor scopuri: protejarea privilegiului avocat-client, protejarea informațiilor comerciale confidențiale și conformitatea cu reglementările de confidențialitate precum GDPR și CCPA care se pot aplica chiar și în contexte de litigiu.",
+          "Greșeli comune în redactarea eDiscovery includ: utilizarea instrumentelor de evidențiere în loc de redactarea reală, uitarea de a elimina metadatele, redactarea inconsistentă în seturile de documente și neaplicarea redactării pe imaginile încorporate sau câmpurile de formular.",
+          "OfflineRedact suportă procesarea în lot — încărcați mai multe PDF-uri și procesați-le pe toate cu reguli de redactare consistente. Acest lucru este esențial pentru fluxurile de lucru eDiscovery unde sute sau mii de documente necesită tratament uniform.",
+          "Cele mai bune practici: (1) Definiți categoriile de redactare în avans, (2) Folosiți detectarea automată pentru a asigura consistența, (3) Verificați întotdeauna cu un al doilea revizor, (4) Mențineți un jurnal de redactare, (5) Curățați metadatele din toate documentele produse."
+        ]
       },
       "gdpr-pdf-compliance": {
         "title": "Conformitate GDPR pentru PDF: Protejarea datelor personale în documente",
         "excerpt": "Cum să vă asigurați că documentele PDF respectă cerințele de protecție a datelor GDPR prin redactare corespunzătoare.",
         "date": "2026-02-05",
-        "content": ["Regulamentul General privind Protecția Datelor (GDPR) impune organizațiilor să protejeze datele personale ale rezidenților UE. Documentele PDF conțin adesea date personale care trebuie gestionate corespunzător — fie pentru solicitări de acces ale persoanelor vizate, acorduri de partajare a datelor sau politici de păstrare a documentelor.", "Conform GDPR, datele personale includ orice informație referitoare la o persoană identificată sau identificabilă: nume, adrese de email, numere de telefon, adrese IP, informații financiare și altele. Documentele PDF conțin frecvent mai multe categorii de date personale.", "Atunci când răspundeți la solicitările de acces ale persoanelor vizate (DSAR), organizațiile pot fi nevoite să furnizeze copii ale documentelor, redactând în același timp datele personale ale terților. Aceasta necesită identificarea atentă și eliminarea permanentă a datelor altor persoane.", "Suportul OfflineRedact pentru multiple reglementări include un profil GDPR care detectează automat modele comune de date personale europene: nume, adrese de email, numere de telefon, numere IBAN și adrese poștale. Instrumentul suportă toate limbile UE.", "Considerații cheie GDPR pentru redactarea PDF: (1) Asigurați-vă că redactarea este ireversibilă — textul trebuie eliminat permanent, (2) Curățați metadatele documentului care pot conține date personale, (3) Mențineți evidențe ale activităților de redactare, (4) Aplicați principiul minimizării datelor."]
+        "content": [
+          "Regulamentul General privind Protecția Datelor (GDPR) impune organizațiilor să protejeze datele personale ale rezidenților UE. Documentele PDF conțin adesea date personale care trebuie gestionate corespunzător — fie pentru solicitări de acces ale persoanelor vizate, acorduri de partajare a datelor sau politici de păstrare a documentelor.",
+          "Conform GDPR, datele personale includ orice informație referitoare la o persoană identificată sau identificabilă: nume, adrese de email, numere de telefon, adrese IP, informații financiare și altele. Documentele PDF conțin frecvent mai multe categorii de date personale.",
+          "Atunci când răspundeți la solicitările de acces ale persoanelor vizate (DSAR), organizațiile pot fi nevoite să furnizeze copii ale documentelor, redactând în același timp datele personale ale terților. Aceasta necesită identificarea atentă și eliminarea permanentă a datelor altor persoane.",
+          "Suportul OfflineRedact pentru multiple reglementări include un profil GDPR care detectează automat modele comune de date personale europene: nume, adrese de email, numere de telefon, numere IBAN și adrese poștale. Instrumentul suportă toate limbile UE.",
+          "Considerații cheie GDPR pentru redactarea PDF: (1) Asigurați-vă că redactarea este ireversibilă — textul trebuie eliminat permanent, (2) Curățați metadatele documentului care pot conține date personale, (3) Mențineți evidențe ale activităților de redactare, (4) Aplicați principiul minimizării datelor."
+        ]
       }
     }
   },

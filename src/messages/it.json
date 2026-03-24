@@ -160,7 +160,17 @@
       "select": "Select Mode",
       "noResults": "No PII detected in this document.",
       "noResultsOnPage": "No censored items on this page.",
-      "page": "Page {current} of {total}"
+      "page": "Page {current} of {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "Pending",
@@ -197,7 +207,8 @@
       "creditCard": "Credit Card",
       "passport": "Passport Number",
       "names": "Person Names",
-      "address": "Addresses"
+      "address": "Addresses",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {
@@ -323,7 +334,11 @@
     "infoCollect": {
       "heading": "3. Informazioni che raccogliamo",
       "text": "Raccogliamo solo le informazioni minime necessarie per il nostro servizio:",
-      "items": ["Indirizzo email (solo se acquisti una licenza Pro, tramite Stripe)", "Informazioni di pagamento (elaborate da Stripe; non vediamo mai i dati della tua carta)", "Analisi di base (visualizzazioni pagina, utilizzo funzionalità — nessun dato personale)"]
+      "items": [
+        "Indirizzo email (solo se acquisti una licenza Pro, tramite Stripe)",
+        "Informazioni di pagamento (elaborate da Stripe; non vediamo mai i dati della tua carta)",
+        "Analisi di base (visualizzazioni pagina, utilizzo funzionalità — nessun dato personale)"
+      ]
     },
     "cookies": {
       "heading": "4. Cookie",
@@ -331,7 +346,10 @@
     },
     "thirdParty": {
       "heading": "5. Servizi di terze parti",
-      "items": ["{strong}Stripe{/strong} — Elaborazione pagamenti. Consulta l'informativa sulla privacy di Stripe.", "{strong}Vercel{/strong} — Hosting. Consulta l'informativa sulla privacy di Vercel."]
+      "items": [
+        "{strong}Stripe{/strong} — Elaborazione pagamenti. Consulta l'informativa sulla privacy di Stripe.",
+        "{strong}Vercel{/strong} — Hosting. Consulta l'informativa sulla privacy di Vercel."
+      ]
     },
     "dataRetention": {
       "heading": "6. Conservazione dei dati",
@@ -387,19 +405,37 @@
         "title": "Oscuramento PDF conforme a HIPAA: una guida completa",
         "excerpt": "Scopri come oscurare correttamente le informazioni sanitarie protette (PHI) dai documenti PDF per mantenere la conformità HIPAA.",
         "date": "2026-02-15",
-        "content": ["Le organizzazioni sanitarie gestiscono quotidianamente enormi quantità di Informazioni Sanitarie Protette (PHI). Quando si condividono documenti esternamente — per procedimenti legali, ricerche o comunicazioni inter-organizzative — l'oscuramento corretto non è solo una buona pratica, è un requisito legale previsto dall'HIPAA.", "La Privacy Rule dell'HIPAA richiede che le entità coperte e i loro partner commerciali proteggano tutte le informazioni sanitarie identificabili individualmente. Questo include nomi, date, numeri di previdenza sociale, numeri di cartelle cliniche e altre 14 categorie di identificatori.", "Il semplice oscuramento visivo — disegnare riquadri neri sul testo sensibile — NON è sufficiente per la conformità HIPAA. I dati testuali sottostanti devono essere rimossi permanentemente dal documento. OfflineRedact esegue un vero oscuramento rimuovendo i dati testuali effettivi dai flussi di contenuto PDF, non semplicemente coprendoli visivamente.", "Passaggi chiave per l'oscuramento conforme a HIPAA: (1) Identificare tutti i PHI nel documento utilizzando il rilevamento automatico, (2) Rivedere e confermare gli elementi rilevati, (3) Applicare un vero oscuramento che rimuova i dati testuali, (4) Pulire i metadati del documento, (5) Verificare il documento oscurato prima della condivisione.", "Con OfflineRedact, tutta l'elaborazione avviene nel tuo browser — i tuoi documenti non lasciano mai il tuo dispositivo. Questo elimina il rischio di esposizione dei PHI durante il processo di oscuramento stesso, una considerazione critica per la conformità HIPAA."]
+        "content": [
+          "Le organizzazioni sanitarie gestiscono quotidianamente enormi quantità di Informazioni Sanitarie Protette (PHI). Quando si condividono documenti esternamente — per procedimenti legali, ricerche o comunicazioni inter-organizzative — l'oscuramento corretto non è solo una buona pratica, è un requisito legale previsto dall'HIPAA.",
+          "La Privacy Rule dell'HIPAA richiede che le entità coperte e i loro partner commerciali proteggano tutte le informazioni sanitarie identificabili individualmente. Questo include nomi, date, numeri di previdenza sociale, numeri di cartelle cliniche e altre 14 categorie di identificatori.",
+          "Il semplice oscuramento visivo — disegnare riquadri neri sul testo sensibile — NON è sufficiente per la conformità HIPAA. I dati testuali sottostanti devono essere rimossi permanentemente dal documento. OfflineRedact esegue un vero oscuramento rimuovendo i dati testuali effettivi dai flussi di contenuto PDF, non semplicemente coprendoli visivamente.",
+          "Passaggi chiave per l'oscuramento conforme a HIPAA: (1) Identificare tutti i PHI nel documento utilizzando il rilevamento automatico, (2) Rivedere e confermare gli elementi rilevati, (3) Applicare un vero oscuramento che rimuova i dati testuali, (4) Pulire i metadati del documento, (5) Verificare il documento oscurato prima della condivisione.",
+          "Con OfflineRedact, tutta l'elaborazione avviene nel tuo browser — i tuoi documenti non lasciano mai il tuo dispositivo. Questo elimina il rischio di esposizione dei PHI durante il processo di oscuramento stesso, una considerazione critica per la conformità HIPAA."
+        ]
       },
       "ediscovery-document-redaction": {
         "title": "Migliori pratiche per l'oscuramento dei documenti nell'eDiscovery",
         "excerpt": "Guida essenziale per i professionisti legali sull'oscuramento delle informazioni sensibili durante il processo di eDiscovery.",
         "date": "2026-02-10",
-        "content": ["Nei procedimenti legali, il processo di eDiscovery richiede spesso la produzione di grandi volumi di documenti. Molti di questi documenti contengono informazioni privilegiate, segreti commerciali o dati personali che devono essere oscurati prima della produzione.", "L'oscuramento nell'eDiscovery serve a molteplici scopi: proteggere il privilegio avvocato-cliente, tutelare le informazioni commerciali riservate e rispettare le normative sulla privacy come il GDPR e il CCPA che possono applicarsi anche in contesti di contenzioso.", "Errori comuni nell'oscuramento per l'eDiscovery includono: utilizzare strumenti di evidenziazione invece di un vero oscuramento, dimenticare di rimuovere i metadati, oscuramento incoerente tra i set di documenti e mancato oscuramento di immagini incorporate o campi dei moduli.", "OfflineRedact supporta l'elaborazione batch — carica più PDF ed elaborali tutti con regole di oscuramento coerenti. Questo è essenziale per i flussi di lavoro dell'eDiscovery in cui centinaia o migliaia di documenti necessitano di un trattamento uniforme.", "Migliori pratiche: (1) Definire le categorie di oscuramento in anticipo, (2) Utilizzare il rilevamento automatico per garantire coerenza, (3) Verificare sempre con un secondo revisore, (4) Mantenere un registro degli oscuramenti, (5) Pulire i metadati da tutti i documenti prodotti."]
+        "content": [
+          "Nei procedimenti legali, il processo di eDiscovery richiede spesso la produzione di grandi volumi di documenti. Molti di questi documenti contengono informazioni privilegiate, segreti commerciali o dati personali che devono essere oscurati prima della produzione.",
+          "L'oscuramento nell'eDiscovery serve a molteplici scopi: proteggere il privilegio avvocato-cliente, tutelare le informazioni commerciali riservate e rispettare le normative sulla privacy come il GDPR e il CCPA che possono applicarsi anche in contesti di contenzioso.",
+          "Errori comuni nell'oscuramento per l'eDiscovery includono: utilizzare strumenti di evidenziazione invece di un vero oscuramento, dimenticare di rimuovere i metadati, oscuramento incoerente tra i set di documenti e mancato oscuramento di immagini incorporate o campi dei moduli.",
+          "OfflineRedact supporta l'elaborazione batch — carica più PDF ed elaborali tutti con regole di oscuramento coerenti. Questo è essenziale per i flussi di lavoro dell'eDiscovery in cui centinaia o migliaia di documenti necessitano di un trattamento uniforme.",
+          "Migliori pratiche: (1) Definire le categorie di oscuramento in anticipo, (2) Utilizzare il rilevamento automatico per garantire coerenza, (3) Verificare sempre con un secondo revisore, (4) Mantenere un registro degli oscuramenti, (5) Pulire i metadati da tutti i documenti prodotti."
+        ]
       },
       "gdpr-pdf-compliance": {
         "title": "Conformità PDF al GDPR: protezione dei dati personali nei documenti",
         "excerpt": "Come garantire che i tuoi documenti PDF siano conformi ai requisiti di protezione dei dati del GDPR attraverso un corretto oscuramento.",
         "date": "2026-02-05",
-        "content": ["Il Regolamento Generale sulla Protezione dei Dati (GDPR) richiede alle organizzazioni di proteggere i dati personali dei residenti dell'UE. I documenti PDF contengono spesso dati personali che devono essere gestiti correttamente — sia per le richieste di accesso degli interessati, gli accordi di condivisione dei dati o le politiche di conservazione dei documenti.", "Ai sensi del GDPR, i dati personali includono qualsiasi informazione relativa a una persona identificata o identificabile: nomi, indirizzi email, numeri di telefono, indirizzi IP, informazioni finanziarie e altro ancora. I documenti PDF contengono frequentemente più categorie di dati personali.", "Quando si risponde alle richieste di accesso degli interessati (DSAR), le organizzazioni potrebbero dover fornire copie dei documenti oscurando i dati personali di terze parti. Ciò richiede un'attenta identificazione e rimozione permanente dei dati di altri individui.", "Il supporto multi-regolamento di OfflineRedact include un profilo GDPR che rileva automaticamente i modelli comuni di dati personali europei: nomi, indirizzi email, numeri di telefono, numeri IBAN e indirizzi postali. Lo strumento supporta tutte le lingue dell'UE.", "Considerazioni chiave sul GDPR per l'oscuramento PDF: (1) Assicurarsi che l'oscuramento sia irreversibile — il testo deve essere rimosso permanentemente, (2) Pulire i metadati del documento che possono contenere dati personali, (3) Mantenere registri delle attività di oscuramento, (4) Applicare il principio di minimizzazione dei dati."]
+        "content": [
+          "Il Regolamento Generale sulla Protezione dei Dati (GDPR) richiede alle organizzazioni di proteggere i dati personali dei residenti dell'UE. I documenti PDF contengono spesso dati personali che devono essere gestiti correttamente — sia per le richieste di accesso degli interessati, gli accordi di condivisione dei dati o le politiche di conservazione dei documenti.",
+          "Ai sensi del GDPR, i dati personali includono qualsiasi informazione relativa a una persona identificata o identificabile: nomi, indirizzi email, numeri di telefono, indirizzi IP, informazioni finanziarie e altro ancora. I documenti PDF contengono frequentemente più categorie di dati personali.",
+          "Quando si risponde alle richieste di accesso degli interessati (DSAR), le organizzazioni potrebbero dover fornire copie dei documenti oscurando i dati personali di terze parti. Ciò richiede un'attenta identificazione e rimozione permanente dei dati di altri individui.",
+          "Il supporto multi-regolamento di OfflineRedact include un profilo GDPR che rileva automaticamente i modelli comuni di dati personali europei: nomi, indirizzi email, numeri di telefono, numeri IBAN e indirizzi postali. Lo strumento supporta tutte le lingue dell'UE.",
+          "Considerazioni chiave sul GDPR per l'oscuramento PDF: (1) Assicurarsi che l'oscuramento sia irreversibile — il testo deve essere rimosso permanentemente, (2) Pulire i metadati del documento che possono contenere dati personali, (3) Mantenere registri delle attività di oscuramento, (4) Applicare il principio di minimizzazione dei dati."
+        ]
       }
     }
   },
