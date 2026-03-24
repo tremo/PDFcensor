@@ -5,8 +5,9 @@ import { locales } from "@/lib/i18n/config";
 
 export async function POST(request: Request) {
   try {
-    const { locale: rawLocale = "en" } = await request.json();
+    const { locale: rawLocale = "en", plan = "monthly" } = await request.json();
     const locale = locales.includes(rawLocale) ? rawLocale : "en";
+    const isYearly = plan === "yearly";
     const stripe = getStripeServer();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
@@ -38,8 +39,8 @@ export async function POST(request: Request) {
               description:
                 "No watermark, batch processing (ZIP download), and priority support. Cancel anytime.",
             },
-            unit_amount: 699, // $6.99
-            recurring: { interval: "month" },
+            unit_amount: isYearly ? 5999 : 699,
+            recurring: { interval: isYearly ? "year" : "month" },
           },
           quantity: 1,
         },

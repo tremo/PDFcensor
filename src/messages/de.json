@@ -265,7 +265,15 @@
         "Prioritäts-Support",
         "Jederzeit kündigen"
       ],
-      "cta": "Pro holen — $6.99/Mo"
+      "cta": "Pro holen — $6.99/Mo",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "Jahr",
+      "yearlyCta": "Pro holen — $59.99/Jahr"
+    },
+    "toggle": {
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "save": "29% sparen"
     }
   },
   "auth": {

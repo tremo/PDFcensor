@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "leto",
+      "yearlyCta": "Pridobi Pro — $59.99/leto"
+    },
+    "toggle": {
+      "monthly": "Mesečno",
+      "yearly": "Letno",
+      "save": "Prihranite 29%"
     }
   },
   "auth": {

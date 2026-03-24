@@ -265,7 +265,15 @@
         "优先支持",
         "随时取消"
       ],
-      "cta": "获取Pro — $6.99/月"
+      "cta": "获取Pro — $6.99/月",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "年",
+      "yearlyCta": "获取 Pro — $59.99/年"
+    },
+    "toggle": {
+      "monthly": "月付",
+      "yearly": "年付",
+      "save": "节省29%"
     }
   },
   "auth": {
@@ -306,7 +314,7 @@
     "lastUpdated": "最后更新：2026年3月",
     "intro": {
       "heading": "1. 简介",
-      "text": "OfflineRedact（以下简称”我们”）致力于保护您的隐私。本政策说明了您在使用我们的PDF脱敏工具时，我们如何处理相关信息。"
+      "text": "OfflineRedact（以下简称\"我们\"）致力于保护您的隐私。本政策说明了您在使用我们的PDF脱敏工具时，我们如何处理相关信息。"
     },
     "noFileUploads": {
       "heading": "2. 无文件上传",
@@ -359,7 +367,7 @@
     },
     "liability": {
       "heading": "6. 责任限制",
-      "text": "OfflineRedact按”原样”提供，不作任何保证。对于因使用或无法使用本服务而导致的任何损害，包括但不限于敏感数据脱敏不完全，我们概不负责。"
+      "text": "OfflineRedact按\"原样\"提供，不作任何保证。对于因使用或无法使用本服务而导致的任何损害，包括但不限于敏感数据脱敏不完全，我们概不负责。"
     },
     "contact": {
       "heading": "7. 联系方式",

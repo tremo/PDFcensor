@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "rok",
+      "yearlyCta": "Získať Pro — $59.99/rok"
+    },
+    "toggle": {
+      "monthly": "Mesačne",
+      "yearly": "Ročne",
+      "save": "Ušetrite 29%"
     }
   },
   "auth": {

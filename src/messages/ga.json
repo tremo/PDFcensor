@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "bliain",
+      "yearlyCta": "Faigh Pro — $59.99/bliain"
+    },
+    "toggle": {
+      "monthly": "Míosúil",
+      "yearly": "Bliantúil",
+      "save": "Sábháil 29%"
     }
   },
   "auth": {

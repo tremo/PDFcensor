@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "an",
+      "yearlyCta": "Obțineți Pro — $59.99/an"
+    },
+    "toggle": {
+      "monthly": "Lunar",
+      "yearly": "Anual",
+      "save": "Economisiți 29%"
     }
   },
   "auth": {

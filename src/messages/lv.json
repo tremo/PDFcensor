@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "gads",
+      "yearlyCta": "Iegūt Pro — $59.99/gads"
+    },
+    "toggle": {
+      "monthly": "Ikmēneša",
+      "yearly": "Ikgadējs",
+      "save": "Ietaupiet 29%"
     }
   },
   "auth": {

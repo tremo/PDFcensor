@@ -265,7 +265,15 @@
         "Support prioritaire",
         "Annulez à tout moment"
       ],
-      "cta": "Passer à Pro — $6.99/mois"
+      "cta": "Passer à Pro — $6.99/mois",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "an",
+      "yearlyCta": "Obtenir Pro — $59.99/an"
+    },
+    "toggle": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "save": "Économisez 29%"
     }
   },
   "auth": {
@@ -300,38 +308,5 @@
     "proActivated": "Licence Pro activée",
     "proLinkedToAccount": "Les fonctionnalités Pro sont liées à {email}",
     "loginToActivate": "Connectez-vous pour lier les fonctionnalités Pro à votre compte"
-  },
-  "privacy": {
-    "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour : mars 2026",
-    "intro": { "heading": "1. Introduction", "text": "OfflineRedact (« nous », « notre », « nos ») s'engage à protéger votre vie privée. Cette politique explique comment nous traitons les informations lorsque vous utilisez notre outil de caviardage PDF." },
-    "noFileUploads": { "heading": "2. Aucun téléchargement de fichiers", "text": "{strong}Vos fichiers PDF ne quittent jamais votre appareil.{/strong} Tout le traitement PDF, y compris l'extraction de texte, la détection des données personnelles et le caviardage, se déroule entièrement dans votre navigateur web. Nous ne téléchargeons, ne stockons, ne traitons et n'avons pas accès à vos documents sur un quelconque serveur." },
-    "infoCollect": { "heading": "3. Informations que nous collectons", "text": "Nous collectons le minimum d'informations nécessaires à notre service :", "items": ["Adresse e-mail (uniquement si vous achetez une licence Pro, via Stripe)", "Informations de paiement (traitées par Stripe ; nous ne voyons jamais les détails de votre carte)", "Analyses de base (pages vues, utilisation des fonctionnalités — aucune donnée personnelle)"] },
-    "cookies": { "heading": "4. Cookies", "text": "Nous utilisons uniquement des cookies essentiels : préférence de langue et stockage de la clé de licence (dans le localStorage). Nous n'utilisons pas de cookies de suivi." },
-    "thirdParty": { "heading": "5. Services tiers", "items": ["{strong}Stripe{/strong} — Traitement des paiements. Consultez la politique de confidentialité de Stripe.", "{strong}Vercel{/strong} — Hébergement. Consultez la politique de confidentialité de Vercel."] },
-    "dataRetention": { "heading": "6. Conservation des données", "text": "Les clés de licence sont conservées pendant la durée de votre licence. Nous ne stockons aucun contenu PDF ni aucune donnée personnelle extraite des documents." },
-    "contact": { "heading": "7. Contact", "text": "Pour toute question relative à la confidentialité, contactez-nous à privacy@offlineredact.com." }
-  },
-  "terms": {
-    "title": "Conditions d'utilisation",
-    "lastUpdated": "Dernière mise à jour : mars 2026",
-    "acceptance": { "heading": "1. Acceptation des conditions", "text": "En utilisant OfflineRedact, vous acceptez ces Conditions d'utilisation. Si vous n'êtes pas d'accord, n'utilisez pas le service." },
-    "serviceDesc": { "heading": "2. Description du service", "text": "OfflineRedact est un outil de caviardage PDF côté client qui détecte et supprime les informations personnelles identifiables (PII) des documents PDF. Tout le traitement se déroule dans votre navigateur web." },
-    "noGuarantee": { "heading": "3. Aucune garantie", "text": "Bien que nous nous efforcions d'être précis, OfflineRedact ne garantit pas la détection à 100 % de toutes les données personnelles. Les utilisateurs sont responsables de la vérification des résultats de caviardage avant de partager ou de publier des documents. Vérifiez toujours que toutes les informations sensibles ont été correctement caviardées." },
-    "license": { "heading": "4. Licence", "text": "Offre gratuite : Vous pouvez utiliser OfflineRedact gratuitement avec un filigrane sur la sortie. Licence Pro : Un paiement unique vous accorde une licence à vie pour utiliser OfflineRedact sans filigrane." },
-    "refundPolicy": { "heading": "5. Politique de remboursement", "text": "Nous offrons une garantie de remboursement de 30 jours. Contactez-nous à support@offlineredact.com pour les demandes de remboursement." },
-    "liability": { "heading": "6. Limitation de responsabilité", "text": "OfflineRedact est fourni « en l'état » sans garantie. Nous ne sommes pas responsables des dommages résultant de l'utilisation ou de l'impossibilité d'utiliser le service, y compris, mais sans s'y limiter, le caviardage incomplet de données sensibles." },
-    "contact": { "heading": "7. Contact", "text": "Pour toute question concernant ces conditions, contactez-nous à legal@offlineredact.com." }
-  },
-  "blog": {
-    "title": "Blog",
-    "backToBlog": "Retour au Blog",
-    "cta": { "title": "Prêt à essayer OfflineRedact ?", "subtitle": "Commencez à caviarder les données sensibles de vos PDF — gratuit, sans inscription.", "button": "Commencer le caviardage" },
-    "posts": {
-      "hipaa-compliant-pdf-redaction": { "title": "Caviardage PDF conforme à HIPAA : Guide complet", "excerpt": "Apprenez à caviarder correctement les informations de santé protégées (PHI) des documents PDF pour maintenir la conformité HIPAA.", "date": "2026-02-15", "content": ["Les organismes de santé traitent quotidiennement de vastes quantités d'informations de santé protégées (PHI). Lors du partage de documents à l'extérieur — pour des procédures judiciaires, des recherches ou des communications inter-organisationnelles — un caviardage approprié n'est pas seulement une bonne pratique, c'est une obligation légale en vertu de HIPAA.", "La règle de confidentialité de HIPAA exige que les entités couvertes et leurs associés commerciaux protègent toutes les informations de santé identifiables individuellement. Cela comprend les noms, dates, numéros de sécurité sociale, numéros de dossiers médicaux et 14 autres catégories d'identifiants.", "Le simple caviardage visuel — dessiner des boîtes noires sur du texte sensible — N'EST PAS suffisant pour la conformité HIPAA. Les données textuelles sous-jacentes doivent être définitivement supprimées du document. OfflineRedact effectue un vrai caviardage en supprimant les données textuelles réelles des flux de contenu PDF, pas en les couvrant simplement visuellement.", "Étapes clés pour un caviardage conforme à HIPAA : (1) Identifier toutes les PHI dans le document à l'aide de la détection automatisée, (2) Vérifier et confirmer les éléments détectés, (3) Appliquer un vrai caviardage qui supprime les données textuelles, (4) Nettoyer les métadonnées du document, (5) Vérifier le document caviardé avant le partage.", "Avec OfflineRedact, tout le traitement se fait dans votre navigateur — vos documents ne quittent jamais votre appareil. Cela élimine le risque d'exposition des PHI pendant le processus de caviardage lui-même, une considération essentielle pour la conformité HIPAA."] },
-      "ediscovery-document-redaction": { "title": "Bonnes pratiques de caviardage de documents eDiscovery", "excerpt": "Guide essentiel pour les professionnels du droit sur le caviardage d'informations sensibles lors du processus eDiscovery.", "date": "2026-02-10", "content": ["Dans les procédures judiciaires, le processus eDiscovery nécessite souvent la production de grands volumes de documents. Beaucoup de ces documents contiennent des informations privilégiées, des secrets commerciaux ou des données personnelles qui doivent être caviardées avant la production.", "Le caviardage dans le cadre de l'eDiscovery sert plusieurs objectifs : protéger le privilège avocat-client, protéger les informations commerciales confidentielles et se conformer aux réglementations de confidentialité comme le RGPD et le CCPA qui peuvent s'appliquer même dans un contexte de litige.", "Les erreurs courantes de caviardage eDiscovery incluent : utiliser des outils de surlignage au lieu du vrai caviardage, oublier de supprimer les métadonnées, un caviardage incohérent entre les ensembles de documents et l'oubli de caviarder les images intégrées ou les champs de formulaire.", "OfflineRedact prend en charge le traitement par lots — téléchargez plusieurs PDF et traitez-les tous avec des règles de caviardage cohérentes. Ceci est essentiel pour les flux de travail eDiscovery où des centaines ou des milliers de documents nécessitent un traitement uniforme.", "Bonnes pratiques : (1) Définir les catégories de caviardage en amont, (2) Utiliser la détection automatisée pour garantir la cohérence, (3) Toujours vérifier avec un second réviseur, (4) Maintenir un journal de caviardage, (5) Nettoyer les métadonnées de tous les documents produits."] },
-      "gdpr-pdf-compliance": { "title": "Conformité RGPD des PDF : Protection des données personnelles dans les documents", "excerpt": "Comment garantir que vos documents PDF respectent les exigences de protection des données du RGPD grâce à un caviardage approprié.", "date": "2026-02-05", "content": ["Le Règlement Général sur la Protection des Données (RGPD) exige des organisations qu'elles protègent les données personnelles des résidents de l'UE. Les documents PDF contiennent souvent des données personnelles qui doivent être correctement traitées — que ce soit pour des demandes d'accès aux données, des accords de partage de données ou des politiques de conservation des documents.", "En vertu du RGPD, les données personnelles comprennent toute information relative à une personne identifiée ou identifiable : noms, adresses e-mail, numéros de téléphone, adresses IP, informations financières, et plus encore. Les documents PDF contiennent fréquemment plusieurs catégories de données personnelles.", "Lors de la réponse aux demandes d'accès aux données (DSAR), les organisations peuvent avoir besoin de fournir des copies de documents tout en caviardant les données personnelles de tiers. Cela nécessite une identification minutieuse et la suppression permanente des données d'autres individus.", "Le support multi-réglementaire d'OfflineRedact comprend un profil RGPD qui détecte automatiquement les motifs courants de données personnelles européennes : noms, adresses e-mail, numéros de téléphone, numéros IBAN et adresses postales. L'outil prend en charge toutes les langues de l'UE.", "Considérations clés du RGPD pour le caviardage PDF : (1) S'assurer que le caviardage est irréversible — le texte doit être définitivement supprimé, (2) Nettoyer les métadonnées du document qui peuvent contenir des données personnelles, (3) Tenir des registres des activités de caviardage, (4) Appliquer le principe de minimisation des données."] }
-    }
-  },
-  "notFound": { "code": "404", "message": "Page introuvable.", "goHome": "Retour à l'accueil" }
+  }
 }

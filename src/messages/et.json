@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "aasta",
+      "yearlyCta": "Hangi Pro — $59.99/aasta"
+    },
+    "toggle": {
+      "monthly": "Igakuine",
+      "yearly": "Aastane",
+      "save": "Säästa 29%"
     }
   },
   "auth": {

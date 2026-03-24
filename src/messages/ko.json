@@ -265,7 +265,15 @@
         "우선 지원",
         "언제든지 취소 가능"
       ],
-      "cta": "Pro 시작 — $6.99/월"
+      "cta": "Pro 시작 — $6.99/월",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "년",
+      "yearlyCta": "Pro 구독 — $59.99/년"
+    },
+    "toggle": {
+      "monthly": "월간",
+      "yearly": "연간",
+      "save": "29% 절약"
     }
   },
   "auth": {
