@@ -7,8 +7,18 @@ const pages = ["", "/redact", "/pricing", "/privacy", "/terms", "/blog"];
 
 const blogSlugs = [
   "kvkk-pdf-redaction-guide",
+  "cnil-rgpd-caviardage-pdf",
+  "lopdgdd-redaccion-pdf",
+  "lgpd-redacao-pdf",
   "dsgvo-pdf-schwaerzung",
+  "appi-pdf-sumikeshi",
+  "pipa-pdf-masking",
+  "pipl-pdf-tumin",
+  "gdpr-italia-oscuramento-pdf",
   "client-side-vs-server-side-redaction",
+  "avg-pdf-lakken",
+  "rodo-redakcja-pdf",
+  "dataskydd-pdf-maskering",
   "pdf-redaction-healthcare-checklist",
   "ccpa-pdf-redaction",
   "hipaa-compliant-pdf-redaction",
