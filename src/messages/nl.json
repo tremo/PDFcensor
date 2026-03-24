@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: maart 2026",
+    "intro": {
+      "heading": "1. Inleiding",
+      "text": "OfflineRedact (\"wij\", \"ons\", \"onze\") zet zich in voor de bescherming van uw privacy. Dit beleid legt uit hoe wij omgaan met informatie wanneer u onze PDF-redactietool gebruikt."
+    },
+    "noFileUploads": {
+      "heading": "2. Geen bestandsuploads",
+      "text": "{strong}Uw PDF-bestanden verlaten nooit uw apparaat.{/strong} Alle PDF-verwerking, inclusief tekstextractie, detectie van persoonsgegevens en redactie, vindt volledig plaats in uw webbrowser. Wij uploaden, bewaren, verwerken of hebben geen toegang tot uw documenten op enige server."
+    },
+    "infoCollect": {
+      "heading": "3. Informatie die wij verzamelen",
+      "text": "Wij verzamelen minimale informatie die nodig is voor onze dienst:",
+      "items": ["E-mailadres (alleen als u een Pro-licentie koopt, via Stripe)", "Betalingsinformatie (verwerkt door Stripe; wij zien nooit uw kaartgegevens)", "Basisanalyses (paginaweergaven, functiegebruik — geen persoonlijke gegevens)"]
+    },
+    "cookies": {
+      "heading": "4. Cookies",
+      "text": "Wij gebruiken alleen essentiële cookies: taalvoorkeur en licentiesleutelopslag (in localStorage). Wij gebruiken geen trackingcookies."
+    },
+    "thirdParty": {
+      "heading": "5. Diensten van derden",
+      "items": ["{strong}Stripe{/strong} — Betalingsverwerking. Zie het privacybeleid van Stripe.", "{strong}Vercel{/strong} — Hosting. Zie het privacybeleid van Vercel."]
+    },
+    "dataRetention": {
+      "heading": "6. Gegevensbewaring",
+      "text": "Licentiesleutels worden bewaard voor de duur van uw licentie. Wij slaan geen PDF-inhoud of persoonlijke gegevens op die uit documenten zijn geëxtraheerd."
+    },
+    "contact": {
+      "heading": "7. Contact",
+      "text": "Voor privacygerelateerde vragen kunt u contact met ons opnemen via privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Servicevoorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: maart 2026",
+    "acceptance": {
+      "heading": "1. Aanvaarding van de voorwaarden",
+      "text": "Door het gebruik van OfflineRedact gaat u akkoord met deze Servicevoorwaarden. Als u niet akkoord gaat, gebruik de dienst dan niet."
+    },
+    "serviceDesc": {
+      "heading": "2. Dienstbeschrijving",
+      "text": "OfflineRedact is een client-side PDF-redactietool die persoonlijk identificeerbare informatie (PII) in PDF-documenten detecteert en verwijdert. Alle verwerking vindt plaats in uw webbrowser."
+    },
+    "noGuarantee": {
+      "heading": "3. Geen garantie",
+      "text": "Hoewel wij streven naar nauwkeurigheid, garandeert OfflineRedact geen 100% detectie van alle persoonsgegevens. Gebruikers zijn verantwoordelijk voor het controleren van de redactieresultaten voordat zij documenten delen of publiceren. Controleer altijd of alle gevoelige informatie correct is geredigeerd."
+    },
+    "license": {
+      "heading": "4. Licentie",
+      "text": "Gratis versie: u mag OfflineRedact gratis gebruiken met een watermerk op de uitvoer. Pro-licentie: een eenmalige betaling geeft u een levenslange licentie om OfflineRedact zonder watermerken te gebruiken."
+    },
+    "refundPolicy": {
+      "heading": "5. Restitutiebeleid",
+      "text": "Wij bieden een 30 dagen geld-terug-garantie. Neem contact met ons op via support@offlineredact.com voor restitutieverzoeken."
+    },
+    "liability": {
+      "heading": "6. Beperking van aansprakelijkheid",
+      "text": "OfflineRedact wordt geleverd \"zoals het is\" zonder garanties. Wij zijn niet aansprakelijk voor enige schade die voortvloeit uit het gebruik of het onvermogen om de dienst te gebruiken, inclusief maar niet beperkt tot onvolledige redactie van gevoelige gegevens."
+    },
+    "contact": {
+      "heading": "7. Contact",
+      "text": "Voor vragen over deze voorwaarden kunt u contact met ons opnemen via legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Terug naar Blog",
+    "cta": {
+      "title": "Klaar om OfflineRedact te proberen?",
+      "subtitle": "Begin met het redigeren van gevoelige gegevens uit uw PDF's — gratis, geen registratie vereist.",
+      "button": "Begin met redigeren"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA-conforme PDF-redactie: een complete gids",
+        "excerpt": "Leer hoe u beschermde gezondheidsinformatie (PHI) correct uit PDF-documenten redigeert om HIPAA-conformiteit te waarborgen.",
+        "date": "2026-02-15",
+        "content": ["Zorgorganisaties verwerken dagelijks enorme hoeveelheden Beschermde Gezondheidsinformatie (PHI). Bij het extern delen van documenten — voor juridische procedures, onderzoek of inter-organisatorische communicatie — is correcte redactie niet alleen een best practice, het is een wettelijke vereiste onder HIPAA.", "De Privacy Rule van HIPAA vereist dat gedekte entiteiten en hun zakenpartners alle individueel identificeerbare gezondheidsinformatie beschermen. Dit omvat namen, data, burgerservicenummers, medische dossiernummers en 14 andere categorieën van identificatoren.", "Eenvoudige visuele redactie — zwarte vakken over gevoelige tekst tekenen — is NIET voldoende voor HIPAA-conformiteit. De onderliggende tekstgegevens moeten permanent uit het document worden verwijderd. OfflineRedact voert echte redactie uit door de daadwerkelijke tekstgegevens uit PDF-contentstromen te verwijderen, niet door ze slechts visueel te bedekken.", "Belangrijke stappen voor HIPAA-conforme redactie: (1) Identificeer alle PHI in het document met behulp van automatische detectie, (2) Controleer en bevestig gedetecteerde items, (3) Pas echte redactie toe die tekstgegevens verwijdert, (4) Verwijder documentmetadata, (5) Controleer het geredigeerde document voordat u het deelt.", "Met OfflineRedact vindt alle verwerking plaats in uw browser — uw documenten verlaten nooit uw apparaat. Dit elimineert het risico van PHI-blootstelling tijdens het redactieproces zelf, een cruciale overweging voor HIPAA-conformiteit."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Best practices voor documentredactie bij eDiscovery",
+        "excerpt": "Essentiële gids voor juridische professionals over het redigeren van gevoelige informatie tijdens het eDiscovery-proces.",
+        "date": "2026-02-10",
+        "content": ["Bij juridische procedures vereist het eDiscovery-proces vaak het produceren van grote hoeveelheden documenten. Veel van deze documenten bevatten geprivilegieerde informatie, bedrijfsgeheimen of persoonlijke gegevens die vóór productie moeten worden geredigeerd.", "Redactie bij eDiscovery dient meerdere doelen: bescherming van het advocaat-cliënt privilege, afscherming van vertrouwelijke bedrijfsinformatie en naleving van privacyreguleringen zoals de GDPR en CCPA die zelfs in een procescontext van toepassing kunnen zijn.", "Veelgemaakte fouten bij eDiscovery-redactie zijn: markeringshulpmiddelen gebruiken in plaats van echte redactie, vergeten metadata te verwijderen, inconsistente redactie over documentsets en het niet redigeren van ingesloten afbeeldingen of formuliervelden.", "OfflineRedact ondersteunt batchverwerking — upload meerdere PDF's en verwerk ze allemaal met consistente redactieregels. Dit is essentieel voor eDiscovery-workflows waarbij honderden of duizenden documenten een uniforme behandeling nodig hebben.", "Best practices: (1) Definieer redactiecategorieën vooraf, (2) Gebruik automatische detectie om consistentie te garanderen, (3) Controleer altijd met een tweede beoordelaar, (4) Houd een redactielogboek bij, (5) Verwijder metadata uit alle geproduceerde documenten."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF-conformiteit: bescherming van persoonsgegevens in documenten",
+        "excerpt": "Hoe u ervoor zorgt dat uw PDF-documenten voldoen aan de gegevensbeschermingsvereisten van de GDPR door middel van correcte redactie.",
+        "date": "2026-02-05",
+        "content": ["De Algemene Verordening Gegevensbescherming (AVG/GDPR) vereist dat organisaties de persoonsgegevens van EU-inwoners beschermen. PDF-documenten bevatten vaak persoonlijke gegevens die correct moeten worden behandeld — of het nu gaat om verzoeken van betrokkenen, gegevensdelingsovereenkomsten of documentbewaarbeleid.", "Onder de GDPR omvatten persoonsgegevens alle informatie met betrekking tot een geïdentificeerde of identificeerbare persoon: namen, e-mailadressen, telefoonnummers, IP-adressen, financiële informatie en meer. PDF-documenten bevatten vaak meerdere categorieën persoonsgegevens.", "Bij het beantwoorden van verzoeken van betrokkenen (DSAR's) moeten organisaties mogelijk kopieën van documenten verstrekken terwijl zij de persoonsgegevens van derden redigeren. Dit vereist zorgvuldige identificatie en permanente verwijdering van gegevens van andere personen.", "De multi-regulatie ondersteuning van OfflineRedact omvat een GDPR-profiel dat automatisch veelvoorkomende Europese patronen van persoonsgegevens detecteert: namen, e-mailadressen, telefoonnummers, IBAN-nummers en postadressen. De tool ondersteunt alle EU-talen.", "Belangrijke GDPR-overwegingen voor PDF-redactie: (1) Zorg dat redactie onomkeerbaar is — tekst moet permanent worden verwijderd, (2) Verwijder documentmetadata die persoonsgegevens kan bevatten, (3) Houd registraties bij van redactieactiviteiten, (4) Pas het principe van dataminimalisatie toe."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Pagina niet gevonden.",
+    "goHome": "Naar Home"
   }
 }
