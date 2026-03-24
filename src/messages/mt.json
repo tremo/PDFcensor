@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "sena",
+      "yearlyCta": "Ikseb Pro — $59.99/sena"
+    },
+    "toggle": {
+      "monthly": "Kull xahar",
+      "yearly": "Kull sena",
+      "save": "Iffranka 29%"
     }
   },
   "auth": {

@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "år",
+      "yearlyCta": "Skaffa Pro — $59.99/år"
+    },
+    "toggle": {
+      "monthly": "Månadsvis",
+      "yearly": "Årsvis",
+      "save": "Spara 29%"
     }
   },
   "auth": {

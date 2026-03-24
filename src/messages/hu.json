@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "év",
+      "yearlyCta": "Pro beszerzése — $59.99/év"
+    },
+    "toggle": {
+      "monthly": "Havi",
+      "yearly": "Éves",
+      "save": "Spóroljon 29%-ot"
     }
   },
   "auth": {

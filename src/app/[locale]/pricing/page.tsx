@@ -13,6 +13,9 @@ export default function PricingPage() {
   const t = useTranslations("pricing");
   const locale = useLocale();
   const [loading, setLoading] = useState(false);
+  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+
+  const isYearly = billingPeriod === "yearly";
 
   const handleCheckout = async () => {
     setLoading(true);
@@ -20,7 +23,7 @@ export default function PricingPage() {
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ locale }),
+        body: JSON.stringify({ locale, plan: billingPeriod }),
       });
       const data = await response.json();
       if (data.url) {
@@ -41,6 +44,28 @@ export default function PricingPage() {
       <div className="text-center mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">{t("title")}</h1>
         <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
+
+        <div className="mt-8 inline-flex items-center gap-3 rounded-full bg-muted p-1">
+          <button
+            onClick={() => setBillingPeriod("monthly")}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              !isYearly ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {t("toggle.monthly")}
+          </button>
+          <button
+            onClick={() => setBillingPeriod("yearly")}
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              isYearly ? "bg-background shadow-sm" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {t("toggle.yearly")}
+            <span className="ml-1.5 rounded-full bg-green-100 px-2 py-0.5 text-xs font-semibold text-green-700 dark:bg-green-900 dark:text-green-300">
+              {t("toggle.save")}
+            </span>
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -81,8 +106,12 @@ export default function PricingPage() {
           <CardHeader>
             <CardTitle className="text-xl">{t("pro.title")}</CardTitle>
             <div className="mt-2">
-              <span className="text-4xl font-bold">{t("pro.price")}</span>
-              <span className="text-muted-foreground ml-1">/ {t("pro.period")}</span>
+              <span className="text-4xl font-bold">
+                {isYearly ? t("pro.yearlyPrice") : t("pro.price")}
+              </span>
+              <span className="text-muted-foreground ml-1">
+                / {isYearly ? t("pro.yearlyPeriod") : t("pro.period")}
+              </span>
             </div>
             <CardDescription className="mt-2">
               {t("pro.description")}
@@ -105,7 +134,7 @@ export default function PricingPage() {
               onClick={handleCheckout}
               disabled={loading}
             >
-              {loading ? "..." : t("pro.cta")}
+              {loading ? "..." : isYearly ? t("pro.yearlyCta") : t("pro.cta")}
             </Button>
           </CardFooter>
         </Card>

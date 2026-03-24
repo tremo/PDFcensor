@@ -265,7 +265,15 @@
         "Priority support",
         "Cancel anytime"
       ],
-      "cta": "Get Pro — $6.99/mo"
+      "cta": "Get Pro — $6.99/mo",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "year",
+      "yearlyCta": "Get Pro — $59.99/yr"
+    },
+    "toggle": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save 29%"
     }
   },
   "auth": {

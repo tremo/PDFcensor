@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "godina",
+      "yearlyCta": "Nabavite Pro — $59.99/godina"
+    },
+    "toggle": {
+      "monthly": "Mjesečno",
+      "yearly": "Godišnje",
+      "save": "Uštedite 29%"
     }
   },
   "auth": {

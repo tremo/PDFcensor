@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "anno",
+      "yearlyCta": "Ottieni Pro — $59.99/anno"
+    },
+    "toggle": {
+      "monthly": "Mensile",
+      "yearly": "Annuale",
+      "save": "Risparmia 29%"
     }
   },
   "auth": {

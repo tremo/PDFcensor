@@ -265,7 +265,15 @@
         "優先サポート",
         "いつでもキャンセル可能"
       ],
-      "cta": "Proを始める — $6.99/月"
+      "cta": "Proを始める — $6.99/月",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "年",
+      "yearlyCta": "Pro を取得 — $59.99/年"
+    },
+    "toggle": {
+      "monthly": "月額",
+      "yearly": "年額",
+      "save": "29%お得"
     }
   },
   "auth": {

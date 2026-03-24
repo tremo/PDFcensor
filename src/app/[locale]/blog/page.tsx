@@ -2,6 +2,41 @@ import { Link } from "@/lib/i18n/navigation";
 
 const blogPosts = [
   {
+    slug: "kvkk-pdf-redaction-guide",
+    title: "KVKK Uyumlu PDF Sansürleme: Kapsamlı Rehber",
+    excerpt:
+      "Türkiye'deki KVKK düzenlemesine uygun şekilde PDF belgelerindeki kişisel verileri nasıl sansürleyeceğinizi öğrenin.",
+    date: "2026-03-20",
+  },
+  {
+    slug: "dsgvo-pdf-schwaerzung",
+    title: "DSGVO-konforme PDF-Schwärzung: Vollständiger Leitfaden",
+    excerpt:
+      "Erfahren Sie, wie Sie personenbezogene Daten in PDF-Dokumenten DSGVO-konform schwärzen und dauerhaft entfernen.",
+    date: "2026-03-15",
+  },
+  {
+    slug: "client-side-vs-server-side-redaction",
+    title: "Client-Side vs Server-Side PDF Redaction: Security Comparison",
+    excerpt:
+      "Why processing documents in your browser is more secure than uploading them to a server for redaction.",
+    date: "2026-03-10",
+  },
+  {
+    slug: "pdf-redaction-healthcare-checklist",
+    title: "PDF Redaction for Healthcare: HIPAA Compliance Checklist",
+    excerpt:
+      "A practical checklist for healthcare organizations to ensure HIPAA-compliant PDF redaction workflows.",
+    date: "2026-03-05",
+  },
+  {
+    slug: "ccpa-pdf-redaction",
+    title: "CCPA Compliance: How to Redact Personal Information from PDFs",
+    excerpt:
+      "Guide for California businesses on redacting consumer personal information from PDF documents under CCPA.",
+    date: "2026-02-28",
+  },
+  {
     slug: "hipaa-compliant-pdf-redaction",
     title: "HIPAA Compliant PDF Redaction: A Complete Guide",
     excerpt:

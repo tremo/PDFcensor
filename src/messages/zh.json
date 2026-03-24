@@ -265,7 +265,15 @@
         "优先支持",
         "随时取消"
       ],
-      "cta": "获取Pro — $6.99/月"
+      "cta": "获取Pro — $6.99/月",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "年",
+      "yearlyCta": "获取 Pro — $59.99/年"
+    },
+    "toggle": {
+      "monthly": "月付",
+      "yearly": "年付",
+      "save": "节省29%"
     }
   },
   "auth": {

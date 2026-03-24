@@ -265,7 +265,15 @@
         "Öncelikli destek",
         "İstediğinde iptal et"
       ],
-      "cta": "Pro'ya Geç — $6.99/ay"
+      "cta": "Pro'ya Geç — $6.99/ay",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "yıl",
+      "yearlyCta": "Pro Al — $59.99/yıl"
+    },
+    "toggle": {
+      "monthly": "Aylık",
+      "yearly": "Yıllık",
+      "save": "%29 Tasarruf"
     }
   },
   "auth": {

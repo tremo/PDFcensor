@@ -265,7 +265,15 @@
         "Priority support",
         "Lifetime license"
       ],
-      "cta": "Get Pro License"
+      "cta": "Get Pro License",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "metai",
+      "yearlyCta": "Gauti Pro — $59.99/metai"
+    },
+    "toggle": {
+      "monthly": "Mėnesinis",
+      "yearly": "Metinis",
+      "save": "Sutaupykite 29%"
     }
   },
   "auth": {

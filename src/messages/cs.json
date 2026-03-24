@@ -265,7 +265,15 @@
         "Prioritní podpora",
         "Doživotní licence"
       ],
-      "cta": "Získat Pro licenci"
+      "cta": "Získat Pro licenci",
+      "yearlyPrice": "$59.99",
+      "yearlyPeriod": "rok",
+      "yearlyCta": "Získat Pro — $59.99/rok"
+    },
+    "toggle": {
+      "monthly": "Měsíčně",
+      "yearly": "Ročně",
+      "save": "Ušetřete 29%"
     }
   },
   "auth": {
