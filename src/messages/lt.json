@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Privatumo politika",
+    "lastUpdated": "Paskutinį kartą atnaujinta: 2026 m. kovas",
+    "intro": {
+      "heading": "1. Įvadas",
+      "text": "OfflineRedact (\u201cmes\u201d, \u201cmūsų\u201d, \u201cmus\u201d) yra įsipareigojusi saugoti jūsų privatumą. Ši politika paaiškina, kaip mes tvarkome informaciją, kai naudojatės mūsų PDF redagavimo įrankiu."
+    },
+    "noFileUploads": {
+      "heading": "2. Jokių failų įkėlimų",
+      "text": "{strong}Jūsų PDF failai niekada nepalieka jūsų įrenginio.{/strong} Visas PDF apdorojimas, įskaitant teksto ištraukimą, asmens duomenų aptikimą ir redagavimą, vyksta visiškai jūsų naršyklėje. Mes neįkeliame, nesaugome, neapdorojame ir neturime prieigos prie jūsų dokumentų jokiame serveryje."
+    },
+    "infoCollect": {
+      "heading": "3. Mūsų renkama informacija",
+      "text": "Mes renkame tik minimalią informaciją, reikalingą mūsų paslaugai:",
+      "items": ["El. pašto adresas (tik jei įsigyjate Pro licenciją per Stripe)", "Mokėjimo informacija (apdoroja Stripe; mes niekada nematome jūsų kortelės duomenų)", "Pagrindinė analitika (puslapių peržiūros, funkcijų naudojimas — jokių asmens duomenų)"]
+    },
+    "cookies": {
+      "heading": "4. Slapukai",
+      "text": "Naudojame tik būtinus slapukus: kalbos nustatymo ir licencijos rakto saugojimui (localStorage). Nenaudojame sekimo slapukų."
+    },
+    "thirdParty": {
+      "heading": "5. Trečiųjų šalių paslaugos",
+      "items": ["{strong}Stripe{/strong} — Mokėjimų apdorojimas. Žiūrėkite Stripe privatumo politiką.", "{strong}Vercel{/strong} — Talpinimas. Žiūrėkite Vercel privatumo politiką."]
+    },
+    "dataRetention": {
+      "heading": "6. Duomenų saugojimas",
+      "text": "Licencijos raktai saugomi jūsų licencijos galiojimo laikotarpiu. Mes nesaugome jokio PDF turinio ar iš dokumentų išgautų asmens duomenų."
+    },
+    "contact": {
+      "heading": "7. Kontaktai",
+      "text": "Dėl su privatumu susijusių klausimų susisiekite su mumis adresu privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Paslaugų sąlygos",
+    "lastUpdated": "Paskutinį kartą atnaujinta: 2026 m. kovas",
+    "acceptance": {
+      "heading": "1. Sąlygų priėmimas",
+      "text": "Naudodamiesi OfflineRedact, jūs sutinkate su šiomis Paslaugų sąlygomis. Jei nesutinkate, nenaudokite paslaugos."
+    },
+    "serviceDesc": {
+      "heading": "2. Paslaugos aprašymas",
+      "text": "OfflineRedact yra kliento pusėje veikiantis PDF redagavimo įrankis, kuris aptinka ir pašalina asmens tapatybę identifikuojančią informaciją (PII) iš PDF dokumentų. Visas apdorojimas vyksta jūsų naršyklėje."
+    },
+    "noGuarantee": {
+      "heading": "3. Jokios garantijos",
+      "text": "Nors siekiame tikslumo, OfflineRedact negarantuoja 100% visų asmens duomenų aptikimo. Naudotojai yra atsakingi už redagavimo rezultatų peržiūrą prieš dalinantis ar publikuojant dokumentus. Visada patikrinkite, ar visa jautri informacija buvo tinkamai paredaguota."
+    },
+    "license": {
+      "heading": "4. Licencija",
+      "text": "Nemokamas planas: Galite naudoti OfflineRedact nemokamai su vandens ženklu išvestyje. Pro licencija: Vienkartinis mokėjimas suteikia jums neribotą licenciją naudoti OfflineRedact be vandens ženklų."
+    },
+    "refundPolicy": {
+      "heading": "5. Grąžinimo politika",
+      "text": "Siūlome 30 dienų pinigų grąžinimo garantiją. Dėl grąžinimo užklausų susisiekite su mumis adresu support@offlineredact.com."
+    },
+    "liability": {
+      "heading": "6. Atsakomybės ribojimas",
+      "text": "OfflineRedact teikiama \u201ctokia, kokia yra\u201d, be garantijų. Mes nesame atsakingi už jokią žalą, atsirandančią dėl paslaugos naudojimo ar negalėjimo ja naudotis, įskaitant, bet neapsiribojant, nepilną jautrių duomenų redagavimą."
+    },
+    "contact": {
+      "heading": "7. Kontaktai",
+      "text": "Dėl klausimų apie šias sąlygas susisiekite su mumis adresu legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Tinklaraštis",
+    "backToBlog": "Grįžti į tinklaraštį",
+    "cta": {
+      "title": "Pasiruošę išbandyti OfflineRedact?",
+      "subtitle": "Pradėkite šalinti jautrius duomenis iš savo PDF failų — nemokamai, be registracijos.",
+      "button": "Pradėti redagavimą"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA atitinkantis PDF redagavimas: Išsamus vadovas",
+        "excerpt": "Sužinokite, kaip tinkamai redaguoti saugomą sveikatos informaciją (PHI) iš PDF dokumentų, kad būtų užtikrinta HIPAA atitiktis.",
+        "date": "2026-02-15",
+        "content": ["Sveikatos priežiūros organizacijos kasdien tvarko didžiulius kiekius saugomos sveikatos informacijos (PHI). Kai dokumentai dalinami išorės šalims — teisminiams procesams, tyrimams ar tarporganizacinei komunikacijai — tinkamas redagavimas yra ne tik geriausia praktika, bet ir teisinis reikalavimas pagal HIPAA.", "HIPAA privatumo taisyklė reikalauja, kad privalomi subjektai ir jų verslo partneriai saugotų visą individualiai identifikuojamą sveikatos informaciją. Tai apima vardus, datas, socialinio draudimo numerius, medicininių įrašų numerius ir 14 kitų identifikatorių kategorijų.", "Paprastas vizualinis redagavimas — juodų langelių piešimas ant jautraus teksto — NĖRA pakankamas HIPAA atitikčiai. Pagrindiniai tekstiniai duomenys turi būti visam laikui pašalinti iš dokumento. OfflineRedact atlieka tikrą redagavimą pašalindama faktinius tekstinius duomenis iš PDF turinio srautų, o ne tiesiog juos vizualiai uždengdama.", "Pagrindiniai HIPAA atitinkančio redagavimo žingsniai: (1) Identifikuokite visą PHI dokumente naudodami automatinį aptikimą, (2) Peržiūrėkite ir patvirtinkite aptiktus elementus, (3) Pritaikykite tikrą redagavimą, kuris pašalina tekstinius duomenis, (4) Išvalykite dokumento metaduomenis, (5) Patikrinkite redaguotą dokumentą prieš dalinantis.", "Su OfflineRedact visas apdorojimas vyksta jūsų naršyklėje — jūsų dokumentai niekada nepalieka jūsų įrenginio. Tai pašalina PHI atskleidimo riziką redagavimo proceso metu, o tai yra kritinis aspektas HIPAA atitikčiai."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery dokumentų redagavimo geriausios praktikos",
+        "excerpt": "Esminis vadovas teisės specialistams apie jautrios informacijos redagavimą eDiscovery proceso metu.",
+        "date": "2026-02-10",
+        "content": ["Teisiniuose procesuose eDiscovery procesas dažnai reikalauja pateikti didelius dokumentų kiekius. Daugelis šių dokumentų turi privilegijuotą informaciją, komercines paslaptis ar asmens duomenis, kuriuos reikia redaguoti prieš pateikimą.", "Redagavimas eDiscovery procese tarnauja keliems tikslams: advokato ir kliento konfidencialumo apsauga, konfidencialios verslo informacijos apsauga ir privatumo reglamentų, tokių kaip GDPR ir CCPA, laikymasis, kurie gali būti taikomi net teisminiame kontekste.", "Dažniausios eDiscovery redagavimo klaidos: žymeklio įrankių naudojimas vietoj tikro redagavimo, pamiršimas pašalinti metaduomenis, nenuoseklus redagavimas dokumentų rinkiniuose ir nesugebėjimas redaguoti įterptų vaizdų ar formos laukų.", "OfflineRedact palaiko paketinį apdorojimą — įkelkite kelis PDF failus ir apdorokite juos visus su nuosekliomis redagavimo taisyklėmis. Tai būtina eDiscovery darbo eigoms, kur šimtus ar tūkstančius dokumentų reikia vienodai apdoroti.", "Geriausios praktikos: (1) Iš anksto apibrėžkite redagavimo kategorijas, (2) Naudokite automatinį aptikimą nuoseklumui užtikrinti, (3) Visada patikrinkite su antruoju peržiūrėtoju, (4) Veskite redagavimo žurnalą, (5) Išvalykite visų pateikiamų dokumentų metaduomenis."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF atitiktis: Asmens duomenų apsauga dokumentuose",
+        "excerpt": "Kaip užtikrinti, kad jūsų PDF dokumentai atitiktų GDPR duomenų apsaugos reikalavimus tinkamu redagavimu.",
+        "date": "2026-02-05",
+        "content": ["Bendrasis duomenų apsaugos reglamentas (GDPR) reikalauja, kad organizacijos saugotų ES gyventojų asmens duomenis. PDF dokumentuose dažnai yra asmens duomenų, kuriuos reikia tinkamai tvarkyti — nesvarbu, ar tai duomenų subjekto prieigos užklausos, duomenų dalinimosi susitarimai, ar dokumentų saugojimo politikos.", "Pagal GDPR asmens duomenys apima bet kokią informaciją, susijusią su identifikuotu ar identifikuojamu asmeniu: vardus, el. pašto adresus, telefono numerius, IP adresus, finansinę informaciją ir kt. PDF dokumentuose dažnai yra kelių kategorijų asmens duomenų.", "Atsakant į duomenų subjekto prieigos užklausas (DSAR), organizacijoms gali reikėti pateikti dokumentų kopijas, tuo pačiu redaguojant trečiųjų šalių asmens duomenis. Tam reikalingas kruopštus kitų asmenų duomenų identifikavimas ir galutinis pašalinimas.", "OfflineRedact kelių reglamentų palaikymo funkcija apima GDPR profilį, kuris automatiškai aptinka dažniausius Europos asmens duomenų šablonus: vardus, el. pašto adresus, telefono numerius, IBAN numerius ir pašto adresus. Įrankis palaiko visas ES kalbas.", "Pagrindiniai GDPR aspektai PDF redagavimui: (1) Užtikrinkite, kad redagavimas būtų negrįžtamas — tekstas turi būti visam laikui pašalintas, (2) Išvalykite dokumento metaduomenis, kurie gali turėti asmens duomenų, (3) Veskite redagavimo veiklos įrašus, (4) Taikykite duomenų mažinimo principą."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Puslapis nerastas.",
+    "goHome": "Grįžti į pradžią"
   }
 }

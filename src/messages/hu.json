@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Adatvédelmi irányelvek",
+    "lastUpdated": "Utolsó frissítés: 2026. március",
+    "intro": {
+      "heading": "1. Bevezetés",
+      "text": "Az OfflineRedact (\u201cmi\u201d, \u201cmiénk\u201d, \u201cminket\u201d) elkötelezett az Ön adatainak védelme iránt. Ez az irányelv elmagyarázza, hogyan kezeljük az információkat, amikor Ön a PDF szerkesztő eszközünket használja."
+    },
+    "noFileUploads": {
+      "heading": "2. Nincs fájlfeltöltés",
+      "text": "{strong}Az Ön PDF fájljai soha nem hagyják el az eszközét.{/strong} Minden PDF-feldolgozás, beleértve a szövegkinyerést, a személyes adatok felismerését és a szerkesztést, teljes egészében az Ön webböngészőjében történik. Nem töltünk fel, nem tárolunk, nem dolgozunk fel, és nem férünk hozzá az Ön dokumentumaihoz semmilyen szerveren."
+    },
+    "infoCollect": {
+      "heading": "3. Általunk gyűjtött információk",
+      "text": "Csak a szolgáltatásunkhoz szükséges minimális információkat gyűjtjük:",
+      "items": ["E-mail cím (csak ha Pro licencet vásárol, a Stripe-on keresztül)", "Fizetési információk (a Stripe dolgozza fel; soha nem látjuk az Ön kártyaadatait)", "Alapvető elemzések (oldalmegtekintések, funkciók használata — személyes adatok nélkül)"]
+    },
+    "cookies": {
+      "heading": "4. Cookie-k",
+      "text": "Csak alapvető cookie-kat használunk: nyelvi beállítás és licenckulcs tárolása (a localStorage-ban). Nem használunk nyomkövető cookie-kat."
+    },
+    "thirdParty": {
+      "heading": "5. Harmadik féltől származó szolgáltatások",
+      "items": ["{strong}Stripe{/strong} — Fizetésfeldolgozás. Lásd a Stripe adatvédelmi irányelveit.", "{strong}Vercel{/strong} — Tárhelyszolgáltatás. Lásd a Vercel adatvédelmi irányelveit."]
+    },
+    "dataRetention": {
+      "heading": "6. Adatmegőrzés",
+      "text": "A licenckulcsokat a licenc időtartama alatt tároljuk. Nem tárolunk semmilyen PDF-tartalmat vagy dokumentumokból kinyert személyes adatot."
+    },
+    "contact": {
+      "heading": "7. Kapcsolat",
+      "text": "Adatvédelmi kérdésekkel kapcsolatban keressen minket a privacy@offlineredact.com címen."
+    }
+  },
+  "terms": {
+    "title": "Szolgáltatási feltételek",
+    "lastUpdated": "Utolsó frissítés: 2026. március",
+    "acceptance": {
+      "heading": "1. Feltételek elfogadása",
+      "text": "Az OfflineRedact használatával Ön elfogadja ezeket a Szolgáltatási feltételeket. Ha nem ért egyet, ne használja a szolgáltatást."
+    },
+    "serviceDesc": {
+      "heading": "2. Szolgáltatás leírása",
+      "text": "Az OfflineRedact egy kliens oldali PDF szerkesztő eszköz, amely felismeri és eltávolítja a személyazonosító adatokat (PII) a PDF dokumentumokból. Minden feldolgozás az Ön webböngészőjében történik."
+    },
+    "noGuarantee": {
+      "heading": "3. Nincs garancia",
+      "text": "Bár a pontosságra törekszünk, az OfflineRedact nem garantálja az összes személyes adat 100%-os felismerését. A felhasználók felelősek a szerkesztési eredmények áttekintéséért a dokumentumok megosztása vagy közzététele előtt. Mindig ellenőrizze, hogy minden érzékeny adat megfelelően szerkesztésre került-e."
+    },
+    "license": {
+      "heading": "4. Licenc",
+      "text": "Ingyenes csomag: Az OfflineRedact-et ingyenesen használhatja, vízjellel a kimeneten. Pro licenc: Egyszeri fizetéssel élethosszig tartó licencet kap az OfflineRedact vízjel nélküli használatához."
+    },
+    "refundPolicy": {
+      "heading": "5. Visszatérítési irányelvek",
+      "text": "30 napos pénzvisszafizetési garanciát kínálunk. Visszatérítési kérelmekért keressen minket a support@offlineredact.com címen."
+    },
+    "liability": {
+      "heading": "6. Felelősségkorlátozás",
+      "text": "Az OfflineRedact \u201cahogy van\u201d alapon, garancia nélkül kerül biztosításra. Nem vállalunk felelősséget a szolgáltatás használatából vagy a használat lehetetlenségéből eredő károkért, beleértve, de nem kizárólagosan az érzékeny adatok hiányos szerkesztését."
+    },
+    "contact": {
+      "heading": "7. Kapcsolat",
+      "text": "A feltételekkel kapcsolatos kérdésekért keressen minket a legal@offlineredact.com címen."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Vissza a Blogra",
+    "cta": {
+      "title": "Készen áll az OfflineRedact kipróbálására?",
+      "subtitle": "Kezdje el az érzékeny adatok eltávolítását PDF fájljaiból — ingyenesen, regisztráció nélkül.",
+      "button": "Szerkesztés indítása"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA-kompatibilis PDF szerkesztés: Teljes útmutató",
+        "excerpt": "Ismerje meg, hogyan szerkesztheti megfelelően a védett egészségügyi információkat (PHI) PDF dokumentumokból a HIPAA megfelelőség érdekében.",
+        "date": "2026-02-15",
+        "content": ["Az egészségügyi szervezetek naponta hatalmas mennyiségű védett egészségügyi információt (PHI) kezelnek. Amikor dokumentumokat osztanak meg külső felekkel — jogi eljárásokhoz, kutatáshoz vagy szervezetek közötti kommunikációhoz — a megfelelő szerkesztés nem csupán bevált gyakorlat, hanem a HIPAA szerinti jogi követelmény.", "A HIPAA adatvédelmi szabálya megköveteli, hogy az érintett szervezetek és üzleti partnereik védjék az összes egyénileg azonosítható egészségügyi információt. Ez magában foglalja a neveket, dátumokat, társadalombiztosítási számokat, egészségügyi nyilvántartási számokat és 14 további azonosító kategóriát.", "Az egyszerű vizuális szerkesztés — fekete dobozok rajzolása az érzékeny szöveg fölé — NEM elegendő a HIPAA megfelelőséghez. Az alapul szolgáló szöveges adatokat véglegesen el kell távolítani a dokumentumból. Az OfflineRedact valódi szerkesztést hajt végre a tényleges szöveges adatok eltávolításával a PDF tartalomfolyamokból, nem csupán vizuálisan takarja el azokat.", "A HIPAA-kompatibilis szerkesztés főbb lépései: (1) Azonosítsa a dokumentumban lévő összes PHI-t automatikus felismeréssel, (2) Tekintse át és erősítse meg a felismert elemeket, (3) Alkalmazzon valódi szerkesztést, amely eltávolítja a szöveges adatokat, (4) Tisztítsa meg a dokumentum metaadatait, (5) Ellenőrizze a szerkesztett dokumentumot megosztás előtt.", "Az OfflineRedact segítségével minden feldolgozás a böngészőjében történik — dokumentumai soha nem hagyják el az eszközét. Ez kiküszöböli a PHI kitettségének kockázatát a szerkesztési folyamat során, ami kritikus szempont a HIPAA megfelelőséghez."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery dokumentum szerkesztési bevált gyakorlatok",
+        "excerpt": "Alapvető útmutató jogi szakemberek számára az érzékeny információk szerkesztéséhez az eDiscovery folyamat során.",
+        "date": "2026-02-10",
+        "content": ["Jogi eljárásokban az eDiscovery folyamat gyakran megköveteli nagy mennyiségű dokumentum bemutatását. Ezek közül sok tartalmaz kiváltságos információkat, üzleti titkokat vagy személyes adatokat, amelyeket szerkeszteni kell a bemutatás előtt.", "Az eDiscovery szerkesztés több célt szolgál: az ügyvéd-ügyfél titoktartás védelme, bizalmas üzleti információk védelme, valamint az adatvédelmi szabályozások, például a GDPR és a CCPA betartása, amelyek peres környezetben is alkalmazhatók.", "Az eDiscovery szerkesztés gyakori hibái közé tartozik: kiemelő eszközök használata valódi szerkesztés helyett, a metaadatok eltávolításának elfelejtése, következetlen szerkesztés a dokumentumkészletekben, valamint a beágyazott képek vagy űrlapmezők szerkesztésének elmulasztása.", "Az OfflineRedact támogatja a kötegelt feldolgozást — töltsön fel több PDF-et, és dolgozza fel mindet egységes szerkesztési szabályokkal. Ez elengedhetetlen az eDiscovery munkafolyamatokhoz, ahol több száz vagy ezer dokumentumot kell egységesen kezelni.", "Bevált gyakorlatok: (1) Előre határozza meg a szerkesztési kategóriákat, (2) Használjon automatikus felismerést a következetesség biztosítására, (3) Mindig ellenőriztesse egy második áttekintővel, (4) Vezessen szerkesztési naplót, (5) Tisztítsa meg az összes bemutatott dokumentum metaadatait."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF megfelelőség: Személyes adatok védelme dokumentumokban",
+        "excerpt": "Hogyan biztosíthatja, hogy PDF dokumentumai megfeleljenek a GDPR adatvédelmi követelményeinek megfelelő szerkesztéssel.",
+        "date": "2026-02-05",
+        "content": ["Az Általános Adatvédelmi Rendelet (GDPR) megköveteli a szervezetektől az EU lakosok személyes adatainak védelmét. A PDF dokumentumok gyakran tartalmaznak személyes adatokat, amelyeket megfelelően kell kezelni — legyen szó érintetti hozzáférési kérelmekről, adatmegosztási megállapodásokról vagy dokumentummegőrzési irányelvekről.", "A GDPR szerint a személyes adat minden olyan információ, amely azonosított vagy azonosítható személyhez kapcsolódik: nevek, e-mail címek, telefonszámok, IP-címek, pénzügyi információk és egyebek. A PDF dokumentumok gyakran több kategóriájú személyes adatot tartalmaznak.", "Az érintetti hozzáférési kérelmekre (DSAR) való válaszadáskor a szervezeteknek szükségük lehet dokumentummásolatok biztosítására, miközben harmadik felek személyes adatait szerkesztik. Ehhez más személyek adatainak gondos azonosítása és végleges eltávolítása szükséges.", "Az OfflineRedact több szabályozást támogató funkciója tartalmaz egy GDPR profilt, amely automatikusan felismeri a gyakori európai személyes adatmintákat: neveket, e-mail címeket, telefonszámokat, IBAN-számokat és postacímeket. Az eszköz az összes EU nyelvet támogatja.", "Főbb GDPR szempontok a PDF szerkesztéshez: (1) Biztosítsa, hogy a szerkesztés visszafordíthatatlan legyen — a szöveget véglegesen el kell távolítani, (2) Tisztítsa meg a dokumentum metaadatait, amelyek személyes adatokat tartalmazhatnak, (3) Vezessen nyilvántartást a szerkesztési tevékenységekről, (4) Alkalmazza az adattakarékosság elvét."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Az oldal nem található.",
+    "goHome": "Vissza a főoldalra"
   }
 }
