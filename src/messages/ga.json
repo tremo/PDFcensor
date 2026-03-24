@@ -300,5 +300,104 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Polasaí Príobháideachta",
+    "lastUpdated": "Nuashonraithe go deireanach: Márta 2026",
+    "intro": {
+      "heading": "1. Réamhrá",
+      "text": "Tá OfflineRedact (\u201cmuid\u201d, \u201cár\u201d, \u201csinn\u201d) tiomanta do phríobháideachas a chosaint. Míníonn an polasaí seo conas a láimhseálaimid faisnéis nuair a úsáideann tú ár n-uirlis eagarthóireachta PDF."
+    },
+    "noFileUploads": {
+      "heading": "2. Gan Uaslódáil Comhad",
+      "text": "{strong}Ní fhágann do chuid comhad PDF do ghléas riamh.{/strong} Tarlaíonn gach próiseáil PDF, lena n-áirítear eastóscadh téacs, brath PII, agus eagarthóireacht, go hiomlán i do bhrabhsálaí gréasáin. Ní uaslódálaimid, ní stórálaimid, ní phróiseálaimid, agus níl rochtain againn ar do chuid cáipéisí ar aon fhreastalaí."
+    },
+    "infoCollect": {
+      "heading": "3. Faisnéis a Bhailímid",
+      "text": "Bailímid an fhaisnéis íosta atá riachtanach dár seirbhís:",
+      "items": ["Seoladh ríomhphoist (amháin má cheannaíonn tú ceadúnas Pro, trí Stripe)", "Faisnéis íocaíochta (próiseáilte ag Stripe; ní fheicimid do shonraí cárta riamh)", "Anailísíocht bhunúsach (amhairc leathanaigh, úsáid gnéithe — gan sonraí pearsanta)"]
+    },
+    "cookies": {
+      "heading": "4. Fianáin",
+      "text": "Ní úsáidimid ach fianáin riachtanacha amháin: rogha logcháil agus stóráil eochair ceadúnais (in localStorage). Ní úsáidimid fianáin rianaithe."
+    },
+    "thirdParty": {
+      "heading": "5. Seirbhísí Tríú Páirtí",
+      "items": ["{strong}Stripe{/strong} — Próiseáil íocaíochta. Féach ar pholasaí príobháideachta Stripe.", "{strong}Vercel{/strong} — Óstáil. Féach ar pholasaí príobháideachta Vercel."]
+    },
+    "dataRetention": {
+      "heading": "6. Coinneáil Sonraí",
+      "text": "Stóráiltear eochracha ceadúnais ar feadh thréimhse do cheadúnais. Ní stórálaimid aon ábhar PDF ná sonraí pearsanta a eastóscadh ó cháipéisí."
+    },
+    "contact": {
+      "heading": "7. Teagmháil",
+      "text": "Le haghaidh fiosrúchán a bhaineann le príobháideachas, déan teagmháil linn ag privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Téarmaí Seirbhíse",
+    "lastUpdated": "Nuashonraithe go deireanach: Márta 2026",
+    "acceptance": {
+      "heading": "1. Glacadh leis na Téarmaí",
+      "text": "Trí OfflineRedact a úsáid, aontaíonn tú leis na Téarmaí Seirbhíse seo. Mura n-aontaíonn tú, ná húsáid an tseirbhís."
+    },
+    "serviceDesc": {
+      "heading": "2. Cur Síos ar an tSeirbhís",
+      "text": "Is uirlis eagarthóireachta PDF ar thaobh an chliaint é OfflineRedact a bhraitheann agus a bhaineann faisnéis aitheantais pearsanta (PII) ó cháipéisí PDF. Tarlaíonn gach próiseáil i do bhrabhsálaí gréasáin."
+    },
+    "noGuarantee": {
+      "heading": "3. Gan Ráthaíocht",
+      "text": "Cé go ndéanaimid ár ndícheall cruinneas a bhaint amach, ní ráthaíonn OfflineRedact go mbraithfear 100% de gach PII. Tá úsáideoirí freagrach as torthaí eagarthóireachta a athbhreithniú sula roinntear nó sula bhfoilsítear cáipéisí. Cinntigh i gcónaí go bhfuil gach faisnéis íogair eagarthóirithe i gceart."
+    },
+    "license": {
+      "heading": "4. Ceadúnas",
+      "text": "Sraith saor in aisce: Is féidir leat OfflineRedact a úsáid saor in aisce le comhartha uisce ar an aschur. Ceadúnas Pro: Tugann íocaíocht aonuaire ceadúnas saoil duit chun OfflineRedact a úsáid gan comharthaí uisce."
+    },
+    "refundPolicy": {
+      "heading": "5. Polasaí Aisíocaíochta",
+      "text": "Cuirimid ráthaíocht 30 lá airgead ar ais ar fáil. Déan teagmháil linn ag support@offlineredact.com le haghaidh iarratais aisíocaíochta."
+    },
+    "liability": {
+      "heading": "6. Teorainn Dliteanais",
+      "text": "Cuirtear OfflineRedact ar fáil \u201cmar atá\u201d gan barántas. Nílimid faoi dhliteanas as aon damáistí a eascraíonn as úsáid nó neamhábaltacht na seirbhíse a úsáid, lena n-áirítear ach gan a bheith teoranta do eagarthóireacht neamhiomlán ar shonraí íogaire."
+    },
+    "contact": {
+      "heading": "7. Teagmháil",
+      "text": "Le haghaidh ceisteanna faoi na téarmaí seo, déan teagmháil linn ag legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blag",
+    "backToBlog": "Ar ais go dtí an Blag",
+    "cta": {
+      "title": "Réidh chun OfflineRedact a thriail?",
+      "subtitle": "Tosaigh ag eagarthóireacht sonraí íogaire ó do chuid PDF — saor in aisce, gan clárú riachtanach.",
+      "button": "Tosaigh ag Eagarthóireacht"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "Eagarthóireacht PDF atá Comhlíontach le HIPAA: Treoir Iomlán",
+        "excerpt": "Foghlaim conas faisnéis sláinte chosanta (PHI) a eagarthóireacht i gceart ó cháipéisí PDF chun comhlíonadh HIPAA a choinneáil.",
+        "date": "2026-02-15",
+        "content": ["Láimhseálann eagraíochtaí cúraim sláinte méideanna ollmhóra d'Fhaisnéis Sláinte Chosanta (PHI) go laethúil. Nuair a roinntear cáipéisí go seachtrach — le haghaidh imeachtaí dlí, taighde, nó cumarsáid idir-eagraíochtúil — ní cleachtas is fearr amháin é eagarthóireacht cheart, is ceanglas dlí é faoi HIPAA.", "Éilíonn Riail Phríobháideachta HIPAA go gcosnaíonn eintitis chlúdaithe agus a gcomhlachais ghnó gach faisnéis sláinte is féidir a aithint go pearsanta. Áirítear leis seo ainmneacha, dátaí, uimhreacha slándála sóisialta, uimhreacha taifead leighis, agus 14 chatagóir aitheantóirí eile.", "NÍ LEOR eagarthóireacht amhairc shimplí — boscaí dubha a tharraingt os cionn téacs íogair — le haghaidh comhlíonadh HIPAA. Caithfear na bunsonraí téacs a bhaint go buan ón gcáipéis. Déanann OfflineRedact fíor-eagarthóireacht trí na sonraí téacs iarbhír a bhaint ó shruthanna ábhair PDF, ní díreach iad a chlúdach go hamhairc.", "Príomhchéimeanna d'eagarthóireacht atá comhlíontach le HIPAA: (1) Aithin gach PHI sa cháipéis ag baint úsáide as brath uathoibríoch, (2) Athbhreithnigh agus deimhnigh na míreanna a braitheadh, (3) Cuir fíor-eagarthóireacht i bhfeidhm a bhaineann sonraí téacs, (4) Glan meiteashonraí na cáipéise, (5) Fíoraigh an cháipéis eagarthóirithe sula roinnfear í.", "Le OfflineRedact, tarlaíonn gach próiseáil i do bhrabhsálaí — ní fhágann do chuid cáipéisí do ghléas riamh. Cuireann sé seo deireadh leis an riosca go nochtfaí PHI le linn an phróisis eagarthóireachta féin, rud atá ríthábhachtach do chomhlíonadh HIPAA."]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Dea-chleachtais Eagarthóireachta Cáipéisí eDiscovery",
+        "excerpt": "Treoir riachtanach do ghairmithe dlí maidir le faisnéis íogair a eagarthóireacht le linn an phróisis eDiscovery.",
+        "date": "2026-02-10",
+        "content": ["In imeachtaí dlí, éilíonn an próiseas eDiscovery go minic méideanna móra cáipéisí a tháirgeadh. Tá faisnéis phribhléideach, rúin trádála, nó sonraí pearsanta i go leor de na cáipéisí seo nach mór a eagarthóireacht roimh tháirgeadh.", "Feidhmíonn eagarthóireacht in eDiscovery chun críocha éagsúla: pribhléid aturnae-cliant a chosaint, faisnéis ghnó rúnda a chosaint, agus rialacháin phríobháideachta cosúil le GDPR agus CCPA a chomhlíonadh a d'fhéadfadh a bheith infheidhme fiú i gcomhthéacsanna dlíthíochta.", "I measc na mbotún coitianta in eagarthóireacht eDiscovery tá: uirlisí aibhsithe a úsáid in ionad fíor-eagarthóireachta, dearmad a dhéanamh meiteashonraí a bhaint, eagarthóireacht neamhchomhsheasmhach trasna tacair cáipéisí, agus mainneachtain íomhánna leabaithe nó réimsí foirme a eagarthóireacht.", "Tacaíonn OfflineRedact le próiseáil bhaisc — uaslódáil PDF iolracha agus próiseáil iad go léir le rialacha eagarthóireachta comhsheasmhacha. Tá sé seo riachtanach do shreafaí oibre eDiscovery ina dteastaíonn cóireáil aonfhoirmeach ar na céadta nó na mílte cáipéis.", "Dea-chleachtais: (1) Sainmhínigh catagóirí eagarthóireachta roimh ré, (2) Úsáid brath uathoibríoch chun comhsheasmhacht a chinntiú, (3) Bíodh dara hathbhreithneoir i gcónaí ann, (4) Coinnigh logaí eagarthóireachta, (5) Glan meiteashonraí ó gach cáipéis a tháirgtear."]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "Comhlíonadh GDPR PDF: Sonraí Pearsanta a Chosaint i gCáipéisí",
+        "excerpt": "Conas a chinntiú go gcomhlíonann do chuid cáipéisí PDF ceanglais cosanta sonraí GDPR trí eagarthóireacht cheart.",
+        "date": "2026-02-05",
+        "content": ["Éilíonn an Rialachán Ginearálta um Chosaint Sonraí (GDPR) ar eagraíochtaí sonraí pearsanta áitritheoirí an AE a chosaint. Is minic a bhíonn sonraí pearsanta i gcáipéisí PDF nach mór a láimhseáil i gceart — bíodh sé le haghaidh iarratais rochtana ó ábhar sonraí, comhaontuithe roinnte sonraí, nó polasaithe coinneála cáipéisí.", "Faoi GDPR, áirítear le sonraí pearsanta aon fhaisnéis a bhaineann le duine aitheanta nó in-aitheanta: ainmneacha, seoltaí ríomhphoist, uimhreacha gutháin, seoltaí IP, faisnéis airgeadais, agus go leor eile. Is minic a bhíonn catagóirí éagsúla sonraí pearsanta i gcáipéisí PDF.", "Agus freagra á thabhairt ar iarratais rochtana ó ábhar sonraí (DSARanna), b'fhéidir go mbeadh ar eagraíochtaí cóipeanna de cháipéisí a sholáthar agus sonraí pearsanta tríú páirtí a eagarthóireacht. Éilíonn sé seo aithint chúramach agus baint bhuan ar shonraí daoine eile.", "Áirítear le tacaíocht ilrialacháin OfflineRedact próifíl GDPR a bhraitheann go huathoibríoch patrúin choitianta sonraí pearsanta Eorpacha: ainmneacha, seoltaí ríomhphoist, uimhreacha gutháin, uimhreacha IBAN, agus seoltaí poist. Tacaíonn an uirlis le gach teanga AE.", "Príomhbhreithniúcháin GDPR le haghaidh eagarthóireacht PDF: (1) Cinntigh go bhfuil eagarthóireacht dochúlaithe — caithfear téacs a bhaint go buan, (2) Glan meiteashonraí cáipéise a d'fhéadfadh sonraí pearsanta a bheith iontu, (3) Coinnigh taifid ar ghníomhaíochtaí eagarthóireachta, (4) Cuir prionsabal íoslaghdú sonraí i bhfeidhm."]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Leathanach gan aimsiú.",
+    "goHome": "Téigh Abhaile"
   }
 }
