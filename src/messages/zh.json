@@ -300,5 +300,104 @@
     "proActivated": "Pro 许可证已激活",
     "proLinkedToAccount": "Pro 功能已关联到 {email}",
     "loginToActivate": "登录以将 Pro 功能关联到您的账户"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2026年3月",
+    "intro": {
+      "heading": "1. 简介",
+      "text": "OfflineRedact（以下简称"我们"）致力于保护您的隐私。本政策说明了您在使用我们的PDF脱敏工具时，我们如何处理相关信息。"
+    },
+    "noFileUploads": {
+      "heading": "2. 无文件上传",
+      "text": "{strong}您的PDF文件永远不会离开您的设备。{/strong} 所有PDF处理，包括文本提取、个人信息检测和脱敏，完全在您的网络浏览器中进行。我们不会在任何服务器上上传、存储、处理或访问您的文档。"
+    },
+    "infoCollect": {
+      "heading": "3. 我们收集的信息",
+      "text": "我们仅收集服务所需的最少信息：",
+      "items": ["电子邮件地址（仅在您通过Stripe购买Pro许可证时）", "支付信息（由Stripe处理；我们绝不会看到您的卡片详细信息）", "基本分析数据（页面浏览量、功能使用情况 — 不含个人数据）"]
+    },
+    "cookies": {
+      "heading": "4. Cookie",
+      "text": "我们仅使用必要的Cookie：语言偏好和许可证密钥存储（在localStorage中）。我们不使用追踪Cookie。"
+    },
+    "thirdParty": {
+      "heading": "5. 第三方服务",
+      "items": ["{strong}Stripe{/strong} — 支付处理。请参阅Stripe的隐私政策。", "{strong}Vercel{/strong} — 托管服务。请参阅Vercel的隐私政策。"]
+    },
+    "dataRetention": {
+      "heading": "6. 数据保留",
+      "text": "许可证密钥在您的许可证有效期内存储。我们不存储任何PDF内容或从文档中提取的个人数据。"
+    },
+    "contact": {
+      "heading": "7. 联系方式",
+      "text": "如有隐私相关问题，请通过 privacy@offlineredact.com 联系我们。"
+    }
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新：2026年3月",
+    "acceptance": {
+      "heading": "1. 条款接受",
+      "text": "使用OfflineRedact即表示您同意本服务条款。如果您不同意，请不要使用本服务。"
+    },
+    "serviceDesc": {
+      "heading": "2. 服务描述",
+      "text": "OfflineRedact是一款客户端PDF脱敏工具，可检测并删除PDF文档中的个人身份信息（PII）。所有处理均在您的网络浏览器中进行。"
+    },
+    "noGuarantee": {
+      "heading": "3. 免责声明",
+      "text": "虽然我们力求准确，但OfflineRedact不保证100%检测到所有PII。用户有责任在共享或发布文档之前检查脱敏结果。请务必确认所有敏感信息已被正确脱敏。"
+    },
+    "license": {
+      "heading": "4. 许可证",
+      "text": "免费版：您可以免费使用OfflineRedact，输出带有水印。Pro许可证：一次性付款即可获得终身许可证，无水印使用OfflineRedact。"
+    },
+    "refundPolicy": {
+      "heading": "5. 退款政策",
+      "text": "我们提供30天退款保证。如需退款，请联系 support@offlineredact.com。"
+    },
+    "liability": {
+      "heading": "6. 责任限制",
+      "text": "OfflineRedact按"原样"提供，不作任何保证。对于因使用或无法使用本服务而导致的任何损害，包括但不限于敏感数据脱敏不完全，我们概不负责。"
+    },
+    "contact": {
+      "heading": "7. 联系方式",
+      "text": "如有关于本条款的问题，请联系 legal@offlineredact.com。"
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "backToBlog": "返回博客",
+    "cta": {
+      "title": "准备试用OfflineRedact？",
+      "subtitle": "立即开始从PDF中脱敏敏感数据 — 免费，无需注册。",
+      "button": "开始脱敏"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA合规PDF脱敏：完整指南",
+        "excerpt": "了解如何正确脱敏PDF文档中的受保护健康信息（PHI），以保持HIPAA合规性。",
+        "date": "2026-02-15",
+        "content": ["医疗机构每天处理大量受保护健康信息（PHI）。在对外共享文档时 — 用于法律诉讼、研究或机构间沟通 — 正确的脱敏不仅是最佳实践，更是HIPAA规定的法律要求。", "HIPAA隐私规则要求涵盖实体及其业务伙伴保护所有可识别个人身份的健康信息。这包括姓名、日期、社会安全号码、医疗记录号码以及其他14类标识符。", "简单的视觉脱敏 — 在敏感文本上绘制黑色方框 — 不足以满足HIPAA合规要求。底层文本数据必须从文档中永久删除。OfflineRedact通过从PDF内容流中删除实际文本数据来执行真正的脱敏，而不仅仅是视觉遮盖。", "HIPAA合规脱敏的关键步骤：(1) 使用自动检测识别文档中的所有PHI，(2) 审查并确认检测到的项目，(3) 应用删除文本数据的真正脱敏，(4) 清理文档元数据，(5) 在共享前验证脱敏后的文档。", "使用OfflineRedact，所有处理都在您的浏览器中进行 — 您的文档永远不会离开您的设备。这消除了脱敏过程本身中PHI暴露的风险，这是HIPAA合规的关键考虑因素。"]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery文档脱敏最佳实践",
+        "excerpt": "法律专业人士在eDiscovery过程中脱敏敏感信息的必备指南。",
+        "date": "2026-02-10",
+        "content": ["在法律诉讼中，eDiscovery过程通常需要提交大量文档。其中许多文档包含特权信息、商业机密或个人数据，在提交前必须进行脱敏。", "eDiscovery中的脱敏有多重目的：保护律师-客户特权、屏蔽机密商业信息，以及遵守即使在诉讼情况下也可能适用的GDPR和CCPA等隐私法规。", "eDiscovery脱敏中的常见错误包括：使用荧光笔工具而非真正的脱敏、忘记删除元数据、文档集中脱敏不一致，以及未能脱敏嵌入式图像或表单字段。", "OfflineRedact支持批量处理 — 上传多个PDF并使用一致的脱敏规则处理所有文件。这对于需要对数百或数千份文档进行统一处理的eDiscovery工作流程至关重要。", "最佳实践：(1) 预先定义脱敏类别，(2) 使用自动检测确保一致性，(3) 始终由第二位审查人员进行验证，(4) 维护脱敏日志，(5) 清理所有待提交文档的元数据。"]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF合规：保护文档中的个人数据",
+        "excerpt": "如何通过适当的脱敏确保您的PDF文档符合GDPR数据保护要求。",
+        "date": "2026-02-05",
+        "content": ["通用数据保护条例（GDPR）要求组织保护欧盟居民的个人数据。PDF文档通常包含需要妥善处理的个人数据 — 无论是数据主体访问请求、数据共享协议还是文档保留政策。", "根据GDPR，个人数据包括与已识别或可识别个人相关的任何信息：姓名、电子邮件地址、电话号码、IP地址、财务信息等。PDF文档经常包含多个类别的个人数据。", "在响应数据主体访问请求（DSAR）时，组织可能需要在脱敏第三方个人数据后提供文档副本。这需要仔细识别并永久删除其他个人的数据。", "OfflineRedact的多法规支持包括一个GDPR配置文件，可自动检测常见的欧洲个人数据模式：姓名、电子邮件地址、电话号码、IBAN号码和邮政地址。该工具支持所有欧盟语言。", "PDF脱敏的关键GDPR考虑事项：(1) 确保脱敏不可逆 — 文本必须被永久删除，(2) 清理可能包含个人数据的文档元数据，(3) 维护脱敏活动记录，(4) 应用数据最小化原则。"]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "页面未找到。",
+    "goHome": "返回首页"
   }
 }
