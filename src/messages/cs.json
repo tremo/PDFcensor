@@ -300,5 +300,129 @@
     "proActivated": "Pro licence aktivována",
     "proLinkedToAccount": "Pro funkce jsou propojeny s {email}",
     "loginToActivate": "Přihlaste se pro propojení Pro funkcí s vaším účtem"
+  },
+  "privacy": {
+    "title": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace: březen 2026",
+    "intro": {
+      "heading": "1. Úvod",
+      "text": "OfflineRedact („my”, „náš”, „nás”) se zavazuje chránit vaše soukromí. Tyto zásady vysvětlují, jak nakládáme s informacemi, když používáte náš nástroj pro redakci PDF."
+    },
+    "noFileUploads": {
+      "heading": "2. Žádné nahrávání souborů",
+      "text": "{strong}Vaše PDF soubory nikdy neopustí vaše zařízení.{/strong} Veškeré zpracování PDF, včetně extrakce textu, detekce osobních údajů a redakce, probíhá výhradně ve vašem webovém prohlížeči. Vaše dokumenty nenahrávame, neukládáme, nezpracováváme ani k nim nemáme přístup na žádném serveru."
+    },
+    "infoCollect": {
+      "heading": "3. Informace, které shromažďujeme",
+      "text": "Shromažďujeme minimální informace nezbytné pro naši službu:",
+      "items": [
+        "E-mailová adresa (pouze pokud si zakoupíte Pro licenci, prostřednictvím Stripe)",
+        "Platební údaje (zpracovává Stripe; údaje o vaší kartě nikdy nevidíme)",
+        "Základní analytika (zobrazení stránek, využití funkcí — žádné osobní údaje)"
+      ]
+    },
+    "cookies": {
+      "heading": "4. Soubory cookie",
+      "text": "Používáme pouze nezbytné soubory cookie: preference jazyka a uložení licenčního klíče (v localStorage). Nepoužíváme sledovací soubory cookie."
+    },
+    "thirdParty": {
+      "heading": "5. Služby třetích stran",
+      "items": [
+        "{strong}Stripe{/strong} — Zpracování plateb. Viz zásady ochrany osobních údajů Stripe.",
+        "{strong}Vercel{/strong} — Hosting. Viz zásady ochrany osobních údajů Vercel."
+      ]
+    },
+    "dataRetention": {
+      "heading": "6. Uchovávání dat",
+      "text": "Licenční klíče jsou uchovávány po dobu trvání vaší licence. Neukládáme žádný obsah PDF ani osobní údaje extrahované z dokumentů."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Pro dotazy týkající se ochrany osobních údajů nás kontaktujte na privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Podmínky služby",
+    "lastUpdated": "Poslední aktualizace: březen 2026",
+    "acceptance": {
+      "heading": "1. Přijetí podmínek",
+      "text": "Používáním OfflineRedact souhlasíte s těmito Podmínkami služby. Pokud nesouhlasíte, službu nepoužívejte."
+    },
+    "serviceDesc": {
+      "heading": "2. Popis služby",
+      "text": "OfflineRedact je nástroj pro redakci PDF na straně klienta, který detekuje a odstraňuje osobní identifikační údaje (PII) z PDF dokumentů. Veškeré zpracování probíhá ve vašem webovém prohlížeči."
+    },
+    "noGuarantee": {
+      "heading": "3. Žádná záruka",
+      "text": "Přestože usilujeme o přesnost, OfflineRedact nezaručuje 100% detekci všech osobních údajů. Uživatelé jsou zodpovědní za kontrolu výsledků redakce před sdílením nebo publikováním dokumentů. Vždy si ověřte, že všechny citlivé informace byly správně zredigovány."
+    },
+    "license": {
+      "heading": "4. Licence",
+      "text": "Bezplatný plán: OfflineRedact můžete používat zdarma s vodoznakem na výstupu. Pro licence: Jednorázová platba vám poskytne doživotní licenci k používání OfflineRedact bez vodoznaků."
+    },
+    "refundPolicy": {
+      "heading": "5. Zásady vrácení peněz",
+      "text": "Nabízíme 30denní záruku vrácení peněz. Kontaktujte nás na support@offlineredact.com pro žádosti o vrácení peněz."
+    },
+    "liability": {
+      "heading": "6. Omezení odpovědnosti",
+      "text": "OfflineRedact je poskytován „tak, jak je” bez záruk. Neneseme odpovědnost za jakékoli škody vyplývající z používání nebo nemožnosti používání služby, včetně, ale nejen, neúplné redakce citlivých dat."
+    },
+    "contact": {
+      "heading": "7. Kontakt",
+      "text": "Pro dotazy ohledně těchto podmínek nás kontaktujte na legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Zpět na blog",
+    "cta": {
+      "title": "Jste připraveni vyzkoušet OfflineRedact?",
+      "subtitle": "Začněte redigovat citlivé údaje z vašich PDF — zdarma, bez registrace.",
+      "button": "Začít redigovat"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "Redakce PDF v souladu s HIPAA: Kompletní průvodce",
+        "excerpt": "Naučte se, jak správně redigovat chráněné zdravotní informace (PHI) z PDF dokumentů pro dodržení HIPAA.",
+        "date": "2026-02-15",
+        "content": [
+          "Zdravotnické organizace denně zpracovávají obrovské množství chráněných zdravotních informací (PHI). Při sdílení dokumentů externě — pro soudní řízení, výzkum nebo mezioborovou komunikaci — správná redakce není jen osvědčeným postupem, ale zákonným požadavkem podle HIPAA.",
+          "Pravidlo ochrany soukromí HIPAA vyžaduje, aby kryté subjekty a jejich obchodní partneři chránili veškeré individuálně identifikovatelné zdravotní informace. To zahrnuje jména, data, čísla sociálního pojištění, čísla zdravotních záznamů a 14 dalších kategorií identifikátorů.",
+          "Jednoduchá vizuální redakce — kreslení černých rámečků přes citlivý text — NENÍ dostatečná pro soulad s HIPAA. Podkladová textová data musí být trvale odstraněna z dokumentu. OfflineRedact provádí skutečnou redakci odstraněním skutečných textových dat z datových proudů obsahu PDF, nikoli pouhým vizuálním zakrytím.",
+          "Klíčové kroky pro redakci v souladu s HIPAA: (1) Identifikujte všechny PHI v dokumentu pomocí automatické detekce, (2) Zkontrolujte a potvrďte detekované položky, (3) Aplikujte skutečnou redakci, která odstraní textová data, (4) Vyčistěte metadata dokumentu, (5) Ověřte zredigovaný dokument před sdílením.",
+          "S OfflineRedact probíhá veškeré zpracování ve vašem prohlížeči — vaše dokumenty nikdy neopustí vaše zařízení. To eliminuje riziko odhalení PHI během samotného procesu redakce, což je klíčové hledisko pro soulad s HIPAA."
+        ]
+      },
+      "ediscovery-document-redaction": {
+        "title": "Osvědčené postupy pro redakci dokumentů při eDiscovery",
+        "excerpt": "Základní průvodce pro právní profesionály o redakci citlivých informací během procesu eDiscovery.",
+        "date": "2026-02-10",
+        "content": [
+          "V soudních řízeních proces eDiscovery často vyžaduje předložení velkého množství dokumentů. Mnoho z těchto dokumentů obsahuje privilegované informace, obchodní tajemství nebo osobní údaje, které musí být před předložením zredigovány.",
+          "Redakce při eDiscovery slouží více účelům: ochrana advokátního tajemství, ochrana důvěrných obchodních informací a dodržování předpisů o ochraně soukromí jako GDPR a CCPA, které se mohou vztahovat i v kontextu soudních sporů.",
+          "Časté chyby při redakci pro eDiscovery zahrnují: používání nástrojů pro zvýrazňování místo skutečné redakce, opomenutí odstranění metadat, nekonzistentní redakce napříč sadami dokumentů a opomenutí redakce vložených obrázků nebo polí formulářů.",
+          "OfflineRedact podporuje dávkové zpracování — nahrajte více PDF souborů a zpracujte je všechny s konzistentními pravidly redakce. To je nezbytné pro pracovní postupy eDiscovery, kde stovky nebo tisíce dokumentů potřebují jednotné zacházení.",
+          "Osvědčené postupy: (1) Definujte kategorie redakce předem, (2) Použijte automatickou detekci pro zajištění konzistence, (3) Vždy ověřte druhým recenzentem, (4) Udržujte protokol redakcí, (5) Vyčistěte metadata ze všech předložených dokumentů."
+        ]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "Soulad PDF s GDPR: Ochrana osobních údajů v dokumentech",
+        "excerpt": "Jak zajistit, aby vaše PDF dokumenty splňovaly požadavky GDPR na ochranu údajů prostřednictvím správné redakce.",
+        "date": "2026-02-05",
+        "content": [
+          "Obecné nařízení o ochraně osobních údajů (GDPR) vyžaduje od organizací ochranu osobních údajů rezidentů EU. PDF dokumenty často obsahují osobní údaje, které musí být řádně zpracovány — ať už pro žádosti subjektů údajů o přístup, dohody o sdílení dat nebo zásady uchovávání dokumentů.",
+          "Podle GDPR osobní údaje zahrnují jakékoli informace týkající se identifikované nebo identifikovatelné osoby: jména, e-mailové adresy, telefonní čísla, IP adresy, finanční informace a další. PDF dokumenty často obsahují více kategorií osobních údajů.",
+          "Při odpovídání na žádosti subjektů údajů o přístup (DSAR) organizace mohou potřebovat poskytnout kopie dokumentů a přitom zredigovat osobní údaje třetích stran. To vyžaduje pečlivou identifikaci a trvalé odstranění údajů jiných osob.",
+          "Podpora více regulací v OfflineRedact zahrnuje GDPR profil, který automaticky detekuje běžné evropské vzory osobních údajů: jména, e-mailové adresy, telefonní čísla, IBAN čísla a poštovní adresy. Nástroj podporuje všechny jazyky EU.",
+          "Klíčové aspekty GDPR při redakci PDF: (1) Zajistěte, aby redakce byla nevratná — text musí být trvale odstraněn, (2) Vyčistěte metadata dokumentu, která mohou obsahovat osobní údaje, (3) Uchovávejte záznamy o redakčních činnostech, (4) Uplatňujte princip minimalizace dat."
+        ]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Stránka nenalezena.",
+    "goHome": "Zpět na úvod"
   }
 }
