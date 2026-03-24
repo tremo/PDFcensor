@@ -300,5 +300,129 @@
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
     "loginToActivate": "Sign in to link Pro features to your account"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": {
+      "heading": "1. Introduction",
+      "text": "OfflineRedact (\u201cwe\u201d, \u201cour\u201d, \u201cus\u201d) is committed to protecting your privacy. This policy explains how we handle information when you use our PDF redaction tool."
+    },
+    "noFileUploads": {
+      "heading": "2. No File Uploads",
+      "text": "{strong}Your PDF files never leave your device.{/strong} All PDF processing, including text extraction, PII detection, and redaction, happens entirely in your web browser. We do not upload, store, process, or have access to your documents on any server."
+    },
+    "infoCollect": {
+      "heading": "3. Information We Collect",
+      "text": "We collect minimal information necessary for our service:",
+      "items": [
+        "Email address (only if you purchase a Pro license, via Stripe)",
+        "Payment information (processed by Stripe; we never see your card details)",
+        "Basic analytics (page views, feature usage \u2014 no personal data)"
+      ]
+    },
+    "cookies": {
+      "heading": "4. Cookies",
+      "text": "We use essential cookies only: locale preference and license key storage (in localStorage). We do not use tracking cookies."
+    },
+    "thirdParty": {
+      "heading": "5. Third-Party Services",
+      "items": [
+        "{strong}Stripe{/strong} \u2014 Payment processing. See Stripe\u2019s privacy policy.",
+        "{strong}Vercel{/strong} \u2014 Hosting. See Vercel\u2019s privacy policy."
+      ]
+    },
+    "dataRetention": {
+      "heading": "6. Data Retention",
+      "text": "License keys are stored for the duration of your license. We do not store any PDF content or personal data extracted from documents."
+    },
+    "contact": {
+      "heading": "7. Contact",
+      "text": "For privacy-related inquiries, contact us at privacy@offlineredact.com."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "acceptance": {
+      "heading": "1. Acceptance of Terms",
+      "text": "By using OfflineRedact, you agree to these Terms of Service. If you do not agree, do not use the service."
+    },
+    "serviceDesc": {
+      "heading": "2. Service Description",
+      "text": "OfflineRedact is a client-side PDF redaction tool that detects and removes personal identifiable information (PII) from PDF documents. All processing occurs in your web browser."
+    },
+    "noGuarantee": {
+      "heading": "3. No Guarantee",
+      "text": "While we strive for accuracy, OfflineRedact does not guarantee 100% detection of all PII. Users are responsible for reviewing redaction results before sharing or publishing documents. Always verify that all sensitive information has been properly redacted."
+    },
+    "license": {
+      "heading": "4. License",
+      "text": "Free tier: You may use OfflineRedact for free with a watermark on output. Pro license: A one-time payment grants you a lifetime license to use OfflineRedact without watermarks."
+    },
+    "refundPolicy": {
+      "heading": "5. Refund Policy",
+      "text": "We offer a 30-day money-back guarantee. Contact us at support@offlineredact.com for refund requests."
+    },
+    "liability": {
+      "heading": "6. Limitation of Liability",
+      "text": "OfflineRedact is provided \u201cas is\u201d without warranties. We are not liable for any damages resulting from the use or inability to use the service, including but not limited to incomplete redaction of sensitive data."
+    },
+    "contact": {
+      "heading": "7. Contact",
+      "text": "For questions about these terms, contact us at legal@offlineredact.com."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Back to Blog",
+    "cta": {
+      "title": "Ready to try OfflineRedact?",
+      "subtitle": "Start redacting sensitive data from your PDFs \u2014 free, no signup required.",
+      "button": "Start Redacting"
+    },
+    "posts": {
+      "hipaa-compliant-pdf-redaction": {
+        "title": "HIPAA Compliant PDF Redaction: A Complete Guide",
+        "excerpt": "Learn how to properly redact protected health information (PHI) from PDF documents to maintain HIPAA compliance.",
+        "date": "2026-02-15",
+        "content": [
+          "Healthcare organizations handle vast amounts of Protected Health Information (PHI) daily. When sharing documents externally \u2014 for legal proceedings, research, or inter-organizational communication \u2014 proper redaction is not just best practice, it\u2019s a legal requirement under HIPAA.",
+          "HIPAA\u2019s Privacy Rule requires that covered entities and their business associates protect all individually identifiable health information. This includes names, dates, Social Security numbers, medical record numbers, and 14 other categories of identifiers.",
+          "Simple visual redaction \u2014 drawing black boxes over sensitive text \u2014 is NOT sufficient for HIPAA compliance. The underlying text data must be permanently removed from the document. OfflineRedact performs true redaction by removing the actual text data from PDF content streams, not just covering it visually.",
+          "Key steps for HIPAA-compliant redaction: (1) Identify all PHI in the document using automated detection, (2) Review and confirm detected items, (3) Apply true redaction that removes text data, (4) Clean document metadata, (5) Verify the redacted document before sharing.",
+          "With OfflineRedact, all processing happens in your browser \u2014 your documents never leave your device. This eliminates the risk of PHI exposure during the redaction process itself, a critical consideration for HIPAA compliance."
+        ]
+      },
+      "ediscovery-document-redaction": {
+        "title": "eDiscovery Document Redaction Best Practices",
+        "excerpt": "Essential guide for legal professionals on redacting sensitive information during the eDiscovery process.",
+        "date": "2026-02-10",
+        "content": [
+          "In legal proceedings, the eDiscovery process often requires producing large volumes of documents. Many of these documents contain privileged information, trade secrets, or personal data that must be redacted before production.",
+          "Redaction in eDiscovery serves multiple purposes: protecting attorney-client privilege, shielding confidential business information, and complying with privacy regulations like GDPR and CCPA that may apply even in litigation contexts.",
+          "Common mistakes in eDiscovery redaction include: using highlighter tools instead of true redaction, forgetting to remove metadata, inconsistent redaction across document sets, and failing to redact embedded images or form fields.",
+          "OfflineRedact supports batch processing \u2014 upload multiple PDFs and process them all with consistent redaction rules. This is essential for eDiscovery workflows where hundreds or thousands of documents need uniform treatment.",
+          "Best practices: (1) Define redaction categories upfront, (2) Use automated detection to ensure consistency, (3) Always verify with a second reviewer, (4) Maintain a redaction log, (5) Clean metadata from all produced documents."
+        ]
+      },
+      "gdpr-pdf-compliance": {
+        "title": "GDPR PDF Compliance: Protecting Personal Data in Documents",
+        "excerpt": "How to ensure your PDF documents comply with GDPR data protection requirements through proper redaction.",
+        "date": "2026-02-05",
+        "content": [
+          "The General Data Protection Regulation (GDPR) requires organizations to protect personal data of EU residents. PDF documents often contain personal data that must be properly handled \u2014 whether for data subject access requests, data sharing agreements, or document retention policies.",
+          "Under GDPR, personal data includes any information relating to an identified or identifiable person: names, email addresses, phone numbers, IP addresses, financial information, and more. PDF documents frequently contain multiple categories of personal data.",
+          "When responding to data subject access requests (DSARs), organizations may need to provide copies of documents while redacting third-party personal data. This requires careful identification and permanent removal of other individuals\u2019 data.",
+          "OfflineRedact\u2019s multi-regulation support includes a GDPR profile that automatically detects common European personal data patterns: names, email addresses, phone numbers, IBAN numbers, and postal addresses. The tool supports all EU languages.",
+          "Key GDPR considerations for PDF redaction: (1) Ensure redaction is irreversible \u2014 text must be permanently removed, (2) Clean document metadata that may contain personal data, (3) Maintain records of redaction activities, (4) Apply the principle of data minimization."
+        ]
+      }
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "message": "Page not found.",
+    "goHome": "Go Home"
   }
 }
