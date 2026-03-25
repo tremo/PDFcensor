@@ -219,9 +219,21 @@
       "stepParsing": "Parsen",
       "stepScanning": "Scannen",
       "stepFaceScanning": "Gesichter",
-      "patience": "Dies kann einen Moment dauern...",
       "foundSoFar": "Bisher erkannt",
-      "faceDetectionQueued": "Die Gesichtserkennung startet nach dem Textscan."
+      "faceDetectionQueued": "Gesichtserkennung startet nach dem Textscan.",
+      "msg_parsing1": "Dokumentstruktur wird gelesen...",
+      "msg_parsing2": "Ihre Dateien verlassen nie Ihren Browser.",
+      "msg_scan1": "Suche nach sensiblen Daten...",
+      "msg_scan2": "ID-Nummern, E-Mails, Telefonnummern werden erkannt...",
+      "msg_scan3": "Alles wird lokal auf Ihrem Gerät verarbeitet.",
+      "msg_scan4": "Prüfung gegen Datenschutzvorschriften...",
+      "msg_scanFace1": "Text wird nach personenbezogenen Daten durchsucht...",
+      "msg_scanFace2": "ID-Nummern, E-Mails, Telefonnummern werden erkannt...",
+      "msg_scanFace3": "Ihre Daten bleiben 100% privat auf Ihrem Gerät.",
+      "msg_scanFace4": "Gesichtserkennung beginnt gleich...",
+      "msg_face1": "Bilder werden auf Gesichter analysiert...",
+      "msg_face2": "Gesichtsbereiche zum Unkenntlichmachen werden identifiziert...",
+      "msg_face3": "Fast fertig — Ihr Dokument wird gesichert."
     }
   },
   "landing": {

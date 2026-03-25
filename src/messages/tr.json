@@ -219,9 +219,21 @@
       "stepParsing": "Ayrıştır",
       "stepScanning": "Tara",
       "stepFaceScanning": "Yüzler",
-      "patience": "Bu biraz zaman alabilir...",
       "foundSoFar": "Şimdiye kadar tespit edilen",
-      "faceDetectionQueued": "Yüz tespiti, metin taraması tamamlandıktan sonra başlayacak."
+      "faceDetectionQueued": "Yüz tespiti, metin taraması tamamlandıktan sonra başlayacak.",
+      "msg_parsing1": "Belge yapısı okunuyor...",
+      "msg_parsing2": "Dosyalarınız tarayıcınızdan asla ayrılmaz.",
+      "msg_scan1": "Hassas bilgiler taranıyor...",
+      "msg_scan2": "Kimlik numaraları, e-postalar, telefonlar tespit ediliyor...",
+      "msg_scan3": "Her şey cihazınızda yerel olarak işleniyor.",
+      "msg_scan4": "Gizlilik düzenlemelerine göre kontrol ediliyor...",
+      "msg_scanFace1": "Kişisel veriler için metin taranıyor...",
+      "msg_scanFace2": "Kimlik numaraları, e-postalar, telefonlar tespit ediliyor...",
+      "msg_scanFace3": "Verileriniz %100 cihazınızda kalır.",
+      "msg_scanFace4": "Yüz tespiti birazdan başlayacak...",
+      "msg_face1": "Görsellerde yüzler analiz ediliyor...",
+      "msg_face2": "Bulanıklaştırılacak yüz bölgeleri belirleniyor...",
+      "msg_face3": "Neredeyse bitti — belgeniz güvence altına alınıyor."
     }
   },
   "landing": {

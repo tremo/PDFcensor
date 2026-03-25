@@ -216,12 +216,24 @@
       "face": "Rosto"
     },
     "scanProgress": {
-      "stepParsing": "Análise",
-      "stepScanning": "Varredura",
+      "stepParsing": "Analisar",
+      "stepScanning": "Escanear",
       "stepFaceScanning": "Rostos",
-      "patience": "Isto pode demorar um momento...",
-      "foundSoFar": "Detectado até agora",
-      "faceDetectionQueued": "A detecção de rostos começará após a varredura de texto."
+      "foundSoFar": "Detectados até agora",
+      "faceDetectionQueued": "A detecção facial começará após a varredura de texto.",
+      "msg_parsing1": "Lendo a estrutura do documento...",
+      "msg_parsing2": "Seus arquivos nunca saem do seu navegador.",
+      "msg_scan1": "Procurando informações sensíveis...",
+      "msg_scan2": "Detectando números de identidade, e-mails, telefones...",
+      "msg_scan3": "Tudo é processado localmente no seu dispositivo.",
+      "msg_scan4": "Verificando regulamentos de privacidade...",
+      "msg_scanFace1": "Escaneando texto em busca de dados pessoais...",
+      "msg_scanFace2": "Detectando números de identidade, e-mails, telefones...",
+      "msg_scanFace3": "Seus dados permanecem 100% privados no seu dispositivo.",
+      "msg_scanFace4": "A detecção facial começará em breve...",
+      "msg_face1": "Analisando imagens em busca de rostos...",
+      "msg_face2": "Identificando regiões de rosto para desfocar...",
+      "msg_face3": "Quase pronto — protegendo seu documento."
     }
   },
   "landing": {

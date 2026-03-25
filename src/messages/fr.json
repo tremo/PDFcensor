@@ -219,9 +219,21 @@
       "stepParsing": "Analyse",
       "stepScanning": "Scan",
       "stepFaceScanning": "Visages",
-      "patience": "Cela peut prendre un moment...",
-      "foundSoFar": "Détecté jusqu'ici",
-      "faceDetectionQueued": "La détection des visages commencera après le scan du texte."
+      "foundSoFar": "Détectés jusqu'ici",
+      "faceDetectionQueued": "La détection faciale démarrera après le scan du texte.",
+      "msg_parsing1": "Lecture de la structure du document...",
+      "msg_parsing2": "Vos fichiers ne quittent jamais votre navigateur.",
+      "msg_scan1": "Recherche d'informations sensibles...",
+      "msg_scan2": "Détection des numéros d'identité, e-mails, téléphones...",
+      "msg_scan3": "Tout est traité localement sur votre appareil.",
+      "msg_scan4": "Vérification selon les réglementations de confidentialité...",
+      "msg_scanFace1": "Recherche de données personnelles dans le texte...",
+      "msg_scanFace2": "Détection des numéros d'identité, e-mails, téléphones...",
+      "msg_scanFace3": "Vos données restent 100% privées sur votre appareil.",
+      "msg_scanFace4": "La détection faciale va bientôt commencer...",
+      "msg_face1": "Analyse des images pour détecter les visages...",
+      "msg_face2": "Identification des zones de visage à flouter...",
+      "msg_face3": "Presque terminé — sécurisation de votre document."
     }
   },
   "landing": {

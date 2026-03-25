@@ -219,9 +219,21 @@
       "stepParsing": "Analisi",
       "stepScanning": "Scansione",
       "stepFaceScanning": "Volti",
-      "patience": "Potrebbe richiedere un momento...",
-      "foundSoFar": "Rilevato finora",
-      "faceDetectionQueued": "Il rilevamento volti inizierà dopo la scansione del testo."
+      "foundSoFar": "Rilevati finora",
+      "faceDetectionQueued": "Il rilevamento facciale inizierà dopo la scansione del testo.",
+      "msg_parsing1": "Lettura della struttura del documento...",
+      "msg_parsing2": "I tuoi file non lasciano mai il tuo browser.",
+      "msg_scan1": "Ricerca di informazioni sensibili...",
+      "msg_scan2": "Rilevamento numeri ID, email, telefoni...",
+      "msg_scan3": "Tutto viene elaborato localmente sul tuo dispositivo.",
+      "msg_scan4": "Verifica delle normative sulla privacy...",
+      "msg_scanFace1": "Scansione del testo per dati personali...",
+      "msg_scanFace2": "Rilevamento numeri ID, email, telefoni...",
+      "msg_scanFace3": "I tuoi dati rimangono al 100% privati sul tuo dispositivo.",
+      "msg_scanFace4": "Il rilevamento facciale inizierà a breve...",
+      "msg_face1": "Analisi delle immagini per rilevare volti...",
+      "msg_face2": "Identificazione delle aree dei volti da sfocare...",
+      "msg_face3": "Quasi finito — messa in sicurezza del documento."
     }
   },
   "landing": {

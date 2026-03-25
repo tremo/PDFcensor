@@ -219,9 +219,21 @@
       "stepParsing": "분석",
       "stepScanning": "스캔",
       "stepFaceScanning": "얼굴",
-      "patience": "잠시만 기다려 주세요...",
       "foundSoFar": "현재까지 감지된 항목",
-      "faceDetectionQueued": "얼굴 감지는 텍스트 스캔 완료 후 시작됩니다."
+      "faceDetectionQueued": "얼굴 감지는 텍스트 스캔 완료 후 시작됩니다.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
