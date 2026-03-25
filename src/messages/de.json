@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatische PII-Schwärzung für PDF-Dokumente",
-    "description": "Entfernen Sie personenbezogene Daten dauerhaft aus PDFs. DSGVO-konform. 100% clientseitig — Ihre Dateien verlassen nie Ihren Browser."
+    "title": "OfflineRedact — Automatische PII-Schwärzung für PDFs, Word-Dokumente & Bilder",
+    "description": "Entfernen Sie personenbezogene Daten dauerhaft aus PDFs, Word-Dokumenten und Bildern. DSGVO-konform. 100% clientseitig — Ihre Dateien verlassen nie Ihren Browser."
   },
   "nav": {
     "home": "Startseite",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% Clientseitig — Ihre Dateien verlassen nie Ihren Browser",
-    "title": "Personenbezogene Daten dauerhaft aus PDF-Dokumenten schwärzen",
-    "subtitle": "Erkennen und entfernen Sie automatisch personenbezogene Daten — SSN, Namen, E-Mails, Telefonnummern, IBAN — aus Ihren PDF-Dateien. DSGVO, HIPAA und KVKK konform.",
+    "title": "Sensible Daten aus PDFs, Dokumenten & Bildern schwärzen",
+    "subtitle": "PII & Gesichter in PDFs, Word-Dokumenten und Bildern automatisch schwärzen. DSGVO/HIPAA/KVKK-konform.",
     "cta": "Kostenlos schwärzen",
     "ctaSecondary": "Preise ansehen",
     "trustedBy": "Vertraut von Anwaltskanzleien, Gesundheitseinrichtungen und Behörden"
   },
   "features": {
     "title": "Warum OfflineRedact?",
-    "subtitle": "PDF-Schwärzung auf Unternehmensniveau, die vollständig in Ihrem Browser läuft",
+    "subtitle": "Dokumentenschwärzung auf Unternehmensniveau, die vollständig in Ihrem Browser läuft",
     "trueRedaction": {
       "title": "Echte Schwärzung",
       "description": "Im Gegensatz zu einfachen schwarzen Kästchen entfernen wir die tatsächlichen Textdaten aus dem PDF. Der geschwärzte Inhalt kann nicht ausgewählt, kopiert oder wiederhergestellt werden."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulierungs-Unterstützung",
       "description": "Eingebaute Profile für DSGVO, HIPAA, KVKK, CCPA, LGPD und mehr. Wählt automatisch das richtige Profil basierend auf Ihrem Standort."
     },
+    "multiFormat": {
+      "title": "PDF-, Word- & Bildunterstützung",
+      "description": "Schwärzen Sie PDFs, Word-Dokumente (.docx) und Bilddateien — alles mit einem einzigen Tool. Kein Wechsel zwischen verschiedenen Apps nötig."
+    },
+    "ocrSupport": {
+      "title": "Integrierte OCR",
+      "description": "Gescannte Dokumente und Fotos? Kein Problem. Die integrierte OCR liest Text aus Bildern, sodass auch sensible Daten in Scans erkannt werden."
+    },
     "batch": {
       "title": "Stapelverarbeitung",
-      "description": "Laden Sie mehrere PDFs gleichzeitig hoch. Verarbeiten Sie alle nacheinander und laden Sie sie als einzelne ZIP-Datei herunter."
+      "description": "Laden Sie mehrere Dateien gleichzeitig hoch. Verarbeiten Sie alle nacheinander und laden Sie sie als einzelne ZIP-Datei herunter."
     },
     "metadata": {
       "title": "Metadaten-Bereinigung",
@@ -50,7 +58,7 @@
     "subtitle": "Drei einfache Schritte zum dauerhaften Schwärzen sensibler Informationen",
     "step1": {
       "title": "Hochladen",
-      "description": "Ziehen Sie Ihre PDF-Dateien per Drag & Drop oder klicken Sie zum Durchsuchen. Unterstützt mehrere Dateien."
+      "description": "Ziehen Sie Ihre PDFs, Word-Dokumente oder Bilder per Drag & Drop oder klicken Sie zum Durchsuchen. Unterstützt mehrere Dateien."
     },
     "step2": {
       "title": "Überprüfen",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Herunterladen",
-      "description": "Laden Sie Ihr dauerhaft geschwärztes PDF herunter. Der Originaltext ist unwiderruflich entfernt."
+      "description": "Laden Sie Ihre dauerhaft geschwärzte Datei herunter. Der Originaltext ist unwiderruflich entfernt."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Die meisten Schwärzungstools erfordern das Hochladen Ihres gesamten Dokuments auf ihre Server. OfflineRedact funktioniert anders.",
     "otherTools": "Andere Tools",
     "yourDoc": "Ihr Dokument",
-    "yourDocDesc": "PDF mit sensiblen Daten",
+    "yourDocDesc": "Datei mit sensiblen Daten",
     "theirServers": "Deren Server",
     "theirServersDesc": "Vollständige Datei hochgeladen & gespeichert",
     "whoKnows": "Wer weiß?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Bereit, sensible Daten zu schützen?",
-    "subtitle": "Beginnen Sie kostenlos mit der PDF-Schwärzung — keine Registrierung erforderlich.",
+    "subtitle": "Beginnen Sie kostenlos mit der Dokumentenschwärzung — keine Registrierung erforderlich.",
     "button": "Jetzt mit dem Schwärzen beginnen"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "rights": "Alle Rechte vorbehalten.",
-    "tagline": "Dauerhafte PDF-Schwärzung — 100% in Ihrem Browser."
+    "tagline": "Dauerhafte Dokumentenschwärzung — 100% in Ihrem Browser."
   },
   "redact": {
     "title": "Dokument-Schwärzungstool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Dateien hier ablegen",
       "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
-      "hint": "Unterstützt PDF- und Word-(.docx)-Dateien. Ihre Dateien verlassen niemals Ihren Browser.",
+      "hint": "Unterstützt PDF-, Word-(.docx)- und Bilddateien (JPG, PNG, WebP, TIFF). Ihre Dateien verlassen niemals Ihren Browser.",
       "processing": "Verarbeitung..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Gesichter werden erkannt...",
+      "faceDetection": "Gesichtserkennung",
+      "faceDetectionWarning": "Die Gesichtserkennung kann länger dauern.",
+      "rescanFaces": "Gesichter erneut scannen"
     },
     "docx": {
       "pending": "Ausstehend",
@@ -208,14 +220,35 @@
       "passport": "Reisepassnummer",
       "names": "Personennamen",
       "address": "Adressen",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Gesicht"
+    },
+    "scanProgress": {
+      "stepParsing": "Parsen",
+      "stepScanning": "Scannen",
+      "stepFaceScanning": "Gesichter",
+      "foundSoFar": "Bisher erkannt",
+      "faceDetectionQueued": "Gesichtserkennung startet nach dem Textscan.",
+      "msg_parsing1": "Dokumentstruktur wird gelesen...",
+      "msg_parsing2": "Ihre Dateien verlassen nie Ihren Browser.",
+      "msg_scan1": "Suche nach sensiblen Daten...",
+      "msg_scan2": "ID-Nummern, E-Mails, Telefonnummern werden erkannt...",
+      "msg_scan3": "Alles wird lokal auf Ihrem Gerät verarbeitet.",
+      "msg_scan4": "Prüfung gegen Datenschutzvorschriften...",
+      "msg_scanFace1": "Text wird nach personenbezogenen Daten durchsucht...",
+      "msg_scanFace2": "ID-Nummern, E-Mails, Telefonnummern werden erkannt...",
+      "msg_scanFace3": "Ihre Daten bleiben 100% privat auf Ihrem Gerät.",
+      "msg_scanFace4": "Gesichtserkennung beginnt gleich...",
+      "msg_face1": "Bilder werden auf Gesichter analysiert...",
+      "msg_face2": "Gesichtsbereiche zum Unkenntlichmachen werden identifiziert...",
+      "msg_face3": "Fast fertig — Ihr Dokument wird gesichert."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Dokument hier ablegen",
       "subtitle": "oder klicken zum Durchsuchen",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Erkennung",

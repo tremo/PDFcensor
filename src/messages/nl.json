@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatische PII-redactie voor PDF's, Word-documenten & afbeeldingen",
+    "description": "Verwijder permanent persoonsgegevens uit PDF's, Word-documenten en afbeeldingen. AVG, HIPAA en KVKK compliant. 100% client-side — uw bestanden verlaten nooit uw browser."
   },
   "nav": {
     "home": "Home",
@@ -11,85 +11,93 @@
   },
   "hero": {
     "badge": "100% client-side — Uw bestanden verlaten nooit uw browser",
-    "title": "Verwijder permanent persoonsgegevens uit PDF-documenten",
-    "subtitle": "Detecteer en verwijder automatisch persoonsgegevens — BSN, namen, e-mails, telefoonnummers, IBAN — uit uw PDF-bestanden. HIPAA, GDPR en KVKK-conform.",
+    "title": "Verwijder gevoelige gegevens uit PDF's, documenten & afbeeldingen",
+    "subtitle": "Automatische redactie van persoonsgegevens en gezichten uit PDF's, Word-documenten en afbeeldingen. AVG/HIPAA/KVKK-compliant.",
     "cta": "Begin — Gratis",
     "ctaSecondary": "Bekijk prijzen",
     "trustedBy": "Vertrouwd door advocatenkantoren, zorgverleners en overheidsinstanties"
   },
   "features": {
-    "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "title": "Waarom OfflineRedact?",
+    "subtitle": "Documentredactie op enterprise-niveau die volledig in uw browser draait",
     "trueRedaction": {
-      "title": "True Redaction",
-      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+      "title": "Echte redactie",
+      "description": "In tegenstelling tot eenvoudige zwarte vlakken verwijderen wij de daadwerkelijke tekstgegevens uit de PDF. De geredigeerde inhoud kan niet worden geselecteerd, gekopieerd of hersteld."
     },
     "clientSide": {
-      "title": "100% Client-Side",
-      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+      "title": "100% Client-side",
+      "description": "Uw bestanden verlaten nooit uw apparaat. Alle verwerking gebeurt in uw browser \u2014 geen uploads, geen servers, geen datalekken."
     },
     "autoDetect": {
-      "title": "Auto-Detect PII",
-      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+      "title": "Automatische PII-detectie",
+      "description": "Vindt automatisch BSN, namen, e-mails, telefoonnummers, IBAN, creditcards en meer met behulp van patroonherkenning en ingebouwde validatieregels."
     },
     "regulations": {
-      "title": "Multi-Regulation Support",
-      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+      "title": "Ondersteuning voor meerdere regelgevingen",
+      "description": "Ingebouwde profielen voor AVG, HIPAA, KVKK, CCPA, LGPD en meer. Selecteert automatisch het juiste profiel op basis van uw locatie."
+    },
+    "multiFormat": {
+      "title": "PDF, Word & afbeeldingen",
+      "description": "Redigeer PDF's, Word-documenten (.docx) en afbeeldingen — allemaal vanuit één tool. Geen gedoe met verschillende applicaties."
+    },
+    "ocrSupport": {
+      "title": "Ingebouwde OCR",
+      "description": "Gescande documenten en foto's? Geen probleem. Ingebouwde OCR leest tekst uit afbeeldingen zodat ook gevoelige gegevens in scans worden gedetecteerd."
     },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Batchverwerking",
+      "description": "Upload meerdere bestanden tegelijk. Verwerk ze allemaal achtereenvolgens en download als \u00e9\u00e9n ZIP-bestand."
     },
     "metadata": {
-      "title": "Metadata Cleaning",
-      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+      "title": "Metadata opschonen",
+      "description": "Verwijdert verborgen metadata \u2014 auteur, titel, aanmaakdatum, software-informatie \u2014 die gevoelige informatie kan onthullen."
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "title": "Hoe het werkt",
+    "subtitle": "Drie eenvoudige stappen om gevoelige informatie permanent te redigeren",
     "step1": {
-      "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "title": "Uploaden",
+      "description": "Sleep uw PDF's, Word-documenten of afbeeldingen hierheen — of klik om te bladeren. Ondersteunt meerdere bestanden."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Controleren",
+      "description": "Automatisch gedetecteerde persoonsgegevens worden gemarkeerd. Voeg redacties toe, verwijder of pas ze aan voordat u ze toepast."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Downloaden",
+      "description": "Download uw permanent geredigeerd bestand. De originele tekst is onherstelbaar verwijderd."
     }
   },
   "comparison": {
-    "badge": "The Difference",
-    "title": "Other tools upload your files. We don't.",
-    "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
-    "otherTools": "Other Tools",
-    "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
-    "theirServers": "Their servers",
-    "theirServersDesc": "Full file uploaded & stored",
-    "whoKnows": "Who knows?",
-    "whoKnowsDesc": "Retained for hours or indefinitely",
-    "yourBrowser": "Your browser",
-    "yourBrowserDesc": "Processed securely, never stored",
-    "redactedFile": "Redacted file",
-    "redactedFileDesc": "Created locally, download instantly",
-    "zeroRetention": "Zero storage. Zero retention.",
-    "footnote": "All detection runs locally in your browser. Your files never leave your device."
+    "badge": "Het verschil",
+    "title": "Andere tools uploaden uw bestanden. Wij niet.",
+    "subtitle": "De meeste redactietools vereisen het uploaden van uw volledige document naar hun servers. OfflineRedact werkt anders.",
+    "otherTools": "Andere tools",
+    "yourDoc": "Uw document",
+    "yourDocDesc": "Bestand met gevoelige gegevens",
+    "theirServers": "Hun servers",
+    "theirServersDesc": "Volledig bestand ge\u00fcpload en opgeslagen",
+    "whoKnows": "Wie weet?",
+    "whoKnowsDesc": "Uren of onbeperkt bewaard",
+    "yourBrowser": "Uw browser",
+    "yourBrowserDesc": "Veilig verwerkt, nooit opgeslagen",
+    "redactedFile": "Geredigeerd bestand",
+    "redactedFileDesc": "Lokaal aangemaakt, direct downloaden",
+    "zeroRetention": "Geen opslag. Geen bewaring.",
+    "footnote": "Alle detectie draait lokaal in uw browser. Uw bestanden verlaten nooit uw apparaat."
   },
   "security": {
-    "title": "True permanent redaction",
-    "subtitle": "Unlike basic PDF editors that just overlay black boxes, OfflineRedact creates a new document without the sensitive data. It's not hidden — it simply doesn't exist in the output.",
-    "noCopy": "Can't copy/paste",
-    "noCopyDesc": "Text is not in output",
-    "noTricks": "No Photoshop tricks",
-    "noTricksDesc": "Not hidden, gone",
-    "zeroRetention": "Zero retention",
-    "zeroRetentionDesc": "Documents processed and purged",
-    "encrypted": "AES-256 encrypted",
-    "encryptedDesc": "Bank-grade encryption"
+    "title": "Echte permanente redactie",
+    "subtitle": "In tegenstelling tot basis PDF-editors die alleen zwarte vlakken over de tekst plaatsen, cre\u00ebert OfflineRedact een nieuw document zonder de gevoelige gegevens. Het is niet verborgen \u2014 het bestaat simpelweg niet in de uitvoer.",
+    "noCopy": "Kan niet kopi\u00ebren/plakken",
+    "noCopyDesc": "Tekst staat niet in de uitvoer",
+    "noTricks": "Geen Photoshop-trucs",
+    "noTricksDesc": "Niet verborgen, verwijderd",
+    "zeroRetention": "Geen bewaring",
+    "zeroRetentionDesc": "Documenten verwerkt en gewist",
+    "encrypted": "AES-256 versleuteld",
+    "encryptedDesc": "Versleuteling op bankniveau"
   },
   "compliance": {
     "title": "Built for Global Compliance",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Klaar om gevoelige gegevens te beschermen?",
-    "subtitle": "Begin gratis met het redigeren van PDF's — geen registratie nodig.",
+    "subtitle": "Begin gratis met het redigeren van documenten — geen registratie nodig.",
     "button": "Begin nu"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Privacybeleid",
     "terms": "Servicevoorwaarden",
     "rights": "Alle rechten voorbehouden.",
-    "tagline": "Permanente PDF-redactie — 100% in uw browser."
+    "tagline": "Permanente documentredactie — 100% in uw browser."
   },
   "redact": {
     "title": "Document Redaction Tool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Ondersteunt PDF-, Word-(.docx)- en afbeeldingsbestanden (JPG, PNG, WebP, TIFF). Uw bestanden verlaten nooit uw browser.",
       "processing": "Processing..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Gezichten detecteren...",
+      "faceDetection": "Gezichtsdetectie",
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Gezichten opnieuw scannen"
     },
     "docx": {
       "pending": "Pending",
@@ -208,14 +220,35 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Gezicht"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

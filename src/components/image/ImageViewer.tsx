@@ -4,6 +4,9 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import type { RedactionArea } from "@/types/pdf";
 import type { ImageDocumentData } from "@/types/image";
 import { cn } from "@/lib/utils";
+import { PenLine, X } from "lucide-react";
+
+const HINT_DISMISSED_KEY = "pdf-draw-hint-dismissed";
 
 interface ImageViewerProps {
   document: ImageDocumentData;
@@ -44,6 +47,18 @@ export function ImageViewer({
     if (imgRef.current) observer.observe(imgRef.current);
     return () => observer.disconnect();
   }, [updateScale]);
+
+  const [isOverlay, setIsOverlay] = useState(false);
+  const [hintDismissed, setHintDismissed] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem(HINT_DISMISSED_KEY) === "1";
+  });
+
+  const dismissHint = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    setHintDismissed(true);
+    localStorage.setItem(HINT_DISMISSED_KEY, "1");
+  }, []);
 
   // Manual redaction drawing state
   const isDrawing = useRef(false);
@@ -118,7 +133,9 @@ export function ImageViewer({
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
+      onMouseEnter={() => setIsOverlay(true)}
       onMouseLeave={() => {
+        setIsOverlay(false);
         if (isDrawing.current) {
           isDrawing.current = false;
           setDrawRect(null);
@@ -149,12 +166,17 @@ export function ImageViewer({
               top: r.y * imgScale,
               width: r.width * imgScale,
               height: r.height * imgScale,
+              ...(r.blurMode ? { backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" } : {}),
             }}
             className={cn(
               "border-2 cursor-pointer transition-colors",
-              r.confirmed
-                ? "bg-black border-black"
-                : "bg-amber-400/30 border-amber-400",
+              r.blurMode
+                ? (r.confirmed
+                    ? "border-blue-500"
+                    : "border-blue-400/70 bg-blue-400/15")
+                : (r.confirmed
+                    ? "bg-black border-black"
+                    : "bg-amber-400/30 border-amber-400"),
               isSelected && "ring-2 ring-blue-500 ring-offset-1"
             )}
             onClick={(e) => {
@@ -168,6 +190,24 @@ export function ImageViewer({
           />
         );
       })}
+
+      {/* Hover hint */}
+      {!hintDismissed && isOverlay && !drawRect && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-40 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <div className="flex items-center gap-2 bg-neutral-800/90 text-white text-xs px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm select-none">
+            <PenLine className="w-3.5 h-3.5 text-blue-300 shrink-0 animate-pulse" />
+            <span className="whitespace-nowrap">Sürükleyerek manuel sansürle</span>
+            <button
+              className="ml-1 text-neutral-400 hover:text-white transition-colors"
+              title="Kapat"
+              onMouseDown={(e) => e.stopPropagation()}
+              onClick={dismissHint}
+            >
+              <X className="w-3 h-3" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Draw-in-progress rectangle */}
       {drawRect && (

@@ -4,10 +4,12 @@ import { useState, useCallback, useRef } from "react";
 import { useLocale } from "next-intl";
 import type { PDFDocumentData, RedactionArea } from "@/types/pdf";
 import type { RegulationType, PIIType } from "@/types/pii";
-import { parsePDF, releasePageTextData, getDocumentArrayBuffer } from "@/lib/pdf/parser";
+import { parsePDF, releasePageTextData, getDocumentArrayBuffer, renderPageToCanvas } from "@/lib/pdf/parser";
 import { detectPII } from "@/lib/pii/detector";
 import { detectOCRPII } from "@/lib/pdf/ocr";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
+import { detectFacesInCanvas } from "@/lib/face/detector";
+import * as pdfjsLib from "pdfjs-dist";
 import { redactPDF } from "@/lib/pdf/redactor";
 import { addWatermark } from "@/lib/pdf/watermark";
 import { parseDocx, getDocxArrayBuffer, releaseDocxHeavyData } from "@/lib/docx/parser";
@@ -83,11 +85,12 @@ export function useBatchProcessor() {
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [reviewingIndex, setReviewingIndex] = useState<number | null>(null);
+  const [faceDetectionEnabled, setFaceDetectionEnabled] = useState(false);
 
   const abortRef = useRef(false);
 
   const processFiles = useCallback(
-    async (filesToProcess: File[], types: PIIType[], reg: RegulationType) => {
+    async (filesToProcess: File[], types: PIIType[], reg: RegulationType, detectFaces: boolean = false) => {
       setStatus("processing");
       setTotalFiles(filesToProcess.length);
       setProgress(0);
@@ -216,6 +219,28 @@ export function useBatchProcessor() {
               // OCR failure is non-fatal
             }
 
+            // Face detection
+            if (detectFaces) {
+              try {
+                const arrayBuffer = await getDocumentArrayBuffer(doc);
+                const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+                const FACE_SCALE = 2.0;
+
+                for (let pi = 0; pi < doc.pages.length; pi++) {
+                  const canvas = globalThis.document.createElement("canvas");
+                  await renderPageToCanvas(pdf, pi + 1, canvas, FACE_SCALE);
+                  const faces = await detectFacesInCanvas(canvas, doc.pages[pi].pageIndex, FACE_SCALE);
+                  result.pdfRedactions.push(...faces);
+                  canvas.width = 0;
+                  canvas.height = 0;
+                }
+
+                pdf.destroy();
+              } catch {
+                // Face detection failure is non-fatal
+              }
+            }
+
             // Cache page heights for redaction, then release heavy data
             result.pdfPageHeights = doc.pages.map((p) => p.height);
             releasePageTextData(doc);
@@ -240,9 +265,9 @@ export function useBatchProcessor() {
     async (newFiles: File[]) => {
       setFiles(newFiles);
       setError(null);
-      await processFiles(newFiles, enabledTypes, regulation);
+      await processFiles(newFiles, enabledTypes, regulation, faceDetectionEnabled);
     },
-    [enabledTypes, regulation, processFiles]
+    [enabledTypes, regulation, faceDetectionEnabled, processFiles]
   );
 
   const getSummary = useCallback((): BatchSummaryData => {
@@ -515,6 +540,7 @@ export function useBatchProcessor() {
     files,
     error,
     reviewingIndex,
+    faceDetectionEnabled,
     // Actions
     handleFilesSelected,
     getSummary,
@@ -527,6 +553,7 @@ export function useBatchProcessor() {
     removeFile,
     changeRegulation,
     toggleType,
+    setFaceDetectionEnabled,
     reset,
   };
 }

@@ -28,6 +28,8 @@ import {
   Building2,
   Globe,
   FileCheck,
+  Files,
+  ScanLine,
 } from "lucide-react";
 
 type Props = {
@@ -43,6 +45,8 @@ export default async function HomePage({ params }: Props) {
     { icon: Monitor, key: "clientSide" },
     { icon: ScanSearch, key: "autoDetect" },
     { icon: Scale, key: "regulations" },
+    { icon: Files, key: "multiFormat" },
+    { icon: ScanLine, key: "ocrSupport" },
     { icon: FolderArchive, key: "batch" },
     { icon: FileKey, key: "metadata" },
   ];

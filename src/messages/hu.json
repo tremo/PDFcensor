@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatikus személyes adatok redaktálása PDF, Word és képfájlokból",
+    "description": "Véglegesen távolítsa el a személyes adatokat PDF, Word dokumentumokból és képekből. HIPAA, GDPR, KVKK megfelelő. 100% kliens oldali — fájljai soha nem hagyják el a böngészőjét."
   },
   "nav": {
     "home": "Kezdőlap",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% kliens oldali — Fájljai soha nem hagyják el a böngészőjét",
-    "title": "Véglegesen távolítsa el a személyes adatokat PDF dokumentumokból",
-    "subtitle": "Automatikusan felismeri és véglegesen eltávolítja a személyes adatokat — TAJ szám, nevek, e-mailek, telefonszámok, IBAN — a PDF fájlokból. HIPAA, GDPR és KVKK kompatibilis.",
+    "title": "Személyes adatok redaktálása PDF, dokumentumok és képek fájlokból",
+    "subtitle": "Személyes adatok és arcok automatikus redaktálása PDF, Word és képfájlokból. HIPAA/GDPR/KVKK megfelelő.",
     "cta": "Kezdés — Ingyenes",
     "ctaSecondary": "Árak megtekintése",
     "trustedBy": "Ügyvédi irodák, egészségügyi szolgáltatók és kormányzati szervek bíznak bennünk"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Professzionális dokumentum-redaktálás, amely teljes egészében a böngészőjében fut",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "PDF, Word és képfájl támogatás",
+      "description": "Redaktáljon PDF, Word (.docx) és képfájlokat — mindet egyetlen eszközből. Nem kell különböző alkalmazások között váltania."
+    },
+    "ocrSupport": {
+      "title": "Beépített OCR",
+      "description": "Szkennelt dokumentumok és fotók? Nem probléma. A beépített OCR kiolvassa a szöveget a képekből, így a szkenekben lévő érzékeny adatok is felismerésre kerülnek."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Töltsön fel egyszerre több fájlt. Dolgozza fel őket egymás után, és töltse le egyetlen ZIP fájlként."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Húzza be a PDF, Word dokumentumokat vagy képeket — vagy kattintson a tallózáshoz. Több fájlt is támogat."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Töltse le a véglegesen redaktált fájlt. Az eredeti szöveg visszavonhatatlanul eltávolításra került."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Fájl érzékeny adatokkal",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Készen áll az érzékeny adatok védelmére?",
-    "subtitle": "Kezdje el a PDF szerkesztést ingyen — regisztráció nélkül.",
+    "subtitle": "Kezdje el a dokumentumok redaktálását ingyen — regisztráció nélkül.",
     "button": "Kezdés most"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Adatvédelmi irányelvek",
     "terms": "Szolgáltatási feltételek",
     "rights": "Minden jog fenntartva.",
-    "tagline": "Végleges PDF szerkesztés — 100% a böngészőjében."
+    "tagline": "Végleges dokumentum-redaktálás — 100% a böngészőjében."
   },
   "redact": {
     "title": "Document Redaction Tool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Támogatja a PDF-, Word-(.docx)- és képfájlokat (JPG, PNG, WebP, TIFF). Fájljai soha nem hagyják el a böngészőjét.",
       "processing": "Processing..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Arcok felismerése...",
+      "faceDetection": "Arcfelismerés",
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Arcok újraszkennelése"
     },
     "docx": {
       "pending": "Pending",
@@ -208,14 +220,35 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Arc"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

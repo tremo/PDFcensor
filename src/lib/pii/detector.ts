@@ -27,6 +27,7 @@ const detectorMap: Record<PIIType, DetectorFn> = {
   address: detectAddress,
   names: detectNames,
   dateOfBirth: detectDateOfBirth,
+  face: () => [], // Face detection is visual, not text-based
 };
 
 /**

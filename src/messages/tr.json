@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — PDF Belgelerinden Otomatik Kişisel Veri Sansürleme",
-    "description": "PDF dosyalarından kişisel verileri kalıcı olarak silin. KVKK, GDPR, HIPAA uyumlu. %100 tarayıcı tarafında — dosyalarınız asla cihazınızdan çıkmaz."
+    "title": "OfflineRedact — PDF, Word ve Görsellerden Otomatik Kişisel Veri Sansürleme",
+    "description": "PDF, Word belgeleri ve görsellerden kişisel verileri kalıcı olarak silin. KVKK, GDPR, HIPAA uyumlu. %100 tarayıcı tarafında — dosyalarınız asla cihazınızdan çıkmaz."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "%100 Tarayıcı Tarafında — Dosyalarınız asla cihazınızdan çıkmaz",
-    "title": "PDF Belgelerinden Kişisel Verileri Kalıcı Olarak Sansürleyin",
-    "subtitle": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN gibi kişisel verileri otomatik tespit edin ve kalıcı olarak silin. KVKK, GDPR ve HIPAA uyumlu.",
+    "title": "PDF, Word ve Görsellerden Hassas Verileri Sansürleyin",
+    "subtitle": "PDF, Word ve görsellerden kişisel verileri ve yüzleri otomatik sansürleyin. KVKK/GDPR/HIPAA uyumlu.",
     "cta": "Ücretsiz Sansürlemeye Başla",
     "ctaSecondary": "Fiyatları Gör",
     "trustedBy": "Hukuk büroları, sağlık kuruluşları ve devlet kurumları tarafından tercih ediliyor"
   },
   "features": {
     "title": "Neden OfflineRedact?",
-    "subtitle": "Tamamen tarayıcınızda çalışan kurumsal düzeyde PDF sansürleme",
+    "subtitle": "Tamamen tarayıcınızda çalışan kurumsal düzeyde belge sansürleme",
     "trueRedaction": {
       "title": "Gerçek Sansürleme",
       "description": "Basit siyah kutulardan farklı olarak, gerçek metin verisini PDF'den kaldırıyoruz. Sansürlenen içerik seçilemez, kopyalanamaz veya geri getirilemez."
@@ -36,9 +36,17 @@
       "title": "Çoklu Regülasyon Desteği",
       "description": "KVKK, GDPR, HIPAA, CCPA, LGPD ve daha fazlası için yerleşik profiller. Konumunuza göre doğru profili otomatik seçer."
     },
+    "multiFormat": {
+      "title": "PDF, Word ve Görsel Desteği",
+      "description": "PDF, Word (.docx) ve görsel dosyaları aynı araçla sansürleyin. Farklı uygulamalar arasında geçiş yapmaya gerek yok."
+    },
+    "ocrSupport": {
+      "title": "Dahili OCR",
+      "description": "Taranmış belgeler ve fotoğraflar mı? Sorun değil. Dahili OCR görsellerdeki metni okur, taramalardaki hassas veriler de yakalanır."
+    },
     "batch": {
       "title": "Toplu İşleme",
-      "description": "Birden fazla PDF'i aynı anda yükleyin. Hepsini sırayla işleyin ve tek bir ZIP dosyası olarak indirin."
+      "description": "Birden fazla dosyayı aynı anda yükleyin. Hepsini sırayla işleyin ve tek bir ZIP dosyası olarak indirin."
     },
     "metadata": {
       "title": "Metadata Temizleme",
@@ -50,7 +58,7 @@
     "subtitle": "Hassas bilgileri kalıcı olarak sansürlemek için üç basit adım",
     "step1": {
       "title": "Yükle",
-      "description": "PDF dosyalarınızı sürükleyip bırakın veya gözatmak için tıklayın. Birden fazla dosya desteklenir."
+      "description": "PDF, Word veya görsel dosyalarınızı sürükleyip bırakın veya gözatmak için tıklayın. Birden fazla dosya desteklenir."
     },
     "step2": {
       "title": "İncele",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "İndir",
-      "description": "Kalıcı olarak sansürlenmiş PDF'inizi indirin. Orijinal metin geri getirilemez şekilde silinmiştir."
+      "description": "Kalıcı olarak sansürlenmiş dosyanızı indirin. Orijinal metin geri getirilemez şekilde silinmiştir."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Çoğu sansürleme aracı, belgenizin tamamını sunucularına yüklemenizi gerektirir. OfflineRedact farklı çalışır.",
     "otherTools": "Diğer Araçlar",
     "yourDoc": "Belgeniz",
-    "yourDocDesc": "Hassas veriler içeren PDF",
+    "yourDocDesc": "Hassas veriler içeren dosya",
     "theirServers": "Onların sunucuları",
     "theirServersDesc": "Tam dosya yüklenir ve saklanır",
     "whoKnows": "Kim bilir?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Hassas Verileri Korumaya Hazır mısınız?",
-    "subtitle": "PDF sansürlemeye ücretsiz başlayın — kayıt gerekmez.",
+    "subtitle": "Belge sansürlemeye ücretsiz başlayın — kayıt gerekmez.",
     "button": "Şimdi Sansürlemeye Başla"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları",
     "rights": "Tüm hakları saklıdır.",
-    "tagline": "Kalıcı PDF sansürleme — %100 tarayıcınızda."
+    "tagline": "Kalıcı belge sansürleme — %100 tarayıcınızda."
   },
   "redact": {
     "title": "Belge Sansürleme Aracı",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Dosyaları buraya bırakın",
       "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
-      "hint": "PDF ve Word (.docx) dosyalarını destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
+      "hint": "PDF, Word (.docx) ve görsel dosyaları (JPG, PNG, WebP, TIFF) destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
       "processing": "İşleniyor..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "Çizim Modu: AÇIK",
       "drawModeOff": "Çizim Modu: KAPALI",
       "drawModeHint": "Sansür kutusu çizmek için belge üzerinde tıklayıp sürükleyin",
-      "selectModeHint": "Sansürleri seçmek, taşımak ya da boyutlandırmak için tıklayın"
+      "selectModeHint": "Sansürleri seçmek, taşımak ya da boyutlandırmak için tıklayın",
+      "faceScanning": "Yüzler tespit ediliyor...",
+      "faceDetection": "Yüz Tespiti",
+      "faceDetectionWarning": "Yüz tespiti işlemi daha uzun sürebilir.",
+      "rescanFaces": "Yüzleri yeniden tara"
     },
     "docx": {
       "pending": "Bekliyor",
@@ -208,14 +220,35 @@
       "passport": "Pasaport Numarası",
       "names": "Kişi Adları",
       "address": "Adresler",
-      "customKeyword": "Özel Kelime"
+      "customKeyword": "Özel Kelime",
+      "face": "Yüz"
+    },
+    "scanProgress": {
+      "stepParsing": "Ayrıştır",
+      "stepScanning": "Tara",
+      "stepFaceScanning": "Yüzler",
+      "foundSoFar": "Şimdiye kadar tespit edilen",
+      "faceDetectionQueued": "Yüz tespiti, metin taraması tamamlandıktan sonra başlayacak.",
+      "msg_parsing1": "Belge yapısı okunuyor...",
+      "msg_parsing2": "Dosyalarınız tarayıcınızdan asla ayrılmaz.",
+      "msg_scan1": "Hassas bilgiler taranıyor...",
+      "msg_scan2": "Kimlik numaraları, e-postalar, telefonlar tespit ediliyor...",
+      "msg_scan3": "Her şey cihazınızda yerel olarak işleniyor.",
+      "msg_scan4": "Gizlilik düzenlemelerine göre kontrol ediliyor...",
+      "msg_scanFace1": "Kişisel veriler için metin taranıyor...",
+      "msg_scanFace2": "Kimlik numaraları, e-postalar, telefonlar tespit ediliyor...",
+      "msg_scanFace3": "Verileriniz %100 cihazınızda kalır.",
+      "msg_scanFace4": "Yüz tespiti birazdan başlayacak...",
+      "msg_face1": "Görsellerde yüzler analiz ediliyor...",
+      "msg_face2": "Bulanıklaştırılacak yüz bölgeleri belirleniyor...",
+      "msg_face3": "Neredeyse bitti — belgeniz güvence altına alınıyor."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Belgenizi buraya bırakın",
       "subtitle": "veya gözatmak için tıklayın",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Otomatik Tespit",

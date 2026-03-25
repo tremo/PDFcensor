@@ -9,22 +9,35 @@ interface OCRWord {
   y: number;
   width: number;
   height: number;
+  lineIndex: number;
 }
 
-function getOCRLanguages(locale: string): string {
-  const langMap: Record<string, string> = {
-    en: "eng",
-    tr: "tur",
-    de: "deu",
-    fr: "fra",
-    es: "spa",
-    pt: "por",
-    ja: "jpn",
-    ko: "kor",
-    zh: "chi_sim",
-  };
-  const primary = langMap[locale] || "eng";
-  return primary === "eng" ? "eng" : `${primary}+eng`;
+const LOCALE_TO_TESS: Record<string, string> = {
+  en: "eng", tr: "tur", de: "deu", fr: "fra", es: "spa",
+  pt: "por", ja: "jpn", ko: "kor", zh: "chi_sim",
+};
+
+// Map PII types to the OCR languages they need
+const PII_LANG_MAP: Record<string, string> = {
+  tcKimlik: "tur",
+  trPhone: "tur",
+};
+
+function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
+  const langs = new Set<string>();
+  langs.add("eng"); // Always include English
+
+  // Add language for current UI locale
+  const localeLang = LOCALE_TO_TESS[locale];
+  if (localeLang) langs.add(localeLang);
+
+  // Add languages required by enabled PII types
+  for (const type of piiTypes) {
+    const lang = PII_LANG_MAP[type];
+    if (lang) langs.add(lang);
+  }
+
+  return [...langs].join("+");
 }
 
 let idCounter = 0;
@@ -42,7 +55,7 @@ export async function detectOCRPIIFromImage(
   locale: string,
   onProgress?: (progress: number) => void
 ): Promise<{ redactions: RedactionArea[]; width: number; height: number }> {
-  const lang = getOCRLanguages(locale);
+  const lang = getOCRLanguages(locale, piiTypes);
 
   // Load the image onto a canvas to get pixel dimensions
   const bitmap = await createImageBitmap(file);
@@ -63,13 +76,17 @@ export async function detectOCRPIIFromImage(
 
   onProgress?.(30);
 
-  const { data } = await scheduler.addJob("recognize", canvas);
+  const { data } = await scheduler.addJob("recognize", canvas, {}, { blocks: true, text: true });
 
   onProgress?.(80);
 
+  console.log("[OCR DEBUG] lang:", lang, "| canvas:", canvas.width, "x", canvas.height);
+  console.log("[OCR DEBUG] blocks:", data.blocks?.length ?? "null", "| confidence:", data.confidence);
+  console.log("[OCR DEBUG] text:", JSON.stringify(data.text?.substring(0, 400)));
+
   // Extract word-level bounding boxes
   const words: OCRWord[] = [];
-  let fullText = "";
+  let lineCounter = 0;
 
   if (data.blocks) {
     for (const block of data.blocks) {
@@ -83,15 +100,51 @@ export async function detectOCRPIIFromImage(
               y: bbox.y0,
               width: bbox.x1 - bbox.x0,
               height: bbox.y1 - bbox.y0,
+              lineIndex: lineCounter,
             });
-            fullText += word.text + " ";
           }
+          lineCounter++;
         }
       }
     }
   }
 
   await scheduler.terminate();
+
+  // Merge adjacent OCR words on the same line when they form numeric sequences
+  // Tesseract splits numbers like "13643908756" into "1364" + "390" + "8756"
+  const stripOCRNoise = (text: string) => text.replace(/^[.,;:|]+|[.,;:|]+$/g, "");
+  const mergedWords: OCRWord[] = [];
+  for (const word of words) {
+    const last = mergedWords[mergedWords.length - 1];
+    const lastClean = last ? stripOCRNoise(last.text) : "";
+    const wordClean = stripOCRNoise(word.text);
+    const bothDigits =
+      lastClean.length > 0 && /^\d+$/.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    const letterThenDigits =
+      /^[A-Z]$/i.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    if (last && last.lineIndex === word.lineIndex && (bothDigits || letterThenDigits)) {
+      const minX = Math.min(last.x, word.x);
+      const minY = Math.min(last.y, word.y);
+      const maxX = Math.max(last.x + last.width, word.x + word.width);
+      const maxY = Math.max(last.y + last.height, word.y + word.height);
+      last.text = lastClean + wordClean;
+      last.x = minX;
+      last.y = minY;
+      last.width = maxX - minX;
+      last.height = maxY - minY;
+    } else {
+      mergedWords.push({ ...word });
+    }
+  }
+
+  // Build fullText from merged words
+  let fullText = "";
+  for (const w of mergedWords) {
+    fullText += w.text + " ";
+  }
 
   // Clean up canvas
   canvas.width = 0;
@@ -105,13 +158,16 @@ export async function detectOCRPIIFromImage(
   }
 
   // Detect PII in OCR text (pageIndex 0 for single images)
+  console.log("[OCR DEBUG] merged words:", mergedWords.map(w => w.text));
+  console.log("[OCR DEBUG] fullText:", fullText.trim());
   const result = detectPII(fullText.trim(), 0, piiTypes);
+  console.log("[OCR DEBUG] PII matches:", result.matches.map(m => ({ type: m.type, value: m.value })));
 
   for (const match of result.matches) {
     let charPos = 0;
     const matchingWords: OCRWord[] = [];
 
-    for (const word of words) {
+    for (const word of mergedWords) {
       const wordStart = charPos;
       const wordEnd = charPos + word.text.length;
 

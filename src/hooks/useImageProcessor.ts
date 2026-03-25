@@ -9,6 +9,7 @@ import { detectOCRPIIFromImage } from "@/lib/image/ocr";
 import { redactImage } from "@/lib/image/redactor";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { getDefaultRegulation, getRegulationPatterns, getRegulationLocales } from "@/lib/pii/regulations";
+import { detectFacesInCanvas } from "@/lib/face/detector";
 import type { Locale } from "@/lib/i18n/config";
 
 let idCounter = 0;
@@ -33,9 +34,10 @@ export function useImageProcessor() {
   const [enabledTypes, setEnabledTypes] = useState<PIIType[]>(
     getRegulationPatterns(getDefaultRegulation(locale))
   );
+  const [faceDetectionEnabled, setFaceDetectionEnabled] = useState(false);
 
   const scanImage = useCallback(
-    async (file: File, types: PIIType[], reg: RegulationType) => {
+    async (file: File, types: PIIType[], reg: RegulationType, detectFaces: boolean = false) => {
       setStatus("ocr-scanning");
       setProgress(0);
       setError(null);
@@ -51,9 +53,32 @@ export function useImageProcessor() {
           setProgress
         );
 
+        let allRedactions = found;
+
+        // Run face detection if enabled
+        if (detectFaces) {
+          setStatus("face-scanning");
+          setProgress(0);
+
+          const bitmap = await createImageBitmap(file);
+          const canvas = globalThis.document.createElement("canvas");
+          canvas.width = bitmap.width;
+          canvas.height = bitmap.height;
+          const ctx = canvas.getContext("2d")!;
+          ctx.drawImage(bitmap, 0, 0);
+          bitmap.close();
+
+          const faceRedactions = await detectFacesInCanvas(canvas, 0);
+          canvas.width = 0;
+          canvas.height = 0;
+
+          allRedactions = [...found, ...faceRedactions];
+          setProgress(100);
+        }
+
         const objectUrl = URL.createObjectURL(file);
         setDocument({ fileName: file.name, width, height, fileSize: file.size, objectUrl });
-        setRedactions(found);
+        setRedactions(allRedactions);
         setStatus("previewing");
       } catch (e) {
         setError(e instanceof Error ? e.message : "OCR scanning failed");
@@ -70,16 +95,46 @@ export function useImageProcessor() {
       if (!document && newFiles.length > 0) {
         const file = newFiles[0];
         setImageFile(file);
-        await scanImage(file, enabledTypes, regulation);
+        await scanImage(file, enabledTypes, regulation, faceDetectionEnabled);
       }
     },
-    [document, enabledTypes, regulation, scanImage]
+    [document, enabledTypes, regulation, faceDetectionEnabled, scanImage]
   );
 
   const scan = useCallback(async () => {
     if (!imageFile) return;
-    await scanImage(imageFile, enabledTypes, regulation);
-  }, [imageFile, enabledTypes, regulation, scanImage]);
+    await scanImage(imageFile, enabledTypes, regulation, faceDetectionEnabled);
+  }, [imageFile, enabledTypes, regulation, faceDetectionEnabled, scanImage]);
+
+  const scanFaces = useCallback(async () => {
+    if (!imageFile) return;
+    try {
+      setStatus("face-scanning");
+      setProgress(0);
+
+      // Remove existing face redactions before re-scanning
+      setRedactions((prev) => prev.filter((r) => r.piiType !== "face"));
+
+      const bitmap = await createImageBitmap(imageFile);
+      const canvas = globalThis.document.createElement("canvas");
+      canvas.width = bitmap.width;
+      canvas.height = bitmap.height;
+      const ctx = canvas.getContext("2d")!;
+      ctx.drawImage(bitmap, 0, 0);
+      bitmap.close();
+
+      const faceRedactions = await detectFacesInCanvas(canvas, 0);
+      canvas.width = 0;
+      canvas.height = 0;
+
+      setRedactions((prev) => [...prev, ...faceRedactions]);
+      setProgress(100);
+      setStatus("previewing");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Face detection failed");
+      setStatus("error");
+    }
+  }, [imageFile]);
 
   const applyRedaction = useCallback(async () => {
     if (!imageFile || !document) return;
@@ -208,6 +263,7 @@ export function useImageProcessor() {
     error,
     regulation,
     enabledTypes,
+    faceDetectionEnabled,
     handleFilesSelected,
     removeFile,
     scan,
@@ -221,6 +277,8 @@ export function useImageProcessor() {
     addManualRedaction,
     changeRegulation,
     toggleType,
+    setFaceDetectionEnabled,
+    scanFaces,
     reset,
   };
 }

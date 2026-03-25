@@ -14,6 +14,7 @@ interface OCRWord {
   y: number;
   width: number;
   height: number;
+  lineIndex: number;
 }
 
 /** Scale used for rendering pages for OCR (higher = better accuracy but slower) */
@@ -23,21 +24,29 @@ const OCR_SCALE = 2.0;
  * Map locale to Tesseract language codes.
  * Tesseract uses ISO 639-3 codes for language data.
  */
-function getOCRLanguages(locale: string): string {
-  const langMap: Record<string, string> = {
-    en: "eng",
-    tr: "tur",
-    de: "deu",
-    fr: "fra",
-    es: "spa",
-    pt: "por",
-    ja: "jpn",
-    ko: "kor",
-    zh: "chi_sim",
-  };
-  // Always include English as fallback since PII patterns (emails, numbers) are latin-based
-  const primary = langMap[locale] || "eng";
-  return primary === "eng" ? "eng" : `${primary}+eng`;
+const LOCALE_TO_TESS: Record<string, string> = {
+  en: "eng", tr: "tur", de: "deu", fr: "fra", es: "spa",
+  pt: "por", ja: "jpn", ko: "kor", zh: "chi_sim",
+};
+
+const PII_LANG_MAP: Record<string, string> = {
+  tcKimlik: "tur",
+  trPhone: "tur",
+};
+
+function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
+  const langs = new Set<string>();
+  langs.add("eng");
+
+  const localeLang = LOCALE_TO_TESS[locale];
+  if (localeLang) langs.add(localeLang);
+
+  for (const type of piiTypes) {
+    const lang = PII_LANG_MAP[type];
+    if (lang) langs.add(lang);
+  }
+
+  return [...langs].join("+");
 }
 
 /**
@@ -56,10 +65,10 @@ async function ocrPage(
   await renderPageToCanvas(pdf, pageNumber, canvas, OCR_SCALE);
 
   // Run OCR on the rendered canvas
-  const { data } = await scheduler.addJob("recognize", canvas);
+  const { data } = await scheduler.addJob("recognize", canvas, {}, { blocks: true, text: true });
 
   const words: OCRWord[] = [];
-  let fullText = "";
+  let lineCounter = 0;
 
   // Traverse blocks -> paragraphs -> lines -> words to extract all word-level data
   if (data.blocks) {
@@ -75,20 +84,61 @@ async function ocrPage(
               y: bbox.y0 / OCR_SCALE,
               width: (bbox.x1 - bbox.x0) / OCR_SCALE,
               height: (bbox.y1 - bbox.y0) / OCR_SCALE,
+              lineIndex: lineCounter,
             });
-
-            fullText += word.text + " ";
           }
+          lineCounter++;
         }
       }
     }
+  }
+
+  // Strip common OCR noise characters from word edges to check if it's a digit group
+  const stripOCRNoise = (text: string) => text.replace(/^[.,;:|]+|[.,;:|]+$/g, "");
+
+  // Merge adjacent digit-only words so numeric PII patterns (TC Kimlik, IBAN, etc.) match
+  // Also handles OCR noise like "1364." + "3908756" by stripping punctuation before checking
+  const mergedWords: OCRWord[] = [];
+  for (const word of words) {
+    const last = mergedWords[mergedWords.length - 1];
+    const lastClean = last ? stripOCRNoise(last.text) : "";
+    const wordClean = stripOCRNoise(word.text);
+    // Check if adjacent words should be merged:
+    // 1. Both are digit groups (TC Kimlik, IBAN, etc.)
+    // 2. Single letter + digits (passport "A" + "123456", seri "U" + "09")
+    const bothDigits =
+      lastClean.length > 0 && /^\d+$/.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    const letterThenDigits =
+      /^[A-Z]$/i.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    if (last && last.lineIndex === word.lineIndex && (bothDigits || letterThenDigits)) {
+      const minX = Math.min(last.x, word.x);
+      const minY = Math.min(last.y, word.y);
+      const maxX = Math.max(last.x + last.width, word.x + word.width);
+      const maxY = Math.max(last.y + last.height, word.y + word.height);
+      // Use cleaned digits for the merged text
+      last.text = lastClean + wordClean;
+      last.x = minX;
+      last.y = minY;
+      last.width = maxX - minX;
+      last.height = maxY - minY;
+    } else {
+      mergedWords.push({ ...word });
+    }
+  }
+
+  // Build fullText from merged words
+  let mergedFullText = "";
+  for (const word of mergedWords) {
+    mergedFullText += word.text + " ";
   }
 
   // Clean up offscreen canvas
   canvas.width = 0;
   canvas.height = 0;
 
-  return { words, fullText: fullText.trim() };
+  return { words: mergedWords, fullText: mergedFullText.trim() };
 }
 
 /**
@@ -144,7 +194,7 @@ export async function detectOCRPII(
   locale: string,
   onProgress?: (progress: number) => void
 ): Promise<RedactionArea[]> {
-  const lang = getOCRLanguages(locale);
+  const lang = getOCRLanguages(locale, piiTypes);
   const ocrRedactions: RedactionArea[] = [];
 
   // Parse PDF once for all pages instead of re-parsing per page

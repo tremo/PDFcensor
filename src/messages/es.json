@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Redacción automática de datos personales en PDF",
-    "description": "Elimine permanentemente datos personales de PDFs. Compatible con RGPD, HIPAA. 100% del lado del cliente — sus archivos nunca salen de su navegador."
+    "title": "OfflineRedact — Redacción automática para PDFs, Word e imágenes",
+    "description": "Elimine permanentemente datos personales de PDFs, documentos Word e imágenes. Compatible con RGPD, HIPAA. 100% del lado del cliente — sus archivos nunca salen de su navegador."
   },
   "nav": {
     "home": "Inicio",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% Del lado del cliente — Sus archivos nunca salen de su navegador",
-    "title": "Redacte permanentemente datos personales de documentos PDF",
-    "subtitle": "Detecte y elimine automáticamente datos personales — SSN, nombres, correos, teléfonos, IBAN — de sus archivos PDF. Compatible con RGPD, HIPAA y KVKK.",
+    "title": "Redacte datos sensibles de PDFs, documentos e imágenes",
+    "subtitle": "Redacción automática de datos personales y rostros en PDFs, documentos Word e imágenes. Compatible con HIPAA/GDPR/KVKK.",
     "cta": "Comenzar gratis",
     "ctaSecondary": "Ver precios",
     "trustedBy": "Utilizado por bufetes de abogados, instituciones de salud y agencias gubernamentales"
   },
   "features": {
     "title": "¿Por qué OfflineRedact?",
-    "subtitle": "Redacción de PDF de nivel empresarial que funciona completamente en su navegador",
+    "subtitle": "Redacción de documentos de nivel empresarial que funciona completamente en su navegador",
     "trueRedaction": {
       "title": "Redacción verdadera",
       "description": "A diferencia de simples cajas negras, eliminamos los datos de texto reales del PDF. El contenido redactado no se puede seleccionar, copiar ni recuperar."
@@ -36,9 +36,17 @@
       "title": "Soporte multi-regulación",
       "description": "Perfiles integrados para RGPD, HIPAA, KVKK, CCPA, LGPD y más. Selecciona automáticamente el perfil correcto según su ubicación."
     },
+    "multiFormat": {
+      "title": "PDF, Word e imágenes",
+      "description": "Redacte PDFs, documentos Word (.docx) e imágenes — todo desde una sola herramienta. Sin necesidad de cambiar entre diferentes aplicaciones."
+    },
+    "ocrSupport": {
+      "title": "OCR integrado",
+      "description": "¿Documentos escaneados y fotos? Sin problema. El OCR integrado lee texto de imágenes para detectar también datos sensibles en escaneos."
+    },
     "batch": {
       "title": "Procesamiento por lotes",
-      "description": "Cargue múltiples PDFs a la vez. Procese todos secuencialmente y descargue como un solo archivo ZIP."
+      "description": "Cargue múltiples archivos a la vez. Procese todos secuencialmente y descargue como un solo archivo ZIP."
     },
     "metadata": {
       "title": "Limpieza de metadatos",
@@ -50,7 +58,7 @@
     "subtitle": "Tres simples pasos para redactar permanentemente información sensible",
     "step1": {
       "title": "Cargar",
-      "description": "Arrastre y suelte sus archivos PDF o haga clic para explorar. Soporta múltiples archivos."
+      "description": "Arrastre y suelte sus PDFs, documentos Word o imágenes — o haga clic para explorar. Soporta múltiples archivos."
     },
     "step2": {
       "title": "Revisar",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Descargar",
-      "description": "Descargue su PDF permanentemente redactado. El texto original se elimina irrecuperablemente."
+      "description": "Descargue su archivo permanentemente redactado. El texto original se elimina irrecuperablemente."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "La mayoría de las herramientas de redacción requieren subir tu documento completo a sus servidores. OfflineRedact funciona diferente.",
     "otherTools": "Otras Herramientas",
     "yourDoc": "Tu documento",
-    "yourDocDesc": "PDF con datos sensibles",
+    "yourDocDesc": "Archivo con datos sensibles",
     "theirServers": "Sus servidores",
     "theirServersDesc": "Archivo completo subido y almacenado",
     "whoKnows": "¿Quién sabe?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "¿Listo para proteger datos sensibles?",
-    "subtitle": "Comience a redactar PDFs gratis — sin registro necesario.",
+    "subtitle": "Comience a redactar documentos gratis — sin registro necesario.",
     "button": "Comenzar a redactar ahora"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio",
     "rights": "Todos los derechos reservados.",
-    "tagline": "Redacción permanente de PDF — 100% en su navegador."
+    "tagline": "Redacción permanente de documentos — 100% en su navegador."
   },
   "redact": {
     "title": "Herramienta de censura de documentos",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Suelta los archivos aquí",
       "subtitle": "o haga clic para explorar sus archivos",
-      "hint": "Admite archivos PDF y Word (.docx). Tus archivos nunca salen de tu navegador.",
+      "hint": "Admite archivos PDF, Word (.docx) e imágenes (JPG, PNG, WebP, TIFF). Tus archivos nunca salen de tu navegador.",
       "processing": "Procesando..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Detectando rostros...",
+      "faceDetection": "Detección de rostros",
+      "faceDetectionWarning": "La detección de rostros puede tardar más.",
+      "rescanFaces": "Re-escanear rostros"
     },
     "docx": {
       "pending": "Pendiente",
@@ -208,14 +220,35 @@
       "passport": "Número de pasaporte",
       "names": "Nombres de personas",
       "address": "Direcciones",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Rostro"
+    },
+    "scanProgress": {
+      "stepParsing": "Analizar",
+      "stepScanning": "Escanear",
+      "stepFaceScanning": "Rostros",
+      "foundSoFar": "Detectados hasta ahora",
+      "faceDetectionQueued": "La detección facial comenzará después del escaneo de texto.",
+      "msg_parsing1": "Leyendo la estructura del documento...",
+      "msg_parsing2": "Sus archivos nunca salen de su navegador.",
+      "msg_scan1": "Buscando información sensible...",
+      "msg_scan2": "Detectando números de identidad, correos, teléfonos...",
+      "msg_scan3": "Todo se procesa localmente en su dispositivo.",
+      "msg_scan4": "Verificando regulaciones de privacidad...",
+      "msg_scanFace1": "Escaneando texto en busca de datos personales...",
+      "msg_scanFace2": "Detectando números de identidad, correos, teléfonos...",
+      "msg_scanFace3": "Sus datos permanecen 100% privados en su dispositivo.",
+      "msg_scanFace4": "La detección facial comenzará en breve...",
+      "msg_face1": "Analizando imágenes en busca de rostros...",
+      "msg_face2": "Identificando zonas de rostros para difuminar...",
+      "msg_face3": "Casi listo — asegurando su documento."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Suelta tu documento aquí",
       "subtitle": "o haz clic para explorar",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Detección Automática",

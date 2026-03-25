@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatická redakcia osobných údajov z PDF, Wordu a obrázkov",
+    "description": "Trvalo odstráňte osobné údaje z PDF, dokumentov Word a obrázkov. V súlade s HIPAA, GDPR, KVKK. 100% na strane klienta — vaše súbory nikdy neopustia váš prehliadač."
   },
   "nav": {
     "home": "Domov",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% na strane klienta — Vaše súbory nikdy neopustia váš prehliadač",
-    "title": "Trvalo odstráňte osobné údaje z PDF dokumentov",
-    "subtitle": "Automaticky zistite a trvalo odstráňte osobné údaje — rodné čísla, mená, e-maily, telefónne čísla, IBAN — z vašich PDF súborov. V súlade s HIPAA, GDPR a KVKK.",
+    "title": "Redigujte citlivé údaje z PDF, dokumentov a obrázkov",
+    "subtitle": "Automatická redakcia osobných údajov a tvárí z PDF, Wordu a obrázkov. Súlad s HIPAA/GDPR/KVKK.",
     "cta": "Začať — Zadarmo",
     "ctaSecondary": "Pozrieť cenník",
     "trustedBy": "Dôverujú nám právnické firmy, poskytovatelia zdravotnej starostlivosti a vládne agentúry"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Profesionálna redakcia dokumentov, ktorá beží úplne vo vašom prehliadači",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Podpora PDF, Word a obrázkov",
+      "description": "Redigujte PDF, dokumenty Word (.docx) a obrázky — všetko z jedného nástroja. Nemusíte prepínať medzi rôznymi aplikáciami."
+    },
+    "ocrSupport": {
+      "title": "Vstavané OCR",
+      "description": "Naskenované dokumenty a fotografie? Žiadny problém. Vstavané OCR číta text z obrázkov, takže citlivé údaje v skenoch budú tiež zachytené."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Nahrajte viacero súborov naraz. Spracujte ich všetky postupne a stiahnite ako jeden ZIP súbor."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Presuňte svoje PDF, dokumenty Word alebo obrázky — alebo kliknite na prehľadávanie. Podporuje viacero súborov."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Stiahnite si trvalo redigovaný súbor. Pôvodný text je nevratne odstránený."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Súbor s citlivými údajmi",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Pripravení chrániť citlivé údaje?",
-    "subtitle": "Začnite redigovať PDF zadarmo — bez registrácie.",
+    "subtitle": "Začnite redigovať dokumenty zadarmo — bez registrácie.",
     "button": "Začať teraz"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Zásady ochrany osobných údajov",
     "terms": "Podmienky služby",
     "rights": "Všetky práva vyhradené.",
-    "tagline": "Trvalá redakcia PDF — 100% vo vašom prehliadači."
+    "tagline": "Trvalá redakcia dokumentov — 100% vo vašom prehliadači."
   },
   "redact": {
     "title": "Document Redaction Tool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Podporuje súbory PDF, Word (.docx) a obrázky (JPG, PNG, WebP, TIFF). Vaše súbory nikdy neopustia váš prehliadač.",
       "processing": "Processing..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Detekcia tvárí...",
+      "faceDetection": "Detekcia tvárí",
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Znovu skenovať tváre"
     },
     "docx": {
       "pending": "Pending",
@@ -208,14 +220,35 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Tvár"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

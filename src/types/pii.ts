@@ -11,7 +11,8 @@ export type PIIType =
   | "passport"
   | "names"
   | "address"
-  | "dateOfBirth";
+  | "dateOfBirth"
+  | "face";
 
 export interface PIIMatch {
   type: PIIType;

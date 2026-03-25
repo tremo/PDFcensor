@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Oscuramento automatico per PDF, documenti Word e immagini",
+    "description": "Rimuovi permanentemente i dati personali da PDF, documenti Word e immagini. Conforme a HIPAA, GDPR e KVKK. 100% lato client — i tuoi file non lasciano mai il browser."
   },
   "nav": {
     "home": "Home",
@@ -11,85 +11,93 @@
   },
   "hero": {
     "badge": "100% lato client — I tuoi file non lasciano mai il tuo browser",
-    "title": "Oscura permanentemente i dati personali dai documenti PDF",
-    "subtitle": "Rileva e rimuovi automaticamente i dati personali — codice fiscale, nomi, email, numeri di telefono, IBAN — dai tuoi file PDF. Conforme a HIPAA, GDPR e KVKK.",
+    "title": "Oscura i dati sensibili da PDF, documenti e immagini",
+    "subtitle": "Oscuramento automatico di dati personali e volti da PDF, documenti Word e immagini. Conforme a HIPAA/GDPR/KVKK.",
     "cta": "Inizia — Gratis",
     "ctaSecondary": "Vedi prezzi",
     "trustedBy": "Utilizzato da studi legali, strutture sanitarie e agenzie governative"
   },
   "features": {
-    "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "title": "Perch\u00e9 OfflineRedact?",
+    "subtitle": "Oscuramento documenti di livello enterprise che funziona interamente nel tuo browser",
     "trueRedaction": {
-      "title": "True Redaction",
-      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+      "title": "Oscuramento reale",
+      "description": "A differenza delle semplici caselle nere, rimuoviamo i dati di testo effettivi dal PDF. Il contenuto oscurato non pu\u00f2 essere selezionato, copiato o recuperato."
     },
     "clientSide": {
-      "title": "100% Client-Side",
-      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+      "title": "100% Lato client",
+      "description": "I tuoi file non lasciano mai il tuo dispositivo. Tutta l'elaborazione avviene nel tuo browser \u2014 nessun upload, nessun server, nessuna fuga di dati."
     },
     "autoDetect": {
-      "title": "Auto-Detect PII",
-      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+      "title": "Rilevamento automatico PII",
+      "description": "Trova automaticamente codici fiscali, nomi, e-mail, numeri di telefono, IBAN, carte di credito e altro tramite corrispondenza di pattern con regole di validazione integrate."
     },
     "regulations": {
-      "title": "Multi-Regulation Support",
-      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+      "title": "Supporto multi-normativa",
+      "description": "Profili integrati per HIPAA, GDPR, KVKK, CCPA, LGPD e altro. Seleziona automaticamente il profilo giusto in base alla tua posizione."
+    },
+    "multiFormat": {
+      "title": "PDF, Word e immagini",
+      "description": "Oscura PDF, documenti Word (.docx) e immagini — tutto da un unico strumento. Nessun bisogno di passare tra diverse applicazioni."
+    },
+    "ocrSupport": {
+      "title": "OCR integrato",
+      "description": "Documenti scansionati e foto? Nessun problema. L'OCR integrato legge il testo dalle immagini per individuare anche i dati sensibili nelle scansioni."
     },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Elaborazione in batch",
+      "description": "Carica pi\u00f9 file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
     },
     "metadata": {
-      "title": "Metadata Cleaning",
-      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+      "title": "Pulizia metadati",
+      "description": "Rimuove i metadati nascosti \u2014 autore, titolo, data di creazione, informazioni sul software \u2014 che potrebbero rivelare informazioni sensibili."
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "title": "Come funziona",
+    "subtitle": "Tre semplici passaggi per oscurare permanentemente le informazioni sensibili",
     "step1": {
-      "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "title": "Carica",
+      "description": "Trascina e rilascia i tuoi PDF, documenti Word o immagini — o clicca per sfogliare. Supporta più file."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Controlla",
+      "description": "I dati personali rilevati automaticamente vengono evidenziati. Aggiungi, rimuovi o modifica gli oscuramenti prima di applicarli."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Scarica",
+      "description": "Scarica il tuo file oscurato in modo permanente. Il testo originale viene rimosso in modo irrecuperabile."
     }
   },
   "comparison": {
-    "badge": "The Difference",
-    "title": "Other tools upload your files. We don't.",
-    "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
-    "otherTools": "Other Tools",
-    "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
-    "theirServers": "Their servers",
-    "theirServersDesc": "Full file uploaded & stored",
-    "whoKnows": "Who knows?",
-    "whoKnowsDesc": "Retained for hours or indefinitely",
-    "yourBrowser": "Your browser",
-    "yourBrowserDesc": "Processed securely, never stored",
-    "redactedFile": "Redacted file",
-    "redactedFileDesc": "Created locally, download instantly",
-    "zeroRetention": "Zero storage. Zero retention.",
-    "footnote": "All detection runs locally in your browser. Your files never leave your device."
+    "badge": "La differenza",
+    "title": "Altri strumenti caricano i tuoi file. Noi no.",
+    "subtitle": "La maggior parte degli strumenti di oscuramento richiede il caricamento dell'intero documento sui propri server. OfflineRedact funziona diversamente.",
+    "otherTools": "Altri strumenti",
+    "yourDoc": "Il tuo documento",
+    "yourDocDesc": "File con dati sensibili",
+    "theirServers": "I loro server",
+    "theirServersDesc": "File completo caricato e archiviato",
+    "whoKnows": "Chi lo sa?",
+    "whoKnowsDesc": "Conservato per ore o indefinitamente",
+    "yourBrowser": "Il tuo browser",
+    "yourBrowserDesc": "Elaborato in sicurezza, mai archiviato",
+    "redactedFile": "File oscurato",
+    "redactedFileDesc": "Creato localmente, download immediato",
+    "zeroRetention": "Zero archiviazione. Zero conservazione.",
+    "footnote": "Tutto il rilevamento avviene localmente nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo."
   },
   "security": {
-    "title": "True permanent redaction",
-    "subtitle": "Unlike basic PDF editors that just overlay black boxes, OfflineRedact creates a new document without the sensitive data. It's not hidden — it simply doesn't exist in the output.",
-    "noCopy": "Can't copy/paste",
-    "noCopyDesc": "Text is not in output",
-    "noTricks": "No Photoshop tricks",
-    "noTricksDesc": "Not hidden, gone",
-    "zeroRetention": "Zero retention",
-    "zeroRetentionDesc": "Documents processed and purged",
-    "encrypted": "AES-256 encrypted",
-    "encryptedDesc": "Bank-grade encryption"
+    "title": "Oscuramento permanente reale",
+    "subtitle": "A differenza degli editor PDF di base che sovrappongono semplicemente caselle nere, OfflineRedact crea un nuovo documento senza i dati sensibili. Non \u00e8 nascosto \u2014 semplicemente non esiste nell'output.",
+    "noCopy": "Impossibile copiare/incollare",
+    "noCopyDesc": "Il testo non \u00e8 nell'output",
+    "noTricks": "Nessun trucco Photoshop",
+    "noTricksDesc": "Non nascosto, rimosso",
+    "zeroRetention": "Zero conservazione",
+    "zeroRetentionDesc": "Documenti elaborati e cancellati",
+    "encrypted": "Crittografia AES-256",
+    "encryptedDesc": "Crittografia di livello bancario"
   },
   "compliance": {
     "title": "Built for Global Compliance",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Pronto a proteggere i dati sensibili?",
-    "subtitle": "Inizia a oscurare i PDF gratuitamente — senza registrazione.",
+    "subtitle": "Inizia a oscurare i tuoi documenti gratuitamente — senza registrazione.",
     "button": "Inizia ora"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Informativa sulla privacy",
     "terms": "Termini di servizio",
     "rights": "Tutti i diritti riservati.",
-    "tagline": "Oscuramento permanente PDF — 100% nel tuo browser."
+    "tagline": "Oscuramento permanente documenti — 100% nel tuo browser."
   },
   "redact": {
     "title": "Document Redaction Tool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Supporta file PDF, Word (.docx) e immagini (JPG, PNG, WebP, TIFF). I tuoi file non lasciano mai il browser.",
       "processing": "Processing..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Rilevamento volti...",
+      "faceDetection": "Rilevamento volti",
+      "faceDetectionWarning": "Il rilevamento volti potrebbe richiedere più tempo.",
+      "rescanFaces": "Ri-scansiona volti"
     },
     "docx": {
       "pending": "Pending",
@@ -208,14 +220,35 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Volto"
+    },
+    "scanProgress": {
+      "stepParsing": "Analisi",
+      "stepScanning": "Scansione",
+      "stepFaceScanning": "Volti",
+      "foundSoFar": "Rilevati finora",
+      "faceDetectionQueued": "Il rilevamento facciale inizierà dopo la scansione del testo.",
+      "msg_parsing1": "Lettura della struttura del documento...",
+      "msg_parsing2": "I tuoi file non lasciano mai il tuo browser.",
+      "msg_scan1": "Ricerca di informazioni sensibili...",
+      "msg_scan2": "Rilevamento numeri ID, email, telefoni...",
+      "msg_scan3": "Tutto viene elaborato localmente sul tuo dispositivo.",
+      "msg_scan4": "Verifica delle normative sulla privacy...",
+      "msg_scanFace1": "Scansione del testo per dati personali...",
+      "msg_scanFace2": "Rilevamento numeri ID, email, telefoni...",
+      "msg_scanFace3": "I tuoi dati rimangono al 100% privati sul tuo dispositivo.",
+      "msg_scanFace4": "Il rilevamento facciale inizierà a breve...",
+      "msg_face1": "Analisi delle immagini per rilevare volti...",
+      "msg_face2": "Identificazione delle aree dei volti da sfocare...",
+      "msg_face3": "Quasi finito — messa in sicurezza del documento."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

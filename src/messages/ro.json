@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Redactare automată a datelor personale din PDF, Word și imagini",
+    "description": "Eliminați permanent datele personale din fișiere PDF, documente Word și imagini. Conform HIPAA, GDPR, KVKK. 100% pe partea clientului — fișierele dvs. nu părăsesc niciodată browserul."
   },
   "nav": {
     "home": "Acasă",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% pe partea clientului — Fișierele dvs. nu părăsesc niciodată browserul",
-    "title": "Eliminați permanent datele personale din documentele PDF",
-    "subtitle": "Detectați și eliminați automat datele personale — CNP, nume, emailuri, numere de telefon, IBAN — din fișierele PDF. Conform HIPAA, GDPR și KVKK.",
+    "title": "Redactați datele sensibile din PDF-uri, documente și imagini",
+    "subtitle": "Redactare automată a datelor personale și fețelor din PDF-uri, Word și imagini. Conform HIPAA/GDPR/KVKK.",
     "cta": "Începeți — Gratuit",
     "ctaSecondary": "Vezi prețuri",
     "trustedBy": "De încredere pentru firme de avocatură, furnizori de sănătate și agenții guvernamentale"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Redactare profesională a documentelor, care rulează în întregime în browserul dvs.",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Suport PDF, Word și imagini",
+      "description": "Redactați PDF-uri, documente Word (.docx) și imagini — totul dintr-un singur instrument. Nu este nevoie să comutați între aplicații diferite."
+    },
+    "ocrSupport": {
+      "title": "OCR încorporat",
+      "description": "Documente scanate și fotografii? Nicio problemă. OCR-ul încorporat citește textul din imagini, astfel încât datele sensibile din scanări sunt detectate."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Încărcați mai multe fișiere deodată. Procesați-le pe toate secvențial și descărcați ca un singur fișier ZIP."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Trageți și plasați PDF-uri, documente Word sau imagini — sau faceți clic pentru a răsfoi. Acceptă mai multe fișiere."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Descărcați fișierul redactat permanent. Textul original este eliminat irecuperabil."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Fișier cu date sensibile",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Pregătit să protejați datele sensibile?",
-    "subtitle": "Începeți redactarea PDF gratuit — fără înregistrare.",
+    "subtitle": "Începeți redactarea documentelor gratuit — fără înregistrare.",
     "button": "Începeți acum"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Politica de confidențialitate",
     "terms": "Termeni și condiții",
     "rights": "Toate drepturile rezervate.",
-    "tagline": "Redactare permanentă PDF — 100% în browserul dvs."
+    "tagline": "Redactare permanentă a documentelor — 100% în browserul dvs."
   },
   "redact": {
     "title": "Document Redaction Tool",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Acceptă fișiere PDF, Word (.docx) și imagini (JPG, PNG, WebP, TIFF). Fișierele dvs. nu părăsesc niciodată browserul.",
       "processing": "Processing..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Detectarea fețelor...",
+      "faceDetection": "Detectarea fețelor",
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Rescanare fețe"
     },
     "docx": {
       "pending": "Pending",
@@ -208,14 +220,35 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Față"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

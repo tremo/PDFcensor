@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Caviardage automatique des données personnelles dans les PDF",
-    "description": "Supprimez définitivement les données personnelles des PDF. Conforme au RGPD, HIPAA. 100% côté client — vos fichiers ne quittent jamais votre navigateur."
+    "title": "OfflineRedact — Caviardage automatique pour PDFs, documents Word & images",
+    "description": "Supprimez définitivement les données personnelles des PDFs, documents Word et images. Conforme au RGPD, HIPAA. 100% côté client — vos fichiers ne quittent jamais votre navigateur."
   },
   "nav": {
     "home": "Accueil",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% Côté client — Vos fichiers ne quittent jamais votre navigateur",
-    "title": "Caviardez définitivement les données personnelles des PDF",
-    "subtitle": "Détectez et supprimez automatiquement les données personnelles — SSN, noms, e-mails, numéros de téléphone, IBAN — de vos fichiers PDF. Conforme au RGPD, HIPAA et KVKK.",
+    "title": "Caviardez les données sensibles dans vos PDFs, documents & images",
+    "subtitle": "Caviardage automatique des données personnelles et visages dans les PDFs, documents Word et images. Conforme RGPD/HIPAA/KVKK.",
     "cta": "Commencer gratuitement",
     "ctaSecondary": "Voir les tarifs",
     "trustedBy": "Utilisé par des cabinets d'avocats, des établissements de santé et des organismes gouvernementaux"
   },
   "features": {
     "title": "Pourquoi OfflineRedact ?",
-    "subtitle": "Caviardage PDF de niveau entreprise qui fonctionne entièrement dans votre navigateur",
+    "subtitle": "Caviardage de documents de niveau entreprise qui fonctionne entièrement dans votre navigateur",
     "trueRedaction": {
       "title": "Vrai caviardage",
       "description": "Contrairement aux simples boîtes noires, nous supprimons les données textuelles réelles du PDF. Le contenu caviardé ne peut être sélectionné, copié ou récupéré."
@@ -36,9 +36,17 @@
       "title": "Multi-réglementations",
       "description": "Profils intégrés pour RGPD, HIPAA, KVKK, CCPA, LGPD et plus. Sélectionne automatiquement le bon profil selon votre localisation."
     },
+    "multiFormat": {
+      "title": "PDF, Word & images",
+      "description": "Caviardez des PDFs, documents Word (.docx) et images — le tout depuis un seul outil. Plus besoin de jongler entre différentes applications."
+    },
+    "ocrSupport": {
+      "title": "OCR intégrée",
+      "description": "Documents scannés et photos ? Aucun problème. L'OCR intégrée lit le texte des images pour détecter aussi les données sensibles dans les scans."
+    },
     "batch": {
       "title": "Traitement par lots",
-      "description": "Téléchargez plusieurs PDF à la fois. Traitez-les tous séquentiellement et téléchargez-les en un seul fichier ZIP."
+      "description": "Téléchargez plusieurs fichiers à la fois. Traitez-les tous séquentiellement et téléchargez-les en un seul fichier ZIP."
     },
     "metadata": {
       "title": "Nettoyage des métadonnées",
@@ -50,7 +58,7 @@
     "subtitle": "Trois étapes simples pour caviarder définitivement les informations sensibles",
     "step1": {
       "title": "Télécharger",
-      "description": "Glissez-déposez vos fichiers PDF ou cliquez pour parcourir. Prend en charge plusieurs fichiers."
+      "description": "Glissez-déposez vos PDFs, documents Word ou images — ou cliquez pour parcourir. Prend en charge plusieurs fichiers."
     },
     "step2": {
       "title": "Vérifier",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Télécharger",
-      "description": "Téléchargez votre PDF définitivement caviardé. Le texte original est irrévocablement supprimé."
+      "description": "Téléchargez votre fichier définitivement caviardé. Le texte original est irrévocablement supprimé."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "La plupart des outils de caviardage nécessitent le téléchargement de votre document entier sur leurs serveurs. OfflineRedact fonctionne différemment.",
     "otherTools": "Autres Outils",
     "yourDoc": "Votre document",
-    "yourDocDesc": "PDF avec données sensibles",
+    "yourDocDesc": "Fichier avec données sensibles",
     "theirServers": "Leurs serveurs",
     "theirServersDesc": "Fichier complet téléchargé et stocké",
     "whoKnows": "Qui sait ?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Prêt à protéger les données sensibles ?",
-    "subtitle": "Commencez à caviarder des PDF gratuitement — aucune inscription requise.",
+    "subtitle": "Commencez à caviarder vos documents gratuitement — aucune inscription requise.",
     "button": "Commencer maintenant"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "rights": "Tous droits réservés.",
-    "tagline": "Caviardage PDF permanent — 100% dans votre navigateur."
+    "tagline": "Caviardage permanent de documents — 100% dans votre navigateur."
   },
   "redact": {
     "title": "Outil de caviardage de documents",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "Déposez les fichiers ici",
       "subtitle": "ou cliquez pour parcourir vos fichiers",
-      "hint": "Prend en charge les fichiers PDF et Word (.docx). Vos fichiers ne quittent jamais votre navigateur.",
+      "hint": "Prend en charge les fichiers PDF, Word (.docx) et images (JPG, PNG, WebP, TIFF). Vos fichiers ne quittent jamais votre navigateur.",
       "processing": "Traitement en cours..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Détection des visages...",
+      "faceDetection": "Détection de visages",
+      "faceDetectionWarning": "La détection des visages peut prendre plus de temps.",
+      "rescanFaces": "Re-scanner les visages"
     },
     "docx": {
       "pending": "En attente",
@@ -208,14 +220,35 @@
       "passport": "Numéro de passeport",
       "names": "Noms de personnes",
       "address": "Adresses",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Visage"
+    },
+    "scanProgress": {
+      "stepParsing": "Analyse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Visages",
+      "foundSoFar": "Détectés jusqu'ici",
+      "faceDetectionQueued": "La détection faciale démarrera après le scan du texte.",
+      "msg_parsing1": "Lecture de la structure du document...",
+      "msg_parsing2": "Vos fichiers ne quittent jamais votre navigateur.",
+      "msg_scan1": "Recherche d'informations sensibles...",
+      "msg_scan2": "Détection des numéros d'identité, e-mails, téléphones...",
+      "msg_scan3": "Tout est traité localement sur votre appareil.",
+      "msg_scan4": "Vérification selon les réglementations de confidentialité...",
+      "msg_scanFace1": "Recherche de données personnelles dans le texte...",
+      "msg_scanFace2": "Détection des numéros d'identité, e-mails, téléphones...",
+      "msg_scanFace3": "Vos données restent 100% privées sur votre appareil.",
+      "msg_scanFace4": "La détection faciale va bientôt commencer...",
+      "msg_face1": "Analyse des images pour détecter les visages...",
+      "msg_face2": "Identification des zones de visage à flouter...",
+      "msg_face3": "Presque terminé — sécurisation de votre document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "Déposez votre document ici",
       "subtitle": "ou cliquez pour parcourir",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Détection Automatique",

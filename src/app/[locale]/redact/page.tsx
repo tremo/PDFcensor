@@ -7,10 +7,10 @@ import { PDFViewer } from "@/components/pdf/PDFViewer";
 import { PDFPageThumbnails } from "@/components/pdf/PDFPageThumbnails";
 import { RedactionControls } from "@/components/pdf/RedactionControls";
 import { CustomKeywordPanel } from "@/components/pdf/CustomKeywordPanel";
-import { DrawModeToolbar } from "@/components/pdf/DrawModeToolbar";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
 import { BatchSummary } from "@/components/pdf/BatchSummary";
+import { ScanProgress } from "@/components/pdf/ScanProgress";
 import { ImageViewer } from "@/components/image/ImageViewer";
 import { usePDFProcessor } from "@/hooks/usePDFProcessor";
 import { useDocxProcessor } from "@/hooks/useDocxProcessor";
@@ -69,7 +69,15 @@ export default function RedactPage() {
   const batch = useBatchProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
-  const [drawMode, setDrawMode] = useState(false);
+  const [faceDetectionEnabled, setFaceDetectionEnabled] = useState(false);
+
+  // Sync face detection toggle to all processors
+  const handleFaceDetectionToggle = useCallback((enabled: boolean) => {
+    setFaceDetectionEnabled(enabled);
+    pdf.setFaceDetectionEnabled(enabled);
+    img.setFaceDetectionEnabled(enabled);
+    batch.setFaceDetectionEnabled(enabled);
+  }, [pdf, img, batch]);
 
   // Route files to correct processor
   const handleFilesSelected = useCallback(
@@ -121,7 +129,6 @@ export default function RedactPage() {
     setDocumentType("none");
     setFlowMode("single");
     setSelectedRedactionId(null);
-    setDrawMode(false);
   }, [flowMode, documentType, pdf, docx, img, batch]);
 
   // Determine the active state based on document type (single mode)
@@ -188,11 +195,32 @@ export default function RedactPage() {
         ? t("titleDocx")
         : t("title");
 
-  // Determine if we're in upload phase
+  // Determine if we're in initial scanning phase (show ScanProgress overlay)
+  const isInitialScanning =
+    flowMode === "single" &&
+    ["parsing", "scanning", "ocr-scanning", "face-scanning"].includes(activeStatus) &&
+    (documentType === "pdf"
+      ? pdf.redactions.length === 0 || activeStatus === "face-scanning"
+      : documentType === "image"
+        ? img.redactions.length === 0 || activeStatus === "face-scanning"
+        : false);
+
+  // Determine if we're in upload phase (no document yet, nothing being processed)
   const isUploadPhase =
     flowMode === "single"
-      ? !hasActiveDocument
+      ? !hasActiveDocument && !isInitialScanning
       : batch.status === "idle";
+
+  // Active redactions for progress display
+  const scanProgressRedactions =
+    documentType === "image" ? img.redactions
+    : documentType === "pdf" ? pdf.redactions
+    : [];
+
+  const activeFileName =
+    documentType === "image" ? img.files[0]?.name
+    : documentType === "pdf" ? pdf.files[0]?.name
+    : undefined;
 
   // Batch processing state
   const isBatchProcessing = flowMode === "batch" && batch.status === "processing";
@@ -220,7 +248,7 @@ export default function RedactPage() {
           </p>
           <div className="flex gap-3 justify-center pt-1">
             <Button asChild variant="accent">
-              <Link href={`/${locale}/pricing`}>Upgrade to Pro — $6.99/mo</Link>
+              <Link href="/pricing">Upgrade to Pro — $6.99/mo</Link>
             </Button>
             <Button variant="outline" onClick={handleDismissBatchGate}>
               Cancel
@@ -229,7 +257,20 @@ export default function RedactPage() {
         </div>
       )}
 
-      {isUploadPhase ? (
+      {isInitialScanning ? (
+        /* Scanning progress with live results */
+        <ScanProgress
+          status={activeStatus}
+          progress={
+            documentType === "image" ? img.progress
+            : documentType === "pdf" ? pdf.progress
+            : 0
+          }
+          redactions={scanProgressRedactions}
+          fileName={activeFileName}
+          faceDetectionEnabled={faceDetectionEnabled}
+        />
+      ) : isUploadPhase ? (
         /* Upload state - regulation selection + dropzone */
         <div className="max-w-2xl mx-auto">
           <PDFDropzone
@@ -237,7 +278,8 @@ export default function RedactPage() {
             isProcessing={
               activeStatus === "parsing" ||
               activeStatus === "scanning" ||
-              activeStatus === "ocr-scanning"
+              activeStatus === "ocr-scanning" ||
+              activeStatus === "face-scanning"
             }
             selectedFiles={activeFiles}
             onRemoveFile={activeRemoveFile}
@@ -248,6 +290,8 @@ export default function RedactPage() {
             customKeywords={documentType === "pdf" || documentType === "none" ? pdf.customKeywords : undefined}
             onAddCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.addCustomKeyword : undefined}
             onRemoveCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.removeCustomKeyword : undefined}
+            faceDetectionEnabled={faceDetectionEnabled}
+            onFaceDetectionToggle={handleFaceDetectionToggle}
           />
         </div>
       ) : isBatchProcessing ? (
@@ -415,19 +459,15 @@ export default function RedactPage() {
               onRemoveRedaction={img.removeRedaction}
               selectedRedactionId={selectedRedactionId}
               onSelectRedaction={setSelectedRedactionId}
+              faceDetectionEnabled={img.faceDetectionEnabled}
+              onFaceDetectionToggle={img.setFaceDetectionEnabled}
+              onScanFaces={img.scanFaces}
             />
           </div>
         </div>
       ) : pdf.document ? (
         /* PDF Processing state (single) */
         <div className="space-y-3">
-          {/* Draw mode toolbar */}
-          <div className="bg-muted/30 rounded-xl border border-border px-4 py-2.5">
-            <DrawModeToolbar
-              isDrawMode={drawMode}
-              onToggle={() => setDrawMode((prev) => !prev)}
-            />
-          </div>
           <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
             <div className="hidden lg:block">
               <PDFPageThumbnails
@@ -450,7 +490,7 @@ export default function RedactPage() {
                   onToggleRedaction={pdf.toggleRedaction}
                   onRemoveRedaction={pdf.removeRedaction}
                   onUpdateRedaction={pdf.updateRedaction}
-                  onManualRedaction={drawMode ? pdf.addManualRedaction : undefined}
+                  onManualRedaction={pdf.addManualRedaction}
                 />
               </div>
             </div>
@@ -466,6 +506,7 @@ export default function RedactPage() {
                   "parsing",
                   "scanning",
                   "ocr-scanning",
+                  "face-scanning",
                   "redacting",
                 ].includes(pdf.status)}
               />
@@ -488,6 +529,9 @@ export default function RedactPage() {
                 onRemoveRedaction={pdf.removeRedaction}
                 selectedRedactionId={selectedRedactionId}
                 onSelectRedaction={setSelectedRedactionId}
+                faceDetectionEnabled={pdf.faceDetectionEnabled}
+                onFaceDetectionToggle={pdf.setFaceDetectionEnabled}
+                onScanFaces={pdf.scanFaces}
               />
             </div>
           </div>

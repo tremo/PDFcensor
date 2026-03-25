@@ -46,19 +46,6 @@ const blogDates: Record<string, string> = {
   "gdpr-pdf-compliance": "2026-02-05",
 };
 
-const validSlugs = Object.keys(blogContent);
-
-const blogDates: Record<string, string> = {
-  "kvkk-pdf-redaction-guide": "2025-01-15",
-  "dsgvo-pdf-schwaerzung": "2025-01-20",
-  "client-side-vs-server-side-redaction": "2025-02-01",
-  "pdf-redaction-healthcare-checklist": "2025-02-10",
-  "ccpa-pdf-redaction": "2025-02-20",
-  "hipaa-compliant-pdf-redaction": "2025-03-01",
-  "ediscovery-document-redaction": "2025-03-10",
-  "gdpr-pdf-compliance": "2025-03-15",
-};
-
 type Params = { slug: string; locale: string };
 
 export function generateStaticParams() {

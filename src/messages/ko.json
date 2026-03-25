@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — PDF 문서 개인정보 자동 삭제",
-    "description": "PDF에서 개인 데이터를 영구적으로 제거합니다. HIPAA, GDPR, KVKK 준수. 100% 클라이언트 측 처리 — 파일이 브라우저를 벗어나지 않습니다."
+    "title": "OfflineRedact — PDF, Word 및 이미지 개인정보 자동 삭제",
+    "description": "PDF, Word 문서 및 이미지에서 개인 데이터를 영구적으로 제거합니다. HIPAA, GDPR, KVKK 준수. 100% 클라이언트 측 처리 — 파일이 브라우저를 벗어나지 않습니다."
   },
   "nav": {
     "home": "홈",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% 클라이언트 측 처리 — 파일이 브라우저를 벗어나지 않습니다",
-    "title": "PDF 문서에서 개인정보를 영구적으로 삭제",
-    "subtitle": "주민등록번호, 이름, 이메일, 전화번호, IBAN 등의 개인 데이터를 자동으로 감지하고 PDF 파일에서 영구적으로 제거합니다. HIPAA, GDPR, KVKK 준수.",
+    "title": "PDF, 문서 및 이미지에서 민감한 데이터 삭제",
+    "subtitle": "PDF, Word 문서 및 이미지에서 PII와 얼굴을 자동 삭제. HIPAA/GDPR/KVKK 준수.",
     "cta": "무료로 삭제 시작",
     "ctaSecondary": "요금제 보기",
     "trustedBy": "법률 사무소, 의료 기관 및 정부 기관이 신뢰합니다"
   },
   "features": {
     "title": "왜 OfflineRedact인가?",
-    "subtitle": "브라우저에서 완전히 실행되는 엔터프라이즈급 PDF 편집",
+    "subtitle": "브라우저에서 완전히 실행되는 엔터프라이즈급 문서 편집",
     "trueRedaction": {
       "title": "진정한 삭제",
       "description": "단순한 검은 상자와 달리, PDF에서 실제 텍스트 데이터를 제거합니다. 삭제된 내용은 선택, 복사 또는 복구할 수 없습니다."
@@ -36,9 +36,17 @@
       "title": "다중 규정 지원",
       "description": "HIPAA, GDPR, KVKK, CCPA, LGPD 등의 기본 프로필이 내장되어 있습니다. 사용자 위치에 따라 적절한 프로필을 자동으로 선택합니다."
     },
+    "multiFormat": {
+      "title": "PDF, Word 및 이미지 지원",
+      "description": "PDF, Word 문서(.docx), 이미지 파일을 하나의 도구에서 모두 편집할 수 있습니다. 다른 앱으로 전환할 필요가 없습니다."
+    },
+    "ocrSupport": {
+      "title": "내장 OCR",
+      "description": "스캔 문서와 사진도 문제없습니다. 내장 OCR이 이미지에서 텍스트를 읽어 스캔본의 민감한 데이터도 감지합니다."
+    },
     "batch": {
       "title": "일괄 처리",
-      "description": "여러 PDF를 한 번에 업로드하세요. 모두 순차적으로 처리하고 하나의 ZIP 파일로 다운로드할 수 있습니다."
+      "description": "여러 파일을 한 번에 업로드하세요. 모두 순차적으로 처리하고 하나의 ZIP 파일로 다운로드할 수 있습니다."
     },
     "metadata": {
       "title": "메타데이터 정리",
@@ -50,7 +58,7 @@
     "subtitle": "세 가지 간단한 단계로 민감한 정보를 영구적으로 삭제",
     "step1": {
       "title": "업로드",
-      "description": "PDF 파일을 드래그 앤 드롭하거나 클릭하여 선택하세요. 여러 파일을 지원합니다."
+      "description": "PDF, Word 문서 또는 이미지를 드래그 앤 드롭하거나 클릭하여 선택하세요. 여러 파일을 지원합니다."
     },
     "step2": {
       "title": "검토",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "다운로드",
-      "description": "영구적으로 삭제된 PDF를 다운로드하세요. 원본 텍스트는 복구 불가능하게 제거됩니다."
+      "description": "영구적으로 삭제된 파일을 다운로드하세요. 원본 텍스트는 복구 불가능하게 제거됩니다."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "대부분의 삭제 도구는 전체 문서를 서버에 업로드해야 합니다. OfflineRedact는 다르게 작동합니다.",
     "otherTools": "다른 도구",
     "yourDoc": "귀하의 문서",
-    "yourDocDesc": "민감한 데이터가 포함된 PDF",
+    "yourDocDesc": "민감한 데이터가 포함된 파일",
     "theirServers": "그들의 서버",
     "theirServersDesc": "전체 파일 업로드 및 저장",
     "whoKnows": "누가 알까요?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "민감한 데이터를 보호할 준비가 되셨나요?",
-    "subtitle": "무료로 PDF 삭제를 시작하세요 — 가입이 필요 없습니다.",
+    "subtitle": "무료로 문서 삭제를 시작하세요 — 가입이 필요 없습니다.",
     "button": "지금 삭제 시작"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "개인정보 처리방침",
     "terms": "이용약관",
     "rights": "All rights reserved.",
-    "tagline": "영구적인 PDF 편집 — 100% 브라우저에서 처리."
+    "tagline": "영구적인 문서 편집 — 100% 브라우저에서 처리."
   },
   "redact": {
     "title": "문서 검열 도구",
@@ -123,7 +131,7 @@
     "dropzone": {
       "title": "여기에 파일을 놓으세요",
       "subtitle": "또는 클릭하여 파일을 선택하세요",
-      "hint": "PDF 및 Word(.docx) 파일을 지원합니다. 파일은 브라우저를 벗어나지 않습니다.",
+      "hint": "PDF, Word(.docx) 및 이미지(JPG, PNG, WebP, TIFF) 파일을 지원합니다. 파일은 브라우저를 벗어나지 않습니다.",
       "processing": "처리 중..."
     },
     "controls": {
@@ -170,7 +178,11 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "얼굴 감지 중...",
+      "faceDetection": "얼굴 감지",
+      "faceDetectionWarning": "얼굴 감지는 더 오래 걸릴 수 있습니다.",
+      "rescanFaces": "얼굴 재스캔"
     },
     "docx": {
       "pending": "대기 중",
@@ -208,14 +220,35 @@
       "passport": "여권번호",
       "names": "인명",
       "address": "주소",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "얼굴"
+    },
+    "scanProgress": {
+      "stepParsing": "분석",
+      "stepScanning": "스캔",
+      "stepFaceScanning": "얼굴",
+      "foundSoFar": "현재까지 감지된 항목",
+      "faceDetectionQueued": "얼굴 감지는 텍스트 스캔 완료 후 시작됩니다.",
+      "msg_parsing1": "Reading document structure...",
+      "msg_parsing2": "Your files never leave your browser.",
+      "msg_scan1": "Scanning for sensitive information...",
+      "msg_scan2": "Detecting ID numbers, emails, phones...",
+      "msg_scan3": "Everything is processed locally on your device.",
+      "msg_scan4": "Checking against privacy regulations...",
+      "msg_scanFace1": "Scanning text for personal data...",
+      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
+      "msg_scanFace3": "Your data stays 100% private on your device.",
+      "msg_scanFace4": "Face detection will begin shortly...",
+      "msg_face1": "Analyzing images for faces...",
+      "msg_face2": "Identifying face regions to blur...",
+      "msg_face3": "Almost done — securing your document."
     }
   },
   "landing": {
     "dropzone": {
       "title": "여기에 문서를 놓으세요",
       "subtitle": "또는 클릭하여 찾아보기",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "자동 감지",
