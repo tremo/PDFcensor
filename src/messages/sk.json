@@ -19,7 +19,7 @@
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Profesionálna redakcia dokumentov, ktorá beží úplne vo vašom prehliadači",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Podpora PDF, Word a obrázkov",
+      "description": "Redigujte PDF, dokumenty Word (.docx) a obrázky — všetko z jedného nástroja. Nemusíte prepínať medzi rôznymi aplikáciami."
+    },
+    "ocrSupport": {
+      "title": "Vstavané OCR",
+      "description": "Naskenované dokumenty a fotografie? Žiadny problém. Vstavané OCR číta text z obrázkov, takže citlivé údaje v skenoch budú tiež zachytené."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Nahrajte viacero súborov naraz. Spracujte ich všetky postupne a stiahnite ako jeden ZIP súbor."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Presuňte svoje PDF, dokumenty Word alebo obrázky — alebo kliknite na prehľadávanie. Podporuje viacero súborov."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Stiahnite si trvalo redigovaný súbor. Pôvodný text je nevratne odstránený."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Súbor s citlivými údajmi",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Pripravení chrániť citlivé údaje?",
-    "subtitle": "Začnite redigovať PDF zadarmo — bez registrácie.",
+    "subtitle": "Začnite redigovať dokumenty zadarmo — bez registrácie.",
     "button": "Začať teraz"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Zásady ochrany osobných údajov",
     "terms": "Podmienky služby",
     "rights": "Všetky práva vyhradené.",
-    "tagline": "Trvalá redakcia PDF — 100% vo vašom prehliadači."
+    "tagline": "Trvalá redakcia dokumentov — 100% vo vašom prehliadači."
   },
   "redact": {
     "title": "Document Redaction Tool",
