@@ -20,6 +20,8 @@ import {
   Undo2,
   X,
   Check,
+  ScanFace,
+  RefreshCw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -50,6 +52,7 @@ interface RedactionControlsProps {
   onSelectRedaction: (id: string | null) => void;
   faceDetectionEnabled?: boolean;
   onFaceDetectionToggle?: (enabled: boolean) => void;
+  onScanFaces?: () => void;
 }
 
 export function RedactionControls({
@@ -73,6 +76,7 @@ export function RedactionControls({
   onSelectRedaction,
   faceDetectionEnabled,
   onFaceDetectionToggle,
+  onScanFaces,
 }: RedactionControlsProps) {
   const t = useTranslations("redact.controls");
   const tp = useTranslations("redact.piiTypes");
@@ -401,14 +405,30 @@ export function RedactionControls({
 
       {/* Face detection toggle */}
       {onFaceDetectionToggle && (
-        <div className="bg-muted/30 rounded-xl border border-border p-3">
-          <label className="flex items-center justify-between cursor-pointer">
-            <span className="text-sm font-medium">{t("faceDetection")}</span>
-            <button
-              type="button"
+        <div className="bg-muted/30 rounded-xl border border-border p-3 space-y-2">
+          <button
+            type="button"
+            onClick={() => onFaceDetectionToggle(!faceDetectionEnabled)}
+            className={cn(
+              "w-full flex items-center gap-3 px-3 py-2 rounded-lg border transition-all text-left",
+              faceDetectionEnabled
+                ? "bg-blue-50 border-blue-200 dark:bg-blue-950/30 dark:border-blue-800"
+                : "bg-background border-border hover:border-blue-300"
+            )}
+          >
+            <ScanFace className={cn(
+              "w-5 h-5 shrink-0",
+              faceDetectionEnabled ? "text-blue-500" : "text-muted-foreground"
+            )} />
+            <span className={cn(
+              "text-sm font-medium flex-1",
+              faceDetectionEnabled ? "text-blue-700 dark:text-blue-300" : "text-foreground"
+            )}>
+              {t("faceDetection")}
+            </span>
+            <div
               role="switch"
               aria-checked={faceDetectionEnabled}
-              onClick={() => onFaceDetectionToggle(!faceDetectionEnabled)}
               className={cn(
                 "relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors",
                 faceDetectionEnabled ? "bg-blue-500" : "bg-neutral-300"
@@ -420,8 +440,18 @@ export function RedactionControls({
                   faceDetectionEnabled ? "translate-x-4" : "translate-x-0"
                 )}
               />
+            </div>
+          </button>
+          {faceDetectionEnabled && onScanFaces && (
+            <button
+              onClick={onScanFaces}
+              disabled={isProcessing}
+              className="w-full flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-colors disabled:opacity-50 dark:text-blue-400 dark:bg-blue-950/30 dark:hover:bg-blue-950/50 dark:border-blue-800"
+            >
+              <RefreshCw className="w-3 h-3" />
+              {t("rescanFaces")}
             </button>
-          </label>
+          )}
         </div>
       )}
 

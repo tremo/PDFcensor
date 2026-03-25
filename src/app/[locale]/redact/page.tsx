@@ -461,6 +461,7 @@ export default function RedactPage() {
               onSelectRedaction={setSelectedRedactionId}
               faceDetectionEnabled={img.faceDetectionEnabled}
               onFaceDetectionToggle={img.setFaceDetectionEnabled}
+              onScanFaces={img.scanFaces}
             />
           </div>
         </div>
@@ -530,6 +531,7 @@ export default function RedactPage() {
                 onSelectRedaction={setSelectedRedactionId}
                 faceDetectionEnabled={pdf.faceDetectionEnabled}
                 onFaceDetectionToggle={pdf.setFaceDetectionEnabled}
+                onScanFaces={pdf.scanFaces}
               />
             </div>
           </div>
