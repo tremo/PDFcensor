@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatic PII Redaction for PDFs, Word Docs & Images",
+    "description": "Permanently remove personal data from PDFs, Word documents, and images. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
   },
   "nav": {
     "home": "Home",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% Client-Side — Your files never leave your browser",
-    "title": "Permanently Redact PII from PDF Documents",
-    "subtitle": "Automatically detect and permanently remove personal data — SSN, names, emails, phone numbers, IBAN — from PDF, Word, and image files. HIPAA, GDPR, and KVKK compliant.",
+    "title": "Redact Sensitive Data from PDFs, Documents & Images",
+    "subtitle": "Automatically detect and permanently remove personal data — SSN, names, emails, phone numbers, IBAN — from PDF, Word, and scanned image files. Built-in OCR handles photos and scans. HIPAA, GDPR, and KVKK compliant.",
     "cta": "Start Redacting — Free",
     "ctaSecondary": "See Pricing",
     "trustedBy": "Trusted by legal firms, healthcare providers, and government agencies"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Enterprise-grade document redaction that runs entirely in your browser",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "PDF, Word & Image Support",
+      "description": "Redact PDFs, Word documents (.docx), and image files — all from the same tool. No need to switch between different apps."
+    },
+    "ocrSupport": {
+      "title": "Built-in OCR",
+      "description": "Scanned documents and photos? No problem. Built-in OCR reads text from images so sensitive data in scans gets caught too."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Upload multiple files at once. Process them all sequentially and download as a single ZIP file."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Supports multiple files."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Download your permanently redacted file. The original text is irrecoverably removed."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "File with sensitive data",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Ready to Protect Sensitive Data?",
-    "subtitle": "Start redacting PDFs for free — no signup required.",
+    "subtitle": "Start redacting documents for free — no signup required.",
     "button": "Start Redacting Now"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "rights": "All rights reserved.",
-    "tagline": "Permanent PDF redaction — 100% in your browser."
+    "tagline": "Permanent document redaction — 100% in your browser."
   },
   "redact": {
     "title": "Document Redaction Tool",
