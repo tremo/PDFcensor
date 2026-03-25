@@ -172,7 +172,8 @@
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Rilevamento volti...",
-      "faceDetection": "Rilevamento volti"
+      "faceDetection": "Rilevamento volti",
+      "faceDetectionWarning": "Il rilevamento volti potrebbe richiedere più tempo."
     },
     "docx": {
       "pending": "Pending",
@@ -212,6 +213,14 @@
       "address": "Addresses",
       "customKeyword": "自定义关键词",
       "face": "Volto"
+    },
+    "scanProgress": {
+      "stepParsing": "Analisi",
+      "stepScanning": "Scansione",
+      "stepFaceScanning": "Volti",
+      "patience": "Potrebbe richiedere un momento...",
+      "foundSoFar": "Rilevato finora",
+      "faceDetectionQueued": "Il rilevamento volti inizierà dopo la scansione del testo."
     }
   },
   "landing": {

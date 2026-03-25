@@ -172,7 +172,8 @@
       "drawModeHint": "Sansür kutusu çizmek için belge üzerinde tıklayıp sürükleyin",
       "selectModeHint": "Sansürleri seçmek, taşımak ya da boyutlandırmak için tıklayın",
       "faceScanning": "Yüzler tespit ediliyor...",
-      "faceDetection": "Yüz Tespiti"
+      "faceDetection": "Yüz Tespiti",
+      "faceDetectionWarning": "Yüz tespiti işlemi daha uzun sürebilir."
     },
     "docx": {
       "pending": "Bekliyor",
@@ -212,6 +213,14 @@
       "address": "Adresler",
       "customKeyword": "Özel Kelime",
       "face": "Yüz"
+    },
+    "scanProgress": {
+      "stepParsing": "Ayrıştır",
+      "stepScanning": "Tara",
+      "stepFaceScanning": "Yüzler",
+      "patience": "Bu biraz zaman alabilir...",
+      "foundSoFar": "Şimdiye kadar tespit edilen",
+      "faceDetectionQueued": "Yüz tespiti, metin taraması tamamlandıktan sonra başlayacak."
     }
   },
   "landing": {

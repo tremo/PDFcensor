@@ -10,6 +10,7 @@ import { CustomKeywordPanel } from "@/components/pdf/CustomKeywordPanel";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
 import { BatchSummary } from "@/components/pdf/BatchSummary";
+import { ScanProgress } from "@/components/pdf/ScanProgress";
 import { ImageViewer } from "@/components/image/ImageViewer";
 import { usePDFProcessor } from "@/hooks/usePDFProcessor";
 import { useDocxProcessor } from "@/hooks/useDocxProcessor";
@@ -68,6 +69,15 @@ export default function RedactPage() {
   const batch = useBatchProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
+  const [faceDetectionEnabled, setFaceDetectionEnabled] = useState(false);
+
+  // Sync face detection toggle to all processors
+  const handleFaceDetectionToggle = useCallback((enabled: boolean) => {
+    setFaceDetectionEnabled(enabled);
+    pdf.setFaceDetectionEnabled(enabled);
+    img.setFaceDetectionEnabled(enabled);
+    batch.setFaceDetectionEnabled(enabled);
+  }, [pdf, img, batch]);
 
   // Route files to correct processor
   const handleFilesSelected = useCallback(
@@ -185,11 +195,32 @@ export default function RedactPage() {
         ? t("titleDocx")
         : t("title");
 
-  // Determine if we're in upload phase
+  // Determine if we're in initial scanning phase (show ScanProgress overlay)
+  const isInitialScanning =
+    flowMode === "single" &&
+    ["parsing", "scanning", "ocr-scanning", "face-scanning"].includes(activeStatus) &&
+    (documentType === "pdf"
+      ? pdf.redactions.length === 0 || activeStatus === "face-scanning"
+      : documentType === "image"
+        ? img.redactions.length === 0 || activeStatus === "face-scanning"
+        : false);
+
+  // Determine if we're in upload phase (no document yet, nothing being processed)
   const isUploadPhase =
     flowMode === "single"
-      ? !hasActiveDocument
+      ? !hasActiveDocument && !isInitialScanning
       : batch.status === "idle";
+
+  // Active redactions for progress display
+  const scanProgressRedactions =
+    documentType === "image" ? img.redactions
+    : documentType === "pdf" ? pdf.redactions
+    : [];
+
+  const activeFileName =
+    documentType === "image" ? img.files[0]?.name
+    : documentType === "pdf" ? pdf.files[0]?.name
+    : undefined;
 
   // Batch processing state
   const isBatchProcessing = flowMode === "batch" && batch.status === "processing";
@@ -226,7 +257,20 @@ export default function RedactPage() {
         </div>
       )}
 
-      {isUploadPhase ? (
+      {isInitialScanning ? (
+        /* Scanning progress with live results */
+        <ScanProgress
+          status={activeStatus}
+          progress={
+            documentType === "image" ? img.progress
+            : documentType === "pdf" ? pdf.progress
+            : 0
+          }
+          redactions={scanProgressRedactions}
+          fileName={activeFileName}
+          faceDetectionEnabled={faceDetectionEnabled}
+        />
+      ) : isUploadPhase ? (
         /* Upload state - regulation selection + dropzone */
         <div className="max-w-2xl mx-auto">
           <PDFDropzone
@@ -246,6 +290,8 @@ export default function RedactPage() {
             customKeywords={documentType === "pdf" || documentType === "none" ? pdf.customKeywords : undefined}
             onAddCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.addCustomKeyword : undefined}
             onRemoveCustomKeyword={documentType === "pdf" || documentType === "none" ? pdf.removeCustomKeyword : undefined}
+            faceDetectionEnabled={faceDetectionEnabled}
+            onFaceDetectionToggle={handleFaceDetectionToggle}
           />
         </div>
       ) : isBatchProcessing ? (

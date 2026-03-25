@@ -2,7 +2,7 @@
 
 import { useCallback, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Upload, FileText, X } from "lucide-react";
+import { Upload, FileText, X, ScanFace } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { regulations } from "@/lib/pii/regulations";
 import type { RegulationType, PIIType } from "@/types/pii";
@@ -20,6 +20,8 @@ interface PDFDropzoneProps {
   customKeywords?: string[];
   onAddCustomKeyword?: (keyword: string) => void;
   onRemoveCustomKeyword?: (keyword: string) => void;
+  faceDetectionEnabled?: boolean;
+  onFaceDetectionToggle?: (enabled: boolean) => void;
 }
 
 export function PDFDropzone({
@@ -34,6 +36,8 @@ export function PDFDropzone({
   customKeywords = [],
   onAddCustomKeyword,
   onRemoveCustomKeyword,
+  faceDetectionEnabled,
+  onFaceDetectionToggle,
 }: PDFDropzoneProps) {
   const t = useTranslations("redact.dropzone");
   const tp = useTranslations("redact.piiTypes");
@@ -130,6 +134,55 @@ export function PDFDropzone({
             ))}
           </div>
         </div>
+
+        {/* Face detection toggle */}
+        {onFaceDetectionToggle && (
+          <div className="space-y-2">
+            <button
+              type="button"
+              onClick={() => onFaceDetectionToggle(!faceDetectionEnabled)}
+              className={cn(
+                "w-full flex items-center gap-3 px-4 py-3 rounded-lg border transition-all text-left",
+                faceDetectionEnabled
+                  ? "bg-blue-50 border-blue-200 dark:bg-blue-950/30 dark:border-blue-800"
+                  : "bg-background border-border hover:border-blue-300"
+              )}
+            >
+              <ScanFace className={cn(
+                "w-5 h-5 shrink-0",
+                faceDetectionEnabled ? "text-blue-500" : "text-muted-foreground"
+              )} />
+              <div className="flex-1 min-w-0">
+                <span className={cn(
+                  "text-sm font-medium block",
+                  faceDetectionEnabled ? "text-blue-700 dark:text-blue-300" : "text-foreground"
+                )}>
+                  {tc("faceDetection")}
+                </span>
+                {faceDetectionEnabled && (
+                  <span className="text-xs text-blue-500/80 dark:text-blue-400/70 mt-0.5 block">
+                    {tc("faceDetectionWarning")}
+                  </span>
+                )}
+              </div>
+              <div
+                role="switch"
+                aria-checked={faceDetectionEnabled}
+                className={cn(
+                  "relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors",
+                  faceDetectionEnabled ? "bg-blue-500" : "bg-neutral-300"
+                )}
+              >
+                <span
+                  className={cn(
+                    "pointer-events-none inline-block h-4 w-4 rounded-full bg-white shadow-sm transition-transform",
+                    faceDetectionEnabled ? "translate-x-4" : "translate-x-0"
+                  )}
+                />
+              </div>
+            </button>
+          </div>
+        )}
 
         {/* Custom keywords */}
         {onAddCustomKeyword && onRemoveCustomKeyword && (

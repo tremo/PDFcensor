@@ -172,7 +172,8 @@
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Разпознаване на лица...",
-      "faceDetection": "Разпознаване на лица"
+      "faceDetection": "Разпознаване на лица",
+      "faceDetectionWarning": "Face detection may take longer to process."
     },
     "docx": {
       "pending": "Чакащи",
@@ -212,6 +213,14 @@
       "address": "Адреси",
       "customKeyword": "自定义关键词",
       "face": "Лице"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "patience": "This may take a moment...",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes."
     }
   },
   "landing": {

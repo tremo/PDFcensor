@@ -172,7 +172,8 @@
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Detectando rostos...",
-      "faceDetection": "Detecção de rostos"
+      "faceDetection": "Detecção de rostos",
+      "faceDetectionWarning": "A detecção de rostos pode demorar mais."
     },
     "docx": {
       "pending": "Pendente",
@@ -212,6 +213,14 @@
       "address": "Endereços",
       "customKeyword": "自定义关键词",
       "face": "Rosto"
+    },
+    "scanProgress": {
+      "stepParsing": "Análise",
+      "stepScanning": "Varredura",
+      "stepFaceScanning": "Rostos",
+      "patience": "Isto pode demorar um momento...",
+      "foundSoFar": "Detectado até agora",
+      "faceDetectionQueued": "A detecção de rostos começará após a varredura de texto."
     }
   },
   "landing": {

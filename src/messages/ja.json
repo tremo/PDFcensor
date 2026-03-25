@@ -172,7 +172,8 @@
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "顔を検出中...",
-      "faceDetection": "顔検出"
+      "faceDetection": "顔検出",
+      "faceDetectionWarning": "顔検出には時間がかかる場合があります。"
     },
     "docx": {
       "pending": "保留中",
@@ -212,6 +213,14 @@
       "address": "住所",
       "customKeyword": "自定义关键词",
       "face": "顔"
+    },
+    "scanProgress": {
+      "stepParsing": "解析",
+      "stepScanning": "スキャン",
+      "stepFaceScanning": "顔",
+      "patience": "しばらくお待ちください...",
+      "foundSoFar": "これまでの検出結果",
+      "faceDetectionQueued": "顔検出はテキストスキャン完了後に開始されます。"
     }
   },
   "landing": {
