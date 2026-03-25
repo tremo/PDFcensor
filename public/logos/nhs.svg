@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" fill="none">
-  <rect x="2" y="6" width="70" height="28" rx="4" fill="#000"/>
-  <text x="12" y="27" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#fff">NHS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <rect x="2" y="6" width="36" height="28" rx="4" fill="#000"/>
+  <path d="M10 14 L10 26 L16 14 L16 26" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 14 L22 26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 14 L30 14" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 20 L28 20" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 26 L30 26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
 </svg>

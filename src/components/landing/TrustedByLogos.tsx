@@ -37,15 +37,18 @@ export function TrustedByLogos({ title }: { title: string }) {
             {[...logos, ...logos].map(({ name, logo }, i) => (
               <div
                 key={`${name}-${i}`}
-                className="flex items-center gap-3 shrink-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
+                className="flex items-center gap-2.5 shrink-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
               >
                 <Image
                   src={logo}
-                  alt={name}
-                  width={120}
-                  height={32}
-                  className="h-8 w-auto grayscale dark:invert"
+                  alt=""
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 grayscale dark:invert"
                 />
+                <span className="text-base font-semibold text-muted-foreground whitespace-nowrap select-none">
+                  {name}
+                </span>
               </div>
             ))}
           </div>
