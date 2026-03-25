@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
-  <text x="0" y="28" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#000">JPMorgan</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <circle cx="20" cy="20" r="18" stroke="#000" stroke-width="2" fill="none"/>
+  <path d="M22 8 C22 8 24 20 24 24 C24 28 20 30 18 30 C16 30 14 28 14 26" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M16 10 L16 18" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
