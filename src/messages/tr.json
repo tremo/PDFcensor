@@ -104,6 +104,7 @@
     "subtitle": "OfflineRedact, dünya genelinde 20'den fazla düzenleme ve standarda uyum sağlamanıza yardımcı olur."
   },
   "trust": {
+    "logoSection": "Dünya genelinde lider kuruluşlar tarafından tercih ediliyor",
     "title": "Hassas belgelerle çalışan profesyoneller tarafından güvenilir",
     "legal": "Hukuk",
     "healthcare": "Sağlık",
@@ -125,6 +126,10 @@
     "tagline": "Kalıcı belge sansürleme — %100 tarayıcınızda."
   },
   "redact": {
+    "meta": {
+      "title": "Belge Sansürle — OfflineRedact Ücretsiz Online Araç",
+      "description": "PDF, Word ve görsellerden kişisel verileri kalıcı olarak sansürleyin. TC Kimlik, isim, yüz, IBAN ve daha fazlasını otomatik tespit edin. %100 istemci taraflı."
+    },
     "title": "Belge Sansürleme Aracı",
     "titleDocx": "Word Belgesi Sansürleme Aracı",
     "titleBatch": "Toplu Belge Sansürleme",
@@ -281,6 +286,10 @@
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Fiyatlandırma — OfflineRedact PDF Sansürleme Aracı",
+      "description": "Ücretsiz başlayın veya ayda $6.99'a Pro'ya yükseltin. Filigranı kaldırın, toplu belge işleyin ve öncelikli destek alın."
+    },
     "title": "Basit, Şeffaf Fiyatlandırma",
     "subtitle": "Ücretsiz başlayın, ihtiyacınız olduğunda yükseltin",
     "free": {
@@ -318,6 +327,46 @@
       "monthly": "Aylık",
       "yearly": "Yıllık",
       "save": "%29 Tasarruf"
+    },
+    "guarantee": "30 Gün İçinde Para İadesi Garantisi",
+    "guaranteeDesc": "Memnun kalmadınız mı? 30 gün içinde koşulsuz tam iade alın.",
+    "comparison": {
+      "title": "Karşılaştırma",
+      "subtitle": "Profesyonellerin neden OfflineRedact'ı tercih ettiğini görün",
+      "feature": "Özellik",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Fiyat",
+      "offlineRedactPrice": "$6.99/ay",
+      "adobePrice": "$22.99/ay",
+      "redactablePrice": "$39/ay",
+      "ilovepdfPrice": "$7/ay",
+      "clientSide": "%100 İstemci Taraflı İşleme",
+      "faceDetection": "Yüz Algılama ve Bulanıklaştırma",
+      "multiFormat": "PDF + Word + Görsel",
+      "offlineCapable": "Çevrimdışı Çalışır",
+      "autoDetect": "Otomatik Kişisel Veri Tespiti",
+      "metadataCleaning": "Metadata Temizleme",
+      "batchProcessing": "Toplu İşleme",
+      "yes": "Evet",
+      "no": "Hayır",
+      "limited": "Sınırlı",
+      "onlyUs": "Sadece OfflineRedact'ta"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "q1": "Verilerim güvende mi?",
+      "a1": "Evet. Dosyalarınız tarayıcınızdan asla ayrılmaz. Tüm işlemler %100 istemci tarafında gerçekleşir — yükleme yok, sunucu yok, veri sızıntısı yok.",
+      "q2": "İade alabilir miyim?",
+      "a2": "Kesinlikle. 30 gün içinde koşulsuz para iadesi garantisi sunuyoruz. support@offlineredact.com adresinden iletişime geçin.",
+      "q3": "Hangi dosya türleri destekleniyor?",
+      "a3": "PDF belgeleri, Word dosyaları (.docx) ve görseller (JPG, PNG, WebP, TIFF). Tek araçta hepsi — uygulama değiştirmenize gerek yok.",
+      "q4": "İnternet olmadan çalışır mı?",
+      "a4": "Evet. Sayfa bir kez yüklendikten sonra araç tamamen çevrimdışı çalışır. Belgelerinizin işlenmesi için internet bağlantısı gerekmez.",
+      "q5": "Fotoğraflardaki yüzleri algılayabilir mi?",
+      "a5": "Evet. OfflineRedact, belge ve görsellerdeki yüzleri otomatik olarak bulan ve bulanıklaştıran yerleşik yüz algılama özelliğine sahiptir — OfflineRedact'a özgü bir özellik."
     }
   },
   "auth": {
@@ -354,6 +403,10 @@
     "loginToActivate": "Pro özellikleri hesabınıza bağlamak için giriş yapın"
   },
   "privacy": {
+    "meta": {
+      "title": "Gizlilik Politikası — OfflineRedact",
+      "description": "OfflineRedact'ın gizliliğinizi nasıl koruduğunu öğrenin. Dosyalarınız tarayıcınızdan asla ayrılmaz."
+    },
     "title": "Gizlilik Politikası",
     "lastUpdated": "Son güncelleme: Mart 2026",
     "intro": {
@@ -394,6 +447,10 @@
     }
   },
   "terms": {
+    "meta": {
+      "title": "Kullanım Koşulları — OfflineRedact",
+      "description": "OfflineRedact belge sansürleme aracının kullanım koşulları. 30 gün para iadesi garantisi dahil."
+    },
     "title": "Kullanım Koşulları",
     "lastUpdated": "Son güncelleme: Mart 2026",
     "acceptance": {
@@ -426,6 +483,10 @@
     }
   },
   "blog": {
+    "meta": {
+      "title": "Blog — OfflineRedact Belge Sansürleme Rehberleri",
+      "description": "PDF sansürleme, KVKK uyumluluğu, GDPR, HIPAA ve veri koruma için rehberler ve en iyi uygulamalar."
+    },
     "title": "Blog",
     "backToBlog": "Blog'a Dön",
     "cta": {
