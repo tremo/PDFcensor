@@ -5,7 +5,9 @@ import { renderPageToCanvas, openPDFProxy } from "@/lib/pdf/parser";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import type { RedactionArea } from "@/types/pdf";
 import { cn } from "@/lib/utils";
-import { X, Check, Undo2 } from "lucide-react";
+import { X, Check, Undo2, PenLine } from "lucide-react";
+
+const HINT_DISMISSED_KEY = "pdf-draw-hint-dismissed";
 
 interface PDFViewerProps {
   /** File reference for lazy PDF loading — preferred over arrayBuffer */
@@ -85,6 +87,11 @@ export function PDFViewer({
   const [hoveredRedactionId, setHoveredRedactionId] = useState<string | null>(
     null
   );
+  const [isOverlay, setIsOverlay] = useState(false);
+  const [hintDismissed, setHintDismissed] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem(HINT_DISMISSED_KEY) === "1";
+  });
 
   // Cache PDFDocumentProxy so we don't re-parse the PDF on every page change
   const pdfProxyRef = useRef<PDFDocumentProxy | null>(null);
@@ -319,6 +326,12 @@ export function PDFViewer({
     [getRelativePos]
   );
 
+  const dismissHint = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    setHintDismissed(true);
+    localStorage.setItem(HINT_DISMISSED_KEY, "1");
+  }, []);
+
   if (!file && !arrayBuffer) return null;
 
   const isSelected = (id: string) => selectedRedactionId === id;
@@ -357,7 +370,8 @@ export function PDFViewer({
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
+        onMouseLeave={() => { handleMouseUp(); setIsOverlay(false); }}
+        onMouseEnter={() => setIsOverlay(true)}
       >
         {pageRedactions.map((r) => {
           const selected = isSelected(r.id);
@@ -533,6 +547,24 @@ export function PDFViewer({
                 Math.abs(drawCurrent.y - interaction.startY) * scale,
             }}
           />
+        )}
+
+        {/* Hover hint — appears on first hover, dismissable */}
+        {onManualRedaction && !hintDismissed && isOverlay && interaction.type === "none" && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-40 pointer-events-auto animate-in fade-in slide-in-from-bottom-2 duration-300">
+            <div className="flex items-center gap-2 bg-neutral-800/90 text-white text-xs px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm select-none">
+              <PenLine className="w-3.5 h-3.5 text-blue-300 shrink-0 animate-pulse" />
+              <span className="whitespace-nowrap">Sürükleyerek manuel sansürle</span>
+              <button
+                className="ml-1 text-neutral-400 hover:text-white transition-colors"
+                title="Kapat"
+                onMouseDown={(e) => e.stopPropagation()}
+                onClick={dismissHint}
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          </div>
         )}
       </div>
     </div>
