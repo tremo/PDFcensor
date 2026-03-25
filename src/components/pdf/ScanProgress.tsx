@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Progress } from "@/components/ui/progress";
 import type { ProcessingStatus, RedactionArea } from "@/types/pdf";
@@ -10,6 +10,9 @@ import {
   ScanFace,
   ShieldCheck,
   Loader2,
+  Lock,
+  Eye,
+  Fingerprint,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -32,6 +35,52 @@ export function ScanProgress({
   const tp = useTranslations("redact.piiTypes");
   const ts = useTranslations("redact.scanProgress");
 
+  // Rotating status messages
+  const [messageIndex, setMessageIndex] = useState(0);
+
+  const statusMessages = useMemo(() => {
+    if (status === "parsing") {
+      return [
+        { text: ts("msg_parsing1"), icon: FileText },
+        { text: ts("msg_parsing2"), icon: Lock },
+      ];
+    }
+    if (status === "face-scanning") {
+      return [
+        { text: ts("msg_face1"), icon: ScanFace },
+        { text: ts("msg_face2"), icon: Eye },
+        { text: ts("msg_face3"), icon: ShieldCheck },
+      ];
+    }
+    // scanning / ocr-scanning
+    if (faceDetectionEnabled) {
+      return [
+        { text: ts("msg_scanFace1"), icon: ScanSearch },
+        { text: ts("msg_scanFace2"), icon: Fingerprint },
+        { text: ts("msg_scanFace3"), icon: Lock },
+        { text: ts("msg_scanFace4"), icon: ScanFace },
+      ];
+    }
+    return [
+      { text: ts("msg_scan1"), icon: ScanSearch },
+      { text: ts("msg_scan2"), icon: Fingerprint },
+      { text: ts("msg_scan3"), icon: Lock },
+      { text: ts("msg_scan4"), icon: ShieldCheck },
+    ];
+  }, [status, faceDetectionEnabled, ts]);
+
+  // Rotate messages every 4 seconds
+  useEffect(() => {
+    setMessageIndex(0);
+    const interval = setInterval(() => {
+      setMessageIndex((prev) => (prev + 1) % statusMessages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [statusMessages.length]);
+
+  const currentMessage = statusMessages[messageIndex % statusMessages.length];
+  const MessageIcon = currentMessage.icon;
+
   // Group redactions by type for live display
   const findingsByType = useMemo(() => {
     const grouped: Record<string, number> = {};
@@ -43,7 +92,7 @@ export function ScanProgress({
 
   const totalFindings = redactions.length;
 
-  // Determine which steps are done/active/pending
+  // Step indicators
   const steps = useMemo(() => {
     const s = [
       { key: "parsing", label: ts("stepParsing"), icon: FileText },
@@ -67,6 +116,14 @@ export function ScanProgress({
     return "pending";
   };
 
+  // Main title based on status
+  const mainTitle = useMemo(() => {
+    if (status === "parsing") return t("parsing");
+    if (status === "face-scanning") return t("faceScanning");
+    if (status === "ocr-scanning") return t("ocrScanning");
+    return t("scanning");
+  }, [status, t]);
+
   return (
     <div className="max-w-lg mx-auto space-y-6">
       {/* File info */}
@@ -84,16 +141,15 @@ export function ScanProgress({
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
             <Loader2 className="w-6 h-6 text-primary animate-spin" />
           </div>
-          <div>
-            <h3 className="text-base font-semibold">
-              {status === "parsing" && t("parsing")}
-              {status === "scanning" && t("scanning")}
-              {status === "ocr-scanning" && t("ocrScanning")}
-              {status === "face-scanning" && t("faceScanning")}
-            </h3>
-            <p className="text-sm text-muted-foreground mt-0.5">
-              {ts("patience")}
-            </p>
+          <div className="min-w-0">
+            <h3 className="text-base font-semibold">{mainTitle}</h3>
+            {/* Rotating message */}
+            <div className="flex items-center gap-1.5 mt-1 transition-opacity duration-500">
+              <MessageIcon className="w-3.5 h-3.5 text-muted-foreground shrink-0" />
+              <p className="text-sm text-muted-foreground truncate" key={messageIndex}>
+                {currentMessage.text}
+              </p>
+            </div>
           </div>
         </div>
 
@@ -163,8 +219,8 @@ export function ScanProgress({
         </div>
       )}
 
-      {/* Face detection info */}
-      {faceDetectionEnabled && status !== "face-scanning" && (
+      {/* Face detection queued info */}
+      {faceDetectionEnabled && status !== "face-scanning" && status !== "parsing" && (
         <p className="text-xs text-center text-muted-foreground">
           {ts("faceDetectionQueued")}
         </p>
