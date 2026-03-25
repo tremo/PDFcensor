@@ -67,23 +67,19 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
-    console.error("Checkout error:", error);
-
-    // Avoid 502/503 status — Vercel replaces those with its own HTML error pages,
-    // which breaks response.json() on the client side.
-    if (error instanceof Error && "type" in error) {
-      const stripeError = error as Stripe.errors.StripeError;
-      const message =
-        stripeError.type === "StripeAuthenticationError"
-          ? "Payment service configuration error. Please contact support."
-          : stripeError.type === "StripeConnectionError"
-            ? "Payment service temporarily unavailable. Please try again."
-            : "Failed to create checkout session";
-      return NextResponse.json({ error: message }, { status: 500 });
-    }
+    const errMsg = error instanceof Error ? error.message : String(error);
+    const errType = error instanceof Error && "type" in error
+      ? (error as Stripe.errors.StripeError).type
+      : "unknown";
+    // Log separate fields so Vercel doesn't truncate the message
+    console.error("CHECKOUT_FAIL type:", errType);
+    console.error("CHECKOUT_FAIL msg:", errMsg);
+    console.error("CHECKOUT_FAIL key_prefix:", process.env.STRIPE_SECRET_KEY?.slice(0, 8));
 
     return NextResponse.json(
-      { error: "Failed to create checkout session" },
+      { error: errType === "StripeAuthenticationError"
+          ? "Payment service configuration error. Please contact support."
+          : "Failed to create checkout session" },
       { status: 500 }
     );
   }
