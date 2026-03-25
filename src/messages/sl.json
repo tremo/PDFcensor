@@ -58,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Povlecite in spustite PDF-je, Word dokumente ali slike — ali kliknite za brskanje. Podpira več datotek."
     },
     "step2": {
       "title": "Review",
@@ -66,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Prenesite svojo trajno urejeno datoteko. Izvirno besedilo je nepovratno odstranjeno."
     }
   },
   "comparison": {
@@ -75,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Datoteka z občutljivimi podatki",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -113,7 +113,7 @@
   },
   "cta": {
     "title": "Pripravljeni zaščititi občutljive podatke?",
-    "subtitle": "Začnite urejati PDF brezplačno — brez registracije.",
+    "subtitle": "Začnite urejati dokumente brezplačno — brez registracije.",
     "button": "Začnite zdaj"
   },
   "footer": {
@@ -122,7 +122,7 @@
     "privacy": "Politika zasebnosti",
     "terms": "Pogoji storitve",
     "rights": "Vse pravice pridržane.",
-    "tagline": "Trajna redakcija PDF — 100% v vašem brskalniku."
+    "tagline": "Trajna redakcija dokumentov — 100% v vašem brskalniku."
   },
   "redact": {
     "title": "Document Redaction Tool",
