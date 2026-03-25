@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -60,6 +60,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <StructuredData data={getOrganizationSchema()} />
       </head>
       <GoogleTagManager gtmId="GTM-K4678NT5" />
+      <GoogleAnalytics gaId="AW-938473803" />
       <body className="min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AuthProvider>
