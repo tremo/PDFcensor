@@ -12,7 +12,7 @@
   "hero": {
     "badge": "%100 Tarayıcı Tarafında — Dosyalarınız asla cihazınızdan çıkmaz",
     "title": "PDF Belgelerinden Kişisel Verileri Kalıcı Olarak Sansürleyin",
-    "subtitle": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN gibi kişisel verileri otomatik tespit edin ve kalıcı olarak silin. KVKK, GDPR ve HIPAA uyumlu.",
+    "subtitle": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN gibi kişisel verileri PDF, Word ve görsel dosyalardan otomatik tespit edin ve kalıcı olarak silin. KVKK, GDPR ve HIPAA uyumlu.",
     "cta": "Ücretsiz Sansürlemeye Başla",
     "ctaSecondary": "Fiyatları Gör",
     "trustedBy": "Hukuk büroları, sağlık kuruluşları ve devlet kurumları tarafından tercih ediliyor"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Dosyaları buraya bırakın",
       "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
-      "hint": "PDF ve Word (.docx) dosyalarını destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
+      "hint": "PDF, Word (.docx) ve görsel dosyaları (JPG, PNG, WebP, TIFF) destekler. Dosyalarınız asla tarayıcınızdan çıkmaz.",
       "processing": "İşleniyor..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Belgenizi buraya bırakın",
       "subtitle": "veya gözatmak için tıklayın",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Otomatik Tespit",

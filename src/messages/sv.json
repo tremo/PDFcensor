@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% klientsida — Dina filer lämnar aldrig din webbläsare",
     "title": "Ta bort personuppgifter permanent från PDF-dokument",
-    "subtitle": "Upptäck och ta bort personuppgifter automatiskt — personnummer, namn, e-post, telefonnummer, IBAN — från dina PDF-filer. HIPAA, GDPR och KVKK-kompatibel.",
+    "subtitle": "Identifiera och ta permanent bort personuppgifter — personnummer, namn, e-post, telefon, IBAN — från PDF-, Word- och bildfiler. Uppfyller GDPR, HIPAA och KVKK.",
     "cta": "Börja — Gratis",
     "ctaSecondary": "Se priser",
     "trustedBy": "Betrodd av advokatbyråer, vårdgivare och myndigheter"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Stöder PDF-, Word-(.docx)- och bildfiler (JPG, PNG, WebP, TIFF). Dina filer lämnar aldrig din webbläsare.",
       "processing": "Processing..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

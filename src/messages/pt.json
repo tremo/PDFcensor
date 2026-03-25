@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% no Navegador — Seus arquivos nunca saem do seu dispositivo",
     "title": "Redação Permanente de Dados Pessoais em Documentos PDF",
-    "subtitle": "Detecte e remova automaticamente dados pessoais — CPF, nomes, e-mails, telefones, IBAN — dos seus arquivos PDF. Em conformidade com HIPAA, GDPR e KVKK.",
+    "subtitle": "Detecte e remova permanentemente dados pessoais — SSN, nomes, e-mails, telefones, IBAN — de arquivos PDF, Word e imagens. Compatível com LGPD, GDPR e HIPAA.",
     "cta": "Comece a Redatar — Grátis",
     "ctaSecondary": "Ver Preços",
     "trustedBy": "Utilizado por escritórios de advocacia, profissionais de saúde e órgãos governamentais"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Solte os arquivos aqui",
       "subtitle": "ou clique para navegar nos seus arquivos",
-      "hint": "Suporta arquivos PDF e Word (.docx). Seus arquivos nunca saem do seu navegador.",
+      "hint": "Suporta arquivos PDF, Word (.docx) e imagens (JPG, PNG, WebP, TIFF). Seus arquivos nunca saem do seu navegador.",
       "processing": "Processando..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Solte seu documento aqui",
       "subtitle": "ou clique para procurar",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Detecção Automática",
