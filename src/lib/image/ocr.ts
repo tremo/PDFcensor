@@ -12,27 +12,30 @@ interface OCRWord {
   lineIndex: number;
 }
 
+const LOCALE_TO_TESS: Record<string, string> = {
+  en: "eng", tr: "tur", de: "deu", fr: "fra", es: "spa",
+  pt: "por", ja: "jpn", ko: "kor", zh: "chi_sim",
+};
+
+// Map PII types to the OCR languages they need
+const PII_LANG_MAP: Record<string, string> = {
+  tcKimlik: "tur",
+  trPhone: "tur",
+};
+
 function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
-  const langMap: Record<string, string> = {
-    en: "eng",
-    tr: "tur",
-    de: "deu",
-    fr: "fra",
-    es: "spa",
-    pt: "por",
-    ja: "jpn",
-    ko: "kor",
-    zh: "chi_sim",
-  };
   const langs = new Set<string>();
   langs.add("eng"); // Always include English
 
   // Add language for current UI locale
-  const localeLang = langMap[locale];
+  const localeLang = LOCALE_TO_TESS[locale];
   if (localeLang) langs.add(localeLang);
 
   // Add languages required by enabled PII types
-  if (piiTypes.includes("tcKimlik") || piiTypes.includes("trPhone")) langs.add("tur");
+  for (const type of piiTypes) {
+    const lang = PII_LANG_MAP[type];
+    if (lang) langs.add(lang);
+  }
 
   return [...langs].join("+");
 }
