@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "월",
       "description": "여러 문서를 처리하는 전문가를 위한",
       "features": [
@@ -309,10 +309,10 @@
         "우선 지원",
         "언제든지 취소 가능"
       ],
-      "cta": "Pro 시작 — $6.99/월",
-      "yearlyPrice": "$59.99",
+      "cta": "Pro 시작 — €6.99/월",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "년",
-      "yearlyCta": "Pro 구독 — $59.99/년"
+      "yearlyCta": "Pro 구독 — €59.99/년"
     },
     "toggle": {
       "monthly": "월간",

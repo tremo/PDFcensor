@@ -310,9 +310,9 @@
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "$59.99",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "leto",
-      "yearlyCta": "Pridobi Pro — $59.99/leto"
+      "yearlyCta": "Pridobi Pro — €59.99/leto"
     },
     "toggle": {
       "monthly": "Mesečno",

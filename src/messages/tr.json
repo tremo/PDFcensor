@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "ay",
       "description": "Toplu belge işleyen profesyoneller için",
       "features": [
@@ -309,10 +309,10 @@
         "Öncelikli destek",
         "İstediğinde iptal et"
       ],
-      "cta": "Pro'ya Geç — $6.99/ay",
-      "yearlyPrice": "$59.99",
+      "cta": "Pro'ya Geç — €6.99/ay",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "yıl",
-      "yearlyCta": "Pro Al — $59.99/yıl"
+      "yearlyCta": "Pro Al — €59.99/yıl"
     },
     "toggle": {
       "monthly": "Aylık",

@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "Monat",
       "description": "Für Profis, die mehrere Dokumente verarbeiten",
       "features": [
@@ -309,10 +309,10 @@
         "Prioritäts-Support",
         "Jederzeit kündigen"
       ],
-      "cta": "Pro holen — $6.99/Mo",
-      "yearlyPrice": "$59.99",
+      "cta": "Pro holen — €6.99/Mo",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "Jahr",
-      "yearlyCta": "Pro holen — $59.99/Jahr"
+      "yearlyCta": "Pro holen — €59.99/Jahr"
     },
     "toggle": {
       "monthly": "Monatlich",
