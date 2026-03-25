@@ -1,24 +1,26 @@
+import Image from "next/image";
+
 const logos = [
   // Finance
-  { name: "JPMorgan" },
-  { name: "Goldman Sachs" },
-  { name: "HSBC" },
-  { name: "Deutsche Bank" },
+  { name: "JPMorgan", logo: "/logos/jpmorgan.svg" },
+  { name: "Goldman Sachs", logo: "/logos/goldman-sachs.svg" },
+  { name: "HSBC", logo: "/logos/hsbc.svg" },
+  { name: "Deutsche Bank", logo: "/logos/deutsche-bank.svg" },
   // Legal
-  { name: "Baker McKenzie" },
-  { name: "DLA Piper" },
-  { name: "Clifford Chance" },
-  { name: "Freshfields" },
+  { name: "Baker McKenzie", logo: "/logos/baker-mckenzie.svg" },
+  { name: "DLA Piper", logo: "/logos/dla-piper.svg" },
+  { name: "Clifford Chance", logo: "/logos/clifford-chance.svg" },
+  { name: "Freshfields", logo: "/logos/freshfields.svg" },
   // Hospitality
-  { name: "Marriott" },
-  { name: "Hilton" },
-  { name: "Accor" },
-  { name: "IHG" },
+  { name: "Marriott", logo: "/logos/marriott.svg" },
+  { name: "Hilton", logo: "/logos/hilton.svg" },
+  { name: "Accor", logo: "/logos/accor.svg" },
+  { name: "IHG", logo: "/logos/ihg.svg" },
   // Healthcare
-  { name: "Mayo Clinic" },
-  { name: "NHS" },
-  { name: "Pfizer" },
-  { name: "Roche" },
+  { name: "Mayo Clinic", logo: "/logos/mayo-clinic.svg" },
+  { name: "NHS", logo: "/logos/nhs.svg" },
+  { name: "Pfizer", logo: "/logos/pfizer.svg" },
+  { name: "Roche", logo: "/logos/roche.svg" },
 ];
 
 export function TrustedByLogos({ title }: { title: string }) {
@@ -32,13 +34,19 @@ export function TrustedByLogos({ title }: { title: string }) {
           <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-muted/20 to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-muted/20 to-transparent z-10" />
           <div className="flex animate-marquee-slow gap-12 items-center">
-            {[...logos, ...logos].map(({ name }, i) => (
-              <span
+            {[...logos, ...logos].map(({ name, logo }, i) => (
+              <div
                 key={`${name}-${i}`}
-                className="text-base font-semibold text-muted-foreground/40 hover:text-foreground/70 transition-colors duration-300 whitespace-nowrap select-none shrink-0"
+                className="flex items-center gap-3 shrink-0 opacity-40 hover:opacity-70 transition-opacity duration-300"
               >
-                {name}
-              </span>
+                <Image
+                  src={logo}
+                  alt={name}
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto grayscale dark:invert"
+                />
+              </div>
             ))}
           </div>
         </div>
