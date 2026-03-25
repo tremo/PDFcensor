@@ -5,20 +5,30 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
-import { Link } from "@/lib/i18n/navigation";
+import { Link, useRouter } from "@/lib/i18n/navigation";
 import { useLocale } from "next-intl";
 import { useState } from "react";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 export default function PricingPage() {
   const t = useTranslations("pricing");
   const locale = useLocale();
+  const router = useRouter();
+  const { user } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
 
   const isYearly = billingPeriod === "yearly";
 
   const handleCheckout = async () => {
+    if (!user) {
+      router.push("/login?redirect=/pricing");
+      return;
+    }
+
     setLoading(true);
+    setError(null);
     try {
       const response = await fetch("/api/checkout", {
         method: "POST",
@@ -28,9 +38,12 @@ export default function PricingPage() {
       const data = await response.json();
       if (data.url) {
         window.location.href = data.url;
+      } else {
+        setError(data.error || "Checkout failed");
       }
     } catch (e) {
       console.error("Checkout failed:", e);
+      setError("Checkout failed");
     } finally {
       setLoading(false);
     }
@@ -127,7 +140,7 @@ export default function PricingPage() {
               ))}
             </ul>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex-col gap-2">
             <Button
               className="w-full"
               variant="accent"
@@ -136,6 +149,9 @@ export default function PricingPage() {
             >
               {loading ? "..." : isYearly ? t("pro.yearlyCta") : t("pro.cta")}
             </Button>
+            {error && (
+              <p className="text-sm text-destructive text-center">{error}</p>
+            )}
           </CardFooter>
         </Card>
       </div>
