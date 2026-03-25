@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "月",
       "description": "适合需要处理多份文档的专业人士",
       "features": [
@@ -309,10 +309,10 @@
         "优先支持",
         "随时取消"
       ],
-      "cta": "获取Pro — $6.99/月",
-      "yearlyPrice": "$59.99",
+      "cta": "获取Pro — €6.99/月",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "年",
-      "yearlyCta": "获取 Pro — $59.99/年"
+      "yearlyCta": "获取 Pro — €59.99/年"
     },
     "toggle": {
       "monthly": "月付",

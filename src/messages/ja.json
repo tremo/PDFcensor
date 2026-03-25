@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "月",
       "description": "複数のドキュメントを処理するプロ向け",
       "features": [
@@ -309,10 +309,10 @@
         "優先サポート",
         "いつでもキャンセル可能"
       ],
-      "cta": "Proを始める — $6.99/月",
-      "yearlyPrice": "$59.99",
+      "cta": "Proを始める — €6.99/月",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "年",
-      "yearlyCta": "Pro を取得 — $59.99/年"
+      "yearlyCta": "Pro を取得 — €59.99/年"
     },
     "toggle": {
       "monthly": "月額",

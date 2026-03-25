@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "mois",
       "description": "Pour les professionnels qui traitent plusieurs documents",
       "features": [
@@ -309,10 +309,10 @@
         "Support prioritaire",
         "Annulez à tout moment"
       ],
-      "cta": "Passer à Pro — $6.99/mois",
-      "yearlyPrice": "$59.99",
+      "cta": "Passer à Pro — €6.99/mois",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "an",
-      "yearlyCta": "Obtenir Pro — $59.99/an"
+      "yearlyCta": "Obtenir Pro — €59.99/an"
     },
     "toggle": {
       "monthly": "Mensuel",

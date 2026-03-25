@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "mês",
       "description": "Para profissionais que processam múltiplos documentos",
       "features": [
@@ -309,10 +309,10 @@
         "Suporte prioritário",
         "Cancele quando quiser"
       ],
-      "cta": "Obter Pro — $6.99/mês",
-      "yearlyPrice": "$59.99",
+      "cta": "Obter Pro — €6.99/mês",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "ano",
-      "yearlyCta": "Obter Pro — $59.99/ano"
+      "yearlyCta": "Obter Pro — €59.99/ano"
     },
     "toggle": {
       "monthly": "Mensal",

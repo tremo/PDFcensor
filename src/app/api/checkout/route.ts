@@ -5,15 +5,23 @@ import { locales } from "@/lib/i18n/config";
 import type Stripe from "stripe";
 
 const PRICE_IDS = {
-  monthly: process.env.STRIPE_PRICE_MONTHLY || "price_1TDl2RAej1A7idfqmbhyQDSh",
-  yearly: process.env.STRIPE_PRICE_YEARLY || "price_1TErzlAej1A7idfq9GmrbS7l",
+  eur: {
+    monthly: process.env.STRIPE_PRICE_EUR_MONTHLY || "price_1TDl2RAej1A7idfqmbhyQDSh",
+    yearly: process.env.STRIPE_PRICE_EUR_YEARLY || "price_1TErzlAej1A7idfq9GmrbS7l",
+  },
+  usd: {
+    monthly: process.env.STRIPE_PRICE_USD_MONTHLY || "price_1TEtBFAej1A7idfql1qg3lCp",
+    yearly: process.env.STRIPE_PRICE_USD_YEARLY || "price_1TEtDOAej1A7idfq0B25IY4E",
+  },
 };
 
 export async function POST(request: Request) {
   try {
     const { locale: rawLocale = "en", plan = "monthly" } = await request.json();
     const locale = locales.includes(rawLocale) ? rawLocale : "en";
-    const priceId = plan === "yearly" ? PRICE_IDS.yearly : PRICE_IDS.monthly;
+    const currency = locale === "en" ? "usd" : "eur";
+    const prices = PRICE_IDS[currency];
+    const priceId = plan === "yearly" ? prices.yearly : prices.monthly;
 
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
@@ -71,10 +79,8 @@ export async function POST(request: Request) {
     const errType = error instanceof Error && "type" in error
       ? (error as Stripe.errors.StripeError).type
       : "unknown";
-    // Log separate fields so Vercel doesn't truncate the message
     console.error("CHECKOUT_FAIL type:", errType);
     console.error("CHECKOUT_FAIL msg:", errMsg);
-    console.error("CHECKOUT_FAIL key_prefix:", process.env.STRIPE_SECRET_KEY?.slice(0, 8));
 
     return NextResponse.json(
       { error: errType === "StripeAuthenticationError"

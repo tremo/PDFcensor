@@ -310,9 +310,9 @@
         "Пожизнен лиценз"
       ],
       "cta": "Вземете Pro лиценз",
-      "yearlyPrice": "$59.99",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "година",
-      "yearlyCta": "Вземете Pro — $59.99/година"
+      "yearlyCta": "Вземете Pro — €59.99/година"
     },
     "toggle": {
       "monthly": "Месечно",

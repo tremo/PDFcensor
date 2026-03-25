@@ -299,7 +299,7 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "€6.99",
       "period": "mes",
       "description": "Para profesionales que procesan múltiples documentos",
       "features": [
@@ -309,10 +309,10 @@
         "Soporte prioritario",
         "Cancela cuando quieras"
       ],
-      "cta": "Obtener Pro — $6.99/mes",
-      "yearlyPrice": "$59.99",
+      "cta": "Obtener Pro — €6.99/mes",
+      "yearlyPrice": "€59.99",
       "yearlyPeriod": "año",
-      "yearlyCta": "Obtener Pro — $59.99/año"
+      "yearlyCta": "Obtener Pro — €59.99/año"
     },
     "toggle": {
       "monthly": "Mensual",
