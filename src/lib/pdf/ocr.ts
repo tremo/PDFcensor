@@ -57,7 +57,7 @@ async function ocrPage(
   await renderPageToCanvas(pdf, pageNumber, canvas, OCR_SCALE);
 
   // Run OCR on the rendered canvas
-  const { data } = await scheduler.addJob("recognize", canvas);
+  const { data } = await scheduler.addJob("recognize", canvas, {}, { blocks: true, text: true });
 
   const words: OCRWord[] = [];
   let lineCounter = 0;

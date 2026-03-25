@@ -67,7 +67,7 @@ export async function detectOCRPIIFromImage(
 
   onProgress?.(30);
 
-  const { data } = await scheduler.addJob("recognize", canvas);
+  const { data } = await scheduler.addJob("recognize", canvas, {}, { blocks: true, text: true });
 
   onProgress?.(80);
 
