@@ -405,81 +405,412 @@
   "privacy": {
     "meta": {
       "title": "Datenschutzrichtlinie — OfflineRedact",
-      "description": "Erfahren Sie, wie OfflineRedact Ihre Privatsphäre schützt. Ihre Dateien verlassen niemals Ihren Browser."
+      "description": "Erfahren Sie, wie OfflineRedact Ihre Privatsphaere schuetzt. Ihre Dateien verlassen niemals Ihren Browser. Keine Datenerhebung, DSGVO- & CCPA-konform."
     },
     "title": "Datenschutzrichtlinie",
-    "lastUpdated": "Zuletzt aktualisiert: März 2026",
+    "lastUpdated": "Zuletzt aktualisiert: Maerz 2026",
+    "effectiveDate": "Gueltig ab: 1. Maerz 2026",
+    "highlight": "Ihre Dateien verlassen niemals Ihren Browser. Die gesamte Dokumentenverarbeitung erfolgt zu 100% auf Ihrem Geraet — wir haben keinerlei Zugriff auf Ihre Daten.",
+    "toc": "Inhaltsverzeichnis",
     "intro": {
       "heading": "1. Einleitung",
-      "text": "OfflineRedact („wir“, „unser“, „uns“) verpflichtet sich zum Schutz Ihrer Privatsphäre. Diese Richtlinie erläutert, wie wir mit Informationen umgehen, wenn Sie unser PDF-Schwärzungstool verwenden."
+      "text": "OfflineRedact (\"wir\", \"unser\", \"uns\") betreibt die Website offlineredact.com und stellt ein clientseitiges Dokument-Schwärzungstool bereit. Diese Datenschutzrichtlinie erlaeutert, wie wir Ihre Daten erheben, verwenden, weitergeben und schuetzen, wenn Sie unsere Website besuchen und unsere Dienste nutzen.",
+      "text2": "Wir verpflichten uns zum Schutz Ihrer personenbezogenen Daten in Uebereinstimmung mit der Datenschutz-Grundverordnung (DSGVO), der britischen Datenschutz-Grundverordnung (UK GDPR), dem California Consumer Privacy Act (CCPA/CPRA) und anderen weltweit geltenden Datenschutzgesetzen.",
+      "text3": "Durch die Nutzung von OfflineRedact stimmen Sie den in dieser Richtlinie beschriebenen Datenpraktiken zu. Wenn Sie mit den Bedingungen dieser Richtlinie nicht einverstanden sind, nutzen Sie unsere Dienste bitte nicht."
     },
     "noFileUploads": {
-      "heading": "2. Kein Datei-Upload",
-      "text": "{strong}Ihre PDF-Dateien verlassen niemals Ihr Gerät.{/strong} Die gesamte PDF-Verarbeitung, einschließlich Textextraktion, PII-Erkennung und Schwärzung, erfolgt vollständig in Ihrem Webbrowser. Wir laden Ihre Dokumente weder hoch, noch speichern, verarbeiten oder haben Zugriff auf sie auf irgendeinem Server."
+      "heading": "2. Zero-Knowledge-Dokumentenverarbeitung",
+      "text": "Dies ist der Kern unseres Datenschutzversprechens: {strong}Ihre Dokumente verlassen niemals Ihr Geraet.{/strong}",
+      "text2": "Die gesamte Dokumentenverarbeitung — einschliesslich Textextraktion, PII-Erkennung (personenbezogene Daten), Gesichtserkennung, OCR (optische Zeichenerkennung) und Schwaerzung — erfolgt vollstaendig in Ihrem Webbrowser mittels JavaScript und WebAssembly. Kein Dokumenteninhalt wird jemals an unsere Server oder einen Drittanbieterdienst uebermittelt.",
+      "text3": "Das bedeutet, dass wir eine Zero-Knowledge-Architektur betreiben: Wir koennen den Inhalt keines Dokuments, mit dem Sie arbeiten, sehen, darauf zugreifen, ihn lesen, speichern oder verarbeiten. Selbst bei einer gerichtlichen Anordnung haetten wir keine Dokumentendaten vorzulegen.",
+      "items": [
+        "PDF-Dokumente werden im Browser mit pdf-lib geparst und geschwaerzt",
+        "Word-Dokumente (.docx) werden durch Extraktion und Aenderung von XML im Browser verarbeitet",
+        "Bilder werden mit TensorFlow.js lokal in Ihrem Browser auf Gesichter analysiert",
+        "OCR wird mit Tesseract.js durchgefuehrt — es werden keine Cloud-OCR-Dienste verwendet",
+        "Geschwaerzte Dateien werden lokal erstellt und direkt auf Ihr Geraet heruntergeladen"
+      ]
     },
     "infoCollect": {
       "heading": "3. Von uns erhobene Daten",
-      "text": "Wir erheben nur die für unseren Dienst notwendigen Mindestinformationen:",
-      "items": [
-        "E-Mail-Adresse (nur bei Erwerb einer Pro-Lizenz, über Stripe)",
-        "Zahlungsinformationen (werden von Stripe verarbeitet; wir sehen Ihre Kartendaten niemals)",
-        "Grundlegende Analysen (Seitenaufrufe, Funktionsnutzung — keine personenbezogenen Daten)"
+      "text": "Wir erheben nur minimale Daten, die wie folgt kategorisiert sind:",
+      "accountHeading": "a) Kontoinformationen (nur Pro-Nutzer)",
+      "accountItems": [
+        "E-Mail-Adresse — angegeben bei der Kontoerstellung oder beim Kauf einer Pro-Lizenz",
+        "Authentifizierungsdaten — sicher verwaltet durch Supabase Auth (Google OAuth oder Magic Link)"
+      ],
+      "paymentHeading": "b) Zahlungsinformationen",
+      "paymentItems": [
+        "Die Zahlungsabwicklung erfolgt vollstaendig ueber Stripe. Wir erhalten, speichern oder haben niemals Zugriff auf Ihre Kreditkartennummer, CVV oder Rechnungsadresse",
+        "Wir erhalten von Stripe: Transaktionsbestaetigung, Abonnementstatus und Kunden-E-Mail"
+      ],
+      "analyticsHeading": "c) Analysedaten",
+      "analyticsItems": [
+        "Seitenaufrufe und Funktionsnutzung ueber Google Tag Manager (anonymisiert, keine personenbezogenen Daten)",
+        "Kein Dokumenteninhalt, keine Dateinamen und keine in Ihren Dokumenten erkannte PII werden jemals uebermittelt"
+      ],
+      "autoHeading": "d) Automatisch erhobene Daten",
+      "autoItems": [
+        "IP-Adresse — voruebergehend von unserem Hosting-Anbieter (Vercel) fuer Sicherheit und Missbrauchspraevention protokolliert; nicht von uns gespeichert",
+        "Browsertyp und Betriebssystem — anonym ueber Analysen erhoben",
+        "Verweisende URL und besuchte Seiten — zum Verstaendnis der Besucherquellen"
       ]
     },
     "cookies": {
-      "heading": "4. Cookies",
-      "text": "Wir verwenden ausschließlich essenzielle Cookies: Spracheinstellung und Lizenzschlüsselspeicherung (im localStorage). Wir verwenden keine Tracking-Cookies."
+      "heading": "4. Cookies & lokaler Speicher",
+      "text": "Wir verwenden minimale Cookies und lokalen Speicher. Wir verwenden keine Werbe- oder Tracking-Cookies.",
+      "tableHeaders": [
+        "Name",
+        "Typ",
+        "Zweck",
+        "Dauer"
+      ],
+      "tableRows": [
+        [
+          "locale",
+          "Lokaler Speicher",
+          "Speichert Ihre Spracheinstellung",
+          "Dauerhaft"
+        ],
+        [
+          "supabase-auth-token",
+          "Lokaler Speicher",
+          "Authentifizierungssitzung fuer Pro-Nutzer",
+          "Bis zur Abmeldung"
+        ],
+        [
+          "_gtm",
+          "Cookie",
+          "Google Tag Manager — anonyme Analysen",
+          "Sitzung"
+        ],
+        [
+          "cookie-consent",
+          "Lokaler Speicher",
+          "Speichert Ihre Cookie-Einstellung",
+          "1 Jahr"
+        ]
+      ]
     },
     "thirdParty": {
       "heading": "5. Drittanbieter-Dienste",
-      "items": [
-        "{strong}Stripe{/strong} — Zahlungsabwicklung. Siehe Stripes Datenschutzrichtlinie.",
-        "{strong}Vercel{/strong} — Hosting. Siehe Vercels Datenschutzrichtlinie."
-      ]
+      "text": "Wir nutzen die folgenden Drittanbieter-Dienste, jeweils mit eigenen Datenschutzrichtlinien:",
+      "services": [
+        {
+          "name": "Stripe",
+          "purpose": "Zahlungsabwicklung fuer Pro-Abonnements",
+          "dataShared": "E-Mail-Adresse, Auswahl des Abonnementplans",
+          "url": "https://stripe.com/privacy"
+        },
+        {
+          "name": "Supabase",
+          "purpose": "Benutzerauthentifizierung und Kontoverwaltung",
+          "dataShared": "E-Mail-Adresse, OAuth-Tokens",
+          "url": "https://supabase.com/privacy"
+        },
+        {
+          "name": "Vercel",
+          "purpose": "Website-Hosting und Bereitstellung",
+          "dataShared": "IP-Adresse (Serverprotokolle), Seitenanfragen",
+          "url": "https://vercel.com/legal/privacy-policy"
+        },
+        {
+          "name": "Google Tag Manager",
+          "purpose": "Anonyme Nutzungsanalysen",
+          "dataShared": "Anonymisierte Seitenaufruf- und Funktionsnutzungsdaten",
+          "url": "https://policies.google.com/privacy"
+        }
+      ],
+      "serviceLabel": "Dienst",
+      "purposeLabel": "Zweck",
+      "dataSharedLabel": "Geteilte Daten",
+      "policyLabel": "Datenschutzrichtlinie"
     },
     "dataRetention": {
       "heading": "6. Datenaufbewahrung",
-      "text": "Lizenzschlüssel werden für die Dauer Ihrer Lizenz gespeichert. Wir speichern keine PDF-Inhalte oder personenbezogene Daten, die aus Dokumenten extrahiert wurden."
+      "text": "Wir bewahren Daten nur so lange auf, wie es fuer den vorgesehenen Zweck erforderlich ist:",
+      "items": [
+        "Kontodaten (E-Mail, Auth-Tokens) — gespeichert, solange Ihr Konto aktiv ist; innerhalb von 30 Tagen nach Loeschungsanfrage geloescht",
+        "Zahlungsunterlagen — 7 Jahre aufbewahrt, wie von Steuer- und Finanzvorschriften verlangt",
+        "Analysedaten — aggregiert und anonymisiert; individuelle Sitzungsdaten 26 Monate aufbewahrt (Google Analytics Standard)",
+        "Serverprotokolle (Vercel) — automatisch nach 30 Tagen geloescht",
+        "Dokumenteninhalte — werden nie gespeichert; existieren nur im Arbeitsspeicher Ihres Browsers waehrend der Verarbeitung"
+      ]
+    },
+    "rights": {
+      "heading": "7. Ihre Rechte",
+      "text": "Abhaengig von Ihrem Standort haben Sie die folgenden Rechte bezueglich Ihrer personenbezogenen Daten:",
+      "gdprHeading": "Nach DSGVO (EU) & UK GDPR:",
+      "gdprRights": [
+        {
+          "title": "Auskunftsrecht",
+          "desc": "Fordern Sie eine Kopie der personenbezogenen Daten an, die wir ueber Sie gespeichert haben"
+        },
+        {
+          "title": "Recht auf Berichtigung",
+          "desc": "Fordern Sie die Korrektur unrichtiger personenbezogener Daten an"
+        },
+        {
+          "title": "Recht auf Loeschung",
+          "desc": "Fordern Sie die Loeschung Ihrer personenbezogenen Daten an (\"Recht auf Vergessenwerden\")"
+        },
+        {
+          "title": "Recht auf Einschraenkung",
+          "desc": "Fordern Sie die Einschraenkung der Verarbeitung Ihrer Daten an"
+        },
+        {
+          "title": "Recht auf Datenuebertragbarkeit",
+          "desc": "Erhalten Sie Ihre Daten in einem strukturierten, maschinenlesbaren Format"
+        },
+        {
+          "title": "Widerspruchsrecht",
+          "desc": "Widerspruch gegen die Verarbeitung auf Grundlage berechtigter Interessen"
+        }
+      ],
+      "ccpaHeading": "Nach CCPA/CPRA (Kalifornien):",
+      "ccpaRights": [
+        "Recht zu erfahren, welche personenbezogenen Daten erhoben werden und wie sie verwendet werden",
+        "Recht auf Loeschung der von uns gespeicherten personenbezogenen Daten",
+        "Recht auf Widerspruch gegen den Verkauf personenbezogener Daten — wir verkaufen Ihre Daten nicht",
+        "Recht auf Nichtdiskriminierung bei Ausuebung Ihrer Datenschutzrechte"
+      ],
+      "exerciseText": "Um eines dieser Rechte auszuueben, kontaktieren Sie uns unter privacy@offlineredact.com. Wir antworten innerhalb von 30 Tagen (DSGVO) bzw. 45 Tagen (CCPA)."
+    },
+    "children": {
+      "heading": "8. Datenschutz fuer Kinder",
+      "text": "OfflineRedact richtet sich nicht an Kinder unter 16 Jahren (DSGVO) bzw. 13 Jahren (COPPA). Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Wenn Sie glauben, dass ein Kind uns personenbezogene Daten uebermittelt hat, kontaktieren Sie uns bitte unter privacy@offlineredact.com und wir werden diese Daten umgehend loeschen."
+    },
+    "transfers": {
+      "heading": "9. Internationale Datenuebermittlungen",
+      "text": "Unser Hosting-Anbieter (Vercel) und unser Zahlungsdienstleister (Stripe) betreiben Server in den Vereinigten Staaten und anderen Laendern. Wenn Ihre Konto- oder Zahlungsdaten von diesen Diensten verarbeitet werden, koennen sie ausserhalb Ihres Wohnsitzlandes uebermittelt werden.",
+      "text2": "Diese Uebermittlungen werden durch von der Europaeischen Kommission genehmigte Standardvertragsklauseln (SCCs) und durch die Einhaltung geltender Datenschutzrahmen durch jeden Anbieter geschuetzt. Ihre Dokumenteninhalte werden niemals uebermittelt, da sie vollstaendig auf Ihrem Geraet verarbeitet werden."
+    },
+    "security": {
+      "heading": "10. Datensicherheit",
+      "text": "Wir setzen angemessene technische und organisatorische Massnahmen zum Schutz Ihrer personenbezogenen Daten um:",
+      "items": [
+        "Zero-Knowledge-Architektur — Dokumenteninhalte verlassen niemals Ihren Browser",
+        "HTTPS/TLS-Verschluesselung fuer die gesamte Website-Kommunikation",
+        "Stripe PCI DSS Level 1 Konformitaet fuer die Zahlungsabwicklung",
+        "Supabase Row Level Security (RLS) fuer die Datenbankzugriffskontrolle",
+        "Regelmaessige Sicherheitsaudits und Abhaengigkeitsaktualisierungen",
+        "Keine sensiblen Daten auf unseren Servern gespeichert — minimale Angriffsflaeche"
+      ]
+    },
+    "legalBasis": {
+      "heading": "11. Rechtsgrundlage der Verarbeitung (DSGVO)",
+      "text": "Nach der DSGVO verarbeiten wir personenbezogene Daten auf folgenden Rechtsgrundlagen:",
+      "bases": [
+        {
+          "basis": "Vertragsdurchfuehrung",
+          "description": "Verarbeitung Ihrer Zahlung und Bereitstellung der von Ihnen erworbenen Pro-Funktionen"
+        },
+        {
+          "basis": "Berechtigtes Interesse",
+          "description": "Website-Analysen zur Verbesserung unseres Dienstes; Sicherheit und Betrugspraevention"
+        },
+        {
+          "basis": "Einwilligung",
+          "description": "Versand von Marketingmitteilungen (nur bei Opt-in)"
+        },
+        {
+          "basis": "Gesetzliche Verpflichtung",
+          "description": "Aufbewahrung von Zahlungsunterlagen gemaess Steuerrecht"
+        }
+      ],
+      "basisLabel": "Rechtsgrundlage",
+      "descriptionLabel": "Verarbeitungstaetigkeit"
+    },
+    "breach": {
+      "heading": "12. Benachrichtigung bei Datenschutzverletzungen",
+      "text": "Im unwahrscheinlichen Fall einer Datenschutzverletzung, die Ihre personenbezogenen Daten betrifft, werden wir die zustaendige Aufsichtsbehoerde innerhalb von 72 Stunden gemaess Art. 33 DSGVO benachrichtigen. Wenn die Verletzung ein hohes Risiko fuer Ihre Rechte und Freiheiten darstellt, werden wir Sie ebenfalls unverzueglich direkt benachrichtigen.",
+      "text2": "Aufgrund unserer Zero-Knowledge-Architektur waere ein moeglicher Vorfall auf Konto- und Zahlungsmetadaten beschraenkt — Ihre Dokumenteninhalte koennen niemals kompromittiert werden, da sie nie auf unseren Servern gespeichert werden."
+    },
+    "changes": {
+      "heading": "13. Aenderungen dieser Richtlinie",
+      "text": "Wir koennen diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren, um Aenderungen unserer Praktiken, Technologien oder gesetzlichen Anforderungen widerzuspiegeln. Bei wesentlichen Aenderungen werden wir:",
+      "items": [
+        "Das Datum \"Zuletzt aktualisiert\" oben auf dieser Seite aktualisieren",
+        "Einen deutlichen Hinweis auf unserer Website fuer 30 Tage anzeigen",
+        "Eine E-Mail-Benachrichtigung an registrierte Pro-Nutzer senden",
+        "Ein Archiv frueherer Versionen auf Anfrage bereitstellen"
+      ]
+    },
+    "authorities": {
+      "heading": "14. Aufsichtsbehoerden",
+      "text": "Wenn Sie glauben, dass wir Ihre Datenschutzbedenken nicht ausreichend behandelt haben, haben Sie das Recht, Beschwerde bei Ihrer lokalen Aufsichtsbehoerde einzulegen:",
+      "items": [
+        "EU — Ihre nationale Datenschutzbehoerde (DPA)",
+        "UK — Information Commissioner's Office (ICO) — ico.org.uk",
+        "Frankreich — Commission Nationale de l'Informatique et des Libertes (CNIL) — cnil.fr",
+        "Deutschland — Bundesbeauftragte fuer den Datenschutz (BfDI) — bfdi.bund.de",
+        "Spanien — Agencia Espanola de Proteccion de Datos (AEPD) — aepd.es",
+        "Tuerkei — Kisisel Verileri Koruma Kurumu (KVKK) — kvkk.gov.tr",
+        "Kalifornien (USA) — Office of the Attorney General — oag.ca.gov"
+      ]
     },
     "contact": {
-      "heading": "7. Kontakt",
-      "text": "Für datenschutzbezogene Anfragen kontaktieren Sie uns unter privacy@offlineredact.com."
+      "heading": "15. Kontakt",
+      "text": "Fuer datenschutzbezogene Anfragen, Betroffenenrechte-Anfragen oder Beschwerden:",
+      "items": [
+        "Datenschutzanfragen: privacy@offlineredact.com",
+        "Allgemeiner Support: support@offlineredact.com",
+        "Rechtsangelegenheiten: legal@offlineredact.com"
+      ],
+      "responseTime": "Wir bemuehen uns, alle Datenschutzanfragen innerhalb von 5 Werktagen zu beantworten."
     }
   },
   "terms": {
     "meta": {
       "title": "Nutzungsbedingungen — OfflineRedact",
-      "description": "Nutzungsbedingungen für das OfflineRedact Dokument-Schwärzungstool. 30-Tage-Geld-zurück-Garantie inklusive."
+      "description": "Nutzungsbedingungen fuer das OfflineRedact Dokument-Schwärzungstool. 30-Tage-Geld-zurueck-Garantie inklusive."
     },
     "title": "Nutzungsbedingungen",
-    "lastUpdated": "Zuletzt aktualisiert: März 2026",
+    "lastUpdated": "Zuletzt aktualisiert: Maerz 2026",
+    "effectiveDate": "Gueltig ab: 1. Maerz 2026",
+    "toc": "Inhaltsverzeichnis",
+    "highlightGuarantee": "30-Tage-Geld-zurueck-Garantie — Nicht zufrieden? Erhalten Sie innerhalb von 30 Tagen eine volle Rueckerstattung, ohne Fragen.",
+    "highlightOwnership": "Ihre Dateien verlassen niemals Ihr Geraet — Sie behalten das vollstaendige Eigentum an allen mit OfflineRedact verarbeiteten Dokumenten.",
     "acceptance": {
       "heading": "1. Annahme der Bedingungen",
-      "text": "Durch die Nutzung von OfflineRedact stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie den Dienst nicht."
+      "text": "Durch den Zugriff auf oder die Nutzung von OfflineRedact (der \"Dienst\") erklaeren Sie sich mit diesen Nutzungsbedingungen (\"Bedingungen\") einverstanden. Wenn Sie nicht allen Bedingungen zustimmen, greifen Sie nicht auf den Dienst zu und nutzen Sie ihn nicht.",
+      "text2": "Sie muessen mindestens 16 Jahre alt sein (oder das Alter der digitalen Einwilligung in Ihrer Rechtsordnung erreicht haben), um diesen Dienst zu nutzen. Durch die Nutzung des Dienstes erklaeren Sie, dass Sie diese Altersanforderung erfuellen.",
+      "text3": "Wenn Sie den Dienst im Namen einer Organisation nutzen, erklaeren und gewaehrleisten Sie, dass Sie befugt sind, diese Organisation an diese Bedingungen zu binden."
     },
     "serviceDesc": {
       "heading": "2. Dienstbeschreibung",
-      "text": "OfflineRedact ist ein clientseitiges PDF-Schwärzungstool, das personenbezogene Daten (PII) in PDF-Dokumenten erkennt und entfernt. Die gesamte Verarbeitung erfolgt in Ihrem Webbrowser."
+      "text": "OfflineRedact ist ein clientseitiges Dokument-Schwärzungstool, das personenbezogene Daten (PII) in Dokumenten erkennt und dauerhaft entfernt. Der Dienst umfasst folgende Funktionen:",
+      "features": [
+        "PDF-Schwärzung — echte Textentfernung aus PDF-Inhaltsstroemen",
+        "Word-Dokument-Schwärzung (.docx) — PII-Entfernung aus Dokument-XML",
+        "Bildschwärzung — Gesichtserkennung und Unschaerfe mittels lokaler KI-Modelle",
+        "OCR (optische Zeichenerkennung) — Textextraktion aus gescannten Dokumenten und Bildern",
+        "Automatische PII-Erkennung — SSN, Namen, E-Mails, Telefonnummern, IBAN, Kreditkarten, Reisepassnummern, Adressen",
+        "Unterstuetzung mehrerer Vorschriften — DSGVO, HIPAA, KVKK, CCPA, LGPD und weitere",
+        "Metadaten-Bereinigung — Entfernung von Autor, Erstellungsdatum und Software-Informationen",
+        "Stapelverarbeitung — Schwärzung mehrerer Dateien mit ZIP-Download (Pro-Funktion)"
+      ],
+      "text2": "Die gesamte Dokumentenverarbeitung erfolgt vollstaendig in Ihrem Webbrowser. Kein Dokumenteninhalt wird jemals auf unsere Server hochgeladen, dort verarbeitet oder gespeichert."
     },
     "noGuarantee": {
-      "heading": "3. Keine Garantie",
-      "text": "Obwohl wir nach Genauigkeit streben, garantiert OfflineRedact keine 100%ige Erkennung aller PII. Benutzer sind dafür verantwortlich, die Schwärzungsergebnisse vor dem Teilen oder Veröffentlichen von Dokumenten zu überprüfen. Stellen Sie immer sicher, dass alle sensiblen Informationen ordnungsgemäß geschwärzt wurden."
+      "heading": "3. Haftungsausschluss — Keine Garantie vollstaendiger Schwärzung",
+      "text": "Obwohl wir nach hoechster Genauigkeit bei der PII-Erkennung streben, garantiert OfflineRedact keine 100%ige Erkennung oder Entfernung aller sensiblen Informationen. Automatisierte Mustererkennung kann bestimmte Datenformate, nicht standardmaessige Muster oder kontextabhaengige Informationen uebersehen.",
+      "text2": "Sie sind allein dafuer verantwortlich, alle Schwärzungsergebnisse zu ueberpruefen und zu verifizieren, bevor Sie ein mit OfflineRedact verarbeitetes Dokument teilen, veroeffentlichen oder verbreiten. Wir empfehlen dringend:",
+      "items": [
+        "Ueberpruefen Sie das geschwaerzte Dokument immer visuell vor der Weitergabe",
+        "Testen Sie, dass geschwaerzter Text nicht ausgewaehlt, kopiert oder extrahiert werden kann",
+        "Verwenden Sie die manuelle Schwärzung fuer Elemente, die die automatische Erkennung moeglicherweise uebersehen hat",
+        "Bewahren Sie eine sichere Kopie des Originaldokuments auf, bis Sie die Schwärzung ueberprueft haben"
+      ],
+      "text3": "OfflineRedact ist ein Werkzeug zur Unterstuetzung der Dokumentenschwärzung — es ersetzt nicht die professionelle rechtliche oder Compliance-Pruefung, wenn diese erforderlich ist."
     },
     "license": {
-      "heading": "4. Lizenz",
-      "text": "Kostenlose Stufe: Sie können OfflineRedact kostenlos mit einem Wasserzeichen auf der Ausgabe verwenden. Pro-Lizenz: Eine einmalige Zahlung gewährt Ihnen eine lebenslange Lizenz zur Nutzung von OfflineRedact ohne Wasserzeichen."
+      "heading": "4. Lizenz & Abonnementplaene",
+      "text": "OfflineRedact bietet folgende Plaene an:",
+      "freeHeading": "Kostenloser Plan",
+      "freeItems": [
+        "Unbegrenzte Einzeldatei-Schwärzung fuer PDF, Word und Bilder",
+        "Alle PII-Erkennungsmuster und Regulierungsprofile",
+        "Metadaten-Bereinigung",
+        "Kleines Wasserzeichen auf Ausgabedateien"
+      ],
+      "proHeading": "Pro-Plan (6,99 $/Monat oder 59,99 $/Jahr)",
+      "proItems": [
+        "Alles im kostenlosen Plan — ohne Wasserzeichen",
+        "Stapelverarbeitung — mehrere Dateien gleichzeitig schwaerzen",
+        "ZIP-Download fuer Stapelergebnisse",
+        "Prioritaets-Support",
+        "Jederzeit kuendbar — keine langfristige Bindung"
+      ],
+      "text2": "Pro-Abonnements werden monatlich oder jaehrlich ueber Stripe abgerechnet. Sie koennen Ihr Abonnement jederzeit kuendigen; Ihre Pro-Funktionen bleiben bis zum Ende des aktuellen Abrechnungszeitraums aktiv.",
+      "text3": "Wir behalten uns das Recht vor, Preise mit 30 Tagen Vorlaufzeit zu aendern. Bestehende Abonnenten behalten ihren aktuellen Tarif fuer den Rest ihres Abrechnungszyklus."
     },
     "refundPolicy": {
-      "heading": "5. Rückerstattungsrichtlinie",
-      "text": "Wir bieten eine 30-tägige Geld-zurück-Garantie. Kontaktieren Sie uns unter support@offlineredact.com für Rückerstattungsanfragen."
+      "heading": "5. Rueckerstattungsrichtlinie",
+      "text": "Wir bieten eine 30-Tage-Geld-zurueck-Garantie fuer alle Pro-Abonnements. Wenn Sie aus irgendeinem Grund nicht zufrieden sind, koennen Sie innerhalb von 30 Tagen nach dem Erstkauf eine volle Rueckerstattung beantragen.",
+      "items": [
+        "Rueckerstattungsantraege muessen innerhalb von 30 Tagen nach dem Kauf an support@offlineredact.com gesendet werden",
+        "Rueckerstattungen werden innerhalb von 5-10 Werktagen auf die urspruengliche Zahlungsmethode verarbeitet",
+        "Nach 30 Tagen sind keine teilweisen oder anteiligen Rueckerstattungen moeglich",
+        "Sie koennen Ihr Abonnement jederzeit kuendigen, um zukuenftige Belastungen zu vermeiden"
+      ],
+      "text2": "Fuer Jahresabonnements gilt die 30-Tage-Garantie ab dem Kaufdatum. Wenn Sie nach 30 Tagen kuendigen, bleibt Ihr Pro-Zugang bis zum Ende des Jahreszeitraums bestehen — fuer die verbleibende Laufzeit wird keine Rueckerstattung gewaehrt."
+    },
+    "acceptableUse": {
+      "heading": "6. Richtlinie zur akzeptablen Nutzung",
+      "text": "Sie verpflichten sich, OfflineRedact nur fuer rechtmaessige Zwecke zu nutzen. Folgende Nutzungen sind untersagt:",
+      "prohibited": [
+        "Nutzung des Dienstes fuer illegale Aktivitaeten oder zur Verletzung geltender Gesetze oder Vorschriften",
+        "Versuch, den Quellcode des Dienstes zurueckzuentwickeln, zu dekompilieren oder zu disassemblieren",
+        "Automatisiertes Scraping, Crawling oder Datenextraktion aus dem Dienst",
+        "Versuch, Zugriffskontrollen, Lizenzierungsmechanismen oder Sicherheitsmassnahmen zu umgehen",
+        "Nutzung des Dienstes zur Verarbeitung von Dokumenten, auf die Sie kein Zugriffs- oder Aenderungsrecht haben",
+        "Weiterverkauf, Unterlizenzierung oder Weiterverteilung des Dienstes ohne unsere schriftliche Zustimmung",
+        "Stoerung der Infrastruktur des Dienstes oder des Zugangs anderer Nutzer"
+      ],
+      "text2": "Ein Verstoss gegen diese Richtlinie zur akzeptablen Nutzung kann zur sofortigen Kuendigung Ihres Kontos und Ihres Zugangs zum Dienst fuehren."
+    },
+    "ip": {
+      "heading": "7. Geistiges Eigentum",
+      "text": "Die OfflineRedact-Software, Website, Marke, Logos und alle zugehoerigen Inhalte sind geistiges Eigentum von OfflineRedact und durch Urheberrecht, Markenrecht und andere Gesetze zum Schutz geistigen Eigentums geschuetzt.",
+      "text2": "Sie behalten das vollstaendige Eigentum an allen Dokumenten, Dateien und Inhalten, die Sie mit dem Dienst verarbeiten. Wir beanspruchen keine Rechte an Ihren Dokumenten. Da die gesamte Verarbeitung in Ihrem Browser stattfindet, haben wir niemals Zugriff auf Ihre Inhalte.",
+      "text3": "Ihre Pro-Lizenz gewaehrt Ihnen ein nicht-exklusives, nicht uebertragbares, widerrufliches Nutzungsrecht fuer den Dienst fuer persoenliche oder geschaeftliche Zwecke gemaess diesen Bedingungen."
+    },
+    "accountTerms": {
+      "heading": "8. Kontobedingungen",
+      "text": "Wenn Sie ein Konto bei OfflineRedact erstellen:",
+      "items": [
+        "Sie muessen bei der Registrierung genaue und vollstaendige Angaben machen",
+        "Sie sind fuer die Sicherheit Ihrer Kontodaten verantwortlich",
+        "Sie duerfen Ihr Konto oder Ihre Pro-Lizenz nicht mit anderen Personen oder Organisationen teilen",
+        "Sie muessen uns unverzueglich benachrichtigen, wenn Sie einen unbefugten Zugriff auf Ihr Konto vermuten",
+        "Sie koennen jederzeit die Loesung Ihres Kontos beantragen, indem Sie support@offlineredact.com kontaktieren; wir loeschen Ihre Kontodaten innerhalb von 30 Tagen"
+      ]
+    },
+    "availability": {
+      "heading": "9. Dienstverfuegbarkeit & Aenderungen",
+      "text": "Wir bemuehen uns, zuverlaessigen Zugang zu OfflineRedact bereitzustellen, garantieren jedoch keine 100%ige Verfuegbarkeit oder unterbrechungsfreien Zugang. Der Dienst kann voruebergehend aufgrund von Wartung, Updates oder Umstaenden ausserhalb unserer Kontrolle nicht verfuegbar sein.",
+      "text2": "Wir behalten uns das Recht vor, jede Funktion des Dienstes jederzeit zu aendern, zu aktualisieren oder einzustellen. Bei wesentlichen Aenderungen, die Pro-Abonnenten betreffen, informieren wir mindestens 30 Tage im Voraus per E-Mail.",
+      "text3": "Da die Kernfunktionalitaet von OfflineRedact in Ihrem Browser laeuft, funktioniert das Schwärzungstool auch offline (nach dem ersten Seitenladen). Das bedeutet, dass Ihr Arbeitsablauf weitgehend unabhaengig von der Serververfuegbarkeit ist."
     },
     "liability": {
-      "heading": "6. Haftungsbeschränkung",
-      "text": "OfflineRedact wird „wie besehen“ ohne Gewährleistung bereitgestellt. Wir haften nicht für Schäden, die aus der Nutzung oder der Unfähigkeit zur Nutzung des Dienstes entstehen, einschließlich, aber nicht beschränkt auf unvollständige Schwärzung sensibler Daten."
+      "heading": "10. Haftungsbeschraenkung",
+      "text": "IM GESETZLICH ZULAESSIGEN UMFANG HAFTEN OFFLINEREDACT UND SEINE LEITENDEN ANGESTELLTEN, DIREKTOREN, MITARBEITER UND VERTRETER NICHT FUER INDIREKTE, ZUFAELLIGE, BESONDERE, FOLGE- ODER STRAFSCHAEDEN, EINSCHLIESSLICH, ABER NICHT BESCHRAENKT AUF:",
+      "items": [
+        "Verlust von Daten, Einnahmen oder Gewinnen durch die Nutzung des Dienstes",
+        "Unvollstaendige oder ungenaue Schwärzung sensibler Informationen",
+        "Unbefugter Zugriff auf oder Aenderung Ihrer Kontodaten",
+        "Dienstunterbrechungen oder Nichtverfuegbarkeit",
+        "Handlungen oder Inhalte Dritter"
+      ],
+      "text2": "Unsere Gesamthaftung fuer Ansprueche aus oder im Zusammenhang mit dem Dienst uebersteigt nicht den Betrag, den Sie in den zwoelf (12) Monaten vor dem Anspruch an uns gezahlt haben.",
+      "text3": "Einige Rechtsordnungen erlauben den Ausschluss bestimmter Gewaehrleistungen oder die Haftungsbeschraenkung nicht. In solchen Faellen ist unsere Haftung auf den gesetzlich zulaessigen Umfang beschraenkt."
+    },
+    "governingLaw": {
+      "heading": "11. Anwendbares Recht & Gerichtsstand",
+      "text": "Diese Bedingungen unterliegen dem Recht des Landes, in dem OfflineRedact eingetragen ist, und werden nach diesem ausgelegt, ohne Beruecksichtigung kollisionsrechtlicher Bestimmungen.",
+      "text2": "Fuer Nutzer in der Europaeischen Union beruehrt nichts in diesen Bedingungen Ihre Rechte aus zwingenden Verbraucherschutzgesetzen Ihres Wohnsitzlandes. Streitigkeiten aus diesen Bedingungen unterliegen der ausschliesslichen Zustaendigkeit der Gerichte Ihres Wohnsitzlandes, wie dies das anwendbare EU-Verbraucherschutzrecht vorsieht."
+    },
+    "disputes": {
+      "heading": "12. Streitbeilegung",
+      "text": "Wir empfehlen Ihnen, sich zunaechst unter legal@offlineredact.com an uns zu wenden, um Streitigkeiten informell beizulegen. Die meisten Anliegen koennen schnell durch direkte Kommunikation geloest werden.",
+      "text2": "Wenn eine informelle Loesung nicht erfolgreich ist, wird jede Streitigkeit durch ein verbindliches Schiedsverfahren gemaess den Regeln der zustaendigen Schiedsinstitution beigelegt, anstatt vor Gericht. Sie verzichten auf Ihr Recht, an Sammelklagen oder Gruppenschiedsverfahren teilzunehmen.",
+      "text3": "Fuer Nutzer in der EU: Diese Schiedsklausel beruehrt nicht Ihre Rechte, Ansprueche vor den Gerichten Ihres Wohnsitzlandes gemaess geltendem Verbraucherschutzrecht geltend zu machen. Sie koennen auch die Online-Streitbeilegungsplattform der Europaeischen Kommission unter ec.europa.eu/odr nutzen."
+    },
+    "severability": {
+      "heading": "13. Salvatorische Klausel & Gesamte Vereinbarung",
+      "text": "Sollte eine Bestimmung dieser Bedingungen von einem zustaendigen Gericht als nicht durchsetzbar oder ungueltig befunden werden, wird diese Bestimmung auf das erforderliche Mindestmass beschraenkt oder aufgehoben, sodass die uebrigen Bedingungen in vollem Umfang wirksam bleiben.",
+      "text2": "Diese Bedingungen bilden zusammen mit unserer Datenschutzrichtlinie die gesamte Vereinbarung zwischen Ihnen und OfflineRedact bezueglich der Nutzung des Dienstes und ersetzen alle frueheren Vereinbarungen oder Mitteilungen."
     },
     "contact": {
-      "heading": "7. Kontakt",
-      "text": "Für Fragen zu diesen Bedingungen kontaktieren Sie uns unter legal@offlineredact.com."
+      "heading": "14. Kontakt",
+      "text": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben:",
+      "items": [
+        "Allgemeiner Support: support@offlineredact.com",
+        "Rechtliche Anfragen: legal@offlineredact.com",
+        "Rueckerstattungsantraege: support@offlineredact.com"
+      ],
+      "responseTime": "Wir bemuehen uns, alle Anfragen innerhalb von 2 Werktagen zu beantworten."
     }
   },
   "blog": {
