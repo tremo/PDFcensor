@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% kliens oldali — Fájljai soha nem hagyják el a böngészőjét",
     "title": "Véglegesen távolítsa el a személyes adatokat PDF dokumentumokból",
-    "subtitle": "Automatikusan felismeri és véglegesen eltávolítja a személyes adatokat — TAJ szám, nevek, e-mailek, telefonszámok, IBAN — a PDF fájlokból. HIPAA, GDPR és KVKK kompatibilis.",
+    "subtitle": "Automatikusan észleli és véglegesen eltávolítja a személyes adatokat — SSN, nevek, e-mailek, telefonszámok, IBAN — PDF-, Word- és képfájlokból. GDPR, HIPAA és KVKK megfelelő.",
     "cta": "Kezdés — Ingyenes",
     "ctaSecondary": "Árak megtekintése",
     "trustedBy": "Ügyvédi irodák, egészségügyi szolgáltatók és kormányzati szervek bíznak bennünk"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Támogatja a PDF-, Word-(.docx)- és képfájlokat (JPG, PNG, WebP, TIFF). Fájljai soha nem hagyják el a böngészőjét.",
       "processing": "Processing..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

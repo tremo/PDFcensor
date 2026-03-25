@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% na strani klijenta — Vaše datoteke nikada ne napuštaju vaš preglednik",
     "title": "Trajno uklonite osobne podatke iz PDF dokumenata",
-    "subtitle": "Automatski otkrijte i trajno uklonite osobne podatke — OIB, imena, e-mail adrese, telefonske brojeve, IBAN — iz vaših PDF datoteka. U skladu s HIPAA, GDPR i KVKK.",
+    "subtitle": "Automatski otkrijte i trajno uklonite osobne podatke — OIB, imena, e-poštu, telefonske brojeve, IBAN — iz PDF, Word i slikovnih datoteka. Usklađeno s GDPR, HIPAA i KVKK.",
     "cta": "Započnite — Besplatno",
     "ctaSecondary": "Pogledajte cijene",
     "trustedBy": "Koriste odvjetnički uredi, zdravstvene ustanove i državne agencije"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Podržava PDF, Word (.docx) i datoteke slika (JPG, PNG, WebP, TIFF). Vaše datoteke nikada ne napuštaju preglednik.",
       "processing": "Processing..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",
@@ -405,91 +405,181 @@
         "title": "KVKK vodič za redigiranje PDF-a: Zaštita osobnih podataka u Turskoj",
         "excerpt": "Naučite kako redigirati osobne podatke iz PDF dokumenata u skladu s turskim zakonom KVKK.",
         "date": "2026-03-20",
-        "content": ["Turski Zakon o zaštiti osobnih podataka (KVKK) nameće stroge obveze organizacijama koje obrađuju osobne podatke turskih građana. Nepoštivanje može rezultirati značajnim novčanim kaznama i pravnim postupcima.", "KVKK zahtijeva eksplicitnu privolu za obradu osobnih podataka i nalaže odgovarajuće tehničke mjere zaštite. PDF dokumenti koji sadrže osobne podatke moraju biti pravilno redigirani prije dijeljenja s trećim stranama.", "Kategorije podataka zaštićene KVKK-om uključuju ime, prezime, TCKN (turski identifikacijski broj), adresu, telefonski broj i financijske podatke. Automatsko otkrivanje pomaže identificirati sve ove obrasce.", "Organizacije moraju voditi evidenciju aktivnosti obrade i pokazati usklađenost s KVKK načelima minimizacije podataka. Redigiranje je ključni alat za ispunjavanje tih zahtjeva.", "OfflineRedact podržava KVKK profile za automatsko otkrivanje turskih obrazaca osobnih podataka. Sva obrada odvija se u vašem pregledniku, čime se eliminira rizik prijenosa podataka trećim stranama."]
+        "content": [
+          "Turski Zakon o zaštiti osobnih podataka (KVKK) nameće stroge obveze organizacijama koje obrađuju osobne podatke turskih građana. Nepoštivanje može rezultirati značajnim novčanim kaznama i pravnim postupcima.",
+          "KVKK zahtijeva eksplicitnu privolu za obradu osobnih podataka i nalaže odgovarajuće tehničke mjere zaštite. PDF dokumenti koji sadrže osobne podatke moraju biti pravilno redigirani prije dijeljenja s trećim stranama.",
+          "Kategorije podataka zaštićene KVKK-om uključuju ime, prezime, TCKN (turski identifikacijski broj), adresu, telefonski broj i financijske podatke. Automatsko otkrivanje pomaže identificirati sve ove obrasce.",
+          "Organizacije moraju voditi evidenciju aktivnosti obrade i pokazati usklađenost s KVKK načelima minimizacije podataka. Redigiranje je ključni alat za ispunjavanje tih zahtjeva.",
+          "OfflineRedact podržava KVKK profile za automatsko otkrivanje turskih obrazaca osobnih podataka. Sva obrada odvija se u vašem pregledniku, čime se eliminira rizik prijenosa podataka trećim stranama."
+        ]
       },
       "cnil-rgpd-caviardage-pdf": {
         "title": "CNIL i RGPD: Vodič za redigiranje PDF-a prema francuskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF-ova u skladu s francuskim RGPD smjernicama i CNIL preporukama.",
         "date": "2026-03-18",
-        "content": ["Francuska komisija za zaštitu podataka (CNIL) nadzire primjenu RGPD-a (francuska implementacija GDPR-a) i izdaje specifične smjernice za obradu osobnih podataka. Organizacije koje posluju u Francuskoj moraju slijediti te smjernice.", "CNIL posebno naglašava načelo minimizacije podataka i pravo na brisanje. Kada se PDF dokumenti dijele, svi nepotrebni osobni podaci moraju biti trajno uklonjeni putem pravilnog redigiranja.", "Francuski obrasci osobnih podataka uključuju numéro de sécurité sociale (NIR), adrese, telefonske brojeve i financijske podatke. CNIL preporučuje korištenje tehničkih alata za automatsko otkrivanje i redigiranje.", "Nepoštivanje RGPD-a može rezultirati kaznama do 20 milijuna eura ili 4% globalnog godišnjeg prometa. Pravilno redigiranje PDF dokumenata ključan je korak u osiguravanju usklađenosti.", "OfflineRedact pruža automatsko otkrivanje francuskih obrazaca osobnih podataka uz potpuno lokalno procesiranje. Vaši dokumenti nikada ne napuštaju vaš preglednik, što je u skladu s CNIL preporukama o sigurnosti podataka."]
+        "content": [
+          "Francuska komisija za zaštitu podataka (CNIL) nadzire primjenu RGPD-a (francuska implementacija GDPR-a) i izdaje specifične smjernice za obradu osobnih podataka. Organizacije koje posluju u Francuskoj moraju slijediti te smjernice.",
+          "CNIL posebno naglašava načelo minimizacije podataka i pravo na brisanje. Kada se PDF dokumenti dijele, svi nepotrebni osobni podaci moraju biti trajno uklonjeni putem pravilnog redigiranja.",
+          "Francuski obrasci osobnih podataka uključuju numéro de sécurité sociale (NIR), adrese, telefonske brojeve i financijske podatke. CNIL preporučuje korištenje tehničkih alata za automatsko otkrivanje i redigiranje.",
+          "Nepoštivanje RGPD-a može rezultirati kaznama do 20 milijuna eura ili 4% globalnog godišnjeg prometa. Pravilno redigiranje PDF dokumenata ključan je korak u osiguravanju usklađenosti.",
+          "OfflineRedact pruža automatsko otkrivanje francuskih obrazaca osobnih podataka uz potpuno lokalno procesiranje. Vaši dokumenti nikada ne napuštaju vaš preglednik, što je u skladu s CNIL preporukama o sigurnosti podataka."
+        ]
       },
       "lopdgdd-redaccion-pdf": {
         "title": "LOPDGDD: Vodič za redigiranje PDF-a prema španjolskim propisima",
         "excerpt": "Kako osigurati usklađenost PDF dokumenata sa španjolskim zakonom LOPDGDD o zaštiti podataka.",
         "date": "2026-03-17",
-        "content": ["Španjolski Organski zakon o zaštiti podataka i jamstvu digitalnih prava (LOPDGDD) nadopunjuje GDPR specifičnim odredbama za Španjolsku. Organizacije moraju poštivati oba propisa pri obradi osobnih podataka.", "LOPDGDD uvodi dodatna prava poput prava na digitalnu oporuku i specifične zaštite za maloljetne osobe na internetu. Redigiranje PDF dokumenata koji sadrže te podatke zahtijeva posebnu pažnju.", "Španjolski obrasci osobnih podataka uključuju DNI/NIE brojeve, brojeve socijalnog osiguranja i porezne identifikacijske brojeve. Automatsko otkrivanje značajno smanjuje rizik od propuštanja osjetljivih podataka.", "AEPD (Španjolska agencija za zaštitu podataka) može izreći značajne kazne za nepoštivanje. Organizacije moraju pokazati proaktivan pristup zaštiti podataka, uključujući pravilno redigiranje dokumenata.", "OfflineRedact automatski prepoznaje španjolske obrasce osobnih podataka i omogućuje trajno redigiranje izravno u pregledniku. To eliminira potrebu za slanjem dokumenata na vanjske poslužitelje."]
+        "content": [
+          "Španjolski Organski zakon o zaštiti podataka i jamstvu digitalnih prava (LOPDGDD) nadopunjuje GDPR specifičnim odredbama za Španjolsku. Organizacije moraju poštivati oba propisa pri obradi osobnih podataka.",
+          "LOPDGDD uvodi dodatna prava poput prava na digitalnu oporuku i specifične zaštite za maloljetne osobe na internetu. Redigiranje PDF dokumenata koji sadrže te podatke zahtijeva posebnu pažnju.",
+          "Španjolski obrasci osobnih podataka uključuju DNI/NIE brojeve, brojeve socijalnog osiguranja i porezne identifikacijske brojeve. Automatsko otkrivanje značajno smanjuje rizik od propuštanja osjetljivih podataka.",
+          "AEPD (Španjolska agencija za zaštitu podataka) može izreći značajne kazne za nepoštivanje. Organizacije moraju pokazati proaktivan pristup zaštiti podataka, uključujući pravilno redigiranje dokumenata.",
+          "OfflineRedact automatski prepoznaje španjolske obrasce osobnih podataka i omogućuje trajno redigiranje izravno u pregledniku. To eliminira potrebu za slanjem dokumenata na vanjske poslužitelje."
+        ]
       },
       "lgpd-redacao-pdf": {
         "title": "LGPD: Vodič za redigiranje PDF-a prema brazilskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s brazilskim zakonom LGPD.",
         "date": "2026-03-16",
-        "content": ["Brazilski Opći zakon o zaštiti podataka (LGPD) regulira obradu osobnih podataka u Brazilu i primjenjuje se na sve organizacije koje obrađuju podatke brazilskih građana. Zakon nameće stroge zahtjeve za transparentnost i sigurnost.", "LGPD definira posebne kategorije osjetljivih podataka, uključujući zdravstvene podatke, biometrijske podatke i političke stavove. Redigiranje tih podataka iz PDF dokumenata zahtijeva posebnu pažnju i preciznost.", "Brazilski obrasci osobnih podataka uključuju CPF (osobni porezni broj), RG (osobnu iskaznicu) i CNPJ (poslovni registracijski broj). Automatsko otkrivanje pomaže u identificiranju svih tih obrazaca.", "ANPD (Brazilska agencija za zaštitu podataka) aktivno provodi LGPD i može izreći kazne za nepoštivanje. Organizacije moraju implementirati odgovarajuće tehničke mjere za zaštitu osobnih podataka.", "OfflineRedact podržava brazilske obrasce osobnih podataka i omogućuje potpuno lokalno redigiranje. Vaši dokumenti nikada ne napuštaju vaš uređaj, čime se osigurava usklađenost s LGPD zahtjevima za sigurnost podataka."]
+        "content": [
+          "Brazilski Opći zakon o zaštiti podataka (LGPD) regulira obradu osobnih podataka u Brazilu i primjenjuje se na sve organizacije koje obrađuju podatke brazilskih građana. Zakon nameće stroge zahtjeve za transparentnost i sigurnost.",
+          "LGPD definira posebne kategorije osjetljivih podataka, uključujući zdravstvene podatke, biometrijske podatke i političke stavove. Redigiranje tih podataka iz PDF dokumenata zahtijeva posebnu pažnju i preciznost.",
+          "Brazilski obrasci osobnih podataka uključuju CPF (osobni porezni broj), RG (osobnu iskaznicu) i CNPJ (poslovni registracijski broj). Automatsko otkrivanje pomaže u identificiranju svih tih obrazaca.",
+          "ANPD (Brazilska agencija za zaštitu podataka) aktivno provodi LGPD i može izreći kazne za nepoštivanje. Organizacije moraju implementirati odgovarajuće tehničke mjere za zaštitu osobnih podataka.",
+          "OfflineRedact podržava brazilske obrasce osobnih podataka i omogućuje potpuno lokalno redigiranje. Vaši dokumenti nikada ne napuštaju vaš uređaj, čime se osigurava usklađenost s LGPD zahtjevima za sigurnost podataka."
+        ]
       },
       "dsgvo-pdf-schwaerzung": {
         "title": "DSGVO: Vodič za redigiranje PDF-a prema njemačkim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s njemačkom implementacijom GDPR-a (DSGVO).",
         "date": "2026-03-15",
-        "content": ["Njemački Savezni zakon o zaštiti podataka (BDSG) zajedno s DSGVO-om (njemački naziv za GDPR) tvori pravni okvir za zaštitu podataka u Njemačkoj. Njemačka ima jedne od najstrožih standarda zaštite podataka u Europi.", "DSGVO zahtijeva imenovanje službenika za zaštitu podataka za mnoge organizacije i nameće stroge zahtjeve za obradu osobnih podataka. Redigiranje PDF dokumenata ključan je korak u ispunjavanju tih zahtjeva.", "Njemački obrasci osobnih podataka uključuju Personalausweisnummer, Sozialversicherungsnummer i Steuernummer. Precizno otkrivanje ovih obrazaca kritično je za osiguravanje usklađenosti.", "Njemačka tijela za zaštitu podataka (Datenschutzbehörden) poznata su po strogom provođenju propisa. Kazne za nepoštivanje mogu biti značajne i uključivati ograničenja obrade.", "OfflineRedact automatski prepoznaje njemačke obrasce osobnih podataka. Cjelokupna obrada odvija se lokalno u vašem pregledniku, što je u skladu s visokim njemačkim standardima zaštite podataka."]
+        "content": [
+          "Njemački Savezni zakon o zaštiti podataka (BDSG) zajedno s DSGVO-om (njemački naziv za GDPR) tvori pravni okvir za zaštitu podataka u Njemačkoj. Njemačka ima jedne od najstrožih standarda zaštite podataka u Europi.",
+          "DSGVO zahtijeva imenovanje službenika za zaštitu podataka za mnoge organizacije i nameće stroge zahtjeve za obradu osobnih podataka. Redigiranje PDF dokumenata ključan je korak u ispunjavanju tih zahtjeva.",
+          "Njemački obrasci osobnih podataka uključuju Personalausweisnummer, Sozialversicherungsnummer i Steuernummer. Precizno otkrivanje ovih obrazaca kritično je za osiguravanje usklađenosti.",
+          "Njemačka tijela za zaštitu podataka (Datenschutzbehörden) poznata su po strogom provođenju propisa. Kazne za nepoštivanje mogu biti značajne i uključivati ograničenja obrade.",
+          "OfflineRedact automatski prepoznaje njemačke obrasce osobnih podataka. Cjelokupna obrada odvija se lokalno u vašem pregledniku, što je u skladu s visokim njemačkim standardima zaštite podataka."
+        ]
       },
       "appi-pdf-sumikeshi": {
         "title": "APPI: Vodič za redigiranje PDF-a prema japanskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s japanskim zakonom APPI.",
         "date": "2026-03-14",
-        "content": ["Japanski Zakon o zaštiti osobnih informacija (APPI) regulira obradu osobnih podataka u Japanu i nedavno je značajno reformiran s jačim sankcijama. Organizacije koje obrađuju podatke japanskih građana moraju poštivati njegove odredbe.", "APPI zahtijeva specifičnu privolu za obradu osjetljivih osobnih informacija, uključujući rasno podrijetlo, zdravstvene podatke i kaznenu evidenciju. Redigiranje tih podataka iz PDF-ova zahtijeva posebnu pažnju.", "Japanski obrasci osobnih podataka uključuju My Number (individualni identifikacijski broj), adrese pisane katakanom i specifične formate telefonskih brojeva. Automatsko prepoznavanje ovih obrazaca ključno je za usklađenost.", "PPC (Komisija za zaštitu osobnih informacija) nadgleda provedbu APPI-ja i može izreći kazne za nepoštivanje. Organizacije moraju implementirati odgovarajuće sigurnosne mjere za zaštitu podataka.", "OfflineRedact podržava japanske obrasce osobnih podataka i obrađuje sve lokalno u vašem pregledniku. Dokumenti nikada ne napuštaju vaš uređaj, što je u skladu s APPI zahtjevima za sigurnost podataka."]
+        "content": [
+          "Japanski Zakon o zaštiti osobnih informacija (APPI) regulira obradu osobnih podataka u Japanu i nedavno je značajno reformiran s jačim sankcijama. Organizacije koje obrađuju podatke japanskih građana moraju poštivati njegove odredbe.",
+          "APPI zahtijeva specifičnu privolu za obradu osjetljivih osobnih informacija, uključujući rasno podrijetlo, zdravstvene podatke i kaznenu evidenciju. Redigiranje tih podataka iz PDF-ova zahtijeva posebnu pažnju.",
+          "Japanski obrasci osobnih podataka uključuju My Number (individualni identifikacijski broj), adrese pisane katakanom i specifične formate telefonskih brojeva. Automatsko prepoznavanje ovih obrazaca ključno je za usklađenost.",
+          "PPC (Komisija za zaštitu osobnih informacija) nadgleda provedbu APPI-ja i može izreći kazne za nepoštivanje. Organizacije moraju implementirati odgovarajuće sigurnosne mjere za zaštitu podataka.",
+          "OfflineRedact podržava japanske obrasce osobnih podataka i obrađuje sve lokalno u vašem pregledniku. Dokumenti nikada ne napuštaju vaš uređaj, što je u skladu s APPI zahtjevima za sigurnost podataka."
+        ]
       },
       "pipa-pdf-masking": {
         "title": "PIPA: Vodič za redigiranje PDF-a prema južnokorejskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s južnokorejskim zakonom PIPA.",
         "date": "2026-03-13",
-        "content": ["Južnokorejski Zakon o zaštiti osobnih informacija (PIPA) jedan je od najstrožih zakona o zaštiti podataka na svijetu. Nameće opsežne obveze organizacijama koje prikupljaju i obrađuju osobne podatke.", "PIPA zahtijeva eksplicitnu privolu za prikupljanje podataka i stroge mjere sigurnosti pri obradi. Kazne za nepoštivanje mogu uključivati zatvorske kazne, što ga čini iznimno ozbiljnim propisom.", "Južnokorejski obrasci osobnih podataka uključuju RRN (registracijski broj stanovnika), broj vozačke dozvole i broj putovnice. Precizno otkrivanje ovih identifikatora ključno je za usklađenost.", "PIPC (Komisija za zaštitu osobnih informacija) aktivno provodi PIPA propise i redovito objavljuje smjernice za organizacije. Pravilno redigiranje dokumenata sastavni je dio usklađenosti.", "OfflineRedact omogućuje automatsko otkrivanje južnokorejskih obrazaca osobnih podataka. Potpuno lokalna obrada u pregledniku osigurava da vaši dokumenti nikada ne napuštaju vaš uređaj."]
+        "content": [
+          "Južnokorejski Zakon o zaštiti osobnih informacija (PIPA) jedan je od najstrožih zakona o zaštiti podataka na svijetu. Nameće opsežne obveze organizacijama koje prikupljaju i obrađuju osobne podatke.",
+          "PIPA zahtijeva eksplicitnu privolu za prikupljanje podataka i stroge mjere sigurnosti pri obradi. Kazne za nepoštivanje mogu uključivati zatvorske kazne, što ga čini iznimno ozbiljnim propisom.",
+          "Južnokorejski obrasci osobnih podataka uključuju RRN (registracijski broj stanovnika), broj vozačke dozvole i broj putovnice. Precizno otkrivanje ovih identifikatora ključno je za usklađenost.",
+          "PIPC (Komisija za zaštitu osobnih informacija) aktivno provodi PIPA propise i redovito objavljuje smjernice za organizacije. Pravilno redigiranje dokumenata sastavni je dio usklađenosti.",
+          "OfflineRedact omogućuje automatsko otkrivanje južnokorejskih obrazaca osobnih podataka. Potpuno lokalna obrada u pregledniku osigurava da vaši dokumenti nikada ne napuštaju vaš uređaj."
+        ]
       },
       "pipl-pdf-tumin": {
         "title": "PIPL: Vodič za redigiranje PDF-a prema kineskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s kineskim zakonom PIPL.",
         "date": "2026-03-12",
-        "content": ["Kineski Zakon o zaštiti osobnih informacija (PIPL) stupio je na snagu 2021. godine i nameće stroge zahtjeve za obradu osobnih podataka kineskih građana. Organizacije širom svijeta moraju poštivati ovaj zakon ako obrađuju takve podatke.", "PIPL zahtijeva izričitu privolu za obradu osjetljivih osobnih podataka i nameće stroga ograničenja za prekogranični prijenos podataka. Redigiranje dokumenata ključni je korak u osiguravanju usklađenosti.", "Kineski obrasci osobnih podataka uključuju shenfenzheng hao (broj osobne iskaznice), telefonske brojeve i bankovne račune. Automatsko otkrivanje ovih obrazaca pomaže u osiguravanju potpunog redigiranja.", "CAC (Kineska uprava za kibernetičku sigurnost) provodi PIPL i može izreći značajne kazne za nepoštivanje, uključujući suspenziju poslovanja. Organizacije moraju pokazati proaktivan pristup zaštiti podataka.", "OfflineRedact podržava kineske obrasce osobnih podataka uz potpuno lokalno procesiranje. Budući da dokumenti nikada ne napuštaju vaš preglednik, izbjegava se zabrinutost oko prekograničnog prijenosa podataka."]
+        "content": [
+          "Kineski Zakon o zaštiti osobnih informacija (PIPL) stupio je na snagu 2021. godine i nameće stroge zahtjeve za obradu osobnih podataka kineskih građana. Organizacije širom svijeta moraju poštivati ovaj zakon ako obrađuju takve podatke.",
+          "PIPL zahtijeva izričitu privolu za obradu osjetljivih osobnih podataka i nameće stroga ograničenja za prekogranični prijenos podataka. Redigiranje dokumenata ključni je korak u osiguravanju usklađenosti.",
+          "Kineski obrasci osobnih podataka uključuju shenfenzheng hao (broj osobne iskaznice), telefonske brojeve i bankovne račune. Automatsko otkrivanje ovih obrazaca pomaže u osiguravanju potpunog redigiranja.",
+          "CAC (Kineska uprava za kibernetičku sigurnost) provodi PIPL i može izreći značajne kazne za nepoštivanje, uključujući suspenziju poslovanja. Organizacije moraju pokazati proaktivan pristup zaštiti podataka.",
+          "OfflineRedact podržava kineske obrasce osobnih podataka uz potpuno lokalno procesiranje. Budući da dokumenti nikada ne napuštaju vaš preglednik, izbjegava se zabrinutost oko prekograničnog prijenosa podataka."
+        ]
       },
       "gdpr-italia-oscuramento-pdf": {
         "title": "GDPR u Italiji: Vodič za redigiranje PDF-a prema talijanskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s talijanskom implementacijom GDPR-a.",
         "date": "2026-03-11",
-        "content": ["Talijanski Garante per la protezione dei dati personali nadzire primjenu GDPR-a u Italiji i izdaje specifične smjernice za organizacije. Italija ima dugu tradiciju zaštite privatnosti s dodatnim nacionalnim odredbama.", "Talijanski Zakonik o zaštiti podataka (Codice Privacy) nadopunjuje GDPR specifičnim odredbama, uključujući posebne zaštite za zdravstvene podatke i podatke iz zapošljavanja. Redigiranje ovih podataka zahtijeva posebnu preciznost.", "Talijanski obrasci osobnih podataka uključuju codice fiscale (porezni identifikacijski broj), tessera sanitaria (zdravstvenu iskaznicu) i specifične formate adresa. Automatsko otkrivanje ključno je za potpunu usklađenost.", "Garante je poznat po strogom provođenju propisa i izricanju značajnih kazni. Organizacije moraju implementirati odgovarajuće tehničke i organizacijske mjere za zaštitu osobnih podataka.", "OfflineRedact automatski prepoznaje talijanske obrasce osobnih podataka. Potpuno lokalna obrada u pregledniku u skladu je s talijanskim standardima zaštite privatnosti i eliminira rizik prijenosa podataka."]
+        "content": [
+          "Talijanski Garante per la protezione dei dati personali nadzire primjenu GDPR-a u Italiji i izdaje specifične smjernice za organizacije. Italija ima dugu tradiciju zaštite privatnosti s dodatnim nacionalnim odredbama.",
+          "Talijanski Zakonik o zaštiti podataka (Codice Privacy) nadopunjuje GDPR specifičnim odredbama, uključujući posebne zaštite za zdravstvene podatke i podatke iz zapošljavanja. Redigiranje ovih podataka zahtijeva posebnu preciznost.",
+          "Talijanski obrasci osobnih podataka uključuju codice fiscale (porezni identifikacijski broj), tessera sanitaria (zdravstvenu iskaznicu) i specifične formate adresa. Automatsko otkrivanje ključno je za potpunu usklađenost.",
+          "Garante je poznat po strogom provođenju propisa i izricanju značajnih kazni. Organizacije moraju implementirati odgovarajuće tehničke i organizacijske mjere za zaštitu osobnih podataka.",
+          "OfflineRedact automatski prepoznaje talijanske obrasce osobnih podataka. Potpuno lokalna obrada u pregledniku u skladu je s talijanskim standardima zaštite privatnosti i eliminira rizik prijenosa podataka."
+        ]
       },
       "client-side-vs-server-side-redaction": {
         "title": "Redigiranje na strani klijenta vs. poslužitelja: Sigurnosna usporedba",
         "excerpt": "Detaljna usporedba sigurnosnih aspekata redigiranja PDF-a na strani klijenta i poslužitelja.",
         "date": "2026-03-10",
-        "content": ["Prilikom redigiranja osjetljivih podataka iz PDF dokumenata, ključna je odluka gdje se obrada odvija. Redigiranje na strani poslužitelja zahtijeva prijenos dokumenata na udaljeni poslužitelj, što stvara dodatne sigurnosne rizike.", "Redigiranje na strani klijenta obrađuje dokumente izravno u pregledniku korisnika. Dokumenti nikada ne napuštaju uređaj, eliminirajući rizike poput presretanja podataka, neovlaštenog pristupa na poslužitelju i kršenja podataka.", "Redigiranje na strani poslužitelja uvodi više točaka ranjivosti: prijenos podataka, pohrana na poslužitelju, pristup zaposlenika pružatelja usluge i potencijalno zadržavanje podataka. Svaka od ovih točaka predstavlja sigurnosni rizik.", "Regulatorni okviri poput GDPR-a, HIPAA i KVKK naglašavaju načelo minimizacije podataka. Redigiranje na strani klijenta prirodno ispunjava ovaj zahtjev jer se podaci nikada ne prenose izvan korisnikova uređaja.", "OfflineRedact koristi isključivo obradu na strani klijenta. Sva analiza i redigiranje odvijaju se u vašem pregledniku, pružajući najvišu razinu sigurnosti bez kompromisa u funkcionalnosti."]
+        "content": [
+          "Prilikom redigiranja osjetljivih podataka iz PDF dokumenata, ključna je odluka gdje se obrada odvija. Redigiranje na strani poslužitelja zahtijeva prijenos dokumenata na udaljeni poslužitelj, što stvara dodatne sigurnosne rizike.",
+          "Redigiranje na strani klijenta obrađuje dokumente izravno u pregledniku korisnika. Dokumenti nikada ne napuštaju uređaj, eliminirajući rizike poput presretanja podataka, neovlaštenog pristupa na poslužitelju i kršenja podataka.",
+          "Redigiranje na strani poslužitelja uvodi više točaka ranjivosti: prijenos podataka, pohrana na poslužitelju, pristup zaposlenika pružatelja usluge i potencijalno zadržavanje podataka. Svaka od ovih točaka predstavlja sigurnosni rizik.",
+          "Regulatorni okviri poput GDPR-a, HIPAA i KVKK naglašavaju načelo minimizacije podataka. Redigiranje na strani klijenta prirodno ispunjava ovaj zahtjev jer se podaci nikada ne prenose izvan korisnikova uređaja.",
+          "OfflineRedact koristi isključivo obradu na strani klijenta. Sva analiza i redigiranje odvijaju se u vašem pregledniku, pružajući najvišu razinu sigurnosti bez kompromisa u funkcionalnosti."
+        ]
       },
       "avg-pdf-lakken": {
         "title": "AVG: Vodič za redigiranje PDF-a prema nizozemskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s nizozemskim zakonom AVG.",
         "date": "2026-03-09",
-        "content": ["Nizozemski Algemene Verordening Gegevensbescherming (AVG) je nizozemska implementacija GDPR-a koja regulira obradu osobnih podataka. Autoriteit Persoonsgegevens (AP) nadzire provedbu i aktivno kažnjava nepoštivanje.", "AVG nameće stroge zahtjeve za transparentnost obrade podataka i prava ispitanika. Kada organizacije dijele PDF dokumente, moraju osigurati da su svi nepotrebni osobni podaci pravilno redigirani.", "Nizozemski obrasci osobnih podataka uključuju BSN (burgerservicenummer), poštanske kodove i specifične formate telefonskih brojeva. Precizno otkrivanje ovih obrazaca ključno je za potpunu usklađenost.", "AP je izrekla značajne kazne organizacijama koje nisu adekvatno zaštitile osobne podatke. Pravilno redigiranje dokumenata sastavni je dio strategije zaštite podataka.", "OfflineRedact podržava nizozemske obrasce osobnih podataka i obrađuje sve lokalno u vašem pregledniku. Time se osigurava usklađenost s AVG zahtjevima bez rizika prijenosa podataka na vanjske poslužitelje."]
+        "content": [
+          "Nizozemski Algemene Verordening Gegevensbescherming (AVG) je nizozemska implementacija GDPR-a koja regulira obradu osobnih podataka. Autoriteit Persoonsgegevens (AP) nadzire provedbu i aktivno kažnjava nepoštivanje.",
+          "AVG nameće stroge zahtjeve za transparentnost obrade podataka i prava ispitanika. Kada organizacije dijele PDF dokumente, moraju osigurati da su svi nepotrebni osobni podaci pravilno redigirani.",
+          "Nizozemski obrasci osobnih podataka uključuju BSN (burgerservicenummer), poštanske kodove i specifične formate telefonskih brojeva. Precizno otkrivanje ovih obrazaca ključno je za potpunu usklađenost.",
+          "AP je izrekla značajne kazne organizacijama koje nisu adekvatno zaštitile osobne podatke. Pravilno redigiranje dokumenata sastavni je dio strategije zaštite podataka.",
+          "OfflineRedact podržava nizozemske obrasce osobnih podataka i obrađuje sve lokalno u vašem pregledniku. Time se osigurava usklađenost s AVG zahtjevima bez rizika prijenosa podataka na vanjske poslužitelje."
+        ]
       },
       "rodo-redakcja-pdf": {
         "title": "RODO: Vodič za redigiranje PDF-a prema poljskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s poljskim zakonom RODO.",
         "date": "2026-03-08",
-        "content": ["Poljski RODO (Rozporządzenie o Ochronie Danych Osobowych) je poljska implementacija GDPR-a. UODO (Ured za zaštitu osobnih podataka) nadzire provedbu i aktivno provodi propise.", "RODO nameće obveze organizacijama da implementiraju odgovarajuće tehničke i organizacijske mjere za zaštitu osobnih podataka. Redigiranje PDF dokumenata ključan je dio tih mjera.", "Poljski obrasci osobnih podataka uključuju PESEL (osobni identifikacijski broj), NIP (porezni identifikacijski broj) i REGON (statistički broj). Automatsko otkrivanje ovih obrazaca značajno olakšava usklađenost.", "UODO je izrekla značajne kazne organizacijama u raznim sektorima. Organizacije moraju pokazati proaktivan pristup zaštiti podataka, uključujući pravilno redigiranje dokumenata.", "OfflineRedact automatski prepoznaje poljske obrasce osobnih podataka. Lokalna obrada u pregledniku osigurava da dokumenti nikada ne napuštaju vaš uređaj, u skladu s RODO zahtjevima."]
+        "content": [
+          "Poljski RODO (Rozporządzenie o Ochronie Danych Osobowych) je poljska implementacija GDPR-a. UODO (Ured za zaštitu osobnih podataka) nadzire provedbu i aktivno provodi propise.",
+          "RODO nameće obveze organizacijama da implementiraju odgovarajuće tehničke i organizacijske mjere za zaštitu osobnih podataka. Redigiranje PDF dokumenata ključan je dio tih mjera.",
+          "Poljski obrasci osobnih podataka uključuju PESEL (osobni identifikacijski broj), NIP (porezni identifikacijski broj) i REGON (statistički broj). Automatsko otkrivanje ovih obrazaca značajno olakšava usklađenost.",
+          "UODO je izrekla značajne kazne organizacijama u raznim sektorima. Organizacije moraju pokazati proaktivan pristup zaštiti podataka, uključujući pravilno redigiranje dokumenata.",
+          "OfflineRedact automatski prepoznaje poljske obrasce osobnih podataka. Lokalna obrada u pregledniku osigurava da dokumenti nikada ne napuštaju vaš uređaj, u skladu s RODO zahtjevima."
+        ]
       },
       "dataskydd-pdf-maskering": {
         "title": "Švedska zaštita podataka: Vodič za redigiranje PDF-a",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu sa švedskim propisima o zaštiti podataka.",
         "date": "2026-03-07",
-        "content": ["Švedska ima dugu tradiciju zaštite podataka, s prvim zakonom donesenim 1973. godine. Integritetsskyddsmyndigheten (IMY) nadzire provedbu GDPR-a i nacionalnih propisa o zaštiti podataka.", "Švedski propisi postavljaju posebne zahtjeve za obradu osobnih brojeva (personnummer) i koordinacijskih brojeva. Redigiranje ovih podataka iz PDF dokumenata zahtijeva posebnu pažnju i preciznost.", "Švedski obrasci osobnih podataka uključuju personnummer (osobni broj), samordningsnummer (koordinacijski broj) i specifične formate adresa. Precizno otkrivanje ovih obrazaca ključno je za usklađenost.", "IMY je izrekla značajne kazne organizacijama za nepoštivanje propisa o zaštiti podataka. Posebnu pozornost posvećuje obradi osobnih brojeva i zdravstvenih podataka.", "OfflineRedact podržava švedske obrasce osobnih podataka uz potpuno lokalno procesiranje u pregledniku. Vaši dokumenti nikada ne napuštaju vaš uređaj, što je u skladu sa švedskim visokim standardima zaštite privatnosti."]
+        "content": [
+          "Švedska ima dugu tradiciju zaštite podataka, s prvim zakonom donesenim 1973. godine. Integritetsskyddsmyndigheten (IMY) nadzire provedbu GDPR-a i nacionalnih propisa o zaštiti podataka.",
+          "Švedski propisi postavljaju posebne zahtjeve za obradu osobnih brojeva (personnummer) i koordinacijskih brojeva. Redigiranje ovih podataka iz PDF dokumenata zahtijeva posebnu pažnju i preciznost.",
+          "Švedski obrasci osobnih podataka uključuju personnummer (osobni broj), samordningsnummer (koordinacijski broj) i specifične formate adresa. Precizno otkrivanje ovih obrazaca ključno je za usklađenost.",
+          "IMY je izrekla značajne kazne organizacijama za nepoštivanje propisa o zaštiti podataka. Posebnu pozornost posvećuje obradi osobnih brojeva i zdravstvenih podataka.",
+          "OfflineRedact podržava švedske obrasce osobnih podataka uz potpuno lokalno procesiranje u pregledniku. Vaši dokumenti nikada ne napuštaju vaš uređaj, što je u skladu sa švedskim visokim standardima zaštite privatnosti."
+        ]
       },
       "pdf-redaction-healthcare-checklist": {
         "title": "Kontrolna lista za redigiranje PDF-a u zdravstvu",
         "excerpt": "Opsežna kontrolna lista za redigiranje osjetljivih zdravstvenih podataka iz PDF dokumenata u skladu s HIPAA.",
         "date": "2026-03-05",
-        "content": ["Zdravstvene organizacije svakodnevno obrađuju PDF dokumente koji sadrže zaštićene zdravstvene podatke (PHI). Pravilno redigiranje tih podataka ključno je za usklađenost s HIPAA i zaštitu privatnosti pacijenata.", "Kontrolna lista za redigiranje uključuje: imena pacijenata, datume rođenja, adrese, brojeve socijalnog osiguranja, brojeve medicinskih zapisa, dijagnoze, rezultate laboratorijskih pretraga i podatke o osiguranju. Svaka kategorija zahtijeva pažljivu identifikaciju.", "Česte pogreške u zdravstvenom redigiranju uključuju: propuštanje podataka u zaglavljima i podnožjima, zanemarivanje metapodataka dokumenta, nepotpuno redigiranje koje ostavlja djelomično vidljive podatke i korištenje vizualnog prekrivanja umjesto pravog redigiranja.", "Revizijski trag je ključan za usklađenost s HIPAA. Organizacije moraju dokumentirati tko je izvršio redigiranje, kada je izvršeno i koje su kategorije podataka redigirane. To pomaže pri revizijama i dokazivanju usklađenosti.", "OfflineRedact automatski otkriva zdravstvene obrasce podataka i izvršava pravo redigiranje uklanjanjem teksta iz PDF-a. Lokalna obrada u pregledniku eliminira rizik izlaganja PHI tijekom procesa redigiranja."]
+        "content": [
+          "Zdravstvene organizacije svakodnevno obrađuju PDF dokumente koji sadrže zaštićene zdravstvene podatke (PHI). Pravilno redigiranje tih podataka ključno je za usklađenost s HIPAA i zaštitu privatnosti pacijenata.",
+          "Kontrolna lista za redigiranje uključuje: imena pacijenata, datume rođenja, adrese, brojeve socijalnog osiguranja, brojeve medicinskih zapisa, dijagnoze, rezultate laboratorijskih pretraga i podatke o osiguranju. Svaka kategorija zahtijeva pažljivu identifikaciju.",
+          "Česte pogreške u zdravstvenom redigiranju uključuju: propuštanje podataka u zaglavljima i podnožjima, zanemarivanje metapodataka dokumenta, nepotpuno redigiranje koje ostavlja djelomično vidljive podatke i korištenje vizualnog prekrivanja umjesto pravog redigiranja.",
+          "Revizijski trag je ključan za usklađenost s HIPAA. Organizacije moraju dokumentirati tko je izvršio redigiranje, kada je izvršeno i koje su kategorije podataka redigirane. To pomaže pri revizijama i dokazivanju usklađenosti.",
+          "OfflineRedact automatski otkriva zdravstvene obrasce podataka i izvršava pravo redigiranje uklanjanjem teksta iz PDF-a. Lokalna obrada u pregledniku eliminira rizik izlaganja PHI tijekom procesa redigiranja."
+        ]
       },
       "ccpa-pdf-redaction": {
         "title": "CCPA: Vodič za redigiranje PDF-a prema kalifornijskim propisima",
         "excerpt": "Kako redigirati osobne podatke iz PDF dokumenata u skladu s kalifornijskim zakonom CCPA.",
         "date": "2026-02-28",
-        "content": ["Kalifornijski zakon o privatnosti potrošača (CCPA) daje stanovnicima Kalifornije značajna prava nad njihovim osobnim podacima. Organizacije koje prikupljaju podatke kalifornijskih potrošača moraju poštivati stroge zahtjeve za zaštitu podataka.", "CCPA definira osobne podatke široko, uključujući identifikatore poput imena, adrese, broja socijalnog osiguranja, podatke o pregledavanju interneta, geolokacijske podatke i biometrijske informacije. PDF dokumenti često sadrže više tih kategorija.", "Pri odgovaranju na zahtjeve potrošača za brisanje ili pristup podacima, organizacije moraju osigurati pravilno redigiranje podataka trećih osoba. Nepotpuno redigiranje može rezultirati kršenjem CCPA propisa.", "Kalifornijska agencija za zaštitu privatnosti (CPPA) provodi CCPA i može izreći značajne kazne. Organizacije moraju implementirati razumne sigurnosne mjere za zaštitu osobnih podataka.", "OfflineRedact podržava automatsko otkrivanje obrazaca osobnih podataka relevantnih za CCPA usklađenost. Potpuno lokalna obrada u pregledniku osigurava da dokumenti nikada ne napuštaju vaš uređaj, pružajući najvišu razinu sigurnosti."]
+        "content": [
+          "Kalifornijski zakon o privatnosti potrošača (CCPA) daje stanovnicima Kalifornije značajna prava nad njihovim osobnim podacima. Organizacije koje prikupljaju podatke kalifornijskih potrošača moraju poštivati stroge zahtjeve za zaštitu podataka.",
+          "CCPA definira osobne podatke široko, uključujući identifikatore poput imena, adrese, broja socijalnog osiguranja, podatke o pregledavanju interneta, geolokacijske podatke i biometrijske informacije. PDF dokumenti često sadrže više tih kategorija.",
+          "Pri odgovaranju na zahtjeve potrošača za brisanje ili pristup podacima, organizacije moraju osigurati pravilno redigiranje podataka trećih osoba. Nepotpuno redigiranje može rezultirati kršenjem CCPA propisa.",
+          "Kalifornijska agencija za zaštitu privatnosti (CPPA) provodi CCPA i može izreći značajne kazne. Organizacije moraju implementirati razumne sigurnosne mjere za zaštitu osobnih podataka.",
+          "OfflineRedact podržava automatsko otkrivanje obrazaca osobnih podataka relevantnih za CCPA usklađenost. Potpuno lokalna obrada u pregledniku osigurava da dokumenti nikada ne napuštaju vaš uređaj, pružajući najvišu razinu sigurnosti."
+        ]
       },
       "hipaa-compliant-pdf-redaction": {
         "title": "Redigiranje PDF-a u skladu s HIPAA: Potpuni vodič",

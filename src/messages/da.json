@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% klientside — Dine filer forlader aldrig din browser",
     "title": "Rediger permanent personoplysninger fra PDF-dokumenter",
-    "subtitle": "Registrer og fjern automatisk persondata — CPR-numre, navne, e-mails, telefonnumre, IBAN — fra dine PDF-filer. HIPAA, GDPR og KVKK-kompatibel.",
+    "subtitle": "Opdag og fjern permanent persondata — CPR, navne, e-mails, telefonnumre, IBAN — fra PDF-, Word- og billedfiler. Overholder GDPR, HIPAA og KVKK.",
     "cta": "Start redigering — Gratis",
     "ctaSecondary": "Se priser",
     "trustedBy": "Brugt af advokatfirmaer, sundhedsudbydere og offentlige myndigheder"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Slip filer her",
       "subtitle": "eller klik for at gennemse dine filer",
-      "hint": "Understøtter PDF og Word (.docx) filer. Dine filer forlader aldrig din browser.",
+      "hint": "Understøtter PDF-, Word-(.docx)- og billedfiler (JPG, PNG, WebP, TIFF). Dine filer forlader aldrig din browser.",
       "processing": "Behandler..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Slip dit dokument her",
       "subtitle": "eller klik for at gennemse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Automatisk registrering",

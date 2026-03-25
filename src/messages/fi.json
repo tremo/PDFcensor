@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% asiakaspuolella — Tiedostosi eivät koskaan poistu selaimestasi",
     "title": "Poista pysyvästi henkilötiedot PDF-asiakirjoista",
-    "subtitle": "Tunnista ja poista automaattisesti henkilötiedot — henkilötunnukset, nimet, sähköpostit, puhelinnumerot, IBAN — PDF-tiedostoistasi. HIPAA, GDPR ja KVKK -yhteensopiva.",
+    "subtitle": "Tunnista ja poista pysyvästi henkilötiedot — SSN, nimet, sähköpostit, puhelinnumerot, IBAN — PDF-, Word- ja kuvatiedostoista. GDPR, HIPAA ja KVKK yhteensopiva.",
     "cta": "Aloita — Ilmainen",
     "ctaSecondary": "Katso hinnat",
     "trustedBy": "Lakitoimistojen, terveydenhuollon ja viranomaisten luottama"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Tukee PDF-, Word-(.docx)- ja kuvatiedostoja (JPG, PNG, WebP, TIFF). Tiedostosi eivät koskaan poistu selaimestasi.",
       "processing": "Processing..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

@@ -2,7 +2,7 @@
 
 import { useCallback, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Upload, FileText, X } from "lucide-react";
+import { Upload, FileText, X, Image } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { regulations } from "@/lib/pii/regulations";
 import type { RegulationType, PIIType } from "@/types/pii";
@@ -174,7 +174,27 @@ export function PDFDropzone({
           {isProcessing ? t("processing") : t("title")}
         </h3>
         <p className="text-sm text-muted-foreground mb-2">{t("subtitle")}</p>
-        <p className="text-xs text-muted-foreground">{t("hint")}</p>
+        <p className="text-xs text-muted-foreground mb-3">{t("hint")}</p>
+        <div className="flex items-center justify-center gap-2 flex-wrap">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <FileText className="h-3 w-3" /> PDF
+          </span>
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <FileText className="h-3 w-3" /> DOCX
+          </span>
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <Image className="h-3 w-3" /> JPG
+          </span>
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <Image className="h-3 w-3" /> PNG
+          </span>
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <Image className="h-3 w-3" /> WebP
+          </span>
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-muted text-muted-foreground border border-border">
+            <Image className="h-3 w-3" /> TIFF
+          </span>
+        </div>
       </div>
 
       {/* File list */}
