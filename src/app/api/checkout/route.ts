@@ -5,8 +5,8 @@ import { locales } from "@/lib/i18n/config";
 import type Stripe from "stripe";
 
 const PRICE_IDS = {
-  monthly: process.env.STRIPE_PRICE_MONTHLY || "price_1TDl2RAej1A7idfqmbhyQDSh",
-  yearly: process.env.STRIPE_PRICE_YEARLY || "price_1TErzlAej1A7idfq9GmrbS7l",
+  monthly: process.env.STRIPE_PRICE_MONTHLY || "price_1TEtBFAej1A7idfql1qg3lCp",
+  yearly: process.env.STRIPE_PRICE_YEARLY || "price_1TEtDOAej1A7idfq0B25IY4E",
 };
 
 export async function POST(request: Request) {
