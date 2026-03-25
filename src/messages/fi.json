@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automaattinen PII-muokkaus PDF-, Word- ja kuvatiedostoille",
+    "description": "Poista henkilötiedot pysyvästi PDF-, Word- ja kuvatiedostoista. HIPAA, GDPR, KVKK yhteensopiva. 100% asiakaspuolella — tiedostosi eivät koskaan poistu selaimestasi."
   },
   "nav": {
     "home": "Koti",
@@ -11,54 +11,62 @@
   },
   "hero": {
     "badge": "100% asiakaspuolella — Tiedostosi eivät koskaan poistu selaimestasi",
-    "title": "Poista pysyvästi henkilötiedot PDF-asiakirjoista",
-    "subtitle": "Tunnista ja poista pysyvästi henkilötiedot — SSN, nimet, sähköpostit, puhelinnumerot, IBAN — PDF-, Word- ja kuvatiedostoista. GDPR, HIPAA ja KVKK yhteensopiva.",
+    "title": "Poista arkaluonteiset tiedot PDF-tiedostoista, asiakirjoista ja kuvista",
+    "subtitle": "Muokkaa automaattisesti PII ja kasvot PDF-, Word- ja kuvatiedostoista. HIPAA/GDPR/KVKK-yhteensopiva.",
     "cta": "Aloita — Ilmainen",
     "ctaSecondary": "Katso hinnat",
     "trustedBy": "Lakitoimistojen, terveydenhuollon ja viranomaisten luottama"
   },
   "features": {
-    "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "title": "Miksi OfflineRedact?",
+    "subtitle": "Yritystason asiakirjamuokkaus, joka toimii kokonaan selaimessasi",
     "trueRedaction": {
-      "title": "True Redaction",
-      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+      "title": "Aito muokkaus",
+      "description": "Toisin kuin yksinkertaiset mustat laatikot, poistamme varsinaisen tekstidatan PDF:stä. Muokattua sisältöä ei voi valita, kopioida tai palauttaa."
     },
     "clientSide": {
-      "title": "100% Client-Side",
-      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+      "title": "100% asiakaspuolella",
+      "description": "Tiedostosi eivät koskaan poistu laitteeltasi. Kaikki käsittely tapahtuu selaimessasi — ei latauksia, ei palvelimia, ei tietovuotoja."
     },
     "autoDetect": {
-      "title": "Auto-Detect PII",
-      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+      "title": "Automaattinen PII-tunnistus",
+      "description": "Tunnistaa automaattisesti henkilötunnukset, nimet, sähköpostit, puhelinnumerot, IBAN-numerot, luottokortit ja muut sisäänrakennettujen validointisääntöjen avulla."
     },
     "regulations": {
-      "title": "Multi-Regulation Support",
-      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+      "title": "Usean säädöksen tuki",
+      "description": "Sisäänrakennetut profiilit HIPAA, GDPR, KVKK, CCPA, LGPD ja muille säädöksille. Valitsee automaattisesti oikean profiilin sijaintisi perusteella."
+    },
+    "multiFormat": {
+      "title": "PDF-, Word- ja kuvatuki",
+      "description": "Muokkaa PDF-, Word- (.docx) ja kuvatiedostoja — kaikki samasta työkalusta. Ei tarvetta vaihtaa sovellusten välillä."
+    },
+    "ocrSupport": {
+      "title": "Sisäänrakennettu OCR",
+      "description": "Skannatut asiakirjat ja valokuvat? Ei ongelmaa. Sisäänrakennettu OCR lukee tekstin kuvista, joten myös skannauksissa olevat arkaluonteiset tiedot havaitaan."
     },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Eräkäsittely",
+      "description": "Lataa useita tiedostoja kerralla. Käsittele ne kaikki peräkkäin ja lataa yhtenä ZIP-tiedostona."
     },
     "metadata": {
-      "title": "Metadata Cleaning",
-      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+      "title": "Metatietojen puhdistus",
+      "description": "Poistaa piilotetut metatiedot — tekijä, otsikko, luontipäivä, ohjelmistotiedot — jotka voivat paljastaa arkaluonteisia tietoja."
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "title": "Näin se toimii",
+    "subtitle": "Kolme yksinkertaista vaihetta arkaluonteisten tietojen pysyvään muokkaukseen",
     "step1": {
-      "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "title": "Lataa",
+      "description": "Vedä ja pudota PDF-, Word- tai kuvatiedostosi — tai klikkaa selataksesi. Tukee useita tiedostoja."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Tarkista",
+      "description": "Automaattisesti tunnistetut henkilötiedot korostetaan. Lisää, poista tai säädä muokkauksia ennen käyttöönottoa."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Lataa",
+      "description": "Lataa pysyvästi muokattu tiedostosi. Alkuperäinen teksti on peruuttamattomasti poistettu."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Tiedosto, jossa arkaluonteisia tietoja",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Valmis suojaamaan arkaluonteisia tietoja?",
-    "subtitle": "Aloita PDF-tiedostojen muokkaus ilmaiseksi — ei rekisteröitymistä.",
+    "subtitle": "Aloita asiakirjojen muokkaus ilmaiseksi — ei rekisteröitymistä.",
     "button": "Aloita nyt"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Tietosuojakäytäntö",
     "terms": "Käyttöehdot",
     "rights": "Kaikki oikeudet pidätetään.",
-    "tagline": "Pysyvä PDF-muokkaus — 100% selaimessasi."
+    "tagline": "Pysyvä asiakirjamuokkaus — 100% selaimessasi."
   },
   "redact": {
     "title": "Document Redaction Tool",
