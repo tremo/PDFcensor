@@ -73,16 +73,13 @@ export async function detectOCRPIIFromImage(
 
   console.log("[OCR DEBUG] Tesseract data.text:", JSON.stringify(data.text?.substring(0, 300)));
   console.log("[OCR DEBUG] Tesseract data.blocks:", data.blocks?.length ?? "null/undefined");
-  console.log("[OCR DEBUG] Tesseract data.words:", data.words?.length ?? "null/undefined");
-  console.log("[OCR DEBUG] Tesseract data.lines:", data.lines?.length ?? "null/undefined");
   console.log("[OCR DEBUG] Tesseract confidence:", data.confidence);
 
   // Extract word-level bounding boxes
   const words: OCRWord[] = [];
   let lineCounter = 0;
 
-  if (data.blocks && data.blocks.length > 0) {
-    // Preferred: hierarchical blocks → paragraphs → lines → words (preserves line info)
+  if (data.blocks) {
     for (const block of data.blocks) {
       for (const paragraph of block.paragraphs) {
         for (const line of paragraph.lines) {
@@ -100,47 +97,6 @@ export async function detectOCRPIIFromImage(
           lineCounter++;
         }
       }
-    }
-  } else if (data.words && data.words.length > 0) {
-    // Fallback: flat words array (no line hierarchy from blocks)
-    // Group by Y position to approximate line boundaries
-    for (const word of data.words) {
-      const bbox = word.bbox;
-      // Estimate line index from vertical position (words within ~10px are same line)
-      const yCenter = (bbox.y0 + bbox.y1) / 2;
-      const existingLine = words.length > 0 ? words[words.length - 1] : null;
-      const existingYCenter = existingLine
-        ? existingLine.y + existingLine.height / 2
-        : -Infinity;
-      if (existingLine && Math.abs(yCenter - existingYCenter) > existingLine.height * 0.7) {
-        lineCounter++;
-      }
-      words.push({
-        text: word.text,
-        x: bbox.x0,
-        y: bbox.y0,
-        width: bbox.x1 - bbox.x0,
-        height: bbox.y1 - bbox.y0,
-        lineIndex: lineCounter,
-      });
-    }
-  } else if (data.lines && data.lines.length > 0) {
-    // Last fallback: use lines array directly
-    for (const line of data.lines) {
-      if (line.words) {
-        for (const word of line.words) {
-          const bbox = word.bbox;
-          words.push({
-            text: word.text,
-            x: bbox.x0,
-            y: bbox.y0,
-            width: bbox.x1 - bbox.x0,
-            height: bbox.y1 - bbox.y0,
-            lineIndex: lineCounter,
-          });
-        }
-      }
-      lineCounter++;
     }
   }
 

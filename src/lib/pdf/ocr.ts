@@ -63,7 +63,7 @@ async function ocrPage(
   let lineCounter = 0;
 
   // Traverse blocks -> paragraphs -> lines -> words to extract all word-level data
-  if (data.blocks && data.blocks.length > 0) {
+  if (data.blocks) {
     for (const block of data.blocks) {
       for (const paragraph of block.paragraphs) {
         for (const line of paragraph.lines) {
@@ -82,44 +82,6 @@ async function ocrPage(
           lineCounter++;
         }
       }
-    }
-  } else if (data.words && data.words.length > 0) {
-    // Fallback: flat words array when blocks hierarchy is unavailable
-    for (const word of data.words) {
-      const bbox = word.bbox;
-      const yCenter = (bbox.y0 + bbox.y1) / 2;
-      const existingLine = words.length > 0 ? words[words.length - 1] : null;
-      const existingYCenter = existingLine
-        ? existingLine.y + existingLine.height / 2
-        : -Infinity;
-      if (existingLine && Math.abs(yCenter - existingYCenter) > existingLine.height * 0.7) {
-        lineCounter++;
-      }
-      words.push({
-        text: word.text,
-        x: bbox.x0 / OCR_SCALE,
-        y: bbox.y0 / OCR_SCALE,
-        width: (bbox.x1 - bbox.x0) / OCR_SCALE,
-        height: (bbox.y1 - bbox.y0) / OCR_SCALE,
-        lineIndex: lineCounter,
-      });
-    }
-  } else if (data.lines && data.lines.length > 0) {
-    for (const line of data.lines) {
-      if (line.words) {
-        for (const word of line.words) {
-          const bbox = word.bbox;
-          words.push({
-            text: word.text,
-            x: bbox.x0 / OCR_SCALE,
-            y: bbox.y0 / OCR_SCALE,
-            width: (bbox.x1 - bbox.x0) / OCR_SCALE,
-            height: (bbox.y1 - bbox.y0) / OCR_SCALE,
-            lineIndex: lineCounter,
-          });
-        }
-      }
-      lineCounter++;
     }
   }
 
