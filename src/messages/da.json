@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatisk redigering af personoplysninger i PDF-dokumenter",
-    "description": "Fjern permanent persondata fra PDF'er. HIPAA, GDPR, KVKK-kompatibel. 100% klientside — dine filer forlader aldrig din browser."
+    "title": "OfflineRedact — Automatisk redigering af personoplysninger i PDF'er, Word og billeder",
+    "description": "Fjern permanent persondata fra PDF'er, Word-dokumenter og billeder. HIPAA, GDPR, KVKK-kompatibel. 100% klientside — dine filer forlader aldrig din browser."
   },
   "nav": {
     "home": "Hjem",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% klientside — Dine filer forlader aldrig din browser",
-    "title": "Rediger permanent personoplysninger fra PDF-dokumenter",
-    "subtitle": "Opdag og fjern permanent persondata — CPR, navne, e-mails, telefonnumre, IBAN — fra PDF-, Word- og billedfiler. Overholder GDPR, HIPAA og KVKK.",
+    "title": "Rediger følsomme data fra PDF'er, dokumenter og billeder",
+    "subtitle": "Auto-rediger PII og ansigter fra PDF'er, Word-dokumenter og billeder. HIPAA/GDPR/KVKK-kompatibel.",
     "cta": "Start redigering — Gratis",
     "ctaSecondary": "Se priser",
     "trustedBy": "Brugt af advokatfirmaer, sundhedsudbydere og offentlige myndigheder"
   },
   "features": {
     "title": "Hvorfor OfflineRedact?",
-    "subtitle": "Professionel PDF-redigering der kører helt i din browser",
+    "subtitle": "Professionel dokumentredigering der kører helt i din browser",
     "trueRedaction": {
       "title": "Ægte redigering",
       "description": "I modsætning til simple sorte bokse fjerner vi de faktiske tekstdata fra PDF'en. Det redigerede indhold kan ikke vælges, kopieres eller gendannes."
@@ -36,9 +36,17 @@
       "title": "Understøttelse af flere regulativer",
       "description": "Indbyggede profiler for HIPAA, GDPR, KVKK, CCPA, LGPD og mere. Vælger automatisk den rigtige profil."
     },
+    "multiFormat": {
+      "title": "PDF-, Word- og billedunderstøttelse",
+      "description": "Rediger PDF'er, Word-dokumenter (.docx) og billedfiler — alt fra det samme værktøj. Ingen grund til at skifte mellem forskellige apps."
+    },
+    "ocrSupport": {
+      "title": "Indbygget OCR",
+      "description": "Skannede dokumenter og fotos? Intet problem. Indbygget OCR læser tekst fra billeder, så følsomme data i skanninger også fanges."
+    },
     "batch": {
       "title": "Batchbehandling",
-      "description": "Upload flere PDF'er på én gang. Behandl dem alle og download som en enkelt ZIP-fil."
+      "description": "Upload flere filer på én gang. Behandl dem alle sekventielt og download som en enkelt ZIP-fil."
     },
     "metadata": {
       "title": "Metadatarensning",
@@ -50,7 +58,7 @@
     "subtitle": "Tre simple trin til permanent redigering af følsomme oplysninger",
     "step1": {
       "title": "Upload",
-      "description": "Træk og slip dine PDF-filer eller klik for at gennemse. Understøtter flere filer."
+      "description": "Træk og slip dine PDF'er, Word-dokumenter eller billeder — eller klik for at gennemse. Understøtter flere filer."
     },
     "step2": {
       "title": "Gennemgå",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download dit permanent redigerede PDF. Den originale tekst er uigenkaldeligt fjernet."
+      "description": "Download din permanent redigerede fil. Den originale tekst er uigenkaldeligt fjernet."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "De fleste redigeringsværktøjer kræver upload af hele dit dokument til deres servere. OfflineRedact fungerer anderledes.",
     "otherTools": "Andre værktøjer",
     "yourDoc": "Dit dokument",
-    "yourDocDesc": "PDF med følsomme data",
+    "yourDocDesc": "Fil med følsomme data",
     "theirServers": "Deres servere",
     "theirServersDesc": "Fuld fil uploadet og gemt",
     "whoKnows": "Hvem ved?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Klar til at beskytte følsomme data?",
-    "subtitle": "Start redigering af PDF'er gratis — ingen tilmelding.",
+    "subtitle": "Start redigering af dokumenter gratis — ingen tilmelding.",
     "button": "Start redigering nu"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Privatlivspolitik",
     "terms": "Servicevilkår",
     "rights": "Alle rettigheder forbeholdes.",
-    "tagline": "Permanent PDF-redigering — 100% i din browser."
+    "tagline": "Permanent dokumentredigering — 100% i din browser."
   },
   "redact": {
     "title": "Dokumentredigeringsværktøj",
