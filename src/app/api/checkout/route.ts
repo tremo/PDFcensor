@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
         { error: "Payment service not configured" },
-        { status: 503 }
+        { status: 500 }
       );
     }
 
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     if (!supabase) {
       return NextResponse.json(
         { error: "Auth service unavailable" },
-        { status: 503 }
+        { status: 500 }
       );
     }
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -69,15 +69,17 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Checkout error:", error);
 
+    // Avoid 502/503 status — Vercel replaces those with its own HTML error pages,
+    // which breaks response.json() on the client side.
     if (error instanceof Error && "type" in error) {
       const stripeError = error as Stripe.errors.StripeError;
       const message =
         stripeError.type === "StripeAuthenticationError"
-          ? "Payment service configuration error"
+          ? "Payment service configuration error. Please contact support."
           : stripeError.type === "StripeConnectionError"
-            ? "Payment service temporarily unavailable"
+            ? "Payment service temporarily unavailable. Please try again."
             : "Failed to create checkout session";
-      return NextResponse.json({ error: message }, { status: 502 });
+      return NextResponse.json({ error: message }, { status: 500 });
     }
 
     return NextResponse.json(

@@ -35,11 +35,16 @@ export default function PricingPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ locale, plan: billingPeriod }),
       });
-      const data = await response.json();
       if (response.status === 401) {
         router.push("/login?redirect=/pricing");
         return;
       }
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        setError("Server error. Please try again later.");
+        return;
+      }
+      const data = await response.json();
       if (data.url) {
         window.location.href = data.url;
       } else {
