@@ -58,15 +58,15 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Ġibded u itfa' il-PDFs, dokumenti Word jew immaġni tiegħek — jew ikklikkja biex tfittex. Jappoġġja diversi fajls."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Irrevedi",
+      "description": "PII misjuba awtomatikament hija evidenzjata. Żid, neħħi jew aġġusta r-redazzjonijiet qabel ma tapplika."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Niżżel",
+      "description": "Niżżel il-fajl irredattat b'mod permanenti tiegħek. It-test oriġinali huwa mneħħi b'mod irrekuperabbli."
     }
   },
   "comparison": {
@@ -75,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Fajl b'data sensittiva",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
