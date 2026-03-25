@@ -3,6 +3,7 @@ import { Link } from "@/lib/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import LandingDemo from "@/components/landing/LandingDemo";
+import { TrustedByLogos } from "@/components/landing/TrustedByLogos";
 import {
   ShieldCheck,
   Monitor,
@@ -391,6 +392,9 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Trusted By Logos */}
+      <TrustedByLogos title={t("trust.logoSection")} />
 
       {/* Trust */}
       <section className="py-12 border-b border-border">

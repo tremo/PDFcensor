@@ -7,6 +7,7 @@ import { locales, type Locale } from "@/lib/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AuthProvider } from "@/components/auth/AuthProvider";
+import { StructuredData, getWebApplicationSchema, getOrganizationSchema } from "@/components/seo/StructuredData";
 
 type Props = {
   children: React.ReactNode;
@@ -54,6 +55,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <StructuredData data={getWebApplicationSchema(locale)} />
+        <StructuredData data={getOrganizationSchema()} />
+      </head>
       <GoogleTagManager gtmId="GTM-K4678NT5" />
       <body className="min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>

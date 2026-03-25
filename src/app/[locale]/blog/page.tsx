@@ -1,5 +1,7 @@
+import type { Metadata } from "next";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
+import { locales } from "@/lib/i18n/config";
 
 const blogPosts = [
   { slug: "kvkk-pdf-redaction-guide", lang: "tr", date: "2026-03-20" },
@@ -27,6 +29,31 @@ const blogSlugs = blogPosts.map((post) => post.slug);
 const blogDates: Record<string, string> = Object.fromEntries(
   blogPosts.map((post) => [post.slug, post.date])
 );
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+
+  return {
+    title: t("meta.title"),
+    description: t("meta.description"),
+    openGraph: {
+      title: t("meta.title"),
+      description: t("meta.description"),
+      type: "website",
+      locale,
+    },
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}/blog`])
+      ),
+    },
+  };
+}
 
 export default async function BlogPage() {
   const t = await getTranslations("blog");
