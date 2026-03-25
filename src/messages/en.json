@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% Client-Side — Your files never leave your browser",
     "title": "Redact Sensitive Data from PDFs, Documents & Images",
-    "subtitle": "Automatically detect and permanently remove personal data — SSN, names, emails, phone numbers, IBAN — from PDF, Word, and scanned image files. Built-in OCR handles photos and scans. HIPAA, GDPR, and KVKK compliant.",
+    "subtitle": "Auto-redact PII & faces from PDFs, Word docs, and images. HIPAA/GDPR/KVKK compliant.",
     "cta": "Start Redacting — Free",
     "ctaSecondary": "See Pricing",
     "trustedBy": "Trusted by legal firms, healthcare providers, and government agencies"

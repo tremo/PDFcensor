@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Oscuramento automatico per PDF, documenti Word e immagini",
+    "description": "Rimuovi permanentemente i dati personali da PDF, documenti Word e immagini. Conforme a HIPAA, GDPR e KVKK. 100% lato client — i tuoi file non lasciano mai il browser."
   },
   "nav": {
     "home": "Home",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% lato client — I tuoi file non lasciano mai il tuo browser",
-    "title": "Oscura permanentemente i dati personali dai documenti PDF",
-    "subtitle": "Rileva e rimuovi permanentemente i dati personali — SSN, nomi, email, numeri di telefono, IBAN — da file PDF, Word e immagini. Conforme a GDPR, HIPAA e KVKK.",
+    "title": "Oscura i dati sensibili da PDF, documenti e immagini",
+    "subtitle": "Oscuramento automatico di dati personali e volti da PDF, documenti Word e immagini. Conforme a HIPAA/GDPR/KVKK.",
     "cta": "Inizia — Gratis",
     "ctaSecondary": "Vedi prezzi",
     "trustedBy": "Utilizzato da studi legali, strutture sanitarie e agenzie governative"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Oscuramento documenti di livello enterprise che funziona interamente nel tuo browser",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "PDF, Word e immagini",
+      "description": "Oscura PDF, documenti Word (.docx) e immagini — tutto da un unico strumento. Nessun bisogno di passare tra diverse applicazioni."
+    },
+    "ocrSupport": {
+      "title": "OCR integrato",
+      "description": "Documenti scansionati e foto? Nessun problema. L'OCR integrato legge il testo dalle immagini per individuare anche i dati sensibili nelle scansioni."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Carica più file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Trascina e rilascia i tuoi PDF, documenti Word o immagini — o clicca per sfogliare. Supporta più file."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Scarica il tuo file oscurato in modo permanente. Il testo originale viene rimosso in modo irrecuperabile."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "File con dati sensibili",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Pronto a proteggere i dati sensibili?",
-    "subtitle": "Inizia a oscurare i PDF gratuitamente — senza registrazione.",
+    "subtitle": "Inizia a oscurare i tuoi documenti gratuitamente — senza registrazione.",
     "button": "Inizia ora"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Informativa sulla privacy",
     "terms": "Termini di servizio",
     "rights": "Tutti i diritti riservati.",
-    "tagline": "Oscuramento permanente PDF — 100% nel tuo browser."
+    "tagline": "Oscuramento permanente documenti — 100% nel tuo browser."
   },
   "redact": {
     "title": "Document Redaction Tool",

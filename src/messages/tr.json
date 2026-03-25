@@ -12,7 +12,7 @@
   "hero": {
     "badge": "%100 Tarayıcı Tarafında — Dosyalarınız asla cihazınızdan çıkmaz",
     "title": "PDF, Word ve Görsellerden Hassas Verileri Sansürleyin",
-    "subtitle": "TC Kimlik No, isim, e-posta, telefon numarası, IBAN gibi kişisel verileri PDF, Word ve taranmış görsel dosyalardan otomatik tespit edin ve kalıcı olarak silin. Dahili OCR fotoğraf ve taramaları da okur. KVKK, GDPR ve HIPAA uyumlu.",
+    "subtitle": "PDF, Word ve görsellerden kişisel verileri ve yüzleri otomatik sansürleyin. KVKK/GDPR/HIPAA uyumlu.",
     "cta": "Ücretsiz Sansürlemeye Başla",
     "ctaSecondary": "Fiyatları Gör",
     "trustedBy": "Hukuk büroları, sağlık kuruluşları ve devlet kurumları tarafından tercih ediliyor"

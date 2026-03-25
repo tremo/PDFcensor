@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — PDF文档个人信息自动脱敏",
-    "description": "从PDF中永久删除个人数据。符合HIPAA、GDPR、KVKK规范。100%客户端处理 — 文件从不离开您的浏览器。"
+    "title": "OfflineRedact — PDF、Word与图像个人信息自动脱敏",
+    "description": "从PDF、Word文档和图像中永久删除个人数据。符合HIPAA、GDPR、KVKK规范。100%客户端处理 — 文件从不离开您的浏览器。"
   },
   "nav": {
     "home": "首页",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100%客户端处理 — 文件从不离开您的浏览器",
-    "title": "从PDF文档中永久删除个人身份信息",
-    "subtitle": "自动检测并永久删除PDF、Word和图像文件中的个人数据——SSN、姓名、邮箱、电话、IBAN。符合GDPR、HIPAA和KVKK要求。",
+    "title": "从PDF、文档和图像中删除敏感数据",
+    "subtitle": "自动脱敏PDF、Word文档和图像中的PII与人脸。符合HIPAA/GDPR/KVKK要求。",
     "cta": "免费开始脱敏",
     "ctaSecondary": "查看定价",
     "trustedBy": "受到律师事务所、医疗机构和政府部门的信赖"
   },
   "features": {
     "title": "为什么选择OfflineRedact？",
-    "subtitle": "完全在浏览器中运行的企业级PDF脱敏工具",
+    "subtitle": "完全在浏览器中运行的企业级文档脱敏工具",
     "trueRedaction": {
       "title": "真正的脱敏",
       "description": "与简单的黑色遮盖不同，我们从PDF中删除实际的文本数据。脱敏内容无法被选择、复制或恢复。"
@@ -36,9 +36,17 @@
       "title": "多法规支持",
       "description": "内置HIPAA、GDPR、KVKK、CCPA、LGPD等配置文件。根据您的位置自动选择正确的配置文件。"
     },
+    "multiFormat": {
+      "title": "PDF、Word与图像支持",
+      "description": "在同一工具中脱敏PDF、Word文档（.docx）和图像文件，无需切换不同应用。"
+    },
+    "ocrSupport": {
+      "title": "内置OCR",
+      "description": "扫描文档和照片也没问题。内置OCR可从图像中读取文字，扫描件中的敏感数据也能被识别。"
+    },
     "batch": {
       "title": "批量处理",
-      "description": "一次上传多个PDF。按顺序处理所有文件，并以单个ZIP文件下载。"
+      "description": "一次上传多个文件。按顺序处理所有文件，并以单个ZIP文件下载。"
     },
     "metadata": {
       "title": "元数据清理",
@@ -50,7 +58,7 @@
     "subtitle": "三个简单步骤永久删除敏感信息",
     "step1": {
       "title": "上传",
-      "description": "拖放您的PDF文件或点击浏览。支持多个文件。"
+      "description": "拖放您的PDF、Word文档或图像，或点击浏览。支持多个文件。"
     },
     "step2": {
       "title": "审核",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "下载",
-      "description": "下载您永久脱敏后的PDF。原始文本已被不可恢复地删除。"
+      "description": "下载您永久脱敏后的文件。原始文本已被不可恢复地删除。"
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "大多数脱敏工具需要将整个文档上传到其服务器。OfflineRedact的工作方式不同。",
     "otherTools": "其他工具",
     "yourDoc": "您的文档",
-    "yourDocDesc": "包含敏感数据的PDF",
+    "yourDocDesc": "包含敏感数据的文件",
     "theirServers": "他们的服务器",
     "theirServersDesc": "完整文件上传并存储",
     "whoKnows": "谁知道呢？",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "准备好保护敏感数据了吗？",
-    "subtitle": "免费开始PDF脱敏 — 无需注册。",
+    "subtitle": "免费开始文档脱敏 — 无需注册。",
     "button": "立即开始脱敏"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "隐私政策",
     "terms": "服务条款",
     "rights": "All rights reserved.",
-    "tagline": "永久PDF脱敏 — 100%在浏览器中处理。"
+    "tagline": "永久文档脱敏 — 100%在浏览器中处理。"
   },
   "redact": {
     "title": "文档脱敏工具",

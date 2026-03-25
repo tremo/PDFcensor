@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatická redakcia osobných údajov z PDF, Wordu a obrázkov",
+    "description": "Trvalo odstráňte osobné údaje z PDF, dokumentov Word a obrázkov. V súlade s HIPAA, GDPR, KVKK. 100% na strane klienta — vaše súbory nikdy neopustia váš prehliadač."
   },
   "nav": {
     "home": "Domov",
@@ -11,8 +11,8 @@
   },
   "hero": {
     "badge": "100% na strane klienta — Vaše súbory nikdy neopustia váš prehliadač",
-    "title": "Trvalo odstráňte osobné údaje z PDF dokumentov",
-    "subtitle": "Automaticky zistite a trvalo odstráňte osobné údaje — rodné čísla, mená, e-maily, telefónne čísla, IBAN — zo súborov PDF, Word a obrázkov. V súlade s GDPR, HIPAA a KVKK.",
+    "title": "Redigujte citlivé údaje z PDF, dokumentov a obrázkov",
+    "subtitle": "Automatická redakcia osobných údajov a tvárí z PDF, Wordu a obrázkov. Súlad s HIPAA/GDPR/KVKK.",
     "cta": "Začať — Zadarmo",
     "ctaSecondary": "Pozrieť cenník",
     "trustedBy": "Dôverujú nám právnické firmy, poskytovatelia zdravotnej starostlivosti a vládne agentúry"

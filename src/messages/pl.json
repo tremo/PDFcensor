@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatyczna redakcja danych osobowych z PDF, Word i obrazów",
+    "description": "Trwale usuwaj dane osobowe z plików PDF, dokumentów Word i obrazów. Zgodny z HIPAA, GDPR, KVKK. 100% po stronie klienta — Twoje pliki nigdy nie opuszczają przeglądarki."
   },
   "nav": {
     "home": "Strona główna",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% po stronie klienta — Twoje pliki nigdy nie opuszczają przeglądarki",
-    "title": "Trwale usuń dane osobowe z dokumentów PDF",
-    "subtitle": "Automatycznie wykryj i trwale usuń dane osobowe — SSN, nazwiska, e-maile, numery telefonów, IBAN — z plików PDF, Word i obrazów. Zgodny z RODO, HIPAA i KVKK.",
+    "title": "Redaguj dane wrażliwe z PDF, dokumentów i obrazów",
+    "subtitle": "Automatyczna redakcja danych osobowych i twarzy z plików PDF, Word i obrazów. Zgodny z HIPAA/GDPR/KVKK.",
     "cta": "Zacznij — Za darmo",
     "ctaSecondary": "Zobacz cennik",
     "trustedBy": "Zaufanie kancelarii prawnych, placówek medycznych i agencji rządowych"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Profesjonalna redakcja dokumentów, która działa w całości w Twojej przeglądarce",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Obsługa PDF, Word i obrazów",
+      "description": "Redaguj pliki PDF, dokumenty Word (.docx) i obrazy — wszystko z jednego narzędzia. Nie musisz przełączać się między aplikacjami."
+    },
+    "ocrSupport": {
+      "title": "Wbudowane OCR",
+      "description": "Zeskanowane dokumenty i zdjęcia? Żaden problem. Wbudowane OCR odczytuje tekst z obrazów, aby dane wrażliwe w skanach też zostały wykryte."
+    },
     "batch": {
       "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "description": "Upload multiple files at once. Process them all sequentially and download as a single ZIP file."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,7 +58,7 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Przeciągnij i upuść pliki PDF, dokumenty Word lub obrazy — lub kliknij, aby przeglądać. Obsługuje wiele plików."
     },
     "step2": {
       "title": "Review",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "description": "Pobierz trwale zredagowany plik. Oryginalny tekst jest bezpowrotnie usunięty."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Plik z danymi wrażliwymi",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Gotowy chronić wrażliwe dane?",
-    "subtitle": "Zacznij redagować pliki PDF za darmo — bez rejestracji.",
+    "subtitle": "Zacznij redagować dokumenty za darmo — bez rejestracji.",
     "button": "Zacznij teraz"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Polityka prywatności",
     "terms": "Regulamin",
     "rights": "Wszelkie prawa zastrzeżone.",
-    "tagline": "Trwała redakcja PDF — 100% w przeglądarce."
+    "tagline": "Trwała redakcja dokumentów — 100% w przeglądarce."
   },
   "redact": {
     "title": "Document Redaction Tool",
