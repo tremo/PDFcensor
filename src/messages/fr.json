@@ -104,6 +104,7 @@
     "subtitle": "OfflineRedact vous aide à respecter les exigences de protection des données dans plus de 20 réglementations et normes à travers le monde."
   },
   "trust": {
+    "logoSection": "Utilisé par des organisations leaders dans le monde entier",
     "title": "Approuvé par les professionnels qui traitent des documents sensibles",
     "legal": "Juridique",
     "healthcare": "Santé",
@@ -125,6 +126,10 @@
     "tagline": "Caviardage permanent de documents — 100% dans votre navigateur."
   },
   "redact": {
+    "meta": {
+      "title": "Caviarder des Documents — OfflineRedact Outil Gratuit en Ligne",
+      "description": "Supprimez définitivement les DCP des PDF, Word et images. Détection auto des noms, visages, IBAN et plus. 100% côté client."
+    },
     "title": "Outil de caviardage de documents",
     "titleDocx": "Outil de caviardage de documents Word",
     "titleBatch": "Caviardage par lots",
@@ -281,6 +286,10 @@
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Tarifs — OfflineRedact Outil de Caviardage PDF",
+      "description": "Commencez gratuitement ou passez à Pro pour 6,99 $/mois. Supprimez les filigranes, traitez en lot et bénéficiez d'un support prioritaire."
+    },
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement, mettez à niveau quand vous en avez besoin",
     "free": {
@@ -318,6 +327,46 @@
       "monthly": "Mensuel",
       "yearly": "Annuel",
       "save": "Économisez 29%"
+    },
+    "guarantee": "Garantie Satisfait ou Remboursé 30 Jours",
+    "guaranteeDesc": "Pas satisfait ? Obtenez un remboursement complet dans les 30 jours, sans conditions.",
+    "comparison": {
+      "title": "Comparaison",
+      "subtitle": "Pourquoi les professionnels choisissent OfflineRedact",
+      "feature": "Fonctionnalité",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Prix",
+      "offlineRedactPrice": "6,99 $/mois",
+      "adobePrice": "22,99 $/mois",
+      "redactablePrice": "39 $/mois",
+      "ilovepdfPrice": "7 $/mois",
+      "clientSide": "Traitement 100% Côté Client",
+      "faceDetection": "Détection & Floutage de Visages",
+      "multiFormat": "PDF + Word + Images",
+      "offlineCapable": "Fonctionne Hors Ligne",
+      "autoDetect": "Détection Auto des DCP",
+      "metadataCleaning": "Nettoyage des Métadonnées",
+      "batchProcessing": "Traitement par Lots",
+      "yes": "Oui",
+      "no": "Non",
+      "limited": "Limité",
+      "onlyUs": "Uniquement chez OfflineRedact"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "q1": "Mes données sont-elles en sécurité ?",
+      "a1": "Oui. Vos fichiers ne quittent jamais votre navigateur. Tout le traitement se fait 100% côté client — aucun envoi, aucun serveur, aucune fuite de données.",
+      "q2": "Puis-je obtenir un remboursement ?",
+      "a2": "Absolument. Nous offrons une garantie de remboursement de 30 jours, sans conditions. Contactez support@offlineredact.com.",
+      "q3": "Quels types de fichiers sont pris en charge ?",
+      "a3": "Documents PDF, fichiers Word (.docx) et images (JPG, PNG, WebP, TIFF). Tout dans un seul outil — pas besoin de changer d'application.",
+      "q4": "Fonctionne-t-il sans internet ?",
+      "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors ligne. Vos documents n'ont besoin d'aucune connexion internet.",
+      "q5": "Peut-il détecter les visages dans les photos ?",
+      "a5": "Oui. OfflineRedact inclut une détection de visages intégrée qui trouve et floute automatiquement les visages dans les documents et images — une fonctionnalité unique à OfflineRedact."
     }
   },
   "auth": {
@@ -353,7 +402,25 @@
     "proLinkedToAccount": "Les fonctionnalités Pro sont liées à {email}",
     "loginToActivate": "Connectez-vous pour lier les fonctionnalités Pro à votre compte"
   },
+  "privacy": {
+    "meta": {
+      "title": "Politique de Confidentialité — OfflineRedact",
+      "description": "Découvrez comment OfflineRedact protège votre vie privée. Vos fichiers ne quittent jamais votre navigateur."
+    },
+    "title": "Politique de confidentialité"
+  },
+  "terms": {
+    "meta": {
+      "title": "Conditions d'Utilisation — OfflineRedact",
+      "description": "Conditions d'utilisation de l'outil de caviardage OfflineRedact. Garantie satisfait ou remboursé 30 jours incluse."
+    },
+    "title": "Conditions d'utilisation"
+  },
   "blog": {
+    "meta": {
+      "title": "Blog — Guides de Caviardage de Documents OfflineRedact",
+      "description": "Guides et bonnes pratiques pour le caviardage PDF, la conformité RGPD, HIPAA, CCPA et la protection des données."
+    },
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "cta": {
