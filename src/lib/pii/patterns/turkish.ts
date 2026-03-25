@@ -53,11 +53,12 @@ export function detectTRPhone(text: string, pageIndex: number): PIIMatch[] {
 }
 
 /**
- * Detect Turkish passport numbers (1 letter + 6 digits)
+ * Detect passport numbers (1-2 letters + 6-9 digits)
+ * Covers Turkish (1 letter + 7-8 digits), EU, and most international formats.
  */
 export function detectTRPassport(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
-  const regex = /\b([A-Z]\d{6})\b/g;
+  const regex = /\b([A-Z]{1,2}\d{6,9})\b/g;
   let match;
 
   while ((match = regex.exec(text)) !== null) {
