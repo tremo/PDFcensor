@@ -248,7 +248,7 @@ export default function RedactPage() {
           </p>
           <div className="flex gap-3 justify-center pt-1">
             <Button asChild variant="accent">
-              <Link href={`/${locale}/pricing`}>Upgrade to Pro — $6.99/mo</Link>
+              <Link href="/pricing">Upgrade to Pro — $6.99/mo</Link>
             </Button>
             <Button variant="outline" onClick={handleDismissBatchGate}>
               Cancel
