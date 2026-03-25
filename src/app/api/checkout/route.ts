@@ -2,12 +2,21 @@ import { NextResponse } from "next/server";
 import { getStripeServer } from "@/lib/stripe/client";
 import { createClient } from "@/lib/supabase/server";
 import { locales } from "@/lib/i18n/config";
+import type Stripe from "stripe";
 
 export async function POST(request: Request) {
   try {
     const { locale: rawLocale = "en", plan = "monthly" } = await request.json();
     const locale = locales.includes(rawLocale) ? rawLocale : "en";
     const isYearly = plan === "yearly";
+
+    if (!process.env.STRIPE_SECRET_KEY) {
+      return NextResponse.json(
+        { error: "Payment service not configured" },
+        { status: 503 }
+      );
+    }
+
     const stripe = getStripeServer();
     const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
@@ -19,16 +28,16 @@ export async function POST(request: Request) {
         { status: 503 }
       );
     }
-    const { data: { user } } = await supabase.auth.getUser();
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
 
-    if (!user) {
+    if (authError || !user) {
       return NextResponse.json(
-        { error: "Authentication required" },
+        { error: "Authentication required. Please sign in again." },
         { status: 401 }
       );
     }
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ["card"],
       line_items: [
         {
@@ -48,16 +57,33 @@ export async function POST(request: Request) {
       mode: "subscription",
       success_url: `${appUrl}/${locale}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}/${locale}/pricing`,
-      customer_email: user.email!,
       metadata: {
         locale,
         userId: user.id,
       },
-    });
+    };
+
+    if (user.email) {
+      sessionParams.customer_email = user.email;
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionParams);
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
     console.error("Checkout error:", error);
+
+    if (error instanceof Error && "type" in error) {
+      const stripeError = error as Stripe.errors.StripeError;
+      const message =
+        stripeError.type === "StripeAuthenticationError"
+          ? "Payment service configuration error"
+          : stripeError.type === "StripeConnectionError"
+            ? "Payment service temporarily unavailable"
+            : "Failed to create checkout session";
+      return NextResponse.json({ error: message }, { status: 502 });
+    }
+
     return NextResponse.json(
       { error: "Failed to create checkout session" },
       { status: 500 }

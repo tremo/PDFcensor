@@ -36,6 +36,10 @@ export default function PricingPage() {
         body: JSON.stringify({ locale, plan: billingPeriod }),
       });
       const data = await response.json();
+      if (response.status === 401) {
+        router.push("/login?redirect=/pricing");
+        return;
+      }
       if (data.url) {
         window.location.href = data.url;
       } else {
