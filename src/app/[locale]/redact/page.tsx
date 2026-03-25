@@ -119,7 +119,6 @@ export default function RedactPage() {
     setDocumentType("none");
     setFlowMode("single");
     setSelectedRedactionId(null);
-    setDrawMode(false);
   }, [flowMode, documentType, pdf, docx, img, batch]);
 
   // Determine the active state based on document type (single mode)
