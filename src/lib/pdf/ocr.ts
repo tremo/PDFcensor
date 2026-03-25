@@ -14,6 +14,7 @@ interface OCRWord {
   y: number;
   width: number;
   height: number;
+  lineIndex: number;
 }
 
 /** Scale used for rendering pages for OCR (higher = better accuracy but slower) */
@@ -59,6 +60,7 @@ async function ocrPage(
   const { data } = await scheduler.addJob("recognize", canvas);
 
   const words: OCRWord[] = [];
+  let lineCounter = 0;
 
   // Traverse blocks -> paragraphs -> lines -> words to extract all word-level data
   if (data.blocks) {
@@ -74,8 +76,10 @@ async function ocrPage(
               y: bbox.y0 / OCR_SCALE,
               width: (bbox.x1 - bbox.x0) / OCR_SCALE,
               height: (bbox.y1 - bbox.y0) / OCR_SCALE,
+              lineIndex: lineCounter,
             });
           }
+          lineCounter++;
         }
       }
     }
@@ -100,7 +104,7 @@ async function ocrPage(
     const letterThenDigits =
       /^[A-Z]$/i.test(lastClean) &&
       wordClean.length > 0 && /^\d+$/.test(wordClean);
-    if (last && (bothDigits || letterThenDigits)) {
+    if (last && last.lineIndex === word.lineIndex && (bothDigits || letterThenDigits)) {
       const minX = Math.min(last.x, word.x);
       const minY = Math.min(last.y, word.y);
       const maxX = Math.max(last.x + last.width, word.x + word.width);
