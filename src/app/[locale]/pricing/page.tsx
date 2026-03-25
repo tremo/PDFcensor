@@ -85,9 +85,9 @@ export default function PricingPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto items-stretch">
         {/* Free */}
-        <Card className="relative">
+        <Card className="relative flex flex-col">
           <CardHeader>
             <CardTitle className="text-xl">{t("free.title")}</CardTitle>
             <div className="mt-2">
@@ -98,7 +98,7 @@ export default function PricingPage() {
               {t("free.description")}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex-1">
             <ul className="space-y-3">
               {freeFeatures.map((feature: string, i: number) => (
                 <li key={i} className="flex items-start gap-2 text-sm">
@@ -116,7 +116,7 @@ export default function PricingPage() {
         </Card>
 
         {/* Pro */}
-        <Card className="relative border-accent mt-4">
+        <Card className="relative border-accent flex flex-col pt-4">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2">
             <Badge variant="accent">Popular</Badge>
           </div>
@@ -134,7 +134,7 @@ export default function PricingPage() {
               {t("pro.description")}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex-1">
             <ul className="space-y-3">
               {proFeatures.map((feature: string, i: number) => (
                 <li key={i} className="flex items-start gap-2 text-sm">
