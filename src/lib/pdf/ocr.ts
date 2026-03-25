@@ -24,7 +24,7 @@ const OCR_SCALE = 2.0;
  * Map locale to Tesseract language codes.
  * Tesseract uses ISO 639-3 codes for language data.
  */
-function getOCRLanguages(locale: string): string {
+function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
   const langMap: Record<string, string> = {
     en: "eng",
     tr: "tur",
@@ -36,9 +36,17 @@ function getOCRLanguages(locale: string): string {
     ko: "kor",
     zh: "chi_sim",
   };
-  // Always include English as fallback since PII patterns (emails, numbers) are latin-based
-  const primary = langMap[locale] || "eng";
-  return primary === "eng" ? "eng" : `${primary}+eng`;
+  const langs = new Set<string>();
+  langs.add("eng"); // Always include English
+
+  // Add language for current UI locale
+  const localeLang = langMap[locale];
+  if (localeLang) langs.add(localeLang);
+
+  // Add languages required by enabled PII types
+  if (piiTypes.includes("tcKimlik") || piiTypes.includes("trPhone")) langs.add("tur");
+
+  return [...langs].join("+");
 }
 
 /**
@@ -186,7 +194,7 @@ export async function detectOCRPII(
   locale: string,
   onProgress?: (progress: number) => void
 ): Promise<RedactionArea[]> {
-  const lang = getOCRLanguages(locale);
+  const lang = getOCRLanguages(locale, piiTypes);
   const ocrRedactions: RedactionArea[] = [];
 
   // Parse PDF once for all pages instead of re-parsing per page

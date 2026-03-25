@@ -12,7 +12,7 @@ interface OCRWord {
   lineIndex: number;
 }
 
-function getOCRLanguages(locale: string): string {
+function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
   const langMap: Record<string, string> = {
     en: "eng",
     tr: "tur",
@@ -24,9 +24,17 @@ function getOCRLanguages(locale: string): string {
     ko: "kor",
     zh: "chi_sim",
   };
-  const primary = langMap[locale] || "eng";
-  // Always include English alongside the local language for numeric/latin PII
-  return primary === "eng" ? "eng" : `${primary}+eng`;
+  const langs = new Set<string>();
+  langs.add("eng"); // Always include English
+
+  // Add language for current UI locale
+  const localeLang = langMap[locale];
+  if (localeLang) langs.add(localeLang);
+
+  // Add languages required by enabled PII types
+  if (piiTypes.includes("tcKimlik") || piiTypes.includes("trPhone")) langs.add("tur");
+
+  return [...langs].join("+");
 }
 
 let idCounter = 0;
@@ -44,7 +52,7 @@ export async function detectOCRPIIFromImage(
   locale: string,
   onProgress?: (progress: number) => void
 ): Promise<{ redactions: RedactionArea[]; width: number; height: number }> {
-  const lang = getOCRLanguages(locale);
+  const lang = getOCRLanguages(locale, piiTypes);
 
   // Load the image onto a canvas to get pixel dimensions
   const bitmap = await createImageBitmap(file);
