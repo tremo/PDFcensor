@@ -204,27 +204,35 @@ export function usePDFProcessor() {
     }
   }, [locale]);
 
-  const scanFaces = useCallback(async (doc: PDFDocumentData) => {
+  const scanFaces = useCallback(async (doc?: PDFDocumentData) => {
+    const target = doc || document;
+    if (!target) return;
+
     setStatus("face-scanning");
     setProgress(0);
 
+    // Remove existing face redactions before re-scanning
+    if (!doc) {
+      setRedactions((prev) => prev.filter((r) => r.piiType !== "face"));
+    }
+
     try {
-      const arrayBuffer = await getDocumentArrayBuffer(doc);
+      const arrayBuffer = await getDocumentArrayBuffer(target);
       const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
       const FACE_SCALE = 2.0;
       const faceRedactions: RedactionArea[] = [];
 
-      for (let i = 0; i < doc.pages.length; i++) {
+      for (let i = 0; i < target.pages.length; i++) {
         const canvas = globalThis.document.createElement("canvas");
         await renderPageToCanvas(pdf, i + 1, canvas, FACE_SCALE);
 
-        const faces = await detectFacesInCanvas(canvas, doc.pages[i].pageIndex, FACE_SCALE);
+        const faces = await detectFacesInCanvas(canvas, target.pages[i].pageIndex, FACE_SCALE);
         faceRedactions.push(...faces);
 
         canvas.width = 0;
         canvas.height = 0;
 
-        setProgress(Math.round(((i + 1) / doc.pages.length) * 100));
+        setProgress(Math.round(((i + 1) / target.pages.length) * 100));
       }
 
       pdf.destroy();
@@ -235,7 +243,7 @@ export function usePDFProcessor() {
       setError(e instanceof Error ? e.message : "Face detection failed");
       setStatus("error");
     }
-  }, []);
+  }, [document]);
 
   const handleFilesSelected = useCallback(
     async (newFiles: File[]) => {

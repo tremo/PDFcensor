@@ -106,6 +106,36 @@ export function useImageProcessor() {
     await scanImage(imageFile, enabledTypes, regulation, faceDetectionEnabled);
   }, [imageFile, enabledTypes, regulation, faceDetectionEnabled, scanImage]);
 
+  const scanFaces = useCallback(async () => {
+    if (!imageFile) return;
+    try {
+      setStatus("face-scanning");
+      setProgress(0);
+
+      // Remove existing face redactions before re-scanning
+      setRedactions((prev) => prev.filter((r) => r.piiType !== "face"));
+
+      const bitmap = await createImageBitmap(imageFile);
+      const canvas = globalThis.document.createElement("canvas");
+      canvas.width = bitmap.width;
+      canvas.height = bitmap.height;
+      const ctx = canvas.getContext("2d")!;
+      ctx.drawImage(bitmap, 0, 0);
+      bitmap.close();
+
+      const faceRedactions = await detectFacesInCanvas(canvas, 0);
+      canvas.width = 0;
+      canvas.height = 0;
+
+      setRedactions((prev) => [...prev, ...faceRedactions]);
+      setProgress(100);
+      setStatus("previewing");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Face detection failed");
+      setStatus("error");
+    }
+  }, [imageFile]);
+
   const applyRedaction = useCallback(async () => {
     if (!imageFile || !document) return;
 
@@ -248,6 +278,7 @@ export function useImageProcessor() {
     changeRegulation,
     toggleType,
     setFaceDetectionEnabled,
+    scanFaces,
     reset,
   };
 }
