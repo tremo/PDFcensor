@@ -59,7 +59,6 @@ async function ocrPage(
   const { data } = await scheduler.addJob("recognize", canvas);
 
   const words: OCRWord[] = [];
-  let fullText = "";
 
   // Traverse blocks -> paragraphs -> lines -> words to extract all word-level data
   if (data.blocks) {
@@ -76,19 +75,42 @@ async function ocrPage(
               width: (bbox.x1 - bbox.x0) / OCR_SCALE,
               height: (bbox.y1 - bbox.y0) / OCR_SCALE,
             });
-
-            fullText += word.text + " ";
           }
         }
       }
     }
   }
 
+  // Merge adjacent digit-only words so numeric PII patterns (TC Kimlik, IBAN, etc.) match
+  const mergedWords: OCRWord[] = [];
+  for (const word of words) {
+    const last = mergedWords[mergedWords.length - 1];
+    if (last && /^\d+$/.test(last.text) && /^\d+$/.test(word.text)) {
+      const minX = Math.min(last.x, word.x);
+      const minY = Math.min(last.y, word.y);
+      const maxX = Math.max(last.x + last.width, word.x + word.width);
+      const maxY = Math.max(last.y + last.height, word.y + word.height);
+      last.text += word.text;
+      last.x = minX;
+      last.y = minY;
+      last.width = maxX - minX;
+      last.height = maxY - minY;
+    } else {
+      mergedWords.push({ ...word });
+    }
+  }
+
+  // Build fullText from merged words
+  let mergedFullText = "";
+  for (const word of mergedWords) {
+    mergedFullText += word.text + " ";
+  }
+
   // Clean up offscreen canvas
   canvas.width = 0;
   canvas.height = 0;
 
-  return { words, fullText: fullText.trim() };
+  return { words: mergedWords, fullText: mergedFullText.trim() };
 }
 
 /**
