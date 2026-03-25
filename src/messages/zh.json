@@ -170,7 +170,10 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "正在检测人脸...",
+      "faceDetection": "人脸检测",
+      "faceDetectionWarning": "人脸检测可能需要更长时间。"
     },
     "docx": {
       "pending": "待处理",
@@ -208,7 +211,16 @@
       "passport": "护照号码",
       "names": "人名",
       "address": "地址",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "人脸"
+    },
+    "scanProgress": {
+      "stepParsing": "解析",
+      "stepScanning": "扫描",
+      "stepFaceScanning": "人脸",
+      "patience": "请稍候...",
+      "foundSoFar": "已检测到",
+      "faceDetectionQueued": "人脸检测将在文本扫描完成后开始。"
     }
   },
   "landing": {

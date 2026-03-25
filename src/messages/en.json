@@ -170,7 +170,10 @@
       "drawModeOn": "Drawing Mode: ON",
       "drawModeOff": "Drawing Mode: OFF",
       "drawModeHint": "Click and drag on the document to draw a redaction box",
-      "selectModeHint": "Click on redactions to select, move, or resize them"
+      "selectModeHint": "Click on redactions to select, move, or resize them",
+      "faceScanning": "Detecting faces...",
+      "faceDetection": "Face Detection",
+      "faceDetectionWarning": "Face detection may take longer to process."
     },
     "docx": {
       "pending": "Pending",
@@ -208,7 +211,16 @@
       "passport": "Passport Number",
       "names": "Person Names",
       "address": "Addresses",
-      "customKeyword": "Custom Keyword"
+      "customKeyword": "Custom Keyword",
+      "face": "Face"
+    },
+    "scanProgress": {
+      "stepParsing": "Parse",
+      "stepScanning": "Scan",
+      "stepFaceScanning": "Faces",
+      "patience": "This may take a moment...",
+      "foundSoFar": "Detected so far",
+      "faceDetectionQueued": "Face detection will start after text scan completes."
     }
   },
   "landing": {

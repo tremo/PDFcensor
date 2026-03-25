@@ -170,7 +170,10 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "Gesichter werden erkannt...",
+      "faceDetection": "Gesichtserkennung",
+      "faceDetectionWarning": "Die Gesichtserkennung kann länger dauern."
     },
     "docx": {
       "pending": "Ausstehend",
@@ -208,7 +211,16 @@
       "passport": "Reisepassnummer",
       "names": "Personennamen",
       "address": "Adressen",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "Gesicht"
+    },
+    "scanProgress": {
+      "stepParsing": "Parsen",
+      "stepScanning": "Scannen",
+      "stepFaceScanning": "Gesichter",
+      "patience": "Dies kann einen Moment dauern...",
+      "foundSoFar": "Bisher erkannt",
+      "faceDetectionQueued": "Die Gesichtserkennung startet nach dem Textscan."
     }
   },
   "landing": {

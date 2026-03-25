@@ -170,7 +170,10 @@
       "drawModeOn": "绘制模式：开启",
       "drawModeOff": "绘制模式：关闭",
       "drawModeHint": "在文档上点击并拖动以绘制编辑框",
-      "selectModeHint": "点击编辑项以选择、移动或调整大小"
+      "selectModeHint": "点击编辑项以选择、移动或调整大小",
+      "faceScanning": "얼굴 감지 중...",
+      "faceDetection": "얼굴 감지",
+      "faceDetectionWarning": "얼굴 감지는 더 오래 걸릴 수 있습니다."
     },
     "docx": {
       "pending": "대기 중",
@@ -208,7 +211,16 @@
       "passport": "여권번호",
       "names": "인명",
       "address": "주소",
-      "customKeyword": "自定义关键词"
+      "customKeyword": "自定义关键词",
+      "face": "얼굴"
+    },
+    "scanProgress": {
+      "stepParsing": "분석",
+      "stepScanning": "스캔",
+      "stepFaceScanning": "얼굴",
+      "patience": "잠시만 기다려 주세요...",
+      "foundSoFar": "현재까지 감지된 항목",
+      "faceDetectionQueued": "얼굴 감지는 텍스트 스캔 완료 후 시작됩니다."
     }
   },
   "landing": {

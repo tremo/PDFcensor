@@ -403,8 +403,15 @@ export function PDFViewer({
             >
               {r.confirmed ? (
                 <>
-                  {/* Approved: solid black fill */}
-                  <div className="absolute inset-0 bg-black rounded-[1px]" />
+                  {/* Approved: blur for faces, solid black for text */}
+                  {r.blurMode ? (
+                    <div
+                      className="absolute inset-0 rounded-[1px]"
+                      style={{ backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", backgroundColor: "rgba(0,0,0,0.1)" }}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-black rounded-[1px]" />
+                  )}
                   {/* Corner resize triangles */}
                   <div
                     className="absolute bottom-0 right-0 w-0 h-0 pointer-events-none opacity-60"
@@ -422,15 +429,27 @@ export function PDFViewer({
                   />
                 </>
               ) : (
-                /* Pending review: transparent highlight showing text underneath */
-                <div
-                  className={cn(
-                    "absolute inset-0 rounded-[1px] border-2 transition-all duration-150",
-                    hovered || selected
-                      ? "bg-amber-400/35 border-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]"
-                      : "bg-amber-300/20 border-amber-400/70"
-                  )}
-                />
+                /* Pending review: blur for faces, transparent highlight for text */
+                r.blurMode ? (
+                  <div
+                    className={cn(
+                      "absolute inset-0 rounded-[1px] border-2 transition-all duration-150",
+                      hovered || selected
+                        ? "border-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.4)]"
+                        : "border-blue-400/70"
+                    )}
+                    style={{ backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", backgroundColor: "rgba(59,130,246,0.15)" }}
+                  />
+                ) : (
+                  <div
+                    className={cn(
+                      "absolute inset-0 rounded-[1px] border-2 transition-all duration-150",
+                      hovered || selected
+                        ? "bg-amber-400/35 border-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]"
+                        : "bg-amber-300/20 border-amber-400/70"
+                    )}
+                  />
+                )
               )}
 
               {/* Selection ring */}

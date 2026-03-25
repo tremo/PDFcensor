@@ -43,6 +43,7 @@ export interface RedactionArea {
   text: string;
   piiType: string;
   isManual?: boolean;
+  blurMode?: boolean;
   confirmed: boolean;
 }
 
@@ -52,6 +53,7 @@ export type ProcessingStatus =
   | "parsing"
   | "scanning"
   | "ocr-scanning"
+  | "face-scanning"
   | "previewing"
   | "redacting"
   | "done"

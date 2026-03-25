@@ -1,7 +1,9 @@
 import type { RedactionArea } from "@/types/pdf";
+import { blurRegion } from "@/lib/face/blur";
 
 /**
  * Apply redactions to an image by drawing black rectangles over confirmed areas.
+ * Face redactions use pixelation blur instead of black rectangles.
  * Returns a PNG Blob.
  */
 export async function redactImage(
@@ -17,10 +19,13 @@ export async function redactImage(
   ctx.drawImage(bitmap, 0, 0);
   bitmap.close();
 
-  // Draw black rectangles over confirmed redactions
-  ctx.fillStyle = "#000000";
+  // Apply redactions: blur for faces, black rectangles for text PII
   for (const r of redactions) {
-    if (r.confirmed) {
+    if (!r.confirmed) continue;
+    if (r.blurMode) {
+      blurRegion(ctx, r.x, r.y, r.width, r.height);
+    } else {
+      ctx.fillStyle = "#000000";
       ctx.fillRect(r.x, r.y, r.width, r.height);
     }
   }
