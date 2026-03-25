@@ -401,6 +401,186 @@
       "button": "Start redigering"
     },
     "posts": {
+      "kvkk-pdf-redaction-guide": {
+        "title": "Guide til PDF-redigering i henhold til KVKK: Tyrkisk databeskyttelse",
+        "excerpt": "Sådan redigerer du personoplysninger i PDF-filer i overensstemmelse med den tyrkiske databeskyttelseslov KVKK.",
+        "date": "2026-03-20",
+        "content": [
+          "Den tyrkiske lov om beskyttelse af personoplysninger (KVKK) er den primære juridiske ramme for behandling af personoplysninger i Tyrkiet. Organisationer, der arbejder med tyrkiske borgere, skal sikre korrekt beskyttelse af personoplysninger ved deling af dokumenter.",
+          "KVKK definerer personoplysninger som enhver information, der vedrører en identificeret eller identificerbar fysisk person. Dette omfatter TC Kimlik-numre, navne, adresser, telefonnumre og finansielle oplysninger.",
+          "Ved deling af PDF-dokumenter, der indeholder personoplysninger om tyrkiske borgere, skal organisationer foretage uigenkaldelig redigering. Simpel visuel tildækning er ikke tilstrækkelig til KVKK-overholdelse.",
+          "KVKK foreskriver betydelige bøder for brud på databeskyttelsen. Korrekt redigering af PDF-dokumenter er et kritisk skridt for at forhindre uautoriseret videregivelse af personoplysninger.",
+          "OfflineRedact registrerer automatisk tyrkiske mønstre for personoplysninger, herunder TC Kimlik-numre, og udfører al behandling i din browser, hvilket sikrer KVKK-overholdelse."
+        ]
+      },
+      "cnil-rgpd-caviardage-pdf": {
+        "title": "PDF-redigering i henhold til CNIL og RGPD: Fransk databeskyttelse",
+        "excerpt": "Guide til redigering af personoplysninger i PDF-filer i overensstemmelse med det franske RGPD og CNIL's retningslinjer.",
+        "date": "2026-03-18",
+        "content": [
+          "CNIL (Commission Nationale de l'Informatique et des Libertés) er den franske tilsynsmyndighed for databeskyttelse. Den håndhæver RGPD — den franske implementering af GDPR — og udsteder specifikke retningslinjer for behandling af personoplysninger.",
+          "Franske organisationer skal overholde strenge regler ved deling af dokumenter, der indeholder personoplysninger. Kaviardage (redigering) af PDF-filer er en grundlæggende metode til beskyttelse af fortrolige oplysninger.",
+          "CNIL kan pålægge bøder op til 20 millioner euro eller 4 % af den globale årlige omsætning for overtrædelser af RGPD. Korrekt redigering af dokumenter er påkrævet.",
+          "Ved behandling af franske dokumenter er det vigtigt at registrere og redigere numéro de sécurité sociale, navne, adresser, telefonnumre og andre personlige identifikatorer.",
+          "OfflineRedact understøtter registrering af franske mønstre for personoplysninger og udfører behandlingen udelukkende i browseren, hvilket sikrer overholdelse af CNIL's krav."
+        ]
+      },
+      "lopdgdd-redaccion-pdf": {
+        "title": "PDF-redigering i henhold til LOPDGDD: Spansk databeskyttelse",
+        "excerpt": "Sådan redigerer du personoplysninger i PDF-filer i overensstemmelse med den spanske lov LOPDGDD.",
+        "date": "2026-03-17",
+        "content": [
+          "LOPDGDD (Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales) er den spanske databeskyttelseslov, der supplerer GDPR med yderligere bestemmelser. Organisationer i Spanien skal overholde begge regelsæt.",
+          "Den spanske lov kræver særlig beskyttelse af visse datakategorier, herunder DNI/NIE-numre, socialsikringsnumre og sundhedsoplysninger.",
+          "Ved deling af PDF-dokumenter skal spanske organisationer sikre uigenkaldelig fjernelse af personoplysninger. Tilsynsmyndigheden AEPD pålægger aktivt sanktioner for overtrædelser.",
+          "LOPDGDD indfører yderligere rettigheder, såsom retten til digitalt testamente og retten til internetneutralitet. Redigering af dokumenter er et nøgleværktøj til beskyttelse af disse rettigheder.",
+          "OfflineRedact registrerer automatisk spanske mønstre for personoplysninger og behandler alt lokalt i din browser, hvilket sikrer fuld overholdelse af LOPDGDD."
+        ]
+      },
+      "lgpd-redacao-pdf": {
+        "title": "PDF-redigering i henhold til LGPD: Brasiliansk databeskyttelse",
+        "excerpt": "Guide til redigering af personoplysninger i PDF-filer i overensstemmelse med den brasilianske lov LGPD.",
+        "date": "2026-03-16",
+        "content": [
+          "LGPD (Lei Geral de Proteção de Dados) er den brasilianske databeskyttelseslov, der ligner den europæiske GDPR. Den regulerer behandling af personoplysninger om brasilianske borgere af organisationer verden over.",
+          "LGPD definerer personoplysninger som enhver information, der vedrører en identificeret eller identificerbar fysisk person. CPF-numre, RG-numre og sundhedsdata kræver særlig beskyttelse.",
+          "Den brasilianske tilsynsmyndighed ANPD kan pålægge bøder op til 2 % af virksomhedens omsætning i Brasilien. Korrekt redigering af dokumenter er påkrævet for overholdelse.",
+          "Ved behandling af dokumenter, der indeholder oplysninger om brasilianske borgere, skal organisationer foretage uigenkaldelig redigering, inden de deles med tredjeparter.",
+          "OfflineRedact understøtter brasilianske mønstre for personoplysninger, herunder CPF- og RG-numre, og behandler alt i din browser for fuld overholdelse af LGPD."
+        ]
+      },
+      "dsgvo-pdf-schwaerzung": {
+        "title": "PDF-sværtning i henhold til DSGVO: Tysk databeskyttelse",
+        "excerpt": "Sådan sværter du personoplysninger i PDF-filer i overensstemmelse med den tyske lov DSGVO.",
+        "date": "2026-03-15",
+        "content": [
+          "DSGVO (Datenschutz-Grundverordnung) er den tyske implementering af GDPR. Tyskland har nogle af de strengeste standarder for databeskyttelse i Europa med yderligere nationale regler via BDSG.",
+          "Tyske organisationer skal sværte (schwärzen) personoplysninger i dokumenter før deling. Dette omfatter navne, adresser, Sozialversicherungsnummer og finansielle oplysninger.",
+          "Tyske tilsynsmyndigheder er blandt de mest aktive i EU med hensyn til at pålægge sanktioner for DSGVO-overtrædelser. Forkert redigering kan føre til betydelige bøder.",
+          "Ved sværtning af PDF-dokumenter er det kritisk at sikre, at tekstdata er permanent fjernet, ikke blot visuelt dækket. Tyske domstole kræver bevis for uigenkaldelig redigering.",
+          "OfflineRedact udfører ægte sværtning ved at fjerne tekstdata fra PDF-streams og behandler alt lokalt i browseren — ideel til tyske krav om databeskyttelse."
+        ]
+      },
+      "appi-pdf-sumikeshi": {
+        "title": "PDF-redigering i henhold til APPI: Japansk beskyttelse af personlige oplysninger",
+        "excerpt": "Guide til redigering af personoplysninger i PDF-filer i overensstemmelse med den japanske lov APPI.",
+        "date": "2026-03-14",
+        "content": [
+          "APPI (Act on the Protection of Personal Information) er den japanske lov om beskyttelse af personlige oplysninger. Efter reformen i 2022 indfører den strengere krav til behandling af personoplysninger.",
+          "Japanske organisationer skal beskytte personlige oplysninger som My Number, navne, adresser og fødselsdatoer. APPI kræver passende sikkerhedsforanstaltninger ved deling af dokumenter.",
+          "PPC (Personal Information Protection Commission) er den japanske tilsynsmyndighed, der kan pålægge sanktioner for overtrædelser. Korrekt redigering af dokumenter er afgørende for overholdelse.",
+          "Ved behandling af PDF-dokumenter, der indeholder oplysninger om japanske borgere, skal organisationer foretage uigenkaldelig redigering af alle personlige identifikatorer.",
+          "OfflineRedact understøtter japanske mønstre for personoplysninger og udfører behandlingen udelukkende i browseren, hvilket sikrer overholdelse af APPI og eliminerer risikoen for datalæk."
+        ]
+      },
+      "pipa-pdf-masking": {
+        "title": "PDF-maskering i henhold til PIPA: Sydkoreansk databeskyttelse",
+        "excerpt": "Sådan maskerer du personoplysninger i PDF-filer i overensstemmelse med den sydkoreanske lov PIPA.",
+        "date": "2026-03-13",
+        "content": [
+          "PIPA (Personal Information Protection Act) er den sydkoreanske lov om beskyttelse af personlige oplysninger. Den er en af de strengeste love om databeskyttelse i Asien.",
+          "Sydkoreanske organisationer skal beskytte RRN (Resident Registration Number), navne, adresser og andre personlige oplysninger. PIPA kræver strenge foranstaltninger til adgangskontrol.",
+          "PIPC (Personal Information Protection Commission) kan pålægge betydelige bøder for overtrædelser. Maskering af personoplysninger i dokumenter er påkrævet ved deling.",
+          "Ved behandling af PDF-dokumenter skal organisationer sikre, at personoplysninger er uigenkaldeligt fjernet, ikke blot visuelt skjult. PIPA kræver bevis for effektiv maskering.",
+          "OfflineRedact tilbyder ægte PDF-maskering ved at fjerne tekstdata fra dokumentet og behandler alt lokalt i browseren for overholdelse af PIPA."
+        ]
+      },
+      "pipl-pdf-tumin": {
+        "title": "PDF-redigering i henhold til PIPL: Kinesisk beskyttelse af personlige oplysninger",
+        "excerpt": "Guide til redigering af personoplysninger i PDF-filer i overensstemmelse med den kinesiske lov PIPL.",
+        "date": "2026-03-12",
+        "content": [
+          "PIPL (Personal Information Protection Law) er den kinesiske lov om beskyttelse af personlige oplysninger, der trådte i kraft i 2021. Den gælder for enhver organisation, der behandler oplysninger om kinesiske borgere.",
+          "PIPL kræver beskyttelse af personlige oplysninger, herunder nationale identifikationsnumre, navne, adresser og biometriske data. Følsomme personlige oplysninger er underlagt yderligere beskyttelse.",
+          "Sanktioner for overtrædelser af PIPL kan nå op til 50 millioner yuan eller 5 % af den årlige omsætning. Korrekt redigering af dokumenter er kritisk for overholdelse.",
+          "Ved deling af dokumenter, der indeholder oplysninger om kinesiske borgere, skal organisationer foretage uigenkaldelig redigering og sikre, at data ikke kan gendannes.",
+          "OfflineRedact behandler alle dokumenter lokalt i browseren, hvilket sikrer, at personoplysninger aldrig forlader din enhed — ideel til overholdelse af PIPL."
+        ]
+      },
+      "gdpr-italia-oscuramento-pdf": {
+        "title": "PDF-redigering i henhold til italiensk GDPR: Databeskyttelse i Italien",
+        "excerpt": "Sådan redigerer du personoplysninger i PDF-filer i overensstemmelse med den italienske implementering af GDPR.",
+        "date": "2026-03-11",
+        "content": [
+          "Italien implementerer GDPR via Codice della Privacy (D.Lgs. 196/2003), suppleret af D.Lgs. 101/2018. Garante per la protezione dei dati personali er den italienske tilsynsmyndighed for databeskyttelse.",
+          "Italienske organisationer skal redigere (oscurare) personoplysninger som codice fiscale, navne, adresser og sundhedsoplysninger før deling af dokumenter.",
+          "Garante har udstedt specifikke retningslinjer for behandling af personoplysninger i dokumenter. Forkert redigering kan føre til betydelige sanktioner.",
+          "Ved behandling af PDF-dokumenter skal organisationer sikre fuldstændig og uigenkaldelig fjernelse af personoplysninger, herunder fra dokumentets metadata.",
+          "OfflineRedact registrerer automatisk italienske mønstre for personoplysninger, herunder codice fiscale, og behandler alt i browseren for overholdelse af italiensk GDPR."
+        ]
+      },
+      "client-side-vs-server-side-redaction": {
+        "title": "Klientside vs. serverside redigering: Sikkerhedssammenligning",
+        "excerpt": "Hvorfor klientside behandling er mere sikker end serverside ved redigering af følsomme PDF-dokumenter.",
+        "date": "2026-03-10",
+        "content": [
+          "Ved redigering af følsomme dokumenter er valget mellem klientside og serverside behandling kritisk for sikkerheden. Serverside behandling kræver upload af dokumenter, hvilket skaber risici for datalæk.",
+          "Ved serverside redigering rejser dokumenter over internettet og lagres på servere. Selv med kryptering er data sårbare under transmission, behandling og lagring.",
+          "Klientside behandling eliminerer disse risici, da dokumenter aldrig forlader brugerens enhed. Al behandling sker i browseren via JavaScript og WebAssembly.",
+          "For organisationer underlagt HIPAA, GDPR, KVKK og andre regler forenkler klientside behandling overholdelsen. Der er ikke behov for databehandlingsaftaler eller serversikkerhedscertifikater.",
+          "OfflineRedact kører udelukkende på klientsiden — dine filer forlader aldrig browseren. Dette er den mest sikre tilgang til redigering af følsomme dokumenter."
+        ]
+      },
+      "avg-pdf-lakken": {
+        "title": "PDF-redigering i henhold til AVG: Nederlandsk databeskyttelse",
+        "excerpt": "Guide til redigering af personoplysninger i PDF-filer i overensstemmelse med den nederlandske lov AVG.",
+        "date": "2026-03-09",
+        "content": [
+          "AVG (Algemene Verordening Gegevensbescherming) er den nederlandske implementering af GDPR. Autoriteit Persoonsgegevens er den nederlandske tilsynsmyndighed, der er ansvarlig for håndhævelsen.",
+          "Nederlandske organisationer skal redigere (lakken) personoplysninger som BSN-numre, navne, adresser og finansielle oplysninger i PDF-dokumenter før deling.",
+          "Autoriteit Persoonsgegevens pålægger aktivt sanktioner for overtrædelser af AVG. Forkert redigering af dokumenter kan føre til bøder op til 20 millioner euro.",
+          "Ved behandling af nederlandske dokumenter er det vigtigt at registrere og fjerne alle personlige identifikatorer, herunder BSN, telefonnumre og bankkonti.",
+          "OfflineRedact understøtter nederlandske mønstre for personoplysninger og udfører behandlingen udelukkende i browseren, hvilket sikrer overholdelse af AVG uden risiko for datalæk."
+        ]
+      },
+      "rodo-redakcja-pdf": {
+        "title": "PDF-redigering i henhold til RODO: Polsk databeskyttelse",
+        "excerpt": "Sådan redigerer du personoplysninger i PDF-filer i overensstemmelse med den polske lov RODO.",
+        "date": "2026-03-08",
+        "content": [
+          "RODO er det polske navn for GDPR (Rozporządzenie o Ochronie Danych Osobowych). UODO (Urząd Ochrony Danych Osobowych) er den polske tilsynsmyndighed for databeskyttelse.",
+          "Polske organisationer skal beskytte personoplysninger som PESEL-numre, navne, adresser og NIP-numre. RODO kræver uigenkaldelig redigering ved deling af dokumenter.",
+          "UODO pålægger aktivt sanktioner for overtrædelser af RODO. Organisationer skal påvise passende tekniske foranstaltninger til beskyttelse af personoplysninger.",
+          "Ved behandling af PDF-dokumenter er det kritisk at sikre, at alle personoplysninger er permanent fjernet, herunder fra dokumentets skjulte metadata.",
+          "OfflineRedact registrerer automatisk polske mønstre for personoplysninger, herunder PESEL- og NIP-numre, og behandler dokumenter lokalt i browseren for overholdelse af RODO."
+        ]
+      },
+      "dataskydd-pdf-maskering": {
+        "title": "PDF-maskering til databeskyttelse i Sverige",
+        "excerpt": "Guide til maskering af personoplysninger i PDF-filer i overensstemmelse med svenske krav til databeskyttelse.",
+        "date": "2026-03-07",
+        "content": [
+          "Sverige implementerer GDPR via Dataskyddslagen (2018:218). IMY (Integritetsskyddsmyndigheten) er den svenske tilsynsmyndighed for databeskyttelse.",
+          "Svenske organisationer skal maskere personnummer, navne, adresser og andre personlige oplysninger i PDF-dokumenter før deling. Personnummer er en særligt følsom identifikator.",
+          "IMY pålægger sanktioner for overtrædelser af GDPR, herunder for forkert maskering af dokumenter. Svenske organisationer skal anvende strenge beskyttelsesforanstaltninger.",
+          "Ved behandling af svenske dokumenter er det vigtigt at registrere og fjerne alle personlige identifikatorer, herunder personnummer og organisationsnummer.",
+          "OfflineRedact understøtter svenske mønstre for personoplysninger og behandler alt lokalt i browseren, hvilket sikrer overholdelse af svenske krav til databeskyttelse."
+        ]
+      },
+      "pdf-redaction-healthcare-checklist": {
+        "title": "Tjekliste til PDF-redigering i sundhedssektoren",
+        "excerpt": "Detaljeret tjekliste for HIPAA-overholdelse ved redigering af medicinske PDF-dokumenter.",
+        "date": "2026-03-05",
+        "content": [
+          "Sundhedsorganisationer behandler enorme mængder beskyttede sundhedsoplysninger (PHI) i PDF-format. Korrekt redigering er kritisk for HIPAA-overholdelse og patientbeskyttelse.",
+          "Tjekliste før redigering: (1) Identificer alle 18 kategorier af PHI-identifikatorer ifølge HIPAA, (2) Medtag metadata i redigeringsomfanget, (3) Kontroller for indlejrede billeder med personlige oplysninger.",
+          "Tjekliste under redigering: (1) Brug ægte redigering, ikke visuel tildækning, (2) Kontroller alle sider, (3) Rediger også sidehoved/sidefod, (4) Medtag medicinske journalnumre.",
+          "Tjekliste efter redigering: (1) Kontroller det redigerede dokument for resterende PHI, (2) Rens metadata, (3) Dokumenter redigeringsprocessen, (4) Arkiver originalen.",
+          "OfflineRedact registrerer automatisk PHI-identifikatorer og udfører ægte redigering. Behandling i browseren sikrer, at PHI aldrig forlader din enhed — kritisk for HIPAA."
+        ]
+      },
+      "ccpa-pdf-redaction": {
+        "title": "PDF-redigering til CCPA-overholdelse: Californisk databeskyttelse",
+        "excerpt": "Sådan redigerer du personoplysninger i PDF-filer i overensstemmelse med den californiske lov CCPA.",
+        "date": "2026-02-28",
+        "content": [
+          "CCPA (California Consumer Privacy Act) giver californiske forbrugere ret til at vide, hvilke personoplysninger der indsamles, at anmode om sletning og at fravælge salg af deres data.",
+          "Ved besvarelse af anmodninger under CCPA skal organisationer ofte dele dokumenter, hvorfra tredjeparters oplysninger er redigeret. Dette kræver pålidelig og uigenkaldelig redigering af PDF-filer.",
+          "CCPA definerer personoplysninger bredt — det omfatter navne, SSN, e-mails, IP-adresser, købshistorik og biometriske oplysninger. PDF-dokumenter kan indeholde flere kategorier.",
+          "Sanktioner under CCPA kan nå op til $7.500 pr. forsætlig overtrædelse. Korrekt redigering af dokumenter er afgørende for at undgå sanktioner og beskytte forbrugerne.",
+          "OfflineRedact registrerer automatisk amerikanske mønstre for personoplysninger og behandler alt i browseren, hvilket sikrer CCPA-overholdelse uden upload af følsomme dokumenter."
+        ]
+      },
       "hipaa-compliant-pdf-redaction": {
         "title": "HIPAA-kompatibel PDF-redigering: En komplet guide",
         "excerpt": "Lær, hvordan du korrekt redigerer beskyttede sundhedsoplysninger (PHI) fra PDF-dokumenter for at opretholde HIPAA-overholdelse.",

@@ -401,6 +401,186 @@
       "button": "Začít redigovat"
     },
     "posts": {
+      "kvkk-pdf-redaction-guide": {
+        "title": "Průvodce redakcí PDF podle KVKK: Turecká ochrana osobních údajů",
+        "excerpt": "Jak redigovat osobní údaje v PDF souborech v souladu s tureckým zákonem o ochraně osobních údajů KVKK.",
+        "date": "2026-03-20",
+        "content": [
+          "Turecký zákon o ochraně osobních údajů (KVKK) je hlavním právním rámcem pro zpracování osobních údajů v Turecku. Organizace pracující s tureckými občany musí zajistit řádnou ochranu osobních údajů při sdílení dokumentů.",
+          "KVKK definuje osobní údaje jako jakoukoli informaci týkající se identifikované nebo identifikovatelné fyzické osoby. To zahrnuje čísla TC Kimlik, jména, adresy, telefonní čísla a finanční informace.",
+          "Při sdílení PDF dokumentů obsahujících osobní údaje tureckých občanů musí organizace provést nevratnou redakci. Pouhé vizuální zakrytí nestačí pro soulad s KVKK.",
+          "KVKK stanovuje významné pokuty za porušení ochrany údajů. Správná redakce PDF dokumentů je kritickým krokem k zabránění neoprávněnému zveřejnění osobních údajů.",
+          "OfflineRedact automaticky detekuje turecké vzory osobních údajů, včetně čísel TC Kimlik, a provádí veškeré zpracování ve vašem prohlížeči, čímž zajišťuje soulad s KVKK."
+        ]
+      },
+      "cnil-rgpd-caviardage-pdf": {
+        "title": "Redakce PDF podle CNIL a RGPD: Francouzská ochrana údajů",
+        "excerpt": "Průvodce redakcí osobních údajů v PDF souborech v souladu s francouzským RGPD a pokyny CNIL.",
+        "date": "2026-03-18",
+        "content": [
+          "CNIL (Commission Nationale de l'Informatique et des Libertés) je francouzský dozorový úřad pro ochranu údajů. Vynucuje RGPD — francouzskou implementaci GDPR — a vydává konkrétní pokyny pro zpracování osobních údajů.",
+          "Francouzské organizace musí dodržovat přísná pravidla při sdílení dokumentů obsahujících osobní údaje. Kaviardáž (redakce) PDF souborů je základní metodou ochrany důvěrných informací.",
+          "CNIL může uložit pokuty až 20 milionů eur nebo 4 % celosvětového ročního obratu za porušení RGPD. Správná redakce dokumentů je povinná.",
+          "Při zpracování francouzských dokumentů je důležité detekovat a redigovat numéro de sécurité sociale, jména, adresy, telefonní čísla a další osobní identifikátory.",
+          "OfflineRedact podporuje detekci francouzských vzorů osobních údajů a provádí zpracování výhradně v prohlížeči, čímž zajišťuje soulad s požadavky CNIL."
+        ]
+      },
+      "lopdgdd-redaccion-pdf": {
+        "title": "Redakce PDF podle LOPDGDD: Španělská ochrana údajů",
+        "excerpt": "Jak redigovat osobní údaje v PDF souborech v souladu se španělským zákonem LOPDGDD.",
+        "date": "2026-03-17",
+        "content": [
+          "LOPDGDD (Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales) je španělský zákon o ochraně údajů, který doplňuje GDPR dalšími ustanoveními. Organizace ve Španělsku musí dodržovat oba předpisy.",
+          "Španělský zákon vyžaduje zvláštní ochranu určitých kategorií údajů, včetně čísel DNI/NIE, čísel sociálního pojištění a zdravotních informací.",
+          "Při sdílení PDF dokumentů musí španělské organizace zajistit nevratné odstranění osobních údajů. Dozorový úřad AEPD aktivně ukládá sankce za porušení.",
+          "LOPDGDD zavádí další práva, jako právo na digitální závěť a právo na neutralitu na internetu. Redakce dokumentů je klíčovým nástrojem pro ochranu těchto práv.",
+          "OfflineRedact automaticky detekuje španělské vzory osobních údajů a zpracovává vše lokálně ve vašem prohlížeči, čímž zajišťuje plný soulad s LOPDGDD."
+        ]
+      },
+      "lgpd-redacao-pdf": {
+        "title": "Redakce PDF podle LGPD: Brazilská ochrana údajů",
+        "excerpt": "Průvodce redakcí osobních údajů v PDF souborech v souladu s brazilským zákonem LGPD.",
+        "date": "2026-03-16",
+        "content": [
+          "LGPD (Lei Geral de Proteção de Dados) je brazilský zákon o ochraně údajů, podobný evropskému GDPR. Reguluje zpracování osobních údajů brazilských občanů organizacemi po celém světě.",
+          "LGPD definuje osobní údaje jako jakoukoli informaci týkající se identifikované nebo identifikovatelné fyzické osoby. Čísla CPF, čísla RG a zdravotní údaje vyžadují zvláštní ochranu.",
+          "Brazilský dozorový úřad ANPD může ukládat pokuty až 2 % příjmů společnosti v Brazílii. Správná redakce dokumentů je povinná pro soulad.",
+          "Při zpracování dokumentů obsahujících údaje brazilských občanů musí organizace provést nevratnou redakci před sdílením s třetími stranami.",
+          "OfflineRedact podporuje brazilské vzory osobních údajů, včetně čísel CPF a RG, a zpracovává vše ve vašem prohlížeči pro plný soulad s LGPD."
+        ]
+      },
+      "dsgvo-pdf-schwaerzung": {
+        "title": "Začernění PDF podle DSGVO: Německá ochrana údajů",
+        "excerpt": "Jak začernit osobní údaje v PDF souborech v souladu s německým zákonem DSGVO.",
+        "date": "2026-03-15",
+        "content": [
+          "DSGVO (Datenschutz-Grundverordnung) je německá implementace GDPR. Německo má jedny z nejpřísnějších standardů ochrany údajů v Evropě s dalšími národními předpisy prostřednictvím BDSG.",
+          "Německé organizace musí začerňovat (schwärzen) osobní údaje v dokumentech před sdílením. To zahrnuje jména, adresy, Sozialversicherungsnummer a finanční informace.",
+          "Německé dozorové úřady patří k nejaktivnějším v EU při ukládání sankcí za porušení DSGVO. Nesprávná redakce může vést k významným pokutám.",
+          "Při začerňování PDF dokumentů je kritické zajistit, aby textová data byla trvale odstraněna, nikoli pouze vizuálně zakryta. Německé soudy vyžadují důkaz o nevratné redakci.",
+          "OfflineRedact provádí skutečné začernění odstraněním textových dat z PDF streamů a zpracovává vše lokálně v prohlížeči — ideální pro německé požadavky na ochranu údajů."
+        ]
+      },
+      "appi-pdf-sumikeshi": {
+        "title": "Redakce PDF podle APPI: Japonská ochrana osobních informací",
+        "excerpt": "Průvodce redakcí osobních údajů v PDF souborech v souladu s japonským zákonem APPI.",
+        "date": "2026-03-14",
+        "content": [
+          "APPI (Act on the Protection of Personal Information) je japonský zákon o ochraně osobních informací. Po reformě v roce 2022 zavádí přísnější požadavky na zpracování osobních údajů.",
+          "Japonské organizace musí chránit osobní informace jako My Number, jména, adresy a data narození. APPI vyžaduje vhodná bezpečnostní opatření při sdílení dokumentů.",
+          "PPC (Personal Information Protection Commission) je japonský dozorový úřad, který může ukládat sankce za porušení. Správná redakce dokumentů je klíčová pro soulad.",
+          "Při zpracování PDF dokumentů obsahujících údaje japonských občanů musí organizace provést nevratnou redakci všech osobních identifikátorů.",
+          "OfflineRedact podporuje japonské vzory osobních údajů a provádí zpracování výhradně v prohlížeči, čímž zajišťuje soulad s APPI a eliminuje riziko úniku dat."
+        ]
+      },
+      "pipa-pdf-masking": {
+        "title": "Maskování PDF podle PIPA: Jihokorejská ochrana údajů",
+        "excerpt": "Jak maskovat osobní údaje v PDF souborech v souladu s jihokorejským zákonem PIPA.",
+        "date": "2026-03-13",
+        "content": [
+          "PIPA (Personal Information Protection Act) je jihokorejský zákon o ochraně osobních informací. Je jedním z nejpřísnějších zákonů o ochraně údajů v Asii.",
+          "Jihokorejské organizace musí chránit RRN (Resident Registration Number), jména, adresy a další osobní informace. PIPA vyžaduje přísná opatření pro kontrolu přístupu.",
+          "PIPC (Personal Information Protection Commission) může ukládat významné pokuty za porušení. Maskování osobních údajů v dokumentech je povinné při sdílení.",
+          "Při zpracování PDF dokumentů musí organizace zajistit, že osobní údaje jsou nevratně odstraněny, nikoli pouze vizuálně skryty. PIPA vyžaduje důkaz o účinném maskování.",
+          "OfflineRedact nabízí skutečné maskování PDF souborů odstraněním textových dat z dokumentu a zpracovává vše lokálně v prohlížeči pro soulad s PIPA."
+        ]
+      },
+      "pipl-pdf-tumin": {
+        "title": "Redakce PDF podle PIPL: Čínská ochrana osobních informací",
+        "excerpt": "Průvodce redakcí osobních údajů v PDF souborech v souladu s čínským zákonem PIPL.",
+        "date": "2026-03-12",
+        "content": [
+          "PIPL (Personal Information Protection Law) je čínský zákon o ochraně osobních informací, který vstoupil v platnost v roce 2021. Vztahuje se na jakoukoli organizaci zpracovávající údaje čínských občanů.",
+          "PIPL vyžaduje ochranu osobních informací, včetně národních identifikačních čísel, jmen, adres a biometrických údajů. Citlivé osobní informace podléhají dodatečné ochraně.",
+          "Sankce za porušení PIPL mohou dosáhnout 50 milionů juanů nebo 5 % ročního obratu. Správná redakce dokumentů je kritická pro soulad.",
+          "Při sdílení dokumentů obsahujících údaje čínských občanů musí organizace provést nevratnou redakci a zajistit, že údaje nelze obnovit.",
+          "OfflineRedact zpracovává všechny dokumenty lokálně v prohlížeči, čímž zajišťuje, že osobní údaje nikdy neopustí vaše zařízení — ideální pro soulad s PIPL."
+        ]
+      },
+      "gdpr-italia-oscuramento-pdf": {
+        "title": "Redakce PDF podle italského GDPR: Ochrana údajů v Itálii",
+        "excerpt": "Jak redigovat osobní údaje v PDF souborech v souladu s italskou implementací GDPR.",
+        "date": "2026-03-11",
+        "content": [
+          "Itálie implementuje GDPR prostřednictvím Codice della Privacy (D.Lgs. 196/2003), doplněného D.Lgs. 101/2018. Garante per la protezione dei dati personali je italský dozorový úřad pro ochranu údajů.",
+          "Italské organizace musí redigovat (oscurare) osobní údaje jako codice fiscale, jména, adresy a zdravotní informace před sdílením dokumentů.",
+          "Garante vydal specifické pokyny pro zpracování osobních údajů v dokumentech. Nesprávná redakce může vést k významným sankcím.",
+          "Při zpracování PDF dokumentů musí organizace zajistit úplné a nevratné odstranění osobních údajů, včetně metadat dokumentu.",
+          "OfflineRedact automaticky detekuje italské vzory osobních údajů, včetně codice fiscale, a zpracovává vše v prohlížeči pro soulad s italským GDPR."
+        ]
+      },
+      "client-side-vs-server-side-redaction": {
+        "title": "Redakce na straně klienta vs. serveru: Porovnání bezpečnosti",
+        "excerpt": "Proč je zpracování na straně klienta bezpečnější než na straně serveru při redakci citlivých PDF dokumentů.",
+        "date": "2026-03-10",
+        "content": [
+          "Při redakci citlivých dokumentů je volba mezi zpracováním na straně klienta a serveru kritická pro bezpečnost. Zpracování na serveru vyžaduje nahrání dokumentů, což vytváří rizika úniku dat.",
+          "Při serverové redakci dokumenty cestují přes internet a jsou uloženy na serverech. I s šifrováním jsou data zranitelná během přenosu, zpracování a uložení.",
+          "Zpracování na straně klienta eliminuje tato rizika, protože dokumenty nikdy neopustí zařízení uživatele. Veškeré zpracování probíhá v prohlížeči pomocí JavaScriptu a WebAssembly.",
+          "Pro organizace podléhající HIPAA, GDPR, KVKK a dalším regulacím zpracování na straně klienta zjednodušuje dodržování předpisů. Není potřeba smluv o zpracování údajů ani bezpečnostních certifikátů serverů.",
+          "OfflineRedact pracuje výhradně na straně klienta — vaše soubory nikdy neopustí prohlížeč. To je nejbezpečnější přístup k redakci citlivých dokumentů."
+        ]
+      },
+      "avg-pdf-lakken": {
+        "title": "Redakce PDF podle AVG: Nizozemská ochrana údajů",
+        "excerpt": "Průvodce redakcí osobních údajů v PDF souborech v souladu s nizozemským zákonem AVG.",
+        "date": "2026-03-09",
+        "content": [
+          "AVG (Algemene Verordening Gegevensbescherming) je nizozemská implementace GDPR. Autoriteit Persoonsgegevens je nizozemský dozorový úřad odpovědný za vynucování zákona.",
+          "Nizozemské organizace musí redigovat (lakken) osobní údaje jako čísla BSN, jména, adresy a finanční informace v PDF dokumentech před sdílením.",
+          "Autoriteit Persoonsgegevens aktivně ukládá sankce za porušení AVG. Nesprávná redakce dokumentů může vést k pokutám až 20 milionů eur.",
+          "Při zpracování nizozemských dokumentů je důležité detekovat a odstranit všechny osobní identifikátory, včetně BSN, telefonních čísel a bankovních účtů.",
+          "OfflineRedact podporuje nizozemské vzory osobních údajů a provádí zpracování výhradně v prohlížeči, čímž zajišťuje soulad s AVG bez rizika úniku dat."
+        ]
+      },
+      "rodo-redakcja-pdf": {
+        "title": "Redakce PDF podle RODO: Polská ochrana údajů",
+        "excerpt": "Jak redigovat osobní údaje v PDF souborech v souladu s polským zákonem RODO.",
+        "date": "2026-03-08",
+        "content": [
+          "RODO je polský název pro GDPR (Rozporządzenie o Ochronie Danych Osobowych). UODO (Urząd Ochrony Danych Osobowych) je polský dozorový úřad pro ochranu údajů.",
+          "Polské organizace musí chránit osobní údaje jako čísla PESEL, jména, adresy a čísla NIP. RODO vyžaduje nevratnou redakci při sdílení dokumentů.",
+          "UODO aktivně ukládá sankce za porušení RODO. Organizace musí prokázat vhodná technická opatření pro ochranu osobních údajů.",
+          "Při zpracování PDF dokumentů je kritické zajistit, aby všechny osobní údaje byly trvale odstraněny, včetně skrytých metadat dokumentu.",
+          "OfflineRedact automaticky detekuje polské vzory osobních údajů, včetně čísel PESEL a NIP, a zpracovává dokumenty lokálně v prohlížeči pro soulad s RODO."
+        ]
+      },
+      "dataskydd-pdf-maskering": {
+        "title": "Maskování PDF pro ochranu údajů ve Švédsku",
+        "excerpt": "Průvodce maskováním osobních údajů v PDF souborech v souladu se švédskými požadavky na ochranu údajů.",
+        "date": "2026-03-07",
+        "content": [
+          "Švédsko implementuje GDPR prostřednictvím Dataskyddslagen (2018:218). IMY (Integritetsskyddsmyndigheten) je švédský dozorový úřad pro ochranu údajů.",
+          "Švédské organizace musí maskovat personnummer, jména, adresy a další osobní informace v PDF dokumentech před sdílením. Personnummer je obzvláště citlivý identifikátor.",
+          "IMY ukládá sankce za porušení GDPR, včetně nesprávného maskování dokumentů. Švédské organizace musí uplatňovat přísná ochranná opatření.",
+          "Při zpracování švédských dokumentů je důležité detekovat a odstranit všechny osobní identifikátory, včetně personnummer a organisationsnummer.",
+          "OfflineRedact podporuje švédské vzory osobních údajů a zpracovává vše lokálně v prohlížeči, čímž zajišťuje soulad se švédskými požadavky na ochranu údajů."
+        ]
+      },
+      "pdf-redaction-healthcare-checklist": {
+        "title": "Kontrolní seznam pro redakci PDF ve zdravotnictví",
+        "excerpt": "Podrobný kontrolní seznam pro dodržení HIPAA při redakci zdravotnických PDF dokumentů.",
+        "date": "2026-03-05",
+        "content": [
+          "Zdravotnické organizace zpracovávají obrovské množství chráněných zdravotních informací (PHI) ve formátu PDF. Správná redakce je kritická pro soulad s HIPAA a ochranu pacientů.",
+          "Kontrolní seznam před redakcí: (1) Identifikujte všech 18 kategorií PHI identifikátorů podle HIPAA, (2) Zahrňte metadata do rozsahu redakce, (3) Zkontrolujte vložené obrázky s osobními informacemi.",
+          "Kontrolní seznam během redakce: (1) Použijte skutečnou redakci, ne vizuální zakrytí, (2) Zkontrolujte všechny stránky, (3) Redigujte i záhlaví/zápatí, (4) Zahrňte čísla zdravotních záznamů.",
+          "Kontrolní seznam po redakci: (1) Zkontrolujte redigovaný dokument na zbytkové PHI, (2) Vyčistěte metadata, (3) Zdokumentujte proces redakce, (4) Archivujte originál.",
+          "OfflineRedact automaticky detekuje PHI identifikátory a provádí skutečnou redakci. Zpracování v prohlížeči zajišťuje, že PHI nikdy neopustí vaše zařízení — kritické pro HIPAA."
+        ]
+      },
+      "ccpa-pdf-redaction": {
+        "title": "Redakce PDF pro soulad s CCPA: Kalifornská ochrana údajů",
+        "excerpt": "Jak redigovat osobní údaje v PDF souborech v souladu s kalifornským zákonem CCPA.",
+        "date": "2026-02-28",
+        "content": [
+          "CCPA (California Consumer Privacy Act) dává kalifornským spotřebitelům právo vědět, jaké osobní údaje se shromažďují, požádat o jejich vymazání a odmítnout prodej svých údajů.",
+          "Při odpovídání na žádosti podle CCPA musí organizace často sdílet dokumenty, ze kterých jsou redigovány údaje třetích stran. To vyžaduje spolehlivou a nevratnou redakci PDF souborů.",
+          "CCPA definuje osobní údaje široce — zahrnuje jména, SSN, e-maily, IP adresy, historii nákupů a biometrické informace. PDF dokumenty mohou obsahovat více kategorií.",
+          "Sankce podle CCPA mohou dosáhnout 7 500 $ za úmyslné porušení. Správná redakce dokumentů je klíčová pro vyhnutí se sankcím a ochranu spotřebitelů.",
+          "OfflineRedact automaticky detekuje americké vzory osobních údajů a zpracovává vše v prohlížeči, čímž zajišťuje soulad s CCPA bez nahrávání citlivých dokumentů."
+        ]
+      },
       "hipaa-compliant-pdf-redaction": {
         "title": "Redakce PDF v souladu s HIPAA: Kompletní průvodce",
         "excerpt": "Naučte se, jak správně redigovat chráněné zdravotní informace (PHI) z PDF dokumentů pro dodržení HIPAA.",
