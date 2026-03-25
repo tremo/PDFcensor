@@ -60,7 +60,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <StructuredData data={getOrganizationSchema()} />
       </head>
       <GoogleTagManager gtmId="GTM-K4678NT5" />
-      <GoogleAnalytics gaId="AW-938473803" />
+      <GoogleAnalytics gaId="AW-18041459351" />
       <body className="min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AuthProvider>
