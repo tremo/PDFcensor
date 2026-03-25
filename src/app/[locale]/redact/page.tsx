@@ -7,7 +7,6 @@ import { PDFViewer } from "@/components/pdf/PDFViewer";
 import { PDFPageThumbnails } from "@/components/pdf/PDFPageThumbnails";
 import { RedactionControls } from "@/components/pdf/RedactionControls";
 import { CustomKeywordPanel } from "@/components/pdf/CustomKeywordPanel";
-import { DrawModeToolbar } from "@/components/pdf/DrawModeToolbar";
 import { DocxViewer } from "@/components/docx/DocxViewer";
 import { DocxRedactionControls } from "@/components/docx/DocxRedactionControls";
 import { BatchSummary } from "@/components/pdf/BatchSummary";
@@ -69,7 +68,6 @@ export default function RedactPage() {
   const batch = useBatchProcessor();
 
   const [selectedRedactionId, setSelectedRedactionId] = useState<string | null>(null);
-  const [drawMode, setDrawMode] = useState(false);
 
   // Route files to correct processor
   const handleFilesSelected = useCallback(
@@ -421,13 +419,6 @@ export default function RedactPage() {
       ) : pdf.document ? (
         /* PDF Processing state (single) */
         <div className="space-y-3">
-          {/* Draw mode toolbar */}
-          <div className="bg-muted/30 rounded-xl border border-border px-4 py-2.5">
-            <DrawModeToolbar
-              isDrawMode={drawMode}
-              onToggle={() => setDrawMode((prev) => !prev)}
-            />
-          </div>
           <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_340px] gap-6">
             <div className="hidden lg:block">
               <PDFPageThumbnails
@@ -450,7 +441,7 @@ export default function RedactPage() {
                   onToggleRedaction={pdf.toggleRedaction}
                   onRemoveRedaction={pdf.removeRedaction}
                   onUpdateRedaction={pdf.updateRedaction}
-                  onManualRedaction={drawMode ? pdf.addManualRedaction : undefined}
+                  onManualRedaction={pdf.addManualRedaction}
                 />
               </div>
             </div>
