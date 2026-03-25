@@ -58,6 +58,9 @@ export async function detectOCRPIIFromImage(
 
   onProgress?.(10);
 
+  console.log("[OCR DEBUG] Canvas size:", canvas.width, "x", canvas.height);
+  console.log("[OCR DEBUG] OCR language:", lang);
+
   const scheduler = Tesseract.createScheduler();
   const worker = await Tesseract.createWorker(lang);
   scheduler.addWorker(worker);
@@ -67,6 +70,10 @@ export async function detectOCRPIIFromImage(
   const { data } = await scheduler.addJob("recognize", canvas);
 
   onProgress?.(80);
+
+  console.log("[OCR DEBUG] Tesseract data.text:", JSON.stringify(data.text?.substring(0, 200)));
+  console.log("[OCR DEBUG] Tesseract data.blocks count:", data.blocks?.length ?? "null/undefined");
+  console.log("[OCR DEBUG] Tesseract confidence:", data.confidence);
 
   // Extract word-level bounding boxes
   const words: OCRWord[] = [];
