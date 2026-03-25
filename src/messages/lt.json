@@ -75,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Failas su jautriais duomenimis",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -113,7 +113,7 @@
   },
   "cta": {
     "title": "Pasiruošę apsaugoti jautrius duomenis?",
-    "subtitle": "Pradėkite redaguoti PDF nemokamai — be registracijos.",
+    "subtitle": "Pradėkite redaguoti dokumentus nemokamai — be registracijos.",
     "button": "Pradėkite dabar"
   },
   "footer": {
@@ -122,7 +122,7 @@
     "privacy": "Privatumo politika",
     "terms": "Paslaugų sąlygos",
     "rights": "Visos teisės saugomos.",
-    "tagline": "Nuolatinis PDF redagavimas — 100% jūsų naršyklėje."
+    "tagline": "Nuolatinis dokumentų redagavimas — 100% jūsų naršyklėje."
   },
   "redact": {
     "title": "Document Redaction Tool",

@@ -58,15 +58,15 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Tarraing agus scaoil do chuid PDFanna, cáipéisí Word nó íomhánna — nó cliceáil chun brabhsáil. Tacaíonn le comhaid iolracha."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Athbhreithnigh",
+      "description": "Tá PII a aimsíodh go huathoibríoch aibhsithe. Cuir leis, bain nó coigeartaigh eagarthóireachtaí roimh chur i bhfeidhm."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Íoslódáil",
+      "description": "Íoslódáil do chomhad eagarthóirithe go buan. Tá an téacs bunaidh bainte go do-aisghabhála."
     }
   },
   "comparison": {
@@ -75,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Comhad le sonraí íogaire",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -113,7 +113,7 @@
   },
   "cta": {
     "title": "Réidh chun sonraí íogaire a chosaint?",
-    "subtitle": "Tosaigh ag eagarthóireacht PDF saor in aisce.",
+    "subtitle": "Tosaigh ag eagarthóireacht doiciméad saor in aisce — gan clárú.",
     "button": "Tosaigh anois"
   },
   "footer": {
@@ -122,7 +122,7 @@
     "privacy": "Polasaí príobháideachta",
     "terms": "Téarmaí seirbhíse",
     "rights": "Gach ceart ar cosaint.",
-    "tagline": "Eagarthóireacht bhuan PDF — 100% i do bhrabhsálaí."
+    "tagline": "Eagarthóireacht bhuan doiciméad — 100% i do bhrabhsálaí."
   },
   "redact": {
     "title": "Document Redaction Tool",
