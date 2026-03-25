@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 type DemoPhase =
@@ -17,6 +17,8 @@ type DemoPhase =
   | "preview"
   | "success"
   | "reset";
+
+type DemoMode = "paystub" | "photo";
 
 function CheckIcon({ size = 10 }: { size?: number }) {
   return (
@@ -53,26 +55,44 @@ function XIcon({ size = 9 }: { size?: number }) {
   );
 }
 
+const PAYSTUB_TIMELINE: { phase: DemoPhase; delay: number }[] = [
+  { phase: "fileDrop", delay: 2000 },
+  { phase: "docAppear", delay: 1200 },
+  { phase: "analyzing", delay: 2200 },
+  { phase: "piiReveal", delay: 1500 },
+  { phase: "confirmName", delay: 800 },
+  { phase: "confirmSSN", delay: 800 },
+  { phase: "confirmAddress", delay: 800 },
+  { phase: "confirmRouting", delay: 700 },
+  { phase: "confirmAccount", delay: 700 },
+  { phase: "preview", delay: 1500 },
+  { phase: "success", delay: 5000 },
+  { phase: "reset", delay: 800 },
+  { phase: "idle", delay: 1000 },
+];
+
+const PHOTO_TIMELINE: { phase: DemoPhase; delay: number }[] = [
+  { phase: "fileDrop", delay: 2000 },
+  { phase: "docAppear", delay: 1200 },
+  { phase: "analyzing", delay: 2200 },
+  { phase: "piiReveal", delay: 1500 },
+  { phase: "confirmName", delay: 900 },
+  { phase: "confirmSSN", delay: 900 },
+  { phase: "confirmAddress", delay: 900 },
+  { phase: "preview", delay: 1500 },
+  { phase: "success", delay: 5000 },
+  { phase: "reset", delay: 800 },
+  { phase: "idle", delay: 1000 },
+];
+
 export default function LandingDemo() {
   const t = useTranslations("landing");
   const [phase, setPhase] = useState<DemoPhase>("idle");
+  const [demoMode, setDemoMode] = useState<DemoMode>("paystub");
+  const roundRef = useRef(0);
 
-  const runDemo = useCallback(() => {
-    const timeline: { phase: DemoPhase; delay: number }[] = [
-      { phase: "fileDrop", delay: 2000 },
-      { phase: "docAppear", delay: 1200 },
-      { phase: "analyzing", delay: 2200 },
-      { phase: "piiReveal", delay: 1500 },
-      { phase: "confirmName", delay: 800 },
-      { phase: "confirmSSN", delay: 800 },
-      { phase: "confirmAddress", delay: 800 },
-      { phase: "confirmRouting", delay: 700 },
-      { phase: "confirmAccount", delay: 700 },
-      { phase: "preview", delay: 1500 },
-      { phase: "success", delay: 5000 },
-      { phase: "reset", delay: 800 },
-      { phase: "idle", delay: 1000 },
-    ];
+  const runDemo = useCallback((mode: DemoMode) => {
+    const timeline = mode === "photo" ? PHOTO_TIMELINE : PAYSTUB_TIMELINE;
 
     let totalDelay = 0;
     const timeouts: NodeJS.Timeout[] = [];
@@ -86,20 +106,41 @@ export default function LandingDemo() {
       );
     }
 
-    return () => timeouts.forEach(clearTimeout);
+    return {
+      cleanup: () => timeouts.forEach(clearTimeout),
+      duration: totalDelay,
+    };
   }, []);
 
   useEffect(() => {
-    let cleanup = runDemo();
-    const interval = setInterval(() => {
-      cleanup();
-      cleanup = runDemo();
-    }, 19000);
+    const cleanupRef = { current: () => {} };
+    const cycleRef = { current: null as NodeJS.Timeout | null };
+
+    const startCycle = () => {
+      const mode: DemoMode =
+        roundRef.current % 2 === 0 ? "paystub" : "photo";
+      setDemoMode(mode);
+      setPhase("idle");
+
+      const { cleanup, duration } = runDemo(mode);
+      cleanupRef.current = cleanup;
+
+      cycleRef.current = setTimeout(() => {
+        cleanup();
+        roundRef.current++;
+        startCycle();
+      }, duration + 200);
+    };
+
+    startCycle();
+
     return () => {
-      cleanup();
-      clearInterval(interval);
+      cleanupRef.current();
+      if (cycleRef.current) clearTimeout(cycleRef.current);
     };
   }, [runDemo]);
+
+  const isPhotoMode = demoMode === "photo";
 
   const showDoc = phase !== "idle" && phase !== "fileDrop" && phase !== "reset";
   const showAnalyzing = phase === "analyzing";
@@ -229,18 +270,35 @@ export default function LandingDemo() {
                 </div>
               </div>
 
-              {/* File Drop Animation */}
-              <svg
-                className={`demo-file-drop ${phase === "fileDrop" ? "active" : ""}`}
-                viewBox="0 0 60 72"
-              >
-                <rect x="4" y="4" width="52" height="64" rx="4" fill="white" stroke="#e5e7eb" strokeWidth="2" />
-                <path d="M40 4v12a4 4 0 004 4h12" fill="#f3f4f6" stroke="#e5e7eb" strokeWidth="2" />
-                <rect x="12" y="28" width="28" height="4" rx="2" fill="#cbd5e1" />
-                <rect x="12" y="36" width="22" height="4" rx="2" fill="#cbd5e1" />
-                <rect x="12" y="44" width="26" height="4" rx="2" fill="#cbd5e1" />
-                <rect x="12" y="52" width="18" height="4" rx="2" fill="#cbd5e1" />
-              </svg>
+              {/* File Drop Animation - Document */}
+              {!isPhotoMode && (
+                <svg
+                  className={`demo-file-drop ${phase === "fileDrop" ? "active" : ""}`}
+                  viewBox="0 0 60 72"
+                >
+                  <rect x="4" y="4" width="52" height="64" rx="4" fill="white" stroke="#e5e7eb" strokeWidth="2" />
+                  <path d="M40 4v12a4 4 0 004 4h12" fill="#f3f4f6" stroke="#e5e7eb" strokeWidth="2" />
+                  <rect x="12" y="28" width="28" height="4" rx="2" fill="#cbd5e1" />
+                  <rect x="12" y="36" width="22" height="4" rx="2" fill="#cbd5e1" />
+                  <rect x="12" y="44" width="26" height="4" rx="2" fill="#cbd5e1" />
+                  <rect x="12" y="52" width="18" height="4" rx="2" fill="#cbd5e1" />
+                </svg>
+              )}
+
+              {/* File Drop Animation - Photo/Image */}
+              {isPhotoMode && (
+                <svg
+                  className={`demo-file-drop ${phase === "fileDrop" ? "active" : ""}`}
+                  viewBox="0 0 60 72"
+                >
+                  <rect x="4" y="4" width="52" height="64" rx="4" fill="white" stroke="#e5e7eb" strokeWidth="2" />
+                  <path d="M40 4v12a4 4 0 004 4h12" fill="#f3f4f6" stroke="#e5e7eb" strokeWidth="2" />
+                  <rect x="11" y="22" width="38" height="26" rx="2" fill="#e2e8f0" />
+                  <circle cx="21" cy="31" r="4" fill="#94a3b8" />
+                  <path d="M11 48 L23 36 L31 42 L39 32 L49 40 V48 H11Z" fill="#94a3b8" opacity="0.7" />
+                  <text x="30" y="60" textAnchor="middle" fontSize="7" fill="#94a3b8" fontWeight="600" fontFamily="system-ui">.PDF</text>
+                </svg>
+              )}
 
               {/* Zoom Controls */}
               {showControls && (
@@ -290,8 +348,8 @@ export default function LandingDemo() {
                 </div>
               )}
 
-              {/* Pay Stub Document */}
-              <div className={`demo-document ${showDoc ? "visible" : ""}`}>
+              {/* ===== Pay Stub Document ===== */}
+              <div className={`demo-document ${showDoc && !isPhotoMode ? "visible" : ""}`}>
                 <div className="ps-header">
                   <div className="ps-company">ACME CORPORATION</div>
                   <div className="ps-address">123 Business Plaza, Anytown, US 00000</div>
@@ -432,6 +490,102 @@ export default function LandingDemo() {
                 </div>
               </div>
 
+              {/* ===== Photo ID Document ===== */}
+              <div className={`demo-document demo-photo-doc ${showDoc && isPhotoMode ? "visible" : ""}`}>
+                <div className="pd-header">
+                  <div className="pd-company">ACME CORPORATION</div>
+                  <div className="pd-subtitle">EMPLOYEE IDENTIFICATION</div>
+                </div>
+
+                <div className="pd-body">
+                  <div className="pd-top-section">
+                    {/* Photo Area */}
+                    <div
+                      className={`pd-photo-wrapper ${showPII ? "detected" : ""} ${nameConfirmed ? "censored" : ""}`}
+                    >
+                      <svg className="pd-photo-avatar" viewBox="0 0 88 88" fill="none">
+                        <rect width="88" height="88" fill="#e2e8f0" />
+                        <circle cx="44" cy="34" r="14" fill="#94a3b8" />
+                        <ellipse cx="44" cy="72" rx="24" ry="20" fill="#94a3b8" />
+                      </svg>
+                      {nameConfirmed && <div className="pd-censor-overlay" />}
+                      {showPII && !nameConfirmed && (
+                        <div className="pd-photo-btns">
+                          <div className="pii-btn confirm"><CheckIcon /></div>
+                          <div className="pii-btn reject"><XIcon /></div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Info next to photo */}
+                    <div className="pd-info">
+                      <div className="pd-info-row">
+                        <span className="ps-label">Full Name</span>
+                        <div
+                          className={`ps-value pii ${showPII ? "revealed" : ""} ${ssnConfirmed ? "confirmed" : ""}`}
+                        >
+                          <span className="pii-text">Jane Doe</span>
+                          {showPII && !ssnConfirmed && (
+                            <div className="pii-actions">
+                              <div className="pii-btn confirm"><CheckIcon /></div>
+                              <div className="pii-btn reject"><XIcon /></div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="pd-info-row">
+                        <span className="ps-label">Employee ID</span>
+                        <div
+                          className={`ps-value pii ${showPII ? "revealed" : ""} ${addressConfirmed ? "confirmed" : ""}`}
+                        >
+                          <span className="pii-text">EMP-2025-0847</span>
+                          {showPII && !addressConfirmed && (
+                            <div className="pii-actions">
+                              <div className="pii-btn confirm"><CheckIcon /></div>
+                              <div className="pii-btn reject"><XIcon /></div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="pd-info-row">
+                        <span className="ps-label">Department</span>
+                        <span className="pd-value">Engineering</span>
+                      </div>
+                      <div className="pd-info-row">
+                        <span className="ps-label">Since</span>
+                        <span className="pd-value">March 15, 2023</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pd-details">
+                    <div className="pd-detail-row">
+                      <span className="ps-label">Position</span>
+                      <span className="pd-value">Senior Software Engineer</span>
+                    </div>
+                    <div className="pd-detail-row">
+                      <span className="ps-label">Security Clearance</span>
+                      <span className="pd-value">Level 3</span>
+                    </div>
+                    <div className="pd-detail-row">
+                      <span className="ps-label">Office</span>
+                      <span className="pd-value">Building A, Room 412</span>
+                    </div>
+                  </div>
+
+                  <div className="pd-footer">
+                    <div className="pd-signature">
+                      <div className="pd-sig-line" />
+                      <span>Employee Signature</span>
+                    </div>
+                    <div className="pd-signature">
+                      <div className="pd-sig-line" />
+                      <span>Authorized By</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* FAB */}
               {showFab && (
                 <div className="demo-fab">
@@ -450,7 +604,11 @@ export default function LandingDemo() {
                     </svg>
                     {t("back")}
                   </span>
-                  <span className="demo-filename">paystub_jane_doe_dec2025.pdf</span>
+                  <span className="demo-filename">
+                    {isPhotoMode
+                      ? "employee_id_jane_doe.pdf"
+                      : "paystub_jane_doe_dec2025.pdf"}
+                  </span>
                 </div>
               )}
 

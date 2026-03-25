@@ -660,6 +660,186 @@
   gap: 2px;
 }
 
+/* ===== Photo ID Document ===== */
+.demo-photo-doc {
+  padding: 0;
+  overflow: hidden;
+}
+
+.pd-header {
+  text-align: center;
+  padding: 14px 20px 10px;
+  background: linear-gradient(135deg, #1e3a5f, #2d5a8e);
+  color: white;
+}
+
+.pd-company {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.pd-subtitle {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.pd-body {
+  padding: 16px 20px 14px;
+}
+
+.pd-top-section {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pd-photo-wrapper {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 6px;
+  overflow: visible;
+  border: 2px solid #e2e8f0;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+
+.pd-photo-wrapper.detected {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px #fbbf2430;
+  animation: piiPulse 0.5s ease;
+}
+
+.pd-photo-wrapper.censored {
+  border-color: #1f2937;
+}
+
+.pd-photo-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 4px;
+  display: block;
+}
+
+.pd-censor-overlay {
+  position: absolute;
+  inset: 0;
+  background: #1f2937;
+  border-radius: 4px;
+  z-index: 2;
+  animation: censorSlide 0.4s ease forwards;
+}
+
+@keyframes censorSlide {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+.pd-photo-btns {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3px;
+  z-index: 3;
+}
+
+.pd-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.pd-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.pd-value {
+  font-size: 12px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.pd-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pd-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pd-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.pd-signature {
+  flex: 1;
+  text-align: center;
+}
+
+.pd-sig-line {
+  height: 1px;
+  background: #cbd5e1;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.pd-signature span {
+  font-size: 8px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile responsive for photo doc */
+@media (max-width: 640px) {
+  .pd-top-section {
+    gap: 10px;
+  }
+
+  .pd-photo-wrapper {
+    width: 68px;
+    height: 68px;
+  }
+
+  .pd-photo-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .pd-company {
+    font-size: 11px;
+  }
+
+  .pd-value {
+    font-size: 10px;
+  }
+}
+
 /* FAB */
 .demo-fab {
   position: absolute;
