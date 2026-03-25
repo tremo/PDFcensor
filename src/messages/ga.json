@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Eagarthóireacht Uathoibríoch PII ó PDF, Word & Íomhánna",
+    "description": "Bain go buan sonraí pearsanta ó chomhaid PDF, cáipéisí Word agus íomhánna. Comhoiriúnach le HIPAA, GDPR, KVKK. 100% ar thaobh an chliaint — ní fhágann do chuid comhad do bhrabhsálaí riamh."
   },
   "nav": {
     "home": "Baile",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% ar thaobh an chliaint — Ní fhágann do chuid comhad do bhrabhsálaí riamh",
-    "title": "Bain PII go buan ó cháipéisí PDF",
-    "subtitle": "Aimsigh agus bain go buan sonraí pearsanta — SSN, ainmneacha, ríomhphoist, uimhreacha fóin, IBAN — ó chomhaid PDF, Word agus íomhánna. Comhoiriúnach le GDPR, HIPAA agus KVKK.",
+    "title": "Eagarthóirigh sonraí íogaire ó PDFanna, cáipéisí & íomhánna",
+    "subtitle": "Uath-eagarthóireacht PII & aghaidheanna ó PDFanna, cáipéisí Word agus íomhánna. Comhoiriúnach le HIPAA/GDPR/KVKK.",
     "cta": "Tosaigh — Saor in Aisce",
     "ctaSecondary": "Féach ar phraghsáil",
     "trustedBy": "Iontaofa ag gnólachtaí dlí, soláthraithe cúraim sláinte agus gníomhaireachtaí rialtais"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Eagarthóireacht doiciméad ar leibhéal fiontair a ritheann go hiomlán i do bhrabhsálaí",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Tacaíocht PDF, Word & Íomhánna",
+      "description": "Eagarthóirigh PDFanna, cáipéisí Word (.docx) agus comhaid íomhá — ar fad ón uirlis chéanna. Ní gá athrú idir feidhmchláir éagsúla."
+    },
+    "ocrSupport": {
+      "title": "OCR Ionsuite",
+      "description": "Cáipéisí scanáilte agus grianghraif? Gan fadhb. Léann OCR ionsuite téacs ó íomhánna ionas go n-aimsítear sonraí íogaire i scananna freisin."
+    },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Próiseáil Baisce",
+      "description": "Uaslódáil comhaid iolracha ag an am céanna. Próiseáil iad go léir agus íoslódáil mar aon chomhad ZIP amháin."
     },
     "metadata": {
       "title": "Metadata Cleaning",

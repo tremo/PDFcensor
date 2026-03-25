@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automaatne PII redigeerimine PDF-idest, Wordi dokumentidest ja piltidest",
+    "description": "Eemaldage jäädavalt isikuandmed PDF-idest, Wordi dokumentidest ja piltidest. Vastab HIPAA, GDPR, KVKK nõuetele. 100% kliendipoolne — teie failid ei lahku kunagi teie brauserist."
   },
   "nav": {
     "home": "Avaleht",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% kliendipoolne — Teie failid ei lahku kunagi teie brauserist",
-    "title": "Eemaldage jäädavalt isikuandmed PDF-dokumentidest",
-    "subtitle": "Tuvastage ja eemaldage automaatselt isikuandmed — SSN, nimed, e-posti aadressid, telefoninumbrid, IBAN — PDF-, Word- ja pildifailidest. Vastab GDPR, HIPAA ja KVKK nõuetele.",
+    "title": "Eemaldage tundlikud andmed PDF-idest, dokumentidest ja piltidest",
+    "subtitle": "Automaatne PII ja nägude redigeerimine PDF-idest, Wordi dokumentidest ja piltidest. Vastab HIPAA/GDPR/KVKK nõuetele.",
     "cta": "Alustage — Tasuta",
     "ctaSecondary": "Vaata hindu",
     "trustedBy": "Usaldavad advokaadibürood, tervishoiuteenuste pakkujad ja riigiasutused"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Professionaalne dokumentide redigeerimine, mis toimib täielikult teie brauseris",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "PDF, Word ja pildid",
+      "description": "Redigeerige PDF-e, Wordi dokumente (.docx) ja pildifaile — kõik ühest tööriistast. Pole vaja erinevate rakenduste vahel vahetada."
+    },
+    "ocrSupport": {
+      "title": "Sisseehitatud OCR",
+      "description": "Skannitud dokumendid ja fotod? Pole probleemi. Sisseehitatud OCR loeb teksti piltidelt, nii et tundlikud andmed skaneeringutest tuvastatakse samuti."
+    },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Pakkimine",
+      "description": "Laadige üles mitu faili korraga. Töödelge need kõik ja laadige alla ühe ZIP-failina."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,15 +58,15 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Lohistage oma PDF-id, Wordi dokumendid või pildid — või klõpsake sirvimiseks. Toetab mitut faili."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Ülevaatus",
+      "description": "Automaatselt tuvastatud PII on esile tõstetud. Lisage, eemaldage või kohandage redigeerimisi enne rakendamist."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Allalaadimine",
+      "description": "Laadige alla oma jäädavalt redigeeritud fail. Algne tekst on pöördumatult eemaldatud."
     }
   },
   "comparison": {
