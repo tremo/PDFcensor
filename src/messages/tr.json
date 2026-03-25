@@ -314,7 +314,7 @@
     "lastUpdated": "Son güncelleme: Mart 2026",
     "intro": {
       "heading": "1. Giriş",
-      "text": "OfflineRedact (\u201cbiz\u201d, \u201cbizim\u201d) gizliliğinizi korumaya kararlıdır. Bu politika, PDF sansürleme aracımızı kullanırken bilgileri nasıl işlediğimizi açıklar."
+      "text": "OfflineRedact (“biz”, “bizim”) gizliliğinizi korumaya kararlıdır. Bu politika, PDF sansürleme aracımızı kullanırken bilgileri nasıl işlediğimizi açıklar."
     },
     "noFileUploads": {
       "heading": "2. Dosya Yüklemesi Yok",
@@ -374,7 +374,7 @@
     },
     "liability": {
       "heading": "6. Sorumluluk Sınırlaması",
-      "text": "OfflineRedact herhangi bir garanti olmaksızın \u201colduğu gibi\u201d sunulmaktadır. Hizmetin kullanımından veya kullanılamamasından kaynaklanan hiçbir zarardan, hassas verilerin eksik sansürlenmesi dahil ancak bununla sınırlı olmaksızın, sorumlu değiliz."
+      "text": "OfflineRedact herhangi bir garanti olmaksızın “olduğu gibi” sunulmaktadır. Hizmetin kullanımından veya kullanılamamasından kaynaklanan hiçbir zarardan, hassas verilerin eksik sansürlenmesi dahil ancak bununla sınırlı olmaksızın, sorumlu değiliz."
     },
     "contact": {
       "heading": "7. İletişim",
@@ -424,6 +424,186 @@
           "İlgili kişi erişim taleplerine (DSAR) yanıt verirken, kuruluşların üçüncü taraf kişisel verilerini sansürleyerek belge kopyaları sunması gerekebilir. Bu, diğer bireylerin verilerinin dikkatli bir şekilde belirlenmesini ve kalıcı olarak kaldırılmasını gerektirir.",
           "OfflineRedact'in çoklu düzenleme desteği, yaygın Avrupa kişisel veri kalıplarını otomatik olarak tespit eden bir GDPR profili içerir: isimler, e-posta adresleri, telefon numaraları, IBAN numaraları ve posta adresleri. Araç tüm AB dillerini destekler.",
           "PDF sansürleme için temel GDPR hususları: (1) Sansürlemenin geri döndürülemez olduğundan emin olun — metin kalıcı olarak kaldırılmalıdır, (2) Kişisel veri içerebilecek belge meta verilerini temizleyin, (3) Sansürleme faaliyetlerinin kaydını tutun, (4) Veri minimizasyonu ilkesini uygulayın."
+        ]
+      },
+      "appi-pdf-sumikeshi": {
+        "title": "APPI Compliance: PDF Redaction Guide for Japan",
+        "excerpt": "Guide for Japanese organizations on redacting personal information from PDF documents under the Act on Protection of Personal Information.",
+        "date": "2026-03-14",
+        "content": [
+          "Japan's Act on the Protection of Personal Information (APPI) was significantly strengthened in its 2022 amendment, imposing stricter requirements on how organizations handle personal data. PDF documents containing personal information must be properly redacted before sharing, archiving, or publishing.",
+          "The Personal Information Protection Commission (PPC) enforces APPI compliance and has increased its oversight of digital document handling. Organizations must ensure that redaction of personal information in PDFs is permanent and irreversible — visual masking alone is insufficient.",
+          "Japanese-specific personal data patterns include: My Number (Individual Number), Japanese phone numbers (+81 format), Japanese postal codes, bank account numbers, health insurance card numbers, and names in both kanji and katakana formats.",
+          "APPI compliance requirements for PDF redaction: (1) Permanent deletion or anonymization of personal information that is no longer needed, (2) Security measures to prevent leakage during processing, (3) Proper handling of sensitive personal information with additional protections, (4) Record-keeping of data handling activities, (5) Notification obligations in case of data breaches.",
+          "OfflineRedact processes all documents locally in your browser, with no server uploads required. This architecture inherently supports APPI's security requirements by eliminating data transmission risks. The tool detects Japanese personal information patterns including My Number format and Japanese contact information."
+        ]
+      },
+      "avg-pdf-lakken": {
+        "title": "AVG Compliance: PDF Redaction Guide for the Netherlands",
+        "excerpt": "Guide for Dutch organizations on redacting personal data from PDF documents under the Algemene Verordening Gegevensbescherming.",
+        "date": "2026-03-09",
+        "content": [
+          "The Netherlands implements the EU GDPR as the Algemene Verordening Gegevensbescherming (AVG), enforced by the Autoriteit Persoonsgegevens (AP). Dutch organizations, particularly in government, healthcare, and financial sectors, must ensure proper PDF redaction when sharing documents containing personal data.",
+          "The Autoriteit Persoonsgegevens has been increasingly active in enforcement, with notable fines for improper data handling. For PDF documents, the AP requires that redaction be permanent and irreversible — simple visual overlays that allow text recovery are considered insufficient and constitute a data breach risk.",
+          "Dutch-specific personal data patterns include: BSN (Burgerservicenummer / citizen service number), Dutch phone numbers (+31 format), Dutch IBAN numbers (NL prefix), passport and ID card numbers, health insurance numbers, and names following Dutch naming conventions.",
+          "AVG compliance requirements for PDF redaction: (1) Permanent removal of personal data from document content, (2) Metadata cleaning including author and creation information, (3) Documentation of redaction activities for accountability, (4) Data protection impact assessment for large-scale redaction projects, (5) Local processing to minimize data exposure risks.",
+          "OfflineRedact detects Dutch personal data patterns including BSN format and Dutch contact information. Client-side processing ensures documents stay on your device, supporting the AVG's data minimization and security requirements without the risks of cloud-based processing."
+        ]
+      },
+      "ccpa-pdf-redaction": {
+        "title": "CCPA Compliance: How to Redact Personal Information from PDFs",
+        "excerpt": "Guide for California businesses on redacting consumer personal information from PDF documents under CCPA.",
+        "date": "2026-02-28",
+        "content": [
+          "The California Consumer Privacy Act (CCPA) and its amendment, the CPRA, give California consumers the right to know what personal information businesses collect, the right to delete it, and the right to opt out of its sale. When responding to consumer requests or sharing documents, businesses must properly redact personal information from PDFs.",
+          "CCPA defines personal information broadly: names, Social Security numbers, email addresses, purchasing history, browsing history, geolocation data, biometric information, and any information that could be linked to a consumer or household. PDF documents in HR, legal, finance, and customer service departments frequently contain multiple categories of this data.",
+          "Key CCPA redaction scenarios: (1) Responding to consumer access requests — you may need to share records while redacting third-party information, (2) Data sharing with service providers — contracts and reports may need consumer PII removed, (3) Internal audits — compliance teams reviewing documents may need to work with redacted copies, (4) Litigation holds — legal proceedings may require production of documents with certain PII redacted.",
+          "Common CCPA redaction mistakes to avoid: (1) Using visual overlays instead of true redaction — covered text can be extracted, (2) Forgetting to redact metadata containing personal information, (3) Inconsistent redaction across document sets, (4) Uploading documents containing California consumer data to non-compliant cloud services for processing.",
+          "OfflineRedact's CCPA regulation profile automatically detects SSNs, ITINs, email addresses, US phone numbers, credit card numbers, and names. The client-side architecture means California consumer data never leaves your device during the redaction process, eliminating the risk of unauthorized disclosure. Batch processing ensures consistent redaction across large document sets."
+        ]
+      },
+      "client-side-vs-server-side-redaction": {
+        "title": "Client-Side vs Server-Side PDF Redaction: Security Comparison",
+        "excerpt": "Why processing documents in your browser is more secure than uploading them to a server for redaction.",
+        "date": "2026-03-10",
+        "content": [
+          "When it comes to redacting sensitive information from PDFs, one of the most critical decisions is where the processing happens. Server-side redaction tools require you to upload your documents to a remote server, while client-side tools like OfflineRedact process everything locally in your browser.",
+          "Server-side redaction introduces several security risks: (1) Documents are transmitted over the internet, creating interception opportunities, (2) Files are stored on third-party servers, even temporarily, (3) Server breaches can expose all uploaded documents, (4) You must trust the provider's data handling and retention policies, (5) Compliance auditors may flag server-side processing as a risk.",
+          "Client-side redaction eliminates these risks entirely. Your documents never leave your device — all PII detection, redaction, and metadata cleaning happens in your browser's JavaScript engine. There is zero network transmission of document content, zero server storage, and zero third-party access to your files.",
+          "For regulated industries, this distinction is crucial. HIPAA requires that PHI be protected during processing. GDPR mandates data minimization — why send data to a server when you don't need to? KVKK and CCPA have similar requirements. Client-side processing is inherently more compliant because it removes the server as a potential point of failure.",
+          "OfflineRedact uses WebAssembly and browser APIs to achieve the same quality of redaction as server-side tools — automatic PII detection with 13 pattern types, true text removal from PDF content streams, metadata cleaning, and batch processing — all without a single byte of your document data ever leaving your browser."
+        ]
+      },
+      "cnil-rgpd-caviardage-pdf": {
+        "title": "CNIL & RGPD: Complete Guide to PDF Redaction in France",
+        "excerpt": "How to comply with French data protection requirements when redacting personal data from PDF documents under CNIL guidelines.",
+        "date": "2026-03-18",
+        "content": [
+          "France's implementation of the GDPR, known locally as the RGPD, is enforced by the CNIL (Commission Nationale de l'Informatique et des Libertés). French organizations must ensure personal data in PDF documents is properly redacted before sharing, particularly when responding to data subject access requests or publishing public records.",
+          "The CNIL has issued specific guidance on data anonymization and pseudonymization techniques. For PDF documents, this means that simple visual overlays are insufficient — personal data must be permanently and irreversibly removed from the document's content streams. The CNIL considers recoverable redaction a data breach risk.",
+          "French-specific personal data patterns include: INSEE numbers (numéro de sécurité sociale), national identity card numbers, French phone numbers (+33 format), French IBAN numbers (FR prefix), and names following French naming conventions. These must all be detected and properly redacted.",
+          "Key RGPD/CNIL compliance steps for PDF redaction: (1) Identify all personal data using automated detection with French-specific patterns, (2) Ensure redaction permanently removes text data from the PDF, (3) Clean document metadata including author, creation date, and software information, (4) Maintain redaction logs as required by CNIL accountability obligations, (5) Process documents locally to minimize data exposure.",
+          "OfflineRedact supports RGPD compliance with its European regulation profile, automatically detecting French personal data patterns. All processing happens in your browser — no data is sent to external servers, ensuring compliance with CNIL's data minimization principles."
+        ]
+      },
+      "dataskydd-pdf-maskering": {
+        "title": "Swedish Data Protection: PDF Redaction Guide",
+        "excerpt": "Guide for Swedish organizations on redacting personal data from PDF documents in compliance with dataskyddsförordningen and IMY guidelines.",
+        "date": "2026-03-07",
+        "content": [
+          "Sweden implements the EU GDPR through the dataskyddsförordningen, enforced by Integritetsskyddsmyndigheten (IMY). Swedish organizations, including public authorities subject to the principle of public access (offentlighetsprincipen), must properly redact personal data from PDF documents before disclosure or sharing.",
+          "IMY has issued guidance on proper anonymization and pseudonymization of personal data in documents. Swedish organizations face the unique challenge of balancing the constitutional principle of public access with GDPR data protection requirements — making proper PDF redaction essential when releasing public documents.",
+          "Swedish-specific personal data patterns include: personnummer (personal identity number), samordningsnummer (coordination number), Swedish phone numbers (+46 format), Swedish IBAN numbers (SE prefix), and names following Swedish naming conventions.",
+          "Swedish data protection compliance steps for PDF redaction: (1) Identify all personal data including Swedish-specific identifiers, (2) Apply permanent redaction that removes text from document content streams, (3) Clean document metadata, (4) Balance public access requirements with data protection obligations, (5) Maintain redaction logs for accountability.",
+          "OfflineRedact processes all documents locally in your browser, supporting IMY's data protection requirements. The tool detects Swedish personal data patterns including personnummer and Swedish contact formats, helping organizations comply with both dataskyddsförordningen and the principle of public access."
+        ]
+      },
+      "dsgvo-pdf-schwaerzung": {
+        "title": "DSGVO-Compliant PDF Redaction: Complete Guide",
+        "excerpt": "Learn how to redact personal data from PDF documents in compliance with Germany's DSGVO (GDPR) requirements and permanently remove it.",
+        "date": "2026-03-15",
+        "content": [
+          "The General Data Protection Regulation (DSGVO in German) imposes strict requirements on handling personal data in the EU. PDF documents frequently contain sensitive information such as names, email addresses, phone numbers, IBAN numbers, and addresses that must be protected before sharing.",
+          "Article 17 of the DSGVO — the right to erasure — requires organizations to permanently remove personal data on request. For PDF documents, this means irreversible redaction, not just visual covering. The underlying text data must be completely removed from the document.",
+          "Common PDF redaction mistakes: (1) Using highlighters or black bars that can be copied and pasted, (2) Forgetting metadata cleanup (author, software, creation date), (3) Inconsistent redaction across multiple documents, (4) Uploading sensitive documents to cloud-based services.",
+          "OfflineRedact solves these problems through true redaction directly in your browser. No server upload required — your documents never leave your device. The DSGVO profile automatically detects European personal data: names, email addresses, phone numbers, IBAN numbers, and postal addresses in all 24 EU languages.",
+          "Best practices for DSGVO-compliant PDF redaction: (1) Use automated detection for consistent results, (2) Ensure redaction is irreversible, (3) Clean document metadata, (4) Keep records of redaction activities per Art. 5(2) DSGVO accountability, (5) Process documents locally to minimize data breach risk."
+        ]
+      },
+      "gdpr-italia-oscuramento-pdf": {
+        "title": "GDPR Italy: Complete Guide to PDF Redaction",
+        "excerpt": "How Italian organizations can ensure GDPR compliance through proper PDF redaction under Garante per la protezione dei dati personali guidelines.",
+        "date": "2026-03-11",
+        "content": [
+          "Italy's implementation of the GDPR is overseen by the Garante per la protezione dei dati personali, one of Europe's most active data protection authorities. Italian organizations must ensure PDF documents are properly redacted before sharing, particularly in contexts involving public administration, healthcare, and judicial proceedings.",
+          "The Garante has issued specific provisions on document anonymization and has levied significant fines for improper data handling. Italian organizations must go beyond visual masking — personal data must be permanently removed from PDF content streams to be considered properly redacted.",
+          "Italian-specific personal data patterns include: Codice Fiscale (tax identification code), Carta d'Identità numbers, Italian phone numbers (+39 format), Italian IBAN numbers (IT prefix), health card numbers (tessera sanitaria), and names following Italian naming conventions.",
+          "Italian GDPR compliance steps for PDF redaction: (1) Identify all personal data including Italian-specific identifiers, (2) Apply irreversible redaction to document content streams, (3) Clean metadata from all shared documents, (4) Maintain processing records as required by the Garante, (5) Ensure data minimization in document handling workflows.",
+          "OfflineRedact supports Italian GDPR compliance with its European regulation profile detecting Codice Fiscale, Italian phone formats, and IBAN numbers. All processing happens locally in your browser, ensuring no personal data is transmitted to external servers."
+        ]
+      },
+      "kvkk-pdf-redaction-guide": {
+        "title": "KVKK Compliant PDF Redaction: Comprehensive Guide",
+        "excerpt": "Learn how to properly redact personal data in PDF documents in compliance with Turkey's KVKK regulation.",
+        "date": "2026-03-20",
+        "content": [
+          "Turkey's Personal Data Protection Law (KVKK), enacted in 2016, imposes strict rules on how organizations process and share personal data. PDF documents frequently contain sensitive data such as TC identity numbers, phone numbers, email addresses, and IBAN numbers.",
+          "Article 7 of KVKK mandates the deletion, destruction, or anonymization of personal data when the reasons requiring its processing no longer exist. The most effective way to fulfill this obligation in PDF documents is to apply permanent redaction.",
+          "Visual masking — drawing black boxes over sensitive text — is not sufficient for KVKK compliance. The underlying text data must be permanently removed from the document. OfflineRedact performs true redaction by removing actual text data from PDF content streams.",
+          "OfflineRedact's KVKK profile automatically detects Turkey-specific personal data patterns: TC Identity numbers (with checksum validation), Turkish phone numbers (+90 format), email addresses, IBAN numbers, names, and addresses. All processing happens in your browser — your documents never leave your device.",
+          "Steps for KVKK-compliant PDF redaction: (1) Detect all personal data with automatic detection, (2) Review and confirm detected items, (3) Apply true redaction that removes text data, (4) Clean document metadata (author, creation date, etc.), (5) Verify the redacted document before sharing."
+        ]
+      },
+      "lgpd-redacao-pdf": {
+        "title": "LGPD Compliance: PDF Redaction Guide for Brazil",
+        "excerpt": "How Brazilian organizations can ensure LGPD compliance when redacting personal data from PDF documents.",
+        "date": "2026-03-16",
+        "content": [
+          "Brazil's Lei Geral de Proteção de Dados (LGPD) establishes comprehensive data protection requirements similar to the EU's GDPR. Organizations operating in Brazil must properly redact personal data from PDF documents when sharing externally, responding to data subject requests, or complying with data minimization obligations.",
+          "The Autoridade Nacional de Proteção de Dados (ANPD) oversees LGPD enforcement and has increasingly focused on digital document handling practices. Improper PDF redaction — where personal data can be recovered from supposedly redacted documents — constitutes a violation of LGPD's data security requirements.",
+          "Brazilian-specific personal data patterns include: CPF numbers (Cadastro de Pessoas Físicas), CNPJ numbers (company registration), Brazilian phone numbers (+55 format), Brazilian bank account details, RG numbers (identity card), and names following Brazilian naming conventions.",
+          "LGPD compliance steps for PDF redaction: (1) Identify all personal data including Brazilian-specific identifiers using automated detection, (2) Apply true redaction that removes text data from PDF content streams, (3) Clean document metadata that may contain personal information, (4) Maintain records of processing activities as required by Article 37, (5) Ensure local processing to comply with data transfer restrictions.",
+          "OfflineRedact supports LGPD compliance with its Latin American regulation profile, detecting CPF numbers, Brazilian phone formats, and other local identifiers. All processing happens entirely in your browser, ensuring no personal data is transmitted to external servers."
+        ]
+      },
+      "lopdgdd-redaccion-pdf": {
+        "title": "LOPDGDD Compliance: PDF Redaction Guide for Spain",
+        "excerpt": "Guide for Spanish organizations on redacting personal data from PDF documents under LOPDGDD and EU GDPR requirements.",
+        "date": "2026-03-17",
+        "content": [
+          "Spain's Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD) complements the EU GDPR with additional national provisions. Spanish organizations handling PDF documents containing personal data must ensure proper redaction to comply with both LOPDGDD and GDPR requirements.",
+          "The Agencia Española de Protección de Datos (AEPD) actively enforces data protection violations and has issued significant fines for improper data handling. Inadequate PDF redaction — such as using visual overlays that can be removed — is considered a data protection failure under LOPDGDD.",
+          "Spanish-specific personal data to detect includes: DNI/NIE numbers, Spanish phone numbers (+34 format), Spanish IBAN numbers (ES prefix), Social Security numbers, and names following Spanish naming conventions with two surnames.",
+          "LOPDGDD compliance requirements for PDF redaction: (1) Permanent removal of personal data from document content streams, (2) Metadata cleaning to remove hidden personal information, (3) Documentation of redaction activities for accountability under Article 5(2) GDPR, (4) Implementation of privacy by design principles, (5) Local processing to minimize data transfer risks.",
+          "OfflineRedact's European regulation profile automatically detects Spanish personal data patterns including DNI/NIE numbers, Spanish phone formats, and IBAN numbers. Client-side processing ensures documents never leave your device, meeting LOPDGDD's strict data protection requirements."
+        ]
+      },
+      "pdf-redaction-healthcare-checklist": {
+        "title": "PDF Redaction for Healthcare: HIPAA Compliance Checklist",
+        "excerpt": "A practical checklist for healthcare organizations to ensure HIPAA-compliant PDF redaction workflows.",
+        "date": "2026-03-05",
+        "content": [
+          "Healthcare organizations face unique challenges when sharing documents externally. Patient records, insurance forms, lab results, and clinical notes all contain Protected Health Information (PHI) that must be redacted before disclosure. This checklist ensures your PDF redaction workflow meets HIPAA requirements.",
+          "PHI Categories to Redact: HIPAA defines 18 PHI identifiers that must be protected: (1) Names, (2) Geographic data smaller than a state, (3) Dates related to an individual, (4) Phone numbers, (5) Fax numbers, (6) Email addresses, (7) Social Security numbers, (8) Medical record numbers, (9) Health plan beneficiary numbers, (10) Account numbers, (11) Certificate/license numbers, (12) Vehicle identifiers, (13) Device identifiers, (14) Web URLs, (15) IP addresses, (16) Biometric identifiers, (17) Full-face photos, (18) Any other unique identifying number.",
+          "Pre-Redaction Checklist: Before redacting, verify that (1) you have identified all PHI in the document, (2) you are using a tool that performs true redaction (text removal, not visual overlay), (3) the tool cleans document metadata, (4) the tool processes documents locally or in a HIPAA-compliant environment, (5) you have a process for quality review after redaction.",
+          "Post-Redaction Verification: After redacting, confirm that (1) redacted text cannot be recovered by selecting, copying, or using text extraction tools, (2) document metadata has been cleaned (author name, creation software, timestamps), (3) the redaction log has been saved for compliance records, (4) the original unredacted document is stored securely or destroyed per retention policy.",
+          "OfflineRedact streamlines this entire workflow with its HIPAA regulation profile. It automatically detects SSNs, names, phone numbers, email addresses, and other PHI identifiers. All processing happens in your browser — no PHI is ever transmitted to external servers, making it inherently HIPAA-compliant for the redaction process itself."
+        ]
+      },
+      "pipa-pdf-masking": {
+        "title": "PIPA Compliance: PDF Redaction Guide for South Korea",
+        "excerpt": "How Korean organizations can comply with PIPA requirements when redacting personal information from PDF documents.",
+        "date": "2026-03-13",
+        "content": [
+          "South Korea's Personal Information Protection Act (PIPA) is one of the strictest data protection laws in Asia. Organizations must implement rigorous measures to protect personal information in PDF documents, including proper redaction before external sharing or when responding to data subject access requests.",
+          "The Personal Information Protection Commission (PIPC) actively enforces PIPA violations with substantial penalties. Improper PDF redaction — where personal information remains recoverable — can result in administrative fines and criminal penalties under PIPA's enforcement provisions.",
+          "Korean-specific personal data patterns include: Resident Registration Numbers, Korean phone numbers (+82 format), Korean passport numbers, driver's license numbers, health insurance numbers, and names in Hangul and romanized formats.",
+          "PIPA compliance steps for PDF redaction: (1) Identify all personal information using automated detection with Korean-specific patterns, (2) Apply permanent redaction that removes data from document content streams, (3) Destroy or anonymize personal information when the purpose of processing has been achieved, (4) Implement technical safeguards as required by PIPA Article 29, (5) Maintain processing records for regulatory audits.",
+          "OfflineRedact's client-side architecture aligns with PIPA's strict data security requirements — all document processing happens in your browser with zero server transmission. The tool supports Korean personal information patterns including Resident Registration Number detection and Korean contact formats."
+        ]
+      },
+      "pipl-pdf-tumin": {
+        "title": "PIPL Compliance: PDF Redaction Guide for China",
+        "excerpt": "Guide for organizations operating in China on redacting personal information from PDF documents under the Personal Information Protection Law.",
+        "date": "2026-03-12",
+        "content": [
+          "China's Personal Information Protection Law (PIPL), effective since November 2021, establishes comprehensive personal information protection requirements. Organizations handling PDF documents containing personal information of Chinese residents must ensure proper redaction to comply with PIPL's strict data handling obligations.",
+          "The Cyberspace Administration of China (CAC) and other regulatory bodies enforce PIPL compliance with significant penalties including fines up to 50 million yuan or 5% of annual revenue. Improper handling of personal information in documents, including inadequate redaction, can trigger enforcement actions.",
+          "Chinese-specific personal data patterns include: Resident Identity Card numbers, Chinese phone numbers (+86 format), Chinese bank account numbers, social insurance numbers, passport numbers, and names in simplified Chinese characters.",
+          "PIPL compliance requirements for PDF redaction: (1) Process personal information only for clear and reasonable purposes, (2) Apply permanent redaction when information is no longer needed for its original purpose, (3) Implement technical security measures to prevent unauthorized access, (4) Minimize personal information collection and processing, (5) Conduct personal information protection impact assessments for sensitive data.",
+          "OfflineRedact's fully client-side processing architecture is particularly relevant for PIPL compliance, as it eliminates cross-border data transfer concerns — documents never leave the user's device. The tool supports detection of Chinese personal information patterns including ID card numbers and Chinese contact formats."
+        ]
+      },
+      "rodo-redakcja-pdf": {
+        "title": "RODO Compliance: PDF Redaction Guide for Poland",
+        "excerpt": "How Polish organizations can comply with RODO (GDPR) requirements when redacting personal data from PDF documents.",
+        "date": "2026-03-08",
+        "content": [
+          "Poland implements the EU GDPR as RODO (Rozporządzenie o Ochronie Danych Osobowych), enforced by the Urząd Ochrony Danych Osobowych (UODO). Polish organizations must ensure personal data in PDF documents is permanently redacted before sharing, particularly in administrative, legal, and healthcare contexts.",
+          "UODO has actively enforced data protection requirements, issuing fines for inadequate personal data protection. For PDF documents, this means organizations cannot rely on visual redaction methods — personal data must be permanently removed from the document's underlying text content to comply with RODO requirements.",
+          "Polish-specific personal data patterns include: PESEL numbers (national identification), NIP numbers (tax identification), REGON numbers (business registration), Polish phone numbers (+48 format), Polish IBAN numbers (PL prefix), and names following Polish naming conventions with diacritical characters.",
+          "RODO compliance steps for PDF redaction: (1) Identify all personal data using automated detection with Polish-specific patterns, (2) Apply true redaction removing data from PDF content streams, (3) Clean document metadata, (4) Maintain records of processing activities as required by RODO, (5) Process documents locally to minimize data transfer and exposure risks.",
+          "OfflineRedact supports RODO compliance by detecting Polish personal data patterns including PESEL and NIP numbers. All processing happens in your browser — no personal data is transmitted to servers, fully supporting UODO's requirements for data security and minimization."
         ]
       }
     }
