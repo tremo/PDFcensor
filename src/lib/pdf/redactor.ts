@@ -31,14 +31,17 @@ export async function redactPDF(
     redactionsByPage.set(r.pageIndex, existing);
   }
 
-  // Step 1: Remove text from content streams
+  // Step 1: Remove text from content streams (skip face-only redactions)
   for (let i = 0; i < pages.length; i++) {
     const pageRedactions = redactionsByPage.get(i);
     if (pageRedactions && pageRedactions.length > 0) {
-      const success = await removeTextFromContentStream(pages[i], pageRedactions);
-      if (!success) {
-        // Targeted removal failed — strip ALL text from this page so no PII leaks
-        stripAllTextFromPage(pages[i]);
+      const textRedactions = pageRedactions.filter((r) => r.piiType !== "face");
+      if (textRedactions.length > 0) {
+        const success = await removeTextFromContentStream(pages[i], textRedactions);
+        if (!success) {
+          // Targeted removal failed — strip ALL text from this page so no PII leaks
+          stripAllTextFromPage(pages[i]);
+        }
       }
     }
     currentStep++;

@@ -234,7 +234,8 @@ export default function RedactPage() {
             isProcessing={
               activeStatus === "parsing" ||
               activeStatus === "scanning" ||
-              activeStatus === "ocr-scanning"
+              activeStatus === "ocr-scanning" ||
+              activeStatus === "face-scanning"
             }
             selectedFiles={activeFiles}
             onRemoveFile={activeRemoveFile}
@@ -412,6 +413,8 @@ export default function RedactPage() {
               onRemoveRedaction={img.removeRedaction}
               selectedRedactionId={selectedRedactionId}
               onSelectRedaction={setSelectedRedactionId}
+              faceDetectionEnabled={img.faceDetectionEnabled}
+              onFaceDetectionToggle={img.setFaceDetectionEnabled}
             />
           </div>
         </div>
@@ -456,6 +459,7 @@ export default function RedactPage() {
                   "parsing",
                   "scanning",
                   "ocr-scanning",
+                  "face-scanning",
                   "redacting",
                 ].includes(pdf.status)}
               />
@@ -478,6 +482,8 @@ export default function RedactPage() {
                 onRemoveRedaction={pdf.removeRedaction}
                 selectedRedactionId={selectedRedactionId}
                 onSelectRedaction={setSelectedRedactionId}
+                faceDetectionEnabled={pdf.faceDetectionEnabled}
+                onFaceDetectionToggle={pdf.setFaceDetectionEnabled}
               />
             </div>
           </div>

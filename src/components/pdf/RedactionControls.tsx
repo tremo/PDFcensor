@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 const ALL_PII_TYPES: (PIIType | "customKeyword")[] = [
   "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
   "usPhone", "iban", "creditCard", "passport", "names", "address",
-  "customKeyword",
+  "face", "customKeyword",
 ];
 
 interface RedactionControlsProps {
@@ -48,6 +48,8 @@ interface RedactionControlsProps {
   onRemoveRedaction: (id: string) => void;
   selectedRedactionId: string | null;
   onSelectRedaction: (id: string | null) => void;
+  faceDetectionEnabled?: boolean;
+  onFaceDetectionToggle?: (enabled: boolean) => void;
 }
 
 export function RedactionControls({
@@ -69,6 +71,8 @@ export function RedactionControls({
   onRemoveRedaction,
   selectedRedactionId,
   onSelectRedaction,
+  faceDetectionEnabled,
+  onFaceDetectionToggle,
 }: RedactionControlsProps) {
   const t = useTranslations("redact.controls");
   const tp = useTranslations("redact.piiTypes");
@@ -84,7 +88,7 @@ export function RedactionControls({
   const confirmedCount = confirmedRedactions.length;
   const rejectedCount = rejectedRedactions.length;
 
-  const isProcessing = ["parsing", "scanning", "ocr-scanning", "redacting"].includes(status);
+  const isProcessing = ["parsing", "scanning", "ocr-scanning", "face-scanning", "redacting"].includes(status);
 
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
 
@@ -137,6 +141,7 @@ export function RedactionControls({
           <p className="text-xs text-muted-foreground text-center">
             {status === "scanning" && t("scanning")}
             {status === "ocr-scanning" && t("ocrScanning")}
+            {status === "face-scanning" && t("faceScanning")}
             {status === "redacting" && t("redacting")}
             {status === "parsing" && t("parsing")}
           </p>
@@ -391,6 +396,32 @@ export function RedactionControls({
           >
             <ChevronRight className="h-4 w-4" />
           </Button>
+        </div>
+      )}
+
+      {/* Face detection toggle */}
+      {onFaceDetectionToggle && (
+        <div className="bg-muted/30 rounded-xl border border-border p-3">
+          <label className="flex items-center justify-between cursor-pointer">
+            <span className="text-sm font-medium">{t("faceDetection")}</span>
+            <button
+              type="button"
+              role="switch"
+              aria-checked={faceDetectionEnabled}
+              onClick={() => onFaceDetectionToggle(!faceDetectionEnabled)}
+              className={cn(
+                "relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors",
+                faceDetectionEnabled ? "bg-blue-500" : "bg-neutral-300"
+              )}
+            >
+              <span
+                className={cn(
+                  "pointer-events-none inline-block h-4 w-4 rounded-full bg-white shadow-sm transition-transform",
+                  faceDetectionEnabled ? "translate-x-4" : "translate-x-0"
+                )}
+              />
+            </button>
+          </label>
         </div>
       )}
 

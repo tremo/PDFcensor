@@ -8,12 +8,14 @@ import type {
   ProcessingStatus,
 } from "@/types/pdf";
 import type { RegulationType, PIIType } from "@/types/pii";
-import { parsePDF, releasePageTextData, reparsePages, getDocumentArrayBuffer } from "@/lib/pdf/parser";
+import { parsePDF, releasePageTextData, reparsePages, getDocumentArrayBuffer, renderPageToCanvas } from "@/lib/pdf/parser";
 import { detectPII } from "@/lib/pii/detector";
 import { loadNameDictionaries } from "@/lib/pii/patterns/names";
 import { redactPDF } from "@/lib/pdf/redactor";
 import { addWatermark } from "@/lib/pdf/watermark";
 import { getDefaultRegulation, getRegulationPatterns, getRegulationLocales } from "@/lib/pii/regulations";
+import { detectFacesInCanvas } from "@/lib/face/detector";
+import * as pdfjsLib from "pdfjs-dist";
 import type { Locale } from "@/lib/i18n/config";
 
 let idCounter = 0;
@@ -37,6 +39,7 @@ export function usePDFProcessor() {
     getRegulationPatterns(getDefaultRegulation(locale))
   );
   const [customKeywords, setCustomKeywords] = useState<string[]>([]);
+  const [faceDetectionEnabled, setFaceDetectionEnabled] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -201,6 +204,39 @@ export function usePDFProcessor() {
     }
   }, [locale]);
 
+  const scanFaces = useCallback(async (doc: PDFDocumentData) => {
+    setStatus("face-scanning");
+    setProgress(0);
+
+    try {
+      const arrayBuffer = await getDocumentArrayBuffer(doc);
+      const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+      const FACE_SCALE = 2.0;
+      const faceRedactions: RedactionArea[] = [];
+
+      for (let i = 0; i < doc.pages.length; i++) {
+        const canvas = globalThis.document.createElement("canvas");
+        await renderPageToCanvas(pdf, i + 1, canvas, FACE_SCALE);
+
+        const faces = await detectFacesInCanvas(canvas, doc.pages[i].pageIndex, FACE_SCALE);
+        faceRedactions.push(...faces);
+
+        canvas.width = 0;
+        canvas.height = 0;
+
+        setProgress(Math.round(((i + 1) / doc.pages.length) * 100));
+      }
+
+      pdf.destroy();
+
+      setRedactions((prev) => [...prev, ...faceRedactions]);
+      setStatus("previewing");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Face detection failed");
+      setStatus("error");
+    }
+  }, []);
+
   const handleFilesSelected = useCallback(
     async (newFiles: File[]) => {
       setFiles((prev) => [...prev, ...newFiles]);
@@ -216,13 +252,17 @@ export function usePDFProcessor() {
           setCurrentPage(1);
           // Auto-scan immediately after parsing
           await scanDocument(doc, enabledTypes, regulation, customKeywords);
+          // Run face detection if enabled
+          if (faceDetectionEnabled) {
+            await scanFaces(doc);
+          }
         } catch (e) {
           setError(e instanceof Error ? e.message : "Failed to parse PDF");
           setStatus("error");
         }
       }
     },
-    [document, enabledTypes, regulation, customKeywords, scanDocument]
+    [document, enabledTypes, regulation, customKeywords, faceDetectionEnabled, scanDocument, scanFaces]
   );
 
   const removeFile = useCallback(
@@ -241,7 +281,10 @@ export function usePDFProcessor() {
   const scan = useCallback(async () => {
     if (!document) return;
     await scanDocument(document, enabledTypes, regulation, customKeywords);
-  }, [document, enabledTypes, regulation, customKeywords, scanDocument]);
+    if (faceDetectionEnabled) {
+      await scanFaces(document);
+    }
+  }, [document, enabledTypes, regulation, customKeywords, faceDetectionEnabled, scanDocument, scanFaces]);
 
   const applyRedaction = useCallback(
     async (isPro: boolean = false) => {
@@ -387,6 +430,7 @@ export function usePDFProcessor() {
     regulation,
     enabledTypes,
     customKeywords,
+    faceDetectionEnabled,
     files,
     error,
     // Actions
@@ -406,6 +450,8 @@ export function usePDFProcessor() {
     addCustomKeyword,
     removeCustomKeyword,
     setCurrentPage,
+    setFaceDetectionEnabled,
+    scanFaces,
     reset,
   };
 }

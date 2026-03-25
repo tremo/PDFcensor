@@ -166,12 +166,17 @@ export function ImageViewer({
               top: r.y * imgScale,
               width: r.width * imgScale,
               height: r.height * imgScale,
+              ...(r.blurMode ? { backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" } : {}),
             }}
             className={cn(
               "border-2 cursor-pointer transition-colors",
-              r.confirmed
-                ? "bg-black border-black"
-                : "bg-amber-400/30 border-amber-400",
+              r.blurMode
+                ? (r.confirmed
+                    ? "border-blue-500"
+                    : "border-blue-400/70 bg-blue-400/15")
+                : (r.confirmed
+                    ? "bg-black border-black"
+                    : "bg-amber-400/30 border-amber-400"),
               isSelected && "ring-2 ring-blue-500 ring-offset-1"
             )}
             onClick={(e) => {
