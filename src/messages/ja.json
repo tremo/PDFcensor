@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — PDF文書の個人情報自動墨消し",
-    "description": "PDFから個人データを完全に削除。HIPAA、GDPR、KVKK準拠。100%クライアントサイド処理 — ファイルがブラウザから外に出ることはありません。"
+    "title": "OfflineRedact — PDF・Word・画像の個人情報自動墨消し",
+    "description": "PDF、Word文書、画像から個人データを完全に削除。HIPAA、GDPR、KVKK準拠。100%クライアントサイド処理 — ファイルがブラウザから外に出ることはありません。"
   },
   "nav": {
     "home": "ホーム",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100%クライアントサイド — ファイルがブラウザから外に出ることはありません",
-    "title": "PDF文書から個人情報を完全に墨消し",
-    "subtitle": "PDF、Word、および画像ファイルから個人情報（SSN、氏名、メール、電話番号、IBAN）を自動検出し、完全に削除します。HIPAA、GDPR、KVKK準拠。",
+    "title": "PDF・文書・画像から個人情報を完全に墨消し",
+    "subtitle": "PDF、Word文書、画像からPIIと顔を自動墨消し。HIPAA/GDPR/KVKK準拠。",
     "cta": "無料で墨消しを開始",
     "ctaSecondary": "料金を見る",
     "trustedBy": "法律事務所、医療機関、政府機関に信頼されています"
   },
   "features": {
     "title": "なぜOfflineRedact？",
-    "subtitle": "ブラウザ上で完全に動作するエンタープライズグレードのPDF墨消し",
+    "subtitle": "ブラウザ上で完全に動作するエンタープライズグレードの文書墨消し",
     "trueRedaction": {
       "title": "本物の墨消し",
       "description": "単純な黒塗りとは異なり、PDFから実際のテキストデータを削除します。墨消しされた内容は選択、コピー、復元ができません。"
@@ -36,9 +36,17 @@
       "title": "複数規制への対応",
       "description": "HIPAA、GDPR、KVKK、CCPA、LGPDなどのプロファイルを内蔵。お客様の所在地に基づいて適切なプロファイルを自動選択します。"
     },
+    "multiFormat": {
+      "title": "PDF・Word・画像対応",
+      "description": "PDF、Word文書（.docx）、画像ファイルをすべて同じツールで墨消し。アプリを切り替える必要はありません。"
+    },
+    "ocrSupport": {
+      "title": "内蔵OCR",
+      "description": "スキャン文書や写真も問題ありません。内蔵OCRが画像からテキストを読み取り、スキャン内の機密データも検出します。"
+    },
     "batch": {
       "title": "一括処理",
-      "description": "複数のPDFを一度にアップロード。すべてを順次処理し、単一のZIPファイルとしてダウンロードできます。"
+      "description": "複数のファイルを一度にアップロード。すべてを順次処理し、単一のZIPファイルとしてダウンロードできます。"
     },
     "metadata": {
       "title": "メタデータの削除",
@@ -50,7 +58,7 @@
     "subtitle": "3つの簡単なステップで機密情報を完全に墨消し",
     "step1": {
       "title": "アップロード",
-      "description": "PDFファイルをドラッグ＆ドロップするか、クリックして選択します。複数ファイルに対応。"
+      "description": "PDF、Word文書、画像をドラッグ＆ドロップするか、クリックして選択します。複数ファイルに対応。"
     },
     "step2": {
       "title": "確認",
@@ -58,7 +66,7 @@
     },
     "step3": {
       "title": "ダウンロード",
-      "description": "完全に墨消しされたPDFをダウンロード。元のテキストは復元不可能な状態で削除されます。"
+      "description": "完全に墨消しされたファイルをダウンロード。元のテキストは復元不可能な状態で削除されます。"
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "ほとんどの墨消しツールは、ドキュメント全体をサーバーにアップロードする必要があります。OfflineRedactは異なる方法で動作します。",
     "otherTools": "他のツール",
     "yourDoc": "あなたのドキュメント",
-    "yourDocDesc": "機密データを含むPDF",
+    "yourDocDesc": "機密データを含むファイル",
     "theirServers": "彼らのサーバー",
     "theirServersDesc": "ファイル全体がアップロード・保存される",
     "whoKnows": "誰が知っている？",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "機密データを保護する準備はできましたか？",
-    "subtitle": "無料でPDFの墨消しを開始 — 登録不要。",
+    "subtitle": "無料で文書の墨消しを開始 — 登録不要。",
     "button": "今すぐ墨消しを開始"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
     "rights": "All rights reserved.",
-    "tagline": "PDFの完全な墨消し — 100%ブラウザ内で処理。"
+    "tagline": "文書の完全な墨消し — 100%ブラウザ内で処理。"
   },
   "redact": {
     "title": "ドキュメント墨消しツール",

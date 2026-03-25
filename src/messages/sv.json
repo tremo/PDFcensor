@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatisk PII-redigering för PDF, Word och bilder",
+    "description": "Ta permanent bort personuppgifter från PDF:er, Word-dokument och bilder. HIPAA, GDPR, KVKK-kompatibel. 100% klientsida — dina filer lämnar aldrig din webbläsare."
   },
   "nav": {
     "home": "Hem",
@@ -11,54 +11,62 @@
   },
   "hero": {
     "badge": "100% klientsida — Dina filer lämnar aldrig din webbläsare",
-    "title": "Ta bort personuppgifter permanent från PDF-dokument",
-    "subtitle": "Identifiera och ta permanent bort personuppgifter — personnummer, namn, e-post, telefon, IBAN — från PDF-, Word- och bildfiler. Uppfyller GDPR, HIPAA och KVKK.",
+    "title": "Redigera känsliga uppgifter från PDF:er, dokument och bilder",
+    "subtitle": "Redigera automatiskt PII och ansikten från PDF:er, Word-dokument och bilder. HIPAA/GDPR/KVKK-kompatibel.",
     "cta": "Börja — Gratis",
     "ctaSecondary": "Se priser",
     "trustedBy": "Betrodd av advokatbyråer, vårdgivare och myndigheter"
   },
   "features": {
-    "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "title": "Varför OfflineRedact?",
+    "subtitle": "Dokumentredigering i företagsklass som körs helt i din webbläsare",
     "trueRedaction": {
-      "title": "True Redaction",
-      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+      "title": "Äkta redigering",
+      "description": "Till skillnad från enkla svarta rutor tar vi bort den faktiska textdatan från PDF:en. Det redigerade innehållet kan inte markeras, kopieras eller återställas."
     },
     "clientSide": {
-      "title": "100% Client-Side",
-      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+      "title": "100% klientsida",
+      "description": "Dina filer lämnar aldrig din enhet. All bearbetning sker i din webbläsare — inga uppladdningar, inga servrar, inga dataläckor."
     },
     "autoDetect": {
-      "title": "Auto-Detect PII",
-      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+      "title": "Automatisk PII-identifiering",
+      "description": "Hittar automatiskt personnummer, namn, e-postadresser, telefonnummer, IBAN, kreditkort med mera genom mönstermatchning med inbyggda valideringsregler."
     },
     "regulations": {
-      "title": "Multi-Regulation Support",
-      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+      "title": "Stöd för flera regelverk",
+      "description": "Inbyggda profiler för HIPAA, GDPR, KVKK, CCPA, LGPD med flera. Väljer automatiskt rätt profil baserat på din plats."
+    },
+    "multiFormat": {
+      "title": "PDF, Word och bildstöd",
+      "description": "Redigera PDF:er, Word-dokument (.docx) och bildfiler — allt från samma verktyg. Inget behov av att växla mellan olika appar."
+    },
+    "ocrSupport": {
+      "title": "Inbyggd OCR",
+      "description": "Skannade dokument och foton? Inga problem. Inbyggd OCR läser text från bilder så att känsliga uppgifter i skanningar också fångas upp."
     },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Batchbearbetning",
+      "description": "Ladda upp flera filer samtidigt. Bearbeta alla sekventiellt och ladda ner som en enda ZIP-fil."
     },
     "metadata": {
-      "title": "Metadata Cleaning",
-      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+      "title": "Metadatarensning",
+      "description": "Tar bort dold metadata — författare, titel, skapandedatum, programinfo — som kan avslöja känslig information."
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "title": "Så fungerar det",
+    "subtitle": "Tre enkla steg för att permanent redigera känslig information",
     "step1": {
-      "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "title": "Ladda upp",
+      "description": "Dra och släpp dina PDF:er, Word-dokument eller bilder — eller klicka för att bläddra. Stöder flera filer."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Granska",
+      "description": "Automatiskt identifierad PII markeras. Lägg till, ta bort eller justera redigeringar innan du tillämpar."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Ladda ner",
+      "description": "Ladda ner din permanent redigerade fil. Den ursprungliga texten är oåterkalleligt borttagen."
     }
   },
   "comparison": {
@@ -67,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Fil med känsliga uppgifter",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -105,7 +113,7 @@
   },
   "cta": {
     "title": "Redo att skydda känslig data?",
-    "subtitle": "Börja redigera PDF-filer gratis — ingen registrering krävs.",
+    "subtitle": "Börja redigera dokument gratis — ingen registrering krävs.",
     "button": "Börja redigera nu"
   },
   "footer": {
@@ -114,7 +122,7 @@
     "privacy": "Integritetspolicy",
     "terms": "Tjänstevillkor",
     "rights": "Alla rättigheter förbehållna.",
-    "tagline": "Permanent PDF-redigering — 100% i din webbläsare."
+    "tagline": "Permanent dokumentredigering — 100% i din webbläsare."
   },
   "redact": {
     "title": "Document Redaction Tool",
