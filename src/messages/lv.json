@@ -75,7 +75,7 @@
     "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
     "otherTools": "Other Tools",
     "yourDoc": "Your document",
-    "yourDocDesc": "PDF with sensitive data",
+    "yourDocDesc": "Fails ar sensitīviem datiem",
     "theirServers": "Their servers",
     "theirServersDesc": "Full file uploaded & stored",
     "whoKnows": "Who knows?",
@@ -113,7 +113,7 @@
   },
   "cta": {
     "title": "Gatavi aizsargāt sensitīvus datus?",
-    "subtitle": "Sāciet rediģēt PDF bezmaksas — bez reģistrācijas.",
+    "subtitle": "Sāciet rediģēt dokumentus bezmaksas — bez reģistrācijas.",
     "button": "Sākt tagad"
   },
   "footer": {
@@ -122,7 +122,7 @@
     "privacy": "Privātuma politika",
     "terms": "Pakalpojumu noteikumi",
     "rights": "Visas tiesības aizsargātas.",
-    "tagline": "Pastāvīga PDF rediģēšana — 100% jūsu pārlūkā."
+    "tagline": "Pastāvīga dokumentu rediģēšana — 100% jūsu pārlūkā."
   },
   "redact": {
     "title": "Document Redaction Tool",

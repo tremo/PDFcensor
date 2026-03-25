@@ -113,7 +113,7 @@
   },
   "cta": {
     "title": "Réidh chun sonraí íogaire a chosaint?",
-    "subtitle": "Tosaigh ag eagarthóireacht PDF saor in aisce.",
+    "subtitle": "Tosaigh ag eagarthóireacht doiciméad saor in aisce — gan clárú.",
     "button": "Tosaigh anois"
   },
   "footer": {
@@ -122,7 +122,7 @@
     "privacy": "Polasaí príobháideachta",
     "terms": "Téarmaí seirbhíse",
     "rights": "Gach ceart ar cosaint.",
-    "tagline": "Eagarthóireacht bhuan PDF — 100% i do bhrabhsálaí."
+    "tagline": "Eagarthóireacht bhuan doiciméad — 100% i do bhrabhsálaí."
   },
   "redact": {
     "title": "Document Redaction Tool",
