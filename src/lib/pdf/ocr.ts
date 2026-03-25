@@ -14,6 +14,7 @@ interface OCRWord {
   y: number;
   width: number;
   height: number;
+  lineIndex: number;
 }
 
 /** Scale used for rendering pages for OCR (higher = better accuracy but slower) */
@@ -59,6 +60,7 @@ async function ocrPage(
   const { data } = await scheduler.addJob("recognize", canvas);
 
   const words: OCRWord[] = [];
+  let lineCounter = 0;
 
   // Traverse blocks -> paragraphs -> lines -> words to extract all word-level data
   if (data.blocks) {
@@ -74,23 +76,41 @@ async function ocrPage(
               y: bbox.y0 / OCR_SCALE,
               width: (bbox.x1 - bbox.x0) / OCR_SCALE,
               height: (bbox.y1 - bbox.y0) / OCR_SCALE,
+              lineIndex: lineCounter,
             });
           }
+          lineCounter++;
         }
       }
     }
   }
 
+  // Strip common OCR noise characters from word edges to check if it's a digit group
+  const stripOCRNoise = (text: string) => text.replace(/^[.,;:|]+|[.,;:|]+$/g, "");
+
   // Merge adjacent digit-only words so numeric PII patterns (TC Kimlik, IBAN, etc.) match
+  // Also handles OCR noise like "1364." + "3908756" by stripping punctuation before checking
   const mergedWords: OCRWord[] = [];
   for (const word of words) {
     const last = mergedWords[mergedWords.length - 1];
-    if (last && /^\d+$/.test(last.text) && /^\d+$/.test(word.text)) {
+    const lastClean = last ? stripOCRNoise(last.text) : "";
+    const wordClean = stripOCRNoise(word.text);
+    // Check if adjacent words should be merged:
+    // 1. Both are digit groups (TC Kimlik, IBAN, etc.)
+    // 2. Single letter + digits (passport "A" + "123456", seri "U" + "09")
+    const bothDigits =
+      lastClean.length > 0 && /^\d+$/.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    const letterThenDigits =
+      /^[A-Z]$/i.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    if (last && last.lineIndex === word.lineIndex && (bothDigits || letterThenDigits)) {
       const minX = Math.min(last.x, word.x);
       const minY = Math.min(last.y, word.y);
       const maxX = Math.max(last.x + last.width, word.x + word.width);
       const maxY = Math.max(last.y + last.height, word.y + word.height);
-      last.text += word.text;
+      // Use cleaned digits for the merged text
+      last.text = lastClean + wordClean;
       last.x = minX;
       last.y = minY;
       last.width = maxX - minX;
