@@ -109,7 +109,8 @@
     "healthcare": "Healthcare",
     "realEstate": "Real Estate",
     "finance": "Finance",
-    "government": "Government"
+    "government": "Government",
+    "logoSection": "Trusted by leading organizations worldwide"
   },
   "cta": {
     "title": "Redo att skydda känslig data?",
@@ -242,6 +243,10 @@
       "msg_face1": "Analyzing images for faces...",
       "msg_face2": "Identifying face regions to blur...",
       "msg_face3": "Almost done — securing your document."
+    },
+    "meta": {
+      "title": "Redact Documents — OfflineRedact Free Online Tool",
+      "description": "Permanently redact PII from PDFs, Word docs, and images. Auto-detect SSN, names, faces, IBAN and more. 100% client-side."
     }
   },
   "landing": {
@@ -318,6 +323,50 @@
       "monthly": "Månadsvis",
       "yearly": "Årsvis",
       "save": "Spara 29%"
+    },
+    "meta": {
+      "title": "Pricing — OfflineRedact PDF Redaction Tool",
+      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+    },
+    "guarantee": "30-Day Money-Back Guarantee",
+    "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
+    "comparison": {
+      "title": "How We Compare",
+      "subtitle": "See why professionals choose OfflineRedact",
+      "feature": "Feature",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Price",
+      "offlineRedactPrice": "$6.99/mo",
+      "adobePrice": "$22.99/mo",
+      "redactablePrice": "$39/mo",
+      "ilovepdfPrice": "$7/mo",
+      "clientSide": "100% Client-Side Processing",
+      "faceDetection": "Face Detection & Blurring",
+      "multiFormat": "PDF + Word + Images",
+      "offlineCapable": "Works Offline",
+      "autoDetect": "Auto PII Detection",
+      "metadataCleaning": "Metadata Cleaning",
+      "batchProcessing": "Batch Processing",
+      "yes": "Yes",
+      "no": "No",
+      "limited": "Limited",
+      "onlyUs": "Only in OfflineRedact"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is my data safe?",
+      "a1": "Yes. Your files never leave your browser. All processing happens 100% client-side — no uploads, no servers, no data leaks.",
+      "q2": "Can I get a refund?",
+      "a2": "Absolutely. We offer a 30-day money-back guarantee, no questions asked. Contact support@offlineredact.com.",
+      "q3": "What file types are supported?",
+      "a3": "PDF documents, Word files (.docx), and images (JPG, PNG, WebP, TIFF). All from the same tool — no need to switch apps.",
+      "q4": "Does it work without internet?",
+      "a4": "Yes. Once the page is loaded, the tool works completely offline. Your documents never need an internet connection to be processed.",
+      "q5": "Can it detect faces in photos?",
+      "a5": "Yes. OfflineRedact includes built-in face detection that automatically finds and blurs faces in documents and images — a feature unique to OfflineRedact."
     }
   },
   "auth": {
@@ -391,6 +440,10 @@
     "contact": {
       "heading": "7. Kontakt",
       "text": "För integritetsrelaterade frågor, kontakta oss på privacy@offlineredact.com."
+    },
+    "meta": {
+      "title": "Privacy Policy — OfflineRedact",
+      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser."
     }
   },
   "terms": {
@@ -423,6 +476,10 @@
     "contact": {
       "heading": "7. Kontakt",
       "text": "För frågor om dessa villkor, kontakta oss på legal@offlineredact.com."
+    },
+    "meta": {
+      "title": "Terms of Service — OfflineRedact",
+      "description": "Terms and conditions for using the OfflineRedact document redaction tool."
     }
   },
   "blog": {
@@ -650,6 +707,10 @@
           "OfflineRedact supports RODO compliance by detecting Polish personal data patterns including PESEL and NIP numbers. All processing happens in your browser — no personal data is transmitted to servers, fully supporting UODO's requirements for data security and minimization."
         ]
       }
+    },
+    "meta": {
+      "title": "Blog — OfflineRedact Document Redaction Guides",
+      "description": "Guides and best practices for PDF redaction, GDPR compliance, HIPAA, CCPA, and data protection worldwide."
     }
   },
   "notFound": {

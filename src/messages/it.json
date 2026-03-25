@@ -18,15 +18,15 @@
     "trustedBy": "Utilizzato da studi legali, strutture sanitarie e agenzie governative"
   },
   "features": {
-    "title": "Perch\u00e9 OfflineRedact?",
+    "title": "Perché OfflineRedact?",
     "subtitle": "Oscuramento documenti di livello enterprise che funziona interamente nel tuo browser",
     "trueRedaction": {
       "title": "Oscuramento reale",
-      "description": "A differenza delle semplici caselle nere, rimuoviamo i dati di testo effettivi dal PDF. Il contenuto oscurato non pu\u00f2 essere selezionato, copiato o recuperato."
+      "description": "A differenza delle semplici caselle nere, rimuoviamo i dati di testo effettivi dal PDF. Il contenuto oscurato non può essere selezionato, copiato o recuperato."
     },
     "clientSide": {
       "title": "100% Lato client",
-      "description": "I tuoi file non lasciano mai il tuo dispositivo. Tutta l'elaborazione avviene nel tuo browser \u2014 nessun upload, nessun server, nessuna fuga di dati."
+      "description": "I tuoi file non lasciano mai il tuo dispositivo. Tutta l'elaborazione avviene nel tuo browser — nessun upload, nessun server, nessuna fuga di dati."
     },
     "autoDetect": {
       "title": "Rilevamento automatico PII",
@@ -46,11 +46,11 @@
     },
     "batch": {
       "title": "Elaborazione in batch",
-      "description": "Carica pi\u00f9 file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
+      "description": "Carica più file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
     },
     "metadata": {
       "title": "Pulizia metadati",
-      "description": "Rimuove i metadati nascosti \u2014 autore, titolo, data di creazione, informazioni sul software \u2014 che potrebbero rivelare informazioni sensibili."
+      "description": "Rimuove i metadati nascosti — autore, titolo, data di creazione, informazioni sul software — che potrebbero rivelare informazioni sensibili."
     }
   },
   "howItWorks": {
@@ -89,9 +89,9 @@
   },
   "security": {
     "title": "Oscuramento permanente reale",
-    "subtitle": "A differenza degli editor PDF di base che sovrappongono semplicemente caselle nere, OfflineRedact crea un nuovo documento senza i dati sensibili. Non \u00e8 nascosto \u2014 semplicemente non esiste nell'output.",
+    "subtitle": "A differenza degli editor PDF di base che sovrappongono semplicemente caselle nere, OfflineRedact crea un nuovo documento senza i dati sensibili. Non è nascosto — semplicemente non esiste nell'output.",
     "noCopy": "Impossibile copiare/incollare",
-    "noCopyDesc": "Il testo non \u00e8 nell'output",
+    "noCopyDesc": "Il testo non è nell'output",
     "noTricks": "Nessun trucco Photoshop",
     "noTricksDesc": "Non nascosto, rimosso",
     "zeroRetention": "Zero conservazione",
@@ -109,7 +109,8 @@
     "healthcare": "Healthcare",
     "realEstate": "Real Estate",
     "finance": "Finance",
-    "government": "Government"
+    "government": "Government",
+    "logoSection": "Trusted by leading organizations worldwide"
   },
   "cta": {
     "title": "Pronto a proteggere i dati sensibili?",
@@ -242,6 +243,10 @@
       "msg_face1": "Analisi delle immagini per rilevare volti...",
       "msg_face2": "Identificazione delle aree dei volti da sfocare...",
       "msg_face3": "Quasi finito — messa in sicurezza del documento."
+    },
+    "meta": {
+      "title": "Redact Documents — OfflineRedact Free Online Tool",
+      "description": "Permanently redact PII from PDFs, Word docs, and images. Auto-detect SSN, names, faces, IBAN and more. 100% client-side."
     }
   },
   "landing": {
@@ -318,6 +323,50 @@
       "monthly": "Mensile",
       "yearly": "Annuale",
       "save": "Risparmia 29%"
+    },
+    "meta": {
+      "title": "Pricing — OfflineRedact PDF Redaction Tool",
+      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+    },
+    "guarantee": "30-Day Money-Back Guarantee",
+    "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
+    "comparison": {
+      "title": "How We Compare",
+      "subtitle": "See why professionals choose OfflineRedact",
+      "feature": "Feature",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Price",
+      "offlineRedactPrice": "$6.99/mo",
+      "adobePrice": "$22.99/mo",
+      "redactablePrice": "$39/mo",
+      "ilovepdfPrice": "$7/mo",
+      "clientSide": "100% Client-Side Processing",
+      "faceDetection": "Face Detection & Blurring",
+      "multiFormat": "PDF + Word + Images",
+      "offlineCapable": "Works Offline",
+      "autoDetect": "Auto PII Detection",
+      "metadataCleaning": "Metadata Cleaning",
+      "batchProcessing": "Batch Processing",
+      "yes": "Yes",
+      "no": "No",
+      "limited": "Limited",
+      "onlyUs": "Only in OfflineRedact"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is my data safe?",
+      "a1": "Yes. Your files never leave your browser. All processing happens 100% client-side — no uploads, no servers, no data leaks.",
+      "q2": "Can I get a refund?",
+      "a2": "Absolutely. We offer a 30-day money-back guarantee, no questions asked. Contact support@offlineredact.com.",
+      "q3": "What file types are supported?",
+      "a3": "PDF documents, Word files (.docx), and images (JPG, PNG, WebP, TIFF). All from the same tool — no need to switch apps.",
+      "q4": "Does it work without internet?",
+      "a4": "Yes. Once the page is loaded, the tool works completely offline. Your documents never need an internet connection to be processed.",
+      "q5": "Can it detect faces in photos?",
+      "a5": "Yes. OfflineRedact includes built-in face detection that automatically finds and blurs faces in documents and images — a feature unique to OfflineRedact."
     }
   },
   "auth": {
@@ -391,6 +440,10 @@
     "contact": {
       "heading": "7. Contatti",
       "text": "Per richieste relative alla privacy, contattaci all'indirizzo privacy@offlineredact.com."
+    },
+    "meta": {
+      "title": "Privacy Policy — OfflineRedact",
+      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser."
     }
   },
   "terms": {
@@ -423,6 +476,10 @@
     "contact": {
       "heading": "7. Contatti",
       "text": "Per domande su questi termini, contattaci all'indirizzo legal@offlineredact.com."
+    },
+    "meta": {
+      "title": "Terms of Service — OfflineRedact",
+      "description": "Terms and conditions for using the OfflineRedact document redaction tool."
     }
   },
   "blog": {
@@ -650,6 +707,10 @@
           "OfflineRedact supports RODO compliance by detecting Polish personal data patterns including PESEL and NIP numbers. All processing happens in your browser — no personal data is transmitted to servers, fully supporting UODO's requirements for data security and minimization."
         ]
       }
+    },
+    "meta": {
+      "title": "Blog — OfflineRedact Document Redaction Guides",
+      "description": "Guides and best practices for PDF redaction, GDPR compliance, HIPAA, CCPA, and data protection worldwide."
     }
   },
   "notFound": {

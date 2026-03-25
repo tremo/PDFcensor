@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { locales } from "@/lib/i18n/config";
+import { StructuredData } from "@/components/seo/StructuredData";
 
 const validSlugs = [
   "kvkk-pdf-redaction-guide",
@@ -52,6 +55,39 @@ export function generateStaticParams() {
   return validSlugs.map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
+
+  if (!validSlugs.includes(slug)) {
+    return {};
+  }
+
+  const t = await getTranslations({ locale, namespace: "blog" });
+  const title = t(`posts.${slug}.title`);
+  const description = t(`posts.${slug}.excerpt`);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      locale,
+      publishedTime: blogDates[slug],
+    },
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}/blog/${slug}`])
+      ),
+    },
+  };
+}
+
 export default async function BlogPost({
   params,
 }: {
@@ -67,8 +103,20 @@ export default async function BlogPost({
   const locale = await getLocale();
   const content: string[] = t.raw(`posts.${slug}.content`);
 
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: t(`posts.${slug}.title`),
+    description: t(`posts.${slug}.excerpt`),
+    datePublished: blogDates[slug],
+    author: { "@type": "Organization", name: "OfflineRedact", url: "https://offlineredact.com" },
+    publisher: { "@type": "Organization", name: "OfflineRedact", url: "https://offlineredact.com" },
+    mainEntityOfPage: `https://offlineredact.com/${locale}/blog/${slug}`,
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+      <StructuredData data={blogPostingSchema} />
       <Button asChild variant="ghost" className="mb-8">
         <Link href="/blog">
           <ArrowLeft className="h-4 w-4" />

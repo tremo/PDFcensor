@@ -104,6 +104,7 @@
     "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
   },
   "trust": {
+    "logoSection": "Trusted by leading organizations worldwide",
     "title": "Trusted by professionals who handle sensitive documents",
     "legal": "Legal",
     "healthcare": "Healthcare",
@@ -125,6 +126,10 @@
     "tagline": "Permanent document redaction — 100% in your browser."
   },
   "redact": {
+    "meta": {
+      "title": "Redact Documents — OfflineRedact Free Online Tool",
+      "description": "Permanently redact PII from PDFs, Word docs, and images. Auto-detect SSN, names, faces, IBAN and more. 100% client-side, works offline."
+    },
     "title": "Document Redaction Tool",
     "titleDocx": "Word Document Redaction Tool",
     "titleBatch": "Batch Document Redaction",
@@ -281,6 +286,10 @@
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Pricing — OfflineRedact PDF Redaction Tool",
+      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+    },
     "title": "Simple, Transparent Pricing",
     "subtitle": "Start free, upgrade when you need it",
     "free": {
@@ -318,6 +327,46 @@
       "monthly": "Monthly",
       "yearly": "Yearly",
       "save": "Save 29%"
+    },
+    "guarantee": "30-Day Money-Back Guarantee",
+    "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
+    "comparison": {
+      "title": "How We Compare",
+      "subtitle": "See why professionals choose OfflineRedact",
+      "feature": "Feature",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Price",
+      "offlineRedactPrice": "$6.99/mo",
+      "adobePrice": "$22.99/mo",
+      "redactablePrice": "$39/mo",
+      "ilovepdfPrice": "$7/mo",
+      "clientSide": "100% Client-Side Processing",
+      "faceDetection": "Face Detection & Blurring",
+      "multiFormat": "PDF + Word + Images",
+      "offlineCapable": "Works Offline",
+      "autoDetect": "Auto PII Detection",
+      "metadataCleaning": "Metadata Cleaning",
+      "batchProcessing": "Batch Processing",
+      "yes": "Yes",
+      "no": "No",
+      "limited": "Limited",
+      "onlyUs": "Only in OfflineRedact"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is my data safe?",
+      "a1": "Yes. Your files never leave your browser. All processing happens 100% client-side — no uploads, no servers, no data leaks.",
+      "q2": "Can I get a refund?",
+      "a2": "Absolutely. We offer a 30-day money-back guarantee, no questions asked. Contact support@offlineredact.com.",
+      "q3": "What file types are supported?",
+      "a3": "PDF documents, Word files (.docx), and images (JPG, PNG, WebP, TIFF). All from the same tool — no need to switch apps.",
+      "q4": "Does it work without internet?",
+      "a4": "Yes. Once the page is loaded, the tool works completely offline. Your documents never need an internet connection to be processed.",
+      "q5": "Can it detect faces in photos?",
+      "a5": "Yes. OfflineRedact includes built-in face detection that automatically finds and blurs faces in documents and images — a feature unique to OfflineRedact."
     }
   },
   "auth": {
@@ -354,6 +403,10 @@
     "loginToActivate": "Sign in to link Pro features to your account"
   },
   "privacy": {
+    "meta": {
+      "title": "Privacy Policy — OfflineRedact",
+      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser. Zero data collection."
+    },
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: March 2026",
     "intro": {
@@ -394,6 +447,10 @@
     }
   },
   "terms": {
+    "meta": {
+      "title": "Terms of Service — OfflineRedact",
+      "description": "Terms and conditions for using the OfflineRedact document redaction tool. 30-day money-back guarantee included."
+    },
     "title": "Terms of Service",
     "lastUpdated": "Last updated: March 2026",
     "acceptance": {
@@ -426,6 +483,10 @@
     }
   },
   "blog": {
+    "meta": {
+      "title": "Blog — OfflineRedact Document Redaction Guides",
+      "description": "Guides and best practices for PDF redaction, GDPR compliance, HIPAA, CCPA, and data protection worldwide."
+    },
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "cta": {
