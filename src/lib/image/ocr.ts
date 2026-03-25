@@ -95,6 +95,9 @@ export async function detectOCRPIIFromImage(
 
   await scheduler.terminate();
 
+  // DEBUG: Log raw OCR words to help diagnose detection issues
+  console.log("[OCR DEBUG] Raw words from Tesseract:", words.map(w => ({ text: w.text, line: w.lineIndex })));
+
   // Merge adjacent OCR words on the same line when they form numeric sequences
   // Tesseract splits numbers like "13643908756" into "1364" + "390" + "8756"
   const stripOCRNoise = (text: string) => text.replace(/^[.,;:|]+|[.,;:|]+$/g, "");
@@ -130,6 +133,10 @@ export async function detectOCRPIIFromImage(
     fullText += w.text + " ";
   }
 
+  // DEBUG: Log merged result and full text
+  console.log("[OCR DEBUG] Merged words:", mergedWords.map(w => w.text));
+  console.log("[OCR DEBUG] Full text for PII detection:", fullText.trim());
+
   // Clean up canvas
   canvas.width = 0;
   canvas.height = 0;
@@ -142,7 +149,9 @@ export async function detectOCRPIIFromImage(
   }
 
   // Detect PII in OCR text (pageIndex 0 for single images)
+  console.log("[OCR DEBUG] PII types enabled:", piiTypes);
   const result = detectPII(fullText.trim(), 0, piiTypes);
+  console.log("[OCR DEBUG] PII matches found:", result.matches.map(m => ({ type: m.type, value: m.value })));
 
   for (const match of result.matches) {
     let charPos = 0;
