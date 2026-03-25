@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Seju noteikšana...",
       "faceDetection": "Seju noteikšana",
-      "faceDetectionWarning": "Face detection may take longer to process."
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Atkārtoti skenēt sejas"
     },
     "docx": {
       "pending": "Pending",

@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "正在检测人脸...",
       "faceDetection": "人脸检测",
-      "faceDetectionWarning": "人脸检测可能需要更长时间。"
+      "faceDetectionWarning": "人脸检测可能需要更长时间。",
+      "rescanFaces": "重新扫描面部"
     },
     "docx": {
       "pending": "待处理",

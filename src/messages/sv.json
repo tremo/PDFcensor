@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Identifierar ansikten...",
       "faceDetection": "Ansiktsigenkänning",
-      "faceDetectionWarning": "Face detection may take longer to process."
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Skanna ansikten igen"
     },
     "docx": {
       "pending": "Pending",

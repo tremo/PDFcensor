@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Detectando rostos...",
       "faceDetection": "Detecção de rostos",
-      "faceDetectionWarning": "A detecção de rostos pode demorar mais."
+      "faceDetectionWarning": "A detecção de rostos pode demorar mais.",
+      "rescanFaces": "Re-escanear rostos"
     },
     "docx": {
       "pending": "Pendente",

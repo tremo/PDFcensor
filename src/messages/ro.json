@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Detectarea fețelor...",
       "faceDetection": "Detectarea fețelor",
-      "faceDetectionWarning": "Face detection may take longer to process."
+      "faceDetectionWarning": "Face detection may take longer to process.",
+      "rescanFaces": "Rescanare fețe"
     },
     "docx": {
       "pending": "Pending",

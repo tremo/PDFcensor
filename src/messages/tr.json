@@ -173,7 +173,8 @@
       "selectModeHint": "Sansürleri seçmek, taşımak ya da boyutlandırmak için tıklayın",
       "faceScanning": "Yüzler tespit ediliyor...",
       "faceDetection": "Yüz Tespiti",
-      "faceDetectionWarning": "Yüz tespiti işlemi daha uzun sürebilir."
+      "faceDetectionWarning": "Yüz tespiti işlemi daha uzun sürebilir.",
+      "rescanFaces": "Yüzleri yeniden tara"
     },
     "docx": {
       "pending": "Bekliyor",

@@ -173,7 +173,8 @@
       "selectModeHint": "点击编辑项以选择、移动或调整大小",
       "faceScanning": "Rilevamento volti...",
       "faceDetection": "Rilevamento volti",
-      "faceDetectionWarning": "Il rilevamento volti potrebbe richiedere più tempo."
+      "faceDetectionWarning": "Il rilevamento volti potrebbe richiedere più tempo.",
+      "rescanFaces": "Ri-scansiona volti"
     },
     "docx": {
       "pending": "Pending",
