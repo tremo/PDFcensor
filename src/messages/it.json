@@ -18,23 +18,23 @@
     "trustedBy": "Utilizzato da studi legali, strutture sanitarie e agenzie governative"
   },
   "features": {
-    "title": "Why OfflineRedact?",
+    "title": "Perch\u00e9 OfflineRedact?",
     "subtitle": "Oscuramento documenti di livello enterprise che funziona interamente nel tuo browser",
     "trueRedaction": {
-      "title": "True Redaction",
-      "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
+      "title": "Oscuramento reale",
+      "description": "A differenza delle semplici caselle nere, rimuoviamo i dati di testo effettivi dal PDF. Il contenuto oscurato non pu\u00f2 essere selezionato, copiato o recuperato."
     },
     "clientSide": {
-      "title": "100% Client-Side",
-      "description": "Your files never leave your device. All processing happens in your browser — no uploads, no servers, no data leaks."
+      "title": "100% Lato client",
+      "description": "I tuoi file non lasciano mai il tuo dispositivo. Tutta l'elaborazione avviene nel tuo browser \u2014 nessun upload, nessun server, nessuna fuga di dati."
     },
     "autoDetect": {
-      "title": "Auto-Detect PII",
-      "description": "Automatically finds SSN, names, emails, phone numbers, IBAN, credit cards, and more using pattern matching with built-in validation rules."
+      "title": "Rilevamento automatico PII",
+      "description": "Trova automaticamente codici fiscali, nomi, e-mail, numeri di telefono, IBAN, carte di credito e altro tramite corrispondenza di pattern con regole di validazione integrate."
     },
     "regulations": {
-      "title": "Multi-Regulation Support",
-      "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
+      "title": "Supporto multi-normativa",
+      "description": "Profili integrati per HIPAA, GDPR, KVKK, CCPA, LGPD e altro. Seleziona automaticamente il profilo giusto in base alla tua posizione."
     },
     "multiFormat": {
       "title": "PDF, Word e immagini",
@@ -45,59 +45,59 @@
       "description": "Documenti scansionati e foto? Nessun problema. L'OCR integrato legge il testo dalle immagini per individuare anche i dati sensibili nelle scansioni."
     },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Carica più file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
+      "title": "Elaborazione in batch",
+      "description": "Carica pi\u00f9 file contemporaneamente. Elaborali tutti in sequenza e scaricali come un unico file ZIP."
     },
     "metadata": {
-      "title": "Metadata Cleaning",
-      "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+      "title": "Pulizia metadati",
+      "description": "Rimuove i metadati nascosti \u2014 autore, titolo, data di creazione, informazioni sul software \u2014 che potrebbero rivelare informazioni sensibili."
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Three simple steps to permanently redact sensitive information",
+    "title": "Come funziona",
+    "subtitle": "Tre semplici passaggi per oscurare permanentemente le informazioni sensibili",
     "step1": {
-      "title": "Upload",
+      "title": "Carica",
       "description": "Trascina e rilascia i tuoi PDF, documenti Word o immagini — o clicca per sfogliare. Supporta più file."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Controlla",
+      "description": "I dati personali rilevati automaticamente vengono evidenziati. Aggiungi, rimuovi o modifica gli oscuramenti prima di applicarli."
     },
     "step3": {
-      "title": "Download",
+      "title": "Scarica",
       "description": "Scarica il tuo file oscurato in modo permanente. Il testo originale viene rimosso in modo irrecuperabile."
     }
   },
   "comparison": {
-    "badge": "The Difference",
-    "title": "Other tools upload your files. We don't.",
-    "subtitle": "Most redaction tools require uploading your entire document to their servers. OfflineRedact works differently.",
-    "otherTools": "Other Tools",
-    "yourDoc": "Your document",
+    "badge": "La differenza",
+    "title": "Altri strumenti caricano i tuoi file. Noi no.",
+    "subtitle": "La maggior parte degli strumenti di oscuramento richiede il caricamento dell'intero documento sui propri server. OfflineRedact funziona diversamente.",
+    "otherTools": "Altri strumenti",
+    "yourDoc": "Il tuo documento",
     "yourDocDesc": "File con dati sensibili",
-    "theirServers": "Their servers",
-    "theirServersDesc": "Full file uploaded & stored",
-    "whoKnows": "Who knows?",
-    "whoKnowsDesc": "Retained for hours or indefinitely",
-    "yourBrowser": "Your browser",
-    "yourBrowserDesc": "Processed securely, never stored",
-    "redactedFile": "Redacted file",
-    "redactedFileDesc": "Created locally, download instantly",
-    "zeroRetention": "Zero storage. Zero retention.",
-    "footnote": "All detection runs locally in your browser. Your files never leave your device."
+    "theirServers": "I loro server",
+    "theirServersDesc": "File completo caricato e archiviato",
+    "whoKnows": "Chi lo sa?",
+    "whoKnowsDesc": "Conservato per ore o indefinitamente",
+    "yourBrowser": "Il tuo browser",
+    "yourBrowserDesc": "Elaborato in sicurezza, mai archiviato",
+    "redactedFile": "File oscurato",
+    "redactedFileDesc": "Creato localmente, download immediato",
+    "zeroRetention": "Zero archiviazione. Zero conservazione.",
+    "footnote": "Tutto il rilevamento avviene localmente nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo."
   },
   "security": {
-    "title": "True permanent redaction",
-    "subtitle": "Unlike basic PDF editors that just overlay black boxes, OfflineRedact creates a new document without the sensitive data. It's not hidden — it simply doesn't exist in the output.",
-    "noCopy": "Can't copy/paste",
-    "noCopyDesc": "Text is not in output",
-    "noTricks": "No Photoshop tricks",
-    "noTricksDesc": "Not hidden, gone",
-    "zeroRetention": "Zero retention",
-    "zeroRetentionDesc": "Documents processed and purged",
-    "encrypted": "AES-256 encrypted",
-    "encryptedDesc": "Bank-grade encryption"
+    "title": "Oscuramento permanente reale",
+    "subtitle": "A differenza degli editor PDF di base che sovrappongono semplicemente caselle nere, OfflineRedact crea un nuovo documento senza i dati sensibili. Non \u00e8 nascosto \u2014 semplicemente non esiste nell'output.",
+    "noCopy": "Impossibile copiare/incollare",
+    "noCopyDesc": "Il testo non \u00e8 nell'output",
+    "noTricks": "Nessun trucco Photoshop",
+    "noTricksDesc": "Non nascosto, rimosso",
+    "zeroRetention": "Zero conservazione",
+    "zeroRetentionDesc": "Documenti elaborati e cancellati",
+    "encrypted": "Crittografia AES-256",
+    "encryptedDesc": "Crittografia di livello bancario"
   },
   "compliance": {
     "title": "Built for Global Compliance",
