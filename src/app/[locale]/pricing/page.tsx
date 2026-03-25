@@ -112,8 +112,8 @@ export default function PricingPage() {
         </Card>
 
         {/* Pro */}
-        <Card className="relative border-accent">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+        <Card className="relative border-accent mt-4">
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
             <Badge variant="accent">Popular</Badge>
           </div>
           <CardHeader>
