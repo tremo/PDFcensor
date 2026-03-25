@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% kliento pusėje — Jūsų failai niekada nepalieka naršyklės",
     "title": "Visam laikui pašalinkite asmens duomenis iš PDF dokumentų",
-    "subtitle": "Automatiškai aptikite ir visam laikui pašalinkite asmens duomenis — asmens kodus, vardus, el. paštus, telefonų numerius, IBAN — iš jūsų PDF failų.",
+    "subtitle": "Automatiškai aptinkite ir visam laikui pašalinkite asmens duomenis — SSN, vardus, el. paštus, telefono numerius, IBAN — iš PDF, Word ir vaizdo failų. Atitinka GDPR, HIPAA ir KVKK.",
     "cta": "Pradėkite — Nemokamai",
     "ctaSecondary": "Žiūrėti kainas",
     "trustedBy": "Pasitiki teisininkų kontoros, sveikatos priežiūros įstaigos ir vyriausybinės agentūros"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Palaiko PDF, Word (.docx) ir vaizdo failus (JPG, PNG, WebP, TIFF). Jūsų failai niekada nepalieka naršyklės.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

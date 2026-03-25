@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% na straně klienta — Vaše soubory nikdy neopustí váš prohlížeč",
     "title": "Trvale redigujte osobní údaje v PDF dokumentech",
-    "subtitle": "Automaticky detekujte a trvale odstraňte osobní údaje — rodná čísla, jména, e-maily, telefonní čísla, IBAN — z vašich PDF souborů. V souladu s HIPAA, GDPR a KVKK.",
+    "subtitle": "Automaticky odhalte a trvale odstraňte osobní údaje — rodná čísla, jména, e-maily, telefonní čísla, IBAN — ze souborů PDF, Word a obrázků. Soulad s GDPR, HIPAA a KVKK.",
     "cta": "Začít redigovat — Zdarma",
     "ctaSecondary": "Zobrazit ceník",
     "trustedBy": "Důvěřují nám právní firmy, poskytovatelé zdravotní péče a vládní agentury"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Přetáhněte soubory sem",
       "subtitle": "nebo klikněte pro procházení souborů",
-      "hint": "Podporuje PDF a Word (.docx) soubory. Vaše soubory nikdy neopustí váš prohlížeč.",
+      "hint": "Podporuje soubory PDF, Word (.docx) a obrázky (JPG, PNG, WebP, TIFF). Vaše soubory nikdy neopustí váš prohlížeč.",
       "processing": "Zpracování..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Přetáhněte dokument sem",
       "subtitle": "nebo klikněte pro procházení",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Automatická detekce",

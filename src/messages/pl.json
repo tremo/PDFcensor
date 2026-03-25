@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% po stronie klienta — Twoje pliki nigdy nie opuszczają przeglądarki",
     "title": "Trwale usuń dane osobowe z dokumentów PDF",
-    "subtitle": "Automatycznie wykrywaj i trwale usuwaj dane osobowe — PESEL, imiona, e-maile, numery telefonów, IBAN — z plików PDF. Zgodność z HIPAA, GDPR i KVKK.",
+    "subtitle": "Automatycznie wykryj i trwale usuń dane osobowe — SSN, nazwiska, e-maile, numery telefonów, IBAN — z plików PDF, Word i obrazów. Zgodny z RODO, HIPAA i KVKK.",
     "cta": "Zacznij — Za darmo",
     "ctaSecondary": "Zobacz cennik",
     "trustedBy": "Zaufanie kancelarii prawnych, placówek medycznych i agencji rządowych"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Obsługuje pliki PDF, Word (.docx) i obrazy (JPG, PNG, WebP, TIFF). Twoje pliki nigdy nie opuszczają przeglądarki.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

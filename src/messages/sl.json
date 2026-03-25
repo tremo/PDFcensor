@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% na strani odjemalca — Vaše datoteke nikoli ne zapustijo brskalnika",
     "title": "Trajno odstranite osebne podatke iz PDF dokumentov",
-    "subtitle": "Samodejno zaznajte in trajno odstranite osebne podatke — EMŠO, imena, e-pošte, telefonske številke, IBAN — iz vaših PDF datotek. Skladno s HIPAA, GDPR in KVKK.",
+    "subtitle": "Samodejno zaznajte in trajno odstranite osebne podatke — SSN, imena, e-pošto, telefonske številke, IBAN — iz datotek PDF, Word in slik. Skladno z GDPR, HIPAA in KVKK.",
     "cta": "Začnite — Brezplačno",
     "ctaSecondary": "Oglejte si cene",
     "trustedBy": "Zaupajo nam odvetniške pisarne, zdravstveni ponudniki in vladne agencije"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Podpira datoteke PDF, Word (.docx) in slike (JPG, PNG, WebP, TIFF). Vaše datoteke nikoli ne zapustijo brskalnika.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

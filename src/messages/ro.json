@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% pe partea clientului — Fișierele dvs. nu părăsesc niciodată browserul",
     "title": "Eliminați permanent datele personale din documentele PDF",
-    "subtitle": "Detectați și eliminați automat datele personale — CNP, nume, emailuri, numere de telefon, IBAN — din fișierele PDF. Conform HIPAA, GDPR și KVKK.",
+    "subtitle": "Detectați și eliminați permanent datele personale — CNP, nume, e-mailuri, numere de telefon, IBAN — din fișiere PDF, Word și imagini. Conform GDPR, HIPAA și KVKK.",
     "cta": "Începeți — Gratuit",
     "ctaSecondary": "Vezi prețuri",
     "trustedBy": "De încredere pentru firme de avocatură, furnizori de sănătate și agenții guvernamentale"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Acceptă fișiere PDF, Word (.docx) și imagini (JPG, PNG, WebP, TIFF). Fișierele dvs. nu părăsesc niciodată browserul.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

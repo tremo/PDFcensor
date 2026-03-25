@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100%クライアントサイド — ファイルがブラウザから外に出ることはありません",
     "title": "PDF文書から個人情報を完全に墨消し",
-    "subtitle": "マイナンバー、氏名、メールアドレス、電話番号、IBANなどの個人データを自動検出し、PDFファイルから完全に削除します。HIPAA、GDPR、KVKK準拠。",
+    "subtitle": "PDF、Word、および画像ファイルから個人情報（SSN、氏名、メール、電話番号、IBAN）を自動検出し、完全に削除します。HIPAA、GDPR、KVKK準拠。",
     "cta": "無料で墨消しを開始",
     "ctaSecondary": "料金を見る",
     "trustedBy": "法律事務所、医療機関、政府機関に信頼されています"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "ファイルをここにドロップ",
       "subtitle": "またはクリックしてファイルを選択",
-      "hint": "PDFおよびWord（.docx）ファイルに対応。ファイルはブラウザから送信されません。",
+      "hint": "PDF、Word（.docx）、および画像ファイル（JPG、PNG、WebP、TIFF）に対応。ファイルはブラウザから送信されません。",
       "processing": "処理中..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "ここにドキュメントをドロップ",
       "subtitle": "またはクリックして参照",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "自動検出",

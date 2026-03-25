@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% lato client — I tuoi file non lasciano mai il tuo browser",
     "title": "Oscura permanentemente i dati personali dai documenti PDF",
-    "subtitle": "Rileva e rimuovi automaticamente i dati personali — codice fiscale, nomi, email, numeri di telefono, IBAN — dai tuoi file PDF. Conforme a HIPAA, GDPR e KVKK.",
+    "subtitle": "Rileva e rimuovi permanentemente i dati personali — SSN, nomi, email, numeri di telefono, IBAN — da file PDF, Word e immagini. Conforme a GDPR, HIPAA e KVKK.",
     "cta": "Inizia — Gratis",
     "ctaSecondary": "Vedi prezzi",
     "trustedBy": "Utilizzato da studi legali, strutture sanitarie e agenzie governative"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Supporta file PDF, Word (.docx) e immagini (JPG, PNG, WebP, TIFF). I tuoi file non lasciano mai il browser.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

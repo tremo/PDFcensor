@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% klienta pusē — Jūsu faili nekad neatstāj jūsu pārlūku",
     "title": "Neatgriezeniski noņemiet personas datus no PDF dokumentiem",
-    "subtitle": "Automātiski atklājiet un neatgriezeniski noņemiet personas datus — personas kodus, vārdus, e-pastus, tālruņu numurus, IBAN — no jūsu PDF failiem.",
+    "subtitle": "Automātiski atklājiet un neatgriezeniski noņemiet personas datus — SSN, vārdus, e-pastus, tālruņu numurus, IBAN — no PDF, Word un attēlu failiem. Atbilst GDPR, HIPAA un KVKK.",
     "cta": "Sākt — Bezmaksas",
     "ctaSecondary": "Skatīt cenas",
     "trustedBy": "Uzticas juridiskās firmas, veselības aprūpes sniedzēji un valdības aģentūras"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Atbalsta PDF, Word (.docx) un attēlu failus (JPG, PNG, WebP, TIFF). Jūsu faili nekad neatstāj pārlūkprogrammu.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

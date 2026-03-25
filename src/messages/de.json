@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% Clientseitig — Ihre Dateien verlassen nie Ihren Browser",
     "title": "Personenbezogene Daten dauerhaft aus PDF-Dokumenten schwärzen",
-    "subtitle": "Erkennen und entfernen Sie automatisch personenbezogene Daten — SSN, Namen, E-Mails, Telefonnummern, IBAN — aus Ihren PDF-Dateien. DSGVO, HIPAA und KVKK konform.",
+    "subtitle": "Personenbezogene Daten — SSN, Namen, E-Mails, Telefonnummern, IBAN — aus PDF-, Word- und Bilddateien automatisch erkennen und dauerhaft entfernen. DSGVO, HIPAA und KVKK konform.",
     "cta": "Kostenlos schwärzen",
     "ctaSecondary": "Preise ansehen",
     "trustedBy": "Vertraut von Anwaltskanzleien, Gesundheitseinrichtungen und Behörden"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Dateien hier ablegen",
       "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
-      "hint": "Unterstützt PDF- und Word-(.docx)-Dateien. Ihre Dateien verlassen niemals Ihren Browser.",
+      "hint": "Unterstützt PDF-, Word-(.docx)- und Bilddateien (JPG, PNG, WebP, TIFF). Ihre Dateien verlassen niemals Ihren Browser.",
       "processing": "Verarbeitung..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Dokument hier ablegen",
       "subtitle": "oder klicken zum Durchsuchen",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Erkennung",

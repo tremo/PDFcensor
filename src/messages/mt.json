@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% fuq il-klijent — Il-fajls tiegħek qatt ma jitilqu mill-browser tiegħek",
     "title": "Neħħi b'mod permanenti d-data personali minn dokumenti PDF",
-    "subtitle": "Identifika u neħħi awtomatikament data personali — numri ta' identità, ismijiet, emails, numri tat-telefon, IBAN — mill-fajls PDF tiegħek.",
+    "subtitle": "Awtomatikament tindividwa u tħassar b'mod permanenti d-dejta personali — SSN, ismijiet, emails, numri ta' telefon, IBAN — minn fajls PDF, Word u immaġni. Konformi ma' GDPR, HIPAA u KVKK.",
     "cta": "Ibda — B'xejn",
     "ctaSecondary": "Ara l-prezzijiet",
     "trustedBy": "Fdat minn uffiċċji legali, fornituri tas-saħħa u aġenziji tal-gvern"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Jappoġġja fajls PDF, Word (.docx) u immaġni (JPG, PNG, WebP, TIFF). Il-fajls tiegħek qatt ma jitilqu mill-browser tiegħek.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

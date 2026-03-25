@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% Del lado del cliente — Sus archivos nunca salen de su navegador",
     "title": "Redacte permanentemente datos personales de documentos PDF",
-    "subtitle": "Detecte y elimine automáticamente datos personales — SSN, nombres, correos, teléfonos, IBAN — de sus archivos PDF. Compatible con RGPD, HIPAA y KVKK.",
+    "subtitle": "Detecta y elimina permanentemente datos personales — SSN, nombres, correos, teléfonos, IBAN — de archivos PDF, Word e imágenes. Cumple con GDPR, HIPAA y KVKK.",
     "cta": "Comenzar gratis",
     "ctaSecondary": "Ver precios",
     "trustedBy": "Utilizado por bufetes de abogados, instituciones de salud y agencias gubernamentales"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Suelta los archivos aquí",
       "subtitle": "o haga clic para explorar sus archivos",
-      "hint": "Admite archivos PDF y Word (.docx). Tus archivos nunca salen de tu navegador.",
+      "hint": "Admite archivos PDF, Word (.docx) e imágenes (JPG, PNG, WebP, TIFF). Tus archivos nunca salen de tu navegador.",
       "processing": "Procesando..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Suelta tu documento aquí",
       "subtitle": "o haz clic para explorar",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Detección Automática",

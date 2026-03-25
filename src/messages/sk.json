@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% na strane klienta — Vaše súbory nikdy neopustia váš prehliadač",
     "title": "Trvalo odstráňte osobné údaje z PDF dokumentov",
-    "subtitle": "Automaticky zistite a trvalo odstráňte osobné údaje — rodné čísla, mená, e-maily, telefónne čísla, IBAN — z vašich PDF súborov. V súlade s HIPAA, GDPR a KVKK.",
+    "subtitle": "Automaticky zistite a trvalo odstráňte osobné údaje — rodné čísla, mená, e-maily, telefónne čísla, IBAN — zo súborov PDF, Word a obrázkov. V súlade s GDPR, HIPAA a KVKK.",
     "cta": "Začať — Zadarmo",
     "ctaSecondary": "Pozrieť cenník",
     "trustedBy": "Dôverujú nám právnické firmy, poskytovatelia zdravotnej starostlivosti a vládne agentúry"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Podporuje súbory PDF, Word (.docx) a obrázky (JPG, PNG, WebP, TIFF). Vaše súbory nikdy neopustia váš prehliadač.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

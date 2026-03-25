@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% kliendipoolne — Teie failid ei lahku kunagi teie brauserist",
     "title": "Eemaldage jäädavalt isikuandmed PDF-dokumentidest",
-    "subtitle": "Tuvastage ja eemaldage automaatselt isikuandmed — isikukoodid, nimed, e-postid, telefoninumbrid, IBAN — teie PDF-failidest. HIPAA, GDPR ja KVKK nõuetele vastav.",
+    "subtitle": "Tuvastage ja eemaldage automaatselt isikuandmed — SSN, nimed, e-posti aadressid, telefoninumbrid, IBAN — PDF-, Word- ja pildifailidest. Vastab GDPR, HIPAA ja KVKK nõuetele.",
     "cta": "Alustage — Tasuta",
     "ctaSecondary": "Vaata hindu",
     "trustedBy": "Usaldavad advokaadibürood, tervishoiuteenuste pakkujad ja riigiasutused"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Toetab PDF-, Word-(.docx)- ja pildifaile (JPG, PNG, WebP, TIFF). Teie failid ei lahku kunagi teie brauserist.",
       "processing": "Processing..."
     },
     "controls": {
@@ -227,7 +227,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",
