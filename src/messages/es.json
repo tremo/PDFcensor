@@ -104,6 +104,7 @@
     "subtitle": "OfflineRedact te ayuda a cumplir los requisitos de protección de datos en más de 20 regulaciones y estándares en todo el mundo."
   },
   "trust": {
+    "logoSection": "Utilizado por organizaciones líderes en todo el mundo",
     "title": "Confiado por profesionales que manejan documentos sensibles",
     "legal": "Legal",
     "healthcare": "Salud",
@@ -125,6 +126,10 @@
     "tagline": "Redacción permanente de documentos — 100% en su navegador."
   },
   "redact": {
+    "meta": {
+      "title": "Redactar Documentos — OfflineRedact Herramienta Online Gratuita",
+      "description": "Elimina permanentemente DPC de PDFs, Word e imágenes. Detección automática de nombres, rostros, IBAN y más. 100% en el cliente."
+    },
     "title": "Herramienta de censura de documentos",
     "titleDocx": "Herramienta de censura de documentos Word",
     "titleBatch": "Censura de documentos por lotes",
@@ -281,6 +286,10 @@
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Precios — OfflineRedact Herramienta de Redacción PDF",
+      "description": "Empieza gratis o actualiza a Pro por $6.99/mes. Elimina marcas de agua, procesa documentos en lote y obtén soporte prioritario."
+    },
     "title": "Precios simples y transparentes",
     "subtitle": "Comience gratis, actualice cuando lo necesite",
     "free": {
@@ -318,6 +327,46 @@
       "monthly": "Mensual",
       "yearly": "Anual",
       "save": "Ahorra 29%"
+    },
+    "guarantee": "Garantía de Devolución de 30 Días",
+    "guaranteeDesc": "¿No estás satisfecho? Obtén un reembolso completo en 30 días, sin preguntas.",
+    "comparison": {
+      "title": "Comparación",
+      "subtitle": "Por qué los profesionales eligen OfflineRedact",
+      "feature": "Característica",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Precio",
+      "offlineRedactPrice": "$6.99/mes",
+      "adobePrice": "$22.99/mes",
+      "redactablePrice": "$39/mes",
+      "ilovepdfPrice": "$7/mes",
+      "clientSide": "Procesamiento 100% en el Cliente",
+      "faceDetection": "Detección y Difuminado de Rostros",
+      "multiFormat": "PDF + Word + Imágenes",
+      "offlineCapable": "Funciona Sin Conexión",
+      "autoDetect": "Detección Automática de DPC",
+      "metadataCleaning": "Limpieza de Metadatos",
+      "batchProcessing": "Procesamiento por Lotes",
+      "yes": "Sí",
+      "no": "No",
+      "limited": "Limitado",
+      "onlyUs": "Solo en OfflineRedact"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Están seguros mis datos?",
+      "a1": "Sí. Tus archivos nunca salen de tu navegador. Todo el procesamiento se realiza 100% en el cliente — sin subidas, sin servidores, sin fugas de datos.",
+      "q2": "¿Puedo obtener un reembolso?",
+      "a2": "Por supuesto. Ofrecemos una garantía de devolución de 30 días, sin preguntas. Contacta a support@offlineredact.com.",
+      "q3": "¿Qué tipos de archivo se admiten?",
+      "a3": "Documentos PDF, archivos Word (.docx) e imágenes (JPG, PNG, WebP, TIFF). Todo en una sola herramienta — sin cambiar de aplicación.",
+      "q4": "¿Funciona sin internet?",
+      "a4": "Sí. Una vez cargada la página, la herramienta funciona completamente sin conexión. Tus documentos no necesitan conexión a internet.",
+      "q5": "¿Puede detectar rostros en fotos?",
+      "a5": "Sí. OfflineRedact incluye detección de rostros integrada que encuentra y difumina automáticamente rostros en documentos e imágenes — una función exclusiva de OfflineRedact."
     }
   },
   "auth": {
@@ -353,7 +402,23 @@
     "proLinkedToAccount": "Las funciones Pro están vinculadas a {email}",
     "loginToActivate": "Inicie sesión para vincular las funciones Pro a su cuenta"
   },
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidad — OfflineRedact",
+      "description": "Descubre cómo OfflineRedact protege tu privacidad. Tus archivos nunca salen de tu navegador."
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Términos de Servicio — OfflineRedact",
+      "description": "Términos y condiciones de uso de la herramienta de redacción OfflineRedact. Garantía de devolución de 30 días incluida."
+    }
+  },
   "blog": {
+    "meta": {
+      "title": "Blog — Guías de Redacción de Documentos OfflineRedact",
+      "description": "Guías y mejores prácticas para redacción de PDF, cumplimiento RGPD, HIPAA, CCPA y protección de datos."
+    },
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "cta": {
