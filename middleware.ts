@@ -42,11 +42,6 @@ export async function middleware(request: NextRequest) {
   // 1. Refresh Supabase session (updates cookies)
   const { user, supabaseResponse } = await updateSession(request);
 
-  // For API routes, only refresh the session — skip intl middleware
-  if (request.nextUrl.pathname.startsWith("/api/")) {
-    return supabaseResponse;
-  }
-
   // 2. Check protected routes
   const pathWithoutLocale = getPathWithoutLocale(request.nextUrl.pathname);
   const isProtected = protectedPaths.some(
@@ -73,5 +68,5 @@ export async function middleware(request: NextRequest) {
 
 const localePattern = allLocales.join("|");
 export const config = {
-  matcher: ["/", `/(${localePattern})/:path*`, "/api/:path*"],
+  matcher: ["/", `/(${localePattern})/:path*`],
 };

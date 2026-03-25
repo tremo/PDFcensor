@@ -4,11 +4,16 @@ import { createClient } from "@/lib/supabase/server";
 import { locales } from "@/lib/i18n/config";
 import type Stripe from "stripe";
 
+const PRICE_IDS = {
+  monthly: process.env.STRIPE_PRICE_MONTHLY || "price_1TDl2RAej1A7idfqmbhyQDSh",
+  yearly: process.env.STRIPE_PRICE_YEARLY || "price_1TErzlAej1A7idfq9GmrbS7l",
+};
+
 export async function POST(request: Request) {
   try {
     const { locale: rawLocale = "en", plan = "monthly" } = await request.json();
     const locale = locales.includes(rawLocale) ? rawLocale : "en";
-    const isYearly = plan === "yearly";
+    const priceId = plan === "yearly" ? PRICE_IDS.yearly : PRICE_IDS.monthly;
 
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
@@ -41,16 +46,7 @@ export async function POST(request: Request) {
       payment_method_types: ["card"],
       line_items: [
         {
-          price_data: {
-            currency: "usd",
-            product_data: {
-              name: "OfflineRedact Pro",
-              description:
-                "No watermark, batch processing (ZIP download), and priority support. Cancel anytime.",
-            },
-            unit_amount: isYearly ? 5999 : 699,
-            recurring: { interval: isYearly ? "year" : "month" },
-          },
+          price: priceId,
           quantity: 1,
         },
       ],
