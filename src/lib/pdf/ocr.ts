@@ -81,16 +81,27 @@ async function ocrPage(
     }
   }
 
+  // Strip common OCR noise characters from word edges to check if it's a digit group
+  const stripOCRNoise = (text: string) => text.replace(/^[.,;:|]+|[.,;:|]+$/g, "");
+
   // Merge adjacent digit-only words so numeric PII patterns (TC Kimlik, IBAN, etc.) match
+  // Also handles OCR noise like "1364." + "3908756" by stripping punctuation before checking
   const mergedWords: OCRWord[] = [];
   for (const word of words) {
     const last = mergedWords[mergedWords.length - 1];
-    if (last && /^\d+$/.test(last.text) && /^\d+$/.test(word.text)) {
+    const lastClean = last ? stripOCRNoise(last.text) : "";
+    const wordClean = stripOCRNoise(word.text);
+    if (
+      last &&
+      lastClean.length > 0 && /^\d+$/.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean)
+    ) {
       const minX = Math.min(last.x, word.x);
       const minY = Math.min(last.y, word.y);
       const maxX = Math.max(last.x + last.width, word.x + word.width);
       const maxY = Math.max(last.y + last.height, word.y + word.height);
-      last.text += word.text;
+      // Use cleaned digits for the merged text
+      last.text = lastClean + wordClean;
       last.x = minX;
       last.y = minY;
       last.width = maxX - minX;
