@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% ar thaobh an chliaint — Ní fhágann do chuid comhad do bhrabhsálaí riamh",
     "title": "Bain PII go buan ó cháipéisí PDF",
-    "subtitle": "Braith agus bain sonraí pearsanta go huathoibríoch — uimhreacha slándála sóisialta, ainmneacha, ríomhphoist, uimhreacha gutháin, IBAN — ó do chuid comhad PDF.",
+    "subtitle": "Aimsigh agus bain go buan sonraí pearsanta — SSN, ainmneacha, ríomhphoist, uimhreacha fóin, IBAN — ó chomhaid PDF, Word agus íomhánna. Comhoiriúnach le GDPR, HIPAA agus KVKK.",
     "cta": "Tosaigh — Saor in Aisce",
     "ctaSecondary": "Féach ar phraghsáil",
     "trustedBy": "Iontaofa ag gnólachtaí dlí, soláthraithe cúraim sláinte agus gníomhaireachtaí rialtais"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
-      "hint": "Supports PDF and Word (.docx) files. Your files never leave your browser.",
+      "hint": "Tacaíonn sé le comhaid PDF, Word (.docx) agus íomhánna (JPG, PNG, WebP, TIFF). Ní fhágann do chomhaid do bhrabhsálaí riamh.",
       "processing": "Processing..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Drop your document here",
       "subtitle": "or click to browse",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Auto-Detection",

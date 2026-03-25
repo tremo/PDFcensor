@@ -12,7 +12,7 @@
   "hero": {
     "badge": "100% Côté client — Vos fichiers ne quittent jamais votre navigateur",
     "title": "Caviardez définitivement les données personnelles des PDF",
-    "subtitle": "Détectez et supprimez automatiquement les données personnelles — SSN, noms, e-mails, numéros de téléphone, IBAN — de vos fichiers PDF. Conforme au RGPD, HIPAA et KVKK.",
+    "subtitle": "Détectez et supprimez automatiquement les données personnelles — SSN, noms, e-mails, téléphones, IBAN — dans vos fichiers PDF, Word et images. Conforme RGPD, HIPAA et KVKK.",
     "cta": "Commencer gratuitement",
     "ctaSecondary": "Voir les tarifs",
     "trustedBy": "Utilisé par des cabinets d'avocats, des établissements de santé et des organismes gouvernementaux"
@@ -123,7 +123,7 @@
     "dropzone": {
       "title": "Déposez les fichiers ici",
       "subtitle": "ou cliquez pour parcourir vos fichiers",
-      "hint": "Prend en charge les fichiers PDF et Word (.docx). Vos fichiers ne quittent jamais votre navigateur.",
+      "hint": "Prend en charge les fichiers PDF, Word (.docx) et images (JPG, PNG, WebP, TIFF). Vos fichiers ne quittent jamais votre navigateur.",
       "processing": "Traitement en cours..."
     },
     "controls": {
@@ -215,7 +215,7 @@
     "dropzone": {
       "title": "Déposez votre document ici",
       "subtitle": "ou cliquez pour parcourir",
-      "formats": "PDF, DOCX"
+      "formats": "PDF · DOCX · JPG · PNG · TIFF"
     },
     "features": {
       "autoDetection": "Détection Automatique",
