@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Automatinis PII redagavimas PDF, Word dokumentuose ir nuotraukose",
+    "description": "Visam laikui pašalinkite asmens duomenis iš PDF, Word dokumentų ir nuotraukų. Atitinka HIPAA, GDPR, KVKK. 100% kliento pusėje — jūsų failai niekada nepalieka naršyklės."
   },
   "nav": {
     "home": "Pradžia",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% kliento pusėje — Jūsų failai niekada nepalieka naršyklės",
-    "title": "Visam laikui pašalinkite asmens duomenis iš PDF dokumentų",
-    "subtitle": "Automatiškai aptinkite ir visam laikui pašalinkite asmens duomenis — SSN, vardus, el. paštus, telefono numerius, IBAN — iš PDF, Word ir vaizdo failų. Atitinka GDPR, HIPAA ir KVKK.",
+    "title": "Redaguokite jautrius duomenis iš PDF, dokumentų ir nuotraukų",
+    "subtitle": "Automatinis PII ir veidų redagavimas iš PDF, Word dokumentų ir nuotraukų. Atitinka HIPAA/GDPR/KVKK.",
     "cta": "Pradėkite — Nemokamai",
     "ctaSecondary": "Žiūrėti kainas",
     "trustedBy": "Pasitiki teisininkų kontoros, sveikatos priežiūros įstaigos ir vyriausybinės agentūros"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Profesionalus dokumentų redagavimas, veikiantis visiškai jūsų naršyklėje",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "PDF, Word ir nuotraukų palaikymas",
+      "description": "Redaguokite PDF, Word dokumentus (.docx) ir vaizdo failus — viską iš vieno įrankio. Nereikia perjunginėti tarp skirtingų programų."
+    },
+    "ocrSupport": {
+      "title": "Integruotas OCR",
+      "description": "Nuskenuoti dokumentai ir nuotraukos? Jokių problemų. Integruotas OCR nuskaito tekstą iš vaizdų, todėl jautrūs duomenys skenuose taip pat aptinkami."
+    },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Paketinis apdorojimas",
+      "description": "Įkelkite kelis failus vienu metu. Apdorokite juos visus ir atsisiųskite kaip vieną ZIP failą."
     },
     "metadata": {
       "title": "Metadata Cleaning",
@@ -50,15 +58,15 @@
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
       "title": "Upload",
-      "description": "Drag and drop your PDF files or click to browse. Supports multiple files."
+      "description": "Vilkite ir numeskite savo PDF, Word dokumentus ar nuotraukas — arba spustelėkite naršymui. Palaiko kelis failus."
     },
     "step2": {
-      "title": "Review",
-      "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
+      "title": "Peržiūra",
+      "description": "Automatiškai aptikti PII yra paryškinti. Pridėkite, pašalinkite arba koreguokite redakcijas prieš taikymą."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download your permanently redacted PDF. The original text is irrecoverably removed."
+      "title": "Atsisiuntimas",
+      "description": "Atsisiųskite savo visam laikui redaguotą failą. Pradinis tekstas yra neatstatomai pašalintas."
     }
   },
   "comparison": {

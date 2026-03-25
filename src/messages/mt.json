@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "OfflineRedact — Automatic PII Redaction for PDF Documents",
-    "description": "Permanently remove personal data from PDFs. HIPAA, GDPR, KVKK compliant. 100% client-side — your files never leave your browser."
+    "title": "OfflineRedact — Redazzjoni Awtomatika ta' PII minn PDFs, Word & Immaġni",
+    "description": "Neħħi b'mod permanenti d-data personali minn PDFs, dokumenti Word u immaġni. Konformi ma' HIPAA, GDPR, KVKK. 100% fuq il-klijent — il-fajls tiegħek qatt ma jitilqu mill-browser tiegħek."
   },
   "nav": {
     "home": "Paġna Ewlenija",
@@ -11,15 +11,15 @@
   },
   "hero": {
     "badge": "100% fuq il-klijent — Il-fajls tiegħek qatt ma jitilqu mill-browser tiegħek",
-    "title": "Neħħi b'mod permanenti d-data personali minn dokumenti PDF",
-    "subtitle": "Awtomatikament tindividwa u tħassar b'mod permanenti d-dejta personali — SSN, ismijiet, emails, numri ta' telefon, IBAN — minn fajls PDF, Word u immaġni. Konformi ma' GDPR, HIPAA u KVKK.",
+    "title": "Irredatta data sensittiva minn PDFs, dokumenti & immaġni",
+    "subtitle": "Redazzjoni awtomatika ta' PII u wċuħ minn PDFs, dokumenti Word u immaġni. Konformi ma' HIPAA/GDPR/KVKK.",
     "cta": "Ibda — B'xejn",
     "ctaSecondary": "Ara l-prezzijiet",
     "trustedBy": "Fdat minn uffiċċji legali, fornituri tas-saħħa u aġenziji tal-gvern"
   },
   "features": {
     "title": "Why OfflineRedact?",
-    "subtitle": "Enterprise-grade PDF redaction that runs entirely in your browser",
+    "subtitle": "Redazzjoni professjonali ta' dokumenti li taħdem kompletament fil-browser tiegħek",
     "trueRedaction": {
       "title": "True Redaction",
       "description": "Unlike simple black boxes, we remove the actual text data from the PDF. The redacted content cannot be selected, copied, or recovered."
@@ -36,9 +36,17 @@
       "title": "Multi-Regulation Support",
       "description": "Built-in profiles for HIPAA, GDPR, KVKK, CCPA, LGPD, and more. Automatically selects the right profile based on your location."
     },
+    "multiFormat": {
+      "title": "Appoġġ għal PDF, Word & Immaġni",
+      "description": "Irredatta PDFs, dokumenti Word (.docx) u fajls ta' immaġni — kollox minn għodda waħda. M'hemmx għalfejn taqleb bejn apps differenti."
+    },
+    "ocrSupport": {
+      "title": "OCR Integrat",
+      "description": "Dokumenti skannjati u ritratti? Ebda problema. L-OCR integrat jaqra t-test minn immaġni biex id-dejta sensittiva fi skans tinqabad ukoll."
+    },
     "batch": {
-      "title": "Batch Processing",
-      "description": "Upload multiple PDFs at once. Process them all sequentially and download as a single ZIP file."
+      "title": "Ipproċessar f'Lottijiet",
+      "description": "Ittella' diversi fajls f'daqqa. Ipproċessahom kollha u niżżilhom bħala fajl ZIP wieħed."
     },
     "metadata": {
       "title": "Metadata Cleaning",
