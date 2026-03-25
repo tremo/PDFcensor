@@ -36,10 +36,11 @@ export function usePDFProcessor() {
   const [enabledTypes, setEnabledTypes] = useState<PIIType[]>(
     getRegulationPatterns(getDefaultRegulation(locale))
   );
+  const [customKeywords, setCustomKeywords] = useState<string[]>([]);
   const [files, setFiles] = useState<File[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const scanDocument = useCallback(async (doc: PDFDocumentData, types: PIIType[], reg: RegulationType) => {
+  const scanDocument = useCallback(async (doc: PDFDocumentData, types: PIIType[], reg: RegulationType, keywords: string[] = []) => {
     setStatus("scanning");
     setProgress(0);
 
@@ -123,6 +124,70 @@ export function usePDFProcessor() {
         setProgress(progressBase + Math.round(((i + 1) / doc.pages.length) * progressRange));
       }
 
+      // Scan for custom keywords
+      if (keywords.length > 0) {
+        for (let i = 0; i < doc.pages.length; i++) {
+          const page = doc.pages[i];
+          for (const keyword of keywords) {
+            if (!keyword.trim()) continue;
+            // Case-insensitive search
+            const lowerText = page.fullText.toLowerCase();
+            const lowerKeyword = keyword.toLowerCase();
+            let searchFrom = 0;
+            while (true) {
+              const idx = lowerText.indexOf(lowerKeyword, searchFrom);
+              if (idx === -1) break;
+              searchFrom = idx + lowerKeyword.length;
+
+              const matchStart = idx;
+              const matchEnd = idx + keyword.length;
+
+              // Find bounding boxes for matching text items
+              const matchingItems = page.textItems.filter((item) => {
+                const itemStart = item.charOffset;
+                const itemEnd = itemStart + item.text.length;
+                return (
+                  (matchStart >= itemStart && matchStart < itemEnd) ||
+                  (matchEnd > itemStart && matchEnd <= itemEnd) ||
+                  (matchStart <= itemStart && matchEnd >= itemEnd)
+                );
+              });
+
+              if (matchingItems.length > 0) {
+                const clippedBoxes = matchingItems.map((item) => {
+                  const itemStart = item.charOffset;
+                  const itemEnd = itemStart + item.text.length;
+                  const charCount = item.text.length;
+                  const overlapStart = Math.max(matchStart, itemStart) - itemStart;
+                  const overlapEnd = Math.min(matchEnd, itemEnd) - itemStart;
+                  const charWidth = charCount > 0 ? item.width / charCount : item.width;
+                  const clipX = item.x + overlapStart * charWidth;
+                  const clipWidth = (overlapEnd - overlapStart) * charWidth;
+                  return { x: clipX, y: item.y, width: clipWidth, height: item.height };
+                });
+
+                const minX = Math.min(...clippedBoxes.map((b) => b.x));
+                const minY = Math.min(...clippedBoxes.map((b) => b.y));
+                const maxX = Math.max(...clippedBoxes.map((b) => b.x + b.width));
+                const maxY = Math.max(...clippedBoxes.map((b) => b.y + b.height));
+
+                allRedactions.push({
+                  id: nextId(),
+                  pageIndex: page.pageIndex,
+                  x: minX - 2,
+                  y: minY - 2,
+                  width: maxX - minX + 4,
+                  height: maxY - minY + 4,
+                  text: page.fullText.slice(matchStart, matchEnd),
+                  piiType: "customKeyword",
+                  confirmed: false,
+                });
+              }
+            }
+          }
+        }
+      }
+
       // Release textItems and fullText to free memory — they're no longer needed
       // since bounding boxes are already computed in RedactionArea objects.
       // If the user re-scans, reparsePages() will reload them.
@@ -150,14 +215,14 @@ export function usePDFProcessor() {
           setDocument(doc);
           setCurrentPage(1);
           // Auto-scan immediately after parsing
-          await scanDocument(doc, enabledTypes, regulation);
+          await scanDocument(doc, enabledTypes, regulation, customKeywords);
         } catch (e) {
           setError(e instanceof Error ? e.message : "Failed to parse PDF");
           setStatus("error");
         }
       }
     },
-    [document, enabledTypes, regulation, scanDocument]
+    [document, enabledTypes, regulation, customKeywords, scanDocument]
   );
 
   const removeFile = useCallback(
@@ -175,8 +240,8 @@ export function usePDFProcessor() {
 
   const scan = useCallback(async () => {
     if (!document) return;
-    await scanDocument(document, enabledTypes, regulation);
-  }, [document, enabledTypes, regulation, scanDocument]);
+    await scanDocument(document, enabledTypes, regulation, customKeywords);
+  }, [document, enabledTypes, regulation, customKeywords, scanDocument]);
 
   const applyRedaction = useCallback(
     async (isPro: boolean = false) => {
@@ -277,6 +342,19 @@ export function usePDFProcessor() {
     setEnabledTypes(getRegulationPatterns(reg));
   }, []);
 
+  const addCustomKeyword = useCallback((keyword: string) => {
+    const trimmed = keyword.trim();
+    if (!trimmed) return;
+    setCustomKeywords((prev) => {
+      if (prev.includes(trimmed)) return prev;
+      return [...prev, trimmed];
+    });
+  }, []);
+
+  const removeCustomKeyword = useCallback((keyword: string) => {
+    setCustomKeywords((prev) => prev.filter((k) => k !== keyword));
+  }, []);
+
   const toggleType = useCallback((type: PIIType) => {
     setEnabledTypes((prev) =>
       prev.includes(type)
@@ -291,6 +369,7 @@ export function usePDFProcessor() {
     setRedactedPdfBytes(null);
     setCurrentPage(1);
     setFiles([]);
+    setCustomKeywords([]);
     setStatus("idle");
     setProgress(0);
     setError(null);
@@ -307,6 +386,7 @@ export function usePDFProcessor() {
     currentPage,
     regulation,
     enabledTypes,
+    customKeywords,
     files,
     error,
     // Actions
@@ -323,6 +403,8 @@ export function usePDFProcessor() {
     addManualRedaction,
     changeRegulation,
     toggleType,
+    addCustomKeyword,
+    removeCustomKeyword,
     setCurrentPage,
     reset,
   };

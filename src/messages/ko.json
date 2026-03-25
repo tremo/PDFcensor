@@ -160,7 +160,17 @@
       "select": "선택 모드",
       "noResultsOnPage": "이 페이지에 검열된 항목이 없습니다.",
       "noResults": "이 문서에서 개인정보가 감지되지 않았습니다.",
-      "page": "페이지 {current} / {total}"
+      "page": "페이지 {current} / {total}",
+      "customKeywords": "自定义关键词",
+      "customKeywordsHint": "添加要审查的词语或短语（例如项目名称、公司名称）",
+      "addKeyword": "添加",
+      "keywordPlaceholder": "输入词语或短语...",
+      "keywordAdded": "自定义关键词",
+      "scanKeywords": "搜索关键词",
+      "drawModeOn": "绘制模式：开启",
+      "drawModeOff": "绘制模式：关闭",
+      "drawModeHint": "在文档上点击并拖动以绘制编辑框",
+      "selectModeHint": "点击编辑项以选择、移动或调整大小"
     },
     "docx": {
       "pending": "대기 중",
@@ -197,7 +207,8 @@
       "creditCard": "신용카드",
       "passport": "여권번호",
       "names": "인명",
-      "address": "주소"
+      "address": "주소",
+      "customKeyword": "自定义关键词"
     }
   },
   "landing": {

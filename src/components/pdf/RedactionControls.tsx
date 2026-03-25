@@ -23,9 +23,10 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const ALL_PII_TYPES: PIIType[] = [
+const ALL_PII_TYPES: (PIIType | "customKeyword")[] = [
   "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
   "usPhone", "iban", "creditCard", "passport", "names", "address",
+  "customKeyword",
 ];
 
 interface RedactionControlsProps {

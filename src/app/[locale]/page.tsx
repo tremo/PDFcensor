@@ -30,8 +30,13 @@ import {
   FileCheck,
 } from "lucide-react";
 
-export default async function HomePage() {
-  const t = await getTranslations();
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
 
   const features = [
     { icon: ShieldCheck, key: "trueRedaction" },

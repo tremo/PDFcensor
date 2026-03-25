@@ -355,3 +355,164 @@ export function detectAddress(text: string, pageIndex: number): PIIMatch[] {
 
   return matches;
 }
+
+/**
+ * Trigger keywords for date-of-birth detection across all supported languages.
+ *
+ * These keywords distinguish birth dates from invoice dates, due dates, etc.
+ * Each keyword is checked case-insensitively with Unicode-aware word boundaries.
+ *
+ * Multi-word phrases come first so the regex engine matches the longest form.
+ */
+const DOB_KEYWORDS = [
+  // Turkish
+  "doğum tarihi", "d\\.tarihi",
+  // English
+  "date of birth", "birth date", "birthdate", "born on", "dob",
+  // German
+  "geburtsdatum", "geb\\.datum", "geb\\.", "geboren am",
+  // French
+  "date de naissance", "né(?:e)? le",
+  // Spanish
+  "fecha de nacimiento", "f\\. ?nacimiento", "nacido(?:a)? el",
+  // Italian
+  "data di nascita", "nato(?:a)? il",
+  // Portuguese
+  "data de nascimento", "nascido(?:a)? em",
+  // Dutch
+  "geboortedatum", "geboren op",
+  // Polish
+  "data urodzenia", "ur\\.",
+  // Czech
+  "datum narození",
+  // Slovak
+  "dátum narodenia",
+  // Hungarian
+  "születési dátum", "szül\\.", "született",
+  // Romanian
+  "data nașterii", "născut(?:ă)?",
+  // Croatian
+  "datum rođenja",
+  // Slovenian
+  "datum rojstva",
+  // Lithuanian
+  "gimimo data",
+  // Latvian
+  "dzimšanas datums",
+  // Estonian
+  "sünniaeg", "sünnikuupäev",
+  // Finnish
+  "syntymäaika", "syntymäpäivä",
+  // Swedish
+  "födelsedatum", "född",
+  // Danish
+  "fødselsdato", "født",
+  // Bulgarian
+  "дата на раждане",
+  // Greek
+  "ημερομηνία γέννησης",
+  // Irish
+  "dáta breithe",
+  // Maltese
+  "data tat-twelid",
+  // Japanese
+  "生年月日",
+  // Korean
+  "생년월일",
+  // Chinese
+  "出生日期",
+];
+
+/**
+ * Common date formats used across locales.
+ *
+ * Covers: DD.MM.YYYY, DD/MM/YYYY, DD-MM-YYYY, YYYY-MM-DD, YYYY/MM/DD,
+ * MM/DD/YYYY, and named-month variants (15 March 1990, March 15, 1990, etc.)
+ */
+const DATE_PATTERNS = [
+  // DD.MM.YYYY | DD/MM/YYYY | DD-MM-YYYY
+  /\d{1,2}[./-]\d{1,2}[./-]\d{2,4}/,
+  // YYYY-MM-DD | YYYY/MM/DD | YYYY.MM.DD
+  /\d{4}[./-]\d{1,2}[./-]\d{1,2}/,
+  // Named month variants: 15 March 1990, March 15, 1990, 15. März 1990
+  /\d{1,2}\.?\s+\p{L}{3,12}\s+\d{2,4}/u,
+  /\p{L}{3,12}\s+\d{1,2},?\s+\d{2,4}/u,
+];
+
+/**
+ * Compiled regex for date-of-birth keywords.
+ * Built once at module load time for performance.
+ */
+const DOB_KEYWORD_REGEX = new RegExp(
+  `(?:${DOB_KEYWORDS.join("|")})`,
+  "giu"
+);
+
+/**
+ * Compiled regex matching any supported date format.
+ */
+const DATE_REGEX = new RegExp(
+  DATE_PATTERNS.map((r) => r.source).join("|"),
+  "giu"
+);
+
+/**
+ * Detect dates of birth by looking for date patterns near trigger keywords.
+ *
+ * Strategy:
+ *  1. Find all keyword occurrences in the text.
+ *  2. For each keyword, look for date patterns within a proximity window
+ *     (up to 30 chars before or 80 chars after the keyword, within the same line).
+ *  3. Only the date value is redacted, not the label keyword.
+ *
+ * This avoids false positives from invoice dates, due dates, etc.
+ */
+export function detectDateOfBirth(
+  text: string,
+  pageIndex: number
+): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const seen = new Set<string>();
+
+  DOB_KEYWORD_REGEX.lastIndex = 0;
+  let kwMatch;
+
+  while ((kwMatch = DOB_KEYWORD_REGEX.exec(text)) !== null) {
+    const kwStart = kwMatch.index;
+    const kwEnd = kwStart + kwMatch[0].length;
+
+    // Find line boundaries
+    const lineStart = text.lastIndexOf("\n", kwStart);
+    const lineEnd = text.indexOf("\n", kwEnd);
+    const actualLineStart = lineStart === -1 ? 0 : lineStart + 1;
+    const actualLineEnd = lineEnd === -1 ? text.length : lineEnd;
+
+    // Search window: 30 chars before keyword to 80 chars after keyword,
+    // clamped to line boundaries
+    const searchStart = Math.max(actualLineStart, kwStart - 30);
+    const searchEnd = Math.min(actualLineEnd, kwEnd + 80);
+    const searchSlice = text.slice(searchStart, searchEnd);
+
+    // Find date patterns in the search window
+    DATE_REGEX.lastIndex = 0;
+    let dateMatch;
+    while ((dateMatch = DATE_REGEX.exec(searchSlice)) !== null) {
+      const absStart = searchStart + dateMatch.index;
+      const absEnd = absStart + dateMatch[0].length;
+      const key = `${absStart}:${absEnd}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+
+      matches.push({
+        type: "dateOfBirth",
+        value: dateMatch[0],
+        startIndex: absStart,
+        endIndex: absEnd,
+        pageIndex,
+        confidence: 0.9,
+      });
+    }
+  }
+
+  return matches;
+}

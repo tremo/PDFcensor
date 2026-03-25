@@ -10,7 +10,8 @@ export type PIIType =
   | "creditCard"
   | "passport"
   | "names"
-  | "address";
+  | "address"
+  | "dateOfBirth";
 
 export interface PIIMatch {
   type: PIIType;

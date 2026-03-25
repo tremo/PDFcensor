@@ -22,6 +22,12 @@ const blogPosts = [
   { slug: "gdpr-pdf-compliance", lang: "en", date: "2026-02-05" },
 ];
 
+const blogSlugs = blogPosts.map((post) => post.slug);
+
+const blogDates: Record<string, string> = Object.fromEntries(
+  blogPosts.map((post) => [post.slug, post.date])
+);
+
 export default async function BlogPage() {
   const t = await getTranslations("blog");
   const locale = await getLocale();

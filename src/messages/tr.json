@@ -160,7 +160,17 @@
       "select": "Seçim Modu",
       "noResults": "Bu belgede kişisel veri tespit edilmedi.",
       "noResultsOnPage": "Bu sayfada sansürlenen öğe yok.",
-      "page": "Sayfa {current} / {total}"
+      "page": "Sayfa {current} / {total}",
+      "customKeywords": "Özel Kelimeler",
+      "customKeywordsHint": "Sansürlenecek kelimeleri veya ifadeleri ekleyin (ör. proje adı, şirket adı)",
+      "addKeyword": "Ekle",
+      "keywordPlaceholder": "Kelime veya ifade yazın...",
+      "keywordAdded": "özel kelime",
+      "scanKeywords": "Kelimeleri Tara",
+      "drawModeOn": "Çizim Modu: AÇIK",
+      "drawModeOff": "Çizim Modu: KAPALI",
+      "drawModeHint": "Sansür kutusu çizmek için belge üzerinde tıklayıp sürükleyin",
+      "selectModeHint": "Sansürleri seçmek, taşımak ya da boyutlandırmak için tıklayın"
     },
     "docx": {
       "pending": "Bekliyor",
@@ -197,7 +207,8 @@
       "creditCard": "Kredi Kartı",
       "passport": "Pasaport Numarası",
       "names": "Kişi Adları",
-      "address": "Adresler"
+      "address": "Adresler",
+      "customKeyword": "Özel Kelime"
     }
   },
   "landing": {
