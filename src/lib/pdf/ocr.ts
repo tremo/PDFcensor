@@ -91,11 +91,16 @@ async function ocrPage(
     const last = mergedWords[mergedWords.length - 1];
     const lastClean = last ? stripOCRNoise(last.text) : "";
     const wordClean = stripOCRNoise(word.text);
-    if (
-      last &&
+    // Check if adjacent words should be merged:
+    // 1. Both are digit groups (TC Kimlik, IBAN, etc.)
+    // 2. Single letter + digits (passport "A" + "123456", seri "U" + "09")
+    const bothDigits =
       lastClean.length > 0 && /^\d+$/.test(lastClean) &&
-      wordClean.length > 0 && /^\d+$/.test(wordClean)
-    ) {
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    const letterThenDigits =
+      /^[A-Z]$/i.test(lastClean) &&
+      wordClean.length > 0 && /^\d+$/.test(wordClean);
+    if (last && (bothDigits || letterThenDigits)) {
       const minX = Math.min(last.x, word.x);
       const minY = Math.min(last.y, word.y);
       const maxX = Math.max(last.x + last.width, word.x + word.width);
