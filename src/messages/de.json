@@ -104,6 +104,7 @@
     "subtitle": "OfflineRedact hilft Ihnen, Datenschutzanforderungen in über 20 Vorschriften und Standards weltweit zu erfüllen."
   },
   "trust": {
+    "logoSection": "Weltweit von führenden Organisationen genutzt",
     "title": "Vertraut von Fachleuten, die mit sensiblen Dokumenten arbeiten",
     "legal": "Recht",
     "healthcare": "Gesundheit",
@@ -125,6 +126,10 @@
     "tagline": "Dauerhafte Dokumentenschwärzung — 100% in Ihrem Browser."
   },
   "redact": {
+    "meta": {
+      "title": "Dokumente Schwärzen — OfflineRedact Kostenloses Online-Tool",
+      "description": "PII dauerhaft aus PDFs, Word-Dokumenten und Bildern entfernen. SSN, Namen, Gesichter, IBAN und mehr automatisch erkennen. 100% client-seitig."
+    },
     "title": "Dokument-Schwärzungstool",
     "titleDocx": "Word-Dokument Schwärzungstool",
     "titleBatch": "Stapelverarbeitung von Dokumenten",
@@ -281,6 +286,10 @@
     }
   },
   "pricing": {
+    "meta": {
+      "title": "Preise — OfflineRedact PDF-Schwärzungstool",
+      "description": "Kostenlos starten oder für $6.99/Monat auf Pro upgraden. Wasserzeichen entfernen, Stapelverarbeitung und Prioritäts-Support."
+    },
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos, upgraden Sie bei Bedarf",
     "free": {
@@ -318,6 +327,46 @@
       "monthly": "Monatlich",
       "yearly": "Jährlich",
       "save": "29% sparen"
+    },
+    "guarantee": "30-Tage-Geld-zurück-Garantie",
+    "guaranteeDesc": "Nicht zufrieden? Erhalten Sie innerhalb von 30 Tagen eine volle Rückerstattung, ohne Fragen.",
+    "comparison": {
+      "title": "Vergleich",
+      "subtitle": "Warum Profis OfflineRedact wählen",
+      "feature": "Funktion",
+      "offlineRedact": "OfflineRedact Pro",
+      "adobeAcrobat": "Adobe Acrobat Pro",
+      "redactable": "Redactable",
+      "ilovepdf": "iLovePDF",
+      "price": "Preis",
+      "offlineRedactPrice": "$6.99/Mo",
+      "adobePrice": "$22.99/Mo",
+      "redactablePrice": "$39/Mo",
+      "ilovepdfPrice": "$7/Mo",
+      "clientSide": "100% Client-seitige Verarbeitung",
+      "faceDetection": "Gesichtserkennung & Unschärfe",
+      "multiFormat": "PDF + Word + Bilder",
+      "offlineCapable": "Funktioniert Offline",
+      "autoDetect": "Auto PII-Erkennung",
+      "metadataCleaning": "Metadaten-Bereinigung",
+      "batchProcessing": "Stapelverarbeitung",
+      "yes": "Ja",
+      "no": "Nein",
+      "limited": "Begrenzt",
+      "onlyUs": "Nur bei OfflineRedact"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Sind meine Daten sicher?",
+      "a1": "Ja. Ihre Dateien verlassen niemals Ihren Browser. Alle Verarbeitung erfolgt 100% client-seitig — kein Upload, kein Server, kein Datenleck.",
+      "q2": "Kann ich eine Rückerstattung erhalten?",
+      "a2": "Absolut. Wir bieten eine 30-Tage-Geld-zurück-Garantie, ohne Fragen. Kontaktieren Sie support@offlineredact.com.",
+      "q3": "Welche Dateitypen werden unterstützt?",
+      "a3": "PDF-Dokumente, Word-Dateien (.docx) und Bilder (JPG, PNG, WebP, TIFF). Alles in einem Tool — kein App-Wechsel nötig.",
+      "q4": "Funktioniert es ohne Internet?",
+      "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool komplett offline. Ihre Dokumente benötigen keine Internetverbindung.",
+      "q5": "Kann es Gesichter in Fotos erkennen?",
+      "a5": "Ja. OfflineRedact enthält eine integrierte Gesichtserkennung, die automatisch Gesichter in Dokumenten und Bildern findet und unscharf macht — einzigartig bei OfflineRedact."
     }
   },
   "auth": {
@@ -354,6 +403,10 @@
     "loginToActivate": "Melden Sie sich an, um Pro-Funktionen mit Ihrem Konto zu verknüpfen"
   },
   "privacy": {
+    "meta": {
+      "title": "Datenschutzrichtlinie — OfflineRedact",
+      "description": "Erfahren Sie, wie OfflineRedact Ihre Privatsphäre schützt. Ihre Dateien verlassen niemals Ihren Browser."
+    },
     "title": "Datenschutzrichtlinie",
     "lastUpdated": "Zuletzt aktualisiert: März 2026",
     "intro": {
@@ -394,6 +447,10 @@
     }
   },
   "terms": {
+    "meta": {
+      "title": "Nutzungsbedingungen — OfflineRedact",
+      "description": "Nutzungsbedingungen für das OfflineRedact Dokument-Schwärzungstool. 30-Tage-Geld-zurück-Garantie inklusive."
+    },
     "title": "Nutzungsbedingungen",
     "lastUpdated": "Zuletzt aktualisiert: März 2026",
     "acceptance": {
@@ -426,6 +483,10 @@
     }
   },
   "blog": {
+    "meta": {
+      "title": "Blog — OfflineRedact Dokument-Schwärzungs-Leitfäden",
+      "description": "Leitfäden und Best Practices für PDF-Schwärzung, DSGVO-Konformität, HIPAA, CCPA und weltweiten Datenschutz."
+    },
     "title": "Blog",
     "backToBlog": "Zurück zum Blog",
     "cta": {
