@@ -411,83 +411,414 @@
     "keepSubscription": "Palikti prenumeratą"
   },
   "privacy": {
-    "title": "Privatumo politika",
-    "lastUpdated": "Paskutinį kartą atnaujinta: 2026 m. kovas",
+    "meta": {
+      "title": "Privacy Policy — OfflineRedact",
+      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser. Zero data collection, GDPR & CCPA compliant."
+    },
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "effectiveDate": "Effective: March 1, 2026",
+    "highlight": "Your files never leave your browser. All document processing happens 100% on your device — we have zero access to your data.",
+    "toc": "Table of Contents",
     "intro": {
-      "heading": "1. Įvadas",
-      "text": "OfflineRedact (“mes”, “mūsų”, “mus”) yra įsipareigojusi saugoti jūsų privatumą. Ši politika paaiškina, kaip mes tvarkome informaciją, kai naudojatės mūsų PDF redagavimo įrankiu."
+      "heading": "1. Introduction",
+      "text": "OfflineRedact (\"we\", \"our\", \"us\") operates the website offlineredact.com and provides a client-side document redaction tool. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.",
+      "text2": "We are committed to protecting your personal data in compliance with the General Data Protection Regulation (GDPR), the UK General Data Protection Regulation (UK GDPR), the California Consumer Privacy Act (CCPA/CPRA), and other applicable data protection laws worldwide.",
+      "text3": "By using OfflineRedact, you consent to the data practices described in this policy. If you do not agree with the terms of this policy, please do not access or use our services."
     },
     "noFileUploads": {
-      "heading": "2. Jokių failų įkėlimų",
-      "text": "{strong}Jūsų PDF failai niekada nepalieka jūsų įrenginio.{/strong} Visas PDF apdorojimas, įskaitant teksto ištraukimą, asmens duomenų aptikimą ir redagavimą, vyksta visiškai jūsų naršyklėje. Mes neįkeliame, nesaugome, neapdorojame ir neturime prieigos prie jūsų dokumentų jokiame serveryje."
+      "heading": "2. Zero-Knowledge Document Processing",
+      "text": "This is the core of our privacy commitment: {strong}your documents never leave your device.{/strong}",
+      "text2": "All document processing — including text extraction, PII (Personally Identifiable Information) detection, face detection, OCR (Optical Character Recognition), and redaction — happens entirely within your web browser using JavaScript and WebAssembly. No document content is ever transmitted to our servers or any third-party service.",
+      "text3": "This means we operate on a zero-knowledge architecture: we cannot see, access, read, store, or process the content of any document you work with. Even if compelled by a court order, we would have no document data to produce.",
+      "items": [
+        "PDF documents are parsed and redacted in-browser using pdf-lib",
+        "Word documents (.docx) are processed by extracting and modifying XML in-browser",
+        "Images are analyzed for faces using TensorFlow.js running locally in your browser",
+        "OCR is performed using Tesseract.js — no cloud OCR services are used",
+        "Redacted files are generated locally and downloaded directly to your device"
+      ]
     },
     "infoCollect": {
-      "heading": "3. Mūsų renkama informacija",
-      "text": "Mes renkame tik minimalią informaciją, reikalingą mūsų paslaugai:",
-      "items": [
-        "El. pašto adresas (tik jei įsigyjate Pro licenciją per Stripe)",
-        "Mokėjimo informacija (apdoroja Stripe; mes niekada nematome jūsų kortelės duomenų)",
-        "Pagrindinė analitika (puslapių peržiūros, funkcijų naudojimas — jokių asmens duomenų)"
+      "heading": "3. Information We Collect",
+      "text": "We collect minimal information, categorized as follows:",
+      "accountHeading": "a) Account Information (Pro Users Only)",
+      "accountItems": [
+        "Email address — provided when you create an account or purchase a Pro license",
+        "Authentication data — managed securely by Supabase Auth (Google OAuth or magic link)"
+      ],
+      "paymentHeading": "b) Payment Information",
+      "paymentItems": [
+        "Payment is processed entirely by Stripe. We never receive, store, or have access to your credit card number, CVV, or billing address",
+        "We receive from Stripe: transaction confirmation, subscription status, and customer email"
+      ],
+      "analyticsHeading": "c) Analytics Data",
+      "analyticsItems": [
+        "Page views and feature usage via Google Tag Manager (anonymized, no personal data)",
+        "No document content, file names, or PII detected in your documents is ever transmitted"
+      ],
+      "autoHeading": "d) Automatically Collected Data",
+      "autoItems": [
+        "IP address — logged temporarily by our hosting provider (Vercel) for security and abuse prevention; not stored by us",
+        "Browser type and operating system — collected anonymously via analytics",
+        "Referring URL and pages visited — for understanding traffic sources"
       ]
     },
     "cookies": {
-      "heading": "4. Slapukai",
-      "text": "Naudojame tik būtinus slapukus: kalbos nustatymo ir licencijos rakto saugojimui (localStorage). Nenaudojame sekimo slapukų."
-    },
-    "thirdParty": {
-      "heading": "5. Trečiųjų šalių paslaugos",
-      "items": [
-        "{strong}Stripe{/strong} — Mokėjimų apdorojimas. Žiūrėkite Stripe privatumo politiką.",
-        "{strong}Vercel{/strong} — Talpinimas. Žiūrėkite Vercel privatumo politiką."
+      "heading": "4. Cookies & Local Storage",
+      "text": "We use minimal cookies and local storage. We do not use advertising or tracking cookies.",
+      "tableHeaders": [
+        "Name",
+        "Type",
+        "Purpose",
+        "Duration"
+      ],
+      "tableRows": [
+        [
+          "locale",
+          "Local Storage",
+          "Stores your language preference",
+          "Persistent"
+        ],
+        [
+          "supabase-auth-token",
+          "Local Storage",
+          "Authentication session for Pro users",
+          "Until logout"
+        ],
+        [
+          "_gtm",
+          "Cookie",
+          "Google Tag Manager — anonymous analytics",
+          "Session"
+        ],
+        [
+          "cookie-consent",
+          "Local Storage",
+          "Remembers your cookie preference",
+          "1 year"
+        ]
       ]
     },
+    "thirdParty": {
+      "heading": "5. Third-Party Services",
+      "text": "We use the following third-party services, each with their own privacy policies:",
+      "services": [
+        {
+          "name": "Stripe",
+          "purpose": "Payment processing for Pro subscriptions",
+          "dataShared": "Email address, subscription plan selection",
+          "url": "https://stripe.com/privacy"
+        },
+        {
+          "name": "Supabase",
+          "purpose": "User authentication and account management",
+          "dataShared": "Email address, OAuth tokens",
+          "url": "https://supabase.com/privacy"
+        },
+        {
+          "name": "Vercel",
+          "purpose": "Website hosting and deployment",
+          "dataShared": "IP address (server logs), page requests",
+          "url": "https://vercel.com/legal/privacy-policy"
+        },
+        {
+          "name": "Google Tag Manager",
+          "purpose": "Anonymous usage analytics",
+          "dataShared": "Anonymized page view and feature usage data",
+          "url": "https://policies.google.com/privacy"
+        }
+      ],
+      "serviceLabel": "Service",
+      "purposeLabel": "Purpose",
+      "dataSharedLabel": "Data Shared",
+      "policyLabel": "Privacy Policy"
+    },
     "dataRetention": {
-      "heading": "6. Duomenų saugojimas",
-      "text": "Licencijos raktai saugomi jūsų licencijos galiojimo laikotarpiu. Mes nesaugome jokio PDF turinio ar iš dokumentų išgautų asmens duomenų."
+      "heading": "6. Data Retention",
+      "text": "We retain data only as long as necessary for its intended purpose:",
+      "items": [
+        "Account data (email, auth tokens) — retained while your account is active; deleted within 30 days of account deletion request",
+        "Payment records — retained for 7 years as required by tax and financial regulations",
+        "Analytics data — aggregated and anonymized; individual session data retained for 26 months (Google Analytics default)",
+        "Server logs (Vercel) — automatically purged after 30 days",
+        "Document content — never stored; exists only in your browser memory during processing"
+      ]
+    },
+    "rights": {
+      "heading": "7. Your Rights",
+      "text": "Depending on your location, you have the following rights regarding your personal data:",
+      "gdprHeading": "Under GDPR (EU) & UK GDPR:",
+      "gdprRights": [
+        {
+          "title": "Right of Access",
+          "desc": "Request a copy of the personal data we hold about you"
+        },
+        {
+          "title": "Right to Rectification",
+          "desc": "Request correction of inaccurate personal data"
+        },
+        {
+          "title": "Right to Erasure",
+          "desc": "Request deletion of your personal data (\"right to be forgotten\")"
+        },
+        {
+          "title": "Right to Restriction",
+          "desc": "Request that we limit how we use your data"
+        },
+        {
+          "title": "Right to Data Portability",
+          "desc": "Receive your data in a structured, machine-readable format"
+        },
+        {
+          "title": "Right to Object",
+          "desc": "Object to processing based on legitimate interests"
+        }
+      ],
+      "ccpaHeading": "Under CCPA/CPRA (California):",
+      "ccpaRights": [
+        "Right to know what personal information is collected and how it is used",
+        "Right to delete personal information held by us",
+        "Right to opt-out of the sale of personal information — we do not sell your data",
+        "Right to non-discrimination for exercising your privacy rights"
+      ],
+      "exerciseText": "To exercise any of these rights, contact us at privacy@offlineredact.com. We will respond within 30 days (GDPR) or 45 days (CCPA)."
+    },
+    "children": {
+      "heading": "8. Children's Privacy",
+      "text": "OfflineRedact is not directed at children under the age of 16 (GDPR) or 13 (COPPA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us at privacy@offlineredact.com and we will promptly delete such information."
+    },
+    "transfers": {
+      "heading": "9. International Data Transfers",
+      "text": "Our hosting provider (Vercel) and payment processor (Stripe) operate servers in the United States and other countries. When your account or payment data is processed by these services, it may be transferred outside your country of residence.",
+      "text2": "These transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission, and by each provider's compliance with applicable data protection frameworks. Your document content is never transferred, as it is processed entirely on your device."
+    },
+    "security": {
+      "heading": "10. Data Security",
+      "text": "We implement appropriate technical and organizational measures to protect your personal data:",
+      "items": [
+        "Zero-knowledge architecture — document content never leaves your browser",
+        "HTTPS/TLS encryption for all website communications",
+        "Stripe PCI DSS Level 1 compliance for payment processing",
+        "Supabase Row Level Security (RLS) for database access control",
+        "Regular security audits and dependency updates",
+        "No sensitive data stored on our servers — minimal attack surface"
+      ]
+    },
+    "legalBasis": {
+      "heading": "11. Legal Basis for Processing (GDPR)",
+      "text": "Under the GDPR, we process personal data based on the following legal grounds:",
+      "bases": [
+        {
+          "basis": "Contract Performance",
+          "description": "Processing your payment and providing Pro features you purchased"
+        },
+        {
+          "basis": "Legitimate Interest",
+          "description": "Website analytics to improve our service; security and fraud prevention"
+        },
+        {
+          "basis": "Consent",
+          "description": "Sending marketing communications (only if you opt in)"
+        },
+        {
+          "basis": "Legal Obligation",
+          "description": "Retaining payment records as required by tax law"
+        }
+      ],
+      "basisLabel": "Legal Basis",
+      "descriptionLabel": "Processing Activity"
+    },
+    "breach": {
+      "heading": "12. Data Breach Notification",
+      "text": "In the unlikely event of a data breach affecting your personal data, we will notify the relevant supervisory authority within 72 hours as required by GDPR Article 33. If the breach poses a high risk to your rights and freedoms, we will also notify you directly without undue delay.",
+      "text2": "Given our zero-knowledge architecture, any potential breach would be limited to account and payment metadata — your document content can never be compromised as it is never stored on our servers."
+    },
+    "changes": {
+      "heading": "13. Changes to This Policy",
+      "text": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will:",
+      "items": [
+        "Update the \"Last updated\" date at the top of this page",
+        "Display a prominent notice on our website for 30 days",
+        "Send an email notification to registered Pro users",
+        "Maintain an archive of previous versions upon request"
+      ]
+    },
+    "authorities": {
+      "heading": "14. Regulatory Authorities",
+      "text": "If you believe we have not adequately addressed your data protection concerns, you have the right to lodge a complaint with your local supervisory authority:",
+      "items": [
+        "EU — Your national Data Protection Authority (DPA)",
+        "UK — Information Commissioner's Office (ICO) — ico.org.uk",
+        "France — Commission Nationale de l'Informatique et des Libertés (CNIL) — cnil.fr",
+        "Germany — Bundesbeauftragte für den Datenschutz (BfDI) — bfdi.bund.de",
+        "Spain — Agencia Española de Protección de Datos (AEPD) — aepd.es",
+        "Turkey — Kişisel Verileri Koruma Kurumu (KVKK) — kvkk.gov.tr",
+        "California (US) — Office of the Attorney General — oag.ca.gov"
+      ]
     },
     "contact": {
-      "heading": "7. Kontaktai",
-      "text": "Dėl su privatumu susijusių klausimų susisiekite su mumis adresu privacy@offlineredact.com."
-    },
-    "meta": {
-      "title": "Privacy Policy — OfflineRedact",
-      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser."
+      "heading": "15. Contact Us",
+      "text": "For privacy-related inquiries, data subject requests, or complaints:",
+      "items": [
+        "Privacy inquiries: privacy@offlineredact.com",
+        "General support: support@offlineredact.com",
+        "Legal matters: legal@offlineredact.com"
+      ],
+      "responseTime": "We aim to respond to all privacy inquiries within 5 business days."
     }
   },
   "terms": {
-    "title": "Paslaugų sąlygos",
-    "lastUpdated": "Paskutinį kartą atnaujinta: 2026 m. kovas",
-    "acceptance": {
-      "heading": "1. Sąlygų priėmimas",
-      "text": "Naudodamiesi OfflineRedact, jūs sutinkate su šiomis Paslaugų sąlygomis. Jei nesutinkate, nenaudokite paslaugos."
-    },
-    "serviceDesc": {
-      "heading": "2. Paslaugos aprašymas",
-      "text": "OfflineRedact yra kliento pusėje veikiantis PDF redagavimo įrankis, kuris aptinka ir pašalina asmens tapatybę identifikuojančią informaciją (PII) iš PDF dokumentų. Visas apdorojimas vyksta jūsų naršyklėje."
-    },
-    "noGuarantee": {
-      "heading": "3. Jokios garantijos",
-      "text": "Nors siekiame tikslumo, OfflineRedact negarantuoja 100% visų asmens duomenų aptikimo. Naudotojai yra atsakingi už redagavimo rezultatų peržiūrą prieš dalinantis ar publikuojant dokumentus. Visada patikrinkite, ar visa jautri informacija buvo tinkamai paredaguota."
-    },
-    "license": {
-      "heading": "4. Licencija",
-      "text": "Nemokamas planas: Galite naudoti OfflineRedact nemokamai su vandens ženklu išvestyje. Pro licencija: Vienkartinis mokėjimas suteikia jums neribotą licenciją naudoti OfflineRedact be vandens ženklų."
-    },
-    "refundPolicy": {
-      "heading": "5. Grąžinimo politika",
-      "text": "Siūlome 30 dienų pinigų grąžinimo garantiją. Dėl grąžinimo užklausų susisiekite su mumis adresu support@offlineredact.com."
-    },
-    "liability": {
-      "heading": "6. Atsakomybės ribojimas",
-      "text": "OfflineRedact teikiama “tokia, kokia yra”, be garantijų. Mes nesame atsakingi už jokią žalą, atsirandančią dėl paslaugos naudojimo ar negalėjimo ja naudotis, įskaitant, bet neapsiribojant, nepilną jautrių duomenų redagavimą."
-    },
-    "contact": {
-      "heading": "7. Kontaktai",
-      "text": "Dėl klausimų apie šias sąlygas susisiekite su mumis adresu legal@offlineredact.com."
-    },
     "meta": {
       "title": "Terms of Service — OfflineRedact",
-      "description": "Terms and conditions for using the OfflineRedact document redaction tool."
+      "description": "Terms and conditions for using the OfflineRedact document redaction tool. 30-day money-back guarantee included."
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "effectiveDate": "Effective: March 1, 2026",
+    "toc": "Table of Contents",
+    "highlightGuarantee": "30-Day Money-Back Guarantee — Not satisfied? Get a full refund within 30 days, no questions asked.",
+    "highlightOwnership": "Your files never leave your device — you retain full ownership of all documents processed with OfflineRedact.",
+    "acceptance": {
+      "heading": "1. Acceptance of Terms",
+      "text": "By accessing or using OfflineRedact (the \"Service\"), you agree to be bound by these Terms of Service (\"Terms\"). If you do not agree to all of these Terms, do not access or use the Service.",
+      "text2": "You must be at least 16 years old (or the age of digital consent in your jurisdiction) to use this Service. By using the Service, you represent that you meet this age requirement.",
+      "text3": "If you are using the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms."
+    },
+    "serviceDesc": {
+      "heading": "2. Service Description",
+      "text": "OfflineRedact is a client-side document redaction tool that detects and permanently removes Personally Identifiable Information (PII) from documents. The Service includes the following capabilities:",
+      "features": [
+        "PDF document redaction — true text removal from PDF content streams",
+        "Word document (.docx) redaction — PII removal from document XML",
+        "Image redaction — face detection and blurring using local AI models",
+        "OCR (Optical Character Recognition) — text extraction from scanned documents and images",
+        "Automatic PII detection — SSN, names, emails, phone numbers, IBAN, credit cards, passport numbers, addresses",
+        "Multi-regulation support — GDPR, HIPAA, KVKK, CCPA, LGPD, and more",
+        "Metadata cleaning — removal of author, creation date, and software information",
+        "Batch processing — multiple file redaction with ZIP download (Pro feature)"
+      ],
+      "text2": "All document processing occurs entirely within your web browser. No document content is ever uploaded to, processed by, or stored on our servers."
+    },
+    "noGuarantee": {
+      "heading": "3. Disclaimer — No Guarantee of Complete Redaction",
+      "text": "While we strive for the highest accuracy in PII detection, OfflineRedact does not guarantee 100% detection or removal of all sensitive information. Automated pattern matching may miss certain data formats, non-standard patterns, or context-dependent information.",
+      "text2": "You are solely responsible for reviewing and verifying all redaction results before sharing, publishing, or distributing any document processed with OfflineRedact. We strongly recommend:",
+      "items": [
+        "Always review the redacted document visually before sharing",
+        "Test that redacted text cannot be selected, copied, or extracted",
+        "Use manual redaction for any items the automatic detection may have missed",
+        "Keep a secure copy of the original document until you have verified the redaction"
+      ],
+      "text3": "OfflineRedact is a tool to assist with document redaction — it does not replace professional legal or compliance review when required."
+    },
+    "license": {
+      "heading": "4. License & Subscription Plans",
+      "text": "OfflineRedact offers the following plans:",
+      "freeHeading": "Free Plan",
+      "freeItems": [
+        "Unlimited single-file PDF, Word, and image redaction",
+        "All PII detection patterns and regulation profiles",
+        "Metadata cleaning",
+        "Small watermark on output files"
+      ],
+      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proItems": [
+        "Everything in Free — with no watermark",
+        "Batch processing — redact multiple files at once",
+        "ZIP download for batch results",
+        "Priority support",
+        "Cancel anytime — no long-term commitment"
+      ],
+      "text2": "Pro subscriptions are billed monthly or annually through Stripe. You may cancel your subscription at any time; your Pro features will remain active until the end of the current billing period.",
+      "text3": "We reserve the right to modify pricing with 30 days' advance notice. Existing subscribers will be grandfathered at their current rate for the remainder of their billing cycle."
+    },
+    "refundPolicy": {
+      "heading": "5. Refund Policy",
+      "text": "We offer a 30-day money-back guarantee on all Pro subscriptions. If you are not satisfied with the Service for any reason, you may request a full refund within 30 days of your initial purchase.",
+      "items": [
+        "Refund requests must be submitted to support@offlineredact.com within 30 days of purchase",
+        "Refunds are processed to the original payment method within 5-10 business days",
+        "After 30 days, no partial or prorated refunds are available",
+        "You may cancel your subscription at any time to prevent future charges"
+      ],
+      "text2": "For annual subscriptions, the 30-day guarantee applies from the date of purchase. If you cancel after 30 days, your Pro access continues until the end of the annual period — no refund is issued for the remaining term."
+    },
+    "acceptableUse": {
+      "heading": "6. Acceptable Use Policy",
+      "text": "You agree to use OfflineRedact only for lawful purposes. The following uses are prohibited:",
+      "prohibited": [
+        "Using the Service for any illegal activity or to violate any applicable law or regulation",
+        "Attempting to reverse engineer, decompile, or disassemble the Service's source code",
+        "Automated scraping, crawling, or data extraction from the Service",
+        "Attempting to circumvent any access controls, licensing mechanisms, or security measures",
+        "Using the Service to process documents you do not have the right to access or modify",
+        "Reselling, sublicensing, or redistributing the Service without our written consent",
+        "Interfering with or disrupting the Service's infrastructure or other users' access"
+      ],
+      "text2": "Violation of this Acceptable Use Policy may result in immediate termination of your account and access to the Service."
+    },
+    "ip": {
+      "heading": "7. Intellectual Property",
+      "text": "The OfflineRedact software, website, brand, logos, and all associated content are the intellectual property of OfflineRedact and are protected by copyright, trademark, and other intellectual property laws.",
+      "text2": "You retain full ownership of all documents, files, and content that you process using the Service. We claim no rights over your documents. Since all processing happens in your browser, we never have access to your content.",
+      "text3": "Your Pro license grants you a non-exclusive, non-transferable, revocable right to use the Service for personal or business purposes in accordance with these Terms."
+    },
+    "accountTerms": {
+      "heading": "8. Account Terms",
+      "text": "If you create an account with OfflineRedact:",
+      "items": [
+        "You must provide accurate and complete information during registration",
+        "You are responsible for maintaining the security of your account credentials",
+        "You must not share your account or Pro license with other individuals or organizations",
+        "You must notify us immediately if you suspect unauthorized access to your account",
+        "You may request account deletion at any time by contacting support@offlineredact.com; we will delete your account data within 30 days"
+      ]
+    },
+    "availability": {
+      "heading": "9. Service Availability & Modifications",
+      "text": "We strive to provide reliable access to OfflineRedact, but we do not guarantee 100% uptime or uninterrupted availability. The Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.",
+      "text2": "We reserve the right to modify, update, or discontinue any feature of the Service at any time. For material changes that affect Pro subscribers, we will provide at least 30 days' advance notice via email.",
+      "text3": "Since OfflineRedact's core functionality runs in your browser, the redaction tool works even when offline (after initial page load). This means your workflow is largely unaffected by server availability."
+    },
+    "liability": {
+      "heading": "10. Limitation of Liability",
+      "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OFFLINEREDACT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:",
+      "items": [
+        "Loss of data, revenue, or profits arising from use of the Service",
+        "Incomplete or inaccurate redaction of sensitive information",
+        "Unauthorized access to or alteration of your account data",
+        "Service interruptions or unavailability",
+        "Any third-party actions or content"
+      ],
+      "text2": "Our total liability for any claims arising from or related to the Service shall not exceed the amount you paid to us in the twelve (12) months preceding the claim.",
+      "text3": "Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability. In such cases, our liability shall be limited to the fullest extent permitted by applicable law."
+    },
+    "governingLaw": {
+      "heading": "11. Governing Law & Jurisdiction",
+      "text": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which OfflineRedact is incorporated, without regard to conflict of law provisions.",
+      "text2": "For users in the European Union, nothing in these Terms affects your rights under mandatory consumer protection laws of your country of residence. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts in your country of residence, as provided by applicable EU consumer protection legislation."
+    },
+    "disputes": {
+      "heading": "12. Dispute Resolution",
+      "text": "We encourage you to contact us first at legal@offlineredact.com to resolve any disputes informally. Most concerns can be resolved quickly through direct communication.",
+      "text2": "If informal resolution is unsuccessful, any dispute shall be resolved through binding arbitration in accordance with the rules of the applicable arbitration institution, rather than in court. You agree to waive your right to participate in class action lawsuits or class-wide arbitration.",
+      "text3": "For users in the EU: This arbitration clause does not affect your rights to bring claims before the courts of your country of residence under applicable consumer protection laws. You may also use the European Commission's Online Dispute Resolution platform at ec.europa.eu/odr."
+    },
+    "severability": {
+      "heading": "13. Severability & Entire Agreement",
+      "text": "If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect.",
+      "text2": "These Terms, together with our Privacy Policy, constitute the entire agreement between you and OfflineRedact regarding the use of the Service, superseding any prior agreements or communications."
+    },
+    "contact": {
+      "heading": "14. Contact Us",
+      "text": "If you have any questions about these Terms of Service:",
+      "items": [
+        "General support: support@offlineredact.com",
+        "Legal inquiries: legal@offlineredact.com",
+        "Refund requests: support@offlineredact.com"
+      ],
+      "responseTime": "We aim to respond to all inquiries within 2 business days."
     }
   },
   "blog": {
