@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
-    "loginToActivate": "Sign in to link Pro features to your account"
+    "loginToActivate": "Sign in to link Pro features to your account",
+    "cancelSubscription": "Zrušiť predplatné",
+    "subscriptionCanceling": "Vaše predplatné je nastavené na zrušenie",
+    "accessUntil": "Pro prístup budete mať do {date}",
+    "reactivateSubscription": "Znovu aktivovať predplatné",
+    "nextBillingDate": "Ďalší dátum fakturácie: {date}",
+    "cancelConfirmMessage": "Ste si istí? Pro prístup si ponecháte do {date}, potom sa váš plán prepne na Bezplatný.",
+    "confirmCancel": "Áno, zrušiť",
+    "keepSubscription": "Ponechať predplatné"
   },
   "privacy": {
     "title": "Zásady ochrany osobných údajov",

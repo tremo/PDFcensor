@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "OfflineRedact Pro satın aldığınız için teşekkürler. Hesabınız yükseltildi.",
     "proActivated": "Pro Lisans Aktifleştirildi",
     "proLinkedToAccount": "Pro özellikler {email} hesabına bağlandı",
-    "loginToActivate": "Pro özellikleri hesabınıza bağlamak için giriş yapın"
+    "loginToActivate": "Pro özellikleri hesabınıza bağlamak için giriş yapın",
+    "cancelSubscription": "Aboneliği İptal Et",
+    "subscriptionCanceling": "Aboneliğiniz iptal edilecek",
+    "accessUntil": "{date} tarihine kadar Pro erişiminiz devam edecek",
+    "reactivateSubscription": "Aboneliği Yeniden Aktifleştir",
+    "nextBillingDate": "Sonraki fatura tarihi: {date}",
+    "cancelConfirmMessage": "Emin misiniz? {date} tarihine kadar Pro erişiminiz devam eder, ardından planınız Ücretsiz'e geçer.",
+    "confirmCancel": "Evet, İptal Et",
+    "keepSubscription": "Aboneliği Koru"
   },
   "privacy": {
     "meta": {

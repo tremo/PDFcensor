@@ -5,11 +5,63 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link } from "@/lib/i18n/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Crown, Shield, ArrowRight, Loader2 } from "lucide-react";
+import { Crown, Shield, ArrowRight, Loader2, AlertTriangle } from "lucide-react";
+import { useEffect, useState, useCallback } from "react";
+
+interface SubscriptionStatus {
+  status: "active" | "no_subscription";
+  cancelAtPeriodEnd?: boolean;
+  currentPeriodEnd?: number;
+  interval?: "month" | "year" | null;
+}
 
 export default function AccountPage() {
   const t = useTranslations("auth");
   const { user, isPro, isLoading } = useAuth();
+  const [subStatus, setSubStatus] = useState<SubscriptionStatus | null>(null);
+  const [subLoading, setSubLoading] = useState(false);
+  const [actionLoading, setActionLoading] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  const fetchSubscriptionStatus = useCallback(async () => {
+    setSubLoading(true);
+    try {
+      const res = await fetch("/api/subscription-status");
+      if (res.ok) {
+        const data = await res.json();
+        setSubStatus(data);
+      }
+    } catch {
+      // non-fatal
+    } finally {
+      setSubLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isPro && user) {
+      fetchSubscriptionStatus();
+    }
+  }, [isPro, user, fetchSubscriptionStatus]);
+
+  const handleCancelOrReactivate = async (action: "cancel" | "reactivate") => {
+    setActionLoading(true);
+    setShowConfirm(false);
+    try {
+      const res = await fetch("/api/cancel-subscription", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action }),
+      });
+      if (res.ok) {
+        await fetchSubscriptionStatus();
+      }
+    } catch {
+      // non-fatal
+    } finally {
+      setActionLoading(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -29,6 +81,18 @@ export default function AccountPage() {
     user.user_metadata?.name ||
     user.email?.split("@")[0] ||
     "User";
+
+  const periodEndDate = subStatus?.currentPeriodEnd
+    ? new Date(subStatus.currentPeriodEnd * 1000)
+    : null;
+
+  const formattedEndDate = periodEndDate
+    ? periodEndDate.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "";
 
   return (
     <div className="mx-auto max-w-lg px-4 py-16 sm:py-24 space-y-6">
@@ -78,6 +142,91 @@ export default function AccountPage() {
               </>
             )}
           </div>
+
+          {/* Subscription management for Pro users */}
+          {isPro && subStatus?.status === "active" && (
+            <div className="mt-4 space-y-3">
+              {subStatus.cancelAtPeriodEnd ? (
+                <>
+                  <div className="flex items-start gap-2 rounded-lg bg-amber-50 border border-amber-200 p-3">
+                    <AlertTriangle className="h-4 w-4 text-amber-600 mt-0.5 shrink-0" />
+                    <div className="text-sm">
+                      <p className="font-medium text-amber-800">
+                        {t("subscriptionCanceling")}
+                      </p>
+                      <p className="text-amber-700 mt-0.5">
+                        {t("accessUntil", { date: formattedEndDate })}
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => handleCancelOrReactivate("reactivate")}
+                    disabled={actionLoading}
+                  >
+                    {actionLoading ? (
+                      <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                    ) : null}
+                    {t("reactivateSubscription")}
+                  </Button>
+                </>
+              ) : (
+                <>
+                  {formattedEndDate && (
+                    <p className="text-xs text-muted-foreground">
+                      {t("nextBillingDate", { date: formattedEndDate })}
+                    </p>
+                  )}
+                  {showConfirm ? (
+                    <div className="rounded-lg border border-destructive/30 bg-destructive/5 p-3 space-y-3">
+                      <p className="text-sm text-destructive">
+                        {t("cancelConfirmMessage", { date: formattedEndDate })}
+                      </p>
+                      <div className="flex gap-2">
+                        <Button
+                          variant="destructive"
+                          size="sm"
+                          className="flex-1"
+                          onClick={() => handleCancelOrReactivate("cancel")}
+                          disabled={actionLoading}
+                        >
+                          {actionLoading ? (
+                            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                          ) : null}
+                          {t("confirmCancel")}
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex-1"
+                          onClick={() => setShowConfirm(false)}
+                          disabled={actionLoading}
+                        >
+                          {t("keepSubscription")}
+                        </Button>
+                      </div>
+                    </div>
+                  ) : (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="w-full text-muted-foreground hover:text-destructive"
+                      onClick={() => setShowConfirm(true)}
+                    >
+                      {t("cancelSubscription")}
+                    </Button>
+                  )}
+                </>
+              )}
+            </div>
+          )}
+
+          {isPro && subLoading && (
+            <div className="mt-4 flex justify-center">
+              <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+            </div>
+          )}
 
           {!isPro && (
             <Button variant="accent" className="w-full" asChild>

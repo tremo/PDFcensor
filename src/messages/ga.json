@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
-    "loginToActivate": "Sign in to link Pro features to your account"
+    "loginToActivate": "Sign in to link Pro features to your account",
+    "cancelSubscription": "Cealaigh síntiús",
+    "subscriptionCanceling": "Tá do shíntiús socraithe le cealú",
+    "accessUntil": "Beidh rochtain Pro agat go dtí {date}",
+    "reactivateSubscription": "Athghníomhachtaigh síntiús",
+    "nextBillingDate": "An chéad dáta billeála eile: {date}",
+    "cancelConfirmMessage": "An bhfuil tú cinnte? Coinneoidh tú rochtain Pro go dtí {date}, ansin aistreoidh do phlean go Saor in Aisce.",
+    "confirmCancel": "Sea, cealaigh",
+    "keepSubscription": "Coinnigh síntiús"
   },
   "privacy": {
     "title": "Polasaí Príobháideachta",

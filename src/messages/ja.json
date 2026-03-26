@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "OfflineRedact Proをご購入いただきありがとうございます。アカウントがアップグレードされました。",
     "proActivated": "Proライセンスが有効化されました",
     "proLinkedToAccount": "Pro機能は{email}にリンクされています",
-    "loginToActivate": "Pro機能をアカウントにリンクするにはサインインしてください"
+    "loginToActivate": "Pro機能をアカウントにリンクするにはサインインしてください",
+    "cancelSubscription": "サブスクリプションをキャンセル",
+    "subscriptionCanceling": "サブスクリプションはキャンセルされる予定です",
+    "accessUntil": "{date}までProアクセスをご利用いただけます",
+    "reactivateSubscription": "サブスクリプションを再開",
+    "nextBillingDate": "次回請求日: {date}",
+    "cancelConfirmMessage": "本当によろしいですか？{date}までProアクセスを維持し、その後プランは無料に切り替わります。",
+    "confirmCancel": "はい、キャンセル",
+    "keepSubscription": "サブスクリプションを維持"
   },
   "privacy": {
     "title": "プライバシーポリシー",

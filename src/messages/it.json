@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
-    "loginToActivate": "Sign in to link Pro features to your account"
+    "loginToActivate": "Sign in to link Pro features to your account",
+    "cancelSubscription": "Annulla abbonamento",
+    "subscriptionCanceling": "Il tuo abbonamento è impostato per la cancellazione",
+    "accessUntil": "Avrai accesso Pro fino al {date}",
+    "reactivateSubscription": "Riattiva abbonamento",
+    "nextBillingDate": "Prossima data di fatturazione: {date}",
+    "cancelConfirmMessage": "Sei sicuro? Manterrai l'accesso Pro fino al {date}, dopodiché il tuo piano passerà a Gratuito.",
+    "confirmCancel": "Sì, annulla",
+    "keepSubscription": "Mantieni abbonamento"
   },
   "privacy": {
     "title": "Informativa sulla Privacy",

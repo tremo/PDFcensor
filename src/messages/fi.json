@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
-    "loginToActivate": "Sign in to link Pro features to your account"
+    "loginToActivate": "Sign in to link Pro features to your account",
+    "cancelSubscription": "Peruuta tilaus",
+    "subscriptionCanceling": "Tilauksesi on asetettu peruutettavaksi",
+    "accessUntil": "Sinulla on Pro-käyttöoikeus {date} asti",
+    "reactivateSubscription": "Aktivoi tilaus uudelleen",
+    "nextBillingDate": "Seuraava laskutuspäivä: {date}",
+    "cancelConfirmMessage": "Oletko varma? Säilytät Pro-käyttöoikeuden {date} asti, jonka jälkeen tilauksesi vaihtuu Ilmaiseksi.",
+    "confirmCancel": "Kyllä, peruuta",
+    "keepSubscription": "Säilytä tilaus"
   },
   "privacy": {
     "title": "Tietosuojakäytäntö",

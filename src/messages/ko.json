@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "OfflineRedact Pro를 구매해 주셔서 감사합니다. 계정이 업그레이드되었습니다.",
     "proActivated": "Pro 라이선스 활성화됨",
     "proLinkedToAccount": "Pro 기능이 {email}에 연결되었습니다",
-    "loginToActivate": "Pro 기능을 계정에 연결하려면 로그인하세요"
+    "loginToActivate": "Pro 기능을 계정에 연결하려면 로그인하세요",
+    "cancelSubscription": "구독 취소",
+    "subscriptionCanceling": "구독이 취소 예정입니다",
+    "accessUntil": "{date}까지 Pro 액세스를 이용할 수 있습니다",
+    "reactivateSubscription": "구독 재활성화",
+    "nextBillingDate": "다음 결제일: {date}",
+    "cancelConfirmMessage": "정말 취소하시겠습니까? {date}까지 Pro 액세스가 유지되며, 이후 무료 플랜으로 전환됩니다.",
+    "confirmCancel": "예, 취소",
+    "keepSubscription": "구독 유지"
   },
   "privacy": {
     "title": "개인정보 처리방침",

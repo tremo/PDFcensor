@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Tak for dit køb af OfflineRedact Pro. Din konto er blevet opgraderet.",
     "proActivated": "Pro-licens aktiveret",
     "proLinkedToAccount": "Pro-funktioner er knyttet til {email}",
-    "loginToActivate": "Log ind for at knytte Pro-funktioner til din konto"
+    "loginToActivate": "Log ind for at knytte Pro-funktioner til din konto",
+    "cancelSubscription": "Annuller abonnement",
+    "subscriptionCanceling": "Dit abonnement er sat til at blive annulleret",
+    "accessUntil": "Du har Pro-adgang indtil {date}",
+    "reactivateSubscription": "Genaktiver abonnement",
+    "nextBillingDate": "Næste faktureringsdato: {date}",
+    "cancelConfirmMessage": "Er du sikker? Du beholder Pro-adgang indtil {date}, derefter skifter din plan til Gratis.",
+    "confirmCancel": "Ja, annuller",
+    "keepSubscription": "Behold abonnement"
   },
   "privacy": {
     "title": "Privatlivspolitik",

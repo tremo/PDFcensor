@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "感谢您购买 OfflineRedact Pro。您的账户已升级。",
     "proActivated": "Pro 许可证已激活",
     "proLinkedToAccount": "Pro 功能已关联到 {email}",
-    "loginToActivate": "登录以将 Pro 功能关联到您的账户"
+    "loginToActivate": "登录以将 Pro 功能关联到您的账户",
+    "cancelSubscription": "取消订阅",
+    "subscriptionCanceling": "您的订阅已设置为取消",
+    "accessUntil": "您将拥有 Pro 访问权限至 {date}",
+    "reactivateSubscription": "重新激活订阅",
+    "nextBillingDate": "下次计费日期：{date}",
+    "cancelConfirmMessage": "您确定吗？您将保留 Pro 访问权限至 {date}，之后您的计划将切换为免费版。",
+    "confirmCancel": "是的，取消",
+    "keepSubscription": "保留订阅"
   },
   "privacy": {
     "title": "隐私政策",

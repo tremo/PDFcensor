@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Thank you for purchasing OfflineRedact Pro. Your account has been upgraded.",
     "proActivated": "Pro License Activated",
     "proLinkedToAccount": "Pro features are linked to {email}",
-    "loginToActivate": "Sign in to link Pro features to your account"
+    "loginToActivate": "Sign in to link Pro features to your account",
+    "cancelSubscription": "Atšaukti prenumeratą",
+    "subscriptionCanceling": "Jūsų prenumerata nustatyta atšaukimui",
+    "accessUntil": "Turėsite Pro prieigą iki {date}",
+    "reactivateSubscription": "Iš naujo aktyvuoti prenumeratą",
+    "nextBillingDate": "Kita apmokėjimo data: {date}",
+    "cancelConfirmMessage": "Ar tikrai? Pro prieiga išliks iki {date}, po to jūsų planas bus perjungtas į Nemokamą.",
+    "confirmCancel": "Taip, atšaukti",
+    "keepSubscription": "Palikti prenumeratą"
   },
   "privacy": {
     "title": "Privatumo politika",

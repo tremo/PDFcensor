@@ -400,7 +400,15 @@
     "paymentSuccessDescription": "Ευχαριστούμε για την αγορά OfflineRedact Pro.",
     "proActivated": "Άδεια Pro ενεργοποιήθηκε",
     "proLinkedToAccount": "Pro συνδέεται με {email}",
-    "loginToActivate": "Συνδεθείτε για σύνδεση Pro"
+    "loginToActivate": "Συνδεθείτε για σύνδεση Pro",
+    "cancelSubscription": "Ακύρωση συνδρομής",
+    "subscriptionCanceling": "Η συνδρομή σας έχει οριστεί για ακύρωση",
+    "accessUntil": "Θα έχετε πρόσβαση Pro έως τις {date}",
+    "reactivateSubscription": "Επανενεργοποίηση συνδρομής",
+    "nextBillingDate": "Επόμενη ημερομηνία χρέωσης: {date}",
+    "cancelConfirmMessage": "Είστε σίγουροι; Θα διατηρήσετε πρόσβαση Pro έως τις {date}, μετά το πλάνο σας θα αλλάξει σε Δωρεάν.",
+    "confirmCancel": "Ναι, ακύρωση",
+    "keepSubscription": "Διατήρηση συνδρομής"
   },
   "privacy": {
     "title": "Πολιτική Απορρήτου",
