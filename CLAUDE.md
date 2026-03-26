@@ -55,29 +55,29 @@ middleware.ts # Next.js middleware
 
 ### KRİTİK — Güvenlik / Veri Kaybı
 
-- [ ] **Checkout locale injection (Open Redirect)** — `src/app/api/checkout/route.ts:32` — `locale` doğrulanmadan Stripe URL'lerine ekleniyor
+- [x] ~~Checkout locale injection (Open Redirect)~~ — `checkout/route.ts:21` — `locales.includes(rawLocale)` ile doğrulanıyor
 - [ ] **StructuredData XSS** — `src/components/seo/StructuredData.tsx:9` — `dangerouslySetInnerHTML` ile `</script>` injection riski
 
 ### ÖNEMLİ — Fonksiyonel Hatalar
 
 - [ ] **DOCX XML üzerinde global replace** — `src/lib/docx/redactor.ts:120-128` — PII sadece `<w:t>` içinde değil tüm XML'de değiştiriliyor
 - [ ] **DOCX charOffset hatalı hesaplama** — `src/lib/docx/parser.ts:85-90` — Boş paragraflar offset'i bozuyor
-- [ ] **DOCX XML entity decode eksik** — `src/lib/docx/parser.ts:80` — `&amp;`, `&lt;` decode edilmiyor
-- [ ] **`redactXmlContentAdvanced` hiç çağrılmıyor** — `src/lib/docx/redactor.ts:41,137` — Cross-run PII redaksiyonu çalışmıyor
-- [ ] **Lisans anahtarı müşteriye ulaşmıyor** — `src/app/[locale]/success/page.tsx:16` — Sahte `demo-` key gösteriliyor
+- [x] ~~DOCX XML entity decode eksik~~ — `parser.ts:98-105` — `decodeXmlEntities()` mevcut ve line 83'te çağrılıyor
+- [x] ~~`redactXmlContentAdvanced` hiç çağrılmıyor~~ — `redactor.ts:41` — Çağrılıyor, cross-run PII paragraf bazında işleniyor
+- [x] ~~Lisans anahtarı müşteriye ulaşmıyor~~ — `SuccessClient.tsx` — Demo key kaldırıldı, "Pro Activated" gösteriliyor
 - [x] ~~Webhook idempotency kontrolü yok~~ — Zaten `checkSessionProcessed`/`markSessionProcessed` ile Redis'te mevcut (30 gün TTL)
-- [ ] **`useTranslations` server component'te** — `src/app/[locale]/page.tsx:1` — `"use client"` veya `getTranslations` gerekli
-- [ ] **Blog 404 yerine 200 dönüyor** — `src/app/[locale]/blog/[slug]/page.tsx:48-59` — `notFound()` çağrılmıyor
+- [x] ~~`useTranslations` server component'te~~ — `page.tsx:1,42` — Zaten `getTranslations` (server-side) kullanılıyor
+- [x] ~~Blog 404 yerine 200 dönüyor~~ — `blog/[slug]/page.tsx:98-100` — `notFound()` çağrılıyor
 - [ ] **Batch DOCX confirmed durumunu yok sayıyor** — `src/hooks/useBatchProcessor.ts:274-295` — Kullanıcının reject'leri dikkate alınmıyor
 - [ ] **DocxViewer tooltip PII'yi açığa çıkarıyor** — `src/components/docx/DocxViewer.tsx:126-127` — Hover'da orijinal metin görünüyor
 - [ ] **DocxViewer örtüşen redaksiyon bozulması** — `src/components/docx/DocxViewer.tsx:36-74` — Overlapping redaction'lar segmentleri bozuyor
 
 ### PERFORMANS
 
-- [ ] **OCR: PDF her sayfa için yeniden parse** — `src/lib/pdf/ocr.ts:54`, `parser.ts:92` — 100 sayfa = 100x parse
+- [x] ~~OCR: PDF her sayfa için yeniden parse~~ — `ocr.ts:200-204` PDF bir kez `getDocument` ile yükleniyor, `renderPageToCanvas` proxy alınca tekrar parse etmiyor
 - [x] ~~ArrayBuffer.slice(0) gereksiz kopyalama~~ — `parser.ts` — `getDocumentArrayBuffer`/`getDocxArrayBuffer` lazy load + cache
 - [x] ~~Batch tüm dosyaları bellekte tutuyor~~ — `useBatchProcessor.ts` — PII sonrası ağır veri serbest, redaksiyon File ref'ten lazy re-load
-- [ ] **Eksik memoization** — `PDFViewer.tsx`, `RedactionControls.tsx` — pageRedactions, allPiiTypes her render'da hesaplanıyor
+- [x] ~~Eksik memoization~~ — `PDFViewer.tsx:159` `pageRedactions` useMemo, `RedactionControls.tsx:84-136` tüm türetilmiş veriler useMemo ile sarılı
 
 ### UI/UX
 
@@ -89,11 +89,11 @@ middleware.ts # Next.js middleware
 
 ### SEO / i18n
 
-- [ ] **Blog sitemap'te yok** — `src/app/sitemap.ts:6`
-- [ ] **Sayfalarda generateMetadata eksik** — pricing, redact, blog, success, privacy, terms
-- [ ] **Hardcoded İngilizce sayfalar** — privacy, terms, success, blog, not-found
-- [ ] **Locale listesi 3 yerde tekrar** — `middleware.ts`, `navigation.ts`, `config.ts`
-- [ ] **Hassas veri loglama** — `src/app/api/webhook/route.ts:49` — Lisans + email console.log
+- [x] ~~Blog sitemap'te yok~~ — `sitemap.ts:48-62` — Blog slugları locale alternateleriyle sitemap'te mevcut
+- [x] ~~Sayfalarda generateMetadata eksik~~ — Tüm sayfalarda mevcut; success sayfası da artık `getTranslations` ile dinamik
+- [x] ~~Hardcoded İngilizce sayfalar~~ — Tüm sayfalar çeviri kullanıyor; success metadata da çevrildi
+- [x] ~~Locale listesi 3 yerde tekrar~~ — `middleware.ts` artık `config.ts`'ten import ediyor, `navigation.ts` zaten import ediyordu
+- [x] ~~Hassas veri loglama~~ — `webhook/route.ts` — Lisans/email artık loglanmıyor, sadece genel hata logu var
 - [ ] **Rate limiting yok** — `/api/checkout`, `/api/license/validate`, `/api/webhook`
 
 ### KOD KALİTESİ
@@ -102,7 +102,7 @@ middleware.ts # Next.js middleware
 - [ ] **Duplike PII bounding box hesaplama** — `usePDFProcessor.ts` vs `useBatchProcessor.ts`
 - [ ] **Duplike cleanMetadata** — `redactor.ts` vs `metadata-cleaner.ts`
 - [ ] **RedactionControls / DocxRedactionControls %90 aynı** — Ortak component çıkarılabilir
-- [ ] **Dead code: pendingAutoScan ref** — Hiç kullanılmıyor
+- [x] ~~Dead code: pendingAutoScan ref~~ — Kaynak koddan kaldırılmış
 - [ ] **Dead code: `useLicense` hook + `/api/license/validate`** — Hiçbir component tarafından kullanılmıyor, Pro kontrolü `AuthProvider.is_pro` ile yapılıyor
 - [ ] **IBAN regex çok kısıtlayıcı** — `src/lib/pii/patterns/global.ts:32` — 15-16 char IBAN'lar kaçırılıyor
 - [ ] **İsim tespiti false positive** — `src/lib/pii/patterns/names.ts` — ALL CAPS kelimeler isim sanılıyor

@@ -2,16 +2,11 @@ import { NextResponse, type NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
 import { defineRouting } from "next-intl/routing";
 import { updateSession } from "@/lib/supabase/middleware";
-
-const allLocales = [
-  "en", "tr", "de", "fr", "es", "pt", "ja", "ko", "zh",
-  "bg", "cs", "da", "el", "et", "fi", "ga", "hr", "hu",
-  "it", "lt", "lv", "mt", "nl", "pl", "ro", "sk", "sl", "sv",
-] as const;
+import { locales, defaultLocale } from "@/lib/i18n/config";
 
 const routing = defineRouting({
-  locales: [...allLocales],
-  defaultLocale: "en",
+  locales: [...locales],
+  defaultLocale,
   localeDetection: true,
 });
 
@@ -20,7 +15,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 // Routes that require authentication
 const protectedPaths = ["/account"];
 
-const localeSet = new Set<string>(allLocales);
+const localeSet = new Set<string>(locales);
 
 function getPathWithoutLocale(pathname: string): string {
   const segments = pathname.split("/");
@@ -66,7 +61,7 @@ export async function middleware(request: NextRequest) {
   return intlResponse;
 }
 
-const localePattern = allLocales.join("|");
+const localePattern = locales.join("|");
 export const config = {
   matcher: ["/", `/(${localePattern})/:path*`],
 };
