@@ -74,10 +74,10 @@ middleware.ts # Next.js middleware
 
 ### PERFORMANS
 
-- [ ] **OCR: PDF her sayfa için yeniden parse** — `src/lib/pdf/ocr.ts:54`, `parser.ts:92` — 100 sayfa = 100x parse
+- [x] ~~OCR: PDF her sayfa için yeniden parse~~ — `ocr.ts:200-204` PDF bir kez `getDocument` ile yükleniyor, `renderPageToCanvas` proxy alınca tekrar parse etmiyor
 - [x] ~~ArrayBuffer.slice(0) gereksiz kopyalama~~ — `parser.ts` — `getDocumentArrayBuffer`/`getDocxArrayBuffer` lazy load + cache
 - [x] ~~Batch tüm dosyaları bellekte tutuyor~~ — `useBatchProcessor.ts` — PII sonrası ağır veri serbest, redaksiyon File ref'ten lazy re-load
-- [ ] **Eksik memoization** — `PDFViewer.tsx`, `RedactionControls.tsx` — pageRedactions, allPiiTypes her render'da hesaplanıyor
+- [x] ~~Eksik memoization~~ — `PDFViewer.tsx:159` `pageRedactions` useMemo, `RedactionControls.tsx:84-136` tüm türetilmiş veriler useMemo ile sarılı
 
 ### UI/UX
 
