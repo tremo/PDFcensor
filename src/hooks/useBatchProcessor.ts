@@ -310,11 +310,8 @@ export function useBatchProcessor() {
         setCurrentFileIndex(i);
 
         if (result.type === "pdf") {
-          // Auto-confirm all
-          const confirmed = result.pdfRedactions.map((r) => ({
-            ...r,
-            confirmed: true,
-          }));
+          // Only include user-confirmed redactions (respect rejections)
+          const confirmed = result.pdfRedactions.filter((r) => r.confirmed);
 
           // Use cached page heights, or reload from File if needed
           let pageHeights = result.pdfPageHeights;

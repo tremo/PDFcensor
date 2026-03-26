@@ -172,19 +172,39 @@ function redactParagraphElement(
 
   const fullParagraphText = textParts.map((p) => p.text).join("");
 
-  // Check if any redaction range values appear in this paragraph
-  let result = pXml;
+  // Build a character-to-asterisk replacement map for the full paragraph text
+  const chars = fullParagraphText.split("");
+  const replaced = new Uint8Array(chars.length); // 0 = keep, 1 = replace with *
+
   for (const range of ranges) {
-    if (fullParagraphText.includes(range.value)) {
-      // Replace only within <w:t> element content to avoid corrupting XML structure
-      const escaped = escapeRegex(range.value);
-      result = result.replace(
-        /(<w:t(?:\s[^>]*)?>)([^<]*?)(<\/w:t>)/g,
-        (_, open, content, close) => {
-          const newContent = content.replace(new RegExp(escaped, "g"), escapeXml(range.asterisks));
-          return open + newContent + close;
-        }
-      );
+    let searchFrom = 0;
+    while (true) {
+      const idx = fullParagraphText.indexOf(range.value, searchFrom);
+      if (idx === -1) break;
+      for (let i = idx; i < idx + range.value.length; i++) {
+        replaced[i] = 1;
+      }
+      searchFrom = idx + range.value.length;
+    }
+  }
+
+  // Apply the replacement map to each <w:t> element based on its character offset
+  let charOffset = 0;
+  let result = pXml;
+
+  for (const part of textParts) {
+    const partLen = part.text.length;
+    let newText = "";
+    for (let i = 0; i < partLen; i++) {
+      newText += replaced[charOffset + i] ? "*" : part.text[i];
+    }
+    charOffset += partLen;
+
+    if (newText !== part.text) {
+      const openTagMatch = part.fullMatch.match(/^<w:t(?:\s[^>]*)?>/);
+      const openTag = openTagMatch ? openTagMatch[0] : "<w:t>";
+      const replacement = openTag + escapeXml(newText) + "</w:t>";
+      result = result.replace(part.fullMatch, replacement);
     }
   }
 

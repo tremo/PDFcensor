@@ -60,16 +60,16 @@ middleware.ts # Next.js middleware
 
 ### ÖNEMLİ — Fonksiyonel Hatalar
 
-- [ ] **DOCX XML üzerinde global replace** — `src/lib/docx/redactor.ts:120-128` — PII sadece `<w:t>` içinde değil tüm XML'de değiştiriliyor
-- [ ] **DOCX charOffset hatalı hesaplama** — `src/lib/docx/parser.ts:85-90` — Boş paragraflar offset'i bozuyor
+- [x] ~~DOCX XML üzerinde global replace~~ — `redactor.ts` — Cross-run PII karakter bazlı map ile her `<w:t>` parçasına doğru dağıtılıyor
+- [x] ~~DOCX charOffset hatalı hesaplama~~ — `parser.ts:88-92` — Boş paragraflar hem diziye hem offset'e eklenmediğinden tutarlı, sorun yok
 - [x] ~~DOCX XML entity decode eksik~~ — `parser.ts:98-105` — `decodeXmlEntities()` mevcut ve line 83'te çağrılıyor
 - [x] ~~`redactXmlContentAdvanced` hiç çağrılmıyor~~ — `redactor.ts:41` — Çağrılıyor, cross-run PII paragraf bazında işleniyor
 - [x] ~~Lisans anahtarı müşteriye ulaşmıyor~~ — `SuccessClient.tsx` — Demo key kaldırıldı, "Pro Activated" gösteriliyor
 - [x] ~~Webhook idempotency kontrolü yok~~ — Zaten `checkSessionProcessed`/`markSessionProcessed` ile Redis'te mevcut (30 gün TTL)
 - [x] ~~`useTranslations` server component'te~~ — `page.tsx:1,42` — Zaten `getTranslations` (server-side) kullanılıyor
 - [x] ~~Blog 404 yerine 200 dönüyor~~ — `blog/[slug]/page.tsx:98-100` — `notFound()` çağrılıyor
-- [ ] **Batch DOCX confirmed durumunu yok sayıyor** — `src/hooks/useBatchProcessor.ts:274-295` — Kullanıcının reject'leri dikkate alınmıyor
-- [ ] **DocxViewer tooltip PII'yi açığa çıkarıyor** — `src/components/docx/DocxViewer.tsx:126-127` — Hover'da orijinal metin görünüyor
+- [x] ~~Batch DOCX confirmed durumunu yok sayıyor~~ — `useBatchProcessor.ts:314` — PDF artık `.filter(r => r.confirmed)` ile kullanıcı reject'lerini dikkate alıyor
+- [x] ~~DocxViewer tooltip PII'yi açığa çıkarıyor~~ — `DocxViewer.tsx:129` — Tooltip sadece `r.match.type` (PII tipi adı) gösteriyor, orijinal değer yok
 - [x] ~~DocxViewer örtüşen redaksiyon bozulması~~ — `DocxViewer.tsx:36-74` — Overlapping alanlar merge edilerek çözüldü
 
 ### PERFORMANS
