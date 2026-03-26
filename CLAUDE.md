@@ -90,9 +90,9 @@ middleware.ts # Next.js middleware
 ### SEO / i18n
 
 - [x] ~~Blog sitemap'te yok~~ — `sitemap.ts:48-62` — Blog slugları locale alternateleriyle sitemap'te mevcut
-- [ ] **Sayfalarda generateMetadata eksik** — pricing, redact, blog, success, privacy, terms
-- [ ] **Hardcoded İngilizce sayfalar** — privacy, terms, success, blog, not-found
-- [ ] **Locale listesi 3 yerde tekrar** — `middleware.ts`, `navigation.ts`, `config.ts`
+- [x] ~~Sayfalarda generateMetadata eksik~~ — Tüm sayfalarda mevcut; success sayfası da artık `getTranslations` ile dinamik
+- [x] ~~Hardcoded İngilizce sayfalar~~ — Tüm sayfalar çeviri kullanıyor; success metadata da çevrildi
+- [x] ~~Locale listesi 3 yerde tekrar~~ — `middleware.ts` artık `config.ts`'ten import ediyor, `navigation.ts` zaten import ediyordu
 - [x] ~~Hassas veri loglama~~ — `webhook/route.ts` — Lisans/email artık loglanmıyor, sadece genel hata logu var
 - [ ] **Rate limiting yok** — `/api/checkout`, `/api/license/validate`, `/api/webhook`
 
