@@ -662,155 +662,155 @@
   },
   "terms": {
     "meta": {
-      "title": "Terms of Service — OfflineRedact",
-      "description": "Terms and conditions for using the OfflineRedact document redaction tool. 30-day money-back guarantee included."
+      "title": "Условия за ползване — OfflineRedact",
+      "description": "Условия и правила за използване на инструмента за редактиране на документи OfflineRedact. Включена 30-дневна гаранция за връщане на парите."
     },
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: March 2026",
-    "effectiveDate": "Effective: March 1, 2026",
-    "toc": "Table of Contents",
-    "highlightGuarantee": "30-Day Money-Back Guarantee — Not satisfied? Get a full refund within 30 days, no questions asked.",
-    "highlightOwnership": "Your files never leave your device — you retain full ownership of all documents processed with OfflineRedact.",
+    "title": "Условия за ползване",
+    "lastUpdated": "Последна актуализация: март 2026",
+    "effectiveDate": "В сила от: 1 март 2026",
+    "toc": "Съдържание",
+    "highlightGuarantee": "30-дневна гаранция за връщане на парите — Не сте доволни? Получете пълно възстановяване в рамките на 30 дни, без въпроси.",
+    "highlightOwnership": "Файловете ви никога не напускат устройството ви — вие запазвате пълната собственост върху всички документи, обработени с OfflineRedact.",
     "acceptance": {
-      "heading": "1. Acceptance of Terms",
-      "text": "By accessing or using OfflineRedact (the \"Service\"), you agree to be bound by these Terms of Service (\"Terms\"). If you do not agree to all of these Terms, do not access or use the Service.",
-      "text2": "You must be at least 16 years old (or the age of digital consent in your jurisdiction) to use this Service. By using the Service, you represent that you meet this age requirement.",
-      "text3": "If you are using the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms."
+      "heading": "1. Приемане на условията",
+      "text": "С достъпа или използването на OfflineRedact (\"Услугата\") вие се съгласявате да бъдете обвързани с тези Условия за ползване (\"Условия\"). Ако не сте съгласни с всички тези Условия, не осъществявайте достъп и не използвайте Услугата.",
+      "text2": "Трябва да сте на поне 16 години (или на възрастта за цифрово съгласие във вашата юрисдикция), за да използвате тази Услуга. Използвайки Услугата, вие декларирате, че отговаряте на това възрастово изискване.",
+      "text3": "Ако използвате Услугата от името на организация, вие декларирате и гарантирате, че имате правомощия да обвържете тази организация с тези Условия."
     },
     "serviceDesc": {
-      "heading": "2. Service Description",
-      "text": "OfflineRedact is a client-side document redaction tool that detects and permanently removes Personally Identifiable Information (PII) from documents. The Service includes the following capabilities:",
+      "heading": "2. Описание на услугата",
+      "text": "OfflineRedact е инструмент за редактиране на документи от страна на клиента, който открива и окончателно премахва лични данни (PII) от документи. Услугата включва следните възможности:",
       "features": [
-        "PDF document redaction — true text removal from PDF content streams",
-        "Word document (.docx) redaction — PII removal from document XML",
-        "Image redaction — face detection and blurring using local AI models",
-        "OCR (Optical Character Recognition) — text extraction from scanned documents and images",
-        "Automatic PII detection — SSN, names, emails, phone numbers, IBAN, credit cards, passport numbers, addresses",
-        "Multi-regulation support — GDPR, HIPAA, KVKK, CCPA, LGPD, and more",
-        "Metadata cleaning — removal of author, creation date, and software information",
-        "Batch processing — multiple file redaction with ZIP download (Pro feature)"
+        "Редактиране на PDF документи — истинско премахване на текст от PDF потоците на съдържание",
+        "Редактиране на Word документи (.docx) — премахване на лични данни от XML на документа",
+        "Редактиране на изображения — разпознаване на лица и замъгляване чрез локални AI модели",
+        "OCR (оптично разпознаване на символи) — извличане на текст от сканирани документи и изображения",
+        "Автоматично откриване на лични данни — SSN, имена, имейли, телефонни номера, IBAN, кредитни карти, номера на паспорти, адреси",
+        "Поддръжка на множество регулации — GDPR, HIPAA, KVKK, CCPA, LGPD и други",
+        "Почистване на метаданни — премахване на автор, дата на създаване и информация за софтуера",
+        "Пакетна обработка — редактиране на множество файлове с изтегляне като ZIP (Pro функция)"
       ],
-      "text2": "All document processing occurs entirely within your web browser. No document content is ever uploaded to, processed by, or stored on our servers."
+      "text2": "Цялата обработка на документи се извършва изцяло в уеб браузъра ви. Никакво съдържание на документи никога не се качва, обработва или съхранява на нашите сървъри."
     },
     "noGuarantee": {
-      "heading": "3. Disclaimer — No Guarantee of Complete Redaction",
-      "text": "While we strive for the highest accuracy in PII detection, OfflineRedact does not guarantee 100% detection or removal of all sensitive information. Automated pattern matching may miss certain data formats, non-standard patterns, or context-dependent information.",
-      "text2": "You are solely responsible for reviewing and verifying all redaction results before sharing, publishing, or distributing any document processed with OfflineRedact. We strongly recommend:",
+      "heading": "3. Отказ от отговорност — Без гаранция за пълно редактиране",
+      "text": "Въпреки че се стремим към най-висока точност при откриването на лични данни, OfflineRedact не гарантира 100% откриване или премахване на цялата чувствителна информация. Автоматичното съвпадение на шаблони може да пропусне определени формати на данни, нестандартни модели или контекстно зависима информация.",
+      "text2": "Вие носите цялата отговорност за прегледа и проверката на всички резултати от редактирането, преди да споделите, публикувате или разпространите документ, обработен с OfflineRedact. Силно препоръчваме:",
       "items": [
-        "Always review the redacted document visually before sharing",
-        "Test that redacted text cannot be selected, copied, or extracted",
-        "Use manual redaction for any items the automatic detection may have missed",
-        "Keep a secure copy of the original document until you have verified the redaction"
+        "Винаги преглеждайте визуално редактирания документ преди споделяне",
+        "Проверете, че редактираният текст не може да бъде избран, копиран или извлечен",
+        "Използвайте ръчно редактиране за елементи, които автоматичното откриване може да е пропуснало",
+        "Запазете сигурно копие на оригиналния документ, докато не потвърдите редактирането"
       ],
-      "text3": "OfflineRedact is a tool to assist with document redaction — it does not replace professional legal or compliance review when required."
+      "text3": "OfflineRedact е инструмент за подпомагане на редактирането на документи — той не замества професионален правен преглед или преглед за съответствие, когато е необходим."
     },
     "license": {
-      "heading": "4. License & Subscription Plans",
-      "text": "OfflineRedact offers the following plans:",
-      "freeHeading": "Free Plan",
+      "heading": "4. Лиценз и абонаментни планове",
+      "text": "OfflineRedact предлага следните планове:",
+      "freeHeading": "Безплатен план",
       "freeItems": [
-        "Unlimited single-file PDF, Word, and image redaction",
-        "All PII detection patterns and regulation profiles",
-        "Metadata cleaning",
-        "Small watermark on output files"
+        "Неограничено редактиране на единичен PDF, Word и изображение",
+        "Всички модели за откриване на лични данни и регулаторни профили",
+        "Почистване на метаданни",
+        "Малък воден знак върху изходните файлове"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro план ($6.99/месец или $59.99/година)",
       "proItems": [
-        "Everything in Free — with no watermark",
-        "Batch processing — redact multiple files at once",
-        "ZIP download for batch results",
-        "Priority support",
-        "Cancel anytime — no long-term commitment"
+        "Всичко от безплатния план — без воден знак",
+        "Пакетна обработка — редактирайте множество файлове наведнъж",
+        "ZIP изтегляне за пакетни резултати",
+        "Приоритетна поддръжка",
+        "Откажете по всяко време — без дългосрочен ангажимент"
       ],
-      "text2": "Pro subscriptions are billed monthly or annually through Stripe. You may cancel your subscription at any time; your Pro features will remain active until the end of the current billing period.",
-      "text3": "We reserve the right to modify pricing with 30 days' advance notice. Existing subscribers will be grandfathered at their current rate for the remainder of their billing cycle."
+      "text2": "Pro абонаментите се таксуват месечно или годишно чрез Stripe. Можете да откажете абонамента си по всяко време; вашите Pro функции ще останат активни до края на текущия период на таксуване.",
+      "text3": "Запазваме си правото да променяме ценообразуването с 30 дни предизвестие. Съществуващите абонати ще запазят текущата си тарифа до края на периода им на таксуване."
     },
     "refundPolicy": {
-      "heading": "5. Refund Policy",
-      "text": "We offer a 30-day money-back guarantee on all Pro subscriptions. If you are not satisfied with the Service for any reason, you may request a full refund within 30 days of your initial purchase.",
+      "heading": "5. Политика за възстановяване на средства",
+      "text": "Предлагаме 30-дневна гаранция за връщане на парите за всички Pro абонаменти. Ако не сте доволни от Услугата по каквато и да е причина, можете да поискате пълно възстановяване в рамките на 30 дни от първоначалната покупка.",
       "items": [
-        "Refund requests must be submitted to support@offlineredact.com within 30 days of purchase",
-        "Refunds are processed to the original payment method within 5-10 business days",
-        "After 30 days, no partial or prorated refunds are available",
-        "You may cancel your subscription at any time to prevent future charges"
+        "Заявките за възстановяване трябва да бъдат изпратени на support@offlineredact.com в рамките на 30 дни от покупката",
+        "Възстановяванията се обработват по оригиналния метод на плащане в рамките на 5-10 работни дни",
+        "След 30 дни не се предлагат частични или пропорционални възстановявания",
+        "Можете да откажете абонамента си по всяко време, за да предотвратите бъдещи таксувания"
       ],
-      "text2": "For annual subscriptions, the 30-day guarantee applies from the date of purchase. If you cancel after 30 days, your Pro access continues until the end of the annual period — no refund is issued for the remaining term."
+      "text2": "За годишни абонаменти 30-дневната гаранция се прилага от датата на покупката. Ако откажете след 30 дни, вашият Pro достъп продължава до края на годишния период — не се издава възстановяване за оставащия срок."
     },
     "acceptableUse": {
-      "heading": "6. Acceptable Use Policy",
-      "text": "You agree to use OfflineRedact only for lawful purposes. The following uses are prohibited:",
+      "heading": "6. Политика за допустимо използване",
+      "text": "Вие се съгласявате да използвате OfflineRedact само за законни цели. Следните употреби са забранени:",
       "prohibited": [
-        "Using the Service for any illegal activity or to violate any applicable law or regulation",
-        "Attempting to reverse engineer, decompile, or disassemble the Service's source code",
-        "Automated scraping, crawling, or data extraction from the Service",
-        "Attempting to circumvent any access controls, licensing mechanisms, or security measures",
-        "Using the Service to process documents you do not have the right to access or modify",
-        "Reselling, sublicensing, or redistributing the Service without our written consent",
-        "Interfering with or disrupting the Service's infrastructure or other users' access"
+        "Използване на Услугата за незаконна дейност или за нарушаване на приложим закон или нормативен акт",
+        "Опити за обратно инженерство, декомпилиране или дизасемблиране на изходния код на Услугата",
+        "Автоматизирано извличане, обхождане или събиране на данни от Услугата",
+        "Опити за заобикаляне на контрол на достъпа, лицензионни механизми или мерки за сигурност",
+        "Използване на Услугата за обработка на документи, до които нямате право на достъп или промяна",
+        "Препродажба, сублицензиране или преразпределяне на Услугата без наше писмено съгласие",
+        "Намеса или нарушаване на инфраструктурата на Услугата или достъпа на други потребители"
       ],
-      "text2": "Violation of this Acceptable Use Policy may result in immediate termination of your account and access to the Service."
+      "text2": "Нарушаването на тази Политика за допустимо използване може да доведе до незабавно прекратяване на вашия акаунт и достъп до Услугата."
     },
     "ip": {
-      "heading": "7. Intellectual Property",
-      "text": "The OfflineRedact software, website, brand, logos, and all associated content are the intellectual property of OfflineRedact and are protected by copyright, trademark, and other intellectual property laws.",
-      "text2": "You retain full ownership of all documents, files, and content that you process using the Service. We claim no rights over your documents. Since all processing happens in your browser, we never have access to your content.",
-      "text3": "Your Pro license grants you a non-exclusive, non-transferable, revocable right to use the Service for personal or business purposes in accordance with these Terms."
+      "heading": "7. Интелектуална собственост",
+      "text": "Софтуерът, уебсайтът, марката, логата и цялото свързано съдържание на OfflineRedact са интелектуална собственост на OfflineRedact и са защитени от авторско право, търговска марка и други закони за интелектуална собственост.",
+      "text2": "Вие запазвате пълната собственост върху всички документи, файлове и съдържание, които обработвате с Услугата. Ние не претендираме за права върху вашите документи. Тъй като цялата обработка се извършва в браузъра ви, ние никога нямаме достъп до вашето съдържание.",
+      "text3": "Вашият Pro лиценз ви предоставя неизключително, непрехвърлимо, отменимо право да използвате Услугата за лични или бизнес цели в съответствие с тези Условия."
     },
     "accountTerms": {
-      "heading": "8. Account Terms",
-      "text": "If you create an account with OfflineRedact:",
+      "heading": "8. Условия за акаунта",
+      "text": "Ако създадете акаунт в OfflineRedact:",
       "items": [
-        "You must provide accurate and complete information during registration",
-        "You are responsible for maintaining the security of your account credentials",
-        "You must not share your account or Pro license with other individuals or organizations",
-        "You must notify us immediately if you suspect unauthorized access to your account",
-        "You may request account deletion at any time by contacting support@offlineredact.com; we will delete your account data within 30 days"
+        "Трябва да предоставите точна и пълна информация при регистрацията",
+        "Вие отговаряте за поддържането на сигурността на данните за вашия акаунт",
+        "Не трябва да споделяте акаунта или Pro лиценза си с други лица или организации",
+        "Трябва незабавно да ни уведомите, ако подозирате неоторизиран достъп до вашия акаунт",
+        "Можете да поискате изтриване на акаунта по всяко време, като се свържете с support@offlineredact.com; ще изтрием данните на акаунта ви в рамките на 30 дни"
       ]
     },
     "availability": {
-      "heading": "9. Service Availability & Modifications",
-      "text": "We strive to provide reliable access to OfflineRedact, but we do not guarantee 100% uptime or uninterrupted availability. The Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.",
-      "text2": "We reserve the right to modify, update, or discontinue any feature of the Service at any time. For material changes that affect Pro subscribers, we will provide at least 30 days' advance notice via email.",
-      "text3": "Since OfflineRedact's core functionality runs in your browser, the redaction tool works even when offline (after initial page load). This means your workflow is largely unaffected by server availability."
+      "heading": "9. Наличност и промени на услугата",
+      "text": "Стремим се да осигурим надежден достъп до OfflineRedact, но не гарантираме 100% време на работа или непрекъснатост. Услугата може да бъде временно недостъпна поради поддръжка, актуализации или обстоятелства извън нашия контрол.",
+      "text2": "Запазваме си правото да променяме, актуализираме или прекратяваме всяка функция на Услугата по всяко време. За съществени промени, засягащи Pro абонатите, ще предоставим поне 30 дни предизвестие по имейл.",
+      "text3": "Тъй като основната функционалност на OfflineRedact работи в браузъра ви, инструментът за редактиране функционира дори офлайн (след първоначалното зареждане на страницата). Това означава, че вашият работен процес до голяма степен не зависи от наличността на сървъра."
     },
     "liability": {
-      "heading": "10. Limitation of Liability",
-      "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OFFLINEREDACT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:",
+      "heading": "10. Ограничение на отговорността",
+      "text": "В МАКСИМАЛНО ДОПУСТИМАТА ОТ ПРИЛОЖИМОТО ЗАКОНОДАТЕЛСТВО СТЕПЕН, OFFLINEREDACT И НЕГОВИТЕ СЛУЖИТЕЛИ, ДИРЕКТОРИ, РАБОТНИЦИ И ПРЕДСТАВИТЕЛИ НЕ НОСЯТ ОТГОВОРНОСТ ЗА КАКВИТО И ДА Е НЕПРЕКИ, СЛУЧАЙНИ, СПЕЦИАЛНИ, ПОСЛЕДВАЩИ ИЛИ НАКАЗАТЕЛНИ ВРЕДИ, ВКЛЮЧИТЕЛНО, НО НЕ САМО:",
       "items": [
-        "Loss of data, revenue, or profits arising from use of the Service",
-        "Incomplete or inaccurate redaction of sensitive information",
-        "Unauthorized access to or alteration of your account data",
-        "Service interruptions or unavailability",
-        "Any third-party actions or content"
+        "Загуба на данни, приходи или печалби, произтичащи от използването на Услугата",
+        "Непълно или неточно редактиране на чувствителна информация",
+        "Неоторизиран достъп до или промяна на данните на вашия акаунт",
+        "Прекъсвания или недостъпност на Услугата",
+        "Каквито и да е действия или съдържание на трети страни"
       ],
-      "text2": "Our total liability for any claims arising from or related to the Service shall not exceed the amount you paid to us in the twelve (12) months preceding the claim.",
-      "text3": "Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability. In such cases, our liability shall be limited to the fullest extent permitted by applicable law."
+      "text2": "Общата ни отговорност за всички искове, произтичащи от или свързани с Услугата, не може да надвишава сумата, която сте ни платили през дванадесетте (12) месеца, предхождащи иска.",
+      "text3": "Някои юрисдикции не допускат изключването на определени гаранции или ограничаването на отговорността. В такива случаи нашата отговорност ще бъде ограничена в максимално допустимата от приложимото законодателство степен."
     },
     "governingLaw": {
-      "heading": "11. Governing Law & Jurisdiction",
-      "text": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which OfflineRedact is incorporated, without regard to conflict of law provisions.",
-      "text2": "For users in the European Union, nothing in these Terms affects your rights under mandatory consumer protection laws of your country of residence. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts in your country of residence, as provided by applicable EU consumer protection legislation."
+      "heading": "11. Приложимо право и юрисдикция",
+      "text": "Тези Условия се уреждат и тълкуват в съответствие със законодателството на юрисдикцията, в която OfflineRedact е регистриран, без оглед на стълкновителните правни разпоредби.",
+      "text2": "За потребителите в Европейския съюз нищо в тези Условия не засяга вашите права съгласно задължителните закони за защита на потребителите на вашата страна на пребиваване. Всички спорове, произтичащи от тези Условия, подлежат на изключителната юрисдикция на съдилищата във вашата страна на пребиваване, както е предвидено от приложимото законодателство на ЕС за защита на потребителите."
     },
     "disputes": {
-      "heading": "12. Dispute Resolution",
-      "text": "We encourage you to contact us first at legal@offlineredact.com to resolve any disputes informally. Most concerns can be resolved quickly through direct communication.",
-      "text2": "If informal resolution is unsuccessful, any dispute shall be resolved through binding arbitration in accordance with the rules of the applicable arbitration institution, rather than in court. You agree to waive your right to participate in class action lawsuits or class-wide arbitration.",
-      "text3": "For users in the EU: This arbitration clause does not affect your rights to bring claims before the courts of your country of residence under applicable consumer protection laws. You may also use the European Commission's Online Dispute Resolution platform at ec.europa.eu/odr."
+      "heading": "12. Разрешаване на спорове",
+      "text": "Насърчаваме ви първо да се свържете с нас на legal@offlineredact.com, за да разрешим споровете неформално. Повечето въпроси могат да бъдат разрешени бързо чрез директна комуникация.",
+      "text2": "Ако неформалното разрешаване е неуспешно, всеки спор ще бъде разрешен чрез обвързващ арбитраж в съответствие с правилата на приложимата арбитражна институция, а не в съд. Вие се съгласявате да се откажете от правото си да участвате в колективни искове или колективен арбитраж.",
+      "text3": "За потребителите в ЕС: Тази арбитражна клауза не засяга правото ви да подавате искове пред съдилищата на вашата страна на пребиваване съгласно приложимите закони за защита на потребителите. Можете също да използвате платформата за онлайн разрешаване на спорове на Европейската комисия на ec.europa.eu/odr."
     },
     "severability": {
-      "heading": "13. Severability & Entire Agreement",
-      "text": "If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect.",
-      "text2": "These Terms, together with our Privacy Policy, constitute the entire agreement between you and OfflineRedact regarding the use of the Service, superseding any prior agreements or communications."
+      "heading": "13. Делимост и цялостно споразумение",
+      "text": "Ако някоя разпоредба на тези Условия бъде призната за неприложима или невалидна от компетентен съд, тази разпоредба ще бъде ограничена или премахната в минимално необходимата степен, така че останалите Условия да останат в пълна сила и действие.",
+      "text2": "Тези Условия, заедно с нашата Политика за поверителност, представляват цялостното споразумение между вас и OfflineRedact относно използването на Услугата, заменяйки всички предходни споразумения или комуникации."
     },
     "contact": {
-      "heading": "14. Contact Us",
-      "text": "If you have any questions about these Terms of Service:",
+      "heading": "14. Свържете се с нас",
+      "text": "Ако имате въпроси относно тези Условия за ползване:",
       "items": [
-        "General support: support@offlineredact.com",
-        "Legal inquiries: legal@offlineredact.com",
-        "Refund requests: support@offlineredact.com"
+        "Обща поддръжка: support@offlineredact.com",
+        "Правни запитвания: legal@offlineredact.com",
+        "Заявки за възстановяване: support@offlineredact.com"
       ],
-      "responseTime": "We aim to respond to all inquiries within 2 business days."
+      "responseTime": "Стремим се да отговорим на всички запитвания в рамките на 2 работни дни."
     }
   },
   "blog": {
