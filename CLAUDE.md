@@ -70,7 +70,7 @@ middleware.ts # Next.js middleware
 - [x] ~~Blog 404 yerine 200 dönüyor~~ — `blog/[slug]/page.tsx:98-100` — `notFound()` çağrılıyor
 - [ ] **Batch DOCX confirmed durumunu yok sayıyor** — `src/hooks/useBatchProcessor.ts:274-295` — Kullanıcının reject'leri dikkate alınmıyor
 - [ ] **DocxViewer tooltip PII'yi açığa çıkarıyor** — `src/components/docx/DocxViewer.tsx:126-127` — Hover'da orijinal metin görünüyor
-- [ ] **DocxViewer örtüşen redaksiyon bozulması** — `src/components/docx/DocxViewer.tsx:36-74` — Overlapping redaction'lar segmentleri bozuyor
+- [x] ~~DocxViewer örtüşen redaksiyon bozulması~~ — `DocxViewer.tsx:36-74` — Overlapping alanlar merge edilerek çözüldü
 
 ### PERFORMANS
 

@@ -39,21 +39,32 @@ export function DocxViewer({
       return [{ text: fullText }] as TextSegment[];
     }
 
-    // Sort redactions by start index
+    // Sort redactions by start index, then by longer range first
     const sorted = [...redactions].sort(
-      (a, b) => a.match.startIndex - b.match.startIndex
+      (a, b) => a.match.startIndex - b.match.startIndex || b.match.endIndex - a.match.endIndex
     );
+
+    // Merge overlapping ranges so no text leaks between partial overlaps
+    const merged: { start: number; end: number; redaction: DocxRedactionItem }[] = [];
+    for (const redaction of sorted) {
+      const start = redaction.match.startIndex;
+      const end = redaction.match.endIndex;
+      const last = merged[merged.length - 1];
+
+      if (last && start <= last.end) {
+        // Extend the previous range if this one goes further
+        if (end > last.end) {
+          last.end = end;
+        }
+      } else {
+        merged.push({ start, end, redaction });
+      }
+    }
 
     const result: TextSegment[] = [];
     let lastIndex = 0;
 
-    for (const redaction of sorted) {
-      const start = redaction.match.startIndex;
-      const end = redaction.match.endIndex;
-
-      // Skip overlapping redactions (start is before the end of the previous one)
-      if (start < lastIndex) continue;
-
+    for (const { start, end, redaction } of merged) {
       // Add text before this redaction
       if (start > lastIndex) {
         result.push({ text: fullText.slice(lastIndex, start) });
