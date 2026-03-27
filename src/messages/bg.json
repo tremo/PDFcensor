@@ -139,7 +139,7 @@
     "realEstate": "Недвижими имоти",
     "finance": "Финанси",
     "government": "Правителство",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Доверен от водещи организации по целия свят"
   },
   "cta": {
     "title": "Готови ли сте да защитите чувствителните данни?",
@@ -211,7 +211,7 @@
       "selectModeHint": "Щракнете върху редакция, за да я изберете, преместите или преоразмерите",
       "faceScanning": "Разпознаване на лица...",
       "faceDetection": "Разпознаване на лица",
-      "faceDetectionWarning": "Face detection may take longer to process.",
+      "faceDetectionWarning": "Разпознаването на лица може да отнеме повече време за обработка.",
       "rescanFaces": "Повторно сканиране на лица"
     },
     "docx": {
@@ -265,23 +265,23 @@
       "stepScanning": "Scan",
       "stepFaceScanning": "Faces",
       "foundSoFar": "Detected so far",
-      "faceDetectionQueued": "Face detection will start after text scan completes.",
-      "msg_parsing1": "Reading document structure...",
-      "msg_parsing2": "Your files never leave your browser.",
-      "msg_scan1": "Scanning for sensitive information...",
-      "msg_scan2": "Detecting ID numbers, emails, phones...",
-      "msg_scan3": "Everything is processed locally on your device.",
-      "msg_scan4": "Checking against privacy regulations...",
-      "msg_scanFace1": "Scanning text for personal data...",
-      "msg_scanFace2": "Detecting ID numbers, emails, phones...",
-      "msg_scanFace3": "Your data stays 100% private on your device.",
-      "msg_scanFace4": "Face detection will begin shortly...",
-      "msg_face1": "Analyzing images for faces...",
-      "msg_face2": "Identifying face regions to blur...",
-      "msg_face3": "Almost done — securing your document."
+      "faceDetectionQueued": "Разпознаването на лица ще започне след приключване на сканирането на текст.",
+      "msg_parsing1": "Четене на структурата на документа...",
+      "msg_parsing2": "Вашите файлове никога не напускат браузъра ви.",
+      "msg_scan1": "Сканиране за чувствителна информация...",
+      "msg_scan2": "Откриване на ЕГН, имейли, телефони...",
+      "msg_scan3": "Всичко се обработва локално на вашето устройство.",
+      "msg_scan4": "Проверка спрямо разпоредбите за поверителност...",
+      "msg_scanFace1": "Сканиране на текст за лични данни...",
+      "msg_scanFace2": "Откриване на ЕГН, имейли, телефони...",
+      "msg_scanFace3": "Вашите данни остават 100% поверителни на вашето устройство.",
+      "msg_scanFace4": "Разпознаването на лица ще започне скоро...",
+      "msg_face1": "Анализиране на изображенията за лица...",
+      "msg_face2": "Идентифициране на области с лица за замъгляване...",
+      "msg_face3": "Почти готово — защита на вашия документ."
     },
     "meta": {
-      "title": "Redact Documents — OfflineRedact Free Online Tool",
+      "title": "Редактиране на документи — OfflineRedact безплатен онлайн инструмент",
       "description": "Permanently redact PII from PDFs, Word docs, and images. Auto-detect SSN, names, faces, IBAN and more. 100% client-side."
     }
   },
@@ -361,14 +361,14 @@
       "save": "Спестете 29%"
     },
     "meta": {
-      "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "title": "Ценообразуване — OfflineRedact инструмент за редактиране на PDF",
+      "description": "Започнете безплатно или преминете към Pro за $6.99/мес. Премахнете водни знаци, обработвайте документи на партиди и получете приоритетна поддръжка."
     },
-    "guarantee": "30-Day Money-Back Guarantee",
-    "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
+    "guarantee": "30-дневна гаранция за връщане на парите",
+    "guaranteeDesc": "Не сте доволни? Получете пълно възстановяване в рамките на 30 дни, без задаване на въпроси.",
     "comparison": {
       "title": "How We Compare",
-      "subtitle": "See why professionals choose OfflineRedact",
+      "subtitle": "Вижте защо професионалистите избират OfflineRedact",
       "feature": "Feature",
       "offlineRedact": "OfflineRedact Pro",
       "adobeAcrobat": "Adobe Acrobat Pro",
@@ -379,8 +379,8 @@
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
-      "clientSide": "100% Client-Side Processing",
-      "faceDetection": "Face Detection & Blurring",
+      "clientSide": "100% обработка от страна на клиента",
+      "faceDetection": "Разпознаване и замъгляване на лица",
       "multiFormat": "PDF + Word + Images",
       "offlineCapable": "Works Offline",
       "autoDetect": "Auto PII Detection",
@@ -389,20 +389,20 @@
       "yes": "Yes",
       "no": "No",
       "limited": "Limited",
-      "onlyUs": "Only in OfflineRedact"
+      "onlyUs": "Само в OfflineRedact"
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Често задавани въпроси",
       "q1": "Is my data safe?",
-      "a1": "Yes. Your files never leave your browser. All processing happens 100% client-side — no uploads, no servers, no data leaks.",
+      "a1": "Да. Вашите файлове никога не напускат браузъра ви. Цялата обработка се извършва 100% от страна на клиента — без качване, без сървъри, без изтичане на данни.",
       "q2": "Can I get a refund?",
-      "a2": "Absolutely. We offer a 30-day money-back guarantee, no questions asked. Contact support@offlineredact.com.",
-      "q3": "What file types are supported?",
-      "a3": "PDF documents, Word files (.docx), and images (JPG, PNG, WebP, TIFF). All from the same tool — no need to switch apps.",
-      "q4": "Does it work without internet?",
-      "a4": "Yes. Once the page is loaded, the tool works completely offline. Your documents never need an internet connection to be processed.",
-      "q5": "Can it detect faces in photos?",
-      "a5": "Yes. OfflineRedact includes built-in face detection that automatically finds and blurs faces in documents and images — a feature unique to OfflineRedact."
+      "a2": "Абсолютно. Предлагаме 30-дневна гаранция за връщане на парите, без задаване на въпроси. Свържете се с support@offlineredact.com.",
+      "q3": "Какви типове файлове се поддържат?",
+      "a3": "PDF документи, Word файлове (.docx) и изображения (JPG, PNG, WebP, TIFF). Всичко от един инструмент — без нужда от превключване между приложения.",
+      "q4": "Работи ли без интернет?",
+      "a4": "Да. След като страницата се зареди, инструментът работи напълно офлайн. Вашите документи никога не се нуждаят от интернет връзка за обработка.",
+      "q5": "Може ли да открива лица в снимки?",
+      "a5": "Да. OfflineRedact включва вградено разпознаване на лица, което автоматично открива и замъглява лица в документи и изображения — функция, уникална за OfflineRedact."
     }
   },
   "auth": {
@@ -1084,8 +1084,8 @@
       }
     },
     "meta": {
-      "title": "Blog — OfflineRedact Document Redaction Guides",
-      "description": "Guides and best practices for PDF redaction, GDPR compliance, HIPAA, CCPA, and data protection worldwide."
+      "title": "Блог — OfflineRedact ръководства за редактиране на документи",
+      "description": "Ръководства и най-добри практики за редактиране на PDF, съответствие с GDPR, HIPAA, CCPA и защита на данните по целия свят."
     }
   },
   "notFound": {
