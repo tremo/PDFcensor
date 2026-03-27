@@ -68,23 +68,58 @@ export default async function HomePage({ params }: Props) {
     { icon: FileKey, key: "metadata" },
   ];
 
-  const dataTypes = [
-    { icon: CreditCard, key: "creditCard", color: "text-blue-500", bg: "bg-blue-50" },
-    { icon: IdCard, key: "idNumber", color: "text-red-500", bg: "bg-red-50" },
-    { icon: Mail, key: "emailAddress", color: "text-amber-500", bg: "bg-amber-50" },
-    { icon: Phone, key: "phoneNumber", color: "text-green-500", bg: "bg-green-50" },
-    { icon: Landmark, key: "bankAccount", color: "text-purple-500", bg: "bg-purple-50" },
-    { icon: BookOpen, key: "passport", color: "text-indigo-500", bg: "bg-indigo-50" },
-    { icon: User, key: "personName", color: "text-pink-500", bg: "bg-pink-50" },
-    { icon: MapPin, key: "address", color: "text-orange-500", bg: "bg-orange-50" },
-    { icon: Calendar, key: "dateOfBirth", color: "text-teal-500", bg: "bg-teal-50" },
-    { icon: ScanFace, key: "faceDetection", color: "text-cyan-500", bg: "bg-cyan-50" },
-    { icon: Wifi, key: "ipAddress", color: "text-slate-500", bg: "bg-slate-50" },
-    { icon: Network, key: "macAddress", color: "text-gray-500", bg: "bg-gray-50" },
-    { icon: Bitcoin, key: "cryptoWallet", color: "text-yellow-500", bg: "bg-yellow-50" },
-    { icon: Navigation, key: "gpsCoordinate", color: "text-emerald-500", bg: "bg-emerald-50" },
-    { icon: Car, key: "licensePlate", color: "text-sky-500", bg: "bg-sky-50" },
-    { icon: Fingerprint, key: "nationalId", color: "text-rose-500", bg: "bg-rose-50" },
+  const dataCategories = [
+    {
+      icon: DollarSign,
+      key: "financial",
+      color: "text-blue-600",
+      bg: "from-blue-500/10 to-blue-500/5",
+      border: "border-blue-200/60",
+      items: [
+        { icon: CreditCard, key: "creditCard" },
+        { icon: Landmark, key: "bankAccount" },
+        { icon: Bitcoin, key: "cryptoWallet" },
+      ],
+    },
+    {
+      icon: Fingerprint,
+      key: "identity",
+      color: "text-rose-600",
+      bg: "from-rose-500/10 to-rose-500/5",
+      border: "border-rose-200/60",
+      items: [
+        { icon: IdCard, key: "nationalId" },
+        { icon: BookOpen, key: "passport" },
+        { icon: ScanFace, key: "faceDetection" },
+      ],
+    },
+    {
+      icon: Globe,
+      key: "digital",
+      color: "text-violet-600",
+      bg: "from-violet-500/10 to-violet-500/5",
+      border: "border-violet-200/60",
+      items: [
+        { icon: Mail, key: "emailAddress" },
+        { icon: Phone, key: "phoneNumber" },
+        { icon: Wifi, key: "ipAddress" },
+        { icon: Network, key: "macAddress" },
+      ],
+    },
+    {
+      icon: User,
+      key: "personal",
+      color: "text-emerald-600",
+      bg: "from-emerald-500/10 to-emerald-500/5",
+      border: "border-emerald-200/60",
+      items: [
+        { icon: User, key: "personName" },
+        { icon: MapPin, key: "address" },
+        { icon: Calendar, key: "dateOfBirth" },
+        { icon: Navigation, key: "gpsCoordinate" },
+        { icon: Car, key: "licensePlate" },
+      ],
+    },
   ];
 
   const steps = [
@@ -275,28 +310,58 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           {/* Data Types We Detect */}
-          <div className="mt-14">
-            <h3 className="text-xl md:text-2xl font-bold text-center mb-2">
-              {t("comparison.dataTypesTitle")}
-            </h3>
-            <p className="text-sm text-muted-foreground text-center mb-8">
-              {t("comparison.dataTypesSubtitle")}
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
-              {dataTypes.map(({ icon: Icon, key, color, bg }) => (
-                <div
-                  key={key}
-                  className="flex flex-col items-center gap-2 p-4 rounded-xl border border-border bg-background hover:border-accent/50 hover:shadow-md transition-all duration-200"
-                >
-                  <div className={`w-10 h-10 rounded-lg ${bg} flex items-center justify-center`}>
-                    <Icon className={`w-5 h-5 ${color}`} />
-                  </div>
-                  <span className="text-xs font-medium text-center">
-                    {t(`comparison.${key}`)}
-                  </span>
-                </div>
-              ))}
+          <div className="mt-16">
+            <div className="flex flex-col items-center mb-10">
+              <div className="text-5xl md:text-6xl font-black text-accent mb-2">
+                20+
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-center">
+                {t("comparison.dataTypesTitle")}
+              </h3>
+              <p className="text-sm text-muted-foreground text-center mt-2 max-w-lg">
+                {t("comparison.dataTypesSubtitle")}
+              </p>
             </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {dataCategories.map((cat) => {
+                const CatIcon = cat.icon;
+                return (
+                  <div
+                    key={cat.key}
+                    className={`relative rounded-2xl border ${cat.border} bg-gradient-to-b ${cat.bg} p-5 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5`}
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-10 h-10 rounded-xl bg-background/80 backdrop-blur flex items-center justify-center shadow-sm`}>
+                        <CatIcon className={`w-5 h-5 ${cat.color}`} />
+                      </div>
+                      <div>
+                        <h4 className={`font-semibold ${cat.color}`}>
+                          {t(`comparison.cat.${cat.key}`)}
+                        </h4>
+                        <p className="text-xs text-muted-foreground">
+                          {t(`comparison.cat.${cat.key}Desc`)}
+                        </p>
+                      </div>
+                    </div>
+                    <ul className="space-y-2">
+                      {cat.items.map(({ icon: Icon, key }) => (
+                        <li key={key} className="flex items-center gap-2.5 text-sm">
+                          <Icon className={`w-4 h-4 ${cat.color} opacity-70`} />
+                          <span className="text-foreground/80">
+                            {t(`comparison.${key}`)}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+
+            <p className="text-center text-xs text-muted-foreground mt-6">
+              {t("comparison.dataTypesFootnote")}
+            </p>
           </div>
         </div>
       </section>
