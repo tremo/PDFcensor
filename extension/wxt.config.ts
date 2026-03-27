@@ -8,7 +8,7 @@ export default defineConfig({
     description:
       "Automatically detects and redacts sensitive personal data (PII) before you send it to AI chatbots like ChatGPT, Claude, Gemini, and more.",
     version: "1.0.0",
-    permissions: ["storage", "activeTab"],
+    permissions: ["storage", "activeTab", "identity", "alarms"],
     host_permissions: [
       "https://chatgpt.com/*",
       "https://chat.openai.com/*",
@@ -25,7 +25,13 @@ export default defineConfig({
     web_accessible_resources: [
       {
         resources: ["dictionaries/*.json"],
-        matches: ["<all_urls>"],
+        matches: [
+          "https://chatgpt.com/*",
+          "https://chat.openai.com/*",
+          "https://claude.ai/*",
+          "https://gemini.google.com/*",
+          "https://copilot.microsoft.com/*",
+        ],
       },
     ],
   },

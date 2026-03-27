@@ -1,6 +1,5 @@
 import type { PIIMatch } from "../lib/pii/types";
 
-/** Actions the toast can trigger */
 export interface ToastActions {
   matchCount: number;
   onMask: () => void;
@@ -8,7 +7,6 @@ export interface ToastActions {
   onReview: () => void;
 }
 
-/** Toast controller rendered inside Shadow DOM */
 export interface ToastController {
   show(actions: ToastActions): void;
   showWarning(count: number): void;
@@ -59,10 +57,7 @@ const TOAST_STYLES = `
     padding: 0;
   }
   .toast-body { margin-bottom: 12px; color: #ccc; }
-  .toast-actions {
-    display: flex;
-    gap: 8px;
-  }
+  .toast-actions { display: flex; gap: 8px; }
   .btn {
     padding: 8px 16px;
     border-radius: 8px;
@@ -108,6 +103,29 @@ const TOAST_STYLES = `
   .detail-value { color: #888; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 `;
 
+// Safe DOM element creation helpers (no innerHTML / XSS risk)
+function el(tag: string, attrs?: Record<string, string>, children?: (Node | string)[]): HTMLElement {
+  const node = document.createElement(tag);
+  if (attrs) {
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "className") node.className = v;
+      else node.setAttribute(k, v);
+    }
+  }
+  if (children) {
+    for (const child of children) {
+      node.appendChild(typeof child === "string" ? document.createTextNode(child) : child);
+    }
+  }
+  return node;
+}
+
+function btn(className: string, text: string, onClick: () => void): HTMLElement {
+  const button = el("button", { className: `btn ${className}` }, [text]);
+  button.addEventListener("click", onClick);
+  return button;
+}
+
 export function createToast(): ToastController {
   const host = document.createElement("pdfcensor-toast");
   const shadow = host.attachShadow({ mode: "closed" });
@@ -122,89 +140,89 @@ export function createToast(): ToastController {
 
   document.body.appendChild(host);
 
-  function render(html: string) {
-    container.innerHTML = html;
+  function clear() {
+    while (container.firstChild) container.removeChild(container.firstChild);
   }
 
   return {
     show(actions: ToastActions) {
-      render(`
-        <div class="toast-card">
-          <div class="toast-header">
-            <span class="toast-icon">&#x26a0;</span>
-            <span class="toast-title">${actions.matchCount} hassas veri tespit edildi</span>
-            <button class="toast-close" data-action="close">&times;</button>
-          </div>
-          <div class="toast-body">
-            Mesaj\u0131n\u0131zda ki\u015fisel veriler bulundu. G\u00f6ndermeden \u00f6nce maskelemek ister misiniz?
-          </div>
-          <div class="toast-actions">
-            <button class="btn btn-mask" data-action="mask">Maskele</button>
-            <button class="btn btn-ignore" data-action="ignore">Yoksay</button>
-            <button class="btn btn-review" data-action="review">\u0130ncele</button>
-          </div>
-        </div>
-      `);
+      clear();
 
-      container.querySelector('[data-action="mask"]')?.addEventListener("click", actions.onMask);
-      container.querySelector('[data-action="ignore"]')?.addEventListener("click", actions.onIgnore);
-      container.querySelector('[data-action="review"]')?.addEventListener("click", actions.onReview);
-      container.querySelector('[data-action="close"]')?.addEventListener("click", () => this.hide());
+      const closeBtn = el("button", { className: "toast-close" }, ["\u00d7"]);
+      const card = el("div", { className: "toast-card" }, [
+        el("div", { className: "toast-header" }, [
+          el("span", { className: "toast-icon" }, ["\u26a0"]),
+          el("span", { className: "toast-title" }, [`${actions.matchCount} hassas veri tespit edildi`]),
+          closeBtn,
+        ]),
+        el("div", { className: "toast-body" }, [
+          "Mesaj\u0131n\u0131zda ki\u015fisel veriler bulundu. G\u00f6ndermeden \u00f6nce maskelemek ister misiniz?",
+        ]),
+        el("div", { className: "toast-actions" }, [
+          btn("btn-mask", "Maskele", actions.onMask),
+          btn("btn-ignore", "Yoksay", actions.onIgnore),
+          btn("btn-review", "\u0130ncele", actions.onReview),
+        ]),
+      ]);
+
+      closeBtn.addEventListener("click", () => this.hide());
+      container.appendChild(card);
     },
 
     showWarning(count: number) {
-      render(`
-        <div class="toast-warning">
-          &#x26a0; ${count} hassas veri tespit edildi \u2014 g\u00f6ndermeden \u00f6nce kontrol edin.
-        </div>
-      `);
+      clear();
+      const text = count === 0
+        ? "\u26a0 Taran\u0131yor..."
+        : `\u26a0 ${count} hassas veri tespit edildi \u2014 g\u00f6ndermeden \u00f6nce kontrol edin.`;
+      container.appendChild(
+        el("div", { className: "toast-warning" }, [text])
+      );
     },
 
     showLimit() {
-      render(`
-        <div class="toast-limit">
-          G\u00fcnl\u00fck \u00fccretsiz tarama limitinize ula\u015ft\u0131n\u0131z. Pro'ya ge\u00e7in.
-        </div>
-      `);
+      clear();
+      container.appendChild(
+        el("div", { className: "toast-limit" }, [
+          "G\u00fcnl\u00fck \u00fccretsiz tarama limitinize ula\u015ft\u0131n\u0131z. Pro'ya ge\u00e7in.",
+        ])
+      );
       setTimeout(() => this.hide(), 5000);
     },
 
     showDetails(matches: PIIMatch[]) {
-      const items = matches
-        .map(
-          (m) =>
-            `<div class="detail-item">
-              <span class="detail-type">${m.type}</span>
-              <span class="detail-value">${escapeHtml(m.value.slice(0, 30))}${m.value.length > 30 ? "..." : ""}</span>
-            </div>`
-        )
-        .join("");
+      clear();
 
-      render(`
-        <div class="toast-card">
-          <div class="toast-header">
-            <span class="toast-title">Tespit Edilen Veriler (${matches.length})</span>
-            <button class="toast-close" data-action="close">&times;</button>
-          </div>
-          <div class="details-list">${items}</div>
-        </div>
-      `);
+      const list = el("div", { className: "details-list" });
+      for (const m of matches) {
+        const truncated = m.value.length > 30 ? m.value.slice(0, 30) + "..." : m.value;
+        list.appendChild(
+          el("div", { className: "detail-item" }, [
+            el("span", { className: "detail-type" }, [m.type]),
+            el("span", { className: "detail-value" }, [truncated]),
+          ])
+        );
+      }
 
-      container.querySelector('[data-action="close"]')?.addEventListener("click", () => this.hide());
+      const closeBtn = el("button", { className: "toast-close" }, ["\u00d7"]);
+      closeBtn.addEventListener("click", () => this.hide());
+
+      container.appendChild(
+        el("div", { className: "toast-card" }, [
+          el("div", { className: "toast-header" }, [
+            el("span", { className: "toast-title" }, [`Tespit Edilen Veriler (${matches.length})`]),
+            closeBtn,
+          ]),
+          list,
+        ])
+      );
     },
 
     hide() {
-      container.innerHTML = "";
+      clear();
     },
 
     destroy() {
       host.remove();
     },
   };
-}
-
-function escapeHtml(str: string): string {
-  const div = document.createElement("div");
-  div.textContent = str;
-  return div.innerHTML;
 }
