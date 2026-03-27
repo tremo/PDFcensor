@@ -6,14 +6,18 @@ export const copilotAdapter: SiteAdapter = {
   hostnames: ["copilot.microsoft.com"],
 
   getInputElement() {
-    return document.querySelector<HTMLElement>(
-      'textarea#userInput, textarea[placeholder], #searchbox textarea'
+    return (
+      document.querySelector<HTMLElement>('textarea#userInput') ??
+      document.querySelector<HTMLElement>('#searchbox textarea') ??
+      document.querySelector<HTMLElement>('textarea[placeholder]')
     );
   },
 
   getSendButton() {
-    return document.querySelector<HTMLElement>(
-      'button[aria-label="Submit"], button.submit-button, button[type="submit"]'
+    return (
+      document.querySelector<HTMLElement>('button[aria-label="Submit"]') ??
+      document.querySelector<HTMLElement>('button.submit-button') ??
+      document.querySelector<HTMLElement>('button[type="submit"]')
     );
   },
 
@@ -28,14 +32,15 @@ export const copilotAdapter: SiteAdapter = {
     const el = this.getInputElement();
     if (!el) return;
     if (el instanceof HTMLTextAreaElement) {
-      const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+      const setter = Object.getOwnPropertyDescriptor(
         HTMLTextAreaElement.prototype, "value"
       )?.set;
-      nativeInputValueSetter?.call(el, text);
+      setter?.call(el, text);
       el.dispatchEvent(new Event("input", { bubbles: true }));
     } else {
-      el.innerText = text;
-      el.dispatchEvent(new Event("input", { bubbles: true }));
+      el.focus();
+      document.execCommand("selectAll", false);
+      document.execCommand("insertText", false, text);
     }
   },
 
@@ -44,7 +49,7 @@ export const copilotAdapter: SiteAdapter = {
   },
 
   interceptSend(callback: () => boolean): () => void {
-    const handler = (e: Event) => {
+    const clickHandler = (e: Event) => {
       const target = e.target as HTMLElement;
       const sendBtn = this.getSendButton();
       if (sendBtn && (target === sendBtn || sendBtn.contains(target))) {
@@ -56,7 +61,7 @@ export const copilotAdapter: SiteAdapter = {
     };
 
     const keyHandler = (e: KeyboardEvent) => {
-      if (e.key === "Enter" && !e.shiftKey) {
+      if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
         if (!callback()) {
           e.preventDefault();
           e.stopPropagation();
@@ -64,43 +69,56 @@ export const copilotAdapter: SiteAdapter = {
       }
     };
 
-    document.addEventListener("click", handler, true);
-    document.addEventListener("keydown", keyHandler, true);
+    const inputEl = this.getInputElement();
+    document.addEventListener("click", clickHandler, true);
+    inputEl?.addEventListener("keydown", keyHandler, true);
 
     return () => {
-      document.removeEventListener("click", handler, true);
-      document.removeEventListener("keydown", keyHandler, true);
+      document.removeEventListener("click", clickHandler, true);
+      inputEl?.removeEventListener("keydown", keyHandler, true);
     };
   },
 
   observe(callback: () => void): () => void {
-    const el = this.getInputElement();
-    if (!el) {
-      const observer = new MutationObserver(() => {
-        const input = this.getInputElement();
-        if (input) {
-          observer.disconnect();
-          setupObserver(input);
-        }
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-      return () => observer.disconnect();
-    }
+    let currentTarget: HTMLElement | null = null;
+    let inputCleanup: (() => void) | null = null;
 
-    return setupObserver(el);
+    function attachToInput(target: HTMLElement) {
+      if (currentTarget === target) return;
+      detachFromInput();
+      currentTarget = target;
 
-    function setupObserver(target: HTMLElement): () => void {
       if (target instanceof HTMLTextAreaElement) {
         target.addEventListener("input", callback);
-        return () => target.removeEventListener("input", callback);
+        inputCleanup = () => target.removeEventListener("input", callback);
+      } else {
+        const observer = new MutationObserver(callback);
+        observer.observe(target, { childList: true, subtree: true, characterData: true });
+        target.addEventListener("input", callback);
+        inputCleanup = () => {
+          observer.disconnect();
+          target.removeEventListener("input", callback);
+        };
       }
-      const observer = new MutationObserver(callback);
-      observer.observe(target, { childList: true, subtree: true, characterData: true });
-      target.addEventListener("input", callback);
-      return () => {
-        observer.disconnect();
-        target.removeEventListener("input", callback);
-      };
     }
+
+    function detachFromInput() {
+      inputCleanup?.();
+      inputCleanup = null;
+      currentTarget = null;
+    }
+
+    const el = this.getInputElement();
+    if (el) attachToInput(el);
+
+    const poll = setInterval(() => {
+      const input = this.getInputElement();
+      if (input && input !== currentTarget) attachToInput(input);
+    }, 2000);
+
+    return () => {
+      clearInterval(poll);
+      detachFromInput();
+    };
   },
 };

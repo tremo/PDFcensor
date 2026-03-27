@@ -6,27 +6,38 @@ export const chatgptAdapter: SiteAdapter = {
   hostnames: ["chatgpt.com", "chat.openai.com"],
 
   getInputElement() {
-    return document.querySelector<HTMLElement>("#prompt-textarea, [contenteditable='true']");
+    // ChatGPT uses contenteditable divs — try multiple selectors for resilience
+    return (
+      document.querySelector<HTMLElement>("#prompt-textarea") ??
+      document.querySelector<HTMLElement>('[contenteditable="true"][data-placeholder]') ??
+      document.querySelector<HTMLElement>('div[contenteditable="true"]')
+    );
   },
 
   getSendButton() {
-    return document.querySelector<HTMLElement>('[data-testid="send-button"], button[aria-label="Send prompt"]');
+    return (
+      document.querySelector<HTMLElement>('[data-testid="send-button"]') ??
+      document.querySelector<HTMLElement>('button[aria-label="Send prompt"]') ??
+      document.querySelector<HTMLElement>('form button[type="submit"]') ??
+      // Fallback: find the button closest to the input
+      this.getInputElement()?.closest("form")?.querySelector<HTMLElement>("button:last-of-type") ??
+      null
+    );
   },
 
   getMessageText() {
     const el = this.getInputElement();
     if (!el) return "";
-    // ChatGPT uses a contenteditable div or ProseMirror
     return el.innerText || el.textContent || "";
   },
 
   setMessageText(text: string) {
     const el = this.getInputElement();
     if (!el) return;
-
-    // For contenteditable, set innerText and dispatch input event
-    el.innerText = text;
-    el.dispatchEvent(new Event("input", { bubbles: true }));
+    el.focus();
+    // Select all and replace — works with ProseMirror/contenteditable
+    document.execCommand("selectAll", false);
+    document.execCommand("insertText", false, text);
   },
 
   getFileInput() {
@@ -34,7 +45,7 @@ export const chatgptAdapter: SiteAdapter = {
   },
 
   interceptSend(callback: () => boolean): () => void {
-    const handler = (e: Event) => {
+    const clickHandler = (e: Event) => {
       const target = e.target as HTMLElement;
       const sendBtn = this.getSendButton();
       if (sendBtn && (target === sendBtn || sendBtn.contains(target))) {
@@ -45,9 +56,9 @@ export const chatgptAdapter: SiteAdapter = {
       }
     };
 
-    // Also intercept Enter key
+    // Enter key — only on the input element, NOT document-wide
     const keyHandler = (e: KeyboardEvent) => {
-      if (e.key === "Enter" && !e.shiftKey) {
+      if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
         if (!callback()) {
           e.preventDefault();
           e.stopPropagation();
@@ -55,40 +66,54 @@ export const chatgptAdapter: SiteAdapter = {
       }
     };
 
-    document.addEventListener("click", handler, true);
-    document.addEventListener("keydown", keyHandler, true);
+    const inputEl = this.getInputElement();
+
+    document.addEventListener("click", clickHandler, true);
+    // Only attach Enter handler to input element if found
+    inputEl?.addEventListener("keydown", keyHandler, true);
 
     return () => {
-      document.removeEventListener("click", handler, true);
-      document.removeEventListener("keydown", keyHandler, true);
+      document.removeEventListener("click", clickHandler, true);
+      inputEl?.removeEventListener("keydown", keyHandler, true);
     };
   },
 
   observe(callback: () => void): () => void {
-    const el = this.getInputElement();
-    if (!el) {
-      // Wait for element to appear
-      const observer = new MutationObserver(() => {
-        const input = this.getInputElement();
-        if (input) {
-          observer.disconnect();
-          setupObserver(input);
-        }
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-      return () => observer.disconnect();
-    }
+    // Watch for the input element to appear, then observe it
+    let inputObserver: MutationObserver | null = null;
+    let inputListener: (() => void) | null = null;
+    let currentTarget: HTMLElement | null = null;
 
-    return setupObserver(el);
-
-    function setupObserver(target: HTMLElement): () => void {
-      const observer = new MutationObserver(callback);
-      observer.observe(target, { childList: true, subtree: true, characterData: true });
+    function attachToInput(target: HTMLElement) {
+      if (currentTarget === target) return;
+      detachFromInput();
+      currentTarget = target;
+      inputObserver = new MutationObserver(callback);
+      inputObserver.observe(target, { childList: true, subtree: true, characterData: true });
       target.addEventListener("input", callback);
-      return () => {
-        observer.disconnect();
-        target.removeEventListener("input", callback);
-      };
+      inputListener = () => target.removeEventListener("input", callback);
     }
+
+    function detachFromInput() {
+      inputObserver?.disconnect();
+      inputListener?.();
+      inputObserver = null;
+      inputListener = null;
+      currentTarget = null;
+    }
+
+    const el = this.getInputElement();
+    if (el) attachToInput(el);
+
+    // Periodically re-check for the input element (ChatGPT re-renders on route change)
+    const poll = setInterval(() => {
+      const input = this.getInputElement();
+      if (input && input !== currentTarget) attachToInput(input);
+    }, 2000);
+
+    return () => {
+      clearInterval(poll);
+      detachFromInput();
+    };
   },
 };

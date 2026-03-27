@@ -6,14 +6,18 @@ export const claudeAdapter: SiteAdapter = {
   hostnames: ["claude.ai"],
 
   getInputElement() {
-    return document.querySelector<HTMLElement>(
-      '[contenteditable="true"].ProseMirror, div[contenteditable="true"]'
+    return (
+      document.querySelector<HTMLElement>('[contenteditable="true"].ProseMirror') ??
+      document.querySelector<HTMLElement>('div[contenteditable="true"][role="textbox"]') ??
+      document.querySelector<HTMLElement>('fieldset div[contenteditable="true"]')
     );
   },
 
   getSendButton() {
-    return document.querySelector<HTMLElement>(
-      'button[aria-label="Send Message"], button[data-testid="send-button"]'
+    return (
+      document.querySelector<HTMLElement>('button[aria-label="Send Message"]') ??
+      document.querySelector<HTMLElement>('button[data-testid="send-button"]') ??
+      document.querySelector<HTMLElement>('fieldset button[type="button"]:last-of-type')
     );
   },
 
@@ -26,8 +30,9 @@ export const claudeAdapter: SiteAdapter = {
   setMessageText(text: string) {
     const el = this.getInputElement();
     if (!el) return;
-    el.innerText = text;
-    el.dispatchEvent(new Event("input", { bubbles: true }));
+    el.focus();
+    document.execCommand("selectAll", false);
+    document.execCommand("insertText", false, text);
   },
 
   getFileInput() {
@@ -35,7 +40,7 @@ export const claudeAdapter: SiteAdapter = {
   },
 
   interceptSend(callback: () => boolean): () => void {
-    const handler = (e: Event) => {
+    const clickHandler = (e: Event) => {
       const target = e.target as HTMLElement;
       const sendBtn = this.getSendButton();
       if (sendBtn && (target === sendBtn || sendBtn.contains(target))) {
@@ -47,7 +52,7 @@ export const claudeAdapter: SiteAdapter = {
     };
 
     const keyHandler = (e: KeyboardEvent) => {
-      if (e.key === "Enter" && !e.shiftKey) {
+      if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
         if (!callback()) {
           e.preventDefault();
           e.stopPropagation();
@@ -55,39 +60,50 @@ export const claudeAdapter: SiteAdapter = {
       }
     };
 
-    document.addEventListener("click", handler, true);
-    document.addEventListener("keydown", keyHandler, true);
+    const inputEl = this.getInputElement();
+    document.addEventListener("click", clickHandler, true);
+    inputEl?.addEventListener("keydown", keyHandler, true);
 
     return () => {
-      document.removeEventListener("click", handler, true);
-      document.removeEventListener("keydown", keyHandler, true);
+      document.removeEventListener("click", clickHandler, true);
+      inputEl?.removeEventListener("keydown", keyHandler, true);
     };
   },
 
   observe(callback: () => void): () => void {
-    const el = this.getInputElement();
-    if (!el) {
-      const observer = new MutationObserver(() => {
-        const input = this.getInputElement();
-        if (input) {
-          observer.disconnect();
-          setupObserver(input);
-        }
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
-      return () => observer.disconnect();
-    }
+    let inputObserver: MutationObserver | null = null;
+    let inputListener: (() => void) | null = null;
+    let currentTarget: HTMLElement | null = null;
 
-    return setupObserver(el);
-
-    function setupObserver(target: HTMLElement): () => void {
-      const observer = new MutationObserver(callback);
-      observer.observe(target, { childList: true, subtree: true, characterData: true });
+    function attachToInput(target: HTMLElement) {
+      if (currentTarget === target) return;
+      detachFromInput();
+      currentTarget = target;
+      inputObserver = new MutationObserver(callback);
+      inputObserver.observe(target, { childList: true, subtree: true, characterData: true });
       target.addEventListener("input", callback);
-      return () => {
-        observer.disconnect();
-        target.removeEventListener("input", callback);
-      };
+      inputListener = () => target.removeEventListener("input", callback);
     }
+
+    function detachFromInput() {
+      inputObserver?.disconnect();
+      inputListener?.();
+      inputObserver = null;
+      inputListener = null;
+      currentTarget = null;
+    }
+
+    const el = this.getInputElement();
+    if (el) attachToInput(el);
+
+    const poll = setInterval(() => {
+      const input = this.getInputElement();
+      if (input && input !== currentTarget) attachToInput(input);
+    }, 2000);
+
+    return () => {
+      clearInterval(poll);
+      detachFromInput();
+    };
   },
 };

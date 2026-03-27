@@ -12,17 +12,18 @@
  *   4. Extension token'ları chrome.storage.local'e kaydeder
  *
  * PRO DOĞRULAMA:
- *   1. Extension background worker periyodik olarak (1 saat) verify çağırır
+ *   1. Extension background worker chrome.alarms ile periyodik (1 saat) verify çağırır
  *   2. POST /api/extension/verify — Bearer token ile
  *   3. Sonuç cache'lenir (chrome.storage.local)
  *
  * TOKEN YENİLEME:
- *   - Access token süresi dolunca refresh_token ile yenilenir
+ *   - Access token süresi dolunca web app'teki /api/extension/refresh proxy endpoint'i kullanılır
  *   - Refresh de başarısız olursa kullanıcı tekrar login yapmalı
  */
 
 const API_BASE = "https://pdfcensor.com";
 const VERIFY_ENDPOINT = `${API_BASE}/api/extension/verify`;
+const REFRESH_ENDPOINT = `${API_BASE}/api/extension/refresh`;
 const PRO_CACHE_TTL = 3600000; // 1 saat
 
 // ─── Token Storage ───────────────────────────────────────────
@@ -60,15 +61,6 @@ export async function isLoggedIn(): Promise<boolean> {
 
 // ─── Login Flow ──────────────────────────────────────────────
 
-/**
- * OAuth popup ile pdfcensor.com'a login.
- *
- * chrome.identity.launchWebAuthFlow kullanılır:
- * - Extension manifest'te "identity" permission gerekir
- * - Callback URL: https://<extension-id>.chromiumapp.org/
- * - pdfcensor.com/auth/extension-callback bu URL'e redirect yapar
- *   ve hash'te access_token + refresh_token + expires_in döner
- */
 export async function login(): Promise<boolean> {
   try {
     const redirectUrl = chrome.identity.getRedirectURL("callback");
@@ -104,7 +96,7 @@ export async function login(): Promise<boolean> {
 
     return true;
   } catch (error) {
-    console.error("Extension login failed:", error);
+    console.error("[PDFcensor] Login failed:", error);
     return false;
   }
 }
@@ -116,37 +108,41 @@ export async function logout(): Promise<void> {
 // ─── Token Refresh ───────────────────────────────────────────
 
 /**
- * Supabase GoTrue API ile access token yenileme.
- * Extension Supabase JS SDK kullanmadan direkt API call yapar.
+ * Token yenileme — web app'teki server-side proxy endpoint'i kullanılır.
+ *
+ * NOT: Direkt Supabase GoTrue endpoint'ine istek ATILMAZ çünkü:
+ *   - pdfcensor.com Supabase'i proxy etmiyor
+ *   - Supabase URL extension'da expose edilmemeli
+ *   - Server-side proxy daha güvenli (CORS, rate limit)
  */
 async function refreshAccessToken(): Promise<boolean> {
   const tokens = await getTokens();
   if (!tokens?.refreshToken) return false;
 
   try {
-    const supabaseUrl = "https://pdfcensor.com";
-    // Supabase auth endpoint — /auth/v1/token?grant_type=refresh_token
-    // Bu, Supabase REST API'sine direkt istek atar
-    const response = await fetch(
-      `${supabaseUrl}/auth/v1/token?grant_type=refresh_token`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ refresh_token: tokens.refreshToken }),
-      }
-    );
+    const response = await fetch(REFRESH_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ refreshToken: tokens.refreshToken }),
+    });
 
-    if (!response.ok) return false;
+    if (!response.ok) {
+      console.error("[PDFcensor] Token refresh failed:", response.status);
+      return false;
+    }
 
     const data = await response.json();
+    if (!data.accessToken || !data.refreshToken) return false;
+
     await saveTokens({
-      accessToken: data.access_token,
-      refreshToken: data.refresh_token,
-      expiresAt: Date.now() + (data.expires_in || 3600) * 1000,
+      accessToken: data.accessToken,
+      refreshToken: data.refreshToken,
+      expiresAt: Date.now() + (data.expiresIn || 3600) * 1000,
     });
 
     return true;
-  } catch {
+  } catch (error) {
+    console.error("[PDFcensor] Token refresh error:", error);
     return false;
   }
 }
@@ -192,17 +188,18 @@ export async function verifyProStatus(): Promise<boolean> {
     });
 
     if (response.status === 401) {
-      // Token geçersiz — temizle
       await clearTokens();
       return false;
     }
 
-    if (!response.ok) return false;
+    if (!response.ok) {
+      console.error("[PDFcensor] Verify failed:", response.status);
+      return false;
+    }
 
     const data: { isPro: boolean; email: string | null; expiresAt: string | null } =
       await response.json();
 
-    // Cache'le
     const proStatus: ProStatusCache = {
       isPro: data.isPro,
       email: data.email,
@@ -212,7 +209,8 @@ export async function verifyProStatus(): Promise<boolean> {
     await chrome.storage.local.set({ proStatus });
 
     return data.isPro;
-  } catch {
+  } catch (error) {
+    console.error("[PDFcensor] Verify error:", error);
     return false;
   }
 }
@@ -228,13 +226,9 @@ export async function getProStatus(): Promise<boolean> {
     return cached.isPro;
   }
 
-  // Cache yok veya expired — verify et
   return verifyProStatus();
 }
 
-/**
- * Kullanıcı bilgilerini döndürür (email, Pro durumu).
- */
 export async function getUserInfo(): Promise<{
   isLoggedIn: boolean;
   isPro: boolean;
