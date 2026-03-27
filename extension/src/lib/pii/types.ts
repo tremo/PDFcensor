@@ -1,17 +1,51 @@
 export type PIIType =
-  | "ssn"
-  | "tcKimlik"
-  | "itin"
+  // Global
   | "email"
   | "phone"
-  | "trPhone"
-  | "usPhone"
   | "iban"
   | "creditCard"
   | "passport"
   | "names"
   | "address"
-  | "dateOfBirth";
+  | "dateOfBirth"
+  | "ipAddress"
+  | "macAddress"
+  | "cryptoWallet"
+  | "gpsCoordinates"
+  // Turkey
+  | "tcKimlik"
+  | "trPhone"
+  | "trPlate"
+  | "trVKN"
+  | "trSGK"
+  | "trDriverLicense"
+  // US
+  | "ssn"
+  | "itin"
+  | "usPhone"
+  | "usDriverLicense"
+  | "usPassport"
+  // EU — Country-specific national IDs
+  | "ukNHS"
+  | "ukNINO"
+  | "dePersonalausweis"
+  | "deSteuerID"
+  | "frNIR"
+  | "esNIF"
+  | "esDNI"
+  | "itCodiceFiscale"
+  | "nlBSN"
+  | "plPESEL"
+  | "sePersonnummer"
+  | "ptNIF"
+  // LATAM
+  | "brCPF"
+  | "brCNPJ"
+  // Asia
+  | "inAadhaar"
+  | "inPAN"
+  | "krRRN"
+  | "jpMyNumber";
 
 export interface PIIMatch {
   type: PIIType;
@@ -48,17 +82,51 @@ export interface PIIDetectionResult {
 }
 
 export const PII_LABELS: Record<PIIType, string> = {
-  ssn: "SSN",
-  tcKimlik: "TC Kimlik",
-  itin: "ITIN",
+  // Global
   email: "E-posta",
   phone: "Telefon",
-  trPhone: "TR Telefon",
-  usPhone: "US Telefon",
   iban: "IBAN",
-  creditCard: "Kredi Kart\u0131",
+  creditCard: "Kredi Kartı",
   passport: "Pasaport",
-  names: "\u0130sim",
+  names: "İsim",
   address: "Adres",
-  dateOfBirth: "Do\u011fum Tarihi",
+  dateOfBirth: "Doğum Tarihi",
+  ipAddress: "IP Adresi",
+  macAddress: "MAC Adresi",
+  cryptoWallet: "Kripto Cüzdan",
+  gpsCoordinates: "GPS Koordinat",
+  // Turkey
+  tcKimlik: "TC Kimlik",
+  trPhone: "TR Telefon",
+  trPlate: "TR Plaka",
+  trVKN: "Vergi Kimlik No",
+  trSGK: "SGK No",
+  trDriverLicense: "TR Ehliyet",
+  // US
+  ssn: "SSN",
+  itin: "ITIN",
+  usPhone: "US Telefon",
+  usDriverLicense: "US Ehliyet",
+  usPassport: "US Pasaport",
+  // EU
+  ukNHS: "NHS No",
+  ukNINO: "NINO",
+  dePersonalausweis: "DE Kimlik",
+  deSteuerID: "DE Steuer-ID",
+  frNIR: "FR NIR",
+  esNIF: "ES NIF",
+  esDNI: "ES DNI",
+  itCodiceFiscale: "IT Codice Fiscale",
+  nlBSN: "NL BSN",
+  plPESEL: "PL PESEL",
+  sePersonnummer: "SE Personnummer",
+  ptNIF: "PT NIF",
+  // LATAM
+  brCPF: "BR CPF",
+  brCNPJ: "BR CNPJ",
+  // Asia
+  inAadhaar: "IN Aadhaar",
+  inPAN: "IN PAN",
+  krRRN: "KR RRN",
+  jpMyNumber: "JP My Number",
 };

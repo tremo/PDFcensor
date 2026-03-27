@@ -1,16 +1,69 @@
 import type { PIIMatch, PIIType, PIIDetectionResult } from "./types";
-import { detectTCKimlik, detectTRPhone, detectTRPassport } from "./patterns/turkish";
-import { detectSSN, detectITIN, detectUSPhone } from "./patterns/us";
-import { detectEmail, detectIBAN, detectCreditCard, detectPhone, detectAddress, detectDateOfBirth } from "./patterns/global";
+// Global
+import { detectEmail, detectIBAN, detectCreditCard, detectPhone, detectAddress, detectDateOfBirth, detectIPAddress, detectMACAddress, detectCryptoWallet, detectGPSCoordinates } from "./patterns/global";
+// Turkey
+import { detectTCKimlik, detectTRPhone, detectTRPassport, detectTRPlate, detectTRVKN, detectTRSGK, detectTRDriverLicense } from "./patterns/turkish";
+// US
+import { detectSSN, detectITIN, detectUSPhone, detectUSDriverLicense, detectUSPassport } from "./patterns/us";
+// EU
+import { detectNHS, detectNINO, detectDEPersonalausweis, detectDESteuerID, detectFRNIR, detectESNIF, detectESDNI, detectITCodiceFiscale, detectNLBSN, detectPLPESEL, detectSEPersonnummer, detectPTNIF } from "./patterns/eu";
+// LATAM
+import { detectBRCPF, detectBRCNPJ } from "./patterns/latam";
+// Asia
+import { detectAadhaar, detectINPAN, detectKRRRN, detectJPMyNumber } from "./patterns/asia";
+// Names
 import { detectNames } from "./patterns/names";
 
 type DetectorFn = (text: string, pageIndex: number) => PIIMatch[];
 
 const detectorMap: Record<PIIType, DetectorFn> = {
-  tcKimlik: detectTCKimlik, trPhone: detectTRPhone, passport: detectTRPassport,
-  ssn: detectSSN, itin: detectITIN, usPhone: detectUSPhone,
-  email: detectEmail, iban: detectIBAN, creditCard: detectCreditCard,
-  phone: detectPhone, address: detectAddress, names: detectNames, dateOfBirth: detectDateOfBirth,
+  // Global
+  email: detectEmail,
+  phone: detectPhone,
+  iban: detectIBAN,
+  creditCard: detectCreditCard,
+  passport: detectTRPassport,
+  names: detectNames,
+  address: detectAddress,
+  dateOfBirth: detectDateOfBirth,
+  ipAddress: detectIPAddress,
+  macAddress: detectMACAddress,
+  cryptoWallet: detectCryptoWallet,
+  gpsCoordinates: detectGPSCoordinates,
+  // Turkey
+  tcKimlik: detectTCKimlik,
+  trPhone: detectTRPhone,
+  trPlate: detectTRPlate,
+  trVKN: detectTRVKN,
+  trSGK: detectTRSGK,
+  trDriverLicense: detectTRDriverLicense,
+  // US
+  ssn: detectSSN,
+  itin: detectITIN,
+  usPhone: detectUSPhone,
+  usDriverLicense: detectUSDriverLicense,
+  usPassport: detectUSPassport,
+  // EU
+  ukNHS: detectNHS,
+  ukNINO: detectNINO,
+  dePersonalausweis: detectDEPersonalausweis,
+  deSteuerID: detectDESteuerID,
+  frNIR: detectFRNIR,
+  esNIF: detectESNIF,
+  esDNI: detectESDNI,
+  itCodiceFiscale: detectITCodiceFiscale,
+  nlBSN: detectNLBSN,
+  plPESEL: detectPLPESEL,
+  sePersonnummer: detectSEPersonnummer,
+  ptNIF: detectPTNIF,
+  // LATAM
+  brCPF: detectBRCPF,
+  brCNPJ: detectBRCNPJ,
+  // Asia
+  inAadhaar: detectAadhaar,
+  inPAN: detectINPAN,
+  krRRN: detectKRRRN,
+  jpMyNumber: detectJPMyNumber,
 };
 
 export function detectPII(text: string, pageIndex: number, piiTypes: PIIType[]): PIIDetectionResult {

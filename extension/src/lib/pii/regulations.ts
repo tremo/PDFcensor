@@ -1,16 +1,95 @@
 import type { RegulationProfile, RegulationType, PIIType } from "./types";
 
+const ALL_TYPES: PIIType[] = [
+  "email","phone","iban","creditCard","passport","names","address","dateOfBirth",
+  "ipAddress","macAddress","cryptoWallet","gpsCoordinates",
+  "tcKimlik","trPhone","trPlate","trVKN","trSGK","trDriverLicense",
+  "ssn","itin","usPhone","usDriverLicense","usPassport",
+  "ukNHS","ukNINO","dePersonalausweis","deSteuerID","frNIR","esNIF","esDNI",
+  "itCodiceFiscale","nlBSN","plPESEL","sePersonnummer","ptNIF",
+  "brCPF","brCNPJ",
+  "inAadhaar","inPAN","krRRN","jpMyNumber",
+];
+
 export const regulations: Record<RegulationType, RegulationProfile> = {
-  COMPREHENSIVE: { name: "COMPREHENSIVE", country: "ALL", patterns: ["ssn","itin","tcKimlik","email","phone","trPhone","usPhone","iban","creditCard","passport","names","address","dateOfBirth"], description: "Comprehensive \u2014 US + EU + TR (Recommended)" },
-  KVKK: { name: "KVKK", country: "TR", patterns: ["tcKimlik","trPhone","email","iban","names","address","dateOfBirth"], description: "Ki\u015fisel Verilerin Korunmas\u0131 Kanunu (Turkey)" },
-  GDPR: { name: "GDPR", country: "EU", patterns: ["email","phone","iban","names","address","passport","dateOfBirth"], description: "General Data Protection Regulation (EU)" },
-  HIPAA: { name: "HIPAA", country: "US", patterns: ["ssn","names","email","usPhone","address","dateOfBirth"], description: "Health Insurance Portability and Accountability Act (US)" },
-  CCPA: { name: "CCPA", country: "US", patterns: ["ssn","itin","email","usPhone","creditCard","names","dateOfBirth"], description: "California Consumer Privacy Act (US)" },
-  LGPD: { name: "LGPD", country: "BR", patterns: ["email","phone","names","address","dateOfBirth"], description: "Lei Geral de Prote\u00e7\u00e3o de Dados (Brazil)" },
-  PIPA: { name: "PIPA", country: "KR", patterns: ["email","phone","names","dateOfBirth"], description: "Personal Information Protection Act (South Korea)" },
-  APPI: { name: "APPI", country: "JP", patterns: ["email","phone","names","dateOfBirth"], description: "Act on Protection of Personal Information (Japan)" },
-  PIPL: { name: "PIPL", country: "CN", patterns: ["email","phone","names","dateOfBirth"], description: "Personal Information Protection Law (China)" },
-  CUSTOM: { name: "CUSTOM", country: "ALL", patterns: ["ssn","tcKimlik","itin","email","phone","trPhone","usPhone","iban","creditCard","passport","names","address","dateOfBirth"], description: "All available PII patterns" },
+  COMPREHENSIVE: {
+    name: "COMPREHENSIVE", country: "ALL",
+    patterns: ALL_TYPES,
+    description: "Comprehensive — All regions (Recommended)",
+  },
+  KVKK: {
+    name: "KVKK", country: "TR",
+    patterns: [
+      "tcKimlik","trPhone","trPlate","trVKN","trSGK","trDriverLicense",
+      "email","iban","creditCard","names","address","dateOfBirth",
+      "ipAddress","phone","passport",
+    ],
+    description: "Kişisel Verilerin Korunması Kanunu (Turkey)",
+  },
+  GDPR: {
+    name: "GDPR", country: "EU",
+    patterns: [
+      "email","phone","iban","names","address","passport","dateOfBirth",
+      "ipAddress","macAddress","gpsCoordinates","creditCard",
+      "ukNHS","ukNINO","dePersonalausweis","deSteuerID","frNIR",
+      "esNIF","esDNI","itCodiceFiscale","nlBSN","plPESEL",
+      "sePersonnummer","ptNIF",
+    ],
+    description: "General Data Protection Regulation (EU)",
+  },
+  HIPAA: {
+    name: "HIPAA", country: "US",
+    patterns: [
+      "ssn","names","email","usPhone","address","dateOfBirth",
+      "ipAddress","usDriverLicense","usPassport",
+    ],
+    description: "Health Insurance Portability and Accountability Act (US)",
+  },
+  CCPA: {
+    name: "CCPA", country: "US",
+    patterns: [
+      "ssn","itin","email","usPhone","creditCard","names","dateOfBirth",
+      "ipAddress","usDriverLicense","usPassport","address",
+    ],
+    description: "California Consumer Privacy Act (US)",
+  },
+  LGPD: {
+    name: "LGPD", country: "BR",
+    patterns: [
+      "brCPF","brCNPJ","email","phone","names","address","dateOfBirth",
+      "ipAddress","creditCard","iban",
+    ],
+    description: "Lei Geral de Proteção de Dados (Brazil)",
+  },
+  PIPA: {
+    name: "PIPA", country: "KR",
+    patterns: [
+      "krRRN","email","phone","names","dateOfBirth","address",
+      "ipAddress","creditCard",
+    ],
+    description: "Personal Information Protection Act (South Korea)",
+  },
+  APPI: {
+    name: "APPI", country: "JP",
+    patterns: [
+      "jpMyNumber","email","phone","names","dateOfBirth","address",
+      "ipAddress","creditCard",
+    ],
+    description: "Act on Protection of Personal Information (Japan)",
+  },
+  PIPL: {
+    name: "PIPL", country: "CN",
+    patterns: [
+      "email","phone","names","dateOfBirth","address",
+      "ipAddress","creditCard",
+    ],
+    description: "Personal Information Protection Law (China)",
+  },
+  CUSTOM: {
+    name: "CUSTOM", country: "ALL",
+    patterns: ALL_TYPES,
+    description: "Custom — select individual PII types",
+  },
 };
 
 export function getRegulationPatterns(regulation: RegulationType): PIIType[] {
@@ -29,7 +108,7 @@ export function getRegulationLocales(regulation: RegulationType, uiLocale: strin
     case "PIPA": return unique(["ko", "en", uiLocale]);
     case "APPI": return unique(["ja", "en", uiLocale]);
     case "PIPL": return unique(["zh", "en", uiLocale]);
-    case "COMPREHENSIVE": case "CUSTOM": return unique([...EU_LOCALES, "tr", uiLocale]);
+    case "COMPREHENSIVE": case "CUSTOM": return unique([...EU_LOCALES, "tr", "ko", "ja", "zh", "pt", uiLocale]);
     default: return [uiLocale];
   }
 }
