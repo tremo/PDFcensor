@@ -85,7 +85,19 @@
     "redactedFile": "脱敏文件",
     "redactedFileDesc": "本地创建，即时下载",
     "zeroRetention": "零存储。零保留。",
-    "footnote": "所有检测均在浏览器中本地运行。您的文件永远不会离开您的设备。"
+    "footnote": "所有检测均在浏览器中本地运行。您的文件永远不会离开您的设备。",
+    "dataTypesTitle": "What We Detect",
+    "dataTypesSubtitle": "Automatically finds and redacts sensitive information",
+    "creditCard": "Credit Cards",
+    "idNumber": "ID Numbers",
+    "emailAddress": "Email Addresses",
+    "phoneNumber": "Phone Numbers",
+    "bankAccount": "Bank Accounts",
+    "passport": "Passports",
+    "personName": "Person Names",
+    "address": "Addresses",
+    "dateOfBirth": "Dates of Birth",
+    "faceDetection": "Face Detection"
   },
   "security": {
     "title": "真正的永久脱敏",

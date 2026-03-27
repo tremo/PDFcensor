@@ -31,6 +31,16 @@ import {
   FileCheck,
   Files,
   ScanLine,
+  CreditCard,
+  IdCard,
+  Mail,
+  Phone,
+  Landmark,
+  BookOpen,
+  User,
+  MapPin,
+  Calendar,
+  ScanFace,
 } from "lucide-react";
 
 type Props = {
@@ -50,6 +60,19 @@ export default async function HomePage({ params }: Props) {
     { icon: ScanLine, key: "ocrSupport" },
     { icon: FolderArchive, key: "batch" },
     { icon: FileKey, key: "metadata" },
+  ];
+
+  const dataTypes = [
+    { icon: CreditCard, key: "creditCard", color: "text-blue-500", bg: "bg-blue-50" },
+    { icon: IdCard, key: "idNumber", color: "text-red-500", bg: "bg-red-50" },
+    { icon: Mail, key: "emailAddress", color: "text-amber-500", bg: "bg-amber-50" },
+    { icon: Phone, key: "phoneNumber", color: "text-green-500", bg: "bg-green-50" },
+    { icon: Landmark, key: "bankAccount", color: "text-purple-500", bg: "bg-purple-50" },
+    { icon: BookOpen, key: "passport", color: "text-indigo-500", bg: "bg-indigo-50" },
+    { icon: User, key: "personName", color: "text-pink-500", bg: "bg-pink-50" },
+    { icon: MapPin, key: "address", color: "text-orange-500", bg: "bg-orange-50" },
+    { icon: Calendar, key: "dateOfBirth", color: "text-teal-500", bg: "bg-teal-50" },
+    { icon: ScanFace, key: "faceDetection", color: "text-cyan-500", bg: "bg-cyan-50" },
   ];
 
   const steps = [
@@ -237,6 +260,31 @@ export default async function HomePage({ params }: Props) {
             <p className="text-sm text-muted-foreground">
               {t("comparison.footnote")}
             </p>
+          </div>
+
+          {/* Data Types We Detect */}
+          <div className="mt-14">
+            <h3 className="text-xl md:text-2xl font-bold text-center mb-2">
+              {t("comparison.dataTypesTitle")}
+            </h3>
+            <p className="text-sm text-muted-foreground text-center mb-8">
+              {t("comparison.dataTypesSubtitle")}
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+              {dataTypes.map(({ icon: Icon, key, color, bg }) => (
+                <div
+                  key={key}
+                  className="flex flex-col items-center gap-2 p-4 rounded-xl border border-border bg-background hover:border-accent/50 hover:shadow-md transition-all duration-200"
+                >
+                  <div className={`w-10 h-10 rounded-lg ${bg} flex items-center justify-center`}>
+                    <Icon className={`w-5 h-5 ${color}`} />
+                  </div>
+                  <span className="text-xs font-medium text-center">
+                    {t(`comparison.${key}`)}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

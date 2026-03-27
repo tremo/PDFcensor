@@ -85,7 +85,19 @@
     "redactedFile": "Sansürlenmiş dosya",
     "redactedFileDesc": "Yerel olarak oluşturulur, anında indirilir",
     "zeroRetention": "Sıfır depolama. Sıfır saklama.",
-    "footnote": "Tüm tespit işlemi tarayıcınızda yerel olarak çalışır. Dosyalarınız cihazınızdan asla çıkmaz."
+    "footnote": "Tüm tespit işlemi tarayıcınızda yerel olarak çalışır. Dosyalarınız cihazınızdan asla çıkmaz.",
+    "dataTypesTitle": "Neler Tespit Ediyoruz",
+    "dataTypesSubtitle": "Hassas bilgileri otomatik olarak bulur ve sansürler",
+    "creditCard": "Kredi Kartları",
+    "idNumber": "Kimlik Numaraları",
+    "emailAddress": "E-posta Adresleri",
+    "phoneNumber": "Telefon Numaraları",
+    "bankAccount": "Banka Hesapları",
+    "passport": "Pasaportlar",
+    "personName": "Kişi İsimleri",
+    "address": "Adresler",
+    "dateOfBirth": "Doğum Tarihleri",
+    "faceDetection": "Yüz Algılama"
   },
   "security": {
     "title": "Gerçek kalıcı sansürleme",

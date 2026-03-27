@@ -85,7 +85,19 @@
     "redactedFile": "Fichier caviardé",
     "redactedFileDesc": "Créé localement, téléchargement instantané",
     "zeroRetention": "Zéro stockage. Zéro rétention.",
-    "footnote": "Toute la détection s'exécute localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
+    "footnote": "Toute la détection s'exécute localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.",
+    "dataTypesTitle": "What We Detect",
+    "dataTypesSubtitle": "Automatically finds and redacts sensitive information",
+    "creditCard": "Credit Cards",
+    "idNumber": "ID Numbers",
+    "emailAddress": "Email Addresses",
+    "phoneNumber": "Phone Numbers",
+    "bankAccount": "Bank Accounts",
+    "passport": "Passports",
+    "personName": "Person Names",
+    "address": "Addresses",
+    "dateOfBirth": "Dates of Birth",
+    "faceDetection": "Face Detection"
   },
   "security": {
     "title": "Vrai caviardage permanent",
