@@ -404,243 +404,243 @@
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy — OfflineRedact",
-      "description": "Learn how OfflineRedact protects your privacy. Your files never leave your browser. Zero data collection, GDPR & CCPA compliant."
+      "title": "Politika privatnosti — OfflineRedact",
+      "description": "Saznajte kako OfflineRedact stiti vasu privatnost. Vase datoteke nikada ne napustaju preglednik. Nula prikupljanja podataka, uskladenost s GDPR-om i CCPA-om."
     },
-    "title": "Privacy Policy",
-    "lastUpdated": "Last updated: March 2026",
-    "effectiveDate": "Effective: March 1, 2026",
-    "highlight": "Your files never leave your browser. All document processing happens 100% on your device — we have zero access to your data.",
-    "toc": "Table of Contents",
+    "title": "Politika privatnosti",
+    "lastUpdated": "Posljednje azuriranje: ozujak 2026.",
+    "effectiveDate": "Na snazi od: 1. ozujka 2026.",
+    "highlight": "Vase datoteke nikada ne napustaju preglednik. Sva obrada dokumenata odvija se 100% na vasem uredaju — nemamo nikakav pristup vasim podacima.",
+    "toc": "Sadrzaj",
     "intro": {
-      "heading": "1. Introduction",
-      "text": "OfflineRedact (\"we\", \"our\", \"us\") operates the website offlineredact.com and provides a client-side document redaction tool. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.",
-      "text2": "We are committed to protecting your personal data in compliance with the General Data Protection Regulation (GDPR), the UK General Data Protection Regulation (UK GDPR), the California Consumer Privacy Act (CCPA/CPRA), and other applicable data protection laws worldwide.",
-      "text3": "By using OfflineRedact, you consent to the data practices described in this policy. If you do not agree with the terms of this policy, please do not access or use our services."
+      "heading": "1. Uvod",
+      "text": "OfflineRedact (\"mi\", \"nas\", \"nama\") upravlja web stranicom offlineredact.com i pruza alat za redigiranje dokumenata na strani klijenta. Ova Politika privatnosti objasnjava kako prikupljamo, koristimo, otkrivamo i stitimo vase podatke kada posjecujete nasu web stranicu i koristite nase usluge.",
+      "text2": "Posvedeni smo zastiti vasih osobnih podataka u skladu s Opdom uredbom o zastiti podataka (GDPR), Opdom uredbom o zastiti podataka Ujedinjenog Kraljevstva (UK GDPR), Kalifornijskim zakonom o privatnosti potrosaca (CCPA/CPRA) i drugim primjenjivim zakonima o zastiti podataka diljem svijeta.",
+      "text3": "Koristenjem usluge OfflineRedact pristajete na prakse postupanja s podacima opisane u ovoj politici. Ako se ne slazete s uvjetima ove politike, molimo vas da ne pristupate niti koristite nase usluge."
     },
     "noFileUploads": {
-      "heading": "2. Zero-Knowledge Document Processing",
-      "text": "This is the core of our privacy commitment: {strong}your documents never leave your device.{/strong}",
-      "text2": "All document processing — including text extraction, PII (Personally Identifiable Information) detection, face detection, OCR (Optical Character Recognition), and redaction — happens entirely within your web browser using JavaScript and WebAssembly. No document content is ever transmitted to our servers or any third-party service.",
-      "text3": "This means we operate on a zero-knowledge architecture: we cannot see, access, read, store, or process the content of any document you work with. Even if compelled by a court order, we would have no document data to produce.",
+      "heading": "2. Obrada dokumenata bez ikakvih saznanja",
+      "text": "Ovo je srz nase obveze prema privatnosti: {strong}vasi dokumenti nikada ne napustaju vas uredaj.{/strong}",
+      "text2": "Sva obrada dokumenata — ukljucujudi ekstrakciju teksta, otkrivanje osobnih podataka (PII), otkrivanje lica, OCR (opticko prepoznavanje znakova) i redigiranje — odvija se u potpunosti unutar vaseg web preglednika koristedi JavaScript i WebAssembly. Nikakav sadrzaj dokumenta nikada se ne prenosi na nase posluzitelje ili bilo koji servis trede strane.",
+      "text3": "To znaci da radimo na arhitekturi nultog znanja: ne mozemo vidjeti, pristupiti, procitati, pohraniti niti obraditi sadrzaj bilo kojeg dokumenta s kojim radite. Cak i da nas sud na to prisili, ne bismo imali nikakve podatke o dokumentima koje bismo mogli predati.",
       "items": [
-        "PDF documents are parsed and redacted in-browser using pdf-lib",
-        "Word documents (.docx) are processed by extracting and modifying XML in-browser",
-        "Images are analyzed for faces using TensorFlow.js running locally in your browser",
-        "OCR is performed using Tesseract.js — no cloud OCR services are used",
-        "Redacted files are generated locally and downloaded directly to your device"
+        "PDF dokumenti se parsiraju i redigiraju u pregledniku koristedi pdf-lib",
+        "Word dokumenti (.docx) se obraduju ekstrakcijom i izmjenom XML-a u pregledniku",
+        "Slike se analiziraju za otkrivanje lica koristedi TensorFlow.js koji radi lokalno u vasem pregledniku",
+        "OCR se izvodi koristedi Tesseract.js — ne koriste se usluge OCR-a u oblaku",
+        "Redigirane datoteke se generiraju lokalno i preuzimaju izravno na vas uredaj"
       ]
     },
     "infoCollect": {
-      "heading": "3. Information We Collect",
-      "text": "We collect minimal information, categorized as follows:",
-      "accountHeading": "a) Account Information (Pro Users Only)",
+      "heading": "3. Podaci koje prikupljamo",
+      "text": "Prikupljamo minimalne podatke, kategorizirane na sljededi nacin:",
+      "accountHeading": "a) Podaci o racunu (samo za Pro korisnike)",
       "accountItems": [
-        "Email address — provided when you create an account or purchase a Pro license",
-        "Authentication data — managed securely by Supabase Auth (Google OAuth or magic link)"
+        "Adresa e-poste — navedena prilikom kreiranja racuna ili kupnje Pro licence",
+        "Podaci za autentifikaciju — sigurno upravljani putem Supabase Auth (Google OAuth ili magic link)"
       ],
-      "paymentHeading": "b) Payment Information",
+      "paymentHeading": "b) Podaci o pladanju",
       "paymentItems": [
-        "Payment is processed entirely by Stripe. We never receive, store, or have access to your credit card number, CVV, or billing address",
-        "We receive from Stripe: transaction confirmation, subscription status, and customer email"
+        "Plodanje u potpunosti obraduje Stripe. Nikada ne primamo, pohranjujemo niti imamo pristup vasem broju kreditne kartice, CVV-u ili adresi za naplatu",
+        "Od Stripea primamo: potvrdu transakcije, status pretplate i e-postu korisnika"
       ],
-      "analyticsHeading": "c) Analytics Data",
+      "analyticsHeading": "c) Analiticki podaci",
       "analyticsItems": [
-        "Page views and feature usage via Google Tag Manager (anonymized, no personal data)",
-        "No document content, file names, or PII detected in your documents is ever transmitted"
+        "Pregledi stranica i koristenje znacajki putem Google Tag Managera (anonimizirano, bez osobnih podataka)",
+        "Nikakav sadrzaj dokumenata, nazivi datoteka ili otkriveni osobni podaci nikada se ne prenose"
       ],
-      "autoHeading": "d) Automatically Collected Data",
+      "autoHeading": "d) Automatski prikupljeni podaci",
       "autoItems": [
-        "IP address — logged temporarily by our hosting provider (Vercel) for security and abuse prevention; not stored by us",
-        "Browser type and operating system — collected anonymously via analytics",
-        "Referring URL and pages visited — for understanding traffic sources"
+        "IP adresa — privremeno biljejena od strane naseg davatelja usluge hostinga (Vercel) za sigurnost i sprjecavanje zlouporabe; mi je ne pohranjujemo",
+        "Vrsta preglednika i operativni sustav — prikupljeni anonimno putem analitike",
+        "Referentni URL i posjedene stranice — za razumijevanje izvora prometa"
       ]
     },
     "cookies": {
-      "heading": "4. Cookies & Local Storage",
-      "text": "We use minimal cookies and local storage. We do not use advertising or tracking cookies.",
+      "heading": "4. Kolacidi i lokalna pohrana",
+      "text": "Koristimo minimalne kolacide i lokalnu pohranu. Ne koristimo reklamne niti kolacide za pracenje.",
       "tableHeaders": [
-        "Name",
-        "Type",
-        "Purpose",
-        "Duration"
+        "Naziv",
+        "Vrsta",
+        "Svrha",
+        "Trajanje"
       ],
       "tableRows": [
         [
           "locale",
-          "Local Storage",
-          "Stores your language preference",
-          "Persistent"
+          "Lokalna pohrana",
+          "Pohranjuje vasu jezicnu preferenciju",
+          "Trajno"
         ],
         [
           "supabase-auth-token",
-          "Local Storage",
-          "Authentication session for Pro users",
-          "Until logout"
+          "Lokalna pohrana",
+          "Sesija autentifikacije za Pro korisnike",
+          "Do odjave"
         ],
         [
           "_gtm",
-          "Cookie",
-          "Google Tag Manager — anonymous analytics",
-          "Session"
+          "Kolacid",
+          "Google Tag Manager — anonimna analitika",
+          "Sesija"
         ],
         [
           "cookie-consent",
-          "Local Storage",
-          "Remembers your cookie preference",
-          "1 year"
+          "Lokalna pohrana",
+          "Pamti vasu preferenciju kolacida",
+          "1 godina"
         ]
       ]
     },
     "thirdParty": {
-      "heading": "5. Third-Party Services",
-      "text": "We use the following third-party services, each with their own privacy policies:",
+      "heading": "5. Usluge tredih strana",
+      "text": "Koristimo sljedede usluge tredih strana, od kojih svaka ima vlastitu politiku privatnosti:",
       "services": [
         {
           "name": "Stripe",
-          "purpose": "Payment processing for Pro subscriptions",
-          "dataShared": "Email address, subscription plan selection",
+          "purpose": "Obrada plodanja za Pro pretplate",
+          "dataShared": "Adresa e-poste, odabir plana pretplate",
           "url": "https://stripe.com/privacy"
         },
         {
           "name": "Supabase",
-          "purpose": "User authentication and account management",
-          "dataShared": "Email address, OAuth tokens",
+          "purpose": "Autentifikacija korisnika i upravljanje racunom",
+          "dataShared": "Adresa e-poste, OAuth tokeni",
           "url": "https://supabase.com/privacy"
         },
         {
           "name": "Vercel",
-          "purpose": "Website hosting and deployment",
-          "dataShared": "IP address (server logs), page requests",
+          "purpose": "Hosting i implementacija web stranice",
+          "dataShared": "IP adresa (zapisnici posluzitelja), zahtjevi za stranice",
           "url": "https://vercel.com/legal/privacy-policy"
         },
         {
           "name": "Google Tag Manager",
-          "purpose": "Anonymous usage analytics",
-          "dataShared": "Anonymized page view and feature usage data",
+          "purpose": "Anonimna analitika koristenja",
+          "dataShared": "Anonimizirani podaci o pregledima stranica i koristenju znacajki",
           "url": "https://policies.google.com/privacy"
         }
       ],
-      "serviceLabel": "Service",
-      "purposeLabel": "Purpose",
-      "dataSharedLabel": "Data Shared",
-      "policyLabel": "Privacy Policy"
+      "serviceLabel": "Usluga",
+      "purposeLabel": "Svrha",
+      "dataSharedLabel": "Dijeljeni podaci",
+      "policyLabel": "Politika privatnosti"
     },
     "dataRetention": {
-      "heading": "6. Data Retention",
-      "text": "We retain data only as long as necessary for its intended purpose:",
+      "heading": "6. Zadrzavanje podataka",
+      "text": "Podatke zadrzavamo samo onoliko dugo koliko je potrebno za njihovu namjenu:",
       "items": [
-        "Account data (email, auth tokens) — retained while your account is active; deleted within 30 days of account deletion request",
-        "Payment records — retained for 7 years as required by tax and financial regulations",
-        "Analytics data — aggregated and anonymized; individual session data retained for 26 months (Google Analytics default)",
-        "Server logs (Vercel) — automatically purged after 30 days",
-        "Document content — never stored; exists only in your browser memory during processing"
+        "Podaci o racunu (e-posta, autentifikacijski tokeni) — zadrzani dok je vas racun aktivan; obrisani u roku od 30 dana od zahtjeva za brisanje racuna",
+        "Evidencije o plodanjima — zadrzane 7 godina prema zahtjevima poreznih i financijskih propisa",
+        "Analiticki podaci — agregirani i anonimizirani; pojedinacni podaci o sesijama zadrzani 26 mjeseci (zadano za Google Analytics)",
+        "Zapisnici posluzitelja (Vercel) — automatski obrisani nakon 30 dana",
+        "Sadrzaj dokumenata — nikada se ne pohranjuje; postoji samo u memoriji vaseg preglednika tijekom obrade"
       ]
     },
     "rights": {
-      "heading": "7. Your Rights",
-      "text": "Depending on your location, you have the following rights regarding your personal data:",
-      "gdprHeading": "Under GDPR (EU) & UK GDPR:",
+      "heading": "7. Vasa prava",
+      "text": "Ovisno o vasoj lokaciji, imate sljededa prava u vezi s vasim osobnim podacima:",
+      "gdprHeading": "Prema GDPR-u (EU) i UK GDPR-u:",
       "gdprRights": [
         {
-          "title": "Right of Access",
-          "desc": "Request a copy of the personal data we hold about you"
+          "title": "Pravo pristupa",
+          "desc": "Zatrazite kopiju osobnih podataka koje imamo o vama"
         },
         {
-          "title": "Right to Rectification",
-          "desc": "Request correction of inaccurate personal data"
+          "title": "Pravo na ispravak",
+          "desc": "Zatrazite ispravak netocnih osobnih podataka"
         },
         {
-          "title": "Right to Erasure",
-          "desc": "Request deletion of your personal data (\"right to be forgotten\")"
+          "title": "Pravo na brisanje",
+          "desc": "Zatrazite brisanje vasih osobnih podataka (\"pravo na zaborav\")"
         },
         {
-          "title": "Right to Restriction",
-          "desc": "Request that we limit how we use your data"
+          "title": "Pravo na ogranicenje",
+          "desc": "Zatrazite da ogranicimo nacin na koji koristimo vase podatke"
         },
         {
-          "title": "Right to Data Portability",
-          "desc": "Receive your data in a structured, machine-readable format"
+          "title": "Pravo na prenosivost podataka",
+          "desc": "Primite svoje podatke u strukturiranom, strojno citljivom formatu"
         },
         {
-          "title": "Right to Object",
-          "desc": "Object to processing based on legitimate interests"
+          "title": "Pravo na prigovor",
+          "desc": "Uslozite prigovor na obradu temeljenu na legitimnim interesima"
         }
       ],
-      "ccpaHeading": "Under CCPA/CPRA (California):",
+      "ccpaHeading": "Prema CCPA/CPRA (Kalifornija):",
       "ccpaRights": [
-        "Right to know what personal information is collected and how it is used",
-        "Right to delete personal information held by us",
-        "Right to opt-out of the sale of personal information — we do not sell your data",
-        "Right to non-discrimination for exercising your privacy rights"
+        "Pravo znati koji se osobni podaci prikupljaju i kako se koriste",
+        "Pravo na brisanje osobnih podataka koje imamo",
+        "Pravo na odjavu od prodaje osobnih podataka — ne prodajemo vase podatke",
+        "Pravo na nediskriminaciju zbog ostvarivanja vasih prava na privatnost"
       ],
-      "exerciseText": "To exercise any of these rights, contact us at privacy@offlineredact.com. We will respond within 30 days (GDPR) or 45 days (CCPA)."
+      "exerciseText": "Za ostvarivanje bilo kojeg od ovih prava, kontaktirajte nas na privacy@offlineredact.com. Odgovorit demo u roku od 30 dana (GDPR) ili 45 dana (CCPA)."
     },
     "children": {
-      "heading": "8. Children's Privacy",
-      "text": "OfflineRedact is not directed at children under the age of 16 (GDPR) or 13 (COPPA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us at privacy@offlineredact.com and we will promptly delete such information."
+      "heading": "8. Privatnost djece",
+      "text": "OfflineRedact nije namijenjen djeci mladoj od 16 godina (GDPR) ili 13 godina (COPPA). Ne prikupljamo svjesno osobne podatke djece. Ako smatrate da nam je dijete dalo svoje osobne podatke, kontaktirajte nas na privacy@offlineredact.com i odmah demo obrisati takve informacije."
     },
     "transfers": {
-      "heading": "9. International Data Transfers",
-      "text": "Our hosting provider (Vercel) and payment processor (Stripe) operate servers in the United States and other countries. When your account or payment data is processed by these services, it may be transferred outside your country of residence.",
-      "text2": "These transfers are protected by Standard Contractual Clauses (SCCs) approved by the European Commission, and by each provider's compliance with applicable data protection frameworks. Your document content is never transferred, as it is processed entirely on your device."
+      "heading": "9. Medunarodni prijenosi podataka",
+      "text": "Nas davatelj usluge hostinga (Vercel) i obradivac plodanja (Stripe) upravljaju posluziteljima u Sjedinjenim Americkim Drzavama i drugim zemljama. Kada vase podatke o racunu ili plodanju obraduju ove usluge, oni mogu biti preneseni izvan vase zemlje prebivalista.",
+      "text2": "Ovi prijenosi zastiteni su Standardnim ugovornim klauzulama (SCC) koje je odobrila Europska komisija te uskladenostu svakog davatelja usluge s primjenjivim okvirima zastite podataka. Sadrzaj vasih dokumenata nikada se ne prenosi jer se obraduje u potpunosti na vasem uredaju."
     },
     "security": {
-      "heading": "10. Data Security",
-      "text": "We implement appropriate technical and organizational measures to protect your personal data:",
+      "heading": "10. Sigurnost podataka",
+      "text": "Provodimo odgovarajude tehnicke i organizacijske mjere za zastitu vasih osobnih podataka:",
       "items": [
-        "Zero-knowledge architecture — document content never leaves your browser",
-        "HTTPS/TLS encryption for all website communications",
-        "Stripe PCI DSS Level 1 compliance for payment processing",
-        "Supabase Row Level Security (RLS) for database access control",
-        "Regular security audits and dependency updates",
-        "No sensitive data stored on our servers — minimal attack surface"
+        "Arhitektura nultog znanja — sadrzaj dokumenata nikada ne napusta vas preglednik",
+        "HTTPS/TLS enkripcija za svu komunikaciju na web stranici",
+        "Stripe PCI DSS Level 1 uskladenost za obradu plodanja",
+        "Supabase Row Level Security (RLS) za kontrolu pristupa bazi podataka",
+        "Redovite sigurnosne revizije i azuriranja zavisnosti",
+        "Nikakvi osjetljivi podaci nisu pohranjeni na nasim posluziteljima — minimalna napadacka povrsina"
       ]
     },
     "legalBasis": {
-      "heading": "11. Legal Basis for Processing (GDPR)",
-      "text": "Under the GDPR, we process personal data based on the following legal grounds:",
+      "heading": "11. Pravna osnova za obradu (GDPR)",
+      "text": "Prema GDPR-u, obradujemo osobne podatke na temelju sljedecih pravnih osnova:",
       "bases": [
         {
-          "basis": "Contract Performance",
-          "description": "Processing your payment and providing Pro features you purchased"
+          "basis": "Izvrsenje ugovora",
+          "description": "Obrada vaseg plodanja i pruzanje Pro znacajki koje ste kupili"
         },
         {
-          "basis": "Legitimate Interest",
-          "description": "Website analytics to improve our service; security and fraud prevention"
+          "basis": "Legitimni interes",
+          "description": "Analitika web stranice za poboljsanje nase usluge; sigurnost i sprjecavanje prijevara"
         },
         {
-          "basis": "Consent",
-          "description": "Sending marketing communications (only if you opt in)"
+          "basis": "Privola",
+          "description": "Slanje marketinskih komunikacija (samo ako se prijavite)"
         },
         {
-          "basis": "Legal Obligation",
-          "description": "Retaining payment records as required by tax law"
+          "basis": "Zakonska obveza",
+          "description": "Zadrzavanje evidencija o plodanjima prema zahtjevima poreznog zakona"
         }
       ],
-      "basisLabel": "Legal Basis",
-      "descriptionLabel": "Processing Activity"
+      "basisLabel": "Pravna osnova",
+      "descriptionLabel": "Aktivnost obrade"
     },
     "breach": {
-      "heading": "12. Data Breach Notification",
-      "text": "In the unlikely event of a data breach affecting your personal data, we will notify the relevant supervisory authority within 72 hours as required by GDPR Article 33. If the breach poses a high risk to your rights and freedoms, we will also notify you directly without undue delay.",
-      "text2": "Given our zero-knowledge architecture, any potential breach would be limited to account and payment metadata — your document content can never be compromised as it is never stored on our servers."
+      "heading": "12. Obavijest o povredi podataka",
+      "text": "U malo vjerojatnom slucaju povrede podataka koja utjece na vase osobne podatke, obavijestit demo nadlezno nadzorno tijelo u roku od 72 sata prema zahtjevu clanka 33. GDPR-a. Ako povreda predstavlja visok rizik za vasa prava i slobode, izravno demo vas obavijestiti bez nepotrebnog odgadanja.",
+      "text2": "S obzirom na nasu arhitekturu nultog znanja, svaka potencijalna povreda bila bi ogranicena na metapodatke racuna i plodanja — sadrzaj vasih dokumenata nikada ne moze biti ugrozen jer se nikada ne pohranjuje na nasim posluziteljima."
     },
     "changes": {
-      "heading": "13. Changes to This Policy",
-      "text": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will:",
+      "heading": "13. Promjene ove politike",
+      "text": "Mozemo povremeno azurirati ovu Politiku privatnosti kako bismo odrazili promjene u nasim praksama, tehnologiji ili zakonskim zahtjevima. Kada napravimo bitne promjene:",
       "items": [
-        "Update the \"Last updated\" date at the top of this page",
-        "Display a prominent notice on our website for 30 days",
-        "Send an email notification to registered Pro users",
-        "Maintain an archive of previous versions upon request"
+        "Azurirat demo datum \"Posljednje azuriranje\" na vrhu ove stranice",
+        "Prikazat demo istaknutu obavijest na nasoj web stranici tijekom 30 dana",
+        "Poslat demo obavijest e-postom registriranim Pro korisnicima",
+        "Odrzavat demo arhivu prethodnih verzija na zahtjev"
       ]
     },
     "authorities": {
-      "heading": "14. Regulatory Authorities",
-      "text": "If you believe we have not adequately addressed your data protection concerns, you have the right to lodge a complaint with your local supervisory authority:",
+      "heading": "14. Regulatorna tijela",
+      "text": "Ako smatrate da nismo adekvatno rijesili vase brige o zastiti podataka, imate pravo podnijeti prituzbu vasem lokalnom nadzornom tijelu:",
       "items": [
-        "EU — Your national Data Protection Authority (DPA)",
+        "EU — Vase nacionalno tijelo za zastitu podataka (DPA)",
         "UK — Information Commissioner's Office (ICO) — ico.org.uk",
         "France — Commission Nationale de l'Informatique et des Libertés (CNIL) — cnil.fr",
         "Germany — Bundesbeauftragte für den Datenschutz (BfDI) — bfdi.bund.de",
@@ -650,167 +650,167 @@
       ]
     },
     "contact": {
-      "heading": "15. Contact Us",
-      "text": "For privacy-related inquiries, data subject requests, or complaints:",
+      "heading": "15. Kontaktirajte nas",
+      "text": "Za upite vezane uz privatnost, zahtjeve ispitanika ili prituzbe:",
       "items": [
-        "Privacy inquiries: privacy@offlineredact.com",
-        "General support: support@offlineredact.com",
-        "Legal matters: legal@offlineredact.com"
+        "Upiti o privatnosti: privacy@offlineredact.com",
+        "Opda podrska: support@offlineredact.com",
+        "Pravna pitanja: legal@offlineredact.com"
       ],
-      "responseTime": "We aim to respond to all privacy inquiries within 5 business days."
+      "responseTime": "Nastojimo odgovoriti na sve upite o privatnosti u roku od 5 radnih dana."
     }
   },
   "terms": {
     "meta": {
-      "title": "Terms of Service — OfflineRedact",
-      "description": "Terms and conditions for using the OfflineRedact document redaction tool. 30-day money-back guarantee included."
+      "title": "Uvjeti koristenja — OfflineRedact",
+      "description": "Uvjeti i odredbe za koristenje alata za redigiranje dokumenata OfflineRedact. Ukluceno jamstvo povrata novca u roku od 30 dana."
     },
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: March 2026",
-    "effectiveDate": "Effective: March 1, 2026",
-    "toc": "Table of Contents",
-    "highlightGuarantee": "30-Day Money-Back Guarantee — Not satisfied? Get a full refund within 30 days, no questions asked.",
-    "highlightOwnership": "Your files never leave your device — you retain full ownership of all documents processed with OfflineRedact.",
+    "title": "Uvjeti koristenja",
+    "lastUpdated": "Posljednje azuriranje: ozujak 2026.",
+    "effectiveDate": "Na snazi od: 1. ozujka 2026.",
+    "toc": "Sadrzaj",
+    "highlightGuarantee": "Jamstvo povrata novca u roku od 30 dana — Niste zadovoljni? Dobijte puni povrat u roku od 30 dana, bez pitanja.",
+    "highlightOwnership": "Vase datoteke nikada ne napustaju vas uredaj — zadrzavate puno vlasnistvo nad svim dokumentima obradenim putem OfflineRedacta.",
     "acceptance": {
-      "heading": "1. Acceptance of Terms",
-      "text": "By accessing or using OfflineRedact (the \"Service\"), you agree to be bound by these Terms of Service (\"Terms\"). If you do not agree to all of these Terms, do not access or use the Service.",
-      "text2": "You must be at least 16 years old (or the age of digital consent in your jurisdiction) to use this Service. By using the Service, you represent that you meet this age requirement.",
-      "text3": "If you are using the Service on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms."
+      "heading": "1. Prihvadanje uvjeta",
+      "text": "Pristupanjem ili koristenjem usluge OfflineRedact (\"Usluga\") pristajete biti vezani ovim Uvjetima koristenja (\"Uvjeti\"). Ako se ne slazete sa svim ovim Uvjetima, nemojte pristupati niti koristiti Uslugu.",
+      "text2": "Morate imati najmanje 16 godina (ili dob digitalne privole u vasoj jurisdikciji) za koristenje ove Usluge. Koristenjem Usluge izjavljujete da ispunjavate ovaj dobni uvjet.",
+      "text3": "Ako koristite Uslugu u ime organizacije, izjavljujete i jamcite da imate ovlast obvezati tu organizaciju ovim Uvjetima."
     },
     "serviceDesc": {
-      "heading": "2. Service Description",
-      "text": "OfflineRedact is a client-side document redaction tool that detects and permanently removes Personally Identifiable Information (PII) from documents. The Service includes the following capabilities:",
+      "heading": "2. Opis usluge",
+      "text": "OfflineRedact je alat za redigiranje dokumenata na strani klijenta koji otkriva i trajno uklanja osobne podatke (PII) iz dokumenata. Usluga uklucuje sljedede mogudnosti:",
       "features": [
-        "PDF document redaction — true text removal from PDF content streams",
-        "Word document (.docx) redaction — PII removal from document XML",
-        "Image redaction — face detection and blurring using local AI models",
-        "OCR (Optical Character Recognition) — text extraction from scanned documents and images",
-        "Automatic PII detection — SSN, names, emails, phone numbers, IBAN, credit cards, passport numbers, addresses",
-        "Multi-regulation support — GDPR, HIPAA, KVKK, CCPA, LGPD, and more",
-        "Metadata cleaning — removal of author, creation date, and software information",
-        "Batch processing — multiple file redaction with ZIP download (Pro feature)"
+        "Redigiranje PDF dokumenata — stvarno uklanjanje teksta iz PDF tokova sadrzaja",
+        "Redigiranje Word dokumenata (.docx) — uklanjanje osobnih podataka iz XML-a dokumenta",
+        "Redigiranje slika — otkrivanje i zamudivanje lica koristedi lokalne AI modele",
+        "OCR (opticko prepoznavanje znakova) — ekstrakcija teksta iz skeniranih dokumenata i slika",
+        "Automatsko otkrivanje osobnih podataka — OIB, imena, e-posta, telefonski brojevi, IBAN, kreditne kartice, brojevi putovnica, adrese",
+        "Podrska za vise propisa — GDPR, HIPAA, KVKK, CCPA, LGPD i drugi",
+        "Ciscenje metapodataka — uklanjanje autora, datuma izrade i informacija o softveru",
+        "Skupna obrada — redigiranje vise datoteka s preuzimanjem u ZIP formatu (Pro znacajka)"
       ],
-      "text2": "All document processing occurs entirely within your web browser. No document content is ever uploaded to, processed by, or stored on our servers."
+      "text2": "Sva obrada dokumenata odvija se u potpunosti unutar vaseg web preglednika. Nikakav sadrzaj dokumenta nikada se ne ucitava na nase posluzitelje, ne obraduje se na njima niti se na njima pohranjuje."
     },
     "noGuarantee": {
-      "heading": "3. Disclaimer — No Guarantee of Complete Redaction",
-      "text": "While we strive for the highest accuracy in PII detection, OfflineRedact does not guarantee 100% detection or removal of all sensitive information. Automated pattern matching may miss certain data formats, non-standard patterns, or context-dependent information.",
-      "text2": "You are solely responsible for reviewing and verifying all redaction results before sharing, publishing, or distributing any document processed with OfflineRedact. We strongly recommend:",
+      "heading": "3. Odricanje odgovornosti — Nema jamstva potpunog redigiranja",
+      "text": "Iako tezimo najvedoj tocnosti u otkrivanju osobnih podataka, OfflineRedact ne jamci 100% otkrivanje ili uklanjanje svih osjetljivih informacija. Automatizirano podudaranje uzoraka moze propustiti odredene formate podataka, nestandardne obrasce ili kontekstualno ovisne informacije.",
+      "text2": "Vi ste iskljucivo odgovorni za pregled i provjeru svih rezultata redigiranja prije dijeljenja, objavljivanja ili distribucije bilo kojeg dokumenta obradenog putem OfflineRedacta. Snazno preporucujemo:",
       "items": [
-        "Always review the redacted document visually before sharing",
-        "Test that redacted text cannot be selected, copied, or extracted",
-        "Use manual redaction for any items the automatic detection may have missed",
-        "Keep a secure copy of the original document until you have verified the redaction"
+        "Uvijek vizualno pregledajte redigirani dokument prije dijeljenja",
+        "Provjerite da se redigirani tekst ne moze oznaciti, kopirati ili ekstrahirati",
+        "Koristite rucno redigiranje za sve stavke koje je automatsko otkrivanje moglo propustiti",
+        "Cuvajte sigurnu kopiju izvornog dokumenta dok ne provjerite redigiranje"
       ],
-      "text3": "OfflineRedact is a tool to assist with document redaction — it does not replace professional legal or compliance review when required."
+      "text3": "OfflineRedact je alat koji pomaze pri redigiranju dokumenata — ne zamjenjuje profesionalni pravni pregled ili pregled uskladenosti kada je to potrebno."
     },
     "license": {
-      "heading": "4. License & Subscription Plans",
-      "text": "OfflineRedact offers the following plans:",
-      "freeHeading": "Free Plan",
+      "heading": "4. Licenca i planovi pretplate",
+      "text": "OfflineRedact nudi sljedede planove:",
+      "freeHeading": "Besplatni plan",
       "freeItems": [
-        "Unlimited single-file PDF, Word, and image redaction",
-        "All PII detection patterns and regulation profiles",
-        "Metadata cleaning",
-        "Small watermark on output files"
+        "Neograniceno redigiranje pojedinacnih PDF, Word i slikovnih datoteka",
+        "Svi obrasci otkrivanja osobnih podataka i profili propisa",
+        "Ciscenje metapodataka",
+        "Mali vodeni zig na izlaznim datotekama"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro plan (6,99 $/mjesecno ili 59,99 $/godisnje)",
       "proItems": [
-        "Everything in Free — with no watermark",
-        "Batch processing — redact multiple files at once",
-        "ZIP download for batch results",
-        "Priority support",
-        "Cancel anytime — no long-term commitment"
+        "Sve iz besplatnog plana — bez vodenog ziga",
+        "Skupna obrada — redigirajte vise datoteka odjednom",
+        "ZIP preuzimanje za skupne rezultate",
+        "Prioritetna podrska",
+        "Otkaz u bilo kojem trenutku — bez dugorocne obveze"
       ],
-      "text2": "Pro subscriptions are billed monthly or annually through Stripe. You may cancel your subscription at any time; your Pro features will remain active until the end of the current billing period.",
-      "text3": "We reserve the right to modify pricing with 30 days' advance notice. Existing subscribers will be grandfathered at their current rate for the remainder of their billing cycle."
+      "text2": "Pro pretplate naplacuju se mjesecno ili godisnje putem Stripea. Mozete otkazati pretplatu u bilo kojem trenutku; vase Pro znacajke ostat de aktivne do kraja trenutnog obracunskog razdoblja.",
+      "text3": "Zadrzavamo pravo izmjene cijena uz 30 dana unaprijed obavijest. Postojedi pretplatnici zadrzat de svoju trenutnu cijenu do kraja obracunskog ciklusa."
     },
     "refundPolicy": {
-      "heading": "5. Refund Policy",
-      "text": "We offer a 30-day money-back guarantee on all Pro subscriptions. If you are not satisfied with the Service for any reason, you may request a full refund within 30 days of your initial purchase.",
+      "heading": "5. Politika povrata",
+      "text": "Nudimo jamstvo povrata novca u roku od 30 dana za sve Pro pretplate. Ako niste zadovoljni Uslugom iz bilo kojeg razloga, mozete zatraziti puni povrat u roku od 30 dana od pocetne kupnje.",
       "items": [
-        "Refund requests must be submitted to support@offlineredact.com within 30 days of purchase",
-        "Refunds are processed to the original payment method within 5-10 business days",
-        "After 30 days, no partial or prorated refunds are available",
-        "You may cancel your subscription at any time to prevent future charges"
+        "Zahtjevi za povrat moraju biti poslani na support@offlineredact.com u roku od 30 dana od kupnje",
+        "Povrati se obraduju na izvornu metodu plodanja u roku od 5-10 radnih dana",
+        "Nakon 30 dana, djelomicni ili proporcionalni povrati nisu dostupni",
+        "Mozete otkazati pretplatu u bilo kojem trenutku kako biste sprijecili budude naplate"
       ],
-      "text2": "For annual subscriptions, the 30-day guarantee applies from the date of purchase. If you cancel after 30 days, your Pro access continues until the end of the annual period — no refund is issued for the remaining term."
+      "text2": "Za godisnje pretplate, jamstvo od 30 dana primjenjuje se od datuma kupnje. Ako otkazete nakon 30 dana, vas Pro pristup nastavlja se do kraja godisnjeg razdoblja — povrat za preostalo razdoblje se ne izdaje."
     },
     "acceptableUse": {
-      "heading": "6. Acceptable Use Policy",
-      "text": "You agree to use OfflineRedact only for lawful purposes. The following uses are prohibited:",
+      "heading": "6. Politika prihvatljivog koristenja",
+      "text": "Slazete se koristiti OfflineRedact samo u zakonite svrhe. Sljedede uporabe su zabranjene:",
       "prohibited": [
-        "Using the Service for any illegal activity or to violate any applicable law or regulation",
-        "Attempting to reverse engineer, decompile, or disassemble the Service's source code",
-        "Automated scraping, crawling, or data extraction from the Service",
-        "Attempting to circumvent any access controls, licensing mechanisms, or security measures",
-        "Using the Service to process documents you do not have the right to access or modify",
-        "Reselling, sublicensing, or redistributing the Service without our written consent",
-        "Interfering with or disrupting the Service's infrastructure or other users' access"
+        "Koristenje Usluge za bilo kakvu nezakonitu aktivnost ili krsenje bilo kojeg primjenjivog zakona ili propisa",
+        "Pokusaj obrnzenog inzenjeringa, dekompajliranja ili rastavljanja izvornog koda Usluge",
+        "Automatizirano prikupljanje, pretrazivanje ili ekstrakcija podataka iz Usluge",
+        "Pokusaj zaobilazenja bilo kakvih kontrola pristupa, mehanizama licenciranja ili sigurnosnih mjera",
+        "Koristenje Usluge za obradu dokumenata kojima nemate pravo pristupiti ili ih mijenjati",
+        "Preprodaja, podlicenciranje ili redistribucija Usluge bez nase pisane suglasnosti",
+        "Ometanje ili narusavanje infrastrukture Usluge ili pristupa drugih korisnika"
       ],
-      "text2": "Violation of this Acceptable Use Policy may result in immediate termination of your account and access to the Service."
+      "text2": "Krsenje ove Politike prihvatljivog koristenja moze rezultirati trenutnim ukidanjem vaseg racuna i pristupa Usluzi."
     },
     "ip": {
-      "heading": "7. Intellectual Property",
-      "text": "The OfflineRedact software, website, brand, logos, and all associated content are the intellectual property of OfflineRedact and are protected by copyright, trademark, and other intellectual property laws.",
-      "text2": "You retain full ownership of all documents, files, and content that you process using the Service. We claim no rights over your documents. Since all processing happens in your browser, we never have access to your content.",
-      "text3": "Your Pro license grants you a non-exclusive, non-transferable, revocable right to use the Service for personal or business purposes in accordance with these Terms."
+      "heading": "7. Intelektualno vlasnistvo",
+      "text": "Softver, web stranica, brend, logotipi i sav povezani sadrzaj usluge OfflineRedact intelektualno su vlasnistvo tvrtke OfflineRedact i zastiteni su autorskim pravom, zigom i drugim zakonima o intelektualnom vlasnistvu.",
+      "text2": "Zadrzavate puno vlasnistvo nad svim dokumentima, datotekama i sadrzajem koji obradujete koristedi Uslugu. Ne polagemo nikakva prava na vase dokumente. Buduci da se sva obrada odvija u vasem pregledniku, nikada nemamo pristup vasem sadrzaju.",
+      "text3": "Vasa Pro licenca daje vam neiskljucivo, neprenosivo, opozivo pravo koristenja Usluge u osobne ili poslovne svrhe u skladu s ovim Uvjetima."
     },
     "accountTerms": {
-      "heading": "8. Account Terms",
-      "text": "If you create an account with OfflineRedact:",
+      "heading": "8. Uvjeti racuna",
+      "text": "Ako kreirate racun na usluzi OfflineRedact:",
       "items": [
-        "You must provide accurate and complete information during registration",
-        "You are responsible for maintaining the security of your account credentials",
-        "You must not share your account or Pro license with other individuals or organizations",
-        "You must notify us immediately if you suspect unauthorized access to your account",
-        "You may request account deletion at any time by contacting support@offlineredact.com; we will delete your account data within 30 days"
+        "Morate pruziti tocne i potpune podatke prilikom registracije",
+        "Odgovorni ste za odrzavanje sigurnosti vasih vjerodajnica za racun",
+        "Ne smijete dijeliti svoj racun ili Pro licencu s drugim pojedincima ili organizacijama",
+        "Morate nas odmah obavijestiti ako sumnjate na neovlasten pristup vasem racunu",
+        "Mozete zatraziti brisanje racuna u bilo kojem trenutku kontaktiranjem support@offlineredact.com; obrisat demo vase podatke o racunu u roku od 30 dana"
       ]
     },
     "availability": {
-      "heading": "9. Service Availability & Modifications",
-      "text": "We strive to provide reliable access to OfflineRedact, but we do not guarantee 100% uptime or uninterrupted availability. The Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.",
-      "text2": "We reserve the right to modify, update, or discontinue any feature of the Service at any time. For material changes that affect Pro subscribers, we will provide at least 30 days' advance notice via email.",
-      "text3": "Since OfflineRedact's core functionality runs in your browser, the redaction tool works even when offline (after initial page load). This means your workflow is largely unaffected by server availability."
+      "heading": "9. Dostupnost usluge i izmjene",
+      "text": "Nastojimo pruziti pouzdan pristup usluzi OfflineRedact, ali ne jamcimo 100% vrijeme rada ili neprekinutu dostupnost. Usluga moze biti privremeno nedostupna zbog odrzavanja, azuriranja ili okolnosti izvan nase kontrole.",
+      "text2": "Zadrzavamo pravo izmjene, azuriranja ili ukidanja bilo koje znacajke Usluge u bilo kojem trenutku. Za bitne promjene koje utjecu na Pro pretplatnike, osigurat demo najmanje 30 dana unaprijed obavijest putem e-poste.",
+      "text3": "Buduci da osnovna funkcionalnost usluge OfflineRedact radi u vasem pregledniku, alat za redigiranje radi cak i bez mreze (nakon pocetnog ucitavanja stranice). To znaci da na vas tijek rada uglavnom ne utjece dostupnost posluzitelja."
     },
     "liability": {
-      "heading": "10. Limitation of Liability",
-      "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OFFLINEREDACT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO:",
+      "heading": "10. Ogranicenje odgovornosti",
+      "text": "U NAJVEDEM OPSEGU DOPUSTENOM PRIMJENJIVIM ZAKONOM, OFFLINEREDACT I NJEGOVI SLUZBENICI, DIREKTORI, ZAPOSLENICI I ZASTUPNICI NEDE BITI ODGOVORNI ZA BILO KAKVU NEIZRAVNU, SLUCAJNU, POSEBNU, POSLJEDIDNU ILI KAZNENU STETU, UKLJUCUJUDI, ALI NE OGRANICAVAJUDI SE NA:",
       "items": [
-        "Loss of data, revenue, or profits arising from use of the Service",
-        "Incomplete or inaccurate redaction of sensitive information",
-        "Unauthorized access to or alteration of your account data",
-        "Service interruptions or unavailability",
-        "Any third-party actions or content"
+        "Gubitak podataka, prihoda ili dobiti koji proizlaze iz koristenja Usluge",
+        "Nepotpuno ili netocno redigiranje osjetljivih informacija",
+        "Neovlasten pristup ili izmjenu vasih podataka o racunu",
+        "Prekide ili nedostupnost Usluge",
+        "Bilo kakve radnje ili sadrzaj tredih strana"
       ],
-      "text2": "Our total liability for any claims arising from or related to the Service shall not exceed the amount you paid to us in the twelve (12) months preceding the claim.",
-      "text3": "Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability. In such cases, our liability shall be limited to the fullest extent permitted by applicable law."
+      "text2": "Nasa ukupna odgovornost za bilo kakve zahtjeve koji proizlaze iz Usluge ili su s njom povezani nede premasi iznos koji ste nam platili u dvanaest (12) mjeseci prije podnosenja zahtjeva.",
+      "text3": "Neke jurisdikcije ne dopustaju iskljucenje odredenih jamstava ili ogranicenje odgovornosti. U takvim slucajevima, nasa odgovornost bit de ogranicena u najvedoj mjeri dopustenoj primjenjivim zakonom."
     },
     "governingLaw": {
-      "heading": "11. Governing Law & Jurisdiction",
-      "text": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which OfflineRedact is incorporated, without regard to conflict of law provisions.",
-      "text2": "For users in the European Union, nothing in these Terms affects your rights under mandatory consumer protection laws of your country of residence. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts in your country of residence, as provided by applicable EU consumer protection legislation."
+      "heading": "11. Mjerodavno pravo i nadleznost",
+      "text": "Ovi Uvjeti regulirani su i tumace se u skladu sa zakonima jurisdikcije u kojoj je OfflineRedact registriran, bez obzira na odredbe o sukobu zakona.",
+      "text2": "Za korisnike u Europskoj uniji, nista u ovim Uvjetima ne utjece na vasa prava prema obveznim zakonima o zastiti potrosaca vase zemlje prebivalista. Svi sporovi koji proizlaze iz ovih Uvjeta podlijezu iskljucivoj nadleznosti sudova u vasoj zemlji prebivalista, kako je predvideno primjenjivim zakonodavstvom EU o zastiti potrosaca."
     },
     "disputes": {
-      "heading": "12. Dispute Resolution",
-      "text": "We encourage you to contact us first at legal@offlineredact.com to resolve any disputes informally. Most concerns can be resolved quickly through direct communication.",
-      "text2": "If informal resolution is unsuccessful, any dispute shall be resolved through binding arbitration in accordance with the rules of the applicable arbitration institution, rather than in court. You agree to waive your right to participate in class action lawsuits or class-wide arbitration.",
-      "text3": "For users in the EU: This arbitration clause does not affect your rights to bring claims before the courts of your country of residence under applicable consumer protection laws. You may also use the European Commission's Online Dispute Resolution platform at ec.europa.eu/odr."
+      "heading": "12. Rjesavanje sporova",
+      "text": "Potincemo vas da nas prvo kontaktirate na legal@offlineredact.com kako biste neformalno rijesili sve sporove. Vedina zabrinutosti moze se brzo rijesiti izravnom komunikacijom.",
+      "text2": "Ako neformalno rjesavanje ne uspije, svaki spor rjesavat de se obvezujudom arbitrazom u skladu s pravilima nadlezne arbitrazne institucije, a ne pred sudom. Pristajete odreditise prava na sudjelovanje u kolektivnim tuzbama ili arbitrazama na razini klase.",
+      "text3": "Za korisnike u EU-u: Ova arbitrazna klauzula ne utjece na vasa prava na podnosenje zahtjeva pred sudovima vase zemlje prebivalista prema primjenjivim zakonima o zastiti potrosaca. Mozete koristiti i platformu za mrezno rjesavanje sporova Europske komisije na ec.europa.eu/odr."
     },
     "severability": {
-      "heading": "13. Severability & Entire Agreement",
-      "text": "If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms shall otherwise remain in full force and effect.",
-      "text2": "These Terms, together with our Privacy Policy, constitute the entire agreement between you and OfflineRedact regarding the use of the Service, superseding any prior agreements or communications."
+      "heading": "13. Djelomicna nistavnost i cjelovitost ugovora",
+      "text": "Ako sud nadlezne jurisdikcije utvrdi da je bilo koja odredba ovih Uvjeta neprovediva ili nevaljana, ta odredba bit de ogranicena ili uklonjena u minimalnoj potrebnoj mjeri kako bi ovi Uvjeti u preostalom dijelu ostali na snazi.",
+      "text2": "Ovi Uvjeti, zajedno s nasom Politikom privatnosti, cine cjelokupan ugovor izmedu vas i usluge OfflineRedact u vezi s koristenjem Usluge, zamjenjujudi sve prethodne ugovore ili komunikacije."
     },
     "contact": {
-      "heading": "14. Contact Us",
-      "text": "If you have any questions about these Terms of Service:",
+      "heading": "14. Kontaktirajte nas",
+      "text": "Ako imate bilo kakva pitanja o ovim Uvjetima koristenja:",
       "items": [
-        "General support: support@offlineredact.com",
-        "Legal inquiries: legal@offlineredact.com",
-        "Refund requests: support@offlineredact.com"
+        "Opda podrska: support@offlineredact.com",
+        "Pravni upiti: legal@offlineredact.com",
+        "Zahtjevi za povrat: support@offlineredact.com"
       ],
-      "responseTime": "We aim to respond to all inquiries within 2 business days."
+      "responseTime": "Nastojimo odgovoriti na sve upite u roku od 2 radna dana."
     }
   },
   "blog": {
