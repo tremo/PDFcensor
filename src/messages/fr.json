@@ -829,14 +829,14 @@
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "cta": {
-      "title": "Ready to try OfflineRedact?",
-      "subtitle": "Start redacting sensitive data from your PDFs — free, no signup required.",
+      "title": "Prêt à essayer OfflineRedact ?",
+      "subtitle": "Commencez à caviarder les données sensibles de vos PDF — gratuitement, sans inscription.",
       "button": "Start Redacting"
     },
     "posts": {
       "kvkk-pdf-redaction-guide": {
-        "title": "KVKK Compliant PDF Redaction: Comprehensive Guide",
-        "excerpt": "Learn how to properly redact personal data in PDF documents in compliance with Turkey's KVKK regulation.",
+        "title": "Caviardage PDF conforme KVKK : Guide complet",
+        "excerpt": "Apprenez à caviarder correctement les données personnelles dans les documents PDF conformément à la réglementation KVKK en Turquie.",
         "date": "2026-03-20",
         "content": [
           "Turkey's Personal Data Protection Law (KVKK), enacted in 2016, imposes strict rules on how organizations process and share personal data. PDF documents frequently contain sensitive data such as TC identity numbers, phone numbers, email addresses, and IBAN numbers.",
@@ -847,8 +847,8 @@
         ]
       },
       "cnil-rgpd-caviardage-pdf": {
-        "title": "CNIL & RGPD: Complete Guide to PDF Redaction in France",
-        "excerpt": "How to comply with French data protection requirements when redacting personal data from PDF documents under CNIL guidelines.",
+        "title": "CNIL & RGPD : Guide complet du caviardage PDF en France",
+        "excerpt": "Comment se conformer aux exigences françaises de protection des données lors du caviardage de données personnelles dans des documents PDF selon les recommandations de la CNIL.",
         "date": "2026-03-18",
         "content": [
           "France's implementation of the GDPR, known locally as the RGPD, is enforced by the CNIL (Commission Nationale de l'Informatique et des Libertés). French organizations must ensure personal data in PDF documents is properly redacted before sharing, particularly when responding to data subject access requests or publishing public records.",
@@ -859,8 +859,8 @@
         ]
       },
       "lopdgdd-redaccion-pdf": {
-        "title": "LOPDGDD Compliance: PDF Redaction Guide for Spain",
-        "excerpt": "Guide for Spanish organizations on redacting personal data from PDF documents under LOPDGDD and EU GDPR requirements.",
+        "title": "Conformité LOPDGDD : Guide de caviardage PDF pour l'Espagne",
+        "excerpt": "Guide destiné aux organisations espagnoles pour caviarder les données personnelles dans les documents PDF conformément aux exigences de la LOPDGDD et du RGPD européen.",
         "date": "2026-03-17",
         "content": [
           "Spain's Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD) complements the EU GDPR with additional national provisions. Spanish organizations handling PDF documents containing personal data must ensure proper redaction to comply with both LOPDGDD and GDPR requirements.",
@@ -871,8 +871,8 @@
         ]
       },
       "lgpd-redacao-pdf": {
-        "title": "LGPD Compliance: PDF Redaction Guide for Brazil",
-        "excerpt": "How Brazilian organizations can ensure LGPD compliance when redacting personal data from PDF documents.",
+        "title": "Conformité LGPD : Guide de caviardage PDF pour le Brésil",
+        "excerpt": "Comment les organisations brésiliennes peuvent garantir la conformité LGPD lors du caviardage de données personnelles dans des documents PDF.",
         "date": "2026-03-16",
         "content": [
           "Brazil's Lei Geral de Proteção de Dados (LGPD) establishes comprehensive data protection requirements similar to the EU's GDPR. Organizations operating in Brazil must properly redact personal data from PDF documents when sharing externally, responding to data subject requests, or complying with data minimization obligations.",
@@ -883,8 +883,8 @@
         ]
       },
       "dsgvo-pdf-schwaerzung": {
-        "title": "DSGVO-Compliant PDF Redaction: Complete Guide",
-        "excerpt": "Learn how to redact personal data from PDF documents in compliance with Germany's DSGVO (GDPR) requirements and permanently remove it.",
+        "title": "Caviardage PDF conforme DSGVO : Guide complet",
+        "excerpt": "Apprenez à caviarder les données personnelles dans les documents PDF conformément aux exigences du DSGVO (RGPD) allemand et à les supprimer définitivement.",
         "date": "2026-03-15",
         "content": [
           "The General Data Protection Regulation (DSGVO in German) imposes strict requirements on handling personal data in the EU. PDF documents frequently contain sensitive information such as names, email addresses, phone numbers, IBAN numbers, and addresses that must be protected before sharing.",
@@ -895,8 +895,8 @@
         ]
       },
       "appi-pdf-sumikeshi": {
-        "title": "APPI Compliance: PDF Redaction Guide for Japan",
-        "excerpt": "Guide for Japanese organizations on redacting personal information from PDF documents under the Act on Protection of Personal Information.",
+        "title": "Conformité APPI : Guide de caviardage PDF pour le Japon",
+        "excerpt": "Guide destiné aux organisations japonaises pour caviarder les informations personnelles dans les documents PDF conformément à la loi sur la protection des informations personnelles.",
         "date": "2026-03-14",
         "content": [
           "Japan's Act on the Protection of Personal Information (APPI) was significantly strengthened in its 2022 amendment, imposing stricter requirements on how organizations handle personal data. PDF documents containing personal information must be properly redacted before sharing, archiving, or publishing.",
@@ -907,8 +907,8 @@
         ]
       },
       "pipa-pdf-masking": {
-        "title": "PIPA Compliance: PDF Redaction Guide for South Korea",
-        "excerpt": "How Korean organizations can comply with PIPA requirements when redacting personal information from PDF documents.",
+        "title": "Conformité PIPA : Guide de caviardage PDF pour la Corée du Sud",
+        "excerpt": "Comment les organisations coréennes peuvent se conformer aux exigences de la PIPA lors du caviardage d'informations personnelles dans des documents PDF.",
         "date": "2026-03-13",
         "content": [
           "South Korea's Personal Information Protection Act (PIPA) is one of the strictest data protection laws in Asia. Organizations must implement rigorous measures to protect personal information in PDF documents, including proper redaction before external sharing or when responding to data subject access requests.",
@@ -919,8 +919,8 @@
         ]
       },
       "pipl-pdf-tumin": {
-        "title": "PIPL Compliance: PDF Redaction Guide for China",
-        "excerpt": "Guide for organizations operating in China on redacting personal information from PDF documents under the Personal Information Protection Law.",
+        "title": "Conformité PIPL : Guide de caviardage PDF pour la Chine",
+        "excerpt": "Guide destiné aux organisations opérant en Chine pour caviarder les informations personnelles dans les documents PDF conformément à la loi sur la protection des informations personnelles.",
         "date": "2026-03-12",
         "content": [
           "China's Personal Information Protection Law (PIPL), effective since November 2021, establishes comprehensive personal information protection requirements. Organizations handling PDF documents containing personal information of Chinese residents must ensure proper redaction to comply with PIPL's strict data handling obligations.",
@@ -931,8 +931,8 @@
         ]
       },
       "gdpr-italia-oscuramento-pdf": {
-        "title": "GDPR Italy: Complete Guide to PDF Redaction",
-        "excerpt": "How Italian organizations can ensure GDPR compliance through proper PDF redaction under Garante per la protezione dei dati personali guidelines.",
+        "title": "RGPD Italie : Guide complet du caviardage PDF",
+        "excerpt": "Comment les organisations italiennes peuvent garantir la conformité au RGPD grâce à un caviardage PDF approprié selon les recommandations du Garante per la protezione dei dati personali.",
         "date": "2026-03-11",
         "content": [
           "Italy's implementation of the GDPR is overseen by the Garante per la protezione dei dati personali, one of Europe's most active data protection authorities. Italian organizations must ensure PDF documents are properly redacted before sharing, particularly in contexts involving public administration, healthcare, and judicial proceedings.",
@@ -943,8 +943,8 @@
         ]
       },
       "client-side-vs-server-side-redaction": {
-        "title": "Client-Side vs Server-Side PDF Redaction: Security Comparison",
-        "excerpt": "Why processing documents in your browser is more secure than uploading them to a server for redaction.",
+        "title": "Caviardage PDF côté client vs côté serveur : Comparaison de sécurité",
+        "excerpt": "Pourquoi le traitement des documents dans votre navigateur est plus sécurisé que leur téléversement sur un serveur pour le caviardage.",
         "date": "2026-03-10",
         "content": [
           "When it comes to redacting sensitive information from PDFs, one of the most critical decisions is where the processing happens. Server-side redaction tools require you to upload your documents to a remote server, while client-side tools like OfflineRedact process everything locally in your browser.",
@@ -955,8 +955,8 @@
         ]
       },
       "avg-pdf-lakken": {
-        "title": "AVG Compliance: PDF Redaction Guide for the Netherlands",
-        "excerpt": "Guide for Dutch organizations on redacting personal data from PDF documents under the Algemene Verordening Gegevensbescherming.",
+        "title": "Conformité AVG : Guide de caviardage PDF pour les Pays-Bas",
+        "excerpt": "Guide destiné aux organisations néerlandaises pour caviarder les données personnelles dans les documents PDF conformément à l'Algemene Verordening Gegevensbescherming.",
         "date": "2026-03-09",
         "content": [
           "The Netherlands implements the EU GDPR as the Algemene Verordening Gegevensbescherming (AVG), enforced by the Autoriteit Persoonsgegevens (AP). Dutch organizations, particularly in government, healthcare, and financial sectors, must ensure proper PDF redaction when sharing documents containing personal data.",
@@ -967,8 +967,8 @@
         ]
       },
       "rodo-redakcja-pdf": {
-        "title": "RODO Compliance: PDF Redaction Guide for Poland",
-        "excerpt": "How Polish organizations can comply with RODO (GDPR) requirements when redacting personal data from PDF documents.",
+        "title": "Conformité RODO : Guide de caviardage PDF pour la Pologne",
+        "excerpt": "Comment les organisations polonaises peuvent se conformer aux exigences du RODO (RGPD) lors du caviardage de données personnelles dans des documents PDF.",
         "date": "2026-03-08",
         "content": [
           "Poland implements the EU GDPR as RODO (Rozporządzenie o Ochronie Danych Osobowych), enforced by the Urząd Ochrony Danych Osobowych (UODO). Polish organizations must ensure personal data in PDF documents is permanently redacted before sharing, particularly in administrative, legal, and healthcare contexts.",
@@ -979,8 +979,8 @@
         ]
       },
       "dataskydd-pdf-maskering": {
-        "title": "Swedish Data Protection: PDF Redaction Guide",
-        "excerpt": "Guide for Swedish organizations on redacting personal data from PDF documents in compliance with dataskyddsförordningen and IMY guidelines.",
+        "title": "Protection des données en Suède : Guide de caviardage PDF",
+        "excerpt": "Guide destiné aux organisations suédoises pour caviarder les données personnelles dans les documents PDF conformément au dataskyddsförordningen et aux recommandations de l'IMY.",
         "date": "2026-03-07",
         "content": [
           "Sweden implements the EU GDPR through the dataskyddsförordningen, enforced by Integritetsskyddsmyndigheten (IMY). Swedish organizations, including public authorities subject to the principle of public access (offentlighetsprincipen), must properly redact personal data from PDF documents before disclosure or sharing.",
@@ -991,8 +991,8 @@
         ]
       },
       "pdf-redaction-healthcare-checklist": {
-        "title": "PDF Redaction for Healthcare: HIPAA Compliance Checklist",
-        "excerpt": "A practical checklist for healthcare organizations to ensure HIPAA-compliant PDF redaction workflows.",
+        "title": "Caviardage PDF pour la santé : Liste de contrôle de conformité HIPAA",
+        "excerpt": "Une liste de contrôle pratique pour les organisations de santé afin de garantir des flux de travail de caviardage PDF conformes à HIPAA.",
         "date": "2026-03-05",
         "content": [
           "Healthcare organizations face unique challenges when sharing documents externally. Patient records, insurance forms, lab results, and clinical notes all contain Protected Health Information (PHI) that must be redacted before disclosure. This checklist ensures your PDF redaction workflow meets HIPAA requirements.",
@@ -1003,8 +1003,8 @@
         ]
       },
       "ccpa-pdf-redaction": {
-        "title": "CCPA Compliance: How to Redact Personal Information from PDFs",
-        "excerpt": "Guide for California businesses on redacting consumer personal information from PDF documents under CCPA.",
+        "title": "Conformité CCPA : Comment caviarder les informations personnelles dans les PDF",
+        "excerpt": "Guide destiné aux entreprises californiennes pour caviarder les informations personnelles des consommateurs dans les documents PDF conformément au CCPA.",
         "date": "2026-02-28",
         "content": [
           "The California Consumer Privacy Act (CCPA) and its amendment, the CPRA, give California consumers the right to know what personal information businesses collect, the right to delete it, and the right to opt out of its sale. When responding to consumer requests or sharing documents, businesses must properly redact personal information from PDFs.",
@@ -1015,8 +1015,8 @@
         ]
       },
       "hipaa-compliant-pdf-redaction": {
-        "title": "HIPAA Compliant PDF Redaction: A Complete Guide",
-        "excerpt": "Learn how to properly redact protected health information (PHI) from PDF documents to maintain HIPAA compliance.",
+        "title": "Caviardage PDF conforme HIPAA : Guide complet",
+        "excerpt": "Apprenez à caviarder correctement les informations de santé protégées (PHI) dans les documents PDF pour maintenir la conformité HIPAA.",
         "date": "2026-02-15",
         "content": [
           "Healthcare organizations handle vast amounts of Protected Health Information (PHI) daily. When sharing documents externally — for legal proceedings, research, or inter-organizational communication — proper redaction is not just best practice, it’s a legal requirement under HIPAA.",
@@ -1027,8 +1027,8 @@
         ]
       },
       "ediscovery-document-redaction": {
-        "title": "eDiscovery Document Redaction Best Practices",
-        "excerpt": "Essential guide for legal professionals on redacting sensitive information during the eDiscovery process.",
+        "title": "Meilleures pratiques de caviardage de documents en eDiscovery",
+        "excerpt": "Guide essentiel pour les professionnels juridiques sur le caviardage d'informations sensibles lors du processus d'eDiscovery.",
         "date": "2026-02-10",
         "content": [
           "In legal proceedings, the eDiscovery process often requires producing large volumes of documents. Many of these documents contain privileged information, trade secrets, or personal data that must be redacted before production.",
@@ -1039,8 +1039,8 @@
         ]
       },
       "gdpr-pdf-compliance": {
-        "title": "GDPR PDF Compliance: Protecting Personal Data in Documents",
-        "excerpt": "How to ensure your PDF documents comply with GDPR data protection requirements through proper redaction.",
+        "title": "Conformité PDF au RGPD : Protéger les données personnelles dans les documents",
+        "excerpt": "Comment garantir que vos documents PDF sont conformes aux exigences de protection des données du RGPD grâce à un caviardage approprié.",
         "date": "2026-02-05",
         "content": [
           "The General Data Protection Regulation (GDPR) requires organizations to protect personal data of EU residents. PDF documents often contain personal data that must be properly handled — whether for data subject access requests, data sharing agreements, or document retention policies.",
