@@ -22,11 +22,26 @@ export interface GetSettingsMessage {
   type: "GET_SETTINGS";
 }
 
+export interface LoginMessage {
+  type: "LOGIN";
+}
+
+export interface LogoutMessage {
+  type: "LOGOUT";
+}
+
+export interface GetUserInfoMessage {
+  type: "GET_USER_INFO";
+}
+
 export type Message =
   | ScanTextMessage
   | ScanFileMessage
   | CheckUsageMessage
-  | GetSettingsMessage;
+  | GetSettingsMessage
+  | LoginMessage
+  | LogoutMessage
+  | GetUserInfoMessage;
 
 // --- Background → Content responses ---
 

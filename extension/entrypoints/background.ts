@@ -1,4 +1,5 @@
-import { getSettings, incrementUsage, getUsage, getProStatus } from "../src/lib/storage";
+import { getSettings, incrementUsage, getUsage } from "../src/lib/storage";
+import { getProStatus, verifyProStatus, login, logout, getUserInfo } from "../src/lib/auth";
 import { detectPII } from "../src/lib/pii/detector";
 import { getRegulationPatterns } from "../src/lib/pii/regulations";
 import { maskText } from "../src/lib/masker";
@@ -7,16 +8,26 @@ import type { Message, ScanResponse, UsageResponse, SettingsResponse } from "../
 const FREE_DAILY_LIMIT = 5;
 const FREE_PII_TYPES = ["email", "phone", "tcKimlik"] as const;
 
+// Pro durumunu periyodik olarak doğrula (1 saat)
+const PRO_CHECK_INTERVAL = 3600000;
+
 export default defineBackground(() => {
+  // Message handler
   chrome.runtime.onMessage.addListener(
     (message: Message, _sender, sendResponse) => {
       handleMessage(message).then(sendResponse);
       return true; // async response
     }
   );
+
+  // Periyodik Pro doğrulama — extension açıldığında ve her 1 saatte
+  verifyProStatus().catch(() => {});
+  setInterval(() => {
+    verifyProStatus().catch(() => {});
+  }, PRO_CHECK_INTERVAL);
 });
 
-async function handleMessage(message: Message): Promise<ScanResponse | UsageResponse | SettingsResponse> {
+async function handleMessage(message: Message): Promise<unknown> {
   switch (message.type) {
     case "SCAN_TEXT":
       return handleScanText(message.text);
@@ -27,6 +38,21 @@ async function handleMessage(message: Message): Promise<ScanResponse | UsageResp
     case "GET_SETTINGS": {
       const settings = await getSettings();
       return { type: "SETTINGS", settings };
+    }
+
+    case "LOGIN": {
+      const success = await login();
+      return { type: "LOGIN_RESULT", success };
+    }
+
+    case "LOGOUT": {
+      await logout();
+      return { type: "LOGOUT_RESULT", success: true };
+    }
+
+    case "GET_USER_INFO": {
+      const info = await getUserInfo();
+      return { type: "USER_INFO", ...info };
     }
 
     default:

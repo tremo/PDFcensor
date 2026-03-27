@@ -89,28 +89,5 @@ export async function recordScan(
   await chrome.storage.local.set({ stats });
 }
 
-// --- Pro Status ---
-
-interface ProStatusCache {
-  isPro: boolean;
-  timestamp: number;
-}
-
-const PRO_CACHE_TTL = 3600000; // 1 hour
-
-export async function getProStatus(): Promise<boolean> {
-  const result = await chrome.storage.local.get("proStatus");
-  const cached = result.proStatus as ProStatusCache | undefined;
-
-  if (cached && Date.now() - cached.timestamp < PRO_CACHE_TTL) {
-    return cached.isPro;
-  }
-
-  // No valid cache — default to free
-  return false;
-}
-
-export async function setProStatus(isPro: boolean): Promise<void> {
-  const proStatus: ProStatusCache = { isPro, timestamp: Date.now() };
-  await chrome.storage.local.set({ proStatus });
-}
+// Pro status is now managed by src/lib/auth.ts
+// which handles token-based verification with pdfcensor.com
