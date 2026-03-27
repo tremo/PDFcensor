@@ -97,7 +97,13 @@
     "personName": "Kişi İsimleri",
     "address": "Adresler",
     "dateOfBirth": "Doğum Tarihleri",
-    "faceDetection": "Yüz Algılama"
+    "faceDetection": "Yüz Algılama",
+    "ipAddress": "IP Adresleri",
+    "macAddress": "MAC Adresleri",
+    "cryptoWallet": "Kripto Cüzdanlar",
+    "gpsCoordinate": "GPS Koordinatları",
+    "licensePlate": "Araç Plakaları",
+    "nationalId": "Ulusal Kimlikler"
   },
   "security": {
     "title": "Gerçek kalıcı sansürleme",
@@ -238,7 +244,14 @@
       "names": "Kişi Adları",
       "address": "Adresler",
       "customKeyword": "Özel Kelime",
-      "face": "Yüz"
+      "face": "Yüz",
+      "dateOfBirth": "Doğum Tarihi",
+      "ipAddress": "IP Adresi",
+      "macAddress": "MAC Adresi",
+      "cryptoWallet": "Kripto Cüzdan",
+      "gpsCoordinate": "GPS Koordinat",
+      "licensePlate": "Araç Plakası",
+      "nationalId": "Ulusal Kimlik No"
     },
     "scanProgress": {
       "stepParsing": "Ayrıştır",

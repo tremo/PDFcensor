@@ -84,6 +84,8 @@ export function PDFDropzone({
   const allPiiTypes: PIIType[] = [
     "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
     "usPhone", "iban", "creditCard", "passport", "names", "address",
+    "dateOfBirth", "ipAddress", "macAddress", "cryptoWallet",
+    "gpsCoordinate", "licensePlate", "nationalId",
   ];
 
   return (

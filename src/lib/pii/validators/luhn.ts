@@ -1,9 +1,15 @@
 /**
- * Validates a number using the Luhn algorithm (credit card validation).
+ * Validates a number using the Luhn algorithm.
+ * Default range 13-19 digits (credit cards). Pass minDigits/maxDigits to override.
  */
-export function validateLuhn(value: string): boolean {
+export function validateLuhn(
+  value: string,
+  minDigits = 13,
+  maxDigits = 19
+): boolean {
   const cleaned = value.replace(/[\s-]/g, "");
-  if (!/^\d{13,19}$/.test(cleaned)) return false;
+  if (cleaned.length < minDigits || cleaned.length > maxDigits || !/^\d+$/.test(cleaned))
+    return false;
 
   let sum = 0;
   let alternate = false;

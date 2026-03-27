@@ -28,7 +28,8 @@ import { cn } from "@/lib/utils";
 const ALL_PII_TYPES: (PIIType | "customKeyword")[] = [
   "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
   "usPhone", "iban", "creditCard", "passport", "names", "address",
-  "face", "customKeyword",
+  "dateOfBirth", "face", "ipAddress", "macAddress", "cryptoWallet",
+  "gpsCoordinate", "licensePlate", "nationalId", "customKeyword",
 ];
 
 interface RedactionControlsProps {

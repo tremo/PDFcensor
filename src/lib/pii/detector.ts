@@ -10,6 +10,9 @@ import {
   detectDateOfBirth,
 } from "./patterns/global";
 import { detectNames } from "./patterns/names";
+import { detectIPAddress, detectMACAddress, detectCryptoWallet } from "./patterns/digital";
+import { detectGPSCoordinate, detectLicensePlate } from "./patterns/location";
+import { detectNationalId } from "./patterns/eu-ids";
 
 type DetectorFn = (text: string, pageIndex: number) => PIIMatch[];
 
@@ -28,6 +31,12 @@ const detectorMap: Record<PIIType, DetectorFn> = {
   names: detectNames,
   dateOfBirth: detectDateOfBirth,
   face: () => [], // Face detection is visual, not text-based
+  ipAddress: detectIPAddress,
+  macAddress: detectMACAddress,
+  cryptoWallet: detectCryptoWallet,
+  gpsCoordinate: detectGPSCoordinate,
+  licensePlate: detectLicensePlate,
+  nationalId: detectNationalId,
 };
 
 /**

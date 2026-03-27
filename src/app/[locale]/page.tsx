@@ -41,6 +41,12 @@ import {
   MapPin,
   Calendar,
   ScanFace,
+  Wifi,
+  Network,
+  Bitcoin,
+  Navigation,
+  Car,
+  Fingerprint,
 } from "lucide-react";
 
 type Props = {
@@ -73,6 +79,12 @@ export default async function HomePage({ params }: Props) {
     { icon: MapPin, key: "address", color: "text-orange-500", bg: "bg-orange-50" },
     { icon: Calendar, key: "dateOfBirth", color: "text-teal-500", bg: "bg-teal-50" },
     { icon: ScanFace, key: "faceDetection", color: "text-cyan-500", bg: "bg-cyan-50" },
+    { icon: Wifi, key: "ipAddress", color: "text-slate-500", bg: "bg-slate-50" },
+    { icon: Network, key: "macAddress", color: "text-gray-500", bg: "bg-gray-50" },
+    { icon: Bitcoin, key: "cryptoWallet", color: "text-yellow-500", bg: "bg-yellow-50" },
+    { icon: Navigation, key: "gpsCoordinate", color: "text-emerald-500", bg: "bg-emerald-50" },
+    { icon: Car, key: "licensePlate", color: "text-sky-500", bg: "bg-sky-50" },
+    { icon: Fingerprint, key: "nationalId", color: "text-rose-500", bg: "bg-rose-50" },
   ];
 
   const steps = [
@@ -270,7 +282,7 @@ export default async function HomePage({ params }: Props) {
             <p className="text-sm text-muted-foreground text-center mb-8">
               {t("comparison.dataTypesSubtitle")}
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
               {dataTypes.map(({ icon: Icon, key, color, bg }) => (
                 <div
                   key={key}

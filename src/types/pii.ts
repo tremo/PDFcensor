@@ -12,7 +12,13 @@ export type PIIType =
   | "names"
   | "address"
   | "dateOfBirth"
-  | "face";
+  | "face"
+  | "ipAddress"
+  | "macAddress"
+  | "cryptoWallet"
+  | "gpsCoordinate"
+  | "licensePlate"
+  | "nationalId";
 
 export interface PIIMatch {
   type: PIIType;
