@@ -1,9 +1,10 @@
 import { defineConfig } from "wxt";
 
 export default defineConfig({
+  srcDir: ".",
   modules: ["@wxt-dev/module-react"],
   manifest: {
-    name: "PDFcensor \u2014 AI Privacy Guard",
+    name: "PDFcensor — AI Privacy Guard",
     description:
       "Automatically detects and redacts sensitive personal data (PII) before you send it to AI chatbots like ChatGPT, Claude, Gemini, and more.",
     version: "1.0.0",
@@ -17,9 +18,15 @@ export default defineConfig({
       "https://pdfcensor.com/*",
     ],
     icons: {
-      16: "/icon-16.png",
-      48: "/icon-48.png",
-      128: "/icon-128.png",
+      16: "/icons/icon-16.png",
+      48: "/icons/icon-48.png",
+      128: "/icons/icon-128.png",
     },
+    web_accessible_resources: [
+      {
+        resources: ["dictionaries/*.json"],
+        matches: ["<all_urls>"],
+      },
+    ],
   },
 });
