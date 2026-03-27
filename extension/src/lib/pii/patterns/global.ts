@@ -271,3 +271,163 @@ export function detectDateOfBirth(text: string, pageIndex: number): PIIMatch[] {
   }
   return matches;
 }
+
+/**
+ * IPv4 addresses — X.X.X.X where each octet is 0-255.
+ * Excludes common non-PII addresses: 0.0.0.0, 127.x.x.x, 255.255.255.255.
+ */
+export function detectIPAddress(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  // IPv4
+  const ipv4Regex = /\b(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\b/g;
+  let match;
+  while ((match = ipv4Regex.exec(text)) !== null) {
+    const parts = match[1].split(".").map(Number);
+    if (parts.some((p) => p > 255)) continue;
+    if (parts[0] === 0 || parts[0] === 127 || parts[0] === 255) continue;
+    if (parts[0] === 224 || parts[0] === 169) continue;
+    matches.push({
+      type: "ipAddress",
+      value: match[1],
+      startIndex: match.index,
+      endIndex: match.index + match[1].length,
+      pageIndex,
+      confidence: 0.8,
+    });
+  }
+
+  // IPv6 — full or compressed form
+  const ipv6Regex = /\b((?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){1,7}:|(?:[0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|::(?:[0-9a-fA-F]{1,4}:){0,5}[0-9a-fA-F]{1,4})\b/g;
+  while ((match = ipv6Regex.exec(text)) !== null) {
+    if (match[1] === "::1") continue;
+    matches.push({
+      type: "ipAddress",
+      value: match[1],
+      startIndex: match.index,
+      endIndex: match.index + match[1].length,
+      pageIndex,
+      confidence: 0.75,
+    });
+  }
+
+  return matches;
+}
+
+/**
+ * MAC addresses — 6 groups of 2 hex digits, separated by : or -.
+ * Format: AA:BB:CC:DD:EE:FF or AA-BB-CC-DD-EE-FF
+ */
+export function detectMACAddress(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const regex = /\b([0-9A-Fa-f]{2}(?:[:-][0-9A-Fa-f]{2}){5})\b/g;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    const cleaned = match[1].replace(/[:-]/g, "").toUpperCase();
+    if (cleaned === "FFFFFFFFFFFF" || cleaned === "000000000000") continue;
+    matches.push({
+      type: "macAddress",
+      value: match[1],
+      startIndex: match.index,
+      endIndex: match.index + match[1].length,
+      pageIndex,
+      confidence: 0.8,
+    });
+  }
+  return matches;
+}
+
+/**
+ * Cryptocurrency wallet addresses — Bitcoin (BTC) and Ethereum (ETH).
+ * BTC Legacy: starts with 1, 26-34 chars (Base58)
+ * BTC SegWit: starts with 3, 26-34 chars
+ * BTC Bech32: starts with bc1, 42-62 chars
+ * ETH: starts with 0x, 42 hex chars
+ */
+export function detectCryptoWallet(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const seen = new Set<string>();
+  let match;
+
+  // Bitcoin Legacy / SegWit
+  const btcRegex = /\b([13][a-km-zA-HJ-NP-Z1-9]{25,34})\b/g;
+  while ((match = btcRegex.exec(text)) !== null) {
+    const key = `${match.index}:${match.index + match[1].length}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matches.push({
+      type: "cryptoWallet", value: match[1],
+      startIndex: match.index, endIndex: match.index + match[1].length,
+      pageIndex, confidence: 0.8,
+    });
+  }
+
+  // Bitcoin Bech32
+  const bech32Regex = /\b(bc1[a-z0-9]{38,58})\b/g;
+  while ((match = bech32Regex.exec(text)) !== null) {
+    const key = `${match.index}:${match.index + match[1].length}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matches.push({
+      type: "cryptoWallet", value: match[1],
+      startIndex: match.index, endIndex: match.index + match[1].length,
+      pageIndex, confidence: 0.85,
+    });
+  }
+
+  // Ethereum
+  const ethRegex = /\b(0x[0-9a-fA-F]{40})\b/g;
+  while ((match = ethRegex.exec(text)) !== null) {
+    const key = `${match.index}:${match.index + match[1].length}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matches.push({
+      type: "cryptoWallet", value: match[1],
+      startIndex: match.index, endIndex: match.index + match[1].length,
+      pageIndex, confidence: 0.9,
+    });
+  }
+
+  return matches;
+}
+
+/**
+ * GPS Coordinates — latitude/longitude pairs.
+ * Formats: 41.0082, 28.9784 | 41°0'29.5"N 28°58'42.2"E
+ */
+export function detectGPSCoordinates(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const seen = new Set<string>();
+  let match;
+
+  // Decimal format: lat, lon pair
+  const decimalRegex = /(-?\d{1,2}\.\d{3,8})\s*[,;\s]\s*(-?\d{1,3}\.\d{3,8})/g;
+  while ((match = decimalRegex.exec(text)) !== null) {
+    const lat = parseFloat(match[1]);
+    const lon = parseFloat(match[2]);
+    if (Math.abs(lat) > 90 || Math.abs(lon) > 180) continue;
+    if (Math.abs(lat) < 1 && Math.abs(lon) < 1) continue;
+    const key = `${match.index}:${match.index + match[0].length}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matches.push({
+      type: "gpsCoordinates", value: `${match[1]}, ${match[2]}`,
+      startIndex: match.index, endIndex: match.index + match[0].length,
+      pageIndex, confidence: 0.75,
+    });
+  }
+
+  // DMS format: 41°0'29.5"N 28°58'42.2"E
+  const dmsRegex = /(\d{1,3})°\s*(\d{1,2})[''′]\s*(\d{1,2}(?:\.\d+)?)[""″]?\s*([NSEW])\s+(\d{1,3})°\s*(\d{1,2})[''′]\s*(\d{1,2}(?:\.\d+)?)[""″]?\s*([NSEW])/g;
+  while ((match = dmsRegex.exec(text)) !== null) {
+    const key = `${match.index}:${match.index + match[0].length}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    matches.push({
+      type: "gpsCoordinates", value: match[0],
+      startIndex: match.index, endIndex: match.index + match[0].length,
+      pageIndex, confidence: 0.9,
+    });
+  }
+
+  return matches;
+}

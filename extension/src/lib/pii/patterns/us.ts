@@ -55,3 +55,48 @@ export function detectUSPhone(text: string, pageIndex: number): PIIMatch[] {
   }
   return matches;
 }
+
+/**
+ * US Driver's License — state-specific formats.
+ * Context-based: looks for "DL", "Driver's License", "License #" nearby.
+ * Covers most common formats: 1 letter + 6-14 digits, or pure numeric.
+ */
+export function detectUSDriverLicense(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const keywordRegex = /(?:driver'?s?\s*license|DL|license\s*#?|lic\s*#)\s*[:.]?\s*([A-Z]?\d{5,14})\b/gi;
+  let match;
+  while ((match = keywordRegex.exec(text)) !== null) {
+    const numStart = match.index + match[0].indexOf(match[1]);
+    matches.push({
+      type: "usDriverLicense",
+      value: match[1],
+      startIndex: numStart,
+      endIndex: numStart + match[1].length,
+      pageIndex,
+      confidence: 0.75,
+    });
+  }
+  return matches;
+}
+
+/**
+ * US Passport Number — 9 digits (since 1981) or 1 letter + 8 digits.
+ * Context-based: looks for "Passport" keyword nearby.
+ */
+export function detectUSPassport(text: string, pageIndex: number): PIIMatch[] {
+  const matches: PIIMatch[] = [];
+  const keywordRegex = /(?:passport)\s*(?:#|no|number)?\s*[:.]?\s*([A-Z]?\d{8,9})\b/gi;
+  let match;
+  while ((match = keywordRegex.exec(text)) !== null) {
+    const numStart = match.index + match[0].indexOf(match[1]);
+    matches.push({
+      type: "usPassport",
+      value: match[1],
+      startIndex: numStart,
+      endIndex: numStart + match[1].length,
+      pageIndex,
+      confidence: 0.8,
+    });
+  }
+  return matches;
+}
