@@ -71,6 +71,8 @@ export function DocxRedactionControls({
   const allPiiTypes: PIIType[] = [
     "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
     "usPhone", "iban", "creditCard", "passport", "names", "address",
+    "dateOfBirth", "ipAddress", "macAddress", "cryptoWallet",
+    "gpsCoordinate", "licensePlate", "nationalId",
   ];
 
   const piiTypeLabels: Record<string, string> = {};

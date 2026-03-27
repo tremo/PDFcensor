@@ -8,25 +8,26 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
     patterns: [
       "ssn", "itin", "tcKimlik", "email", "phone", "trPhone", "usPhone",
       "iban", "creditCard", "passport", "names", "address", "dateOfBirth",
+      "ipAddress", "macAddress", "cryptoWallet", "gpsCoordinate", "licensePlate", "nationalId",
     ],
     description: "Comprehensive — US + EU + TR (Recommended)",
   },
   KVKK: {
     name: "KVKK",
     country: "TR",
-    patterns: ["tcKimlik", "trPhone", "email", "iban", "names", "address", "dateOfBirth"],
+    patterns: ["tcKimlik", "trPhone", "email", "iban", "names", "address", "dateOfBirth", "licensePlate"],
     description: "Kişisel Verilerin Korunması Kanunu (Turkey)",
   },
   GDPR: {
     name: "GDPR",
     country: "EU",
-    patterns: ["email", "phone", "iban", "names", "address", "passport", "dateOfBirth"],
+    patterns: ["email", "phone", "iban", "names", "address", "passport", "dateOfBirth", "nationalId", "ipAddress", "licensePlate"],
     description: "General Data Protection Regulation (EU)",
   },
   HIPAA: {
     name: "HIPAA",
     country: "US",
-    patterns: ["ssn", "names", "email", "usPhone", "address", "dateOfBirth"],
+    patterns: ["ssn", "names", "email", "usPhone", "address", "dateOfBirth", "ipAddress"],
     description: "Health Insurance Portability and Accountability Act (US)",
   },
   CCPA: {
@@ -65,6 +66,7 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
     patterns: [
       "ssn", "tcKimlik", "itin", "email", "phone", "trPhone", "usPhone",
       "iban", "creditCard", "passport", "names", "address", "dateOfBirth",
+      "ipAddress", "macAddress", "cryptoWallet", "gpsCoordinate", "licensePlate", "nationalId",
     ],
     description: "All available PII patterns",
   },

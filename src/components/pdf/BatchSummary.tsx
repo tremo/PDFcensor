@@ -23,6 +23,14 @@ import {
   Fingerprint,
   FileCheck,
   Loader2,
+  Calendar,
+  Wifi,
+  Network,
+  Bitcoin,
+  Navigation,
+  Car,
+  BookOpen,
+  ScanFace,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -49,6 +57,14 @@ const PII_ICONS: Record<string, React.ReactNode> = {
   itin: <Hash className="w-4 h-4" />,
   iban: <Globe className="w-4 h-4" />,
   passport: <FileCheck className="w-4 h-4" />,
+  dateOfBirth: <Calendar className="w-4 h-4" />,
+  face: <ScanFace className="w-4 h-4" />,
+  ipAddress: <Wifi className="w-4 h-4" />,
+  macAddress: <Network className="w-4 h-4" />,
+  cryptoWallet: <Bitcoin className="w-4 h-4" />,
+  gpsCoordinate: <Navigation className="w-4 h-4" />,
+  licensePlate: <Car className="w-4 h-4" />,
+  nationalId: <Fingerprint className="w-4 h-4" />,
 };
 
 const PII_COLORS: Record<string, string> = {
@@ -64,6 +80,14 @@ const PII_COLORS: Record<string, string> = {
   itin: "bg-orange-500/10 text-orange-600 border-orange-200",
   iban: "bg-cyan-500/10 text-cyan-600 border-cyan-200",
   passport: "bg-indigo-500/10 text-indigo-600 border-indigo-200",
+  dateOfBirth: "bg-teal-500/10 text-teal-600 border-teal-200",
+  face: "bg-cyan-500/10 text-cyan-600 border-cyan-200",
+  ipAddress: "bg-slate-500/10 text-slate-600 border-slate-200",
+  macAddress: "bg-gray-500/10 text-gray-600 border-gray-200",
+  cryptoWallet: "bg-yellow-500/10 text-yellow-600 border-yellow-200",
+  gpsCoordinate: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
+  licensePlate: "bg-sky-500/10 text-sky-600 border-sky-200",
+  nationalId: "bg-rose-500/10 text-rose-600 border-rose-200",
 };
 
 export function BatchSummary({

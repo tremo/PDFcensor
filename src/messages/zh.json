@@ -97,7 +97,13 @@
     "personName": "Person Names",
     "address": "Addresses",
     "dateOfBirth": "Dates of Birth",
-    "faceDetection": "Face Detection"
+    "faceDetection": "Face Detection",
+    "ipAddress": "IP Addresses",
+    "macAddress": "MAC Addresses",
+    "cryptoWallet": "Crypto Wallets",
+    "gpsCoordinate": "GPS Coordinates",
+    "licensePlate": "License Plates",
+    "nationalId": "National IDs"
   },
   "security": {
     "title": "真正的永久脱敏",
@@ -234,7 +240,14 @@
       "names": "人名",
       "address": "地址",
       "customKeyword": "自定义关键词",
-      "face": "人脸"
+      "face": "人脸",
+      "dateOfBirth": "Date of Birth",
+      "ipAddress": "IP Address",
+      "macAddress": "MAC Address",
+      "cryptoWallet": "Crypto Wallet",
+      "gpsCoordinate": "GPS Coordinate",
+      "licensePlate": "License Plate",
+      "nationalId": "National ID"
     },
     "scanProgress": {
       "stepParsing": "解析",

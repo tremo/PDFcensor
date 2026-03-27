@@ -97,7 +97,13 @@
     "personName": "Person Names",
     "address": "Addresses",
     "dateOfBirth": "Dates of Birth",
-    "faceDetection": "Face Detection"
+    "faceDetection": "Face Detection",
+    "ipAddress": "IP Addresses",
+    "macAddress": "MAC Addresses",
+    "cryptoWallet": "Crypto Wallets",
+    "gpsCoordinate": "GPS Coordinates",
+    "licensePlate": "License Plates",
+    "nationalId": "National IDs"
   },
   "security": {
     "title": "진정한 영구 삭제",
@@ -234,7 +240,14 @@
       "names": "인명",
       "address": "주소",
       "customKeyword": "사용자 지정 키워드",
-      "face": "얼굴"
+      "face": "얼굴",
+      "dateOfBirth": "Date of Birth",
+      "ipAddress": "IP Address",
+      "macAddress": "MAC Address",
+      "cryptoWallet": "Crypto Wallet",
+      "gpsCoordinate": "GPS Coordinate",
+      "licensePlate": "License Plate",
+      "nationalId": "National ID"
     },
     "scanProgress": {
       "stepParsing": "분석",
