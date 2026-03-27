@@ -205,7 +205,7 @@ function validateFRNIR(value: string): boolean {
 
   const base = BigInt(value.slice(0, 13));
   const check = parseInt(value.slice(13), 10);
-  return check === 97 - Number(base % 97n);
+  return check === 97 - Number(base % BigInt(97));
 }
 
 function detectFRNIR(text: string, pageIndex: number): PIIMatch[] {
