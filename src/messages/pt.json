@@ -188,6 +188,12 @@
     "title": "Ferramenta de redação de documentos",
     "titleDocx": "Ferramenta de redação de documentos Word",
     "titleBatch": "Redação em lote de documentos",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "Solte os arquivos aqui",
       "subtitle": "ou clique para navegar nos seus arquivos",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Próxima data de cobrança: {date}",
     "cancelConfirmMessage": "Tem certeza? Você manterá o acesso Pro até {date}, depois seu plano mudará para Gratuito.",
     "confirmCancel": "Sim, cancelar",
-    "keepSubscription": "Manter assinatura"
+    "keepSubscription": "Manter assinatura",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

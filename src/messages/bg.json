@@ -188,6 +188,12 @@
     "title": "Инструмент за редактиране на документи",
     "titleDocx": "Инструмент за редактиране на Word документи",
     "titleBatch": "Пакетно редактиране на документи",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "Пуснете файловете тук",
       "subtitle": "или щракнете, за да прегледате файловете си",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Следваща дата на фактуриране: {date}",
     "cancelConfirmMessage": "Сигурни ли сте? Ще запазите Pro достъп до {date}, след което планът ви ще бъде превключен на Безплатен.",
     "confirmCancel": "Да, отмени",
-    "keepSubscription": "Запази абонамента"
+    "keepSubscription": "Запази абонамента",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

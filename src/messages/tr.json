@@ -192,6 +192,12 @@
     "title": "Belge Sansürleme Aracı",
     "titleDocx": "Word Belgesi Sansürleme Aracı",
     "titleBatch": "Toplu Belge Sansürleme",
+    "extensionTip": {
+      "free": "ChatGPT, Gmail ve Slack'te de verini koru.",
+      "freeCta": "Browser Eklentisini Dene",
+      "pro": "Pro planın browser eklentisini içeriyor.",
+      "proBrowserCta": "{browser} için Yükle"
+    },
     "dropzone": {
       "title": "Dosyaları buraya bırakın",
       "subtitle": "veya dosyalarınıza gözatmak için tıklayın",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Sonraki fatura tarihi: {date}",
     "cancelConfirmMessage": "Emin misiniz? {date} tarihine kadar Pro erişiminiz devam eder, ardından planınız Ücretsiz'e geçer.",
     "confirmCancel": "Evet, İptal Et",
-    "keepSubscription": "Aboneliği Koru"
+    "keepSubscription": "Aboneliği Koru",
+    "extensionIncluded": "Browser Eklentisi Dahil",
+    "extensionIncludedDescription": "ChatGPT, Gmail, Slack ve daha fazlasında hassas verileri otomatik maskele — Pro planınıza dahil.",
+    "installExtension": "Eklentiyi Yükle",
+    "extensionTitle": "Browser Eklentisi",
+    "extensionSubtitle": "ChatGPT, Gmail ve 9+ platformda PII otomatik sansürle"
   },
   "privacy": {
     "meta": {

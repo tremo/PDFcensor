@@ -188,6 +188,12 @@
     "title": "Document Redaction Tool",
     "titleDocx": "Word Document Redaction Tool",
     "titleBatch": "Batch Document Redaction",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "Drop files here",
       "subtitle": "or click to browse your files",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Nākamais norēķinu datums: {date}",
     "cancelConfirmMessage": "Vai esat pārliecināts? Pro piekļuve saglabāsies līdz {date}, pēc tam jūsu plāns tiks pārslēgts uz Bezmaksas.",
     "confirmCancel": "Jā, atcelt",
-    "keepSubscription": "Saglabāt abonementu"
+    "keepSubscription": "Saglabāt abonementu",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

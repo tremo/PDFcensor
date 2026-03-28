@@ -188,6 +188,12 @@
     "title": "Nástroj pro redakci dokumentů",
     "titleDocx": "Nástroj pro redakci Word dokumentů",
     "titleBatch": "Dávková redakce dokumentů",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "Přetáhněte soubory sem",
       "subtitle": "nebo klikněte pro procházení souborů",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Další datum fakturace: {date}",
     "cancelConfirmMessage": "Jste si jisti? Pro přístup si ponecháte do {date}, poté bude váš plán přepnut na Bezplatný.",
     "confirmCancel": "Ano, zrušit",
-    "keepSubscription": "Ponechat předplatné"
+    "keepSubscription": "Ponechat předplatné",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

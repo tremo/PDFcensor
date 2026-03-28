@@ -192,6 +192,12 @@
     "title": "Dokument-Schwärzungstool",
     "titleDocx": "Word-Dokument Schwärzungstool",
     "titleBatch": "Stapelverarbeitung von Dokumenten",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "Dateien hier ablegen",
       "subtitle": "oder klicken Sie, um Ihre Dateien zu durchsuchen",
@@ -476,7 +482,12 @@
     "nextBillingDate": "Nächstes Rechnungsdatum: {date}",
     "cancelConfirmMessage": "Sind Sie sicher? Sie behalten den Pro-Zugang bis {date}, danach wechselt Ihr Plan zu Kostenlos.",
     "confirmCancel": "Ja, kündigen",
-    "keepSubscription": "Abonnement behalten"
+    "keepSubscription": "Abonnement behalten",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

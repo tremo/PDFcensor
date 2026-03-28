@@ -5,7 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Link } from "@/lib/i18n/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Crown, Shield, ArrowRight, Loader2, AlertTriangle } from "lucide-react";
+import { Crown, Shield, ArrowRight, Loader2, AlertTriangle, Puzzle } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 
 interface SubscriptionStatus {
@@ -238,6 +238,26 @@ export default function AccountPage() {
           )}
         </CardContent>
       </Card>
+
+      {/* Extension Card — Pro only */}
+      {isPro && (
+        <Card>
+          <CardContent className="pt-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                <Puzzle className="h-5 w-5 text-accent" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-semibold text-sm">{t("extensionTitle")}</p>
+                <p className="text-xs text-muted-foreground">{t("extensionSubtitle")}</p>
+              </div>
+              <Button asChild variant="outline" size="sm">
+                <Link href="/extension">{t("installExtension")}</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Quick Actions */}
       <Button variant="outline" className="w-full" asChild>
