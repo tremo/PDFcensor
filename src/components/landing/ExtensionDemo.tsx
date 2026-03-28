@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 
 type ExtPhase =
   | "idle"
-  | "inputAppear"
   | "typing"
   | "typingDone"
   | "piiHighlight"
@@ -131,7 +130,7 @@ export default function ExtensionDemo() {
   }, [phase]);
 
   const showInput =
-    phase !== "idle" && phase !== "reset" && phase !== "inputAppear";
+    phase !== "idle" && phase !== "reset";
   const isTyping = phase === "typing";
   const showCursor = phase === "typing" || phase === "typingDone";
   const piiDetected =
@@ -146,7 +145,7 @@ export default function ExtensionDemo() {
 
   // Build displayed text with PII spans
   const renderText = () => {
-    if (phase === "idle" || phase === "reset" || phase === "inputAppear") {
+    if (phase === "idle" || phase === "reset") {
       return null;
     }
 
