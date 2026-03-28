@@ -7,7 +7,8 @@
     "home": "Home",
     "redact": "Redact Documents",
     "pricing": "Pricing",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Extension"
   },
   "hero": {
     "badge": "100% Client-Side — Your files never leave your browser",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+    "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
     "webApp": {
       "title": "Web App",
       "description": "Redact documents before sharing",
@@ -161,16 +162,16 @@
       "f2": "Auto-mask before sending",
       "f3": "File upload scanning (PDF, DOCX)",
       "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "cta": "Learn More & Install"
     },
-    "platforms": "Works with",
+    "platforms": "Auto-censors when uploading to",
     "onePlan": "One Pro subscription — full access to both."
   },
   "cta": {
     "title": "Ready to Protect Sensitive Data?",
     "subtitle": "Redact documents and auto-mask AI chatbots — one platform for all your privacy needs.",
     "button": "Start Redacting Now",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Get Browser Extension"
   },
   "footer": {
     "product": "Product",
@@ -1059,6 +1060,63 @@
         ]
       }
     }
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   },
   "notFound": {
     "code": "404",

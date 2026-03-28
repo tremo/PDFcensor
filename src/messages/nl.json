@@ -7,7 +7,8 @@
     "home": "Home",
     "redact": "Documenten redigeren",
     "pricing": "Prijzen",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Extensie"
   },
   "hero": {
     "badge": "100% client-side — Uw bestanden verlaten nooit uw browser",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NIEUW — Browserextensie",
-    "title": "Bescherm uw gegevens ook op AI-platformen",
-    "subtitle": "Onze browserextensie detecteert en maskeert automatisch persoonlijke gegevens voordat u ze naar ChatGPT, Claude, Gmail en meer stuurt.",
+    "title": "Censureer gevoelige gegevens automatisch voordat ze de cloud bereiken",
+    "subtitle": "Verzendt u klantgegevens naar ChatGPT, Gmail of vergelijkbare diensten? Onze extensie detecteert en maskeert gevoelige informatie voordat deze uw browser verlaat.",
     "webApp": {
       "title": "Web App",
       "description": "Documenten redigeren voor het delen",
@@ -161,16 +162,16 @@
       "f2": "Automatisch maskeren voor verzending",
       "f3": "Bestandsupload scannen (PDF, DOCX)",
       "f4": "Werkt op 9+ platformen",
-      "cta": "Extensie installeren"
+      "cta": "Details en installatie"
     },
-    "platforms": "Werkt met",
+    "platforms": "Automatische censuur bij uploaden naar",
     "onePlan": "Eén Pro-abonnement — volledige toegang tot beide."
   },
   "cta": {
     "title": "Klaar om gevoelige gegevens te beschermen?",
     "subtitle": "Documenten redigeren en AI-chatbots automatisch maskeren — één platform voor al uw privacybehoeften.",
     "button": "Begin nu",
-    "extensionCta": "Extensie installeren"
+    "extensionCta": "Extensie downloaden"
   },
   "footer": {
     "product": "Product",
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Pagina niet gevonden.",
     "goHome": "Naar Home"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }

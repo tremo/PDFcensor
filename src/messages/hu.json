@@ -7,7 +7,8 @@
     "home": "Kezdőlap",
     "redact": "Dokumentumok szerkesztése",
     "pricing": "Árak",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Bővítmény"
   },
   "hero": {
     "badge": "100% kliens oldali — Fájljai soha nem hagyják el a böngészőjét",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "ÚJ — Böngészőbővítmény",
-    "title": "Védje adatait az AI-platformokon is",
-    "subtitle": "Böngészőbővítményünk automatikusan felismeri és maszkolja a személyes adatokat, mielőtt elküldi azokat a ChatGPT-nek, Claude-nak, Gmailnek és egyebeknek.",
+    "title": "Érzékeny adatok automatikus cenzúrázása, mielőtt elérnék a felhőt",
+    "subtitle": "Ügyféladatokat küld a ChatGPT-nek, Gmailnek vagy hasonló szolgáltatásoknak? Bővítményünk felismeri és maszkolja az érzékeny információkat, mielőtt elhagynák a böngészőjét.",
     "webApp": {
       "title": "Webalkalmazás",
       "description": "Dokumentumok redaktálása megosztás előtt",
@@ -161,16 +162,16 @@
       "f2": "Automatikus maszkolás küldés előtt",
       "f3": "Feltöltött fájlok szkennelése (PDF, DOCX)",
       "f4": "Működik 9+ platformon",
-      "cta": "Bővítmény telepítése"
+      "cta": "Részletek és telepítés"
     },
-    "platforms": "Kompatibilis",
+    "platforms": "Automatikus cenzúra feltöltéskor",
     "onePlan": "Egy Pro előfizetés — teljes hozzáférés mindkettőhöz."
   },
   "cta": {
     "title": "Készen áll az érzékeny adatok védelmére?",
     "subtitle": "Redaktáljon dokumentumokat és automatikusan maszkolja az AI chatbotokat — egy platform minden adatvédelmi igényéhez.",
     "button": "Kezdés most",
-    "extensionCta": "Bővítmény telepítése"
+    "extensionCta": "Bővítmény letöltése"
   },
   "footer": {
     "product": "Termék",
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Az oldal nem található.",
     "goHome": "Vissza a főoldalra"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }

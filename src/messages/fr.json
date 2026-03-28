@@ -7,7 +7,8 @@
     "home": "Accueil",
     "redact": "Caviarder un PDF",
     "pricing": "Tarifs",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Extension"
   },
   "hero": {
     "badge": "100% Côté client — Vos fichiers ne quittent jamais votre navigateur",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NOUVEAU — Extension navigateur",
-    "title": "Protégez vos données sur les plateformes IA aussi",
-    "subtitle": "Notre extension navigateur détecte et masque automatiquement les données personnelles avant de les envoyer à ChatGPT, Claude, Gmail et plus.",
+    "title": "Censurez automatiquement les données sensibles avant qu'elles n'atteignent le cloud",
+    "subtitle": "Vous envoyez des données clients à ChatGPT, Gmail ou des services similaires ? Notre extension détecte et masque les informations sensibles avant qu'elles ne quittent votre navigateur.",
     "webApp": {
       "title": "Application Web",
       "description": "Caviardez les documents avant le partage",
@@ -161,16 +162,16 @@
       "f2": "Masquage automatique avant l'envoi",
       "f3": "Analyse des fichiers uploadés (PDF, DOCX)",
       "f4": "Fonctionne sur 9+ plateformes",
-      "cta": "Installer l'extension"
+      "cta": "Détails et installation"
     },
-    "platforms": "Compatible avec",
+    "platforms": "Censure automatique lors du téléchargement vers",
     "onePlan": "Un seul abonnement Pro — accès complet aux deux."
   },
   "cta": {
     "title": "Prêt à protéger les données sensibles ?",
     "subtitle": "Caviardez des documents et masquez automatiquement les chatbots IA — une plateforme pour tous vos besoins de confidentialité.",
     "button": "Commencer maintenant",
-    "extensionCta": "Installer l'extension"
+    "extensionCta": "Obtenir l'extension"
   },
   "footer": {
     "product": "Produit",
@@ -1114,5 +1115,62 @@
         ]
       }
     }
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Extension navigateur — Censure automatique des PII sur ChatGPT, Gmail et plus",
+      "description": "L'extension OfflineRedact détecte et masque automatiquement les données sensibles avant qu'elles ne quittent votre navigateur."
+    },
+    "hero": {
+      "badge": "Extension navigateur",
+      "title": "Censurez automatiquement les données sensibles avant qu'elles n'atteignent le cloud",
+      "subtitle": "Vous envoyez des données clients à ChatGPT, Gmail ou des services similaires ? Notre extension détecte et masque les informations sensibles avant qu'elles ne quittent votre navigateur.",
+      "downloadFor": "Télécharger pour {browser}",
+      "alsoAvailable": "Également disponible pour :"
+    },
+    "features": {
+      "title": "Fonctionne là où vous travaillez",
+      "subtitle": "Censure automatiquement les données sensibles sur les plateformes que vous utilisez au quotidien",
+      "realtime": {
+        "title": "Détection en temps réel",
+        "description": "Détecte les noms, e-mails, numéros de téléphone, numéros d'identité et plus en tapant — avant tout envoi."
+      },
+      "oneClick": {
+        "title": "Masquage en un clic",
+        "description": "Un seul clic remplace toutes les données personnelles détectées par des marqueurs sécurisés."
+      },
+      "fileUpload": {
+        "title": "Analyse des fichiers uploadés",
+        "description": "Analyse les documents PDF et Word lors du téléchargement pour détecter les données sensibles dans les pièces jointes."
+      },
+      "everywhere": {
+        "title": "Fonctionne partout",
+        "description": "Des chatbots IA aux clients de messagerie en passant par les outils de collaboration — une extension couvre tout."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Masquage automatique des PII dans les prompts",
+      "claude": "Protection des données dans les conversations",
+      "gemini": "Censure avant l'envoi",
+      "copilot": "Masquage du contexte de code sensible",
+      "gmail": "Censure des e-mails avant l'envoi",
+      "outlook": "Protection des messages sortants",
+      "slack": "Masquage des PII dans les chats d'équipe",
+      "discord": "Censure automatique dans les messages",
+      "notion": "Protection des documents partagés"
+    },
+    "pricing": {
+      "title": "Un abonnement, protection complète",
+      "subtitle": "Votre abonnement Pro inclut l'application web et l'extension navigateur — sans frais supplémentaires.",
+      "cta": "Voir les plans tarifaires"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} données sensibles détectées",
+    "btnMask": "Tout masquer",
+    "btnIgnore": "Ignorer",
+    "btnReview": "Examiner",
+    "successText": "Prêt à envoyer",
+    "successBadge": "Protégé par OfflineRedact"
   }
 }
