@@ -14,7 +14,7 @@ export default function PricingClient() {
   const t = useTranslations("pricing");
   const locale = useLocale();
   const router = useRouter();
-  const { user, isPro } = useAuth();
+  const { user, isPro, isLoading: authLoading } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
@@ -22,6 +22,7 @@ export default function PricingClient() {
   const isYearly = billingPeriod === "yearly";
 
   const handleCheckout = async () => {
+    if (authLoading) return;
     if (!user) {
       router.push("/login?redirect=/pricing");
       return;
