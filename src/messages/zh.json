@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "检测到{count}条敏感数据",
+    "btnMask": "全部遮盖",
+    "btnIgnore": "忽略",
+    "btnReview": "审查",
+    "successText": "安全发送",
+    "successBadge": "由OfflineRedact保护"
   }
 }

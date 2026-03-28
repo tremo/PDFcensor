@@ -56,6 +56,10 @@ export function DocxViewer({
         if (end > last.end) {
           last.end = end;
         }
+        // Promote to confirmed if either redaction is confirmed
+        if (redaction.confirmed && !last.redaction.confirmed) {
+          last.redaction = { ...last.redaction, confirmed: true };
+        }
       } else {
         merged.push({ start, end, redaction });
       }

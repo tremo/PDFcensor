@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} sonraí íogair aimsithe",
+    "btnMask": "Mascáil gach ceann",
+    "btnIgnore": "Déan neamhaird",
+    "btnReview": "Athbhreithniú",
+    "successText": "Sábháilte le seoladh",
+    "successBadge": "Cosanta ag OfflineRedact"
   }
 }

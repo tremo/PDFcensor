@@ -98,9 +98,14 @@ export function LoginForm({ redirectTo }: { redirectTo?: string }) {
       if (error) {
         setError(error.message);
       } else {
-        // Redirect on successful login
+        // Redirect on successful login (validate relative path to prevent open redirect)
         const locale = window.location.pathname.split("/")[1] || "en";
-        window.location.href = redirectTo || `/${locale}/redact`;
+        const defaultPath = `/${locale}/redact`;
+        const safeDest =
+          redirectTo && redirectTo.startsWith("/") && !redirectTo.startsWith("//")
+            ? redirectTo
+            : defaultPath;
+        window.location.href = safeDest;
       }
     }
     setLoading(false);

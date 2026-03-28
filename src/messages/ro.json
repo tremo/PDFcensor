@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} date sensibile detectate",
+    "btnMask": "Maschează totul",
+    "btnIgnore": "Ignoră",
+    "btnReview": "Verifică",
+    "successText": "Sigur de trimis",
+    "successBadge": "Protejat de OfflineRedact"
   }
 }

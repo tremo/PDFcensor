@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count}개의 민감한 데이터 감지",
+    "btnMask": "모두 마스킹",
+    "btnIgnore": "무시",
+    "btnReview": "검토",
+    "successText": "전송 안전",
+    "successBadge": "OfflineRedact로 보호됨"
   }
 }

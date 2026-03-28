@@ -20,7 +20,7 @@ import type { Locale } from "@/lib/i18n/config";
 
 let idCounter = 0;
 function nextId() {
-  return `redaction-${++idCounter}`;
+  return `redaction-${Date.now()}-${++idCounter}`;
 }
 
 export function usePDFProcessor() {

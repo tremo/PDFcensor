@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} følsomme data fundet",
+    "btnMask": "Maskér alle",
+    "btnIgnore": "Ignorer",
+    "btnReview": "Gennemgå",
+    "successText": "Sikker at sende",
+    "successBadge": "Beskyttet af OfflineRedact"
   }
 }

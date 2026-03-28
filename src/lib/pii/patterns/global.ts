@@ -126,7 +126,7 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
     // 6. US phone numbers
     //    +1 (XXX) XXX-XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX
     [
-      /(?:\+1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/g,
+      /(?<!\d)(?:\+1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}(?!\d)/g,
       0.8,
     ],
   ];

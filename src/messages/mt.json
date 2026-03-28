@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} data sensittiva misjuba",
+    "btnMask": "Aħbi kollox",
+    "btnIgnore": "Injora",
+    "btnReview": "Irrevedi",
+    "successText": "Sigur li tintbagħat",
+    "successBadge": "Protett minn OfflineRedact"
   }
 }
