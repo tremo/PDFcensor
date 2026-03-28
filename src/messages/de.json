@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadaten-Bereinigung",
       "description": "Entfernt versteckte Metadaten — Autor, Titel, Erstellungsdatum, Software-Informationen — die sensible Informationen preisgeben könnten."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "So funktioniert es",
     "subtitle": "Drei einfache Schritte zum dauerhaften Schwärzen sensibler Informationen",
     "step1": {
-      "title": "Hochladen",
-      "description": "Ziehen Sie Ihre PDFs, Word-Dokumente oder Bilder per Drag & Drop oder klicken Sie zum Durchsuchen. Unterstützt mehrere Dateien."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Überprüfen",
       "description": "Automatisch erkannte PII wird hervorgehoben. Fügen Sie Schwärzungen hinzu, entfernen oder passen Sie sie an."
     },
     "step3": {
-      "title": "Herunterladen",
-      "description": "Laden Sie Ihre dauerhaft geschwärzte Datei herunter. Der Originaltext ist unwiderruflich entfernt."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadatarensning",
       "description": "Fjerner skjulte metadata — forfatter, titel, oprettelsesdato — der kunne afsløre følsomme oplysninger."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Sådan fungerer det",
     "subtitle": "Tre simple trin til permanent redigering af følsomme oplysninger",
     "step1": {
-      "title": "Upload",
-      "description": "Træk og slip dine PDF'er, Word-dokumenter eller billeder — eller klik for at gennemse. Understøtter flere filer."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Gennemgå",
       "description": "Automatisk registrerede PII er fremhævet. Tilføj, fjern eller juster redigeringer."
     },
     "step3": {
-      "title": "Download",
-      "description": "Download din permanent redigerede fil. Den originale tekst er uigenkaldeligt fjernet."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

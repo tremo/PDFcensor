@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Cleaning",
       "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
-      "title": "Upload",
-      "description": "Velciet un nometiet savus PDF, Word dokumentus vai attēlus — vai noklikšķiniet, lai pārlūkotu. Atbalsta vairākus failus."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Pārskatīšana",
       "description": "Automātiski atklātie PII ir izcelti. Pievienojiet, noņemiet vai pielāgojiet rediģējumus pirms piemērošanas."
     },
     "step3": {
-      "title": "Lejupielāde",
-      "description": "Lejupielādējiet savu neatgriezeniski rediģēto failu. Oriģinālais teksts ir neatgriezeniski noņemts."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

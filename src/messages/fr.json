@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Nettoyage des métadonnées",
       "description": "Supprime les métadonnées cachées — auteur, titre, date de création, infos logiciel — qui pourraient révéler des informations sensibles."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Comment ça marche",
     "subtitle": "Trois étapes simples pour caviarder définitivement les informations sensibles",
     "step1": {
-      "title": "Télécharger",
-      "description": "Glissez-déposez vos PDFs, documents Word ou images — ou cliquez pour parcourir. Prend en charge plusieurs fichiers."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Vérifier",
       "description": "Les données personnelles détectées automatiquement sont mises en évidence. Ajoutez, supprimez ou ajustez les caviardages."
     },
     "step3": {
-      "title": "Télécharger",
-      "description": "Téléchargez votre fichier définitivement caviardé. Le texte original est irrévocablement supprimé."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

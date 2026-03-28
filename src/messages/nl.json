@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata opschonen",
       "description": "Verwijdert verborgen metadata — auteur, titel, aanmaakdatum, software-informatie — die gevoelige informatie kan onthullen."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Hoe het werkt",
     "subtitle": "Drie eenvoudige stappen om gevoelige informatie permanent te redigeren",
     "step1": {
-      "title": "Uploaden",
-      "description": "Sleep uw PDF's, Word-documenten of afbeeldingen hierheen — of klik om te bladeren. Ondersteunt meerdere bestanden."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Controleren",
       "description": "Automatisch gedetecteerde persoonsgegevens worden gemarkeerd. Voeg redacties toe, verwijder of pas ze aan voordat u ze toepast."
     },
     "step3": {
-      "title": "Downloaden",
-      "description": "Download uw permanent geredigeerd bestand. De originele tekst is onherstelbaar verwijderd."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

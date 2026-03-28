@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Cleaning",
       "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
-      "title": "Upload",
-      "description": "Tarraing agus scaoil do chuid PDFanna, cáipéisí Word nó íomhánna — nó cliceáil chun brabhsáil. Tacaíonn le comhaid iolracha."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Athbhreithnigh",
       "description": "Tá PII a aimsíodh go huathoibríoch aibhsithe. Cuir leis, bain nó coigeartaigh eagarthóireachtaí roimh chur i bhfeidhm."
     },
     "step3": {
-      "title": "Íoslódáil",
-      "description": "Íoslódáil do chomhad eagarthóirithe go buan. Tá an téacs bunaidh bainte go do-aisghabhála."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

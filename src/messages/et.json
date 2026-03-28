@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Cleaning",
       "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
-      "title": "Upload",
-      "description": "Lohistage oma PDF-id, Wordi dokumendid või pildid — või klõpsake sirvimiseks. Toetab mitut faili."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Ülevaatus",
       "description": "Automaatselt tuvastatud PII on esile tõstetud. Lisage, eemaldage või kohandage redigeerimisi enne rakendamist."
     },
     "step3": {
-      "title": "Allalaadimine",
-      "description": "Laadige alla oma jäädavalt redigeeritud fail. Algne tekst on pöördumatult eemaldatud."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

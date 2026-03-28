@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Čištění metadat",
       "description": "Odstraňuje skrytá metadata — autor, název, datum vytvoření, informace o softwaru — která by mohla odhalit citlivé informace."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Jak to funguje",
     "subtitle": "Tři jednoduché kroky k trvalé redakci citlivých informací",
     "step1": {
-      "title": "Nahrát",
-      "description": "Přetáhněte své PDF, dokumenty Word nebo obrázky — nebo klikněte pro procházení. Podporuje více souborů."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Zkontrolovat",
       "description": "Automaticky detekované PII jsou zvýrazněny. Před použitím přidejte, odstraňte nebo upravte redakce."
     },
     "step3": {
-      "title": "Stáhnout",
-      "description": "Stáhněte si trvale redigovaný soubor. Původní text je nevratně odstraněn."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

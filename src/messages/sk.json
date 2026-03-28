@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Cleaning",
       "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
-      "title": "Upload",
-      "description": "Presuňte svoje PDF, dokumenty Word alebo obrázky — alebo kliknite na prehľadávanie. Podporuje viacero súborov."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Review",
       "description": "Automatically detected PII is highlighted. Add, remove, or adjust redactions before applying."
     },
     "step3": {
-      "title": "Download",
-      "description": "Stiahnite si trvalo redigovaný súbor. Pôvodný text je nevratne odstránený."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

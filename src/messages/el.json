@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Καθαρισμός μεταδεδομένων",
       "description": "Αφαιρεί κρυφά μεταδεδομένα — συγγραφέας, τίτλος, ημερομηνία δημιουργίας."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Πώς λειτουργεί",
     "subtitle": "Τρία απλά βήματα για μόνιμη απαλοιφή ευαίσθητων πληροφοριών",
     "step1": {
-      "title": "Μεταφόρτωση",
-      "description": "Σύρετε και αφήστε τα PDF, Word ή αρχεία εικόνων σας — ή κάντε κλικ για περιήγηση."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Έλεγχος",
       "description": "Τα αυτόματα ανιχνευμένα PII επισημαίνονται. Προσθέστε, αφαιρέστε ή προσαρμόστε τις απαλοιφές."
     },
     "step3": {
-      "title": "Λήψη",
-      "description": "Κατεβάστε το μόνιμα απαλειφθέν αρχείο σας."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Pulizia metadati",
       "description": "Rimuove i metadati nascosti — autore, titolo, data di creazione, informazioni sul software — che potrebbero rivelare informazioni sensibili."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Come funziona",
     "subtitle": "Tre semplici passaggi per oscurare permanentemente le informazioni sensibili",
     "step1": {
-      "title": "Carica",
-      "description": "Trascina e rilascia i tuoi PDF, documenti Word o immagini — o clicca per sfogliare. Supporta più file."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Controlla",
       "description": "I dati personali rilevati automaticamente vengono evidenziati. Aggiungi, rimuovi o modifica gli oscuramenti prima di applicarli."
     },
     "step3": {
-      "title": "Scarica",
-      "description": "Scarica il tuo file oscurato in modo permanente. Il testo originale viene rimosso in modo irrecuperabile."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

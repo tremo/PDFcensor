@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Limpeza de Metadados",
       "description": "Remove metadados ocultos — autor, título, data de criação, informações de software — que podem revelar informações sensíveis."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Como Funciona",
     "subtitle": "Três passos simples para redatar permanentemente informações sensíveis",
     "step1": {
-      "title": "Enviar",
-      "description": "Arraste e solte seus PDFs, documentos Word ou imagens — ou clique para navegar. Suporta múltiplos arquivos."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Revisar",
       "description": "Os dados pessoais detectados automaticamente são destacados. Adicione, remova ou ajuste as redações antes de aplicar."
     },
     "step3": {
-      "title": "Baixar",
-      "description": "Baixe seu arquivo permanentemente redatado. O texto original é removido de forma irrecuperável."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {
