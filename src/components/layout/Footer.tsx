@@ -33,8 +33,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/extension" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("extension")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {nav("pricing")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {nav("blog")}
                 </Link>
               </li>
             </ul>

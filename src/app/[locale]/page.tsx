@@ -11,9 +11,9 @@ import {
   Scale,
   FolderArchive,
   FileKey,
-  Upload,
+  FolderOpen,
   Eye,
-  Download,
+  Save,
   ArrowRight,
   FileText,
   Cloud,
@@ -68,6 +68,7 @@ export default async function HomePage({ params }: Props) {
     { icon: ScanLine, key: "ocrSupport" },
     { icon: FolderArchive, key: "batch" },
     { icon: FileKey, key: "metadata" },
+    { icon: Sparkles, key: "smartClean" },
   ];
 
   const dataCategories = [
@@ -125,9 +126,9 @@ export default async function HomePage({ params }: Props) {
   ];
 
   const steps = [
-    { icon: Upload, num: "01", key: "step1" },
+    { icon: FolderOpen, num: "01", key: "step1" },
     { icon: Eye, num: "02", key: "step2" },
-    { icon: Download, num: "03", key: "step3" },
+    { icon: Save, num: "03", key: "step3" },
   ];
 
   const standards = [
@@ -158,7 +159,7 @@ export default async function HomePage({ params }: Props) {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="text-center max-w-3xl mx-auto">
             <Badge variant="accent" className="mb-6">
               {t("hero.badge")}
@@ -187,108 +188,8 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Extension Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-accent/[0.03] to-muted">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Badge variant="accent" className="mb-4">
-              <Sparkles className="h-3 w-3 mr-1" />
-              {t("extension.badge")}
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              {t("extension.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("extension.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Web App Card */}
-            <div className="rounded-2xl border border-border bg-background p-6 md:p-8 hover:shadow-lg transition-all duration-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">{t("extension.webApp.title")}</h3>
-                  <p className="text-sm text-muted-foreground">{t("extension.webApp.description")}</p>
-                </div>
-              </div>
-              <ul className="space-y-2.5 mb-6">
-                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm">
-                    <Check className="w-4 h-4 text-accent shrink-0" />
-                    <span>{t(`extension.webApp.${f}`)}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild variant="outline" className="w-full">
-                <Link href="/redact">{t("extension.webApp.cta")}</Link>
-              </Button>
-            </div>
-
-            {/* Extension Card */}
-            <div className="rounded-2xl border-2 border-accent bg-background p-6 md:p-8 shadow-lg shadow-accent/10 hover:shadow-xl transition-all duration-200 relative">
-              <div className="absolute -top-3 right-6">
-                <Badge variant="accent" className="text-xs">NEW</Badge>
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <Puzzle className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">{t("extension.ext.title")}</h3>
-                  <p className="text-sm text-muted-foreground">{t("extension.ext.description")}</p>
-                </div>
-              </div>
-              <ul className="space-y-2.5 mb-6">
-                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm">
-                    <Check className="w-4 h-4 text-accent shrink-0" />
-                    <span>{t(`extension.ext.${f}`)}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild variant="accent" className="w-full">
-                <Link href="/extension">{t("extension.ext.cta")}</Link>
-              </Button>
-            </div>
-          </div>
-
-          {/* Platform Logos */}
-          <div className="mt-10 text-center">
-            <p className="text-sm text-muted-foreground mb-4">{t("extension.platforms")}</p>
-            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-              {[
-                { name: "ChatGPT", bg: "bg-[#10a37f]/10", text: "text-[#10a37f]" },
-                { name: "Claude", bg: "bg-[#d97706]/10", text: "text-[#d97706]" },
-                { name: "Gemini", bg: "bg-[#4285f4]/10", text: "text-[#4285f4]" },
-                { name: "Copilot", bg: "bg-[#7c3aed]/10", text: "text-[#7c3aed]" },
-                { name: "Gmail", bg: "bg-[#ea4335]/10", text: "text-[#ea4335]" },
-                { name: "Slack", bg: "bg-[#4a154b]/10", text: "text-[#4a154b]" },
-                { name: "Discord", bg: "bg-[#5865f2]/10", text: "text-[#5865f2]" },
-                { name: "Notion", bg: "bg-[#000]/10", text: "text-foreground" },
-                { name: "More", bg: "bg-muted", text: "text-muted-foreground" },
-              ].map(({ name, bg, text }) => (
-                <span
-                  key={name}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${bg} ${text}`}
-                >
-                  <PlatformIcon name={name} className="w-3.5 h-3.5" />
-                  {name === "More" ? "More..." : name}
-                </span>
-              ))}
-            </div>
-            <p className="text-sm font-medium text-accent mt-6">
-              {t("extension.onePlan")}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Privacy Comparison */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-muted to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-muted to-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
@@ -469,7 +370,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Features */}
-      <section className="py-20 sm:py-28 bg-muted/30">
+      <section className="py-20 md:py-28 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -501,7 +402,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -528,6 +429,106 @@ export default async function HomePage({ params }: Props) {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Extension Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-accent/[0.03] to-muted">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge variant="accent" className="mb-4">
+              <Sparkles className="h-3 w-3 mr-1" />
+              {t("extension.badge")}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("extension.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("extension.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Web App Card */}
+            <div className="rounded-2xl border border-border bg-background p-6 md:p-8 hover:shadow-lg transition-all duration-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("extension.webApp.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("extension.webApp.description")}</p>
+                </div>
+              </div>
+              <ul className="space-y-2.5 mb-6">
+                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent shrink-0" />
+                    <span>{t(`extension.webApp.${f}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/redact">{t("extension.webApp.cta")}</Link>
+              </Button>
+            </div>
+
+            {/* Extension Card */}
+            <div className="rounded-2xl border-2 border-accent bg-background p-6 md:p-8 shadow-lg shadow-accent/10 hover:shadow-xl transition-all duration-200 relative">
+              <div className="absolute -top-3 right-6">
+                <Badge variant="accent" className="text-xs">NEW</Badge>
+              </div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <Puzzle className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("extension.ext.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("extension.ext.description")}</p>
+                </div>
+              </div>
+              <ul className="space-y-2.5 mb-6">
+                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent shrink-0" />
+                    <span>{t(`extension.ext.${f}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild variant="accent" className="w-full">
+                <Link href="/extension">{t("extension.ext.cta")}</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Platform Logos */}
+          <div className="mt-10 text-center">
+            <p className="text-sm text-muted-foreground mb-4">{t("extension.platforms")}</p>
+            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+              {[
+                { name: "ChatGPT", bg: "bg-[#10a37f]/10", text: "text-[#10a37f]" },
+                { name: "Claude", bg: "bg-[#d97706]/10", text: "text-[#d97706]" },
+                { name: "Gemini", bg: "bg-[#4285f4]/10", text: "text-[#4285f4]" },
+                { name: "Copilot", bg: "bg-[#7c3aed]/10", text: "text-[#7c3aed]" },
+                { name: "Gmail", bg: "bg-[#ea4335]/10", text: "text-[#ea4335]" },
+                { name: "Slack", bg: "bg-[#4a154b]/10", text: "text-[#4a154b]" },
+                { name: "Discord", bg: "bg-[#5865f2]/10", text: "text-[#5865f2]" },
+                { name: "Notion", bg: "bg-[#000]/10", text: "text-foreground" },
+                { name: "More", bg: "bg-muted", text: "text-muted-foreground" },
+              ].map(({ name, bg, text }) => (
+                <span
+                  key={name}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${bg} ${text}`}
+                >
+                  <PlatformIcon name={name} className="w-3.5 h-3.5" />
+                  {name === "More" ? "More..." : name}
+                </span>
+              ))}
+            </div>
+            <p className="text-sm font-medium text-accent mt-6">
+              {t("extension.onePlan")}
+            </p>
           </div>
         </div>
       </section>
@@ -587,7 +588,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Compliance Standards */}
-      <section className="py-16 md:py-20 overflow-hidden">
+      <section className="py-16 md:py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -621,7 +622,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* Trust — Use Cases */}
-      <section className="py-12 border-b border-border">
+      <section className="py-12 md:py-16 border-b border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <p className="text-center text-muted-foreground text-sm mb-6">
             {t("trust.title")}
@@ -647,7 +648,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             {t("cta.title")}
