@@ -129,8 +129,8 @@ export default function ExtensionDemo() {
     }
   }, [phase]);
 
-  const showInput =
-    phase !== "idle" && phase !== "reset";
+  const showInput = true;
+  const isIdle = phase === "idle" || phase === "reset";
   const isTyping = phase === "typing";
   const showCursor = phase === "typing" || phase === "typingDone";
   const piiDetected =
@@ -145,8 +145,12 @@ export default function ExtensionDemo() {
 
   // Build displayed text with PII spans
   const renderText = () => {
-    if (phase === "idle" || phase === "reset") {
-      return null;
+    if (isIdle) {
+      return (
+        <span style={{ color: "#94a3b8", fontSize: 13 }}>
+          Message ChatGPT...
+        </span>
+      );
     }
 
     const visibleText = isTyping || phase === "typingDone"
