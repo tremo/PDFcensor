@@ -134,7 +134,6 @@
     "subtitle": "OfflineRedactは、世界中の20以上の規制と基準におけるデータ保護要件の遵守を支援します。"
   },
   "trust": {
-    "logoSection": "Trusted by leading organizations worldwide",
     "title": "チームでの OfflineRedact 活用例",
     "useCase1": "裁判書類からクライアント名を墨消し",
     "useCase2": "医療記録から患者データを削除",

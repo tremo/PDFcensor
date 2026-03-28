@@ -1095,14 +1095,6 @@
   animation-play-state: paused;
 }
 
-.animate-marquee-slow {
-  animation: marquee 60s linear infinite;
-}
-
-.animate-marquee-slow:hover {
-  animation-play-state: paused;
-}
-
 /* ===== Trust Section ===== */
 
 .trust-badge {
