@@ -141,10 +141,36 @@
     "government": "Governo",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "NOVO — Extensão do navegador",
+    "title": "Proteja seus dados em plataformas de IA também",
+    "subtitle": "Nossa extensão do navegador detecta e mascara automaticamente dados pessoais antes de enviá-los ao ChatGPT, Claude, Gmail e mais.",
+    "webApp": {
+      "title": "Aplicativo Web",
+      "description": "Redija documentos antes de compartilhar",
+      "f1": "Remoção real de texto de PDFs",
+      "f2": "OCR para documentos digitalizados",
+      "f3": "Detecção de rostos e desfoque",
+      "f4": "Processamento em lote (ZIP)",
+      "cta": "Experimente grátis"
+    },
+    "ext": {
+      "title": "Extensão do navegador",
+      "description": "Mascaramento automático de PII em plataformas de IA e email",
+      "f1": "Detecção PII em tempo real enquanto digita",
+      "f2": "Mascaramento automático antes do envio",
+      "f3": "Verificação de arquivos enviados (PDF, DOCX)",
+      "f4": "Funciona em 9+ plataformas",
+      "cta": "Instalar extensão"
+    },
+    "platforms": "Compatível com",
+    "onePlan": "Uma assinatura Pro — acesso completo a ambos."
+  },
   "cta": {
     "title": "Pronto para Proteger Dados Sensíveis?",
-    "subtitle": "Comece a redatar documentos gratuitamente — sem necessidade de cadastro.",
-    "button": "Comece a Redatar Agora"
+    "subtitle": "Redija documentos e mascare automaticamente chatbots de IA — uma plataforma para todas as suas necessidades de privacidade.",
+    "button": "Comece a Redatar Agora",
+    "extensionCta": "Instalar extensão"
   },
   "footer": {
     "product": "Produto",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "mês",
       "description": "Para profissionais que processam múltiplos documentos",
       "features": [
         "Tudo do plano Grátis",
         "Sem marca d'água",
         "Processamento em lote (ZIP)",
+        "Extensão do navegador — mascaramento automático de PII no ChatGPT, Gmail e mais",
         "Suporte prioritário",
         "Cancele quando quiser"
       ],
-      "cta": "Obter Pro — €6.99/mês",
-      "yearlyPrice": "€59.99",
+      "cta": "Obter Pro — €9.99/mês",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "ano",
-      "yearlyCta": "Obter Pro — €59.99/ano"
+      "yearlyCta": "Obter Pro — €79.99/ano"
     },
     "toggle": {
       "monthly": "Mensal",
       "yearly": "Anual",
-      "save": "Economize 29%"
+      "save": "Economize 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

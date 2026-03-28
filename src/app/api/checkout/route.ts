@@ -6,12 +6,12 @@ import type Stripe from "stripe";
 
 const PRICE_IDS = {
   eur: {
-    monthly: process.env.STRIPE_PRICE_EUR_MONTHLY || "price_1TDl2RAej1A7idfqmbhyQDSh",
-    yearly: process.env.STRIPE_PRICE_EUR_YEARLY || "price_1TErzlAej1A7idfq9GmrbS7l",
+    monthly: process.env.STRIPE_PRICE_EUR_MONTHLY || "price_1TFsdYAej1A7idfqHtRVevzF",
+    yearly: process.env.STRIPE_PRICE_EUR_YEARLY || "price_1TFsdZAej1A7idfqUph9lrAI",
   },
   usd: {
-    monthly: process.env.STRIPE_PRICE_USD_MONTHLY || "price_1TEtBFAej1A7idfql1qg3lCp",
-    yearly: process.env.STRIPE_PRICE_USD_YEARLY || "price_1TEtDOAej1A7idfq0B25IY4E",
+    monthly: process.env.STRIPE_PRICE_USD_MONTHLY || "price_1TFsdVAej1A7idfqYs44IJCW",
+    yearly: process.env.STRIPE_PRICE_USD_YEARLY || "price_1TFsdYAej1A7idfq2ROCXvY7",
   },
 };
 

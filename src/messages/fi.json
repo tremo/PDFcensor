@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "UUSI — Selainlaajennus",
+    "title": "Suojaa tietosi myös AI-alustoilla",
+    "subtitle": "Selainlaajennuksemme tunnistaa ja peittää automaattisesti henkilötiedot ennen niiden lähettämistä ChatGPT:lle, Claudelle, Gmailiin ja muualle.",
+    "webApp": {
+      "title": "Verkkosovellus",
+      "description": "Muokkaa asiakirjoja ennen jakamista",
+      "f1": "Todellinen tekstin poisto PDFistä",
+      "f2": "OCR skannatuille asiakirjoille",
+      "f3": "Kasvojentunnistus ja sumennus",
+      "f4": "Eräkäsittely (ZIP)",
+      "cta": "Kokeile ilmaiseksi"
+    },
+    "ext": {
+      "title": "Selainlaajennus",
+      "description": "Automaattinen PII-peitto AI- ja sähköpostialustoilla",
+      "f1": "Reaaliaikainen PII-tunnistus kirjoittaessa",
+      "f2": "Automaattinen peitto ennen lähettämistä",
+      "f3": "Tiedostolatausten skannaus (PDF, DOCX)",
+      "f4": "Toimii 9+ alustalla",
+      "cta": "Asenna laajennus"
+    },
+    "platforms": "Toimii näiden kanssa",
+    "onePlan": "Yksi Pro-tilaus — täysi pääsy molempiin."
+  },
   "cta": {
     "title": "Valmis suojaamaan arkaluonteisia tietoja?",
-    "subtitle": "Aloita asiakirjojen muokkaus ilmaiseksi — ei rekisteröitymistä.",
-    "button": "Aloita nyt"
+    "subtitle": "Muokkaa asiakirjoja ja peitä AI-chatbotit automaattisesti — yksi alusta kaikkiin tietosuojatarpeisiin.",
+    "button": "Aloita nyt",
+    "extensionCta": "Asenna laajennus"
   },
   "footer": {
     "product": "Tuote",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Selainlaajennus — automaattinen PII-peitto ChatGPT:ssä, Gmailissa ja muualla",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "vuosi",
-      "yearlyCta": "Hanki Pro — €59.99/vuosi"
+      "yearlyCta": "Hanki Pro — €79.99/vuosi"
     },
     "toggle": {
       "monthly": "Kuukausittain",
       "yearly": "Vuosittain",
-      "save": "Säästä 29%"
+      "save": "Säästä 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

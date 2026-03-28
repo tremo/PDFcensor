@@ -141,10 +141,36 @@
     "government": "정부",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "새로운 기능 — 브라우저 확장 프로그램",
+    "title": "AI 플랫폼에서도 데이터를 보호하세요",
+    "subtitle": "브라우저 확장 프로그램이 ChatGPT, Claude, Gmail 등에 보내기 전에 개인 데이터를 자동으로 감지하고 마스킹합니다.",
+    "webApp": {
+      "title": "웹 앱",
+      "description": "공유 전 문서 편집",
+      "f1": "PDF에서 실제 텍스트 제거",
+      "f2": "스캔 문서 OCR",
+      "f3": "얼굴 감지 및 블러",
+      "f4": "일괄 처리 (ZIP)",
+      "cta": "무료 체험"
+    },
+    "ext": {
+      "title": "브라우저 확장 프로그램",
+      "description": "AI 및 이메일 플랫폼에서 자동 PII 마스킹",
+      "f1": "입력 중 실시간 PII 감지",
+      "f2": "전송 전 자동 마스킹",
+      "f3": "파일 업로드 스캔 (PDF, DOCX)",
+      "f4": "9개 이상의 플랫폼에서 작동",
+      "cta": "확장 프로그램 설치"
+    },
+    "platforms": "지원 플랫폼",
+    "onePlan": "하나의 Pro 구독으로 모두 이용 가능."
+  },
   "cta": {
     "title": "민감한 데이터를 보호할 준비가 되셨나요?",
-    "subtitle": "무료로 문서 삭제를 시작하세요 — 가입이 필요 없습니다.",
-    "button": "지금 삭제 시작"
+    "subtitle": "문서 편집 및 AI 챗봇 자동 마스킹 — 모든 개인정보 보호를 위한 하나의 플랫폼.",
+    "button": "지금 삭제 시작",
+    "extensionCta": "확장 프로그램 설치"
   },
   "footer": {
     "product": "제품",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "월",
       "description": "여러 문서를 처리하는 전문가를 위한",
       "features": [
         "무료 플랜의 모든 기능",
         "워터마크 없음",
         "일괄 처리 (ZIP 다운로드)",
+        "브라우저 확장 프로그램 — ChatGPT, Gmail 등에서 자동 PII 마스킹",
         "우선 지원",
         "언제든지 취소 가능"
       ],
-      "cta": "Pro 시작 — €6.99/월",
-      "yearlyPrice": "€59.99",
+      "cta": "Pro 시작 — €9.99/월",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "년",
-      "yearlyCta": "Pro 구독 — €59.99/년"
+      "yearlyCta": "Pro 구독 — €79.99/년"
     },
     "toggle": {
       "monthly": "월간",
       "yearly": "연간",
-      "save": "29% 절약"
+      "save": "33% 절약"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

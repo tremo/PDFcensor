@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "ÚJ — Böngészőbővítmény",
+    "title": "Védje adatait az AI-platformokon is",
+    "subtitle": "Böngészőbővítményünk automatikusan felismeri és maszkolja a személyes adatokat, mielőtt elküldi azokat a ChatGPT-nek, Claude-nak, Gmailnek és egyebeknek.",
+    "webApp": {
+      "title": "Webalkalmazás",
+      "description": "Dokumentumok redaktálása megosztás előtt",
+      "f1": "Valódi szövegeltávolítás PDF-ekből",
+      "f2": "OCR szkennelt dokumentumokhoz",
+      "f3": "Arcfelismerés és elmosás",
+      "f4": "Kötegelt feldolgozás (ZIP)",
+      "cta": "Próbálja ingyen"
+    },
+    "ext": {
+      "title": "Böngészőbővítmény",
+      "description": "Automatikus PII-maszkolás AI és e-mail platformokon",
+      "f1": "Valós idejű PII-felismerés gépelés közben",
+      "f2": "Automatikus maszkolás küldés előtt",
+      "f3": "Feltöltött fájlok szkennelése (PDF, DOCX)",
+      "f4": "Működik 9+ platformon",
+      "cta": "Bővítmény telepítése"
+    },
+    "platforms": "Kompatibilis",
+    "onePlan": "Egy Pro előfizetés — teljes hozzáférés mindkettőhöz."
+  },
   "cta": {
     "title": "Készen áll az érzékeny adatok védelmére?",
-    "subtitle": "Kezdje el a dokumentumok redaktálását ingyen — regisztráció nélkül.",
-    "button": "Kezdés most"
+    "subtitle": "Redaktáljon dokumentumokat és automatikusan maszkolja az AI chatbotokat — egy platform minden adatvédelmi igényéhez.",
+    "button": "Kezdés most",
+    "extensionCta": "Bővítmény telepítése"
   },
   "footer": {
     "product": "Termék",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Böngészőbővítmény — automatikus PII-maszkolás a ChatGPT-n, Gmailben és máshol",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "év",
-      "yearlyCta": "Pro beszerzése — €59.99/év"
+      "yearlyCta": "Pro beszerzése — €79.99/év"
     },
     "toggle": {
       "monthly": "Havi",
       "yearly": "Éves",
-      "save": "Spóroljon 29%-ot"
+      "save": "Spóroljon 33%-ot"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

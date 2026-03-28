@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "NYTT — Webbläsartillägg",
+    "title": "Skydda dina data på AI-plattformar också",
+    "subtitle": "Vårt webbläsartillägg upptäcker och maskerar automatiskt personuppgifter innan du skickar dem till ChatGPT, Claude, Gmail och mer.",
+    "webApp": {
+      "title": "Webbapp",
+      "description": "Redigera dokument före delning",
+      "f1": "Riktig textborttagning från PDFer",
+      "f2": "OCR för skannade dokument",
+      "f3": "Ansiktsigenkänning och oskärpa",
+      "f4": "Batchbearbetning (ZIP)",
+      "cta": "Prova gratis"
+    },
+    "ext": {
+      "title": "Webbläsartillägg",
+      "description": "Automatisk PII-maskering på AI- och e-postplattformar",
+      "f1": "PII-detektering i realtid medan du skriver",
+      "f2": "Automatisk maskering före sändning",
+      "f3": "Filuppladdningsskanning (PDF, DOCX)",
+      "f4": "Fungerar på 9+ plattformar",
+      "cta": "Installera tillägg"
+    },
+    "platforms": "Fungerar med",
+    "onePlan": "Ett Pro-abonnemang — full åtkomst till båda."
+  },
   "cta": {
     "title": "Redo att skydda känslig data?",
-    "subtitle": "Börja redigera dokument gratis — ingen registrering krävs.",
-    "button": "Börja redigera nu"
+    "subtitle": "Redigera dokument och maskera AI-chatbotar automatiskt — en plattform för alla dina sekretessbehov.",
+    "button": "Börja redigera nu",
+    "extensionCta": "Installera tillägg"
   },
   "footer": {
     "product": "Produkt",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Webbläsartillägg — automatisk PII-maskering på ChatGPT, Gmail och mer",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "år",
-      "yearlyCta": "Skaffa Pro — €59.99/år"
+      "yearlyCta": "Skaffa Pro — €79.99/år"
     },
     "toggle": {
       "monthly": "Månadsvis",
       "yearly": "Årsvis",
-      "save": "Spara 29%"
+      "save": "Spara 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

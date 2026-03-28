@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "ĠDID — Estensjoni tal-browser",
+    "title": "Ipproteġi d-data tiegħek fuq pjattaformi tal-AI wkoll",
+    "subtitle": "L-estensjoni tal-browser tagħna tiskopri u timmaskera awtomatikament data personali qabel ma tibgħatha lil ChatGPT, Claude, Gmail u aktar.",
+    "webApp": {
+      "title": "App tal-Web",
+      "description": "Irredatta dokumenti qabel il-qsim",
+      "f1": "Tneħħija vera tat-test minn PDFs",
+      "f2": "OCR għal dokumenti skennjati",
+      "f3": "Detezzjoni tal-wiċċ u tċajpir",
+      "f4": "Proċessar f'lottijiet (ZIP)",
+      "cta": "Ipprova b'xejn"
+    },
+    "ext": {
+      "title": "Estensjoni tal-browser",
+      "description": "Maskjar awtomatiku tal-PII fuq pjattaformi tal-AI u email",
+      "f1": "Detezzjoni tal-PII f'ħin reali waqt li tikteb",
+      "f2": "Maskjar awtomatiku qabel l-ibgħat",
+      "f3": "Skenjar ta' fajls uplowdjati (PDF, DOCX)",
+      "f4": "Jaħdem fuq 9+ pjattaformi",
+      "cta": "Installa l-estensjoni"
+    },
+    "platforms": "Jaħdem ma'",
+    "onePlan": "Abbonament Pro wieħed — aċċess sħiħ għat-tnejn."
+  },
   "cta": {
     "title": "Lest tipproteġi data sensittiva?",
-    "subtitle": "Ibda tirredatta dokumenti b'xejn — mingħajr reġistrazzjoni.",
-    "button": "Ibda issa"
+    "subtitle": "Irredatta dokumenti u immaskera awtomatikament chatbots tal-AI — pjattaforma waħda għall-ħtiġijiet kollha tal-privatezza tiegħek.",
+    "button": "Ibda issa",
+    "extensionCta": "Installa l-estensjoni"
   },
   "footer": {
     "product": "Prodott",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Estensjoni tal-browser — maskjar awtomatiku tal-PII fuq ChatGPT, Gmail u aktar",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "sena",
-      "yearlyCta": "Ikseb Pro — €59.99/sena"
+      "yearlyCta": "Ikseb Pro — €79.99/sena"
     },
     "toggle": {
       "monthly": "Kull xahar",
       "yearly": "Kull sena",
-      "save": "Iffranka 29%"
+      "save": "Iffranka 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
@@ -758,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

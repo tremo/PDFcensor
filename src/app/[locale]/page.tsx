@@ -47,6 +47,9 @@ import {
   Navigation,
   Car,
   Fingerprint,
+  Puzzle,
+  Sparkles,
+  Check,
 } from "lucide-react";
 
 type Props = {
@@ -182,6 +185,105 @@ export default async function HomePage({ params }: Props) {
 
           {/* Interactive Demo */}
           <LandingDemo />
+        </div>
+      </section>
+
+      {/* Extension Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-accent/[0.03] to-muted">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge variant="accent" className="mb-4">
+              <Sparkles className="h-3 w-3 mr-1" />
+              {t("extension.badge")}
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              {t("extension.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("extension.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Web App Card */}
+            <div className="rounded-2xl border border-border bg-background p-6 md:p-8 hover:shadow-lg transition-all duration-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("extension.webApp.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("extension.webApp.description")}</p>
+                </div>
+              </div>
+              <ul className="space-y-2.5 mb-6">
+                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent shrink-0" />
+                    <span>{t(`extension.webApp.${f}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/redact">{t("extension.webApp.cta")}</Link>
+              </Button>
+            </div>
+
+            {/* Extension Card */}
+            <div className="rounded-2xl border-2 border-accent bg-background p-6 md:p-8 shadow-lg shadow-accent/10 hover:shadow-xl transition-all duration-200 relative">
+              <div className="absolute -top-3 right-6">
+                <Badge variant="accent" className="text-xs">NEW</Badge>
+              </div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <Puzzle className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("extension.ext.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("extension.ext.description")}</p>
+                </div>
+              </div>
+              <ul className="space-y-2.5 mb-6">
+                {(["f1", "f2", "f3", "f4"] as const).map((f) => (
+                  <li key={f} className="flex items-center gap-2 text-sm">
+                    <Check className="w-4 h-4 text-accent shrink-0" />
+                    <span>{t(`extension.ext.${f}`)}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button asChild variant="accent" className="w-full">
+                <Link href="/pricing">{t("extension.ext.cta")}</Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Platform Logos */}
+          <div className="mt-10 text-center">
+            <p className="text-sm text-muted-foreground mb-4">{t("extension.platforms")}</p>
+            <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+              {[
+                { name: "ChatGPT", bg: "bg-[#10a37f]/10", text: "text-[#10a37f]" },
+                { name: "Claude", bg: "bg-[#d97706]/10", text: "text-[#d97706]" },
+                { name: "Gemini", bg: "bg-[#4285f4]/10", text: "text-[#4285f4]" },
+                { name: "Copilot", bg: "bg-[#7c3aed]/10", text: "text-[#7c3aed]" },
+                { name: "Gmail", bg: "bg-[#ea4335]/10", text: "text-[#ea4335]" },
+                { name: "Outlook", bg: "bg-[#0078d4]/10", text: "text-[#0078d4]" },
+                { name: "Slack", bg: "bg-[#4a154b]/10", text: "text-[#4a154b]" },
+                { name: "Discord", bg: "bg-[#5865f2]/10", text: "text-[#5865f2]" },
+                { name: "Notion", bg: "bg-[#000]/10", text: "text-foreground" },
+              ].map(({ name, bg, text }) => (
+                <span
+                  key={name}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${bg} ${text}`}
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+            <p className="text-sm font-medium text-accent mt-6">
+              {t("extension.onePlan")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -556,12 +658,20 @@ export default async function HomePage({ params }: Props) {
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
             {t("cta.subtitle")}
           </p>
-          <Button asChild size="lg" variant="accent">
-            <Link href="/redact">
-              {t("cta.button")}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg" variant="accent">
+              <Link href="/redact">
+                {t("cta.button")}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/pricing">
+                <Puzzle className="h-4 w-4" />
+                {t("cta.extensionCta")}
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
