@@ -412,6 +412,7 @@
       "autoDetect": "Auto PII Detection",
       "metadataCleaning": "Metadata Cleaning",
       "batchProcessing": "Batch Processing",
+      "browserExtension": "Brauseri Laiendus",
       "yes": "Yes",
       "no": "No",
       "limited": "Limited",

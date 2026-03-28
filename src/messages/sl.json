@@ -412,6 +412,7 @@
       "autoDetect": "Auto PII Detection",
       "metadataCleaning": "Metadata Cleaning",
       "batchProcessing": "Batch Processing",
+      "browserExtension": "Razširitev Brskalnika",
       "yes": "Yes",
       "no": "No",
       "limited": "Limited",
