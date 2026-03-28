@@ -379,7 +379,9 @@
       "cta": "Obter Pro — €9.99/mês",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "ano",
-      "yearlyCta": "Obter Pro — €79.99/ano"
+      "yearlyCta": "Obter Pro — €79.99/ano",
+      "alreadyPro": "Você já é Pro ✓",
+      "alreadyProDesc": "Você já tem uma assinatura Pro ativa."
     },
     "toggle": {
       "monthly": "Mensal",

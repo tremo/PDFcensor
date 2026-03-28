@@ -379,7 +379,9 @@
       "cta": "Hangi Pro — €9.99/kuu",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "aasta",
-      "yearlyCta": "Hangi Pro — €79.99/aasta"
+      "yearlyCta": "Hangi Pro — €79.99/aasta",
+      "alreadyPro": "Oled juba Pro ✓",
+      "alreadyProDesc": "Sul on juba aktiivne Pro-tellimus."
     },
     "toggle": {
       "monthly": "Igakuine",

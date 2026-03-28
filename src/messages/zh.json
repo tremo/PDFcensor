@@ -379,7 +379,9 @@
       "cta": "获取Pro — €9.99/月",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "年",
-      "yearlyCta": "获取 Pro — €79.99/年"
+      "yearlyCta": "获取 Pro — €79.99/年",
+      "alreadyPro": "您已是 Pro 会员 ✓",
+      "alreadyProDesc": "您已拥有有效的 Pro 订阅。"
     },
     "toggle": {
       "monthly": "月付",

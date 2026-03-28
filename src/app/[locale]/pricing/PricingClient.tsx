@@ -14,7 +14,7 @@ export default function PricingClient() {
   const t = useTranslations("pricing");
   const locale = useLocale();
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isPro } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
@@ -172,16 +172,29 @@ export default function PricingClient() {
             </ul>
           </CardContent>
           <CardFooter className="flex-col gap-2">
-            <Button
-              className="w-full"
-              variant="accent"
-              onClick={handleCheckout}
-              disabled={loading}
-            >
-              {loading ? "..." : isYearly ? t("pro.yearlyCta") : t("pro.cta")}
-            </Button>
-            {error && (
-              <p className="text-sm text-destructive text-center">{error}</p>
+            {isPro ? (
+              <>
+                <Button className="w-full" variant="outline" disabled>
+                  {t("pro.alreadyPro")}
+                </Button>
+                <p className="text-sm text-muted-foreground text-center">
+                  {t("pro.alreadyProDesc")}
+                </p>
+              </>
+            ) : (
+              <>
+                <Button
+                  className="w-full"
+                  variant="accent"
+                  onClick={handleCheckout}
+                  disabled={loading}
+                >
+                  {loading ? "..." : isYearly ? t("pro.yearlyCta") : t("pro.cta")}
+                </Button>
+                {error && (
+                  <p className="text-sm text-destructive text-center">{error}</p>
+                )}
+              </>
             )}
           </CardFooter>
         </Card>

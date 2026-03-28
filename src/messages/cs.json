@@ -379,7 +379,9 @@
       "cta": "Získat Pro — €9.99/měs.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
-      "yearlyCta": "Získat Pro — €79.99/rok"
+      "yearlyCta": "Získat Pro — €79.99/rok",
+      "alreadyPro": "Již máte Pro ✓",
+      "alreadyProDesc": "Máte aktivní předplatné Pro."
     },
     "toggle": {
       "monthly": "Měsíčně",

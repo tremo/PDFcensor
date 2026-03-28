@@ -383,7 +383,9 @@
       "cta": "Pro holen — €9.99/Mo",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "Jahr",
-      "yearlyCta": "Pro holen — €79.99/Jahr"
+      "yearlyCta": "Pro holen — €79.99/Jahr",
+      "alreadyPro": "Sie sind bereits Pro ✓",
+      "alreadyProDesc": "Sie haben bereits ein aktives Pro-Abonnement."
     },
     "toggle": {
       "monthly": "Monatlich",

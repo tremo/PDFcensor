@@ -379,7 +379,9 @@
       "cta": "Proを始める — €9.99/月",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "年",
-      "yearlyCta": "Pro を取得 — €79.99/年"
+      "yearlyCta": "Pro を取得 — €79.99/年",
+      "alreadyPro": "すでにProです ✓",
+      "alreadyProDesc": "アクティブなProサブスクリプションをお持ちです。"
     },
     "toggle": {
       "monthly": "月額",

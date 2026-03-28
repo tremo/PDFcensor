@@ -383,7 +383,9 @@
       "cta": "Passer à Pro — €9.99/mois",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "an",
-      "yearlyCta": "Obtenir Pro — €79.99/an"
+      "yearlyCta": "Obtenir Pro — €79.99/an",
+      "alreadyPro": "Vous êtes déjà Pro ✓",
+      "alreadyProDesc": "Vous avez déjà un abonnement Pro actif."
     },
     "toggle": {
       "monthly": "Mensuel",

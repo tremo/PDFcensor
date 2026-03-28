@@ -379,7 +379,9 @@
       "cta": "Få Pro — €9.99/md.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "år",
-      "yearlyCta": "Få Pro — €79.99/år"
+      "yearlyCta": "Få Pro — €79.99/år",
+      "alreadyPro": "Du er allerede Pro ✓",
+      "alreadyProDesc": "Du har allerede et aktivt Pro-abonnement."
     },
     "toggle": {
       "monthly": "Månedlig",

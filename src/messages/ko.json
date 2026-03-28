@@ -379,7 +379,9 @@
       "cta": "Pro 시작 — €9.99/월",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "년",
-      "yearlyCta": "Pro 구독 — €79.99/년"
+      "yearlyCta": "Pro 구독 — €79.99/년",
+      "alreadyPro": "이미 Pro입니다 ✓",
+      "alreadyProDesc": "이미 활성 Pro 구독이 있습니다."
     },
     "toggle": {
       "monthly": "월간",

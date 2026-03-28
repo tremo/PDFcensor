@@ -383,7 +383,9 @@
       "cta": "Get Pro — $9.99/mo",
       "yearlyPrice": "$79.99",
       "yearlyPeriod": "year",
-      "yearlyCta": "Get Pro — $79.99/yr"
+      "yearlyCta": "Get Pro — $79.99/yr",
+      "alreadyPro": "You're already Pro ✓",
+      "alreadyProDesc": "You already have an active Pro subscription."
     },
     "toggle": {
       "monthly": "Monthly",

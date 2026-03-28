@@ -383,7 +383,9 @@
       "cta": "Pro'ya Geç — €9.99/ay",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "yıl",
-      "yearlyCta": "Pro Al — €79.99/yıl"
+      "yearlyCta": "Pro Al — €79.99/yıl",
+      "alreadyPro": "Zaten Pro üyesiniz ✓",
+      "alreadyProDesc": "Aktif bir Pro aboneliğiniz bulunuyor."
     },
     "toggle": {
       "monthly": "Aylık",

@@ -379,7 +379,9 @@
       "cta": "Iegūt Pro — €9.99/mēn.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "gads",
-      "yearlyCta": "Iegūt Pro — €79.99/gads"
+      "yearlyCta": "Iegūt Pro — €79.99/gads",
+      "alreadyPro": "Jums jau ir Pro ✓",
+      "alreadyProDesc": "Jums jau ir aktīvs Pro abonements."
     },
     "toggle": {
       "monthly": "Ikmēneša",

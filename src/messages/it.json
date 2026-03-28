@@ -379,7 +379,9 @@
       "cta": "Ottieni Pro — €9.99/mese",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "anno",
-      "yearlyCta": "Ottieni Pro — €79.99/anno"
+      "yearlyCta": "Ottieni Pro — €79.99/anno",
+      "alreadyPro": "Sei già Pro ✓",
+      "alreadyProDesc": "Hai già un abbonamento Pro attivo."
     },
     "toggle": {
       "monthly": "Mensile",

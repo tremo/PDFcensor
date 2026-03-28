@@ -379,7 +379,9 @@
       "cta": "Вземете Pro — €9.99/месец",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "година",
-      "yearlyCta": "Вземете Pro — €79.99/година"
+      "yearlyCta": "Вземете Pro — €79.99/година",
+      "alreadyPro": "Вече сте Pro ✓",
+      "alreadyProDesc": "Вече имате активен Pro абонамент."
     },
     "toggle": {
       "monthly": "Месечно",

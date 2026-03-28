@@ -379,7 +379,9 @@
       "cta": "Ikseb Pro — €9.99/xahar",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "sena",
-      "yearlyCta": "Ikseb Pro — €79.99/sena"
+      "yearlyCta": "Ikseb Pro — €79.99/sena",
+      "alreadyPro": "Diġà għandek Pro ✓",
+      "alreadyProDesc": "Diġà għandek abbonament Pro attiv."
     },
     "toggle": {
       "monthly": "Kull xahar",

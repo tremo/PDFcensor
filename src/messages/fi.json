@@ -379,7 +379,9 @@
       "cta": "Hanki Pro — €9.99/kk",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "vuosi",
-      "yearlyCta": "Hanki Pro — €79.99/vuosi"
+      "yearlyCta": "Hanki Pro — €79.99/vuosi",
+      "alreadyPro": "Olet jo Pro ✓",
+      "alreadyProDesc": "Sinulla on jo aktiivinen Pro-tilaus."
     },
     "toggle": {
       "monthly": "Kuukausittain",
