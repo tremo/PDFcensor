@@ -141,10 +141,36 @@
     "finance": "Finans",
     "government": "Devlet"
   },
+  "extension": {
+    "badge": "YENİ — Tarayıcı Eklentisi",
+    "title": "AI Platformlarında da Verilerinizi Koruyun",
+    "subtitle": "Tarayıcı eklentimiz, ChatGPT, Claude, Gmail ve daha fazlasına göndermeden önce kişisel verileri otomatik tespit edip maskeler.",
+    "webApp": {
+      "title": "Web Uygulama",
+      "description": "Paylaşmadan önce belgeleri sansürleyin",
+      "f1": "PDF'lerden gerçek metin silme",
+      "f2": "Taranmış belgeler için OCR",
+      "f3": "Yüz algılama ve bulanıklaştırma",
+      "f4": "Toplu işleme (ZIP)",
+      "cta": "Ücretsiz Dene"
+    },
+    "ext": {
+      "title": "Tarayıcı Eklentisi",
+      "description": "AI ve e-posta platformlarında otomatik PII maskeleme",
+      "f1": "Yazarken gerçek zamanlı PII tespiti",
+      "f2": "Göndermeden önce otomatik maskeleme",
+      "f3": "Dosya yükleme taraması (PDF, DOCX)",
+      "f4": "9+ platformda çalışır",
+      "cta": "Eklentiyi Kur"
+    },
+    "platforms": "Uyumlu platformlar",
+    "onePlan": "Tek Pro abonelik — her ikisine de tam erişim."
+  },
   "cta": {
     "title": "Hassas Verileri Korumaya Hazır mısınız?",
-    "subtitle": "Belge sansürlemeye ücretsiz başlayın — kayıt gerekmez.",
-    "button": "Şimdi Sansürlemeye Başla"
+    "subtitle": "Belgeleri sansürleyin ve AI chatbotları otomatik maskeleyin — tüm gizlilik ihtiyaçlarınız için tek platform.",
+    "button": "Şimdi Sansürlemeye Başla",
+    "extensionCta": "Eklentiyi Kur"
   },
   "footer": {
     "product": "Ürün",
@@ -324,7 +350,7 @@
   "pricing": {
     "meta": {
       "title": "Fiyatlandırma — OfflineRedact PDF Sansürleme Aracı",
-      "description": "Ücretsiz başlayın veya ayda $6.99'a Pro'ya yükseltin. Filigranı kaldırın, toplu belge işleyin ve öncelikli destek alın."
+      "description": "Ücretsiz başlayın veya ayda €9.99'a Pro'ya yükseltin. Filigranı kaldırın, toplu belge işleyin ve öncelikli destek alın."
     },
     "title": "Basit, Şeffaf Fiyatlandırma",
     "subtitle": "Ücretsiz başlayın, ihtiyacınız olduğunda yükseltin",
@@ -344,25 +370,26 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "ay",
       "description": "Toplu belge işleyen profesyoneller için",
       "features": [
         "Ücretsiz'deki her şey",
         "Filigran yok",
         "Toplu işleme (ZIP indirme)",
+        "Tarayıcı eklentisi — ChatGPT, Gmail ve diğerlerinde otomatik PII maskeleme",
         "Öncelikli destek",
         "İstediğinde iptal et"
       ],
-      "cta": "Pro'ya Geç — €6.99/ay",
-      "yearlyPrice": "€59.99",
+      "cta": "Pro'ya Geç — €9.99/ay",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "yıl",
-      "yearlyCta": "Pro Al — €59.99/yıl"
+      "yearlyCta": "Pro Al — €79.99/yıl"
     },
     "toggle": {
       "monthly": "Aylık",
       "yearly": "Yıllık",
-      "save": "%29 Tasarruf"
+      "save": "%33 Tasarruf"
     },
     "guarantee": "30 Gün İçinde Para İadesi Garantisi",
     "guaranteeDesc": "Memnun kalmadınız mı? 30 gün içinde koşulsuz tam iade alın.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Fiyat",
-      "offlineRedactPrice": "$6.99/ay",
+      "offlineRedactPrice": "$9.99/ay",
       "adobePrice": "$22.99/ay",
       "redactablePrice": "$39/ay",
       "ilovepdfPrice": "$7/ay",

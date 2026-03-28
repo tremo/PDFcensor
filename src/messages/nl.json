@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "NIEUW — Browserextensie",
+    "title": "Bescherm uw gegevens ook op AI-platformen",
+    "subtitle": "Onze browserextensie detecteert en maskeert automatisch persoonlijke gegevens voordat u ze naar ChatGPT, Claude, Gmail en meer stuurt.",
+    "webApp": {
+      "title": "Web App",
+      "description": "Documenten redigeren voor het delen",
+      "f1": "Echte tekstverwijdering uit PDFs",
+      "f2": "OCR voor gescande documenten",
+      "f3": "Gezichtsdetectie en vervaging",
+      "f4": "Batchverwerking (ZIP)",
+      "cta": "Gratis proberen"
+    },
+    "ext": {
+      "title": "Browserextensie",
+      "description": "Automatische PII-maskering op AI- en e-mailplatformen",
+      "f1": "Realtime PII-detectie tijdens het typen",
+      "f2": "Automatisch maskeren voor verzending",
+      "f3": "Bestandsupload scannen (PDF, DOCX)",
+      "f4": "Werkt op 9+ platformen",
+      "cta": "Extensie installeren"
+    },
+    "platforms": "Werkt met",
+    "onePlan": "Eén Pro-abonnement — volledige toegang tot beide."
+  },
   "cta": {
     "title": "Klaar om gevoelige gegevens te beschermen?",
-    "subtitle": "Begin gratis met het redigeren van documenten — geen registratie nodig.",
-    "button": "Begin nu"
+    "subtitle": "Documenten redigeren en AI-chatbots automatisch maskeren — één platform voor al uw privacybehoeften.",
+    "button": "Begin nu",
+    "extensionCta": "Extensie installeren"
   },
   "footer": {
     "product": "Product",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Browserextensie — automatisch PII maskeren op ChatGPT, Gmail & meer",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "jaar",
-      "yearlyCta": "Pro kopen — €59.99/jaar"
+      "yearlyCta": "Pro kopen — €79.99/jaar"
     },
     "toggle": {
       "monthly": "Maandelijks",
       "yearly": "Jaarlijks",
-      "save": "Bespaar 29%"
+      "save": "Bespaar 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",

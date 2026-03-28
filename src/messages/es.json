@@ -141,10 +141,36 @@
     "finance": "Finanzas",
     "government": "Gobierno"
   },
+  "extension": {
+    "badge": "NUEVO — Extensión del navegador",
+    "title": "Protege tus datos en plataformas de IA también",
+    "subtitle": "Nuestra extensión del navegador detecta y enmascara automáticamente datos personales antes de enviarlos a ChatGPT, Claude, Gmail y más.",
+    "webApp": {
+      "title": "Aplicación Web",
+      "description": "Redacta documentos antes de compartir",
+      "f1": "Eliminación real de texto de PDFs",
+      "f2": "OCR para documentos escaneados",
+      "f3": "Detección de rostros y difuminado",
+      "f4": "Procesamiento por lotes (ZIP)",
+      "cta": "Probar gratis"
+    },
+    "ext": {
+      "title": "Extensión del navegador",
+      "description": "Enmascaramiento automático de PII en plataformas de IA y email",
+      "f1": "Detección PII en tiempo real mientras escribes",
+      "f2": "Enmascaramiento automático antes de enviar",
+      "f3": "Escaneo de archivos subidos (PDF, DOCX)",
+      "f4": "Funciona en 9+ plataformas",
+      "cta": "Instalar extensión"
+    },
+    "platforms": "Compatible con",
+    "onePlan": "Una suscripción Pro — acceso completo a ambos."
+  },
   "cta": {
     "title": "¿Listo para proteger datos sensibles?",
-    "subtitle": "Comience a redactar documentos gratis — sin registro necesario.",
-    "button": "Comenzar a redactar ahora"
+    "subtitle": "Redacta documentos y enmascara automáticamente chatbots de IA — una plataforma para todas tus necesidades de privacidad.",
+    "button": "Comenzar a redactar ahora",
+    "extensionCta": "Instalar extensión"
   },
   "footer": {
     "product": "Producto",
@@ -324,7 +350,7 @@
   "pricing": {
     "meta": {
       "title": "Precios — OfflineRedact Herramienta de Redacción PDF",
-      "description": "Empieza gratis o actualiza a Pro por $6.99/mes. Elimina marcas de agua, procesa documentos en lote y obtén soporte prioritario."
+      "description": "Empieza gratis o actualiza a Pro por €9.99/mes. Elimina marcas de agua, procesa documentos en lote y obtén soporte prioritario."
     },
     "title": "Precios simples y transparentes",
     "subtitle": "Comience gratis, actualice cuando lo necesite",
@@ -344,25 +370,26 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "mes",
       "description": "Para profesionales que procesan múltiples documentos",
       "features": [
         "Todo en Gratis",
         "Sin marca de agua",
         "Procesamiento por lotes (ZIP)",
+        "Extensión del navegador — enmascaramiento automático de datos en ChatGPT, Gmail y más",
         "Soporte prioritario",
         "Cancela cuando quieras"
       ],
-      "cta": "Obtener Pro — €6.99/mes",
-      "yearlyPrice": "€59.99",
+      "cta": "Obtener Pro — €9.99/mes",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "año",
-      "yearlyCta": "Obtener Pro — €59.99/año"
+      "yearlyCta": "Obtener Pro — €79.99/año"
     },
     "toggle": {
       "monthly": "Mensual",
       "yearly": "Anual",
-      "save": "Ahorra 29%"
+      "save": "Ahorra 33%"
     },
     "guarantee": "Garantía de Devolución de 30 Días",
     "guaranteeDesc": "¿No estás satisfecho? Obtén un reembolso completo en 30 días, sin preguntas.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Precio",
-      "offlineRedactPrice": "$6.99/mes",
+      "offlineRedactPrice": "$9.99/mes",
       "adobePrice": "$22.99/mes",
       "redactablePrice": "$39/mes",
       "ilovepdfPrice": "$7/mes",

@@ -141,10 +141,36 @@
     "government": "政府",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "全新 — 浏览器扩展",
+    "title": "在AI平台上也能保护您的数据",
+    "subtitle": "我们的浏览器扩展在您将个人数据发送到ChatGPT、Claude、Gmail等之前自动检测并屏蔽。",
+    "webApp": {
+      "title": "网页应用",
+      "description": "分享前编辑文档",
+      "f1": "从PDF中真正删除文本",
+      "f2": "扫描文档OCR",
+      "f3": "人脸检测和模糊",
+      "f4": "批量处理（ZIP）",
+      "cta": "免费试用"
+    },
+    "ext": {
+      "title": "浏览器扩展",
+      "description": "在AI和电子邮件平台上自动屏蔽个人信息",
+      "f1": "输入时实时PII检测",
+      "f2": "发送前自动屏蔽",
+      "f3": "文件上传扫描（PDF、DOCX）",
+      "f4": "支持9+平台",
+      "cta": "安装扩展"
+    },
+    "platforms": "兼容平台",
+    "onePlan": "一个Pro订阅 — 完全访问两者。"
+  },
   "cta": {
     "title": "准备好保护敏感数据了吗？",
-    "subtitle": "免费开始文档脱敏 — 无需注册。",
-    "button": "立即开始脱敏"
+    "subtitle": "编辑文档并自动屏蔽AI聊天机器人 — 满足您所有隐私需求的统一平台。",
+    "button": "立即开始脱敏",
+    "extensionCta": "安装扩展"
   },
   "footer": {
     "product": "产品",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "月",
       "description": "适合需要处理多份文档的专业人士",
       "features": [
         "免费版的所有功能",
         "无水印",
         "批量处理（ZIP下载）",
+        "浏览器扩展 — 在ChatGPT、Gmail等平台自动屏蔽个人信息",
         "优先支持",
         "随时取消"
       ],
-      "cta": "获取Pro — €6.99/月",
-      "yearlyPrice": "€59.99",
+      "cta": "获取Pro — €9.99/月",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "年",
-      "yearlyCta": "获取 Pro — €59.99/年"
+      "yearlyCta": "获取 Pro — €79.99/年"
     },
     "toggle": {
       "monthly": "月付",
       "yearly": "年付",
-      "save": "节省29%"
+      "save": "节省33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",

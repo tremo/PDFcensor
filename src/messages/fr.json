@@ -141,10 +141,36 @@
     "finance": "Finance",
     "government": "Gouvernement"
   },
+  "extension": {
+    "badge": "NOUVEAU — Extension navigateur",
+    "title": "Protégez vos données sur les plateformes IA aussi",
+    "subtitle": "Notre extension navigateur détecte et masque automatiquement les données personnelles avant de les envoyer à ChatGPT, Claude, Gmail et plus.",
+    "webApp": {
+      "title": "Application Web",
+      "description": "Caviardez les documents avant le partage",
+      "f1": "Suppression réelle du texte des PDFs",
+      "f2": "OCR pour documents numérisés",
+      "f3": "Détection de visages et floutage",
+      "f4": "Traitement par lots (ZIP)",
+      "cta": "Essayer gratuitement"
+    },
+    "ext": {
+      "title": "Extension navigateur",
+      "description": "Masquage automatique des données sur les plateformes IA et email",
+      "f1": "Détection PII en temps réel pendant la saisie",
+      "f2": "Masquage automatique avant l'envoi",
+      "f3": "Analyse des fichiers uploadés (PDF, DOCX)",
+      "f4": "Fonctionne sur 9+ plateformes",
+      "cta": "Installer l'extension"
+    },
+    "platforms": "Compatible avec",
+    "onePlan": "Un seul abonnement Pro — accès complet aux deux."
+  },
   "cta": {
     "title": "Prêt à protéger les données sensibles ?",
-    "subtitle": "Commencez à caviarder vos documents gratuitement — aucune inscription requise.",
-    "button": "Commencer maintenant"
+    "subtitle": "Caviardez des documents et masquez automatiquement les chatbots IA — une plateforme pour tous vos besoins de confidentialité.",
+    "button": "Commencer maintenant",
+    "extensionCta": "Installer l'extension"
   },
   "footer": {
     "product": "Produit",
@@ -324,7 +350,7 @@
   "pricing": {
     "meta": {
       "title": "Tarifs — OfflineRedact Outil de Caviardage PDF",
-      "description": "Commencez gratuitement ou passez à Pro pour 6,99 $/mois. Supprimez les filigranes, traitez en lot et bénéficiez d'un support prioritaire."
+      "description": "Commencez gratuitement ou passez à Pro pour 9,99 $/mois. Supprimez les filigranes, traitez en lot et bénéficiez d'un support prioritaire."
     },
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement, mettez à niveau quand vous en avez besoin",
@@ -344,25 +370,26 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "mois",
       "description": "Pour les professionnels qui traitent plusieurs documents",
       "features": [
         "Tout dans Gratuit",
         "Pas de filigrane",
         "Traitement par lots (ZIP)",
+        "Extension navigateur — masquage automatique des données sur ChatGPT, Gmail & plus",
         "Support prioritaire",
         "Annulez à tout moment"
       ],
-      "cta": "Passer à Pro — €6.99/mois",
-      "yearlyPrice": "€59.99",
+      "cta": "Passer à Pro — €9.99/mois",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "an",
-      "yearlyCta": "Obtenir Pro — €59.99/an"
+      "yearlyCta": "Obtenir Pro — €79.99/an"
     },
     "toggle": {
       "monthly": "Mensuel",
       "yearly": "Annuel",
-      "save": "Économisez 29%"
+      "save": "Économisez 33%"
     },
     "guarantee": "Garantie Satisfait ou Remboursé 30 Jours",
     "guaranteeDesc": "Pas satisfait ? Obtenez un remboursement complet dans les 30 jours, sans conditions.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Prix",
-      "offlineRedactPrice": "6,99 $/mois",
+      "offlineRedactPrice": "9,99 $/mois",
       "adobePrice": "22,99 $/mois",
       "redactablePrice": "39 $/mois",
       "ilovepdfPrice": "7 $/mois",

@@ -141,10 +141,36 @@
     "finance": "Finanzen",
     "government": "Behörden"
   },
+  "extension": {
+    "badge": "NEU — Browser-Erweiterung",
+    "title": "Schützen Sie Ihre Daten auch auf KI-Plattformen",
+    "subtitle": "Unsere Browser-Erweiterung erkennt und maskiert automatisch persönliche Daten, bevor Sie sie an ChatGPT, Claude, Gmail und mehr senden.",
+    "webApp": {
+      "title": "Web-App",
+      "description": "Dokumente vor dem Teilen schwärzen",
+      "f1": "Echte Textentfernung aus PDFs",
+      "f2": "OCR für gescannte Dokumente",
+      "f3": "Gesichtserkennung & Unschärfe",
+      "f4": "Stapelverarbeitung (ZIP)",
+      "cta": "Kostenlos testen"
+    },
+    "ext": {
+      "title": "Browser-Erweiterung",
+      "description": "Automatische PII-Maskierung auf KI- & E-Mail-Plattformen",
+      "f1": "Echtzeit-PII-Erkennung beim Tippen",
+      "f2": "Automatische Maskierung vor dem Senden",
+      "f3": "Datei-Upload-Scanning (PDF, DOCX)",
+      "f4": "Funktioniert auf 9+ Plattformen",
+      "cta": "Erweiterung installieren"
+    },
+    "platforms": "Kompatibel mit",
+    "onePlan": "Ein Pro-Abonnement — voller Zugriff auf beides."
+  },
   "cta": {
     "title": "Bereit, sensible Daten zu schützen?",
-    "subtitle": "Beginnen Sie kostenlos mit der Dokumentenschwärzung — keine Registrierung erforderlich.",
-    "button": "Jetzt mit dem Schwärzen beginnen"
+    "subtitle": "Dokumente schwärzen und KI-Chatbots automatisch maskieren — eine Plattform für alle Ihre Datenschutzbedürfnisse.",
+    "button": "Jetzt mit dem Schwärzen beginnen",
+    "extensionCta": "Erweiterung installieren"
   },
   "footer": {
     "product": "Produkt",
@@ -324,7 +350,7 @@
   "pricing": {
     "meta": {
       "title": "Preise — OfflineRedact PDF-Schwärzungstool",
-      "description": "Kostenlos starten oder für $6.99/Monat auf Pro upgraden. Wasserzeichen entfernen, Stapelverarbeitung und Prioritäts-Support."
+      "description": "Kostenlos starten oder für €9.99/Monat auf Pro upgraden. Wasserzeichen entfernen, Stapelverarbeitung und Prioritäts-Support."
     },
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos, upgraden Sie bei Bedarf",
@@ -344,25 +370,26 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "€6.99",
+      "price": "€9.99",
       "period": "Monat",
       "description": "Für Profis, die mehrere Dokumente verarbeiten",
       "features": [
         "Alles in Kostenlos",
         "Kein Wasserzeichen",
         "Stapelverarbeitung (ZIP-Download)",
+        "Browser-Erweiterung — PII automatisch auf ChatGPT, Gmail & mehr maskieren",
         "Prioritäts-Support",
         "Jederzeit kündigen"
       ],
-      "cta": "Pro holen — €6.99/Mo",
-      "yearlyPrice": "€59.99",
+      "cta": "Pro holen — €9.99/Mo",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "Jahr",
-      "yearlyCta": "Pro holen — €59.99/Jahr"
+      "yearlyCta": "Pro holen — €79.99/Jahr"
     },
     "toggle": {
       "monthly": "Monatlich",
       "yearly": "Jährlich",
-      "save": "29% sparen"
+      "save": "33% sparen"
     },
     "guarantee": "30-Tage-Geld-zurück-Garantie",
     "guaranteeDesc": "Nicht zufrieden? Erhalten Sie innerhalb von 30 Tagen eine volle Rückerstattung, ohne Fragen.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Preis",
-      "offlineRedactPrice": "$6.99/Mo",
+      "offlineRedactPrice": "$9.99/Mo",
       "adobePrice": "$22.99/Mo",
       "redactablePrice": "$39/Mo",
       "ilovepdfPrice": "$7/Mo",

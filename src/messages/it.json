@@ -141,10 +141,36 @@
     "government": "Government",
     "logoSection": "Trusted by leading organizations worldwide"
   },
+  "extension": {
+    "badge": "NUOVO — Estensione browser",
+    "title": "Proteggi i tuoi dati anche sulle piattaforme AI",
+    "subtitle": "La nostra estensione browser rileva e maschera automaticamente i dati personali prima di inviarli a ChatGPT, Claude, Gmail e altro.",
+    "webApp": {
+      "title": "App Web",
+      "description": "Oscura i documenti prima della condivisione",
+      "f1": "Rimozione reale del testo dai PDF",
+      "f2": "OCR per documenti scansionati",
+      "f3": "Rilevamento volti e sfocatura",
+      "f4": "Elaborazione batch (ZIP)",
+      "cta": "Prova gratis"
+    },
+    "ext": {
+      "title": "Estensione browser",
+      "description": "Mascheramento automatico PII su piattaforme AI ed email",
+      "f1": "Rilevamento PII in tempo reale durante la digitazione",
+      "f2": "Mascheramento automatico prima dell'invio",
+      "f3": "Scansione file caricati (PDF, DOCX)",
+      "f4": "Funziona su 9+ piattaforme",
+      "cta": "Installa estensione"
+    },
+    "platforms": "Compatibile con",
+    "onePlan": "Un abbonamento Pro — accesso completo a entrambi."
+  },
   "cta": {
     "title": "Pronto a proteggere i dati sensibili?",
-    "subtitle": "Inizia a oscurare i tuoi documenti gratuitamente — senza registrazione.",
-    "button": "Inizia ora"
+    "subtitle": "Oscura documenti e maschera automaticamente i chatbot AI — una piattaforma per tutte le tue esigenze di privacy.",
+    "button": "Inizia ora",
+    "extensionCta": "Installa estensione"
   },
   "footer": {
     "product": "Prodotto",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "one-time payment",
       "description": "For professionals who need clean output",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Estensione browser — mascheramento automatico PII su ChatGPT, Gmail e altro",
         "Priority support",
         "Lifetime license"
       ],
       "cta": "Get Pro License",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "anno",
-      "yearlyCta": "Ottieni Pro — €59.99/anno"
+      "yearlyCta": "Ottieni Pro — €79.99/anno"
     },
     "toggle": {
       "monthly": "Mensile",
       "yearly": "Annuale",
-      "save": "Risparmia 29%"
+      "save": "Risparmia 33%"
     },
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for €9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",

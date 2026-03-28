@@ -141,10 +141,36 @@
     "finance": "Finance",
     "government": "Government"
   },
+  "extension": {
+    "badge": "NEW — Browser Extension",
+    "title": "Protect Your Data on AI Platforms Too",
+    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "webApp": {
+      "title": "Web App",
+      "description": "Redact documents before sharing",
+      "f1": "True text removal from PDFs",
+      "f2": "OCR for scanned documents",
+      "f3": "Face detection & blurring",
+      "f4": "Batch processing (ZIP)",
+      "cta": "Try Free"
+    },
+    "ext": {
+      "title": "Browser Extension",
+      "description": "Auto-mask PII on AI & email platforms",
+      "f1": "Real-time PII detection as you type",
+      "f2": "Auto-mask before sending",
+      "f3": "File upload scanning (PDF, DOCX)",
+      "f4": "Works on 9+ platforms",
+      "cta": "Install Extension"
+    },
+    "platforms": "Works with",
+    "onePlan": "One Pro subscription — full access to both."
+  },
   "cta": {
     "title": "Ready to Protect Sensitive Data?",
-    "subtitle": "Start redacting documents for free — no signup required.",
-    "button": "Start Redacting Now"
+    "subtitle": "Redact documents and auto-mask AI chatbots — one platform for all your privacy needs.",
+    "button": "Start Redacting Now",
+    "extensionCta": "Install Extension"
   },
   "footer": {
     "product": "Product",
@@ -324,7 +350,7 @@
   "pricing": {
     "meta": {
       "title": "Pricing — OfflineRedact PDF Redaction Tool",
-      "description": "Start free or upgrade to Pro for $6.99/mo. Remove watermarks, batch process documents, and get priority support."
+      "description": "Start free or upgrade to Pro for $9.99/mo. Remove watermarks, batch process documents, and get priority support."
     },
     "title": "Simple, Transparent Pricing",
     "subtitle": "Start free, upgrade when you need it",
@@ -344,25 +370,26 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$6.99",
+      "price": "$9.99",
       "period": "month",
       "description": "For professionals who process multiple documents",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
+        "Browser extension — auto-mask PII on ChatGPT, Gmail & more",
         "Priority support",
         "Cancel anytime"
       ],
-      "cta": "Get Pro — $6.99/mo",
-      "yearlyPrice": "$59.99",
+      "cta": "Get Pro — $9.99/mo",
+      "yearlyPrice": "$79.99",
       "yearlyPeriod": "year",
-      "yearlyCta": "Get Pro — $59.99/yr"
+      "yearlyCta": "Get Pro — $79.99/yr"
     },
     "toggle": {
       "monthly": "Monthly",
       "yearly": "Yearly",
-      "save": "Save 29%"
+      "save": "Save 33%"
     },
     "guarantee": "30-Day Money-Back Guarantee",
     "guaranteeDesc": "Not satisfied? Get a full refund within 30 days, no questions asked.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",

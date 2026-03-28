@@ -141,10 +141,36 @@
     "government": "Правителство",
     "logoSection": "Доверен от водещи организации по целия свят"
   },
+  "extension": {
+    "badge": "NEW — Browser Extension",
+    "title": "Protect Your Data on AI Platforms Too",
+    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "webApp": {
+      "title": "Web App",
+      "description": "Redact documents before sharing",
+      "f1": "True text removal from PDFs",
+      "f2": "OCR for scanned documents",
+      "f3": "Face detection & blurring",
+      "f4": "Batch processing (ZIP)",
+      "cta": "Try Free"
+    },
+    "ext": {
+      "title": "Browser Extension",
+      "description": "Auto-mask PII on AI & email platforms",
+      "f1": "Real-time PII detection as you type",
+      "f2": "Auto-mask before sending",
+      "f3": "File upload scanning (PDF, DOCX)",
+      "f4": "Works on 9+ platforms",
+      "cta": "Install Extension"
+    },
+    "platforms": "Works with",
+    "onePlan": "One Pro subscription — full access to both."
+  },
   "cta": {
     "title": "Готови ли сте да защитите чувствителните данни?",
     "subtitle": "Започнете безплатно редактиране на документи — без регистрация.",
-    "button": "Започнете сега"
+    "button": "Започнете сега",
+    "extensionCta": "Install Extension"
   },
   "footer": {
     "product": "Продукт",
@@ -340,29 +366,30 @@
     },
     "pro": {
       "title": "Pro",
-      "price": "$29",
+      "price": "€9.99",
       "period": "еднократно плащане",
       "description": "За професионалисти, които се нуждаят от чист изход",
       "features": [
         "Всичко от безплатния план",
         "Без воден знак",
         "Пакетна обработка (ZIP изтегляне)",
+        "Разширение за браузър — автоматично маскиране на лични данни в ChatGPT, Gmail и др.",
         "Приоритетна поддръжка",
         "Пожизнен лиценз"
       ],
       "cta": "Вземете Pro лиценз",
-      "yearlyPrice": "€59.99",
+      "yearlyPrice": "€79.99",
       "yearlyPeriod": "година",
-      "yearlyCta": "Вземете Pro — €59.99/година"
+      "yearlyCta": "Вземете Pro — €79.99/година"
     },
     "toggle": {
       "monthly": "Месечно",
       "yearly": "Годишно",
-      "save": "Спестете 29%"
+      "save": "Спестете 33%"
     },
     "meta": {
       "title": "Ценообразуване — OfflineRedact инструмент за редактиране на PDF",
-      "description": "Започнете безплатно или преминете към Pro за $6.99/мес. Премахнете водни знаци, обработвайте документи на партиди и получете приоритетна поддръжка."
+      "description": "Започнете безплатно или преминете към Pro за €9.99/мес. Премахнете водни знаци, обработвайте документи на партиди и получете приоритетна поддръжка."
     },
     "guarantee": "30-дневна гаранция за връщане на парите",
     "guaranteeDesc": "Не сте доволни? Получете пълно възстановяване в рамките на 30 дни, без задаване на въпроси.",
@@ -375,7 +402,7 @@
       "redactable": "Redactable",
       "ilovepdf": "iLovePDF",
       "price": "Price",
-      "offlineRedactPrice": "$6.99/mo",
+      "offlineRedactPrice": "$9.99/mo",
       "adobePrice": "$22.99/mo",
       "redactablePrice": "$39/mo",
       "ilovepdfPrice": "$7/mo",
