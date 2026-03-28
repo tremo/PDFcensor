@@ -25,7 +25,6 @@ import {
   ShieldAlert,
   Lock,
   Heart,
-  Home,
   DollarSign,
   Building2,
   Globe,
@@ -625,7 +624,7 @@ export default async function HomePage({ params }: Props) {
       {/* Trusted By Logos */}
       <TrustedByLogos title={t("trust.logoSection")} />
 
-      {/* Trust */}
+      {/* Trust — Use Cases */}
       <section className="py-12 border-b border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <p className="text-center text-muted-foreground text-sm mb-6">
@@ -633,11 +632,11 @@ export default async function HomePage({ params }: Props) {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
             {[
-              { icon: Scale, label: t("trust.legal"), color: "text-blue-600" },
-              { icon: Heart, label: t("trust.healthcare"), color: "text-accent" },
-              { icon: Home, label: t("trust.realEstate"), color: "text-purple-600" },
-              { icon: DollarSign, label: t("trust.finance"), color: "text-amber-600" },
-              { icon: Building2, label: t("trust.government"), color: "text-muted-foreground" },
+              { icon: Scale, label: t("trust.useCase1"), color: "text-blue-600" },
+              { icon: Heart, label: t("trust.useCase2"), color: "text-accent" },
+              { icon: FileText, label: t("trust.useCase3"), color: "text-purple-600" },
+              { icon: DollarSign, label: t("trust.useCase4"), color: "text-amber-600" },
+              { icon: Building2, label: t("trust.useCase5"), color: "text-muted-foreground" },
             ].map(({ icon: Icon, label, color }) => (
               <div
                 key={label}
