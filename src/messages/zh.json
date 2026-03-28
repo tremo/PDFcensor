@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact帮助您满足全球20多项法规和标准的数据保护要求。"
   },
   "trust": {
-    "title": "受处理敏感文档的专业人士信赖",
-    "legal": "法律",
-    "healthcare": "医疗",
-    "realEstate": "房地产",
-    "finance": "金融",
-    "government": "政府",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "团队如何使用 OfflineRedact",
+    "useCase1": "从法庭文件中删除客户姓名",
+    "useCase2": "从医疗记录中移除患者数据",
+    "useCase3": "在外部共享前清理合同",
+    "useCase4": "从财务报告中去除账号",
+    "useCase5": "匿名化政府文档中的公民数据"
   },
   "extension": {
     "badge": "全新 — 浏览器扩展",

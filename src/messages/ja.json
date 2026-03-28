@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedactは、世界中の20以上の規制と基準におけるデータ保護要件の遵守を支援します。"
   },
   "trust": {
-    "title": "機密文書を扱う専門家に信頼されています",
-    "legal": "法律",
-    "healthcare": "医療",
-    "realEstate": "不動産",
-    "finance": "金融",
-    "government": "政府",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "チームでの OfflineRedact 活用例",
+    "useCase1": "裁判書類からクライアント名を墨消し",
+    "useCase2": "医療記録から患者データを削除",
+    "useCase3": "外部共有前に契約書をクリーンアップ",
+    "useCase4": "財務報告書から口座番号を除去",
+    "useCase5": "行政文書の市民データを匿名化"
   },
   "extension": {
     "badge": "新機能 — ブラウザ拡張機能",

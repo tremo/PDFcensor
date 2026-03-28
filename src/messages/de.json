@@ -135,12 +135,12 @@
   },
   "trust": {
     "logoSection": "Weltweit von führenden Organisationen genutzt",
-    "title": "Vertraut von Fachleuten, die mit sensiblen Dokumenten arbeiten",
-    "legal": "Recht",
-    "healthcare": "Gesundheit",
-    "realEstate": "Immobilien",
-    "finance": "Finanzen",
-    "government": "Behörden"
+    "title": "So nutzen Teams OfflineRedact",
+    "useCase1": "Mandantennamen aus Gerichtsakten schwärzen",
+    "useCase2": "Patientendaten aus Krankenakten entfernen",
+    "useCase3": "Verträge vor der Weitergabe bereinigen",
+    "useCase4": "Kontonummern aus Finanzberichten entfernen",
+    "useCase5": "Bürgerdaten in Behördendokumenten anonymisieren"
   },
   "extension": {
     "badge": "NEU — Browser-Erweiterung",

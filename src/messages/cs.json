@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact vám pomáhá splnit požadavky na ochranu dat v rámci 20+ regulací a standardů po celém světě."
   },
   "trust": {
-    "title": "Důvěřují nám profesionálové, kteří pracují s citlivými dokumenty",
-    "legal": "Právo",
-    "healthcare": "Zdravotnictví",
-    "realEstate": "Reality",
-    "finance": "Finance",
-    "government": "Veřejná správa",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Jak týmy používají OfflineRedact",
+    "useCase1": "Cenzurujte jména klientů v soudních spisech",
+    "useCase2": "Odstraňte údaje pacientů ze zdravotní dokumentace",
+    "useCase3": "Vyčistěte smlouvy před externím sdílením",
+    "useCase4": "Odstraňte čísla účtů z finančních výkazů",
+    "useCase5": "Anonymizujte údaje občanů ve vládních dokumentech"
   },
   "extension": {
     "badge": "NOVINKA — Rozšíření prohlížeče",

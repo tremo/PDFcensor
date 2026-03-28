@@ -135,12 +135,12 @@
   },
   "trust": {
     "logoSection": "Utilizado por organizaciones líderes en todo el mundo",
-    "title": "Confiado por profesionales que manejan documentos sensibles",
-    "legal": "Legal",
-    "healthcare": "Salud",
-    "realEstate": "Inmobiliaria",
-    "finance": "Finanzas",
-    "government": "Gobierno"
+    "title": "Cómo los equipos usan OfflineRedact",
+    "useCase1": "Censurar nombres en expedientes judiciales",
+    "useCase2": "Eliminar datos de pacientes de historiales médicos",
+    "useCase3": "Limpiar contratos antes de compartir",
+    "useCase4": "Eliminar números de cuenta de informes financieros",
+    "useCase5": "Anonimizar datos ciudadanos en documentos gubernamentales"
   },
   "extension": {
     "badge": "NUEVO — Extensión del navegador",

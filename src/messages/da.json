@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact hjælper dig med at opfylde databeskyttelseskrav på tværs af 20+ regulativer og standarder."
   },
   "trust": {
-    "title": "Brugt af professionelle der håndterer følsomme dokumenter",
-    "legal": "Jura",
-    "healthcare": "Sundhed",
-    "realEstate": "Ejendom",
-    "finance": "Finans",
-    "government": "Offentlig",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Sådan bruger teams OfflineRedact",
+    "useCase1": "Censurer klientnavne i retsdokumenter",
+    "useCase2": "Fjern patientdata fra journaler",
+    "useCase3": "Rens kontrakter før ekstern deling",
+    "useCase4": "Fjern kontonumre fra finansrapporter",
+    "useCase5": "Anonymiser borgerdata i offentlige dokumenter"
   },
   "extension": {
     "badge": "NYT — Browserudvidelse",
