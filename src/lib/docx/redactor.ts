@@ -121,10 +121,16 @@ function redactXmlContent(
   for (const value of sortedValues) {
     const asterisks = replacements.get(value)!;
     const escaped = escapeRegex(value);
+    // Also try matching the XML-encoded form of the PII value
+    const escapedXml = escapeRegex(escapeXml(value));
     result = result.replace(
       /(<w:t(?:\s[^>]*)?>)([^<]*?)(<\/w:t>)/g,
       (_, open, content, close) => {
-        const newContent = content.replace(new RegExp(escaped, "g"), escapeXml(asterisks));
+        let newContent = content.replace(new RegExp(escaped, "g"), escapeXml(asterisks));
+        // If the decoded form didn't match, try matching XML-encoded form
+        if (newContent === content && escaped !== escapedXml) {
+          newContent = content.replace(new RegExp(escapedXml, "g"), escapeXml(asterisks));
+        }
         return open + newContent + close;
       }
     );

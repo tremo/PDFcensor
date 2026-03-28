@@ -6,12 +6,12 @@ import type Stripe from "stripe";
 
 const PRICE_IDS = {
   eur: {
-    monthly: process.env.STRIPE_PRICE_EUR_MONTHLY || "price_1TFsdYAej1A7idfqHtRVevzF",
-    yearly: process.env.STRIPE_PRICE_EUR_YEARLY || "price_1TFsdZAej1A7idfqUph9lrAI",
+    monthly: process.env.STRIPE_PRICE_EUR_MONTHLY,
+    yearly: process.env.STRIPE_PRICE_EUR_YEARLY,
   },
   usd: {
-    monthly: process.env.STRIPE_PRICE_USD_MONTHLY || "price_1TFsdVAej1A7idfqYs44IJCW",
-    yearly: process.env.STRIPE_PRICE_USD_YEARLY || "price_1TFsdYAej1A7idfq2ROCXvY7",
+    monthly: process.env.STRIPE_PRICE_USD_MONTHLY,
+    yearly: process.env.STRIPE_PRICE_USD_YEARLY,
   },
 };
 
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const prices = PRICE_IDS[currency];
     const priceId = plan === "yearly" ? prices.yearly : prices.monthly;
 
-    if (!process.env.STRIPE_SECRET_KEY) {
+    if (!process.env.STRIPE_SECRET_KEY || !priceId) {
       return NextResponse.json(
         { error: "Payment service not configured" },
         { status: 500 }

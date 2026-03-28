@@ -42,7 +42,7 @@ function getOCRLanguages(locale: string, piiTypes: PIIType[]): string {
 
 let idCounter = 0;
 function nextId() {
-  return `img-redaction-${++idCounter}`;
+  return `img-redaction-${Date.now()}-${++idCounter}`;
 }
 
 /**
@@ -79,10 +79,6 @@ export async function detectOCRPIIFromImage(
   const { data } = await scheduler.addJob("recognize", canvas, {}, { blocks: true, text: true });
 
   onProgress?.(80);
-
-  console.log("[OCR DEBUG] lang:", lang, "| canvas:", canvas.width, "x", canvas.height);
-  console.log("[OCR DEBUG] blocks:", data.blocks?.length ?? "null", "| confidence:", data.confidence);
-  console.log("[OCR DEBUG] text:", JSON.stringify(data.text?.substring(0, 400)));
 
   // Extract word-level bounding boxes
   const words: OCRWord[] = [];
@@ -158,10 +154,7 @@ export async function detectOCRPIIFromImage(
   }
 
   // Detect PII in OCR text (pageIndex 0 for single images)
-  console.log("[OCR DEBUG] merged words:", mergedWords.map(w => w.text));
-  console.log("[OCR DEBUG] fullText:", fullText.trim());
   const result = detectPII(fullText.trim(), 0, piiTypes);
-  console.log("[OCR DEBUG] PII matches:", result.matches.map(m => ({ type: m.type, value: m.value })));
 
   for (const match of result.matches) {
     let charPos = 0;

@@ -173,7 +173,7 @@ function overlapsWithExisting(
 
 let idCounter = 0;
 function nextOCRId() {
-  return `ocr-redaction-${++idCounter}`;
+  return `ocr-redaction-${Date.now()}-${++idCounter}`;
 }
 
 /**

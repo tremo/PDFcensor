@@ -18,8 +18,12 @@ export async function GET(request: Request) {
     }
     const { error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
-      const redirectUrl = redirect || `/${locale}/redact`;
-      return NextResponse.redirect(new URL(redirectUrl, origin));
+      // Validate redirect is a relative path to prevent open redirect
+      const safeRedirect =
+        redirect && redirect.startsWith("/") && !redirect.startsWith("//")
+          ? redirect
+          : `/${locale}/redact`;
+      return NextResponse.redirect(new URL(safeRedirect, origin));
     }
   }
 

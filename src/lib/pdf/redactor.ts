@@ -264,7 +264,8 @@ function stripAllTextFromPage(page: PDFPage): void {
     const content = new TextDecoder("latin1").decode(streamBytes);
 
     // Remove all BT...ET text blocks (the entire text object)
-    const stripped = content.replace(/\bBT\b[\s\S]*?\bET\b/g, "");
+    // Use newline/space boundaries instead of \b which is unreliable in Latin-1 streams
+    const stripped = content.replace(/(?:^|[\n\r\s])BT\s[\s\S]*?\sET(?=[\n\r\s]|$)/g, "");
 
     // Re-encode as Latin-1
     const newBytes = new Uint8Array(stripped.length);
