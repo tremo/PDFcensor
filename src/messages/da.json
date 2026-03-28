@@ -270,8 +270,6 @@
       "itin": "ITIN",
       "email": "E-mailadresse",
       "phone": "Telefonnummer",
-      "trPhone": "Tyrkisk telefonnummer",
-      "usPhone": "Amerikansk telefonnummer",
       "iban": "IBAN",
       "creditCard": "Kreditkort",
       "passport": "Pasnummer",

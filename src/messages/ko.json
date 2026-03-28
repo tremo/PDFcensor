@@ -270,8 +270,6 @@
       "itin": "ITIN",
       "email": "이메일 주소",
       "phone": "전화번호",
-      "trPhone": "터키 전화번호",
-      "usPhone": "미국 전화번호",
       "iban": "IBAN",
       "creditCard": "신용카드",
       "passport": "여권번호",

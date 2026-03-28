@@ -66,7 +66,7 @@ export function detectUSPhone(text: string, pageIndex: number): PIIMatch[] {
     if (cleaned.length < 10 || cleaned.length > 11) continue;
 
     matches.push({
-      type: "usPhone",
+      type: "phone",
       value: match[0],
       startIndex: match.index,
       endIndex: match.index + match[0].length,
