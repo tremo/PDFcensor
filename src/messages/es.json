@@ -412,6 +412,7 @@
       "autoDetect": "Detección Automática de DPC",
       "metadataCleaning": "Limpieza de Metadatos",
       "batchProcessing": "Procesamiento por Lotes",
+      "browserExtension": "Extensión del Navegador",
       "yes": "Sí",
       "no": "No",
       "limited": "Limitado",

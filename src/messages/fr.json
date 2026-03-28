@@ -412,6 +412,7 @@
       "autoDetect": "Détection Auto des DCP",
       "metadataCleaning": "Nettoyage des Métadonnées",
       "batchProcessing": "Traitement par Lots",
+      "browserExtension": "Extension de Navigateur",
       "yes": "Oui",
       "no": "Non",
       "limited": "Limité",

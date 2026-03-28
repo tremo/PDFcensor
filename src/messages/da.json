@@ -412,6 +412,7 @@
       "autoDetect": "Auto PII Detection",
       "metadataCleaning": "Metadata Cleaning",
       "batchProcessing": "Batch Processing",
+      "browserExtension": "Browserudvidelse",
       "yes": "Yes",
       "no": "No",
       "limited": "Limited",

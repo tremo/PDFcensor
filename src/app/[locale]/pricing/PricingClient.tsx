@@ -70,6 +70,7 @@ export default function PricingClient() {
     { key: "autoDetect", values: [true, false, true, false] },
     { key: "metadataCleaning", values: [true, true, false, false] },
     { key: "batchProcessing", values: [true, true, true, true] },
+    { key: "browserExtension", values: [true, false, false, false], highlight: true },
   ];
 
   const faqItems = [

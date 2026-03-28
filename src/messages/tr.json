@@ -412,6 +412,7 @@
       "autoDetect": "Otomatik Kişisel Veri Tespiti",
       "metadataCleaning": "Metadata Temizleme",
       "batchProcessing": "Toplu İşleme",
+      "browserExtension": "Tarayıcı Eklentisi",
       "yes": "Evet",
       "no": "Hayır",
       "limited": "Sınırlı",
