@@ -1,6 +1,6 @@
 import type { PIIMatch, PIIType, PIIDetectionResult } from "@/types/pii";
-import { detectTCKimlik, detectTRPhone, detectTRPassport } from "./patterns/turkish";
-import { detectSSN, detectITIN, detectUSPhone } from "./patterns/us";
+import { detectTCKimlik, detectTRPassport } from "./patterns/turkish";
+import { detectSSN, detectITIN } from "./patterns/us";
 import {
   detectEmail,
   detectIBAN,
@@ -18,11 +18,9 @@ type DetectorFn = (text: string, pageIndex: number) => PIIMatch[];
 
 const detectorMap: Record<PIIType, DetectorFn> = {
   tcKimlik: detectTCKimlik,
-  trPhone: detectTRPhone,
   passport: detectTRPassport,
   ssn: detectSSN,
   itin: detectITIN,
-  usPhone: detectUSPhone,
   email: detectEmail,
   iban: detectIBAN,
   creditCard: detectCreditCard,

@@ -40,7 +40,7 @@ export function detectTRPhone(text: string, pageIndex: number): PIIMatch[] {
 
   while ((match = regex.exec(text)) !== null) {
     matches.push({
-      type: "trPhone",
+      type: "phone",
       value: match[0],
       startIndex: match.index,
       endIndex: match.index + match[0].length,

@@ -6,7 +6,7 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
     name: "COMPREHENSIVE",
     country: "ALL",
     patterns: [
-      "ssn", "itin", "tcKimlik", "email", "phone", "trPhone", "usPhone",
+      "ssn", "itin", "tcKimlik", "email", "phone",
       "iban", "creditCard", "passport", "names", "address", "dateOfBirth",
       "ipAddress", "macAddress", "cryptoWallet", "gpsCoordinate", "licensePlate", "nationalId",
     ],
@@ -15,7 +15,7 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
   KVKK: {
     name: "KVKK",
     country: "TR",
-    patterns: ["tcKimlik", "trPhone", "email", "iban", "names", "address", "dateOfBirth", "licensePlate"],
+    patterns: ["tcKimlik", "phone", "email", "iban", "names", "address", "dateOfBirth", "licensePlate"],
     description: "Kişisel Verilerin Korunması Kanunu (Turkey)",
   },
   GDPR: {
@@ -27,13 +27,13 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
   HIPAA: {
     name: "HIPAA",
     country: "US",
-    patterns: ["ssn", "names", "email", "usPhone", "address", "dateOfBirth", "ipAddress"],
+    patterns: ["ssn", "names", "email", "phone", "address", "dateOfBirth", "ipAddress"],
     description: "Health Insurance Portability and Accountability Act (US)",
   },
   CCPA: {
     name: "CCPA",
     country: "US",
-    patterns: ["ssn", "itin", "email", "usPhone", "creditCard", "names", "dateOfBirth"],
+    patterns: ["ssn", "itin", "email", "phone", "creditCard", "names", "dateOfBirth"],
     description: "California Consumer Privacy Act (US)",
   },
   LGPD: {
@@ -64,7 +64,7 @@ export const regulations: Record<RegulationType, RegulationProfile> = {
     name: "CUSTOM",
     country: "ALL",
     patterns: [
-      "ssn", "tcKimlik", "itin", "email", "phone", "trPhone", "usPhone",
+      "ssn", "tcKimlik", "itin", "email", "phone",
       "iban", "creditCard", "passport", "names", "address", "dateOfBirth",
       "ipAddress", "macAddress", "cryptoWallet", "gpsCoordinate", "licensePlate", "nationalId",
     ],

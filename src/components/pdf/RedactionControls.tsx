@@ -26,8 +26,8 @@ import {
 import { cn } from "@/lib/utils";
 
 const ALL_PII_TYPES: (PIIType | "customKeyword")[] = [
-  "ssn", "tcKimlik", "itin", "email", "phone", "trPhone",
-  "usPhone", "iban", "creditCard", "passport", "names", "address",
+  "ssn", "tcKimlik", "itin", "email", "phone",
+  "iban", "creditCard", "passport", "names", "address",
   "dateOfBirth", "face", "ipAddress", "macAddress", "cryptoWallet",
   "gpsCoordinate", "licensePlate", "nationalId", "customKeyword",
 ];

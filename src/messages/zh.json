@@ -270,8 +270,6 @@
       "itin": "ITIN",
       "email": "电子邮件地址",
       "phone": "电话号码",
-      "trPhone": "土耳其电话号码",
-      "usPhone": "美国电话号码",
       "iban": "IBAN",
       "creditCard": "信用卡",
       "passport": "护照号码",

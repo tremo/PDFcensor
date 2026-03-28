@@ -116,6 +116,19 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
       /(?<!\d)0\d{1,4}[\s.-]+\d{2,5}[\s.-]+\d{2,5}(?:[\s.-]+\d{1,5})?(?!\d)/g,
       0.8,
     ],
+    // 5. Turkish phone numbers (mobile + landline)
+    //    +90 5XX XXX XX XX, 05XX XXX XX XX, +90 (312) XXX XX XX
+    //    Area codes: 2XX (European), 3XX (Central/Asian), 4XX, 5XX (mobile)
+    [
+      /(?<!\d)(?:\+90[\s.-]*|0[\s.-]?)\(?[2-5]\d{2}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}(?!\d)/g,
+      0.9,
+    ],
+    // 6. US phone numbers
+    //    +1 (XXX) XXX-XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX
+    [
+      /(?:\+1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b/g,
+      0.8,
+    ],
   ];
 
   for (const [pattern, confidence] of structuralPatterns) {

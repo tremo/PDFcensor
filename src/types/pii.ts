@@ -4,8 +4,6 @@ export type PIIType =
   | "itin"
   | "email"
   | "phone"
-  | "trPhone"
-  | "usPhone"
   | "iban"
   | "creditCard"
   | "passport"

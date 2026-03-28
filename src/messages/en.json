@@ -274,8 +274,6 @@
       "itin": "ITIN",
       "email": "Email Address",
       "phone": "Phone Number",
-      "trPhone": "Turkish Phone Number",
-      "usPhone": "US Phone Number",
       "iban": "IBAN",
       "creditCard": "Credit Card",
       "passport": "Passport Number",
@@ -531,12 +529,37 @@
     "cookies": {
       "heading": "4. Cookies & Local Storage",
       "text": "We use minimal cookies and local storage. We do not use advertising or tracking cookies.",
-      "tableHeaders": ["Name", "Type", "Purpose", "Duration"],
+      "tableHeaders": [
+        "Name",
+        "Type",
+        "Purpose",
+        "Duration"
+      ],
       "tableRows": [
-        ["locale", "Local Storage", "Stores your language preference", "Persistent"],
-        ["supabase-auth-token", "Local Storage", "Authentication session for Pro users", "Until logout"],
-        ["_gtm", "Cookie", "Google Tag Manager — anonymous analytics", "Session"],
-        ["cookie-consent", "Local Storage", "Remembers your cookie preference", "1 year"]
+        [
+          "locale",
+          "Local Storage",
+          "Stores your language preference",
+          "Persistent"
+        ],
+        [
+          "supabase-auth-token",
+          "Local Storage",
+          "Authentication session for Pro users",
+          "Until logout"
+        ],
+        [
+          "_gtm",
+          "Cookie",
+          "Google Tag Manager — anonymous analytics",
+          "Session"
+        ],
+        [
+          "cookie-consent",
+          "Local Storage",
+          "Remembers your cookie preference",
+          "1 year"
+        ]
       ]
     },
     "thirdParty": {
@@ -589,12 +612,30 @@
       "text": "Depending on your location, you have the following rights regarding your personal data:",
       "gdprHeading": "Under GDPR (EU) & UK GDPR:",
       "gdprRights": [
-        { "title": "Right of Access", "desc": "Request a copy of the personal data we hold about you" },
-        { "title": "Right to Rectification", "desc": "Request correction of inaccurate personal data" },
-        { "title": "Right to Erasure", "desc": "Request deletion of your personal data (\"right to be forgotten\")" },
-        { "title": "Right to Restriction", "desc": "Request that we limit how we use your data" },
-        { "title": "Right to Data Portability", "desc": "Receive your data in a structured, machine-readable format" },
-        { "title": "Right to Object", "desc": "Object to processing based on legitimate interests" }
+        {
+          "title": "Right of Access",
+          "desc": "Request a copy of the personal data we hold about you"
+        },
+        {
+          "title": "Right to Rectification",
+          "desc": "Request correction of inaccurate personal data"
+        },
+        {
+          "title": "Right to Erasure",
+          "desc": "Request deletion of your personal data (\"right to be forgotten\")"
+        },
+        {
+          "title": "Right to Restriction",
+          "desc": "Request that we limit how we use your data"
+        },
+        {
+          "title": "Right to Data Portability",
+          "desc": "Receive your data in a structured, machine-readable format"
+        },
+        {
+          "title": "Right to Object",
+          "desc": "Object to processing based on legitimate interests"
+        }
       ],
       "ccpaHeading": "Under CCPA/CPRA (California):",
       "ccpaRights": [
@@ -630,10 +671,22 @@
       "heading": "11. Legal Basis for Processing (GDPR)",
       "text": "Under the GDPR, we process personal data based on the following legal grounds:",
       "bases": [
-        { "basis": "Contract Performance", "description": "Processing your payment and providing Pro features you purchased" },
-        { "basis": "Legitimate Interest", "description": "Website analytics to improve our service; security and fraud prevention" },
-        { "basis": "Consent", "description": "Sending marketing communications (only if you opt in)" },
-        { "basis": "Legal Obligation", "description": "Retaining payment records as required by tax law" }
+        {
+          "basis": "Contract Performance",
+          "description": "Processing your payment and providing Pro features you purchased"
+        },
+        {
+          "basis": "Legitimate Interest",
+          "description": "Website analytics to improve our service; security and fraud prevention"
+        },
+        {
+          "basis": "Consent",
+          "description": "Sending marketing communications (only if you opt in)"
+        },
+        {
+          "basis": "Legal Obligation",
+          "description": "Retaining payment records as required by tax law"
+        }
       ],
       "basisLabel": "Legal Basis",
       "descriptionLabel": "Processing Activity"

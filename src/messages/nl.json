@@ -270,8 +270,6 @@
       "itin": "ITIN",
       "email": "Email Address",
       "phone": "Phone Number",
-      "trPhone": "Turkish Phone Number",
-      "usPhone": "US Phone Number",
       "iban": "IBAN",
       "creditCard": "Credit Card",
       "passport": "Passport Number",
