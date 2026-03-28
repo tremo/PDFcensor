@@ -379,7 +379,9 @@
       "cta": "Pro — €9.99/maand",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "jaar",
-      "yearlyCta": "Pro kopen — €79.99/jaar"
+      "yearlyCta": "Pro kopen — €79.99/jaar",
+      "alreadyPro": "Je bent al Pro ✓",
+      "alreadyProDesc": "Je hebt al een actief Pro-abonnement."
     },
     "toggle": {
       "monthly": "Maandelijks",

@@ -383,7 +383,9 @@
       "cta": "Obtener Pro — €9.99/mes",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "año",
-      "yearlyCta": "Obtener Pro — €79.99/año"
+      "yearlyCta": "Obtener Pro — €79.99/año",
+      "alreadyPro": "Ya eres Pro ✓",
+      "alreadyProDesc": "Ya tienes una suscripción Pro activa."
     },
     "toggle": {
       "monthly": "Mensual",

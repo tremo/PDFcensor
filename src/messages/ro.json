@@ -379,7 +379,9 @@
       "cta": "Obțineți Pro — €9.99/lună",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "an",
-      "yearlyCta": "Obțineți Pro — €79.99/an"
+      "yearlyCta": "Obțineți Pro — €79.99/an",
+      "alreadyPro": "Ești deja Pro ✓",
+      "alreadyProDesc": "Ai deja un abonament Pro activ."
     },
     "toggle": {
       "monthly": "Lunar",

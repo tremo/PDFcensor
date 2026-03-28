@@ -379,7 +379,9 @@
       "cta": "Skaffa Pro — €9.99/mån.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "år",
-      "yearlyCta": "Skaffa Pro — €79.99/år"
+      "yearlyCta": "Skaffa Pro — €79.99/år",
+      "alreadyPro": "Du är redan Pro ✓",
+      "alreadyProDesc": "Du har redan en aktiv Pro-prenumeration."
     },
     "toggle": {
       "monthly": "Månadsvis",

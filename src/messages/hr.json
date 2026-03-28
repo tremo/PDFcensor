@@ -379,7 +379,9 @@
       "cta": "Nabavite Pro — €9.99/mj.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "godina",
-      "yearlyCta": "Nabavite Pro — €79.99/godina"
+      "yearlyCta": "Nabavite Pro — €79.99/godina",
+      "alreadyPro": "Već ste Pro ✓",
+      "alreadyProDesc": "Već imate aktivnu Pro pretplatu."
     },
     "toggle": {
       "monthly": "Mjesečno",

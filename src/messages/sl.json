@@ -379,7 +379,9 @@
       "cta": "Pridobite Pro — €9.99/mes.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "leto",
-      "yearlyCta": "Pridobi Pro — €79.99/leto"
+      "yearlyCta": "Pridobi Pro — €79.99/leto",
+      "alreadyPro": "Že imate Pro ✓",
+      "alreadyProDesc": "Že imate aktivno Pro naročnino."
     },
     "toggle": {
       "monthly": "Mesečno",

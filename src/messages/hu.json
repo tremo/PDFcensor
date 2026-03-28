@@ -379,7 +379,9 @@
       "cta": "Pro — €9.99/hó",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "év",
-      "yearlyCta": "Pro beszerzése — €79.99/év"
+      "yearlyCta": "Pro beszerzése — €79.99/év",
+      "alreadyPro": "Már Pro vagy ✓",
+      "alreadyProDesc": "Már rendelkezel aktív Pro előfizetéssel."
     },
     "toggle": {
       "monthly": "Havi",

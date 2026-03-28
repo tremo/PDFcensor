@@ -50,6 +50,20 @@ export async function POST(request: Request) {
       );
     }
 
+    // Prevent duplicate subscription for existing Pro users
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("is_pro")
+      .eq("id", user.id)
+      .single();
+
+    if (profile?.is_pro) {
+      return NextResponse.json(
+        { error: "You already have an active Pro subscription." },
+        { status: 409 }
+      );
+    }
+
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ["card"],
       line_items: [

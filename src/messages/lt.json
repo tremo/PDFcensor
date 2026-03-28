@@ -379,7 +379,9 @@
       "cta": "Gauti Pro — €9.99/mėn.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "metai",
-      "yearlyCta": "Gauti Pro — €79.99/metai"
+      "yearlyCta": "Gauti Pro — €79.99/metai",
+      "alreadyPro": "Jau turite Pro ✓",
+      "alreadyProDesc": "Jau turite aktyvią Pro prenumeratą."
     },
     "toggle": {
       "monthly": "Mėnesinis",

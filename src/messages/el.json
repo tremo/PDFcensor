@@ -379,7 +379,9 @@
       "cta": "Αποκτήστε Pro — €9.99/μήνα",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "έτος",
-      "yearlyCta": "Αποκτήστε Pro — €79.99/έτος"
+      "yearlyCta": "Αποκτήστε Pro — €79.99/έτος",
+      "alreadyPro": "Είστε ήδη Pro ✓",
+      "alreadyProDesc": "Έχετε ήδη ενεργή συνδρομή Pro."
     },
     "toggle": {
       "monthly": "Μηνιαία",

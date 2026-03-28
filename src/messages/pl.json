@@ -379,7 +379,9 @@
       "cta": "Kup Pro — €9.99/mies.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
-      "yearlyCta": "Kup Pro — €79.99/rok"
+      "yearlyCta": "Kup Pro — €79.99/rok",
+      "alreadyPro": "Już masz Pro ✓",
+      "alreadyProDesc": "Masz już aktywną subskrypcję Pro."
     },
     "toggle": {
       "monthly": "Miesięcznie",

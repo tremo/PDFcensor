@@ -379,7 +379,9 @@
       "cta": "Faigh Pro — €9.99/mí",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "bliain",
-      "yearlyCta": "Faigh Pro — €79.99/bliain"
+      "yearlyCta": "Faigh Pro — €79.99/bliain",
+      "alreadyPro": "Tá Pro agat cheana ✓",
+      "alreadyProDesc": "Tá síntiús Pro gníomhach agat cheana."
     },
     "toggle": {
       "monthly": "Míosúil",
