@@ -19,7 +19,8 @@ function PlatformIcon({ name, className }: { name: string; className?: string })
     case "Claude":
       return (
         <svg className={cn} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4.709 15.955l4.72-2.756.08-.046 2.698-1.575c.076-.044.076-.153 0-.198L9.51 9.807l-.08-.047-4.72-2.756a.114.114 0 0 0-.171.099v8.754c0 .083.09.136.17.098zm6.636-3.873L8.72 13.69v3.222l-2.461 1.436V9.694l2.461 1.437 2.625 1.534v-.583zm2.31-2.164l4.72 2.756.08.047 2.698 1.575c.076.044.076.154 0 .198l-2.697 1.574-.08.047-4.721 2.756a.114.114 0 0 1-.171-.099V9.818c0-.083.09-.136.17-.098zm-1.048 2.131v3.222l-2.625 1.534v-3.222l2.625-1.534zm3.673 4.295l-2.461-1.437-2.625-1.534v.584l2.625-1.534 2.461-1.437v8.654l-2.461-1.436-2.625-1.534v-.583l2.625 1.534 2.461 1.436v-3.222l.001.509z" />
+          <path d="M15.31 3.16l-4.614 15.153a.624.624 0 0 1-.6.447.625.625 0 0 1-.6-.447L4.69 3.16a.625.625 0 0 1 1.199-.35L10.1 16.14 14.11 2.81a.625.625 0 0 1 1.199.35z" />
+          <path d="M19.31 3.16l-4.614 15.153a.624.624 0 0 1-.6.447.625.625 0 0 1-.6-.447L8.69 3.16a.625.625 0 0 1 1.199-.35L14.1 16.14 18.11 2.81a.625.625 0 0 1 1.199.35z" />
         </svg>
       );
     case "Gemini":
@@ -40,10 +41,12 @@ function PlatformIcon({ name, className }: { name: string; className?: string })
           <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457" />
         </svg>
       );
-    case "Outlook":
+    case "More":
       return (
         <svg className={cn} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M24 7.387v10.478c0 .23-.08.424-.238.576a.806.806 0 0 1-.588.236h-8.174v-8.47l1.6 1.18.4-.56-2.194-1.62H15v-.04l.08-.04 8.24-4.98a.72.72 0 0 1 .68.24zm0-1.59a.86.86 0 0 0-.36-.21.93.93 0 0 0-.4-.02L14 11.387v-1.22L23.16 4.8c.2-.12.46-.16.68-.08a.78.78 0 0 1 .16.08v1zm-10-1.22v14.05l-14-2.46V4.827zm-3.56 10.1c.56-.68.84-1.56.8-2.48.04-.86-.24-1.72-.76-2.4-.56-.64-1.36-1-2.2-.96-.84-.04-1.64.32-2.16.96-.56.68-.84 1.54-.8 2.44-.04.88.24 1.76.76 2.44.52.64 1.32 1 2.16.96.84.04 1.64-.32 2.2-.96m-4.04-.24c-.36-.52-.56-1.2-.52-1.88a3.42 3.42 0 0 1 .44-1.94c.32-.48.84-.74 1.4-.72.56-.04 1.08.24 1.4.72.36.52.52 1.2.52 1.88.04.68-.16 1.36-.48 1.92-.32.5-.84.78-1.4.76-.58.02-1.12-.26-1.44-.74z" />
+          <circle cx="5" cy="12" r="2.5" />
+          <circle cx="12" cy="12" r="2.5" />
+          <circle cx="19" cy="12" r="2.5" />
         </svg>
       );
     case "Slack":
@@ -100,10 +103,10 @@ export default async function ExtensionPage({ params }: Props) {
     { name: "Gemini", desc: t("platforms.gemini"), bg: "bg-[#4285f4]/10", text: "text-[#4285f4]" },
     { name: "Copilot", desc: t("platforms.copilot"), bg: "bg-[#7c3aed]/10", text: "text-[#7c3aed]" },
     { name: "Gmail", desc: t("platforms.gmail"), bg: "bg-[#ea4335]/10", text: "text-[#ea4335]" },
-    { name: "Outlook", desc: t("platforms.outlook"), bg: "bg-[#0078d4]/10", text: "text-[#0078d4]" },
     { name: "Slack", desc: t("platforms.slack"), bg: "bg-[#4a154b]/10", text: "text-[#4a154b]" },
     { name: "Discord", desc: t("platforms.discord"), bg: "bg-[#5865f2]/10", text: "text-[#5865f2]" },
     { name: "Notion", desc: t("platforms.notion"), bg: "bg-[#000]/10", text: "text-foreground" },
+    { name: "More", desc: t("platforms.more"), bg: "bg-muted", text: "text-muted-foreground" },
   ];
 
   return (
@@ -133,7 +136,7 @@ export default async function ExtensionPage({ params }: Props) {
                   <PlatformIcon name={name} className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold text-sm">{name}</div>
+                  <div className="font-semibold text-sm">{name === "More" ? "More..." : name}</div>
                   <div className="text-xs text-muted-foreground">{desc}</div>
                 </div>
               </div>

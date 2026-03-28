@@ -1154,7 +1154,7 @@
       "gemini": "Censure avant l'envoi",
       "copilot": "Masquage du contexte de code sensible",
       "gmail": "Censure des e-mails avant l'envoi",
-      "outlook": "Protection des messages sortants",
+      "more": "Et bien d'autres...",
       "slack": "Masquage des PII dans les chats d'équipe",
       "discord": "Censure automatique dans les messages",
       "notion": "Protection des documents partagés"
