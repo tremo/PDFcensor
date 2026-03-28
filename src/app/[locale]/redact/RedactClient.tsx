@@ -22,6 +22,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n/navigation";
 import { useLocale } from "next-intl";
+import { ExtensionTip } from "@/components/pdf/ExtensionTip";
 
 type DocumentType = "none" | "pdf" | "docx" | "image";
 type FlowMode = "single" | "batch";
@@ -293,6 +294,7 @@ export default function RedactClient() {
             faceDetectionEnabled={faceDetectionEnabled}
             onFaceDetectionToggle={handleFaceDetectionToggle}
           />
+          <ExtensionTip isPro={isPro} />
         </div>
       ) : isBatchProcessing ? (
         /* Batch processing progress */

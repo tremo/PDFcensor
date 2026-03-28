@@ -6,34 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Puzzle } from "lucide-react";
 import ExtensionDemo from "@/components/landing/ExtensionDemo";
-
-type Browser = "chrome" | "firefox" | "edge" | "safari" | "unknown";
-
-const STORE_URLS: Record<Browser, string> = {
-  chrome: "https://chromewebstore.google.com",
-  firefox: "https://addons.mozilla.org",
-  edge: "https://microsoftedge.microsoft.com/addons",
-  safari: "https://apps.apple.com",
-  unknown: "https://chromewebstore.google.com",
-};
-
-const BROWSER_LABELS: Record<Browser, string> = {
-  chrome: "Chrome",
-  firefox: "Firefox",
-  edge: "Edge",
-  safari: "Safari",
-  unknown: "Chrome",
-};
-
-function detectBrowser(): Browser {
-  if (typeof navigator === "undefined") return "unknown";
-  const ua = navigator.userAgent;
-  if (ua.includes("Edg/")) return "edge";
-  if (ua.includes("Firefox/")) return "firefox";
-  if (ua.includes("Safari/") && !ua.includes("Chrome/")) return "safari";
-  if (ua.includes("Chrome/")) return "chrome";
-  return "unknown";
-}
+import { type Browser, detectBrowser, STORE_URLS, BROWSER_LABELS } from "@/lib/detectBrowser";
 
 export default function ExtensionClient() {
   const t = useTranslations("extensionPage");

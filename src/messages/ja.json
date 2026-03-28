@@ -188,6 +188,12 @@
     "title": "ドキュメント墨消しツール",
     "titleDocx": "Word文書墨消しツール",
     "titleBatch": "一括ドキュメント墨消し",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "ファイルをここにドロップ",
       "subtitle": "またはクリックしてファイルを選択",
@@ -476,7 +482,12 @@
     "nextBillingDate": "次回請求日: {date}",
     "cancelConfirmMessage": "本当によろしいですか？{date}までProアクセスを維持し、その後プランは無料に切り替わります。",
     "confirmCancel": "はい、キャンセル",
-    "keepSubscription": "サブスクリプションを維持"
+    "keepSubscription": "サブスクリプションを維持",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

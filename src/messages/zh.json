@@ -188,6 +188,12 @@
     "title": "文档脱敏工具",
     "titleDocx": "Word文档脱敏工具",
     "titleBatch": "批量文档脱敏",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "将文件拖放到此处",
       "subtitle": "或点击浏览您的文件",
@@ -476,7 +482,12 @@
     "nextBillingDate": "下次计费日期：{date}",
     "cancelConfirmMessage": "您确定吗？您将保留 Pro 访问权限至 {date}，之后您的计划将切换为免费版。",
     "confirmCancel": "是的，取消",
-    "keepSubscription": "保留订阅"
+    "keepSubscription": "保留订阅",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {

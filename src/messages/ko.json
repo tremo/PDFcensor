@@ -188,6 +188,12 @@
     "title": "문서 검열 도구",
     "titleDocx": "Word 문서 검열 도구",
     "titleBatch": "일괄 문서 검열",
+    "extensionTip": {
+      "free": "Protect your data on ChatGPT, Gmail & Slack too.",
+      "freeCta": "Try Browser Extension",
+      "pro": "Your Pro plan includes the browser extension.",
+      "proBrowserCta": "Install for {browser}"
+    },
     "dropzone": {
       "title": "여기에 파일을 놓으세요",
       "subtitle": "또는 클릭하여 파일을 선택하세요",
@@ -476,7 +482,12 @@
     "nextBillingDate": "다음 결제일: {date}",
     "cancelConfirmMessage": "정말 취소하시겠습니까? {date}까지 Pro 액세스가 유지되며, 이후 무료 플랜으로 전환됩니다.",
     "confirmCancel": "예, 취소",
-    "keepSubscription": "구독 유지"
+    "keepSubscription": "구독 유지",
+    "extensionIncluded": "Browser Extension Included",
+    "extensionIncludedDescription": "Auto-mask sensitive data on ChatGPT, Gmail, Slack, and more — included with your Pro plan.",
+    "installExtension": "Install Extension",
+    "extensionTitle": "Browser Extension",
+    "extensionSubtitle": "Auto-censor PII on ChatGPT, Gmail & 9+ platforms"
   },
   "privacy": {
     "meta": {
