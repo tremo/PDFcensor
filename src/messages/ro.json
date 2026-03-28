@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NOU — Extensie browser",
+    "title": "Protejați-vă datele și pe platformele AI",
+    "subtitle": "Extensia noastră de browser detectează și maschează automat datele personale înainte de a le trimite la ChatGPT, Claude, Gmail și altele.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Aplicație Web",
+      "description": "Redactați documente înainte de partajare",
+      "f1": "Eliminare reală a textului din PDF-uri",
+      "f2": "OCR pentru documente scanate",
+      "f3": "Detectarea feței și estompare",
+      "f4": "Procesare în lot (ZIP)",
+      "cta": "Încercați gratuit"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Extensie browser",
+      "description": "Mascare automată PII pe platforme AI și email",
+      "f1": "Detectare PII în timp real la tastare",
+      "f2": "Mascare automată înainte de trimitere",
+      "f3": "Scanare fișiere încărcate (PDF, DOCX)",
+      "f4": "Funcționează pe 9+ platforme",
+      "cta": "Instalați extensia"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Funcționează cu",
+    "onePlan": "Un singur abonament Pro — acces complet la ambele."
   },
   "cta": {
     "title": "Pregătit să protejați datele sensibile?",
-    "subtitle": "Începeți redactarea documentelor gratuit — fără înregistrare.",
+    "subtitle": "Redactați documente și mascați automat chatboții AI — o singură platformă pentru toate nevoile dvs. de confidențialitate.",
     "button": "Începeți acum",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Instalați extensia"
   },
   "footer": {
     "product": "Produs",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

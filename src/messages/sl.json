@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NOVO — Razširitev brskalnika",
+    "title": "Zaščitite svoje podatke tudi na platformah AI",
+    "subtitle": "Naša razširitev brskalnika samodejno zazna in prikrije osebne podatke, preden jih pošljete v ChatGPT, Claude, Gmail in drugo.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Spletna aplikacija",
+      "description": "Uredite dokumente pred skupno rabo",
+      "f1": "Resnično odstranjevanje besedila iz PDF-jev",
+      "f2": "OCR za skenirane dokumente",
+      "f3": "Zaznavanje obrazov in zameglitev",
+      "f4": "Skupinska obdelava (ZIP)",
+      "cta": "Preizkusite brezplačno"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Razširitev brskalnika",
+      "description": "Samodejno prikrivanje PII na platformah AI in e-pošte",
+      "f1": "Zaznavanje PII v realnem času med tipkanjem",
+      "f2": "Samodejno prikrivanje pred pošiljanjem",
+      "f3": "Skeniranje naloženih datotek (PDF, DOCX)",
+      "f4": "Deluje na 9+ platformah",
+      "cta": "Namesti razširitev"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Deluje z",
+    "onePlan": "Ena Pro naročnina — poln dostop do obojega."
   },
   "cta": {
     "title": "Pripravljeni zaščititi občutljive podatke?",
-    "subtitle": "Začnite urejati dokumente brezplačno — brez registracije.",
+    "subtitle": "Uredite dokumente in samodejno prikrijte AI-chatbote — ena platforma za vse vaše potrebe po zasebnosti.",
     "button": "Začnite zdaj",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Namesti razširitev"
   },
   "footer": {
     "product": "Izdelek",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

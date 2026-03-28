@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NOVINKA — Rozšíření prohlížeče",
+    "title": "Chraňte svá data i na AI platformách",
+    "subtitle": "Naše rozšíření prohlížeče automaticky detekuje a maskuje osobní údaje, než je odešlete do ChatGPT, Claude, Gmail a dalších.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Webová aplikace",
+      "description": "Redigujte dokumenty před sdílením",
+      "f1": "Skutečné odstranění textu z PDF",
+      "f2": "OCR pro skenované dokumenty",
+      "f3": "Detekce obličejů a rozmazání",
+      "f4": "Dávkové zpracování (ZIP)",
+      "cta": "Vyzkoušejte zdarma"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Rozšíření prohlížeče",
+      "description": "Automatické maskování PII na AI a e-mailových platformách",
+      "f1": "Detekce PII v reálném čase při psaní",
+      "f2": "Automatické maskování před odesláním",
+      "f3": "Skenování nahraných souborů (PDF, DOCX)",
+      "f4": "Funguje na 9+ platformách",
+      "cta": "Nainstalovat rozšíření"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Kompatibilní s",
+    "onePlan": "Jedno Pro předplatné — plný přístup k oběma."
   },
   "cta": {
     "title": "Připraveni chránit citlivá data?",
-    "subtitle": "Začněte redigovat dokumenty zdarma — bez registrace.",
+    "subtitle": "Redigujte dokumenty a automaticky maskujte AI chatboty — jedna platforma pro všechny vaše potřeby soukromí.",
     "button": "Začít redigovat",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Nainstalovat rozšíření"
   },
   "footer": {
     "product": "Produkt",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

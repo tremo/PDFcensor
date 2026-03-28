@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NUA — Síneadh brabhsálaí",
+    "title": "Cosain do shonraí ar ardáin AI freisin",
+    "subtitle": "Braitheann ár síneadh brabhsálaí sonraí pearsanta go huathoibríoch agus cuireann masc orthu sula seolann tú iad chuig ChatGPT, Claude, Gmail agus tuilleadh.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Aip Ghréasáin",
+      "description": "Eagarthóir doiciméid roimh chomhroinnt",
+      "f1": "Fíor-bhaint téacs ó PDFanna",
+      "f2": "OCR do dhoiciméid scanta",
+      "f3": "Braite aghaidhe agus doiléiriú",
+      "f4": "Próiseáil bhaisc (ZIP)",
+      "cta": "Bain triail saor in aisce"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Síneadh brabhsálaí",
+      "description": "Masc uathoibríoch PII ar ardáin AI agus ríomhphoist",
+      "f1": "Braite PII fíor-ama agus tú ag clóscríobh",
+      "f2": "Masc uathoibríoch roimh sheoladh",
+      "f3": "Scanadh uaslódáil comhad (PDF, DOCX)",
+      "f4": "Oibríonn ar 9+ ardán",
+      "cta": "Suiteáil síneadh"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Oibríonn le",
+    "onePlan": "Síntiús Pro amháin — rochtain iomlán ar an dá cheann."
   },
   "cta": {
     "title": "Réidh chun sonraí íogaire a chosaint?",
-    "subtitle": "Tosaigh ag eagarthóireacht doiciméad saor in aisce — gan clárú.",
+    "subtitle": "Eagarthóir doiciméid agus masc uathoibríoch ar chatbots AI — ardán amháin do gach riachtanas príobháideachais.",
     "button": "Tosaigh anois",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Suiteáil síneadh"
   },
   "footer": {
     "product": "Táirge",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

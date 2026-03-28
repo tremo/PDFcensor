@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NAUJA — Naršyklės plėtinys",
+    "title": "Apsaugokite savo duomenis ir AI platformose",
+    "subtitle": "Mūsų naršyklės plėtinys automatiškai aptinka ir maskuoja asmens duomenis prieš siunčiant juos į ChatGPT, Claude, Gmail ir kt.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Žiniatinklio programa",
+      "description": "Redaguokite dokumentus prieš dalinimąsi",
+      "f1": "Tikras teksto pašalinimas iš PDF",
+      "f2": "OCR nuskenuotiems dokumentams",
+      "f3": "Veidų aptikimas ir suliejimas",
+      "f4": "Paketinis apdorojimas (ZIP)",
+      "cta": "Išbandykite nemokamai"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Naršyklės plėtinys",
+      "description": "Automatinis PII maskavimas AI ir el. pašto platformose",
+      "f1": "PII aptikimas realiuoju laiku rašant",
+      "f2": "Automatinis maskavimas prieš siuntimą",
+      "f3": "Įkeltų failų nuskaitymas (PDF, DOCX)",
+      "f4": "Veikia 9+ platformose",
+      "cta": "Įdiegti plėtinį"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Veikia su",
+    "onePlan": "Viena Pro prenumerata — pilna prieiga prie abiejų."
   },
   "cta": {
     "title": "Pasiruošę apsaugoti jautrius duomenis?",
-    "subtitle": "Pradėkite redaguoti dokumentus nemokamai — be registracijos.",
+    "subtitle": "Redaguokite dokumentus ir automatiškai maskuokite AI pokalbių robotus — viena platforma visiems jūsų privatumo poreikiams.",
     "button": "Pradėkite dabar",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Įdiegti plėtinį"
   },
   "footer": {
     "product": "Produktas",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

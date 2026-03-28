@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "ĠDID — Estensjoni tal-browser",
+    "title": "Ipproteġi d-data tiegħek fuq pjattaformi tal-AI wkoll",
+    "subtitle": "L-estensjoni tal-browser tagħna tiskopri u timmaskera awtomatikament data personali qabel ma tibgħatha lil ChatGPT, Claude, Gmail u aktar.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "App tal-Web",
+      "description": "Irredatta dokumenti qabel il-qsim",
+      "f1": "Tneħħija vera tat-test minn PDFs",
+      "f2": "OCR għal dokumenti skennjati",
+      "f3": "Detezzjoni tal-wiċċ u tċajpir",
+      "f4": "Proċessar f'lottijiet (ZIP)",
+      "cta": "Ipprova b'xejn"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Estensjoni tal-browser",
+      "description": "Maskjar awtomatiku tal-PII fuq pjattaformi tal-AI u email",
+      "f1": "Detezzjoni tal-PII f'ħin reali waqt li tikteb",
+      "f2": "Maskjar awtomatiku qabel l-ibgħat",
+      "f3": "Skenjar ta' fajls uplowdjati (PDF, DOCX)",
+      "f4": "Jaħdem fuq 9+ pjattaformi",
+      "cta": "Installa l-estensjoni"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Jaħdem ma'",
+    "onePlan": "Abbonament Pro wieħed — aċċess sħiħ għat-tnejn."
   },
   "cta": {
     "title": "Lest tipproteġi data sensittiva?",
-    "subtitle": "Ibda tirredatta dokumenti b'xejn — mingħajr reġistrazzjoni.",
+    "subtitle": "Irredatta dokumenti u immaskera awtomatikament chatbots tal-AI — pjattaforma waħda għall-ħtiġijiet kollha tal-privatezza tiegħek.",
     "button": "Ibda issa",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Installa l-estensjoni"
   },
   "footer": {
     "product": "Prodott",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

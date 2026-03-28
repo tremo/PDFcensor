@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "ÚJ — Böngészőbővítmény",
+    "title": "Védje adatait az AI-platformokon is",
+    "subtitle": "Böngészőbővítményünk automatikusan felismeri és maszkolja a személyes adatokat, mielőtt elküldi azokat a ChatGPT-nek, Claude-nak, Gmailnek és egyebeknek.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Webalkalmazás",
+      "description": "Dokumentumok redaktálása megosztás előtt",
+      "f1": "Valódi szövegeltávolítás PDF-ekből",
+      "f2": "OCR szkennelt dokumentumokhoz",
+      "f3": "Arcfelismerés és elmosás",
+      "f4": "Kötegelt feldolgozás (ZIP)",
+      "cta": "Próbálja ingyen"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Böngészőbővítmény",
+      "description": "Automatikus PII-maszkolás AI és e-mail platformokon",
+      "f1": "Valós idejű PII-felismerés gépelés közben",
+      "f2": "Automatikus maszkolás küldés előtt",
+      "f3": "Feltöltött fájlok szkennelése (PDF, DOCX)",
+      "f4": "Működik 9+ platformon",
+      "cta": "Bővítmény telepítése"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Kompatibilis",
+    "onePlan": "Egy Pro előfizetés — teljes hozzáférés mindkettőhöz."
   },
   "cta": {
     "title": "Készen áll az érzékeny adatok védelmére?",
-    "subtitle": "Kezdje el a dokumentumok redaktálását ingyen — regisztráció nélkül.",
+    "subtitle": "Redaktáljon dokumentumokat és automatikusan maszkolja az AI chatbotokat — egy platform minden adatvédelmi igényéhez.",
     "button": "Kezdés most",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Bővítmény telepítése"
   },
   "footer": {
     "product": "Termék",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",

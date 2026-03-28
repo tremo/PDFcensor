@@ -142,35 +142,35 @@
     "logoSection": "Доверен от водещи организации по целия свят"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "НОВО — Разширение за браузър",
+    "title": "Защитете данните си и на AI платформи",
+    "subtitle": "Нашето разширение за браузър автоматично открива и маскира лични данни, преди да ги изпратите в ChatGPT, Claude, Gmail и други.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Уеб приложение",
+      "description": "Редактирайте документи преди споделяне",
+      "f1": "Истинско премахване на текст от PDF",
+      "f2": "OCR за сканирани документи",
+      "f3": "Разпознаване и замъгляване на лица",
+      "f4": "Пакетна обработка (ZIP)",
+      "cta": "Опитайте безплатно"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Разширение за браузър",
+      "description": "Автоматично маскиране на PII в AI и имейл платформи",
+      "f1": "Откриване на PII в реално време при писане",
+      "f2": "Автоматично маскиране преди изпращане",
+      "f3": "Сканиране на качени файлове (PDF, DOCX)",
+      "f4": "Работи на 9+ платформи",
+      "cta": "Инсталирайте разширението"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Работи с",
+    "onePlan": "Един Pro абонамент — пълен достъп до двете."
   },
   "cta": {
     "title": "Готови ли сте да защитите чувствителните данни?",
-    "subtitle": "Започнете безплатно редактиране на документи — без регистрация.",
+    "subtitle": "Редактирайте документи и автоматично маскирайте AI чатботове — една платформа за всички ваши нужди за поверителност.",
     "button": "Започнете сега",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Инсталирайте разширението"
   },
   "footer": {
     "product": "Продукт",
@@ -785,7 +785,7 @@
         "Почистване на метаданни",
         "Малък воден знак върху изходните файлове"
       ],
-      "proHeading": "Pro план ($6.99/месец или $59.99/година)",
+      "proHeading": "Pro план ($9.99/месец или $79.99/година)",
       "proItems": [
         "Всичко от безплатния план — без воден знак",
         "Пакетна обработка — редактирайте множество файлове наведнъж",

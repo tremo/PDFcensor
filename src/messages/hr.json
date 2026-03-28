@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "NOVO — Proširenje preglednika",
+    "title": "Zaštitite svoje podatke i na AI platformama",
+    "subtitle": "Naše proširenje preglednika automatski otkriva i maskira osobne podatke prije nego ih pošaljete u ChatGPT, Claude, Gmail i više.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Web aplikacija",
+      "description": "Redigirajte dokumente prije dijeljenja",
+      "f1": "Stvarno uklanjanje teksta iz PDF-ova",
+      "f2": "OCR za skenirane dokumente",
+      "f3": "Detekcija lica i zamućivanje",
+      "f4": "Skupna obrada (ZIP)",
+      "cta": "Isprobajte besplatno"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Proširenje preglednika",
+      "description": "Automatsko maskiranje PII na AI i email platformama",
+      "f1": "Otkrivanje PII u stvarnom vremenu tijekom tipkanja",
+      "f2": "Automatsko maskiranje prije slanja",
+      "f3": "Skeniranje učitanih datoteka (PDF, DOCX)",
+      "f4": "Radi na 9+ platformi",
+      "cta": "Instaliraj proširenje"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Radi s",
+    "onePlan": "Jedna Pro pretplata — puni pristup obojemu."
   },
   "cta": {
     "title": "Spremni zaštititi osjetljive podatke?",
-    "subtitle": "Započnite redigiranje dokumenata besplatno — bez registracije.",
+    "subtitle": "Redigirajte dokumente i automatski maskirajte AI chatbotove — jedna platforma za sve vaše potrebe privatnosti.",
     "button": "Započnite sada",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Instaliraj proširenje"
   },
   "footer": {
     "product": "Proizvod",

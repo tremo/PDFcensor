@@ -142,35 +142,35 @@
     "logoSection": "Trusted by leading organizations worldwide"
   },
   "extension": {
-    "badge": "NEW — Browser Extension",
-    "title": "Protect Your Data on AI Platforms Too",
-    "subtitle": "Our browser extension automatically detects and masks personal data before you send it to ChatGPT, Claude, Gmail, and more.",
+    "badge": "JAUNS — Pārlūka paplašinājums",
+    "title": "Aizsargājiet savus datus arī AI platformās",
+    "subtitle": "Mūsu pārlūka paplašinājums automātiski atklāj un maskē personas datus pirms to nosūtīšanas uz ChatGPT, Claude, Gmail un citām.",
     "webApp": {
-      "title": "Web App",
-      "description": "Redact documents before sharing",
-      "f1": "True text removal from PDFs",
-      "f2": "OCR for scanned documents",
-      "f3": "Face detection & blurring",
-      "f4": "Batch processing (ZIP)",
-      "cta": "Try Free"
+      "title": "Tīmekļa lietotne",
+      "description": "Rediģējiet dokumentus pirms kopīgošanas",
+      "f1": "Īsta teksta noņemšana no PDF",
+      "f2": "OCR skenētiem dokumentiem",
+      "f3": "Seju noteikšana un aizmiglošana",
+      "f4": "Pakešu apstrāde (ZIP)",
+      "cta": "Izmēģiniet bezmaksas"
     },
     "ext": {
-      "title": "Browser Extension",
-      "description": "Auto-mask PII on AI & email platforms",
-      "f1": "Real-time PII detection as you type",
-      "f2": "Auto-mask before sending",
-      "f3": "File upload scanning (PDF, DOCX)",
-      "f4": "Works on 9+ platforms",
-      "cta": "Install Extension"
+      "title": "Pārlūka paplašinājums",
+      "description": "Automātiska PII maskēšana AI un e-pasta platformās",
+      "f1": "Reāllaika PII noteikšana rakstīšanas laikā",
+      "f2": "Automātiska maskēšana pirms nosūtīšanas",
+      "f3": "Augšupielādēto failu skenēšana (PDF, DOCX)",
+      "f4": "Darbojas 9+ platformās",
+      "cta": "Instalēt paplašinājumu"
     },
-    "platforms": "Works with",
-    "onePlan": "One Pro subscription — full access to both."
+    "platforms": "Darbojas ar",
+    "onePlan": "Viens Pro abonements — pilna piekļuve abiem."
   },
   "cta": {
     "title": "Gatavi aizsargāt sensitīvus datus?",
-    "subtitle": "Sāciet rediģēt dokumentus bezmaksas — bez reģistrācijas.",
+    "subtitle": "Rediģējiet dokumentus un automātiski maskējiet AI tērzēšanas robotus — viena platforma visām jūsu privātuma vajadzībām.",
     "button": "Sākt tagad",
-    "extensionCta": "Install Extension"
+    "extensionCta": "Instalēt paplašinājumu"
   },
   "footer": {
     "product": "Produkts",
@@ -785,7 +785,7 @@
         "Metadata cleaning",
         "Small watermark on output files"
       ],
-      "proHeading": "Pro Plan ($6.99/month or $59.99/year)",
+      "proHeading": "Pro Plan ($9.99/month or $79.99/year)",
       "proItems": [
         "Everything in Free — with no watermark",
         "Batch processing — redact multiple files at once",
