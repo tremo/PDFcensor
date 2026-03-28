@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 type ExtPhase =
   | "idle"
   | "inputAppear"
+  | "typing"
+  | "typingDone"
   | "piiHighlight"
   | "toastAppear"
   | "maskClick"
@@ -14,7 +16,8 @@ type ExtPhase =
   | "reset";
 
 const TIMELINE: { phase: ExtPhase; delay: number }[] = [
-  { phase: "inputAppear", delay: 800 },
+  { phase: "typing", delay: 3500 },
+  { phase: "typingDone", delay: 800 },
   { phase: "piiHighlight", delay: 1500 },
   { phase: "toastAppear", delay: 1500 },
   { phase: "maskClick", delay: 1200 },
@@ -49,6 +52,7 @@ function ShieldIcon({ size = 16, className = "" }: { size?: number; className?: 
 export default function ExtensionDemo() {
   const t = useTranslations("extensionDemo");
   const [phase, setPhase] = useState<ExtPhase>("idle");
+  const [charIndex, setCharIndex] = useState(0);
   const [isMasked, setIsMasked] = useState(false);
   const roundRef = useRef(0);
 
@@ -77,6 +81,7 @@ export default function ExtensionDemo() {
 
     const startCycle = () => {
       setPhase("idle");
+      setCharIndex(0);
       setIsMasked(false);
 
       const { cleanup, duration } = runDemo();
@@ -97,6 +102,23 @@ export default function ExtensionDemo() {
     };
   }, [runDemo]);
 
+  // Typing effect
+  useEffect(() => {
+    if (phase !== "typing") return;
+    setCharIndex(0);
+    const typingDuration = TIMELINE.find((step) => step.phase === "typing")?.delay ?? 3500;
+    const interval = setInterval(() => {
+      setCharIndex((prev) => {
+        if (prev >= FULL_TEXT.length) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, typingDuration / FULL_TEXT.length);
+    return () => clearInterval(interval);
+  }, [phase]);
+
   // Masking trigger
   useEffect(() => {
     if (phase === "masking") {
@@ -109,7 +131,9 @@ export default function ExtensionDemo() {
   }, [phase]);
 
   const showInput =
-    phase !== "idle" && phase !== "reset";
+    phase !== "idle" && phase !== "reset" && phase !== "inputAppear";
+  const isTyping = phase === "typing";
+  const showCursor = phase === "typing" || phase === "typingDone";
   const piiDetected =
     phase === "piiHighlight" ||
     phase === "toastAppear" ||
@@ -122,13 +146,22 @@ export default function ExtensionDemo() {
 
   // Build displayed text with PII spans
   const renderText = () => {
-    if (phase === "idle" || phase === "reset") {
+    if (phase === "idle" || phase === "reset" || phase === "inputAppear") {
       return null;
     }
 
-    // For inputAppear, show full text immediately (no typing animation)
-    if (phase === "inputAppear") {
-      return <>{FULL_TEXT}</>;
+    const visibleText = isTyping || phase === "typingDone"
+      ? FULL_TEXT.slice(0, charIndex)
+      : FULL_TEXT;
+
+    // For typing phase, just show plain text with cursor
+    if (isTyping || phase === "typingDone") {
+      return (
+        <>
+          {visibleText}
+          {showCursor && <span className="ext-cursor" />}
+        </>
+      );
     }
 
     // For highlight/mask phases, render with PII spans
