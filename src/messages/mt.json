@@ -7,7 +7,8 @@
     "home": "Paġna Ewlenija",
     "redact": "Irredatta dokumenti",
     "pricing": "Prezzijiet",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Estensjoni"
   },
   "hero": {
     "badge": "100% fuq il-klijent — Il-fajls tiegħek qatt ma jitilqu mill-browser tiegħek",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "ĠDID — Estensjoni tal-browser",
-    "title": "Ipproteġi d-data tiegħek fuq pjattaformi tal-AI wkoll",
-    "subtitle": "L-estensjoni tal-browser tagħna tiskopri u timmaskera awtomatikament data personali qabel ma tibgħatha lil ChatGPT, Claude, Gmail u aktar.",
+    "title": "Iċċensura awtomatika ta' data sensittiva qabel ma tasal fil-cloud",
+    "subtitle": "Qed tibgħat data tal-klijenti lil-ChatGPT, Gmail, jew servizzi simili? L-estensjoni tagħna tidentifika u taħbi informazzjoni sensittiva qabel ma titlaq mill-browser tiegħek.",
     "webApp": {
       "title": "App tal-Web",
       "description": "Irredatta dokumenti qabel il-qsim",
@@ -161,16 +162,16 @@
       "f2": "Maskjar awtomatiku qabel l-ibgħat",
       "f3": "Skenjar ta' fajls uplowdjati (PDF, DOCX)",
       "f4": "Jaħdem fuq 9+ pjattaformi",
-      "cta": "Installa l-estensjoni"
+      "cta": "Dettalji u installazzjoni"
     },
-    "platforms": "Jaħdem ma'",
+    "platforms": "Iċċensura awtomatikament meta ttella' fuq",
     "onePlan": "Abbonament Pro wieħed — aċċess sħiħ għat-tnejn."
   },
   "cta": {
     "title": "Lest tipproteġi data sensittiva?",
     "subtitle": "Irredatta dokumenti u immaskera awtomatikament chatbots tal-AI — pjattaforma waħda għall-ħtiġijiet kollha tal-privatezza tiegħek.",
     "button": "Ibda issa",
-    "extensionCta": "Installa l-estensjoni"
+    "extensionCta": "Ikseb l-estensjoni"
   },
   "footer": {
     "product": "Prodott",
@@ -367,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "xahar",
+      "description": "Għal-professjonisti li jipproċessaw dokumenti multipli",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Estensjoni tal-browser — maskjar awtomatiku tal-PII fuq ChatGPT, Gmail u aktar",
         "Priority support",
-        "Lifetime license"
+        "Ikkanċella meta trid"
       ],
-      "cta": "Get Pro License",
+      "cta": "Ikseb Pro — €9.99/xahar",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "sena",
       "yearlyCta": "Ikseb Pro — €79.99/sena"
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Il-paġna ma nstabitx.",
     "goHome": "Mur id-Dar"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }

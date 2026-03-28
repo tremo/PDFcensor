@@ -7,7 +7,8 @@
     "home": "Startseite",
     "redact": "PDF schwärzen",
     "pricing": "Preise",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Erweiterung"
   },
   "hero": {
     "badge": "100% Clientseitig — Ihre Dateien verlassen nie Ihren Browser",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NEU — Browser-Erweiterung",
-    "title": "Schützen Sie Ihre Daten auch auf KI-Plattformen",
-    "subtitle": "Unsere Browser-Erweiterung erkennt und maskiert automatisch persönliche Daten, bevor Sie sie an ChatGPT, Claude, Gmail und mehr senden.",
+    "title": "Sensible Daten automatisch zensieren, bevor sie die Cloud erreichen",
+    "subtitle": "Senden Sie Kundendaten an ChatGPT, Gmail oder ähnliche Dienste? Unsere Erweiterung erkennt und maskiert sensible Informationen, bevor sie Ihren Browser verlassen.",
     "webApp": {
       "title": "Web-App",
       "description": "Dokumente vor dem Teilen schwärzen",
@@ -161,16 +162,16 @@
       "f2": "Automatische Maskierung vor dem Senden",
       "f3": "Datei-Upload-Scanning (PDF, DOCX)",
       "f4": "Funktioniert auf 9+ Plattformen",
-      "cta": "Erweiterung installieren"
+      "cta": "Details & Installation"
     },
-    "platforms": "Kompatibel mit",
+    "platforms": "Automatische Zensur beim Hochladen auf",
     "onePlan": "Ein Pro-Abonnement — voller Zugriff auf beides."
   },
   "cta": {
     "title": "Bereit, sensible Daten zu schützen?",
     "subtitle": "Dokumente schwärzen und KI-Chatbots automatisch maskieren — eine Plattform für alle Ihre Datenschutzbedürfnisse.",
     "button": "Jetzt mit dem Schwärzen beginnen",
-    "extensionCta": "Erweiterung installieren"
+    "extensionCta": "Browser-Erweiterung holen"
   },
   "footer": {
     "product": "Produkt",
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Seite nicht gefunden.",
     "goHome": "Zur Startseite"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser-Erweiterung — PII automatisch zensieren auf ChatGPT, Gmail & mehr",
+      "description": "Die OfflineRedact Browser-Erweiterung erkennt und maskiert sensible Daten automatisch, bevor sie Ihren Browser verlassen."
+    },
+    "hero": {
+      "badge": "Browser-Erweiterung",
+      "title": "Sensible Daten automatisch zensieren, bevor sie die Cloud erreichen",
+      "subtitle": "Senden Sie Kundendaten an ChatGPT, Gmail oder ähnliche Dienste? Unsere Erweiterung erkennt und maskiert sensible Informationen, bevor sie Ihren Browser verlassen.",
+      "downloadFor": "Für {browser} herunterladen",
+      "alsoAvailable": "Auch verfügbar für:"
+    },
+    "features": {
+      "title": "Funktioniert wo Sie arbeiten",
+      "subtitle": "Zensiert sensible Daten automatisch auf den Plattformen, die Sie täglich nutzen",
+      "realtime": {
+        "title": "Echtzeit-Erkennung",
+        "description": "Erkennt Namen, E-Mails, Telefonnummern, Ausweisnummern und mehr beim Tippen — bevor etwas gesendet wird."
+      },
+      "oneClick": {
+        "title": "Ein-Klick-Maskierung",
+        "description": "Ein einziger Klick ersetzt alle erkannten personenbezogenen Daten durch sichere Platzhalter."
+      },
+      "fileUpload": {
+        "title": "Datei-Upload-Scan",
+        "description": "Scannt PDF- und Word-Dokumente beim Hochladen, um sensible Daten auch in Anhängen zu erfassen."
+      },
+      "everywhere": {
+        "title": "Funktioniert überall",
+        "description": "Von KI-Chatbots über E-Mail-Clients bis hin zu Team-Kollaborationstools — eine Erweiterung deckt alles ab."
+      }
+    },
+    "platforms": {
+      "chatgpt": "PII in Prompts automatisch maskieren",
+      "claude": "Daten in Gesprächen schützen",
+      "gemini": "Vor dem Senden zensieren",
+      "copilot": "Sensiblen Code-Kontext maskieren",
+      "gmail": "E-Mails vor dem Senden zensieren",
+      "outlook": "Ausgehende Nachrichten schützen",
+      "slack": "PII in Team-Chats maskieren",
+      "discord": "Nachrichten automatisch zensieren",
+      "notion": "Geteilte Dokumente schützen"
+    },
+    "pricing": {
+      "title": "Ein Abonnement, voller Schutz",
+      "subtitle": "Ihr Pro-Abonnement umfasst sowohl die Web-App als auch die Browser-Erweiterung — ohne Aufpreis.",
+      "cta": "Preispläne ansehen"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensible Daten erkannt",
+    "btnMask": "Alle maskieren",
+    "btnIgnore": "Ignorieren",
+    "btnReview": "Überprüfen",
+    "successText": "Sicher zum Senden",
+    "successBadge": "Geschützt durch OfflineRedact"
   }
 }

@@ -7,7 +7,8 @@
     "home": "Ana Sayfa",
     "redact": "Belge Sansürle",
     "pricing": "Fiyatlandırma",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Eklenti"
   },
   "hero": {
     "badge": "%100 Tarayıcı Tarafında — Dosyalarınız asla cihazınızdan çıkmaz",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "YENİ — Tarayıcı Eklentisi",
-    "title": "AI Platformlarında da Verilerinizi Koruyun",
-    "subtitle": "Tarayıcı eklentimiz, ChatGPT, Claude, Gmail ve daha fazlasına göndermeden önce kişisel verileri otomatik tespit edip maskeler.",
+    "title": "Hassas Veriler Buluta Ulaşmadan Otomatik Sansürleyin",
+    "subtitle": "ChatGPT, Gmail veya benzeri servislere müşteri bilgisi mi gönderiyorsunuz? Eklentimiz, veriler tarayıcınızdan çıkmadan otomatik tespit edip maskeler.",
     "webApp": {
       "title": "Web Uygulama",
       "description": "Paylaşmadan önce belgeleri sansürleyin",
@@ -161,16 +162,16 @@
       "f2": "Göndermeden önce otomatik maskeleme",
       "f3": "Dosya yükleme taraması (PDF, DOCX)",
       "f4": "9+ platformda çalışır",
-      "cta": "Eklentiyi Kur"
+      "cta": "Detaylar ve Kurulum"
     },
-    "platforms": "Uyumlu platformlar",
+    "platforms": "Şu platformlara yüklerken otomatik sansürler",
     "onePlan": "Tek Pro abonelik — her ikisine de tam erişim."
   },
   "cta": {
     "title": "Hassas Verileri Korumaya Hazır mısınız?",
     "subtitle": "Belgeleri sansürleyin ve AI chatbotları otomatik maskeleyin — tüm gizlilik ihtiyaçlarınız için tek platform.",
     "button": "Şimdi Sansürlemeye Başla",
-    "extensionCta": "Eklentiyi Kur"
+    "extensionCta": "Tarayıcı Eklentisini Al"
   },
   "footer": {
     "product": "Ürün",
@@ -1114,6 +1115,63 @@
         ]
       }
     }
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Tarayıcı Eklentisi — ChatGPT, Gmail ve Daha Fazlasında PII Otomatik Sansürleme",
+      "description": "OfflineRedact tarayıcı eklentisi, hassas verileri tarayıcınızdan çıkmadan otomatik tespit edip maskeler. ChatGPT, Gmail, Slack ve benzeri servislerde çalışır."
+    },
+    "hero": {
+      "badge": "Tarayıcı Eklentisi",
+      "title": "Hassas Veriler Buluta Ulaşmadan Otomatik Sansürleyin",
+      "subtitle": "ChatGPT, Gmail veya benzeri servislere müşteri bilgisi mi gönderiyorsunuz? Eklentimiz, veriler tarayıcınızdan çıkmadan otomatik tespit edip maskeler.",
+      "downloadFor": "{browser} için İndir",
+      "alsoAvailable": "Ayrıca mevcut:"
+    },
+    "features": {
+      "title": "Çalıştığınız Yerde Çalışır",
+      "subtitle": "Her gün kullandığınız platformlarda hassas verileri otomatik sansürler",
+      "realtime": {
+        "title": "Gerçek Zamanlı Tespit",
+        "description": "İsimler, e-postalar, telefon numaraları, kimlik numaraları ve daha fazlasını yazarken tespit eder — herhangi bir şey gönderilmeden önce."
+      },
+      "oneClick": {
+        "title": "Tek Tıkla Maskeleme",
+        "description": "Tek bir tıklama ile tespit edilen tüm kişisel verileri güvenli yer tutucularla değiştirir. Manuel düzenleme gerekmez."
+      },
+      "fileUpload": {
+        "title": "Dosya Yükleme Taraması",
+        "description": "Yükleme sırasında PDF ve Word belgelerini tarayarak eklerdeki hassas verileri de yakalar."
+      },
+      "everywhere": {
+        "title": "Her Yerde Çalışır",
+        "description": "AI chatbotlarından e-posta istemcilerine, ekip işbirliği araçlarına kadar — tek bir eklenti hepsini kapsar."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Promptlarda PII otomatik maskeleme",
+      "claude": "Konuşmalarda veri koruma",
+      "gemini": "Göndermeden önce sansürleme",
+      "copilot": "Hassas kod bağlamını maskeleme",
+      "gmail": "Göndermeden önce e-posta sansürleme",
+      "outlook": "Giden mesajları koruma",
+      "slack": "Ekip sohbetlerinde PII maskeleme",
+      "discord": "Mesajlarda otomatik sansürleme",
+      "notion": "Paylaşılan belgeleri koruma"
+    },
+    "pricing": {
+      "title": "Tek Abonelik, Tam Koruma",
+      "subtitle": "Pro aboneliğiniz hem web uygulamasını hem de tarayıcı eklentisini içerir — ekstra ücret yok.",
+      "cta": "Fiyat Planlarını Görüntüle"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} hassas veri tespit edildi",
+    "btnMask": "Tümünü Maskele",
+    "btnIgnore": "Yoksay",
+    "btnReview": "İncele",
+    "successText": "Göndermek güvenli",
+    "successBadge": "OfflineRedact tarafından korunuyor"
   },
   "notFound": {
     "code": "404",

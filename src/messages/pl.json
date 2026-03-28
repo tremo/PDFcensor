@@ -7,7 +7,8 @@
     "home": "Strona główna",
     "redact": "Redaguj dokumenty",
     "pricing": "Cennik",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Rozszerzenie"
   },
   "hero": {
     "badge": "100% po stronie klienta — Twoje pliki nigdy nie opuszczają przeglądarki",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NOWOŚĆ — Rozszerzenie przeglądarki",
-    "title": "Chroń swoje dane także na platformach AI",
-    "subtitle": "Nasze rozszerzenie przeglądarki automatycznie wykrywa i maskuje dane osobowe przed wysłaniem do ChatGPT, Claude, Gmail i więcej.",
+    "title": "Automatyczna cenzura wrażliwych danych zanim trafią do chmury",
+    "subtitle": "Wysyłasz dane klientów do ChatGPT, Gmaila lub podobnych usług? Nasze rozszerzenie wykrywa i maskuje wrażliwe informacje zanim opuszczą Twoją przeglądarkę.",
     "webApp": {
       "title": "Aplikacja Web",
       "description": "Redaguj dokumenty przed udostępnieniem",
@@ -161,16 +162,16 @@
       "f2": "Automatyczne maskowanie przed wysłaniem",
       "f3": "Skanowanie przesyłanych plików (PDF, DOCX)",
       "f4": "Działa na 9+ platformach",
-      "cta": "Zainstaluj rozszerzenie"
+      "cta": "Szczegóły i instalacja"
     },
-    "platforms": "Działa z",
+    "platforms": "Automatyczna cenzura podczas przesyłania do",
     "onePlan": "Jedna subskrypcja Pro — pełny dostęp do obu."
   },
   "cta": {
     "title": "Gotowy chronić wrażliwe dane?",
     "subtitle": "Redaguj dokumenty i automatycznie maskuj chatboty AI — jedna platforma dla wszystkich potrzeb prywatności.",
     "button": "Zacznij teraz",
-    "extensionCta": "Zainstaluj rozszerzenie"
+    "extensionCta": "Pobierz rozszerzenie"
   },
   "footer": {
     "product": "Produkt",
@@ -367,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "miesiąc",
+      "description": "Dla profesjonalistów przetwarzających wiele dokumentów",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Rozszerzenie przeglądarki — automatyczne maskowanie danych na ChatGPT, Gmail i więcej",
         "Priority support",
-        "Lifetime license"
+        "Anuluj w dowolnym momencie"
       ],
-      "cta": "Get Pro License",
+      "cta": "Kup Pro — €9.99/mies.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
       "yearlyCta": "Kup Pro — €79.99/rok"
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Strona nie została znaleziona.",
     "goHome": "Strona główna"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }

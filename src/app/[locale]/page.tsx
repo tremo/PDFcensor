@@ -252,7 +252,7 @@ export default async function HomePage({ params }: Props) {
                 ))}
               </ul>
               <Button asChild variant="accent" className="w-full">
-                <Link href="/pricing">{t("extension.ext.cta")}</Link>
+                <Link href="/extension">{t("extension.ext.cta")}</Link>
               </Button>
             </div>
           </div>
@@ -666,7 +666,7 @@ export default async function HomePage({ params }: Props) {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/pricing">
+              <Link href="/extension">
                 <Puzzle className="h-4 w-4" />
                 {t("cta.extensionCta")}
               </Link>

@@ -7,7 +7,8 @@
     "home": "Início",
     "redact": "Redatar PDF",
     "pricing": "Preços",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Extensão"
   },
   "hero": {
     "badge": "100% no Navegador — Seus arquivos nunca saem do seu dispositivo",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NOVO — Extensão do navegador",
-    "title": "Proteja seus dados em plataformas de IA também",
-    "subtitle": "Nossa extensão do navegador detecta e mascara automaticamente dados pessoais antes de enviá-los ao ChatGPT, Claude, Gmail e mais.",
+    "title": "Censura automática de dados sensíveis antes de chegarem à nuvem",
+    "subtitle": "Envia dados de clientes para ChatGPT, Gmail ou serviços semelhantes? A nossa extensão deteta e mascara informações sensíveis antes de saírem do seu navegador.",
     "webApp": {
       "title": "Aplicativo Web",
       "description": "Redija documentos antes de compartilhar",
@@ -161,16 +162,16 @@
       "f2": "Mascaramento automático antes do envio",
       "f3": "Verificação de arquivos enviados (PDF, DOCX)",
       "f4": "Funciona em 9+ plataformas",
-      "cta": "Instalar extensão"
+      "cta": "Detalhes e instalação"
     },
-    "platforms": "Compatível com",
+    "platforms": "Censura automática ao carregar para",
     "onePlan": "Uma assinatura Pro — acesso completo a ambos."
   },
   "cta": {
     "title": "Pronto para Proteger Dados Sensíveis?",
     "subtitle": "Redija documentos e mascare automaticamente chatbots de IA — uma plataforma para todas as suas necessidades de privacidade.",
     "button": "Comece a Redatar Agora",
-    "extensionCta": "Instalar extensão"
+    "extensionCta": "Obter extensão"
   },
   "footer": {
     "product": "Produto",
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "Página não encontrada.",
     "goHome": "Ir para o Início"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }

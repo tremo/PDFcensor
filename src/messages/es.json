@@ -7,7 +7,8 @@
     "home": "Inicio",
     "redact": "Redactar PDF",
     "pricing": "Precios",
-    "blog": "Blog"
+    "blog": "Blog",
+    "extension": "Extensión"
   },
   "hero": {
     "badge": "100% Del lado del cliente — Sus archivos nunca salen de su navegador",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "NUEVO — Extensión del navegador",
-    "title": "Protege tus datos en plataformas de IA también",
-    "subtitle": "Nuestra extensión del navegador detecta y enmascara automáticamente datos personales antes de enviarlos a ChatGPT, Claude, Gmail y más.",
+    "title": "Censura automática de datos sensibles antes de que lleguen a la nube",
+    "subtitle": "¿Envía datos de clientes a ChatGPT, Gmail o servicios similares? Nuestra extensión detecta y enmascara información sensible antes de que salga de su navegador.",
     "webApp": {
       "title": "Aplicación Web",
       "description": "Redacta documentos antes de compartir",
@@ -161,16 +162,16 @@
       "f2": "Enmascaramiento automático antes de enviar",
       "f3": "Escaneo de archivos subidos (PDF, DOCX)",
       "f4": "Funciona en 9+ plataformas",
-      "cta": "Instalar extensión"
+      "cta": "Detalles e instalación"
     },
-    "platforms": "Compatible con",
+    "platforms": "Censura automática al cargar en",
     "onePlan": "Una suscripción Pro — acceso completo a ambos."
   },
   "cta": {
     "title": "¿Listo para proteger datos sensibles?",
     "subtitle": "Redacta documentos y enmascara automáticamente chatbots de IA — una plataforma para todas tus necesidades de privacidad.",
     "button": "Comenzar a redactar ahora",
-    "extensionCta": "Instalar extensión"
+    "extensionCta": "Obtener extensión"
   },
   "footer": {
     "product": "Producto",
@@ -1114,5 +1115,62 @@
         ]
       }
     }
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Extensión del navegador — Censura automática de PII en ChatGPT, Gmail y más",
+      "description": "La extensión OfflineRedact detecta y enmascara automáticamente datos sensibles antes de que salgan de su navegador."
+    },
+    "hero": {
+      "badge": "Extensión del navegador",
+      "title": "Censura automática de datos sensibles antes de que lleguen a la nube",
+      "subtitle": "¿Envía datos de clientes a ChatGPT, Gmail o servicios similares? Nuestra extensión detecta y enmascara información sensible antes de que salga de su navegador.",
+      "downloadFor": "Descargar para {browser}",
+      "alsoAvailable": "También disponible para:"
+    },
+    "features": {
+      "title": "Funciona donde usted trabaja",
+      "subtitle": "Censura automáticamente datos sensibles en las plataformas que usa a diario",
+      "realtime": {
+        "title": "Detección en tiempo real",
+        "description": "Detecta nombres, correos, números de teléfono, documentos de identidad y más mientras escribe — antes de enviar nada."
+      },
+      "oneClick": {
+        "title": "Enmascaramiento con un clic",
+        "description": "Un solo clic reemplaza todos los datos personales detectados con marcadores seguros."
+      },
+      "fileUpload": {
+        "title": "Escaneo de archivos subidos",
+        "description": "Escanea documentos PDF y Word durante la carga para detectar datos sensibles en los adjuntos."
+      },
+      "everywhere": {
+        "title": "Funciona en todas partes",
+        "description": "Desde chatbots de IA hasta clientes de correo y herramientas de colaboración — una extensión lo cubre todo."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Enmascaramiento automático de PII en prompts",
+      "claude": "Protección de datos en conversaciones",
+      "gemini": "Censura antes de enviar",
+      "copilot": "Enmascarar contexto de código sensible",
+      "gmail": "Censurar correos antes de enviar",
+      "outlook": "Proteger mensajes salientes",
+      "slack": "Enmascarar PII en chats de equipo",
+      "discord": "Censura automática en mensajes",
+      "notion": "Proteger documentos compartidos"
+    },
+    "pricing": {
+      "title": "Una suscripción, protección completa",
+      "subtitle": "Su suscripción Pro incluye la aplicación web y la extensión del navegador — sin cargo adicional.",
+      "cta": "Ver planes de precios"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} datos sensibles detectados",
+    "btnMask": "Enmascarar todo",
+    "btnIgnore": "Ignorar",
+    "btnReview": "Revisar",
+    "successText": "Seguro para enviar",
+    "successBadge": "Protegido por OfflineRedact"
   }
 }

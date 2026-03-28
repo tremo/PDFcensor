@@ -7,7 +7,8 @@
     "home": "ホーム",
     "redact": "PDF墨消し",
     "pricing": "料金",
-    "blog": "ブログ"
+    "blog": "ブログ",
+    "extension": "拡張機能"
   },
   "hero": {
     "badge": "100%クライアントサイド — ファイルがブラウザから外に出ることはありません",
@@ -143,8 +144,8 @@
   },
   "extension": {
     "badge": "新機能 — ブラウザ拡張機能",
-    "title": "AIプラットフォームでもデータを保護",
-    "subtitle": "ブラウザ拡張機能がChatGPT、Claude、Gmailなどに送信する前に個人データを自動検出・マスキングします。",
+    "title": "機密データをクラウドに届く前に自動検閲",
+    "subtitle": "ChatGPT、Gmail、または類似のサービスに顧客データを送信していますか？当拡張機能は、ブラウザを離れる前に機密情報を検出してマスクします。",
     "webApp": {
       "title": "Webアプリ",
       "description": "共有前にドキュメントを墨消し",
@@ -161,16 +162,16 @@
       "f2": "送信前の自動マスキング",
       "f3": "ファイルアップロードスキャン（PDF、DOCX）",
       "f4": "9以上のプラットフォームで動作",
-      "cta": "拡張機能をインストール"
+      "cta": "詳細とインストール"
     },
-    "platforms": "対応プラットフォーム",
+    "platforms": "アップロード時に自動検閲",
     "onePlan": "1つのProサブスクリプションで両方にフルアクセス。"
   },
   "cta": {
     "title": "機密データを保護する準備はできましたか？",
     "subtitle": "ドキュメントの墨消しとAIチャットボットの自動マスキング — プライバシーのための統合プラットフォーム。",
     "button": "今すぐ墨消しを開始",
-    "extensionCta": "拡張機能をインストール"
+    "extensionCta": "拡張機能を入手"
   },
   "footer": {
     "product": "製品",
@@ -1119,5 +1120,62 @@
     "code": "404",
     "message": "ページが見つかりません。",
     "goHome": "ホームに戻る"
+  },
+  "extensionPage": {
+    "meta": {
+      "title": "Browser Extension — Auto-Censor PII on ChatGPT, Gmail & More",
+      "description": "OfflineRedact browser extension automatically detects and masks sensitive data before it leaves your browser. Works on ChatGPT, Gmail, Slack, and similar services."
+    },
+    "hero": {
+      "badge": "Browser Extension",
+      "title": "Auto-Censor Sensitive Data Before It Reaches the Cloud",
+      "subtitle": "Sending client data to ChatGPT, Gmail, or similar services? Our extension detects and masks sensitive information before it leaves your browser.",
+      "downloadFor": "Download for {browser}",
+      "alsoAvailable": "Also available for:"
+    },
+    "features": {
+      "title": "Works Where You Work",
+      "subtitle": "Auto-censors sensitive data on the platforms you use every day",
+      "realtime": {
+        "title": "Real-Time Detection",
+        "description": "Detects names, emails, phone numbers, national IDs, and more as you type — before anything is sent."
+      },
+      "oneClick": {
+        "title": "One-Click Masking",
+        "description": "A single click replaces all detected PII with safe placeholders. No manual editing needed."
+      },
+      "fileUpload": {
+        "title": "File Upload Scanning",
+        "description": "Scans PDF and Word documents during upload to catch sensitive data in attachments too."
+      },
+      "everywhere": {
+        "title": "Works Everywhere",
+        "description": "From AI chatbots to email clients to team collaboration tools — one extension covers them all."
+      }
+    },
+    "platforms": {
+      "chatgpt": "Auto-mask PII in prompts",
+      "claude": "Protect data in conversations",
+      "gemini": "Censor before sending",
+      "copilot": "Mask sensitive code context",
+      "gmail": "Redact emails before sending",
+      "outlook": "Protect outgoing messages",
+      "slack": "Mask PII in team chats",
+      "discord": "Auto-censor in messages",
+      "notion": "Protect shared documents"
+    },
+    "pricing": {
+      "title": "One Subscription, Full Protection",
+      "subtitle": "Your Pro subscription includes both the web app and the browser extension — no extra charge.",
+      "cta": "View Pricing Plans"
+    }
+  },
+  "extensionDemo": {
+    "toastCount": "{count} sensitive data detected",
+    "btnMask": "Mask All",
+    "btnIgnore": "Ignore",
+    "btnReview": "Review",
+    "successText": "Safe to send",
+    "successBadge": "Protected by OfflineRedact"
   }
 }
