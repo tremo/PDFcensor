@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} känsliga uppgifter hittade",
+    "btnMask": "Maskera alla",
+    "btnIgnore": "Ignorera",
+    "btnReview": "Granska",
+    "successText": "Säkert att skicka",
+    "successBadge": "Skyddat av OfflineRedact"
   }
 }

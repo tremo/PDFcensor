@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} arkaluontoista tietoa havaittu",
+    "btnMask": "Peitä kaikki",
+    "btnIgnore": "Ohita",
+    "btnReview": "Tarkista",
+    "successText": "Turvallinen lähettää",
+    "successBadge": "Suojattu OfflineRedact'illa"
   }
 }

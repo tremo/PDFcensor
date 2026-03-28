@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} sensitīvi dati atrasti",
+    "btnMask": "Maskēt visu",
+    "btnIgnore": "Ignorēt",
+    "btnReview": "Pārskatīt",
+    "successText": "Droši sūtīt",
+    "successBadge": "Aizsargāts ar OfflineRedact"
   }
 }

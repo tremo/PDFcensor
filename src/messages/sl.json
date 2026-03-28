@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} občutljivih podatkov zaznanih",
+    "btnMask": "Maskiraj vse",
+    "btnIgnore": "Prezri",
+    "btnReview": "Preglej",
+    "successText": "Varno za pošiljanje",
+    "successBadge": "Zaščiteno z OfflineRedact"
   }
 }

@@ -1169,11 +1169,11 @@
     }
   },
   "extensionDemo": {
-    "toastCount": "{count} sensitive data detected",
-    "btnMask": "Mask All",
-    "btnIgnore": "Ignore",
-    "btnReview": "Review",
-    "successText": "Safe to send",
-    "successBadge": "Protected by OfflineRedact"
+    "toastCount": "{count} érzékeny adat észlelve",
+    "btnMask": "Összes maszkolása",
+    "btnIgnore": "Figyelmen kívül hagyás",
+    "btnReview": "Áttekintés",
+    "successText": "Biztonságos küldésre",
+    "successBadge": "Védve az OfflineRedact által"
   }
 }
