@@ -189,10 +189,10 @@ export default function PricingClient() {
 
       {/* Money-Back Guarantee */}
       <div className="mt-10 flex items-center justify-center gap-3 p-4 rounded-xl bg-green-50 border border-green-200 max-w-xl mx-auto dark:bg-green-950/30 dark:border-green-900">
-        <ShieldCheck className="h-6 w-6 text-green-600 shrink-0" />
+        <ShieldCheck className="h-6 w-6 text-green-700 dark:text-green-400 shrink-0" />
         <div>
-          <p className="font-semibold text-green-800 dark:text-green-300 text-sm">{t("guarantee")}</p>
-          <p className="text-xs text-green-700 dark:text-green-400">{t("guaranteeDesc")}</p>
+          <p className="font-semibold text-green-900 dark:text-green-200 text-sm">{t("guarantee")}</p>
+          <p className="text-xs text-green-800 dark:text-green-300">{t("guaranteeDesc")}</p>
         </div>
       </div>
 
