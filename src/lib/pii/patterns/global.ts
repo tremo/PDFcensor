@@ -90,7 +90,7 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
   const matches: PIIMatch[] = [];
   const seen = new Set<string>();
 
-  const structuralPatterns: [RegExp, number][] = [
+  const structuralPatterns: [RegExp, number, ((raw: string) => boolean)?][] = [
     // 1. International with + prefix (most reliable)
     //    +1 234 567 8901, +44 20 7946 0958, +90 532 123 45 67
     //    +33 1 23 45 67 89, +86-138-0013-8000, +49 (0)30 1234567
@@ -125,16 +125,22 @@ export function detectPhone(text: string, pageIndex: number): PIIMatch[] {
     ],
     // 6. US phone numbers
     //    +1 (XXX) XXX-XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX
+    //    Validated to 10–11 digits to avoid false positives on arbitrary digit groups
     [
       /(?<!\d)(?:\+1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}(?!\d)/g,
       0.8,
+      (raw: string) => {
+        const digits = raw.replace(/\D/g, "").length;
+        return digits >= 10 && digits <= 11;
+      },
     ],
   ];
 
-  for (const [pattern, confidence] of structuralPatterns) {
+  for (const [pattern, confidence, validate] of structuralPatterns) {
     pattern.lastIndex = 0;
     let m;
     while ((m = pattern.exec(text)) !== null) {
+      if (validate && !validate(m[0])) continue;
       addPhoneMatch(m[0], m.index, confidence);
     }
   }
