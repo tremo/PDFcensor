@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
   },
   "trust": {
-    "title": "Trusted by professionals who handle sensitive documents",
-    "legal": "Legal",
-    "healthcare": "Healthcare",
-    "realEstate": "Real Estate",
-    "finance": "Finance",
-    "government": "Government",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Jak zespoły korzystają z OfflineRedact",
+    "useCase1": "Cenzuruj nazwiska klientów w aktach sądowych",
+    "useCase2": "Usuń dane pacjentów z dokumentacji medycznej",
+    "useCase3": "Oczyść umowy przed udostępnieniem",
+    "useCase4": "Usuń numery kont z raportów finansowych",
+    "useCase5": "Anonimizuj dane obywateli w dokumentach urzędowych"
   },
   "extension": {
     "badge": "NOWOŚĆ — Rozszerzenie przeglądarki",

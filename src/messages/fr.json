@@ -135,12 +135,12 @@
   },
   "trust": {
     "logoSection": "Utilisé par des organisations leaders dans le monde entier",
-    "title": "Approuvé par les professionnels qui traitent des documents sensibles",
-    "legal": "Juridique",
-    "healthcare": "Santé",
-    "realEstate": "Immobilier",
-    "finance": "Finance",
-    "government": "Gouvernement"
+    "title": "Comment les équipes utilisent OfflineRedact",
+    "useCase1": "Caviarder les noms dans les dossiers judiciaires",
+    "useCase2": "Supprimer les données patients des dossiers médicaux",
+    "useCase3": "Nettoyer les contrats avant le partage externe",
+    "useCase4": "Retirer les numéros de compte des rapports financiers",
+    "useCase5": "Anonymiser les données citoyennes dans les documents publics"
   },
   "extension": {
     "badge": "NOUVEAU — Extension navigateur",

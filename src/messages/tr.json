@@ -135,12 +135,12 @@
   },
   "trust": {
     "logoSection": "Dünya genelinde lider kuruluşlar tarafından tercih ediliyor",
-    "title": "Hassas belgelerle çalışan profesyoneller tarafından güvenilir",
-    "legal": "Hukuk",
-    "healthcare": "Sağlık",
-    "realEstate": "Gayrimenkul",
-    "finance": "Finans",
-    "government": "Devlet"
+    "title": "Ekipler OfflineRedact'i nasıl kullanıyor?",
+    "useCase1": "Dava dosyalarından müvekkil isimlerini sansürle",
+    "useCase2": "Tıbbi kayıtlardan hasta verilerini kaldır",
+    "useCase3": "Sözleşmeleri paylaşmadan önce temizle",
+    "useCase4": "Finansal raporlardan hesap numaralarını sil",
+    "useCase5": "Devlet belgelerindeki vatandaş verilerini anonimleştir"
   },
   "extension": {
     "badge": "YENİ — Tarayıcı Eklentisi",

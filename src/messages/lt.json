@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
   },
   "trust": {
-    "title": "Trusted by professionals who handle sensitive documents",
-    "legal": "Legal",
-    "healthcare": "Healthcare",
-    "realEstate": "Real Estate",
-    "finance": "Finance",
-    "government": "Government",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Kaip komandos naudoja OfflineRedact",
+    "useCase1": "Cenzūruokite klientų vardus teismo bylose",
+    "useCase2": "Pašalinkite pacientų duomenis iš medicininių įrašų",
+    "useCase3": "Išvalykite sutartis prieš išorinį bendrinimą",
+    "useCase4": "Pašalinkite sąskaitų numerius iš finansinių ataskaitų",
+    "useCase5": "Anonimizuokite piliečių duomenis vyriausybės dokumentuose"
   },
   "extension": {
     "badge": "NAUJA — Naršyklės plėtinys",

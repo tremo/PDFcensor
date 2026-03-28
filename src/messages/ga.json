@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
   },
   "trust": {
-    "title": "Trusted by professionals who handle sensitive documents",
-    "legal": "Legal",
-    "healthcare": "Healthcare",
-    "realEstate": "Real Estate",
-    "finance": "Finance",
-    "government": "Government",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Conas a úsáideann foirne OfflineRedact",
+    "useCase1": "Cinsireacht ar ainmneacha cliant i gcomhaid chúirte",
+    "useCase2": "Bain sonraí othar as taifid leighis",
+    "useCase3": "Glan conarthaí roimh chomhroinnt sheachtrach",
+    "useCase4": "Bain uimhreacha cuntas as tuarascálacha airgeadais",
+    "useCase5": "Déan anaithnidiú ar shonraí saoránach i ndoiciméid rialtais"
   },
   "extension": {
     "badge": "NUA — Síneadh brabhsálaí",

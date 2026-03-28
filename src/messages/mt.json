@@ -134,13 +134,13 @@
     "subtitle": "OfflineRedact helps you meet data protection requirements across 20+ regulations and standards worldwide."
   },
   "trust": {
-    "title": "Trusted by professionals who handle sensitive documents",
-    "legal": "Legal",
-    "healthcare": "Healthcare",
-    "realEstate": "Real Estate",
-    "finance": "Finance",
-    "government": "Government",
-    "logoSection": "Trusted by leading organizations worldwide"
+    "logoSection": "Trusted by leading organizations worldwide",
+    "title": "Kif it-timijiet jużaw OfflineRedact",
+    "useCase1": "Iċċensura ismijiet tal-klijenti minn fajls tal-qorti",
+    "useCase2": "Neħħi data tal-pazjenti minn rekords mediċi",
+    "useCase3": "Naddaf kuntratti qabel il-qsim estern",
+    "useCase4": "Neħħi numri tal-kontijiet minn rapporti finanzjarji",
+    "useCase5": "Anonimizza data taċ-ċittadini f'dokumenti tal-gvern"
   },
   "extension": {
     "badge": "ĠDID — Estensjoni tal-browser",

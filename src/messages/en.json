@@ -135,12 +135,12 @@
   },
   "trust": {
     "logoSection": "Trusted by leading organizations worldwide",
-    "title": "Trusted by professionals who handle sensitive documents",
-    "legal": "Legal",
-    "healthcare": "Healthcare",
-    "realEstate": "Real Estate",
-    "finance": "Finance",
-    "government": "Government"
+    "title": "See how teams use OfflineRedact",
+    "useCase1": "Redact client names from court filings",
+    "useCase2": "Remove patient data from medical records",
+    "useCase3": "Clean contracts before external sharing",
+    "useCase4": "Strip account numbers from financial reports",
+    "useCase5": "Anonymize citizen data in government docs"
   },
   "extension": {
     "badge": "NEW — Browser Extension",
