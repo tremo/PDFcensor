@@ -107,6 +107,7 @@ export default function ExtensionDemo() {
   useEffect(() => {
     if (phase !== "typing") return;
     setCharIndex(0);
+    const typingDuration = TIMELINE.find((step) => step.phase === "typing")?.delay ?? 3500;
     const interval = setInterval(() => {
       setCharIndex((prev) => {
         if (prev >= FULL_TEXT.length) {
@@ -115,7 +116,7 @@ export default function ExtensionDemo() {
         }
         return prev + 1;
       });
-    }, 3500 / FULL_TEXT.length);
+    }, typingDuration / FULL_TEXT.length);
     return () => clearInterval(interval);
   }, [phase]);
 
