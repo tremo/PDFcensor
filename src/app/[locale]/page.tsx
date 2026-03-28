@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { PlatformIcon } from "@/components/landing/PlatformIcon";
 import LandingDemo from "@/components/landing/LandingDemo";
 import { TrustedByLogos } from "@/components/landing/TrustedByLogos";
 import {
@@ -267,16 +268,17 @@ export default async function HomePage({ params }: Props) {
                 { name: "Gemini", bg: "bg-[#4285f4]/10", text: "text-[#4285f4]" },
                 { name: "Copilot", bg: "bg-[#7c3aed]/10", text: "text-[#7c3aed]" },
                 { name: "Gmail", bg: "bg-[#ea4335]/10", text: "text-[#ea4335]" },
-                { name: "Outlook", bg: "bg-[#0078d4]/10", text: "text-[#0078d4]" },
                 { name: "Slack", bg: "bg-[#4a154b]/10", text: "text-[#4a154b]" },
                 { name: "Discord", bg: "bg-[#5865f2]/10", text: "text-[#5865f2]" },
                 { name: "Notion", bg: "bg-[#000]/10", text: "text-foreground" },
+                { name: "More", bg: "bg-muted", text: "text-muted-foreground" },
               ].map(({ name, bg, text }) => (
                 <span
                   key={name}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${bg} ${text}`}
                 >
-                  {name}
+                  <PlatformIcon name={name} className="w-3.5 h-3.5" />
+                  {name === "More" ? "More..." : name}
                 </span>
               ))}
             </div>
