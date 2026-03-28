@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mí",
+      "description": "Do ghairmithe a phróiseálann doiciméid iolracha",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Síneadh brabhsálaí — masc uathoibríoch PII ar ChatGPT, Gmail agus tuilleadh",
         "Priority support",
-        "Lifetime license"
+        "Cealaigh am ar bith"
       ],
-      "cta": "Get Pro License",
+      "cta": "Faigh Pro — €9.99/mí",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "bliain",
       "yearlyCta": "Faigh Pro — €79.99/bliain"

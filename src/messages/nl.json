@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "maand",
+      "description": "Voor professionals die meerdere documenten verwerken",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Browserextensie — automatisch PII maskeren op ChatGPT, Gmail & meer",
         "Priority support",
-        "Lifetime license"
+        "Op elk moment opzeggen"
       ],
-      "cta": "Get Pro License",
+      "cta": "Pro — €9.99/maand",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "jaar",
       "yearlyCta": "Pro kopen — €79.99/jaar"

@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mesiac",
+      "description": "Pre profesionálov spracúvajúcich viacero dokumentov",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Rozšírenie prehliadača — automatické maskovanie PII na ChatGPT, Gmail a ďalších",
         "Priority support",
-        "Lifetime license"
+        "Zrušiť kedykoľvek"
       ],
-      "cta": "Get Pro License",
+      "cta": "Získať Pro — €9.99/mes.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
       "yearlyCta": "Získať Pro — €79.99/rok"

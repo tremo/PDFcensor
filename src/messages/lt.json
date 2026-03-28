@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mėn.",
+      "description": "Profesionalams, tvarkantiems daug dokumentų",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Naršyklės plėtinys — automatinis PII maskavimas ChatGPT, Gmail ir kt.",
         "Priority support",
-        "Lifetime license"
+        "Atšaukite bet kada"
       ],
-      "cta": "Get Pro License",
+      "cta": "Gauti Pro — €9.99/mėn.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "metai",
       "yearlyCta": "Gauti Pro — €79.99/metai"

@@ -368,8 +368,8 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "jednorázová platba",
-      "description": "Pro profesionály, kteří potřebují čistý výstup",
+      "period": "měsíc",
+      "description": "Pro profesionály zpracovávající více dokumentů",
       "features": [
         "Vše v plánu Zdarma",
         "Bez vodoznaku",
@@ -378,7 +378,7 @@
         "Prioritní podpora",
         "Doživotní licence"
       ],
-      "cta": "Získat Pro licenci",
+      "cta": "Získat Pro — €9.99/měs.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
       "yearlyCta": "Získat Pro — €79.99/rok"

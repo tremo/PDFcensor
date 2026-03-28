@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "hónap",
+      "description": "Több dokumentumot feldolgozó szakembereknek",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Böngészőbővítmény — automatikus PII-maszkolás a ChatGPT-n, Gmailben és máshol",
         "Priority support",
-        "Lifetime license"
+        "Bármikor lemondható"
       ],
-      "cta": "Get Pro License",
+      "cta": "Pro — €9.99/hó",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "év",
       "yearlyCta": "Pro beszerzése — €79.99/év"

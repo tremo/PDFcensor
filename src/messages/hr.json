@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mjesec",
+      "description": "Za profesionalce koji obrađuju više dokumenata",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Proširenje preglednika — automatsko maskiranje osobnih podataka na ChatGPT, Gmail i više",
         "Priority support",
-        "Lifetime license"
+        "Otkažite bilo kada"
       ],
-      "cta": "Get Pro License",
+      "cta": "Nabavite Pro — €9.99/mj.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "godina",
       "yearlyCta": "Nabavite Pro — €79.99/godina"

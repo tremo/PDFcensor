@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mese",
+      "description": "Per professionisti che elaborano più documenti",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Estensione browser — mascheramento automatico PII su ChatGPT, Gmail e altro",
         "Priority support",
-        "Lifetime license"
+        "Cancella quando vuoi"
       ],
-      "cta": "Get Pro License",
+      "cta": "Ottieni Pro — €9.99/mese",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "anno",
       "yearlyCta": "Ottieni Pro — €79.99/anno"

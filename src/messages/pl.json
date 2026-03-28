@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "miesiąc",
+      "description": "Dla profesjonalistów przetwarzających wiele dokumentów",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Rozszerzenie przeglądarki — automatyczne maskowanie danych na ChatGPT, Gmail i więcej",
         "Priority support",
-        "Lifetime license"
+        "Anuluj w dowolnym momencie"
       ],
-      "cta": "Get Pro License",
+      "cta": "Kup Pro — €9.99/mies.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "rok",
       "yearlyCta": "Kup Pro — €79.99/rok"

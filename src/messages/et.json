@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "kuu",
+      "description": "Professionaalidele, kes töötlevad palju dokumente",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Brauseri laiendus — automaatne PII maskeerimine ChatGPT-s, Gmailis ja mujal",
         "Priority support",
-        "Lifetime license"
+        "Tühista igal ajal"
       ],
-      "cta": "Get Pro License",
+      "cta": "Hangi Pro — €9.99/kuu",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "aasta",
       "yearlyCta": "Hangi Pro — €79.99/aasta"

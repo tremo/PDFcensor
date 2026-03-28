@@ -368,8 +368,8 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "engangsbetaling",
-      "description": "For professionelle der har brug for rent output",
+      "period": "måned",
+      "description": "Til professionelle der behandler mange dokumenter",
       "features": [
         "Alt i Gratis",
         "Intet vandmærke",
@@ -378,7 +378,7 @@
         "Prioriteret support",
         "Livstidslicens"
       ],
-      "cta": "Få Pro-licens",
+      "cta": "Få Pro — €9.99/md.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "år",
       "yearlyCta": "Få Pro — €79.99/år"

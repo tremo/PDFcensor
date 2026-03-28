@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "lună",
+      "description": "Pentru profesioniștii care procesează mai multe documente",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Extensie browser — mascare automată PII pe ChatGPT, Gmail și altele",
         "Priority support",
-        "Lifetime license"
+        "Anulați oricând"
       ],
-      "cta": "Get Pro License",
+      "cta": "Obțineți Pro — €9.99/lună",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "an",
       "yearlyCta": "Obțineți Pro — €79.99/an"

@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mēnesī",
+      "description": "Profesionāļiem, kas apstrādā vairākus dokumentus",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Pārlūka paplašinājums — automātiska PII maskēšana ChatGPT, Gmail un citur",
         "Priority support",
-        "Lifetime license"
+        "Atceliet jebkurā laikā"
       ],
-      "cta": "Get Pro License",
+      "cta": "Iegūt Pro — €9.99/mēn.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "gads",
       "yearlyCta": "Iegūt Pro — €79.99/gads"

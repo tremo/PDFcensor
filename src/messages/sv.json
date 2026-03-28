@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "månad",
+      "description": "För proffs som bearbetar flera dokument",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Webbläsartillägg — automatisk PII-maskering på ChatGPT, Gmail och mer",
         "Priority support",
-        "Lifetime license"
+        "Avbryt när som helst"
       ],
-      "cta": "Get Pro License",
+      "cta": "Skaffa Pro — €9.99/mån.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "år",
       "yearlyCta": "Skaffa Pro — €79.99/år"

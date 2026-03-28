@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "mesec",
+      "description": "Za strokovnjake, ki obdelujejo več dokumentov",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Razširitev brskalnika — samodejno maskiranje PII na ChatGPT, Gmail in več",
         "Priority support",
-        "Lifetime license"
+        "Prekličite kadarkoli"
       ],
-      "cta": "Get Pro License",
+      "cta": "Pridobite Pro — €9.99/mes.",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "leto",
       "yearlyCta": "Pridobi Pro — €79.99/leto"

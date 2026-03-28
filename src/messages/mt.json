@@ -368,17 +368,17 @@
     "pro": {
       "title": "Pro",
       "price": "€9.99",
-      "period": "one-time payment",
-      "description": "For professionals who need clean output",
+      "period": "xahar",
+      "description": "Għal-professjonisti li jipproċessaw dokumenti multipli",
       "features": [
         "Everything in Free",
         "No watermark",
         "Batch processing (ZIP download)",
         "Estensjoni tal-browser — maskjar awtomatiku tal-PII fuq ChatGPT, Gmail u aktar",
         "Priority support",
-        "Lifetime license"
+        "Ikkanċella meta trid"
       ],
-      "cta": "Get Pro License",
+      "cta": "Ikseb Pro — €9.99/xahar",
       "yearlyPrice": "€79.99",
       "yearlyPeriod": "sena",
       "yearlyCta": "Ikseb Pro — €79.99/sena"
