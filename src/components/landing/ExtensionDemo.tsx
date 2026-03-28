@@ -16,7 +16,7 @@ type ExtPhase =
 
 const TIMELINE: { phase: ExtPhase; delay: number }[] = [
   { phase: "typing", delay: 500 },
-  { phase: "typingDone", delay: 3500 },
+  { phase: "typingDone", delay: 4000 },
   { phase: "piiHighlight", delay: 800 },
   { phase: "toastAppear", delay: 1500 },
   { phase: "maskClick", delay: 1200 },

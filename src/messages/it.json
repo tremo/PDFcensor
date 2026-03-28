@@ -1160,7 +1160,7 @@
       "gemini": "Censor before sending",
       "copilot": "Mask sensitive code context",
       "gmail": "Redact emails before sending",
-      "outlook": "Protect outgoing messages",
+      "more": "E molte altre...",
       "slack": "Mask PII in team chats",
       "discord": "Auto-censor in messages",
       "notion": "Protect shared documents"
