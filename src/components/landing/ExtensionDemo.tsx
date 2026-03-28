@@ -15,9 +15,9 @@ type ExtPhase =
   | "reset";
 
 const TIMELINE: { phase: ExtPhase; delay: number }[] = [
-  { phase: "typing", delay: 3500 },
-  { phase: "typingDone", delay: 800 },
-  { phase: "piiHighlight", delay: 1500 },
+  { phase: "typing", delay: 500 },
+  { phase: "typingDone", delay: 3500 },
+  { phase: "piiHighlight", delay: 800 },
   { phase: "toastAppear", delay: 1500 },
   { phase: "maskClick", delay: 1200 },
   { phase: "masking", delay: 1200 },
@@ -105,7 +105,7 @@ export default function ExtensionDemo() {
   useEffect(() => {
     if (phase !== "typing") return;
     setCharIndex(0);
-    const typingDuration = TIMELINE.find((step) => step.phase === "typing")?.delay ?? 3500;
+    const typingDuration = TIMELINE.find((step) => step.phase === "typingDone")?.delay ?? 3500;
     const interval = setInterval(() => {
       setCharIndex((prev) => {
         if (prev >= FULL_TEXT.length) {
