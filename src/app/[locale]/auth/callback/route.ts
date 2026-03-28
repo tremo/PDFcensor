@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { locales } from "@/lib/i18n/config";
+
+const localeSet = new Set<string>(locales);
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -8,8 +11,11 @@ export async function GET(request: Request) {
 
   // Extract locale from the URL path
   const pathname = new URL(request.url).pathname;
-  const localeMatch = pathname.match(/^\/(en|tr|de|fr|es|pt|ja|ko|zh)\//);
-  const locale = localeMatch ? localeMatch[1] : "en";
+  const pathSegments = pathname.split("/");
+  const locale =
+    pathSegments.length > 1 && localeSet.has(pathSegments[1])
+      ? pathSegments[1]
+      : "en";
 
   if (code) {
     const supabase = await createClient();

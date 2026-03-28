@@ -34,6 +34,17 @@ function getLocaleFromPath(pathname: string): string {
 }
 
 export async function middleware(request: NextRequest) {
+  // 0. Fix doubled locale prefix: /tr/tr/... → /tr/...
+  const segments = request.nextUrl.pathname.split("/");
+  if (
+    segments.length > 2 &&
+    segments[1] === segments[2] &&
+    localeSet.has(segments[1])
+  ) {
+    const fixed = "/" + segments[1] + (segments.length > 3 ? "/" + segments.slice(3).join("/") : "");
+    return NextResponse.redirect(new URL(fixed, request.url), 308);
+  }
+
   // 1. Refresh Supabase session (updates cookies)
   const { user, supabaseResponse } = await updateSession(request);
 
