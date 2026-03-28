@@ -16,7 +16,6 @@ type ExtPhase =
   | "reset";
 
 const TIMELINE: { phase: ExtPhase; delay: number }[] = [
-  { phase: "inputAppear", delay: 1500 },
   { phase: "typing", delay: 3500 },
   { phase: "typingDone", delay: 800 },
   { phase: "piiHighlight", delay: 1500 },
@@ -132,7 +131,7 @@ export default function ExtensionDemo() {
   }, [phase]);
 
   const showInput =
-    phase !== "idle" && phase !== "reset";
+    phase !== "idle" && phase !== "reset" && phase !== "inputAppear";
   const isTyping = phase === "typing";
   const showCursor = phase === "typing" || phase === "typingDone";
   const piiDetected =
@@ -213,11 +212,6 @@ export default function ExtensionDemo() {
             {/* Input */}
             <div className={`ext-demo-input-wrap ${showInput ? "visible" : ""}`}>
               <div className="ext-demo-input-text">
-                {showInput && phase === "inputAppear" && (
-                  <span style={{ color: "#94a3b8", fontSize: 13 }}>
-                    Message ChatGPT...
-                  </span>
-                )}
                 {renderText()}
               </div>
               <button className={`ext-demo-send-btn ${sendActive ? "active" : ""}`}>
