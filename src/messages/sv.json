@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadatarensning",
       "description": "Tar bort dold metadata — författare, titel, skapandedatum, programinfo — som kan avslöja känslig information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Så fungerar det",
     "subtitle": "Tre enkla steg för att permanent redigera känslig information",
     "step1": {
-      "title": "Ladda upp",
-      "description": "Dra och släpp dina PDF:er, Word-dokument eller bilder — eller klicka för att bläddra. Stöder flera filer."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Granska",
       "description": "Automatiskt identifierad PII markeras. Lägg till, ta bort eller justera redigeringar innan du tillämpar."
     },
     "step3": {
-      "title": "Ladda ner",
-      "description": "Ladda ner din permanent redigerade fil. Den ursprungliga texten är oåterkalleligt borttagen."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

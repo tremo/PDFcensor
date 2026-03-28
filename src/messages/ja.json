@@ -52,22 +52,26 @@
     "metadata": {
       "title": "メタデータの削除",
       "description": "著者、タイトル、作成日、ソフトウェア情報など、機密情報を明かす可能性のある隠れたメタデータを削除します。"
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "使い方",
     "subtitle": "3つの簡単なステップで機密情報を完全に墨消し",
     "step1": {
-      "title": "アップロード",
-      "description": "PDF、Word文書、画像をドラッグ＆ドロップするか、クリックして選択します。複数ファイルに対応。"
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "確認",
       "description": "自動検出された個人情報がハイライトされます。適用前に墨消しの追加、削除、調整が可能です。"
     },
     "step3": {
-      "title": "ダウンロード",
-      "description": "完全に墨消しされたファイルをダウンロード。元のテキストは復元不可能な状態で削除されます。"
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

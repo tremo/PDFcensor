@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Temizleme",
       "description": "Hassas bilgileri açığa çıkarabilecek gizli metadata'yı — yazar, başlık, oluşturma tarihi, yazılım bilgisi — kaldırır."
+    },
+    "smartClean": {
+      "title": "Akıllı Otomatik Temizleme",
+      "description": "Hassas verileri ekstra çaba gerektirmeden otomatik olarak temizler. Yerleşik doğrulama, gözden kaçabilecekleri yakalar — insan hatasına yer yok."
     }
   },
   "howItWorks": {
     "title": "Nasıl Çalışır?",
     "subtitle": "Hassas bilgileri kalıcı olarak sansürlemek için üç basit adım",
     "step1": {
-      "title": "Yükle",
-      "description": "PDF, Word veya görsel dosyalarınızı sürükleyip bırakın veya gözatmak için tıklayın. Birden fazla dosya desteklenir."
+      "title": "Seç",
+      "description": "PDF, Word veya görsel dosyalarınızı sürükleyip bırakın veya gözatmak için tıklayın. Her şey cihazınızda kalır."
     },
     "step2": {
       "title": "İncele",
       "description": "Otomatik tespit edilen kişisel veriler vurgulanır. Uygulamadan önce sansürlemeleri ekleyin, kaldırın veya düzenleyin."
     },
     "step3": {
-      "title": "İndir",
-      "description": "Kalıcı olarak sansürlenmiş dosyanızı indirin. Orijinal metin geri getirilemez şekilde silinmiştir."
+      "title": "Kaydet",
+      "description": "Kalıcı olarak sansürlenmiş dosyanızı kaydedin. Orijinal metin geri getirilemez şekilde silinmiştir — sunucu müdahalesi yok."
     }
   },
   "comparison": {

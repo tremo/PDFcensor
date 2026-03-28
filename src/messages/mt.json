@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metadata Cleaning",
       "description": "Removes hidden metadata — author, title, creation date, software info — that could reveal sensitive information."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Three simple steps to permanently redact sensitive information",
     "step1": {
-      "title": "Upload",
-      "description": "Ġibded u itfa' il-PDFs, dokumenti Word jew immaġni tiegħek — jew ikklikkja biex tfittex. Jappoġġja diversi fajls."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Irrevedi",
       "description": "PII misjuba awtomatikament hija evidenzjata. Żid, neħħi jew aġġusta r-redazzjonijiet qabel ma tapplika."
     },
     "step3": {
-      "title": "Niżżel",
-      "description": "Niżżel il-fajl irredattat b'mod permanenti tiegħek. It-test oriġinali huwa mneħħi b'mod irrekuperabbli."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

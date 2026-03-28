@@ -52,22 +52,26 @@
     "metadata": {
       "title": "元数据清理",
       "description": "删除可能泄露敏感信息的隐藏元数据 — 作者、标题、创建日期、软件信息等。"
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "使用方法",
     "subtitle": "三个简单步骤永久删除敏感信息",
     "step1": {
-      "title": "上传",
-      "description": "拖放您的PDF、Word文档或图像，或点击浏览。支持多个文件。"
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "审核",
       "description": "自动检测到的个人信息会被高亮显示。在应用之前可以添加、删除或调整脱敏项。"
     },
     "step3": {
-      "title": "下载",
-      "description": "下载您永久脱敏后的文件。原始文本已被不可恢复地删除。"
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

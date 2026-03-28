@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Metatietojen puhdistus",
       "description": "Poistaa piilotetut metatiedot — tekijä, otsikko, luontipäivä, ohjelmistotiedot — jotka voivat paljastaa arkaluonteisia tietoja."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Näin se toimii",
     "subtitle": "Kolme yksinkertaista vaihetta arkaluonteisten tietojen pysyvään muokkaukseen",
     "step1": {
-      "title": "Lataa",
-      "description": "Vedä ja pudota PDF-, Word- tai kuvatiedostosi — tai klikkaa selataksesi. Tukee useita tiedostoja."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Tarkista",
       "description": "Automaattisesti tunnistetut henkilötiedot korostetaan. Lisää, poista tai säädä muokkauksia ennen käyttöönottoa."
     },
     "step3": {
-      "title": "Lataa",
-      "description": "Lataa pysyvästi muokattu tiedostosi. Alkuperäinen teksti on peruuttamattomasti poistettu."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {

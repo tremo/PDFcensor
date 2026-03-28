@@ -52,22 +52,26 @@
     "metadata": {
       "title": "Почистване на метаданни",
       "description": "Премахва скрити метаданни — автор, заглавие, дата на създаване, информация за софтуера — които биха могли да разкрият чувствителна информация."
+    },
+    "smartClean": {
+      "title": "Smart Auto-Clean",
+      "description": "Automatically removes sensitive data without extra effort. Built-in validation catches what you might miss — no room for human error."
     }
   },
   "howItWorks": {
     "title": "Как работи",
     "subtitle": "Три прости стъпки за окончателно редактиране на чувствителна информация",
     "step1": {
-      "title": "Качване",
-      "description": "Плъзнете и пуснете PDF, Word документи или изображения — или щракнете, за да прегледате. Поддържа множество файлове."
+      "title": "Select",
+      "description": "Drag and drop your PDFs, Word docs, or images — or click to browse. Everything stays on your device."
     },
     "step2": {
       "title": "Преглед",
       "description": "Автоматично откритите лични данни са маркирани. Добавете, премахнете или коригирайте редакциите, преди да ги приложите."
     },
     "step3": {
-      "title": "Изтегляне",
-      "description": "Изтеглете окончателно редактирания файл. Оригиналният текст е безвъзвратно премахнат."
+      "title": "Save",
+      "description": "Save your permanently redacted file. The original text is irrecoverably removed — no server involved."
     }
   },
   "comparison": {
