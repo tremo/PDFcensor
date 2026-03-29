@@ -18,9 +18,9 @@ export default function ExtensionClient() {
 
   const storeUrl = STORE_URLS[browser];
   const browserLabel = BROWSER_LABELS[browser];
-  const otherBrowsers = (["chrome", "firefox", "edge", "safari"] as Browser[]).filter(
-    (b) => b !== browser && b !== "unknown"
-  );
+  const isAvailable = browser === "chrome" || browser === "unknown";
+  const availableBrowsers = (["chrome"] as Browser[]).filter((b) => b !== browser);
+  const soonBrowsers = (["firefox", "edge"] as Browser[]).filter((b) => b !== browser);
 
   return (
     <>
@@ -42,15 +42,22 @@ export default function ExtensionClient() {
 
             {/* Browser-aware download */}
             <div className="flex flex-col items-center gap-4">
-              <Button asChild size="lg" variant="accent">
-                <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+              {isAvailable ? (
+                <Button asChild size="lg" variant="accent">
+                  <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+                    <Puzzle className="h-4 w-4" />
+                    {t("hero.downloadFor", { browser: browserLabel })}
+                  </a>
+                </Button>
+              ) : (
+                <Button size="lg" variant="accent" disabled>
                   <Puzzle className="h-4 w-4" />
-                  {t("hero.downloadFor", { browser: browserLabel })}
-                </a>
-              </Button>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  {browserLabel} — Soon
+                </Button>
+              )}
+              <div className="flex items-center gap-2 text-xs text-muted-foreground flex-wrap justify-center">
                 <span>{t("hero.alsoAvailable")}</span>
-                {otherBrowsers.map((b) => (
+                {availableBrowsers.map((b) => (
                   <a
                     key={b}
                     href={STORE_URLS[b]}
@@ -60,6 +67,14 @@ export default function ExtensionClient() {
                   >
                     {BROWSER_LABELS[b]}
                   </a>
+                ))}
+                {soonBrowsers.map((b) => (
+                  <span
+                    key={b}
+                    className="px-2 py-0.5 rounded bg-muted font-medium text-muted-foreground/60 cursor-default"
+                  >
+                    {BROWSER_LABELS[b]} <span className="italic">Soon</span>
+                  </span>
                 ))}
               </div>
             </div>
